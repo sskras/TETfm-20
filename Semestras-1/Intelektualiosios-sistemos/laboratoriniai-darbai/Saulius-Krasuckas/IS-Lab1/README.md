@@ -14,6 +14,8 @@ Solve this classification task using Naive Bayes Classifier.
 Some examples and tutorials for additional task:
 - http://www.statsoft.com/textbook/naive-bayes-classifier
 - https://en.wikipedia.org/wiki/Naive_Bayes_classifier
+# Suggested reading
+- Neural Networks and Learning Machines (3rd Edition), page 54, Table 1.1. 
 
 # IS-Lab1 (LT)
 Intelektualiosios sistemos. Pirmojo laboratorinio darbo užduotis.
@@ -31,3 +33,5 @@ Išspręskite šį klasifikavimo uždavinį naudodami Naive Bayes Classifier.
 Kelios nuorodos į paprastai pateiktus šio tipo klasifikatoriaus taikymo pavyzdžius:
 - http://www.statsoft.com/textbook/naive-bayes-classifier
 - https://en.wikipedia.org/wiki/Naive_Bayes_classifier
+# Rekomenduojama literatūra
+- Neural Networks and Learning Machines (3rd Edition), 54 psl., 1.1 lentelė
