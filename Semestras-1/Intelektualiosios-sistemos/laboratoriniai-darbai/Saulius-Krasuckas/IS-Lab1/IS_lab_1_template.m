@@ -31,8 +31,7 @@ metric_A3=apvalumas_roundness(A3); %roundness
 %4th apple image(A4)
 hsv_value_A4=spalva_color(A4); %color
 metric_A4=apvalumas_roundness(A4); %roundness
-%5th apple image(A5)
-hsv_value_A5=spalva_color(A5); %color
+%5th apple image(A5)hsv_value_A5=spalva_color(A5); %color
 metric_A5=apvalumas_roundness(A5); %roundness
 %6th apple image(A6)
 hsv_value_A6=spalva_color(A6); %color
@@ -70,7 +69,7 @@ x2=[metric_A1 metric_A2 metric_A3 metric_P1 metric_P2];
 P=[x1;x2];
 
 %Desired output vector
-T=[1;-1;-1;1;-1];
+T=[1;1;1;-1;-1]; % <- ČIA ANKSČIAU BUVO KLAIDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 %% train single perceptron with two inputs and one output
 
