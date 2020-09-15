@@ -78,7 +78,7 @@ w1 = randn(1);
 w2 = randn(1);
 b = randn(1);
 
-% calculate wieghted sum with randomly generated parameters
+% calculate weighted sum with randomly generated parameters
 %v1 = <...>; % write your code here
 % calculate current output of the perceptron 
 if v > 0
