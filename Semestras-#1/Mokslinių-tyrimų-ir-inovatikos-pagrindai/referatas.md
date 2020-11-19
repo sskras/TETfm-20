@@ -5,6 +5,7 @@ Pirmas skyrius pradėtas remiantis knyga [1] (ne straipsniu, kaip reikalaujama i
 # Literatūra:
 
 [1] https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0
+    5G NR: The Next Generation Wireless Access Technology, 2018
 
 [2] https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/index.html
     https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/infographic-c82-741491.html
