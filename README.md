@@ -6,7 +6,7 @@ Naudojimo pavyzdžiai:
 - Laboratorinių darbų mokinimuisi iš kolegų  
   <sup>(yra galimybė komentuoti atskiras teksto eilutes)</sup>
 - Turinio pakeitimų / grupės „pulso“ gavimui  
-  <sup>(siunčia į paštą, naršyklę arba [appsiuką](https://github.com/mobile))</sub>
+  <sup>(moka siųsti į paštą, naršyklę arba [appsiuką](https://github.com/mobile))</sub>
 - Pakeitimų tarp dviejų laiko momentų suradimui  
   <sup>(failui, direktorijai ar keliems arba visai repozitorijai)</sup>
 - Senų savo teksto versijų peržiūrai (ir atstatymui)
