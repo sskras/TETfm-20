@@ -14,7 +14,7 @@ Naudojimo atvejų pavyzdžiai:
 ## Kaip prisiregistruoti?
 
 0. (Esame https://github.com)
-1. Spaudžiame `Sign Up`.
+1. Spaudžiame `[ Sign Up ]`.
 2. `Username` = `Vardas-Pavardė` (jei netiktų, pabalsuotume dėl bendros formos)
 3. `Email address` = *universitetinis* (kad nesimaišytų su asmeniniais projektais)
 4. `Password` = ... (15+ simbolių)
