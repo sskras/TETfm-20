@@ -1,7 +1,7 @@
 | Nr. | Vardas, pavardė      | Sritis, su kuria dirbi, moki                                     | Bakalauro tema                                | Siūloma tema MTIP referatui                                                        |
 |-----|----------------------|------------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------------------|
 |   1 | Areta Jaškūnaitė     |
-|   2 | Vytautas Drazdauskas | Programavimas, cloud, duomenų perdavimo protokolai, web servisai | Pažangaus daiktų interneto sprendimo kūrimas  |
+|   2 | Vytautas Drazdauskas | Programavimas, cloud, duomenų perdavimo protokolai, web servisai | Pažangaus daiktų interneto sprendimo kūrimas  | Serverless cloud architektūra; 802.11s; 5G technologija                            |
 |   3 | 
 |   4 | 
 |   5 | 
