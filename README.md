@@ -1,3 +1,16 @@
+## Kam skirta?
+
+Pasibandymams, kaip atrodo bendradarbiavimas githabe.  
+Naudojimo pavyzdžiai:
+
+- Laboratorinių darbų mokinimuisi iš kolegų  
+  <sup>(yra galimybė komentuoti atskiras teksto eilutes)</sup>
+- Turinio pakeitimų / grupės „pulso“ gavimui  
+  <sup>(siunčia į paštą, naršyklę arba [appsiuką](https://github.com/mobile))</sub>
+- Pakeitimų tarp dviejų laiko momentų suradimui  
+  <sup>(failui, direktorijai ar keliems arba visai repozitorijai)</sup>
+- Senų savo teksto versijų peržiūrai (ir atstatymui)
+
 ## Kaip prisiregistruoti?
 
 0. (Esame https://github.com)
