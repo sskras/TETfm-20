@@ -1,7 +1,7 @@
 ## Kam skirta?
 
 Pasibandymams, kaip atrodo bendradarbiavimas githabe.  
-Naudojimo atvejų pavyzdžiai:
+Naudojimo atvejų idėjos:
 
 - Laboratorinių darbų mokinimuisi iš kolegų  
   <sup>(yra galimybė komentuoti atskiras teksto eilutes)</sup>
