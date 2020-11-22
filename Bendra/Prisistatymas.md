@@ -5,7 +5,7 @@
 |   3 | 
 |   4 | 
 |   5 | 
-|   6 | Saulius Krasuckas    |
+|   6 | Saulius Krasuckas    | \*NIX operations, scripting; x86 virtualization, RISC machines   | (fizikinių lab. procesų susiejimas su PC)     | Bendra 5G technologijos apžvalga (via Arūnas Šaltis)                               |
 |   7 | 
 |   8 | 
 |   9 | 
