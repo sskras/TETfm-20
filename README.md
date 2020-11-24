@@ -1,4 +1,4 @@
-# Grupė TETfm-20
+# VGTU grupė TETfm-20
 
 ## Kam skirta ši repozitorija?
 
