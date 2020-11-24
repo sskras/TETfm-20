@@ -1,6 +1,8 @@
-## Kam skirta?
+# Grupė TETfm-20
 
-Pasibandymams, kaip atrodo bendradarbiavimas githabe.  
+## Kam skirta šį repozitorija?
+
+Grupiokų pasibandymams, kaip atrodo bendradarbiavimas githabe.  
 Naudojimo atvejų idėjos:
 
 - Laboratorinių darbų mokinimuisi iš kolegų  
