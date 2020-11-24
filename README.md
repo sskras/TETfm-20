@@ -1,6 +1,6 @@
 # Grupė TETfm-20
 
-## Kam skirta šį repozitorija?
+## Kam skirta ši repozitorija?
 
 Grupiokų pasibandymams, kaip atrodo bendradarbiavimas githabe.  
 Naudojimo atvejų idėjos:
