@@ -8,7 +8,8 @@ Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsir
 
 NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. 
 Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. 
-Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti LTE savo pirminei įrengimo stadijai, aukščiau išvardintos aplinkybės paskatino ieškoti ir kitokių techninių sprendimų.
+Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį LTE infrastruktūros savo pirminei įrengimo stadijai, bet jai kelti ir aukštesni reikalavimai. 
+Tai irgi paskatino naudoti kitokius techninius sprendimus.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
 `1.1 pav. Integralus radio prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
