@@ -5,6 +5,8 @@
 4G/LTE yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai 5G/NR). Tačiau yra reikalavimų, kurių patenkinti nepajėgi nei dabartinė ji, nei jos naujos revizijos. Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsirado stipriai pažengusių techninių sprendimų.
 NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti LTE savo pirminei įrengimo stadijai, visa tai paskatino ieškoti ir kitokių techninių sprendimų.
 
+NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti LTE savo pirminei įrengimo stadijai, visa tai paskatino ieškoti ir kitokių techninių sprendimų.
+
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
 
     1.1 pav. Integralus radio prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.
