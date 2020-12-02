@@ -1,7 +1,7 @@
 (juodraštis)
 
 Šis skyrius pradėtas remiantis knyga [1.1] (ne straipsniu, kaip reikalaujama iš referato apskritai). 
-Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2], straipsnių [1.3–1.8] ir daktarinės disertacijos [1.9] – ištraukti rastus 5G NR detalius skirtumus 4G LTE atžvilgiu ir juos apibendrinti. 
+Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2], straipsnių [1.3-1.8] ir daktarinės disertacijos [1.9] ištraukti rastus 5G NR detalius skirtumus 4G LTE atžvilgiu ir juos apibendrinti. 
 Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srautams.
 
 # 1. Kodėl 4G neužtenka
@@ -15,28 +15,30 @@ Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G.
 Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrastruktūros savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino imtis kitokių techninių sprendimų.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
-`1.1 pav. Integralus radio prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
+`1.1 pav. Integralus radijo prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
 
 ## 1.y. LTE perduodama gana apribotą video srautą
 
 [https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf] **August 2016**
 
-## 1.z. LTE + WLAN konvergencija
+## 1.z. Neišpopuliarėjusi LTE + WLAN konvergencija
 
 [Kam skirta?]
 
 `3GPP` organizacija `4G LTE` specifikacijoje buvo numačiusi galimybę apjungti LTE ir WLAN (populiariai kalbant Wi-Fi).
-Taip būtų sukuriamas heterogeninis radio tinklas.
+Taip būtų sukuriamas heterogeninis radijo tinklas.
 Specifikacijos `Release-13` aprašytos dvi technologijos:
 [https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf]
 * LWA {angl. LTE-WLAN aggregation} technologija.
 * LWIP {LTE WLAN Radio Level Integration with IPsec Tunnel}
 
-[papaišom pavyzdžių, diagramų?]  
+[papaišom pavyzdžių, diagramų apie tai, kaip veikia?]  
 [https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf]  
+[https://ecfsapi.fcc.gov/file/60001076664.pdf]  **2015**
+[https://www.commscope.com/globalassets/digizuite/1084-1074-senzafili-laa-ruckus.pdf]  **2015**
 [ZTE2016]  
 
-Šios dvi technologijos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriamos naujos technologijos:
+Šios dvi technologijos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakojimai:
 
 * SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks, **June 2020**
   [https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907]  
@@ -81,9 +83,12 @@ Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC)
 [https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf] **September 2018**
 
 Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros `RAN` viduje. 
-Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} perkelti į nuotolinį mazgą, stotyje paliekant tik dalį įrangos, veikiančios arčiausiai radijo bangų, `RRH` {Remote Radio Heads}.
-Šis funkcionalumas suteiktų galimybę formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`).
+Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} perkelti į nuotolinį mazgą.
+Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui, `RRH` {Remote Radio Heads}.
+Atsirastų galimybę formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.
 Jis `5G NR` technologijoje yra kertinis.
+Žinoma, šis sprendimas be privalumų turi ir trūkumų.
+`TODO` (susitaupo el. energija stočiai maitinti, bet reikia beprotiško `Fronthault` pralaidumo + ne perdaugiausiai nukrenta stoties kaina)
 
 Pažymėtina, kad Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus ir išryškina būdus agreguoti tinklus efektyviau `5G NR` tinkle.
 
