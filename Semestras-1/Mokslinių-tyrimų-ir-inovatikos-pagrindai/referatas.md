@@ -6,7 +6,8 @@
 NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti LTE savo pirminei įrengimo stadijai, visa tai paskatino ieškoti ir kitokių techninių sprendimų.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
-1.1 pav. Integralus radio prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.
+
+    1.1 pav. Integralus radio prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.
 
 Šis skyrius pradėtas remiantis knyga [1.1] (ne straipsniu, kaip reikalaujama iš referato apskritai). Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2], straipsnių [1.3–1.8] ir daktarinės disertacijos [1.9] – ištraukti rastus 5G NR detalius skirtumus 4G LTE atžvilgiu ir juos apibendrinti. Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srautams.
 
