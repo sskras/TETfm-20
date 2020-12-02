@@ -32,11 +32,11 @@ Specifikacijos `Release-13` aprašytos dvi technologijos:
 * LWA {angl. LTE-WLAN aggregation} technologija.
 * LWIP {LTE WLAN Radio Level Integration with IPsec Tunnel}
 
-[papaišom pavyzdžių, diagramų?]
-[https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf]
-[ZTE2016]
+[papaišom pavyzdžių, diagramų?]  
+[https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf]  
+[ZTE2016]  
 
-Šios dvi technologijos dar tobulinamos, bet ta prasme, kad jų pagrindu kuriamos naujos technologijos:
+Šios dvi technologijos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriamos naujos technologijos:
 
 * SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks, **June 2020**
   [https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907]  
