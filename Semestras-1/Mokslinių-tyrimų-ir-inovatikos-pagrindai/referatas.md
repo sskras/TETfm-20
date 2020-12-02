@@ -8,10 +8,14 @@ Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsir
 
 NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. 
 Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. 
-Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrastruktūros savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino naudoti kitokius techninius sprendimus.
+Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrastruktūros savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino imtis kitokių techninių sprendimų.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
 `1.1 pav. Integralus radio prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
+
+## 1.y. Perduodamas apribotas video srautas
+
+[https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf] **August 2016**
 
 ## 1.z. LTE + WLAN konvergencija
 
@@ -24,28 +28,63 @@ Specifikacijos `Release-13` aprašytos dvi technologijos:
 * LWA {angl. LTE-WLAN aggregation} technologija.
 * LWIP {LTE WLAN Radio Level Integration with IPsec Tunnel}
 
-Jos vis dar tobulinamos ta prasme, kad jų pagrindu kuriamos naujos technologijos:
-[scholar list]
+[papaišom pavyzdžių, diagramų?]
+[https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf]
+[ZTE2016]
 
-Tačiau nei šios, nei kitų organizacijų sukurtos `4G LTE` agregavimo technologijos nebuvo plačiai įgyvendintos ir nepaplito.
-[https://www.surf.nl/files/2019-07/rapport_mobiele_technologie_op_de_campus_1.0.pdf#page=29:~:text=Geen%20van%20deze,toepassingen,%20ook%20Multefire,%20lijken%20succesvol%20te%20zijn]
+Šios dvi technologijos dar tobulinamos, bet ta prasme, kad jų pagrindu kuriamos naujos technologijos:
 
-Olandų IKT {informacinių komunikacinių technologijų} švietimo ir tyrimų asociacija SURF {olan. Samenwerkende Universitaire RekenFaciliteiten} teigia, kad tiek pas čipų gamintojus Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojus šių technologijų palaikymas ir net implementacijos atsilieka nuo kasdienybės.
-SURF nerado paaiškinimų, kodėl taip nutiko, tik spekuliacijas. 
-Jie spėja, kad apskritai visų nelicencinio spektro agregavimo technologijų (apimančių daugiau nei LWA ir LWP) vėlavimo priežastis yra per mažas poreikis.
+* SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks, **June 2020**
+  [https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907]  
+
+* [https://scholar.google.lt/scholar?hl=lt&as_sdt=0%2C5&q=LWIP+LTE&btnG=]  
+* [https://scholar.google.lt/scholar?hl=lt&as_sdt=0%2C5&q=LWA+LTE&btnG=]  
+
+Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryšio ir nelicencinio radijo spektro (2,4 GHz ir 5 GHz) apjungimui (sukurtos tiek `3GPP`, tiek kitų organizacijų) nebuvo plačiai įgyvendintos ir kasdieniniam naudojimui nepaplito.  
+
+Taip teigia Olandų IKT {informacijos ir ryšių technologijų, angl. ICT, Information and Communication Technologies} švietimo ir tyrimų asociacija SURF {olan. Samenwerkende Universitaire RekenFaciliteiten} kartu su olandų IKT tyrimų bendrove Stratix jų bendroje ataskaitoje apie galimybes panaudoti 4G ir 5G vien patalpose. [https://www.surf.nl/files/2019-07/rapport_mobiele_technologie_op_de_campus_1.0.pdf#page=29:~:text=Geen%20van%20deze,toepassingen,%20ook%20Multefire,%20lijken%20succesvol%20te%20zijn] **April 2019**
+
+[https://www.surf.nl/en/research-ict]  
+[https://www.stratix.nl/over-ons/]  
+
+Pažymima, kad tiek pas čipų gamintojus Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojus šių technologijų palaikymas ir net implementacijos atsilieka nuo kasdienybės.  
+[https://ec.europa.eu/regional_policy/lt/policy/themes/ict/]  
+[https://e-seimas.lrs.lt/rs/legalact/TAK/07fd9f6035b711e98893d5af47354b00/format/ISO_PDF/]  
+[https://ivpk.lrv.lt/lt/naujienos/inovaciju-link-informacijos-ir-rysiu-technologijos-7-joje-bendrojoje-programoje]  
+
+[Paminim Multefire su Samsungu?]  
+[https://www.multefire.org/technology/specifications/]  
+
+SURF neaptiko paaiškinimų, kodėl taip nutikę, tik spekuliacijas.
+Jie spėja, kad apskritai visų nelicencinio spektro agregavimo technologijų vėlavimo priežastis yra per mažas rinkos poreikis.
 Spėjimas grindžiamas tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės nedalyvauja aljansuose, remiančiuose šias technologijas.
+
+`5Genesis` konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad `3GPP` specifikacijos `4G LTE` kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir `5G NR` atveju apskritai nėra išsamios.  
+[https://5genesis.eu/wp-content/uploads/2019/08/5GENESIS_D7.5-_v1.0.pdf] **July 29th, 2019**
+
+[https://www.rcrwireless.com/20150625/network-infrastructure/wi-fi/lwa-logical-wireless-alternative-tag4]
 
 Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 
-* 2017 m. vasaros pr. Singapūre, pas ryšio tiekėją "M1" [https://web.archive.org/web/20160920143843/https://www.m1.com.sg/AboutM1/NewsReleases/2016/M1%20Nokia%20announce%20Singapore%20first%20commercial%20nationwide%20HetNet%20rollout.aspx] **19 August 2016**
-[http://www.gtigroup.org/news/ind/2016-08-22/9257.html] **2016-08-22**
+* 2017 m. vasaros pr. Singapūre, pas ryšio tiekėją "M1" [https://web.archive.org/web/20160920143843/https://www.m1.com.sg/AboutM1/NewsReleases/2016/M1%20Nokia%20announce%20Singapore%20first%20commercial%20nationwide%20HetNet%20rollout.aspx] **19 August 2016**  
+[http://www.gtigroup.org/news/ind/2016-08-22/9257.html] **22 August 2016**
 * 2017 m. vasario 23 d. Kinijoje, pas ryšio tiekėją "Chunghwa Telecom" [http://digitimes.com/news/a20170220PD201.html] **21 February 2017**
 
-"Global mobile Suppliers Association" teigia, kad jų vystymas sustojo.
-[https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled]
+Pavyko aptikti tik vėliau "Athens Technology Center S.A." (ATC) atliktą `4G LTE` agreguoto tinklo diegimų tyrimą projektui Fed4FIRE+:
+[https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf] **September 2018**
+
+Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros `RAN` viduje. 
+`Split` architektūra leistų dalį įprastinės bazinės stoties funkcionalumo (`BBU` {Baseband Unit}) perkelti į nuotolinį mazgą, stotyje paliekant tik dalį įrangos, veikiančios arčiausiai radijo bangų (`RRH` {Remote Radio Heads}).
+Šis funkcionalumas suteiktų galimybę formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`).
+Jis `5G NR` technologijoje yra kertinis.
+
+Pažymėtina, kad ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus ir išryškina būdus agreguoti TODO.
+
+O 2020 m. vidury "Global mobile Suppliers Association" teigė, kad šių technologijų vystymas sustojo.
+[https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled] **August 2020**
 
 `5G NR` gaires nurodantis `IMT-2020` standartas numato 
-[https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29]
+[https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29]  
 
 Šis skyrius pradėtas remiantis knyga [1.1] (ne straipsniu, kaip reikalaujama iš referato apskritai). 
 Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2], straipsnių [1.3–1.8] ir daktarinės disertacijos [1.9] – ištraukti rastus 5G NR detalius skirtumus 4G LTE atžvilgiu ir juos apibendrinti. 
