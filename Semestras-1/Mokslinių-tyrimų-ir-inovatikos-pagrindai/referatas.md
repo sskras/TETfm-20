@@ -2,6 +2,15 @@
 
 Pirmas skyrius pradėtas remiantis knyga [1] (ne straipsniu, kaip reikalaujama iš referato apskritai).
 
+# 1. Kodėl 4G neužtenka
+
+4G/LTE yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai 5G/NR). Tačiau yra reikalavimų, kurių patenkinti nepajėgi nei dabartinė ji, nei jos naujos revizijos. Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsirado stipriai pažengusių techninių sprendimų.
+NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti LTE savo pirminei įrengimo stadijai, visa tai paskatino ieškoti ir kitokių techninių sprendimų.
+
+![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
+
+Šis skyrius pradėtas remiantis knyga [1.1] (ne straipsniu, kaip reikalaujama iš referato apskritai). Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2], straipsnių [1.3]–[1.8] ir daktarinės disertacijos [1.9] – ištraukti rastus 5G NR detalius skirtumus 4G LTE atžvilgiu ir juos apibendrinti. Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srautams.
+
 # Literatūra:
 
  [1.1] 5G NR: The Next Generation Wireless Access Technology, **2018**  
