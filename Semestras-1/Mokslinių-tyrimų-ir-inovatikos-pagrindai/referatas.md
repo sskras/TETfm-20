@@ -90,7 +90,7 @@ Jis `5G NR` technologijoje yra kertinis.
 Žinoma, šis sprendimas be privalumų turi ir trūkumų.
 `TODO` (susitaupo el. energija stočiai maitinti, bet reikia beprotiško `Fronthault` pralaidumo + ne perdaugiausiai nukrenta stoties kaina)
 
-Pažymėtina, kad Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus ir išryškina būdus agreguoti tinklus efektyviau `5G NR` tinkle.
+Pažymėtina, kad Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus ir eksperimentiškai pabrėžia paprasčiausius būdus efektyviai agreguoti radijo tinklus `5G NR` atveju (ateičiai).
 
 O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė, kad šių technologijų vystymas sustojo.  
 [https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled] **August 2020**
