@@ -34,6 +34,10 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
     https://cyberdefensereview.army.mil/Portals/6/Documents/CyConUS19%20ConferencePapers/Overview_of_5G_Security_and_Vulnerabilities.pdf?ver=2019-11-14-085032-807  
     https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%2008_%20Fonyi_WEB.pdf
     https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%20FULL_WEB.pdf
+    
+[1.m] The current state of affairs in 5G security and the main remaining security challenges, **April 2019**  
+    https://arxiv.org/abs/1904.08394  
+    http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
 
 ## 1.y. LTE perduodama gana apribotą video srautą
 
@@ -108,8 +112,12 @@ Atsirastų galimybė formuoti `Centralized-RAN` architektūrą (dar vadinamą `C
 
 Šis funkcionalumas `5G NR` technologijai yra kertinis.
 Žinoma, toks sprendimas be privalumų turi ir trūkumų.
-Taupoma energija stočiai maitinti, tačiau prireikia beprotiškai didelio `Fronthaul` magistralės pralaidumo .
+Taupoma energija stočiai maitinti, tačiau prireikia beprotiškai didelio `Fronthaul` magistralės pralaidumo.
 Taip pat ne perdaugiausiai nukrenta stoties kaina (mat stotyje liekanti įranga pasudėtingėja dėl pasikeitusios komunikacijos su iškeltaja įrangos dalimi).
+
+`TODO`, iškeliam į atskirą C-RAN poskyrį:
+[1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
+    [https://ieeexplore.ieee.org/document/7511579]
 
 Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
 
