@@ -22,7 +22,7 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 [1.2]  
 [1.9]  
 
-## LTE perduodama gana apribotą video srautą
+### LTE perduodama gana apribotą video srautą
 
 [1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
     https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf
@@ -109,7 +109,8 @@ Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir
 ## Neišpopuliarėjusi LTE + WLAN agregacija
 
 Įvykius EM dažnio spektrų aukcionams ir įsibėgėjus 4G LTE diegimui, pradėta galvoti ryšio pralaidumo didinimą.
-`3GPP` organizacija apibrėžė būdus judriajam ryšiui panaudoti nelicencinio radijo spektro ruožus [1.p].
+`3GPP` organizacija pasiūlė būdus judriajam ryšiui tam panaudoti nelicencinio radijo spektro ruožus [1.p].
+
 Buvo akivaizdu, kad Wi-Fi įrangos gamintojai bus nusistatę prieš siekį išnaudoti 5 GHz ruožą [1.ff]. 
 Šis ruožas tuomet gamintojas žadėjo daug potencialo (2,40 GHz ruožas gyvenamoje aplinkoje jau tada buvo ganėtinai užimtas) ir kuriame dabar veikia žymi dalis dabartinių Wi-Fi įrenginių.
 
@@ -118,14 +119,23 @@ Taip būtų sukuriamas heterogeninis radijo tinklas.
 Specifikacijos `Release-13` aprašytos dvi technologijos [1.r]:
 
 * LWA {angl. LTE-WLAN aggregation} technologija.
-* LWIP {LTE WLAN Radio Level Integration with IPsec Tunnel}
+* LWIP {angl. LTE WLAN Radio Level Integration with IPsec Tunnel} protokolas.
 
 [papaišom pavyzdžių, diagramų apie tai, kaip veikia?]  
-[1.p]  
-[1.o]  
-[1.m]  
 
-Jos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakojimai: tiek LWA [1.n, 1.n1, 1.n2], tiek LWIP [1.n3, 1.n4].
+![image](https://user-images.githubusercontent.com/74717106/101068854-ea30b700-35a1-11eb-9553-ecbf9ae77194.png)  
+`TODO pav. Alcatel-Lucent pasiūlyti du apjungimo būdai (su ateinančio srauto agregacija ir be jos) ` [1.o]
+
+![image](https://user-images.githubusercontent.com/74717106/101069600-e5b8ce00-35a2-11eb-833a-d63d64db005c.png)  
+`TODO pav. Du paprasčiausi LWA diegimo būdai` [1.p]
+
+![image](https://user-images.githubusercontent.com/74717106/101069898-4c3dec00-35a3-11eb-9bec-bc4b9c47c75a.png)  
+`TODO pav. Numatytieji skirtingi UE mobilumo scenarijai` [1.p]
+
+![image](https://user-images.githubusercontent.com/74717106/101068235-1f88d500-35a1-11eb-92b4-4a4597230e1c.png)  
+`TODO pav. Qualcomm pasiūlyto LWA sprendimo schema, apjungianti LTE ir Wi-Fi tinklą` [1.m]
+
+Jos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakojimai: tiek LWA technologijai [1.n, 1.n1, 1.n2], tiek LWIP protokolui [1.n3, 1.n4].
 
 Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryšio ir nelicencinio radijo spektro (2,4 GHz ir 5 GHz) apjungimui (sukurtos tiek `3GPP`, tiek kitų organizacijų) nebuvo plačiai įgyvendintos ir kasdieniniam naudojimui nepaplito.  
 
@@ -154,7 +164,7 @@ Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja
 
 O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė [1.00], kad šių technologijų vystymas sustojo.
 
-Tuo tarpu `5G NR` gaires 2017 m. nubrėžęs standartas `IMT-2020` [1.qq] numatė lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus.
+Tuo tarpu `5G NR` gaires 2017 m. nubrėžęs standartas `IMT-2020` numatė lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus [1.qq].
 
 Akivaizdu, kad `4G LTE` ir `WLAN` agregacija nėra nei paplitusi pasaulyje, nei suderinama su `5G NR` siekiais.
 Tai dar vienas `4G LTE` aspektas, kurį `5G NR` privalės tobulinti.
@@ -177,10 +187,10 @@ Ar pavyks, didelis klausimas.
       https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907
       
 [1.n1] Mitigation technique for LTE-LAA and LTE-LWA coexistence, **July 2020**  
-    https://ieeexplore.ieee.org/abstract/document/9165524
+       https://ieeexplore.ieee.org/abstract/document/9165524
     
 [1.n2] An efficient SDN‐based LTE‐WiFi spectrum aggregation system for heterogeneous 5G networks, **April 2020**  
-    https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3943
+       https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3943
 
 [1.n3] A Packet Level Steering Solution for Tightly Coupled LWIP Networks, ***June 2020**  
        https://ieeexplore.ieee.org/abstract/document/9118009
@@ -234,7 +244,9 @@ Ar pavyks, didelis klausimas.
 
 | Santrumpa | Pilnas terminas                                                                                                                                    | 
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------| 
-| LWA       | angl. LTE-WLAN aggregation                                                                                                                         | 
+| C-RAN     | angl. terminų `Centralized-RAN` ir `Cloud-RAN` apibendrinanti santrumpa
+| LWA       | angl. LTE-WLAN aggregation 
+| LWIP      | angl. LTE WLAN Radio Level Integration with IPsec Tunnel
 
 # Literatūra:
 
