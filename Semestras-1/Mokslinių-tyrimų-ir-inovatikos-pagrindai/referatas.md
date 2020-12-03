@@ -1,6 +1,6 @@
 # 1. Kodėl 4G neužtenka
 
-`4G LTE` yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai `5G NR`).
+4G LTE yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai 5G NR).
 Tačiau kai kurių reikalavimų patenkinti nepajėgi nei dabartinė LTE implementacija, nei jos naujos revizijos. [1]
 Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsirado ganėtinai pažengusių technologijų.
 
@@ -9,7 +9,7 @@ Be to, atkrinta reikalavimas išlaikyti suderinamumą su 4G LTE.
 Ir nors NR daug komponentų perima iš LTE bei geba dalį jos infrastruktūros išnaudoti savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino imtis kitokių techninių sprendimų.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
-`1 pav. Integralus radijo prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
+`1 pav. Integralus radijo prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.` [1]
 
 ## LTE trūksta pralaidumo
 
@@ -53,18 +53,18 @@ Ji įgalina dinamiškus ryšius tarp MME atitikmens AMF (angl. Access and Mobili
 
 ## C-RAN architektūra LTE tinkluose nėra pakankamai optimizuota
 
-`C-RAN` architektūra (apibendrinanti dviejų angl. terminų `Centralized-RAN` ir `Cloud-RAN` santrumpa)
-leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš stoties perkelti į nuotolinį mazgą [5].
+C-RAN architektūra (apibendrinanti dviejų angl. terminų Centralized-RAN ir Cloud-RAN santrumpa)
+leistų dalį įprastinės bazinės stoties funkcionalumo, BBU {Baseband Unit} iš stoties perkelti į nuotolinį mazgą [5].
 Taip stotyje liktų tik dalis įrangos, kurios funkcionalumas yra artimiausias radijo eteriui.
-`5G NR` ryšyje ji dar vadinama `RRH` {Remote Radio Heads}.
+5G NR ryšyje ji dar vadinama RRH {Remote Radio Heads}.
 Tai galimybė dalį RAN tinklo įrangos konsoliduoti įprastiniuose duomenų centruose, didžiulis privalumas.
 Taupoma energija stočiai maitinti ir joje pakanka mažesnio ploto įrangai.
 
 Žinoma, sprendimas turi ir trūkumų.
-Atskyrus įrangą prireikia beprotiškai didelio pralaidumo priešakinėje magistralėje (angl. `Fronthaul`).
-Kraštutinis 2016 m. pavyzdys iškėlus visas `BBU` funkcijas iš `BS` į Debesį [5]: 
-75 Mbps `UE` srautas sukurs 1 Gbps srautą priešakinėje magistralėje.
-Naujesnė, 2020 m. ataskaita mini jau mažesnį, dešimties kartų srauto padidėjimą priešakinėje magistralėje lyginant su srautu transmisijos tinkle (angl. `Backhaul`), kurio prireiktų naudojant klasikinę LTE architektūrą. [6]
+Atskyrus įrangą prireikia beprotiškai didelio pralaidumo priešakinėje magistralėje (angl. Fronthaul).
+Kraštutinis 2016 m. pavyzdys iškėlus visas BBU funkcijas iš bazinės stoties į Debesį [5]: 
+75 Mbps UE srautas sukurs 1 Gbps srautą priešakinėje magistralėje.
+Naujesnė, 2020 m. ataskaita mini jau mažesnį, dešimties kartų srauto padidėjimą priešakinėje magistralėje lyginant su srautu transmisijos tinkle (angl. Backhaul), kurio prireiktų naudojant klasikinę LTE architektūrą. [6]
 
 ![image](https://user-images.githubusercontent.com/74717106/101022192-b6419b80-3579-11eb-90db-8fdc625aa37d.png)  
 `1.b pav. Centralize-RAN architektūra: priešakinė magistralė ir transmisijos tinklas.` [6]
@@ -77,14 +77,14 @@ Priešakinės magistralės atnaujinimas bus būtinas visose bazinėse stotyse, k
 ![image](https://user-images.githubusercontent.com/74717106/101021464-9f4e7980-3578-11eb-992d-e0fb003018e6.png)  
 `1.c pav. Tradicinio mob. ryšio bokšto sandara su koaksialiniais vario kabeliais` [6]
 
-Taip pat `C-RAN` sukelia ir programinius iššūkius valdant iškeltuosius  `BBU` [9]. 
+Taip pat C-RAN sukelia ir programinius iššūkius valdant iškeltuosius BBU [9]. 
 Pvz. duomenų centrų virtualizavimo technologijos grįstos resursų dalinimusi ir paskirstytuoju apdorojimu.
-Gi `BBU` apkrova yra dinamiška ir realiame laike linkusi kisti staigiai, pagal aptarnaujamų ryšio celių aktyvumą.
+Gi BBU apkrova yra dinamiška ir realiame laike linkusi kisti staigiai, pagal aptarnaujamų ryšio celių aktyvumą.
 Ir ji ganėtinai skiriasi nuo duomenų centro scenarijų.
 
 Todėl C-RAN debesų architektūra turi būti kitokia nei DC debesų, ir irgi reikalauja tobulinimų.
 
-C-RAN architektūra naudojama teoriškai jau nuo `3G`, bet praktiškai pradėjo plisti tik 4G LTE tinkluose.
+C-RAN architektūra naudojama teoriškai jau nuo 3G, bet praktiškai pradėjo plisti tik 4G LTE tinkluose.
 Tačiau ji nėra visiškai išbaigta ar nusistovėjusi: vyksta jos tyrinėjimai, optimizavimai ir kiti tobulinimo darbai: [8].
 
 ![image](https://user-images.githubusercontent.com/74717106/101074912-00427580-35aa-11eb-8d76-a53fcc054887.png)
@@ -98,12 +98,12 @@ Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir
 ## Neišpopuliarėjusi LTE + WLAN agregacija
 
 Įvykius EM dažnio spektrų aukcionams ir įsibėgėjus 4G LTE diegimui, pradėta galvoti ryšio pralaidumo didinimą.
-`3GPP` organizacija pasiūlė būdus judriajam ryšiui tam panaudoti nelicencinio radijo spektro ruožus [11].
+3GPP organizacija pasiūlė būdus judriajam ryšiui tam panaudoti nelicencinio radijo spektro ruožus [11].
 
 Buvo akivaizdu, kad Wi-Fi įrangos gamintojai bus nusistatę prieš siekį išnaudoti 5 GHz ruožą [25]. 
 Šis ruožas tuomet gamintojas žadėjo daug potencialo (2,40 GHz ruožas gyvenamoje aplinkoje jau tada buvo ganėtinai užimtas) ir kuriame dabar veikia žymi dalis dabartinių Wi-Fi įrenginių.
 
-Tačiau `3GPP` savo `4G LTE` specifikacijoje buvo numačiusi ir galimybę apjungti LTE su WLAN tiesiogiai (populiariai kalbant Wi-Fi).
+Tačiau 3GPP savo 4G LTE specifikacijoje buvo numačiusi ir galimybę apjungti LTE su WLAN tiesiogiai (populiariai kalbant Wi-Fi).
 Taip būtų sukuriamas heterogeninis radijo tinklas.
 Specifikacijos `Release-13` aprašytos dvi technologijos [10]:
 
@@ -124,7 +124,7 @@ Specifikacijos `Release-13` aprašytos dvi technologijos [10]:
 
 Jos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakojimai: tiek LWA technologijai [14, 15, 16], tiek LWIP protokolui [17, 18].
 
-Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryšio ir nelicencinio radijo spektro (2,4 GHz ir 5 GHz) apjungimui (sukurtos tiek `3GPP`, tiek kitų organizacijų) nebuvo plačiai įgyvendintos ir kasdieniniam naudojimui nepaplito.  
+Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryšio ir nelicencinio radijo spektro (2,4 GHz ir 5 GHz) apjungimui (sukurtos tiek 3GPP, tiek kitų organizacijų) nebuvo plačiai įgyvendintos ir kasdieniniam naudojimui nepaplito.  
 
 Taip teigia Olandijos IKT {informacijos ir ryšių technologijų, angl. ICT, Information and Communication Technologies [19, 20, 21]} švietimo ir tyrimų asociacija SURF {olan. Samenwerkende Universitaire RekenFaciliteiten [23]} kartu su Olandijos IKT tyrimų bendrove Stratix [24] jų bendroje ataskaitoje apie galimybes panaudoti 4G ir 5G gyvenamosiose patalpose [22].
 
@@ -136,32 +136,32 @@ Grindžiama tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės (i�
 
 Internetinio leidinio "RCR Wireless News" straipsnelis [25] patvirtina, kad tokia pat situacija rinkoje buvo ir 2015 m.
 
-`5Genesis` konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad `3GPP` pateiktos `4G LTE` specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir `5G NR` atveju nėra išsamios apskritai [26].
+5Genesis konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad 3GPP pateiktos 4G LTE specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir 5G NR atveju nėra išsamios apskritai [26].
 
 Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 
 * 2017 m. vasaros pr. Singapūre, pas ryšio tiekėją "M1" [27, 28]
 * 2017 m. vasario 23 d. Kinijoje, pas ryšio tiekėją "Chunghwa Telecom" [29]
 
-Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC) atliktą `4G LTE` agreguoto tinklo tyrimą projektui Fed4FIRE+. [30]
-Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko vadinamosios `Split` architektūros bazinėse stotyse (`RAN` viduje).
-O šis funkcionalumas `5G NR` technologijai yra kertinis ir netgi (kaip paminėta aprašant C-RAN).
+Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC) atliktą 4G LTE agreguoto tinklo tyrimą projektui Fed4FIRE+. [30]
+Ataskaitoje pastebima, kad LWA ir jos naudojamas signalizacijos protokolas LWAAP nepalaiko vadinamosios Split architektūros bazinėse stotyse (RAN viduje).
+O šis funkcionalumas 5G NR technologijai yra kertinis ir netgi (kaip paminėta aprašant C-RAN).
 
-Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
+Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja 4G LTE trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus 5G NR atvejui.
 
 O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė [31], kad šių technologijų vystymas sustojo.
 
-Tuo tarpu `5G NR` gaires 2017 m. nubrėžęs standartas `IMT-2020` numatė lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus [32].
+Tuo tarpu 5G NR gaires 2017 m. nubrėžęs standartas IMT-2020 numatė lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus [32].
 
-Akivaizdu, kad `4G LTE` ir `WLAN` agregacija nėra nei paplitusi pasaulyje, nei suderinama su `5G NR` siekiais.
-Tai dar vienas `4G LTE` aspektas, kurį `5G NR` privalės tobulinti.
+Akivaizdu, kad 4G LTE ir WLAN agregacija nėra nei paplitusi pasaulyje, nei suderinama su 5G NR siekiais.
+Tai dar vienas 4G LTE aspektas, kurį 5G NR privalės tobulinti.
 Ar pavyks šį sykį, didelis klausimas.
 
 # Skyriaus santrumpos
 
 | Santrumpa | Pilnas terminas                                                                                                                                    | 
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------| 
-| C-RAN     | angl. terminų `Centralized-RAN` ir `Cloud-RAN` apibendrinanti santrumpa
+| C-RAN     | angl. terminų Centralized-RAN ir Cloud-RAN apibendrinanti santrumpa
 | LWA       | angl. LTE-WLAN aggregation 
 | LWIP      | angl. LTE WLAN Radio Level Integration with IPsec Tunnel
 | AMF       | angl. Access and Mobility Management Function
