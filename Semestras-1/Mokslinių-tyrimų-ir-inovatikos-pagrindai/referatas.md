@@ -54,9 +54,9 @@ Ji įgalina dinamiškus ryšius tarp MME atitikmens AMF (angl. Access and Mobili
 ## C-RAN architektūra LTE tinkluose nėra pakankamai optimizuota
 
 C-RAN architektūra (apibendrinanti dviejų angl. terminų Centralized-RAN ir Cloud-RAN santrumpa)
-leistų dalį įprastinės bazinės stoties funkcionalumo, BBU {Baseband Unit} iš stoties perkelti į nuotolinį mazgą [5].
+leistų dalį įprastinės bazinės stoties funkcionalumo, BBU (Baseband Unit) iš stoties perkelti į nuotolinį mazgą [5].
 Taip stotyje liktų tik dalis įrangos, kurios funkcionalumas yra artimiausias radijo eteriui.
-5G NR ryšyje ji dar vadinama RRH {Remote Radio Heads}.
+5G NR ryšyje ji dar vadinama RRH (Remote Radio Heads).
 Tai galimybė dalį RAN tinklo įrangos konsoliduoti įprastiniuose duomenų centruose, didžiulis privalumas.
 Taupoma energija stočiai maitinti ir joje pakanka mažesnio ploto įrangai.
 
@@ -107,8 +107,8 @@ Tačiau 3GPP savo 4G LTE specifikacijoje buvo numačiusi ir galimybę apjungti L
 Taip būtų sukuriamas heterogeninis radijo tinklas.
 Specifikacijos `Release-13` aprašytos dvi technologijos [10]:
 
-* LWA {angl. LTE-WLAN aggregation} technologija.
-* LWIP {angl. LTE WLAN Radio Level Integration with IPsec Tunnel} protokolas.
+* LWA (angl. LTE-WLAN aggregation) technologija.
+* LWIP (angl. LTE WLAN Radio Level Integration with IPsec Tunnel) protokolas.
 
 ![image](https://user-images.githubusercontent.com/74717106/101068854-ea30b700-35a1-11eb-9553-ecbf9ae77194.png)  
 `11 pav. Alcatel-Lucent pasiūlyti du apjungimo būdai (su ateinančio srauto agregacija ir be jos) ` [12]
@@ -126,7 +126,7 @@ Jos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakoji
 
 Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryšio ir nelicencinio radijo spektro (2,4 GHz ir 5 GHz) apjungimui (sukurtos tiek 3GPP, tiek kitų organizacijų) nebuvo plačiai įgyvendintos ir kasdieniniam naudojimui nepaplito.  
 
-Taip teigia Olandijos IKT {informacijos ir ryšių technologijų, angl. ICT, Information and Communication Technologies [19, 20, 21]} švietimo ir tyrimų asociacija SURF {olan. Samenwerkende Universitaire RekenFaciliteiten [23]} kartu su Olandijos IKT tyrimų bendrove Stratix [24] jų bendroje ataskaitoje apie galimybes panaudoti 4G ir 5G gyvenamosiose patalpose [22].
+Taip teigia Olandijos IRT (informacijos ir ryšių technologijų [19, 20, 21]) švietimo ir tyrimų asociacija SURF (olan. Samenwerkende Universitaire RekenFaciliteiten [23]) kartu su Olandijos IRT tyrimų bendrove Stratix [24] jų bendroje ataskaitoje apie galimybes panaudoti 4G ir 5G gyvenamosiose patalpose [22].
 
 Pažymima, kad tiek čipų gamintojai Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojai atsilieka nuo kasdienybės (įskaitant Samsung) atsilieka nuo kasdienybės tiek teikdami šių technologijų palaikymą, tiek net ir implementuodami jas.
 
@@ -166,6 +166,7 @@ Ar pavyks šį sykį, didelis klausimas.
 | LWIP      | angl. LTE WLAN Radio Level Integration with IPsec Tunnel
 | AMF       | angl. Access and Mobility Management Function
 | 5GGW      | angl. 5G Gateway
+| IRT       | angl. ICT, Information and Communication Technologies [19, 20, 21] ; informacijos ir ryšių technologijos
 
 # Literatūra:
 
