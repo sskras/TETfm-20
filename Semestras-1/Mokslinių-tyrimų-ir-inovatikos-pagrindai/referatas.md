@@ -6,12 +6,12 @@ Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srau
 # 1. Kodėl 4G neužtenka
 
 `4G LTE` yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai `5G NR`).
-Tačiau yra reikalavimų, kurių patenkinti nepajėgi nei dabartinė LTE implementacija, nei jos naujos revizijos. [1.1]
+Tačiau kai kurių reikalavimų nepajėgi nei dabartinė LTE implementacija, nei jos naujos revizijos. [1.1]
 Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsirado ganėtinai pažengusių technologijų.
 
 5G NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. 
-Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G LTE.
-Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrastruktūros savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino imtis kitokių techninių sprendimų.
+Be to, atkrinta reikalavimas išlaikyti suderinamumą su 4G LTE.
+Ir nors NR daug komponentų perima iš LTE bei geba dalį jos infrastruktūros išnaudoti savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino imtis kitokių techninių sprendimų.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
 `1.1 pav. Integralus radijo prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
@@ -21,6 +21,11 @@ Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrast
 Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.  
 [1.2]  
 [1.9]  
+
+## 1.2. LTE perduodama gana apribotą video srautą
+
+[1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
+    https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf
 
 ## 1.x. LTE neatsparus tam tikroms atakoms (fizinio ryšio saugumo klausimai)
 
@@ -38,10 +43,6 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 [1.m] The current state of affairs in 5G security and the main remaining security challenges, **April 2019**  
     https://arxiv.org/abs/1904.08394  
     http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
-
-## 1.y. LTE perduodama gana apribotą video srautą
-
-[https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf] **August 2016**
 
 ## 1.z. Neišpopuliarėjusi LTE + WLAN konvergencija
 
@@ -107,7 +108,8 @@ Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC)
 Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros `RAN` viduje. 
 Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą.
 Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui, `5G NR` ryšyje dar vadinama `RRH` {Remote Radio Heads}.
-Atsirastų galimybė formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.  
+Atsirastų galimybė formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.
+
 [1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
     [https://ieeexplore.ieee.org/document/7511579]
 
@@ -162,4 +164,4 @@ O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė, kad 
        https://www.sciencedirect.com/science/article/abs/pii/S0167739X19301074  
 
  [1.9] Destination-based Routing and Circuit Allocation for Future Traffic Growth, **2020**  
-       https://books.google.lt/books/about/Destination_based_Routing_and_Circuit_Al.html
+       https://books.google.lt/books/about/Destination_based_Routing_and_Circuit_Al.html?id=z6J3zQEACAAJ
