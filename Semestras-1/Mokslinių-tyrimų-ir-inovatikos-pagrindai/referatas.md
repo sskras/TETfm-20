@@ -1,6 +1,3 @@
-Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2] ir daktarinės disertacijos [1.3] apibendrinti srautų augimo tendencijas. 
-Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srautams.
-
 # 1. Kodėl 4G neužtenka
 
 `4G LTE` yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai `5G NR`).
@@ -16,23 +13,32 @@ Ir nors NR daug komponentų perima iš LTE bei geba dalį jos infrastruktūros i
 
 ## LTE trūksta pralaidumo
 
-Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.  
-[1.2]  
-[1.3]  
+Pagrindinis argumentas, kad nepakanka 4G LTE ryšio – augantys ir ateityje augsiantys UE duomenų srautai.
+Cisco bendrovė savo kasmetinėje Interneto augimo ataskaitoje [1.2] prognozuoja, kad 4G LTE augimas pradedant 2021 ims truputį lėtėti:
 
-### LTE perduodama gana apribotą video srautą
+![image](https://user-images.githubusercontent.com/74717106/101078210-81037080-35ae-11eb-9b3e-16f1a5451e69.png)  
+`TODO pav. Pasaulinis mobiliųjų įrenginių ir jungčių augimas` [1.2]
 
-[1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
-    https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf
+O judriojo ryšio abonentų skaičiui numatomas tiesinis augimas:
+![image](https://user-images.githubusercontent.com/74717106/101078730-3b937300-35af-11eb-968c-7668eed43f72.png)
+`TODO pav. Pasaulinis judriojo ryšio abonentų skaičiaus augimas` [1.2]
 
-## LTE neatsparus tam tikroms atakoms (ryšio fizinis saugumas)
+Taip pat numatomas tiesinis ir tokių įrenginių spartos augimas:
+![image](https://user-images.githubusercontent.com/74717106/101080752-d725e300-35b1-11eb-9d76-cde25d78f13d.png)  
+`TODO pav. Pasaulinis judriojo ryšio įrenginių spartos augimas` [1.2]
 
-[1.k] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
-      https://ieeexplore.ieee.org/abstract/document/8401619  
-    
-[1.l] A Study of 4G Network for Security System, **November, 2015**  
-      https://www.koreascience.or.kr/article/JAKO201502152089243.pdf  
-    
+Gi M2M (angl. Machine to Machine, mašinų komunikacijos su mašinomis) srautams nuo 2021 m. prognozuojamas net šiek tiek geometrinis augimas:
+![image](https://user-images.githubusercontent.com/74717106/101078568-0850e400-35af-11eb-90d9-69676c5c178d.png)  
+`TODO pav. Pasaulinis judriojo M2M srauto augimas` [1.2]
+
+Natūralu, kad televizijai persikeliant į interneto platformas (pvz. Netflix), dažnas gyventojas įpranta žiūrėti video internetu.
+Bendrovė ZTE prognozuoja 8K raiškos vaizdų įsigalėjimą nuo 2021 m.:
+
+![image](https://user-images.githubusercontent.com/74717106/101082176-b78fba00-35b3-11eb-832a-534475038197.png)  
+`TODO pav. Video paslaugų vystymosi prognoze 2015–2025 m.` [1.j]
+ 
+O augantis judriojo ryšio įrenginių ir abonentų skaičius bei dabartinė judriojo ryšio sparta su minimais prognozavimais perša išvada, kad vis daugiau gyventojų šiuose įrenginiuose sieks aukštos raiškos vaizdo (bent jau 4K ar FHD, angl. Full High Definition), bet 4G LTE to nebespės užtikrinti.
+
 ## Architektūriniai stuburinio tinklo (EPC) trūkumai
 
 4G LTE architektūroje stuburinis tinklas EPC atlieka labai svarbų vaidmenį (aprašomas penktame skyriuje).
@@ -155,8 +161,8 @@ Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 * 2017 m. vasario 23 d. Kinijoje, pas ryšio tiekėją "Chunghwa Telecom" [1.bb]
 
 Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC) atliktą `4G LTE` agreguoto tinklo tyrimą projektui Fed4FIRE+. [1.aa]
-Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko vadinamosios `Split` architektūros bazinėee stotyse (`RAN` viduje).
-O šis funkcionalumas `5G NR` technologijai yra kertinis.
+Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko vadinamosios `Split` architektūros bazinėse stotyse (`RAN` viduje).
+O šis funkcionalumas `5G NR` technologijai yra kertinis ir netgi (kaip paminėta aprašant C-RAN).
 
 Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
 
@@ -166,7 +172,7 @@ Tuo tarpu `5G NR` gaires 2017 m. nubrėžęs standartas `IMT-2020` numatė lanks
 
 Akivaizdu, kad `4G LTE` ir `WLAN` agregacija nėra nei paplitusi pasaulyje, nei suderinama su `5G NR` siekiais.
 Tai dar vienas `4G LTE` aspektas, kurį `5G NR` privalės tobulinti.
-Ar pavyks, didelis klausimas.
+Ar pavyks šį sykį, didelis klausimas.
 
 
 [1.r] LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP), **March 2016**  
@@ -254,12 +260,10 @@ Ar pavyks, didelis klausimas.
        https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0  
 
  [1.2] Cisco Annual Internet Report (2018–2023), **March 2020**  
-       https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/index.html  
-       https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/infographic-c82-741491.html  
        https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf  
-
- [1.3] Destination-based Routing and Circuit Allocation for Future Traffic Growth, **2020**  
-       https://books.google.lt/books/about/Destination_based_Routing_and_Circuit_Al.html?id=z6J3zQEACAAJ
 
  [1.4] Slice architecture for 5G core network, **July 2017**  
        https://ieeexplore.ieee.org/abstract/document/7993854  
+
+[1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
+      https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13
