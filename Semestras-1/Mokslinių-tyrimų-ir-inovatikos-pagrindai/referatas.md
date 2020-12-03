@@ -17,6 +17,17 @@ Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrast
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
 `1.1 pav. Integralus radijo prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
 
+## 1.1. LTE trūksta pralaidumo
+
+Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.  
+[1.2]  
+[1.9]  
+
+## 1.x. LTE neatsparus tam tikroms atakoms (fizinio ryšio saugumo klausimai)
+
+[1.x] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
+    https://ieeexplore.ieee.org/abstract/document/8401619
+
 ## 1.y. LTE perduodama gana apribotą video srautą
 
 [https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf] **August 2016**
