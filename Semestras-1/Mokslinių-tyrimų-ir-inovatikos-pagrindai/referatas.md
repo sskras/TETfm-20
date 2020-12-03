@@ -84,11 +84,14 @@ Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC)
 
 Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros `RAN` viduje. 
 Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą.
-Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui: `RRH` {Remote Radio Heads}.
-Atsirastų galimybę formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.
-Jis `5G NR` technologijoje yra kertinis.
-Žinoma, šis sprendimas be privalumų turi ir trūkumų.
-`TODO` (susitaupo el. energija stočiai maitinti, bet prireikia beprotiškai didelio `Fronthaul` pralaidumo + ne perdaugiausiai nukrenta stoties kaina)
+Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui, `5G NR` ryšyje dar vadinama `RRH` {Remote Radio Heads}.
+Atsirastų galimybė formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.  
+[https://ieeexplore.ieee.org/document/7511579] **July 2016**
+
+Šis funkcionalumas `5G NR` technologijai yra kertinis.
+Žinoma, toks sprendimas be privalumų turi ir trūkumų.
+Taupoma energija stočiai maitinti, tačiau prireikia beprotiškai didelio `Fronthaul` magistralės pralaidumo .
+Taip pat ne perdaugiausiai nukrenta stoties kaina (mat stotyje liekanti įranga pasudėtingėja dėl pasikeitusios komunikacijos su iškeltaja įrangos dalimi).
 
 Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
 
