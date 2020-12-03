@@ -181,98 +181,98 @@ Tam 4G LTE šiuo metu nėra tinkamas.
 
 # Literatūra:
 
- [1] 5G NR: The Next Generation Wireless Access Technology, **2018**  
-       https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0  
+ 1. Dahlman E., Parkvall S., Skold J. **2018** 5G NR: The Next Generation Wireless Access Technology. Academic Press  
+Prieiga per internetą: <https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0>
 
- [2] Cisco Annual Internet Report (2018–2023), **March 2020**  
-       https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf  
+ 2.  **March 2020**. Cisco Annual Internet Report (2018–2023). Cisco public,  
+Prieiga per internetą: <https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf>
 
- [3] Slice architecture for 5G core network, **July 2017**  
-       https://ieeexplore.ieee.org/abstract/document/7993854  
+ 3. Young-il Choi; Noik Park. **July 2017**. Slice architecture for 5G core network.  
+Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/7993854>
 
- [4] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
-      https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13
+ 4.  **August 2016**. Big Video Bright Future | ZTE Big Video white paper.  
+Prieiga per internetą: <https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13>
 
-[5] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
-      https://ieeexplore.ieee.org/document/7511579
+ 5.  **May 2016**. Impact of packetization and functional split on C-RAN fronthaul performance.  
+      Prieiga per internetą: <https://ieeexplore.ieee.org/document/7511579>
 
-[6] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**  
-      https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
+ 6.  **February 2020**. C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027.  
+      Prieiga per internetą: <https://www.grandviewresearch.com/industry-analysis/cloud-ran-market>
 
-[7] Understanding the Basics of CPRI Fronthaul Technology, **February 2015**  
-      http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf
+ 7.  **February 2015**. Understanding the Basics of CPRI Fronthaul Technology.  
+      Prieiga per internetą: <http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf>
     
-[8] Resource Management in Cloud Radio Access Network: Conventional and New Approaches, **May 2020**  
-      https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf
+ 8.  **May 2020**. Resource Management in Cloud Radio Access Network: Conventional and New Approaches.  
+      Prieiga per internetą: <https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf>
     
-[9] Cloud RAN: Basics, Advances and Challenges, **April 2016**  
-      https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
+ 9.  **April 2016**. Cloud RAN: Basics, Advances and Challenges.  
+      Prieiga per internetą: <https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf>
 
-[10] LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP), **March 2016**  
-      https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf
+10.  **March 2016**. LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP).  
+      Prieiga per internetą: <https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf>
 
-[11] The Voice of 5G for the Americas, LTE Aggregation & Unlicensed Spectrum, **November 2015**  
-      https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf
+11.  **November 2015**. The Voice of 5G for the Americas, LTE Aggregation & Unlicensed Spectrum.  
+      Prieiga per internetą: <https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf>
     
-[12] LTE unlicensed and Wi-Fi: Moving beyond coexistence (report), **2015**  
-      https://ecfsapi.fcc.gov/file/60001076664.pdf
+12.  **2015**. LTE unlicensed and Wi-Fi: Moving beyond coexistence (report).  
+      Prieiga per internetą: <https://ecfsapi.fcc.gov/file/60001076664.pdf>
     
-[13] Ruckus Wireless: Beyond LTE unlicensed, with LTE plus Wi-Fi link aggregation,  **2015**  
-      https://www.commscope.com/globalassets/digizuite/1084-1074-senzafili-laa-ruckus.pdf
+13.  **2015**. Ruckus Wireless: Beyond LTE unlicensed, with LTE plus Wi-Fi link aggregation.  
+      Prieiga per internetą: <https://www.commscope.com/globalassets/digizuite/1084-1074-senzafili-laa-ruckus.pdf>
 
-[14] SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks, **June 2020**  
-      https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907
+14.  **June 2020**. SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks.  
+      Prieiga per internetą: <https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907>
       
-[15] Mitigation technique for LTE-LAA and LTE-LWA coexistence, **July 2020**  
-       https://ieeexplore.ieee.org/abstract/document/9165524
+15.  **July 2020**. Mitigation technique for LTE-LAA and LTE-LWA coexistence.  
+       Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/9165524>
     
-[16] An efficient SDN‐based LTE‐WiFi spectrum aggregation system for heterogeneous 5G networks, **April 2020**  
-       https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3943
+16.  **April 2020**. An efficient SDN‐based LTE‐WiFi spectrum aggregation system for heterogeneous 5G networks.  
+       Prieiga per internetą: <https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3943>
 
-[17] A Packet Level Steering Solution for Tightly Coupled LWIP Networks, ***June 2020**  
-       https://ieeexplore.ieee.org/abstract/document/9118009
+17.  **June 2020**. A Packet Level Steering Solution for Tightly Coupled LWIP Networks.  
+       Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/9118009>
        
-[18] Testbed to experiment with LTE WiFi Aggregation, **June 2019**
-       https://ieeexplore.ieee.org/abstract/document/8802000
+18.  **June 2019**. Testbed to experiment with LTE WiFi Aggregation.
+       Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/8802000>
 
-[19] Informacijos ir ryšių technologijos, Europos regioninės plėtros fondo prioritetai, (žiūrėta 2020 m. gruodžio 2 d.)  
-       https://ec.europa.eu/regional_policy/lt/policy/themes/ict/
+19. Informacijos ir ryšių technologijos, Europos regioninės plėtros fondo prioritetai, (žiūrėta 2020 m. gruodžio 2 d.)  
+       Prieiga per internetą: <https://ec.europa.eu/regional_policy/lt/policy/themes/ict/>
 
-[20] Dėl Lietuvos Respublikos vyriausybės nutarimo projekto NR. 19-1690, **2019-02-13**  
-       https://e-seimas.lrs.lt/rs/legalact/TAK/07fd9f6035b711e98893d5af47354b00/format/ISO_PDF/
+20. **2019-02-13**. Dėl Lietuvos Respublikos vyriausybės nutarimo projekto NR. 19-1690.  
+       Prieiga per internetą: <https://e-seimas.lrs.lt/rs/legalact/TAK/07fd9f6035b711e98893d5af47354b00/format/ISO_PDF/>
 
-[21] Inovacijų link - Informacijos ir ryšių technologijos 7-joje bendrojoje programoje, **2007 01 16**  
-       https://ivpk.lrv.lt/lt/naujienos/inovaciju-link-informacijos-ir-rysiu-technologijos-7-joje-bendrojoje-programoje
+21. **2007 01 16**. Inovacijų link - Informacijos ir ryšių technologijos 7-joje bendrojoje programoje.  
+       Prieiga per internetą: <https://ivpk.lrv.lt/lt/naujienos/inovaciju-link-informacijos-ir-rysiu-technologijos-7-joje-bendrojoje-programoje>
 
-[22] Strategische opties voor inpandig 4G en 5G connectiviteit, **April 2019**  
-      https://www.surf.nl/files/2019-07/rapport_mobiele_technologie_op_de_campus_1.0.pdf#page=29:~:text=Geen%20van%20deze,toepassingen,%20ook%20Multefire,%20lijken%20succesvol%20te%20zijn
+22. **April 2019**. Strategische opties voor inpandig 4G en 5G connectiviteit.  
+      Prieiga per internetą: <https://www.surf.nl/files/2019-07/rapport_mobiele_technologie_op_de_campus_1.0.pdf#page=29:~:text=Geen%20van%20deze,toepassingen,%20ook%20Multefire,%20lijken%20succesvol%20te%20zijn>
 
-[23] SURF asociacijos tinklalapis, skyrelis "Research & ICT", (žiūrėta 2020 m. gruodžio 2 d.)  
-       https://www.surf.nl/en/research-ict
+23. SURF asociacijos tinklalapis, skyrelis "Research & ICT", (žiūrėta 2020 m. gruodžio 2 d.)  
+       Prieiga per internetą: <https://www.surf.nl/en/research-ict>
   
-[24] Stratix bendrovės tinklalapis, skyrelis "About us", (žiūrėta 2020 m. gruodžio 2 d.)  
-       https://www.stratix.nl/over-ons/
+24. Stratix bendrovės tinklalapis, skyrelis "About us", (žiūrėta 2020 m. gruodžio 2 d.)  
+       Prieiga per internetą: <https://www.stratix.nl/over-ons/>
 
-[25] LWA: logical wireless alternative? **June 2015**  
-       https://www.rcrwireless.com/20150625/network-infrastructure/wi-fi/lwa-logical-wireless-alternative-tag4
+25. **June 2015**. LWA: logical wireless alternative?  
+       Prieiga per internetą: <https://www.rcrwireless.com/20150625/network-infrastructure/wi-fi/lwa-logical-wireless-alternative-tag4>
 
-[26] D7.5 • Standardization and Regulation Report (Release A), **July 29th, 2019**  
-       https://5genesis.eu/wp-content/uploads/2019/08/5GENESIS_D7.5-_v1.0.pdf
+26. **July 29th, 2019**. D7.5 • Standardization and Regulation Report (Release A).  
+       Prieiga per internetą: <https://5genesis.eu/wp-content/uploads/2019/08/5GENESIS_D7.5-_v1.0.pdf>
 
-[27] M1, Nokia announce Singapore’s first commercial nationwide HetNet rollout, **19 August 2016** (žiūrėta 2020 m. gruodžio 2 d.)  
-       https://web.archive.org/web/20160920143843/https://www.m1.com.sg/AboutM1/NewsReleases/2016/M1%20Nokia%20announce%20Singapore%20first%20commercial%20nationwide%20HetNet%20rollout.aspx
+27. **19 August 2016**. M1, Nokia announce Singapore’s first commercial nationwide HetNet rollout. (žiūrėta 2020 m. gruodžio 2 d.)  
+       Prieiga per internetą: <https://web.archive.org/web/20160920143843/https://www.m1.com.sg/AboutM1/NewsReleases/2016/M1%20Nokia%20announce%20Singapore%20first%20commercial%20nationwide%20HetNet%20rollout.aspx>
 
-[28] M1, Nokia to deploy HetNet and NB-IoT networks in Singapore, **22 August 2016**  
-       http://www.gtigroup.org/news/ind/2016-08-22/9257.html
+28. **22 August 2016**. M1, Nokia to deploy HetNet and NB-IoT networks in Singapore.  
+       Prieiga per internetą: <http://www.gtigroup.org/news/ind/2016-08-22/9257.html>
 
-[29] Chunghwa Telecom to launch LWA network, **21 February 2017**  
-       http://digitimes.com/news/a20170220PD201.html
+29. **21 February 2017**. Chunghwa Telecom to launch LWA network.  
+       Prieiga per internetą: <http://digitimes.com/news/a20170220PD201.html>
 
-[30] Fed4FIRE+ Experiment Report: Cloud-RAN based LTE-WiFi Aggregation (F4F-LWA), **September 2018**  
-       https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf
+30. **September 2018**. Fed4FIRE+ Experiment Report: Cloud-RAN based LTE-WiFi Aggregation (F4F-LWA).  
+       Prieiga per internetą: <https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf>
 
-[31] MEMBER REPORT: 5G & LTE in Unlicensed Spectrum. GSA Member Report, **August 2020**  
-       https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled
+31. **August 2020**. MEMBER REPORT: 5G & LTE in Unlicensed Spectrum. GSA Member Report.  
+       Prieiga per internetą: <https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled>
 
-[32] ITU-T Focus Group IMT-2020 Deliverables, **2017**  
-       https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29
+32. **2017**. ITU-T Focus Group IMT-2020 Deliverables.  
+       Prieiga per internetą: <https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29>
