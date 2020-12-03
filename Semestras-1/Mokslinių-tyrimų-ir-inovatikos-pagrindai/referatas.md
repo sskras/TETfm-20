@@ -83,14 +83,14 @@ Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC)
 [https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf] **September 2018**
 
 Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros `RAN` viduje. 
-Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} perkelti į nuotolinį mazgą.
-Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui, `RRH` {Remote Radio Heads}.
+Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą.
+Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui: `RRH` {Remote Radio Heads}.
 Atsirastų galimybę formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.
 Jis `5G NR` technologijoje yra kertinis.
 Žinoma, šis sprendimas be privalumų turi ir trūkumų.
-`TODO` (susitaupo el. energija stočiai maitinti, bet reikia beprotiško `Fronthault` pralaidumo + ne perdaugiausiai nukrenta stoties kaina)
+`TODO` (susitaupo el. energija stočiai maitinti, bet prireikia beprotiškai didelio `Fronthaul` pralaidumo + ne perdaugiausiai nukrenta stoties kaina)
 
-Pažymėtina, kad Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus ir eksperimentiškai pabrėžia paprasčiausius būdus efektyviai agreguoti radijo tinklus `5G NR` atveju (ateičiai).
+Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
 
 O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė, kad šių technologijų vystymas sustojo.  
 [https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled] **August 2020**
