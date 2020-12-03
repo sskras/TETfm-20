@@ -6,7 +6,7 @@ Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srau
 # 1. Kodėl 4G neužtenka
 
 `4G LTE` yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai `5G NR`).
-Tačiau kai kurių reikalavimų nepajėgi nei dabartinė LTE implementacija, nei jos naujos revizijos. [1.1]
+Tačiau kai kurių reikalavimų patenkinti nepajėgi nei dabartinė LTE implementacija, nei jos naujos revizijos. [1.1]
 Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsirado ganėtinai pažengusių technologijų.
 
 5G NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. 
@@ -89,10 +89,11 @@ Ir ji ganėtinai skiriasi nuo duomenų centro scenarijų.
 
 Todėl C-RAN debesų architektūra turi būti kitokia nei DC debesų, ir irgi reikalauja tobulinimų.
 
-`TODO`, skirtingi BS splitų tipai.
-
 C-RAN architektūra naudojama teoriškai jau nuo `3G`, bet praktiškai pradėjo plisti tik 4G LTE tinkluose.
 Tačiau ji nėra visiškai išbaigta ar nusistovėjusi: vyksta jos tyrinėjimai, optimizavimai ir kiti tobulinimo darbai: [1.t].
+
+![image](https://user-images.githubusercontent.com/74717106/101074912-00427580-35aa-11eb-8d76-a53fcc054887.png)
+`TODO pav. Tyrimų objektas – skirtingos galimos RRH ir BBU skiriamosios ribos (A, B, C, D, E).` [1.w]
 
 Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir prasidėjusio įjungimo stipriai pasistūmės C-RAN masinis diegimas:
 
