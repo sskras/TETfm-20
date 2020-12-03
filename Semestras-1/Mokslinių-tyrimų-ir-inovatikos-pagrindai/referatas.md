@@ -30,19 +30,23 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 ## 1.x. LTE neatsparus tam tikroms atakoms (fizinio ryšio saugumo klausimai)
 
 [1.k] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
-    https://ieeexplore.ieee.org/abstract/document/8401619  
+      https://ieeexplore.ieee.org/abstract/document/8401619  
     
 [1.l] A Study of 4G Network for Security System, **November, 2015**  
-    https://www.koreascience.or.kr/article/JAKO201502152089243.pdf  
+      https://www.koreascience.or.kr/article/JAKO201502152089243.pdf  
     
 [1.n] Overview of 5G Security and Vulnerabilities, **Spring 2020**
-    https://cyberdefensereview.army.mil/Portals/6/Documents/CyConUS19%20ConferencePapers/Overview_of_5G_Security_and_Vulnerabilities.pdf?ver=2019-11-14-085032-807  
-    https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%2008_%20Fonyi_WEB.pdf
-    https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%20FULL_WEB.pdf
+      https://cyberdefensereview.army.mil/Portals/6/Documents/CyConUS19%20ConferencePapers/Overview_of_5G_Security_and_Vulnerabilities.pdf?ver=2019-11-14-085032-807  
+      https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%2008_%20Fonyi_WEB.pdf
+      https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%20FULL_WEB.pdf
     
 [1.m] The current state of affairs in 5G security and the main remaining security challenges, **April 2019**  
-    https://arxiv.org/abs/1904.08394  
-    http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
+      https://arxiv.org/abs/1904.08394  
+      http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
+
+## 1.u. Architektūriniai EPC skirtumai
+
+[1.3]
 
 ## 1.y. C-RAN architektūra nėra optimizuota LTE tinkluose
 
@@ -83,19 +87,19 @@ Tačiau ji nėra visiškai išbaigta: vyksta jos tyrinėjimai, optimizavimas ir 
 Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir prasidėjusio įjungimo stipriai pasistūmės C-RAN masinis diegimas. [1.v]
 
 [1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
-    [https://ieeexplore.ieee.org/document/7511579]
+      [https://ieeexplore.ieee.org/document/7511579]
 
 [1.v] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**  
-    https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
+      https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
 
 [1.u] Understanding the Basics of CPRI Fronthaul Technology, **February 2015**  
-    http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf
+      http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf
     
-[1.t] Resource Management in Cloud Radio Access Network: Conventional and New Approaches, **May 2020**
-    https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf
+[1.t] Resource Management in Cloud Radio Access Network: Conventional and New Approaches, **May 2020**  
+      https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf
     
-[1.s] Cloud RAN: Basics, Advances and Challenges, **April 2016**
-    https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
+[1.s] Cloud RAN: Basics, Advances and Challenges, **April 2016**  
+      https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
 
 ## 1.z. Neišpopuliarėjusi LTE + WLAN konvergencija
 
@@ -104,20 +108,28 @@ Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir
 `3GPP` organizacija `4G LTE` specifikacijoje buvo numačiusi galimybę apjungti LTE ir WLAN (populiariai kalbant Wi-Fi).
 Taip būtų sukuriamas heterogeninis radijo tinklas.
 Specifikacijos `Release-13` aprašytos dvi technologijos:
-[https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf]
+
 * LWA {angl. LTE-WLAN aggregation} technologija.
 * LWIP {LTE WLAN Radio Level Integration with IPsec Tunnel}
 
+[1.r] LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP), **March 2016**  
+      https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf
+
 [papaišom pavyzdžių, diagramų apie tai, kaip veikia?]  
-[https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf]  
-[https://ecfsapi.fcc.gov/file/60001076664.pdf]  **2015**
-[https://www.commscope.com/globalassets/digizuite/1084-1074-senzafili-laa-ruckus.pdf]  **2015**
-[ZTE2016]  
+
+[1.p] The Voice of 5G for the Americas, LTE Aggregation & Unlicensed Spectrum, **November 2015**  
+      https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf
+    
+[1.o] LTE unlicensed and Wi-Fi: Moving beyond coexistence (report), **2015**  
+      https://ecfsapi.fcc.gov/file/60001076664.pdf
+    
+[1.m] Ruckus Wireless: Beyond LTE unlicensed, with LTE plus Wi-Fi link aggregation,  **2015**  
+      https://www.commscope.com/globalassets/digizuite/1084-1074-senzafili-laa-ruckus.pdf
 
 Šios dvi technologijos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakojimai:
 
-* SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks, **June 2020**
-  [https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907]  
+[1.n] SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks, **June 2020**  
+      https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907
 
 * [https://scholar.google.lt/scholar?hl=lt&as_sdt=0%2C5&q=LWIP+LTE&btnG=]  
 * [https://scholar.google.lt/scholar?hl=lt&as_sdt=0%2C5&q=LWA+LTE&btnG=]  
@@ -125,38 +137,64 @@ Specifikacijos `Release-13` aprašytos dvi technologijos:
 Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryšio ir nelicencinio radijo spektro (2,4 GHz ir 5 GHz) apjungimui (sukurtos tiek `3GPP`, tiek kitų organizacijų) nebuvo plačiai įgyvendintos ir kasdieniniam naudojimui nepaplito.  
 
 Taip teigia Olandijos IKT {informacijos ir ryšių technologijų, angl. ICT, Information and Communication Technologies} švietimo ir tyrimų asociacija SURF {olan. Samenwerkende Universitaire RekenFaciliteiten} kartu su Olandijos IKT tyrimų bendrove Stratix jų bendroje ataskaitoje apie galimybes panaudoti 4G ir 5G vien patalpose.  
-[https://www.surf.nl/files/2019-07/rapport_mobiele_technologie_op_de_campus_1.0.pdf#page=29:~:text=Geen%20van%20deze,toepassingen,%20ook%20Multefire,%20lijken%20succesvol%20te%20zijn] **April 2019**
 
-[https://www.surf.nl/en/research-ict]  
-[https://www.stratix.nl/over-ons/]  
+[1.l] Strategische opties voor inpandig 4G en 5G connectiviteit, **April 2019**  
+      https://www.surf.nl/files/2019-07/rapport_mobiele_technologie_op_de_campus_1.0.pdf#page=29:~:text=Geen%20van%20deze,toepassingen,%20ook%20Multefire,%20lijken%20succesvol%20te%20zijn
 
-Pažymima, kad tiek pas čipų gamintojus Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojus šių technologijų palaikymas ir net implementacijos atsilieka nuo kasdienybės.  
-[https://ec.europa.eu/regional_policy/lt/policy/themes/ict/]  
-[https://e-seimas.lrs.lt/rs/legalact/TAK/07fd9f6035b711e98893d5af47354b00/format/ISO_PDF/]  
-[https://ivpk.lrv.lt/lt/naujienos/inovaciju-link-informacijos-ir-rysiu-technologijos-7-joje-bendrojoje-programoje]  
+[1.kk] SURF asociacijos tinklalapis, skyrelis "Research & ICT", (žiūrėta 2020 m. gruodžio 2 d.)  
+       https://www.surf.nl/en/research-ict
+  
+[1.jj] Stratix bendrovės tinklalapis, skyrelis "About us", (žiūrėta 2020 m. gruodžio 2 d.)  
+       https://www.stratix.nl/over-ons/
 
-[Paminim Multefire su Samsungu?]  
-[https://www.multefire.org/technology/specifications/]  
+Pažymima, kad tiek čipų gamintojai Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojai atsilieka nuo kasdienybės (įskaitant Samsung) atsilieka nuo kasdienybės tiek teikdami šių technologijų palaikymą, tiek net ir implementuodami jas.
+
+[1.ii] Informacijos ir ryšių technologijos, Europos regioninės plėtros fondo prioritetai, (žiūrėta 2020 m. gruodžio 2 d.)  
+       https://ec.europa.eu/regional_policy/lt/policy/themes/ict/
+
+[1.hh] Dėl Lietuvos Respublikos vyriausybės nutarimo projekto NR. 19-1690, **2019-02-13**  
+       https://e-seimas.lrs.lt/rs/legalact/TAK/07fd9f6035b711e98893d5af47354b00/format/ISO_PDF/
+
+[1.gg] Inovacijų link - Informacijos ir ryšių technologijos 7-joje bendrojoje programoje, **2007 01 16**  
+       https://ivpk.lrv.lt/lt/naujienos/inovaciju-link-informacijos-ir-rysiu-technologijos-7-joje-bendrojoje-programoje
 
 Ataskaitos autoriai neaptiko paaiškinimų, kodėl taip nutikę, tik spekuliacijas.
 Jie spėja, kad apskritai visų nelicencinio spektro agregavimo technologijų vėlavimo priežastis yra per mažas rinkos poreikis.
-Grindžiama tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės nedalyvauja aljansuose, remiančiuose šias technologijas.
+Grindžiama tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės (išskyrus nebent Samsung) nedalyvauja aljansuose, remiančiuose šias technologijas.
 
 [Pavardiname aljansus?]
+[Paminim Multefire su Samsungu?]  
+[https://www.multefire.org/technology/specifications/]  
+
+Internetinio leidinio "RCR Wireless News" straipsnelis [1.ff] patvirtina, kad tokia pat situacija rinkoje buvo ir 2015 m.
+
+[1.ff] LWA: logical wireless alternative? **June 2015**  
+       https://www.rcrwireless.com/20150625/network-infrastructure/wi-fi/lwa-logical-wireless-alternative-tag4
 
 `5Genesis` konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad `3GPP` pateiktos `4G LTE` specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir `5G NR` atveju nėra išsamios apskritai.  
-[https://5genesis.eu/wp-content/uploads/2019/08/5GENESIS_D7.5-_v1.0.pdf] **July 29th, 2019**
 
-[https://www.rcrwireless.com/20150625/network-infrastructure/wi-fi/lwa-logical-wireless-alternative-tag4]
+[1.ee] D7.5 • Standardization and Regulation Report (Release A), **July 29th, 2019**  
+       https://5genesis.eu/wp-content/uploads/2019/08/5GENESIS_D7.5-_v1.0.pdf
 
 Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 
-* 2017 m. vasaros pr. Singapūre, pas ryšio tiekėją "M1" [https://web.archive.org/web/20160920143843/https://www.m1.com.sg/AboutM1/NewsReleases/2016/M1%20Nokia%20announce%20Singapore%20first%20commercial%20nationwide%20HetNet%20rollout.aspx] **19 August 2016**  
-[http://www.gtigroup.org/news/ind/2016-08-22/9257.html] **22 August 2016**
-* 2017 m. vasario 23 d. Kinijoje, pas ryšio tiekėją "Chunghwa Telecom" [http://digitimes.com/news/a20170220PD201.html] **21 February 2017**
+* 2017 m. vasaros pr. Singapūre, pas ryšio tiekėją "M1"
+
+[1.dd] M1, Nokia announce Singapore’s first commercial nationwide HetNet rollout, **19 August 2016** (žiūrėta 2020 m. gruodžio 2 d.)  
+       https://web.archive.org/web/20160920143843/https://www.m1.com.sg/AboutM1/NewsReleases/2016/M1%20Nokia%20announce%20Singapore%20first%20commercial%20nationwide%20HetNet%20rollout.aspx
+
+[1.cc] M1, Nokia to deploy HetNet and NB-IoT networks in Singapore, **22 August 2016**  
+       http://www.gtigroup.org/news/ind/2016-08-22/9257.html
+
+* 2017 m. vasario 23 d. Kinijoje, pas ryšio tiekėją "Chunghwa Telecom"
+
+[1.bb] Chunghwa Telecom to launch LWA network, **21 February 2017**  
+       http://digitimes.com/news/a20170220PD201.html
 
 Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC) atliktą `4G LTE` agreguoto tinklo tyrimą projektui Fed4FIRE+:
-[https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf] **September 2018**
+
+[1.aa] Fed4FIRE+ Experiment Report: Cloud-RAN based LTE-WiFi Aggregation (F4F-LWA), **September 2018**  
+    https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf
 
 Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros bazinėje stotyje (`RAN` viduje).
 
@@ -165,11 +203,14 @@ Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LW
 Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
 
 O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė, kad šių technologijų vystymas sustojo.  
-[https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled] **August 2020**
 
-`5G NR` gaires brėžiantis `IMT-2020` standartas numato lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus.
-`TODO`  
-[https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29]  
+[1.00] MEMBER REPORT: 5G & LTE in Unlicensed Spectrum. GSA Member Report, **August 2020**  
+    https://gsacom.com/paper/5g-lte-in-unlicensed-spectrum-august-2020/#:~:text=development%20of%20the%20technology%20ecosystems%20around%20LTE-U%20and%20LWA%20have%20stalled
+
+`5G NR` gaires brėžiantis `IMT-2020` standartas numato lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus. [1.qq]
+
+[1.qq] ITU-T Focus Group IMT-2020 Deliverables, **2017**
+       https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29
 
 # Skyriaus santrumpos
 
