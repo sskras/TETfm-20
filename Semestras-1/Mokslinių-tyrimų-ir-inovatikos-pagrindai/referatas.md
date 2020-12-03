@@ -16,18 +16,18 @@ Ir nors NR daug komponentų perima iš LTE bei geba dalį jos infrastruktūros i
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
 `1.1 pav. Integralus radijo prieigos sprendimas pereinamuoju LTE ir NR vystymo laikotarpiu.`
 
-## 1.1. LTE trūksta pralaidumo
+## LTE trūksta pralaidumo
 
 Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.  
 [1.2]  
 [1.9]  
 
-## 1.2. LTE perduodama gana apribotą video srautą
+## LTE perduodama gana apribotą video srautą
 
 [1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
     https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf
 
-## 1.x. LTE neatsparus tam tikroms atakoms (fizinio ryšio saugumo klausimai)
+## LTE neatsparus tam tikroms atakoms (fizinio ryšio saugumo klausimai)
 
 [1.k] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
       https://ieeexplore.ieee.org/abstract/document/8401619  
@@ -44,11 +44,11 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
       https://arxiv.org/abs/1904.08394  
       http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
 
-## 1.u. Architektūriniai EPC stuburinio tinklo trūkumai
+## Architektūriniai stuburinio tinklo (EPC) trūkumai
 
 [1.3]
 
-## 1.y. C-RAN architektūra nėra optimizuota LTE tinkluose
+## C-RAN architektūra LTE tinkluose nėra pakankamai optimizuota
 
 `C-RAN` architektūra (apibendrinanti dviejų angl. terminų `Centralized-RAN` ir `Cloud-RAN` santrumpa)
 leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą [1.w].
@@ -101,7 +101,7 @@ Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir
 [1.s] Cloud RAN: Basics, Advances and Challenges, **April 2016**  
       https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
 
-## 1.z. Neišpopuliarėjusi LTE + WLAN konvergencija
+## Neišpopuliarėjusi LTE + WLAN konvergencija
 
 [Kam skirta?]
 
