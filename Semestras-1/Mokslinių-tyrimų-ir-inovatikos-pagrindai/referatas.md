@@ -17,25 +17,25 @@ Pagrindinis argumentas, kad nepakanka 4G LTE ryšio – augantys ir ateityje aug
 Cisco bendrovė savo kasmetinėje Interneto augimo ataskaitoje [2] prognozuoja, kad 4G LTE augimas pradedant 2021 ims truputį lėtėti:
 
 ![image](https://user-images.githubusercontent.com/74717106/101078210-81037080-35ae-11eb-9b3e-16f1a5451e69.png)  
-`TODO pav. Pasaulinis mobiliųjų įrenginių ir jungčių augimas` [2]
+`2 pav. Pasaulinis mobiliųjų įrenginių ir jungčių augimas` [2]
 
 O judriojo ryšio abonentų skaičiui numatomas tiesinis augimas:
 ![image](https://user-images.githubusercontent.com/74717106/101078730-3b937300-35af-11eb-968c-7668eed43f72.png)
-`TODO pav. Pasaulinis judriojo ryšio abonentų skaičiaus augimas` [2]
+`3 pav. Pasaulinis judriojo ryšio abonentų skaičiaus augimas` [2]
 
 Taip pat numatomas tiesinis ir tokių įrenginių spartos augimas:
 ![image](https://user-images.githubusercontent.com/74717106/101080752-d725e300-35b1-11eb-9d76-cde25d78f13d.png)  
-`TODO pav. Pasaulinis judriojo ryšio įrenginių spartos augimas` [2]
+`4 pav. Pasaulinis judriojo ryšio įrenginių spartos augimas` [2]
 
 Gi M2M (angl. Machine to Machine, mašinų komunikacijos su mašinomis) srautams nuo 2021 m. prognozuojamas net šiek tiek geometrinis augimas:
 ![image](https://user-images.githubusercontent.com/74717106/101078568-0850e400-35af-11eb-90d9-69676c5c178d.png)  
-`TODO pav. Pasaulinis judriojo M2M srauto augimas` [2]
+`5 pav. Pasaulinis judriojo M2M srauto augimas` [2]
 
 Natūralu, kad televizijai persikeliant į interneto platformas (pvz. Netflix), dažnas gyventojas įpranta žiūrėti video internetu.
 Bendrovė ZTE prognozuoja 8K raiškos vaizdų įsigalėjimą nuo 2021 m.:
 
 ![image](https://user-images.githubusercontent.com/74717106/101082176-b78fba00-35b3-11eb-832a-534475038197.png)  
-`TODO pav. Video paslaugų vystymosi prognoze 2015–2025 m.` [4]
+`6 pav. Video paslaugų vystymosi prognoze 2015–2025 m.` [4]
  
 O augantis judriojo ryšio įrenginių ir abonentų skaičius bei dabartinė judriojo ryšio sparta su minimais prognozavimais perša išvada, kad vis daugiau gyventojų šiuose įrenginiuose sieks aukštos raiškos vaizdo (bent jau 4K ar FHD, angl. Full High Definition), bet 4G LTE to nebespės užtikrinti.
 
@@ -67,7 +67,7 @@ Kraštutinis 2016 m. pavyzdys iškėlus visas BBU funkcijas iš bazinės stoties
 Naujesnė, 2020 m. ataskaita mini jau mažesnį, dešimties kartų srauto padidėjimą priešakinėje magistralėje lyginant su srautu transmisijos tinkle (angl. Backhaul), kurio prireiktų naudojant klasikinę LTE architektūrą. [6]
 
 ![image](https://user-images.githubusercontent.com/74717106/101022192-b6419b80-3579-11eb-90db-8fdc625aa37d.png)  
-`1.b pav. Centralize-RAN architektūra: priešakinė magistralė ir transmisijos tinklas.` [6]
+`7 pav. Centralize-RAN architektūra: priešakinė magistralė ir transmisijos tinklas.` [6]
 
 Be to, ne per daugiausiai nukrenta bazinės stoties kaina, mat joje liekanti įranga sudėtingėja dėl pasikeitusios komunikacijos su iškeltaja dalimi.
 Taip pat žymiai brangesnis varinių priešakinės magistralės kabelių keitimas į optinius lyginant su kabelių keitimu transmisijos tinkle. [7]
@@ -75,7 +75,7 @@ Taip pat žymiai brangesnis varinių priešakinės magistralės kabelių keitima
 Priešakinės magistralės atnaujinimas bus būtinas visose bazinėse stotyse, kuriose tai nebuvo atlikta įjungus LTE:
 
 ![image](https://user-images.githubusercontent.com/74717106/101021464-9f4e7980-3578-11eb-992d-e0fb003018e6.png)  
-`1.c pav. Tradicinio mob. ryšio bokšto sandara su koaksialiniais vario kabeliais` [6]
+`8 pav. Tradicinio mob. ryšio bokšto sandara su koaksialiniais vario kabeliais` [6]
 
 Taip pat C-RAN sukelia ir programinius iššūkius valdant iškeltuosius BBU [9]. 
 Pvz. duomenų centrų virtualizavimo technologijos grįstos resursų dalinimusi ir paskirstytuoju apdorojimu.
@@ -88,12 +88,12 @@ C-RAN architektūra naudojama teoriškai jau nuo 3G, bet praktiškai pradėjo pl
 Tačiau ji nėra visiškai išbaigta ar nusistovėjusi: vyksta jos tyrinėjimai, optimizavimai ir kiti tobulinimo darbai: [8].
 
 ![image](https://user-images.githubusercontent.com/74717106/101074912-00427580-35aa-11eb-8d76-a53fcc054887.png)
-`TODO pav. Tyrimų objektas – skirtingos galimos RRH ir BBU skiriamosios ribos (A, B, C, D, E).` [5]
+`9 pav. Tyrimų objektas – skirtingos galimos RRH ir BBU skiriamosios ribos (A, B, C, D, E).` [5]
 
 Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir prasidėjusio įjungimo stipriai pasistūmės C-RAN masinis diegimas:
 
 ![image](https://user-images.githubusercontent.com/74717106/101058576-f31b8b80-3595-11eb-97db-c7b8a466e0e8.png)  
-`1.d pav. Prognozuojama C-RAN rinkos plėtra 2106–2027 m.` [6]
+`10 pav. Prognozuojama C-RAN rinkos plėtra 2106–2027 m.` [6]
 
 ## Neišpopuliarėjusi LTE + WLAN agregacija
 
@@ -111,16 +111,16 @@ Specifikacijos `Release-13` aprašytos dvi technologijos [10]:
 * LWIP {angl. LTE WLAN Radio Level Integration with IPsec Tunnel} protokolas.
 
 ![image](https://user-images.githubusercontent.com/74717106/101068854-ea30b700-35a1-11eb-9553-ecbf9ae77194.png)  
-`TODO pav. Alcatel-Lucent pasiūlyti du apjungimo būdai (su ateinančio srauto agregacija ir be jos) ` [12]
+`11 pav. Alcatel-Lucent pasiūlyti du apjungimo būdai (su ateinančio srauto agregacija ir be jos) ` [12]
 
 ![image](https://user-images.githubusercontent.com/74717106/101069600-e5b8ce00-35a2-11eb-833a-d63d64db005c.png)  
-`TODO pav. Du paprasčiausi LWA diegimo būdai` [11]
+`12 pav. Du paprasčiausi LWA diegimo būdai` [11]
 
 ![image](https://user-images.githubusercontent.com/74717106/101069898-4c3dec00-35a3-11eb-9bec-bc4b9c47c75a.png)  
-`TODO pav. Numatytieji skirtingi UE mobilumo scenarijai` [11]
+`13 pav. Numatytieji skirtingi UE mobilumo scenarijai` [11]
 
 ![image](https://user-images.githubusercontent.com/74717106/101068235-1f88d500-35a1-11eb-92b4-4a4597230e1c.png)  
-`TODO pav. Qualcomm pasiūlyto LWA sprendimo schema, apjungianti LTE ir Wi-Fi tinklą` [13]
+`14 pav. Qualcomm pasiūlyto LWA sprendimo schema, apjungianti LTE ir Wi-Fi tinklą` [13]
 
 Jos dar tobulinamos, bet tik ta prasme, kad jų pagrindu kuriami nauji atšakojimai: tiek LWA technologijai [14, 15, 16], tiek LWIP protokolui [17, 18].
 
