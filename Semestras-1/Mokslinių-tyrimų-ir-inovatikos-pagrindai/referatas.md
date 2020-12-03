@@ -1,6 +1,4 @@
-(juodraštis)
-
-Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2], straipsnių [1.3-1.8] ir daktarinės disertacijos [1.9] ištraukti rastus 5G NR detalius skirtumus 4G LTE atžvilgiu ir juos apibendrinti. 
+Planuojama iš peržvelgtųjų šaltinių – Cisco srautų prognozės ataskaitos [1.2] ir daktarinės disertacijos [1.3] apibendrinti srautų augimo tendencijas. 
 Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srautams.
 
 # 1. Kodėl 4G neužtenka
@@ -20,7 +18,7 @@ Ir nors NR daug komponentų perima iš LTE bei geba dalį jos infrastruktūros i
 
 Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.  
 [1.2]  
-[1.9]  
+[1.3]  
 
 ### LTE perduodama gana apribotą video srautą
 
@@ -35,22 +33,13 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 [1.l] A Study of 4G Network for Security System, **November, 2015**  
       https://www.koreascience.or.kr/article/JAKO201502152089243.pdf  
     
-[1.n] Overview of 5G Security and Vulnerabilities, **Spring 2020**
-      https://cyberdefensereview.army.mil/Portals/6/Documents/CyConUS19%20ConferencePapers/Overview_of_5G_Security_and_Vulnerabilities.pdf?ver=2019-11-14-085032-807  
-      https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%2008_%20Fonyi_WEB.pdf
-      https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%20FULL_WEB.pdf
-    
-[1.m] The current state of affairs in 5G security and the main remaining security challenges, **April 2019**  
-      https://arxiv.org/abs/1904.08394  
-      http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
-
 ## Architektūriniai stuburinio tinklo (EPC) trūkumai
 
 4G LTE architektūroje stuburinis tinklas EPC atlieka labai svarbų vaidmenį (aprašomas penktame skyriuje).
 Per jį keliauja visi naudotojų duomenys.
 
 Tačiau planuojant keliaropai paspartinti ryšį išryškėjo esminiai architektūriniai trūkumai. 
-Siauriausia EPC vieta pasirodė esant centralizuotas IP srauto maršrutizavimas [1.3].
+Siauriausia EPC vieta pasirodė esant centralizuotas IP srauto maršrutizavimas [1.4].
 Taip pat prisideda MME (Mobilumo valdymo subjektas), kurio ryšis su S-GW (Pristatančiu tinklų sietuvu) yra statinis ir prisideda prie neefektaus IP srauto kelio (4/1 pav.)
 
 5G NR šį trūkumą turėjo pašalinti. Stuburinio tinklo architektūra yra daug lankstesnė (16/1 pav.).
@@ -256,6 +245,8 @@ Ar pavyks, didelis klausimas.
 | C-RAN     | angl. terminų `Centralized-RAN` ir `Cloud-RAN` apibendrinanti santrumpa
 | LWA       | angl. LTE-WLAN aggregation 
 | LWIP      | angl. LTE WLAN Radio Level Integration with IPsec Tunnel
+| AMF       | angl. Access and Mobility Management Function
+| 5GGW      | angl. 5G Gateway
 
 # Literatūra:
 
@@ -267,23 +258,8 @@ Ar pavyks, didelis klausimas.
        https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/infographic-c82-741491.html  
        https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf  
 
- [1.3] Slice architecture for 5G core network, **July 2017**  
-       https://ieeexplore.ieee.org/abstract/document/7993854  
-
- [1.4] Impact of network slicing on 5G Radio Access Networks, **June 2016**  
-       https://ieeexplore.ieee.org/abstract/document/7561023  
-
- [1.5] What Will 5G Be? **June 2014**  
-       https://ieeexplore.ieee.org/abstract/document/6824752  
-
- [1.6] On the Waveform for 5G, **November 2016**  
-       https://ieeexplore.ieee.org/abstract/document/7744813  
-
- [1.7] Revolutionary direction for 5G mobile core network architecture, **December 2016**  
-       https://ieeexplore.ieee.org/abstract/document/7763350  
-
- [1.8] Intelligence and security in big 5G-oriented IoNT: An overview, **January 2020**  
-       https://www.sciencedirect.com/science/article/abs/pii/S0167739X19301074  
-
- [1.9] Destination-based Routing and Circuit Allocation for Future Traffic Growth, **2020**  
+ [1.3] Destination-based Routing and Circuit Allocation for Future Traffic Growth, **2020**  
        https://books.google.lt/books/about/Destination_based_Routing_and_Circuit_Al.html?id=z6J3zQEACAAJ
+
+ [1.4] Slice architecture for 5G core network, **July 2017**  
+       https://ieeexplore.ieee.org/abstract/document/7993854  
