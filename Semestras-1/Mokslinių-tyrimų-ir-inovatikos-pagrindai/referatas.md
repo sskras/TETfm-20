@@ -46,7 +46,14 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 
 ## Architektūriniai stuburinio tinklo (EPC) trūkumai
 
-[1.3]
+4G LTE architektūroje stuburinis tinklas EPC atlieka labai svarbų vaidmenį (aprašomas penktame skyriuje).
+Per jį keliauja visi naudotojų duomenys.
+
+Tačiau planuojant keliaropai paspartinti ryšį išryškėjo esminiai architektūriniai trūkumai. 
+Siauriausia EPC vieta pasirodė esant centralizuotas IP srauto maršrutizavimas [1.3].
+Taip pat prisideda MME (Mobilumo valdymo subjektas), kurio ryšis su S-GW (Pristatančiu tinklų sietuvu) yra statinis ir prisideda prie neefektaus IP srauto kelio (4.1 pav.)
+
+5G NR tinklo dalinimo technologija (aprašoma šeštame skyriuje žemiau) šį trūkumą pašalina.
 
 ## C-RAN architektūra LTE tinkluose nėra pakankamai optimizuota
 
