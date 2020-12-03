@@ -157,6 +157,17 @@ Akivaizdu, kad 4G LTE ir WLAN agregacija nėra nei paplitusi pasaulyje, nei sude
 Tai dar vienas 4G LTE aspektas, kurį 5G NR privalės tobulinti.
 Ar pavyks šį sykį, didelis klausimas.
 
+# Skyriaus išvados
+
+Ar tikrai neužtenka 4G LTE – pasirinkimo (gana filosofinis) klausimas.
+Jei visuomenė derintųsi prie technologijų kaip ir kitų išorės sąlygų, o ne keistų jas pagal save, 4G LTE ryšio jai kuriam laikui tikrai pakaktų.
+Tačiau dėl skirtingų priežasčių visuomenė labiau linkusi didinti savo komforto lygį.
+Tiesiogiai tą rodo vis augantis srauto poreikis judriajame ryšyje. 
+Vien jo augimui patenkinti ir yra kuriamas naujos kartos tinklas.
+Jo dėka planuojama pakelti ir kitas ryšio kokybes lyginant su 4G LTE: 
+sumažinti ryšio delsą bei padidinti judriųjų klientų (tiek mašinų, tiek žmonių) skaičių kone iki begalybės.
+Tam 4G LTE šiuo metu nėra tinkamas.
+
 # Skyriaus santrumpos
 
 | Santrumpa | Pilnas terminas                                                                                                                                    | 
