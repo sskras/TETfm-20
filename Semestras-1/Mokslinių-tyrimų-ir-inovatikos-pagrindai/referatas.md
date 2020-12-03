@@ -44,6 +44,29 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
     https://arxiv.org/abs/1904.08394  
     http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
 
+## 1.y. C-RAN architektūra nėra optimizuota LTE tinkluose
+
+`C-RAN` architektūra (apibendrinta terminų `Centralized-RAN` ir `Cloud-RAN` santrumpa)
+leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą [1.w].
+Taip bokšte liktų tik dalis įrangos, kurios funkcionalumas yra artimiausias radijo eteriui.
+`5G NR` ryšyje ji dar vadinama `RRH` {Remote Radio Heads}.
+Atsiranda galimybė dalį RAN tinklo konsoliduoti įprastiniuose duomenų centruose.
+
+Žinoma, toks sprendimas be privalumų turi ir trūkumų.
+Taupoma energija stočiai maitinti, tačiau prireikia beprotiškai didelio pralaidumo priešakinėje magistralėje (angl. `Fronthaul`).
+Kraštutinis 2016 m. pavyzdys iškėlus visas `BBU` funkcijas iš `BS` į debesį: 75 Mbps `UE` srautas sukurs 1 Gbps srautą priešakinėje magistralėje.
+Naujesnė, 2020 m. ataskaita mini 10 kartų srauto padidėjimą priešakinėje magistralėje lyginant su srautu transmisijos tinkle, kurio prireiktų naudojant klasikinę LTE architektūrą. [1.u]
+
+Taip pat ne per daugiausiai nukrenta stoties kaina (mat stotyje liekanti įranga sudėtingėja dėl pasikeitusios komunikacijos su iškeltaja įrangos dalimi).
+
+`TODO`, skirtingi BS splitų tipai.
+
+[1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
+    [https://ieeexplore.ieee.org/document/7511579]
+
+[1.v] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**
+    https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
+
 ## 1.z. Neišpopuliarėjusi LTE + WLAN konvergencija
 
 [Kam skirta?]
@@ -105,20 +128,9 @@ Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC) atliktą `4G LTE` agreguoto tinklo tyrimą projektui Fed4FIRE+:
 [https://fed4fire.eu/wp-content/uploads/sites/10/2019/09/f4fp-02-stage2-06-report-f4f-lwa-athens-tc.pdf] **September 2018**
 
-Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros `RAN` viduje. 
-Tokia architektūra leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą.
-Taip stotyje liktų tik ta įrangos dalis, kurios funkcionalumas yra artimiausias radijo eteriui, `5G NR` ryšyje dar vadinama `RRH` {Remote Radio Heads}.
-Atsirastų galimybė formuoti `Centralized-RAN` architektūrą (dar vadinamą `Cloud-RAN`), kai dalis RAN tinklo veikia įprastinėse duomenų centrų mašinose.
-
-[1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
-    [https://ieeexplore.ieee.org/document/7511579]
+Ataskaitoje pastebima, kad `LWA` ir jos naudojamas signalizacijos protokolas `LWAAP` nepalaiko `Split` architektūros bazinėje stotyje (`RAN` viduje).
 
 Šis funkcionalumas `5G NR` technologijai yra kertinis.
-Žinoma, toks sprendimas be privalumų turi ir trūkumų.
-Taupoma energija stočiai maitinti, tačiau prireikia beprotiškai didelio `Fronthaul` magistralės pralaidumo.
-Taip pat ne perdaugiausiai nukrenta stoties kaina (mat stotyje liekanti įranga sudėtingėja dėl pasikeitusios komunikacijos su iškeltaja įrangos dalimi).
-
-`TODO`, iškeliam C-RAN į atskirą poskyrį, [1.w] turi gražią santrauką.
 
 Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja `4G LTE` trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus `5G NR` atvejui.
 
