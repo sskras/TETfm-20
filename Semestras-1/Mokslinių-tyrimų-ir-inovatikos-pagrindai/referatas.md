@@ -46,26 +46,56 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 
 ## 1.y. C-RAN architektūra nėra optimizuota LTE tinkluose
 
-`C-RAN` architektūra (apibendrinta terminų `Centralized-RAN` ir `Cloud-RAN` santrumpa)
+`C-RAN` architektūra (apibendrinanti dviejų angl. terminų `Centralized-RAN` ir `Cloud-RAN` santrumpa)
 leistų dalį įprastinės bazinės stoties funkcionalumo, `BBU` {Baseband Unit} iš bokšto perkelti į nuotolinį mazgą [1.w].
 Taip bokšte liktų tik dalis įrangos, kurios funkcionalumas yra artimiausias radijo eteriui.
 `5G NR` ryšyje ji dar vadinama `RRH` {Remote Radio Heads}.
 Atsiranda galimybė dalį RAN tinklo konsoliduoti įprastiniuose duomenų centruose.
 
 Žinoma, toks sprendimas be privalumų turi ir trūkumų.
-Taupoma energija stočiai maitinti, tačiau prireikia beprotiškai didelio pralaidumo priešakinėje magistralėje (angl. `Fronthaul`).
-Kraštutinis 2016 m. pavyzdys iškėlus visas `BBU` funkcijas iš `BS` į debesį: 75 Mbps `UE` srautas sukurs 1 Gbps srautą priešakinėje magistralėje.
-Naujesnė, 2020 m. ataskaita mini 10 kartų srauto padidėjimą priešakinėje magistralėje lyginant su srautu transmisijos tinkle, kurio prireiktų naudojant klasikinę LTE architektūrą. [1.u]
+Taupoma energija stočiai maitinti ir užtenka mažesnio ploto.
+Tačiau prireikia beprotiškai didelio pralaidumo priešakinėje magistralėje (angl. `Fronthaul`).
+Kraštutinis 2016 m. pavyzdys iškėlus visas `BBU` funkcijas iš `BS` į debesį [1.w]: 75 Mbps `UE` srautas sukurs 1 Gbps srautą priešakinėje magistralėje.
+Naujesnė, 2020 m. ataskaita mini 10 kartų srauto padidėjimą priešakinėje magistralėje lyginant su srautu transmisijos tinkle (angl. `Backhaul`), kurio prireiktų naudojant klasikinę LTE architektūrą. [1.v]
 
-Taip pat ne per daugiausiai nukrenta stoties kaina (mat stotyje liekanti įranga sudėtingėja dėl pasikeitusios komunikacijos su iškeltaja įrangos dalimi).
+Be to, ne per daugiausiai nukrenta bazinės stoties kaina, mat joje liekanti įranga sudėtingėja dėl pasikeitusios komunikacijos su iškeltaja įrangos dalimi.
+Taip pat žymiai brangesnis varinių priešakinės magistralės kabelių keitimas į optinius lyginant su kabelių keitimu transmisijoje. [1.u]
+
+![image](https://user-images.githubusercontent.com/74717106/101022192-b6419b80-3579-11eb-90db-8fdc625aa37d.png)  
+`1.b pav. Centralize-RAN architektūra: priešakinė magistralė ir transmisijos tinklas.` [1.v]
+
+Prieaškinės magistralės atnaujinimas bus būtinas visose bazinėse stotyse, kuriose tai nebuvo atlikta paleidžiant LTE:
+
+![image](https://user-images.githubusercontent.com/74717106/101021464-9f4e7980-3578-11eb-992d-e0fb003018e6.png)  
+`1.c pav. Tradicinio mob. ryšio bokšto sandara su koaksialiniais vario kabeliais` [1.v]
+
+Taip pat `C-RAN` sukelia ir programinius iššūkius valdant nuotolinius `BBU`. [1.s]
+Pvz. duomenų centrų virtualizavimo technologijos grįstos resursų dalinimusi ir paskirstytuoju apdorojimu.
+Gi `BBU` apkrova yra dinamiška ir realiame laike turi kisti staigiai, nes aptarnaujamų ryšio celių aktyvumas visą laiką kinta.
+Ir ganėtinai skiriasi nuo duomenų centro scenarijaus.
+
+Todėl C-RAN debesų architektūra turi būti kitokia ir irgi reikalauja tobulinimų.
 
 `TODO`, skirtingi BS splitų tipai.
+
+C-RAN architektūra naudojama teoriškai jau nuo `3G`, bet praktiškai paplito tik 4G LTE tinkluose.
+Tačiau ji nėra visiškai išbaigta: vyksta jos tyrinėjimai, optimizavimas ir kiti tobulinimo darbai. [1.t]
+Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir prasidėjusio įjungimo stipriai pasistūmės C-RAN masinis diegimas. [1.v]
 
 [1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
     [https://ieeexplore.ieee.org/document/7511579]
 
-[1.v] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**
+[1.v] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**  
     https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
+
+[1.u] Understanding the Basics of CPRI Fronthaul Technology, **February 2015**  
+    http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf
+    
+[1.t] Resource Management in Cloud Radio Access Network: Conventional and New Approaches, **May 2020**
+    https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf
+    
+[1.s] Cloud RAN: Basics, Advances and Challenges, **April 2016**
+    https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
 
 ## 1.z. Neišpopuliarėjusi LTE + WLAN konvergencija
 
