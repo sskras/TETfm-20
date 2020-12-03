@@ -44,7 +44,7 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
       https://arxiv.org/abs/1904.08394  
       http://rogerpiquerasjover.net/5G_ShmooCon_FINAL.pdf#page=8  
 
-## 1.u. Architektūriniai EPC skirtumai
+## 1.u. Architektūriniai EPC stuburinio tinklo trūkumai
 
 [1.3]
 
@@ -209,7 +209,7 @@ O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė, kad 
 
 `5G NR` gaires brėžiantis `IMT-2020` standartas numato lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus. [1.qq]
 
-[1.qq] ITU-T Focus Group IMT-2020 Deliverables, **2017**
+[1.qq] ITU-T Focus Group IMT-2020 Deliverables, **2017**  
        https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29
 
 # Skyriaus santrumpos
