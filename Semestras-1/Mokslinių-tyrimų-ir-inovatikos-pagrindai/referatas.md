@@ -25,8 +25,16 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 
 ## 1.x. LTE neatsparus tam tikroms atakoms (fizinio ryšio saugumo klausimai)
 
-[1.x] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
-    https://ieeexplore.ieee.org/abstract/document/8401619
+[1.k] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
+    https://ieeexplore.ieee.org/abstract/document/8401619  
+    
+[1.l] A Study of 4G Network for Security System, **November, 2015**
+    https://www.koreascience.or.kr/article/JAKO201502152089243.pdf  
+    
+[1.n] Overview of 5G Security and Vulnerabilities, **Spring 2020**
+    https://cyberdefensereview.army.mil/Portals/6/Documents/CyConUS19%20ConferencePapers/Overview_of_5G_Security_and_Vulnerabilities.pdf?ver=2019-11-14-085032-807  
+    https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%2008_%20Fonyi_WEB.pdf
+    https://cyberdefensereview.army.mil/Portals/6/CDR%20V5N1%20-%20FULL_WEB.pdf
 
 ## 1.y. LTE perduodama gana apribotą video srautą
 
@@ -136,7 +144,7 @@ LWA {angl. LTE-WLAN aggregation}
  [1.5] What Will 5G Be? **June 2014**  
        https://ieeexplore.ieee.org/abstract/document/6824752  
 
- [1.6] On the Waveform for 5G, **November 2016** 
+ [1.6] On the Waveform for 5G, **November 2016**  
        https://ieeexplore.ieee.org/abstract/document/7744813  
 
  [1.7] Revolutionary direction for 5G mobile core network architecture, **December 2016**  
