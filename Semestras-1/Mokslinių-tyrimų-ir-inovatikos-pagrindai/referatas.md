@@ -51,9 +51,10 @@ Per jį keliauja visi naudotojų duomenys.
 
 Tačiau planuojant keliaropai paspartinti ryšį išryškėjo esminiai architektūriniai trūkumai. 
 Siauriausia EPC vieta pasirodė esant centralizuotas IP srauto maršrutizavimas [1.3].
-Taip pat prisideda MME (Mobilumo valdymo subjektas), kurio ryšis su S-GW (Pristatančiu tinklų sietuvu) yra statinis ir prisideda prie neefektaus IP srauto kelio (4.1 pav.)
+Taip pat prisideda MME (Mobilumo valdymo subjektas), kurio ryšis su S-GW (Pristatančiu tinklų sietuvu) yra statinis ir prisideda prie neefektaus IP srauto kelio (4/1 pav.)
 
-5G NR tinklo dalinimo technologija (aprašoma šeštame skyriuje žemiau) šį trūkumą pašalina.
+5G NR šį trūkumą turėjo pašalinti. Stuburinio tinklo architektūra yra daug lankstesnė (16/1 pav.).
+Ji įgalina dinamiškus ryšius tarp MME atitikmens AMF (angl. Access and Mobility Management Function) ir 5GGW (angl. 5G Gateway), šitaip prisidėdama 5G tinklo dalinimo technologijos (pastaroji aprašoma šeštame skyriuje).
 
 ## C-RAN architektūra LTE tinkluose nėra pakankamai optimizuota
 
