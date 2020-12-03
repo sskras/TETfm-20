@@ -5,12 +5,12 @@ Pagrindinis dėmesys skiriamas augantiems ir ateityje augsiantiems [1.2] UE srau
 
 # 1. Kodėl 4G neužtenka
 
-4G/LTE yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai 5G/NR).
+`4G LTE` yra labai pajėgi technologija (ir tebėra vystoma lygiagrečiai `5G NR`).
 Tačiau yra reikalavimų, kurių patenkinti nepajėgi nei dabartinė LTE implementacija, nei jos naujos revizijos. [1.1]
 Be to, nuo LTE specifikacijos pasirodymo praėjo jau 10 metų, per kuriuos atsirado ganėtinai pažengusių technologijų.
 
-NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. 
-Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G. 
+5G NR technologija pradėta kurti tiek norint išnaudoti pastarųjų potencialą, tiek ir patenkinti naujus, platesnius reikalavimus. 
+Be to, pradingsta reikalavimas išlaikyti suderinamumą su 4G LTE.
 Ir nors NR daug komponentų perima iš LTE bei geba išnaudoti dalį jos infrastruktūros savo pirminei įrengimo stadijai, visos aukščiau išvardintos aplinkybės (ypač NR kelti aukštesni reikalavimai) paskatino imtis kitokių techninių sprendimų.
 
 ![image](https://user-images.githubusercontent.com/74717106/100879529-369dc900-34b4-11eb-93a5-cb49377ed09a.png)  
@@ -122,7 +122,9 @@ O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė, kad 
 
 # Skyriaus santrumpos
 
-LWA {angl. LTE-WLAN aggregation}
+| Santrumpa | Pilnas terminas                                                                                                                                    | 
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------| 
+| LWA       | angl. LTE-WLAN aggregation                                                                                                                         | 
 
 # Literatūra:
 
