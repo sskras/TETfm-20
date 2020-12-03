@@ -95,21 +95,6 @@ Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir
 ![image](https://user-images.githubusercontent.com/74717106/101058576-f31b8b80-3595-11eb-97db-c7b8a466e0e8.png)  
 `1.d pav. Prognozuojama C-RAN rinkos plėtra 2106–2027 m.` [1.v]
 
-[1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
-      [https://ieeexplore.ieee.org/document/7511579]
-
-[1.v] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**  
-      https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
-
-[1.u] Understanding the Basics of CPRI Fronthaul Technology, **February 2015**  
-      http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf
-    
-[1.t] Resource Management in Cloud Radio Access Network: Conventional and New Approaches, **May 2020**  
-      https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf
-    
-[1.s] Cloud RAN: Basics, Advances and Challenges, **April 2016**  
-      https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
-
 ## Neišpopuliarėjusi LTE + WLAN agregacija
 
 Įvykius EM dažnio spektrų aukcionams ir įsibėgėjus 4G LTE diegimui, pradėta galvoti ryšio pralaidumo didinimą.
@@ -124,8 +109,6 @@ Specifikacijos `Release-13` aprašytos dvi technologijos [1.r]:
 
 * LWA {angl. LTE-WLAN aggregation} technologija.
 * LWIP {angl. LTE WLAN Radio Level Integration with IPsec Tunnel} protokolas.
-
-[papaišom pavyzdžių, diagramų apie tai, kaip veikia?]  
 
 ![image](https://user-images.githubusercontent.com/74717106/101068854-ea30b700-35a1-11eb-9553-ecbf9ae77194.png)  
 `TODO pav. Alcatel-Lucent pasiūlyti du apjungimo būdai (su ateinančio srauto agregacija ir be jos) ` [1.o]
@@ -174,6 +157,44 @@ Akivaizdu, kad `4G LTE` ir `WLAN` agregacija nėra nei paplitusi pasaulyje, nei 
 Tai dar vienas `4G LTE` aspektas, kurį `5G NR` privalės tobulinti.
 Ar pavyks šį sykį, didelis klausimas.
 
+# Skyriaus santrumpos
+
+| Santrumpa | Pilnas terminas                                                                                                                                    | 
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------| 
+| C-RAN     | angl. terminų `Centralized-RAN` ir `Cloud-RAN` apibendrinanti santrumpa
+| LWA       | angl. LTE-WLAN aggregation 
+| LWIP      | angl. LTE WLAN Radio Level Integration with IPsec Tunnel
+| AMF       | angl. Access and Mobility Management Function
+| 5GGW      | angl. 5G Gateway
+
+# Literatūra:
+
+ [1.1] 5G NR: The Next Generation Wireless Access Technology, **2018**  
+       https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0  
+
+ [1.2] Cisco Annual Internet Report (2018–2023), **March 2020**  
+       https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf  
+
+ [1.4] Slice architecture for 5G core network, **July 2017**  
+       https://ieeexplore.ieee.org/abstract/document/7993854  
+
+[1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
+      https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13
+
+[1.w] Impact of packetization and functional split on C-RAN fronthaul performance, **May 2016**  
+      [https://ieeexplore.ieee.org/document/7511579]
+
+[1.v] C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027, **February 2020**  
+      https://www.grandviewresearch.com/industry-analysis/cloud-ran-market
+
+[1.u] Understanding the Basics of CPRI Fronthaul Technology, **February 2015**  
+      http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf
+    
+[1.t] Resource Management in Cloud Radio Access Network: Conventional and New Approaches, **May 2020**  
+      https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf
+    
+[1.s] Cloud RAN: Basics, Advances and Challenges, **April 2016**  
+      https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf
 
 [1.r] LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP), **March 2016**  
       https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf
@@ -243,27 +264,3 @@ Ar pavyks šį sykį, didelis klausimas.
 
 [1.qq] ITU-T Focus Group IMT-2020 Deliverables, **2017**  
        https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29
-
-# Skyriaus santrumpos
-
-| Santrumpa | Pilnas terminas                                                                                                                                    | 
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------| 
-| C-RAN     | angl. terminų `Centralized-RAN` ir `Cloud-RAN` apibendrinanti santrumpa
-| LWA       | angl. LTE-WLAN aggregation 
-| LWIP      | angl. LTE WLAN Radio Level Integration with IPsec Tunnel
-| AMF       | angl. Access and Mobility Management Function
-| 5GGW      | angl. 5G Gateway
-
-# Literatūra:
-
- [1.1] 5G NR: The Next Generation Wireless Access Technology, **2018**  
-       https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0  
-
- [1.2] Cisco Annual Internet Report (2018–2023), **March 2020**  
-       https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf  
-
- [1.4] Slice architecture for 5G core network, **July 2017**  
-       https://ieeexplore.ieee.org/abstract/document/7993854  
-
-[1.j] Big Video Bright Future | ZTE Big Video white paper, **August 2016**  
-      https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13
