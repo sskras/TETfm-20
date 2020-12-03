@@ -28,7 +28,7 @@ Scenarijus: kiekvienas gyventojas plašetėje žiūri Netflix aukšta raiška.
 [1.k] Securing authentication for mobile networks, a survey on 4G issues and 5G answers, **July 2018**  
     https://ieeexplore.ieee.org/abstract/document/8401619  
     
-[1.l] A Study of 4G Network for Security System, **November, 2015**
+[1.l] A Study of 4G Network for Security System, **November, 2015**  
     https://www.koreascience.or.kr/article/JAKO201502152089243.pdf  
     
 [1.n] Overview of 5G Security and Vulnerabilities, **Spring 2020**
