@@ -181,49 +181,50 @@ Tam 4G LTE šiuo metu nėra tinkamas.
 
 # Literatūra:
 
- 1. Dahlman E., Parkvall S., Skold J. **2018** 5G NR: The Next Generation Wireless Access Technology. Academic Press  
+1. Dahlman E., Parkvall S., Skold J. **2018** 5G NR: The Next Generation Wireless Access Technology. Academic Press  
 Prieiga per internetą: <https://www.elsevier.com/books/5g-nr-the-next-generation-wireless-access-technology/dahlman/978-0-12-814323-0>
 
- 2.  **March 2020**. Cisco Annual Internet Report (2018–2023). Cisco public,  
+2. Cisco Systems, Inc. **March 2020**. Cisco Annual Internet Report (2018–2023) white paper. Cisco public  
 Prieiga per internetą: <https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf>
 
- 3. Young-il Choi; Noik Park. **July 2017**. Slice architecture for 5G core network.  
+3. Young-il Choi; Noik Park. **July 2017**. Slice architecture for 5G core network. IEEE  
 Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/7993854>
 
- 4.  **August 2016**. Big Video Bright Future | ZTE Big Video white paper.  
-Prieiga per internetą: <https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13>
+4. ZTE Coporation. **August 2016**. Big Video Bright Future | ZTE Big Video white paper.  
+      Prieiga per internetą: <https://res-www.zte.com.cn/mediares/zte/Files/PDF/White-Skin-Book/2016big_video/ZTE_Big_Video_White_Paper0818.pdf#page=13>
 
- 5.  **May 2016**. Impact of packetization and functional split on C-RAN fronthaul performance.  
+5. Chia-Yu Chang et al. **May 2016**. Impact of packetization and functional split on C-RAN fronthaul performance. IEEE  
       Prieiga per internetą: <https://ieeexplore.ieee.org/document/7511579>
 
- 6.  **February 2020**. C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027.  
+6. Grand View Research, Inc. **February 2020**. C-RAN Market Size, Share & Trends Analysis Report By Architecture Type (Centralized-RAN, Virtual/Cloud-RAN), By Component, By Network Type, By Deployment Model, And Segment Forecasts, 2020 - 2027.  
       Prieiga per internetą: <https://www.grandviewresearch.com/industry-analysis/cloud-ran-market>
 
- 7.  **February 2015**. Understanding the Basics of CPRI Fronthaul Technology.  
+7. Macknofsky G. **February 2015**. Understanding the Basics of CPRI Fronthaul Technology. EXFO Inc.  
       Prieiga per internetą: <http://www.equicom.hu/wp-content/uploads/EXFO_anote310_Understanding-Basics-CPRI-Fronthaul-Technology_en.pdf>
     
- 8.  **May 2020**. Resource Management in Cloud Radio Access Network: Conventional and New Approaches.  
+8. Rehenuma Tasnim Rodoshi, et al. **May 2020**. Resource Management in Cloud Radio Access Network: Conventional and New Approaches. MDPI  
       Prieiga per internetą: <https://res.mdpi.com/d_attachment/sensors/sensors-20-02708/article_deploy/sensors-20-02708.pdf>
     
- 9.  **April 2016**. Cloud RAN: Basics, Advances and Challenges.  
+9. Salman T. **April 2016**. A Survey of C-RAN Basics, Virtualization, Resource Allocation, and Challenges. McKelvey School of Engineering. Washington University in St. Louis  
       Prieiga per internetą: <https://www.cse.wustl.edu/~jain/cse574-16/ftp/cloudran.pdf>
 
-10.  **March 2016**. LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP).  
+10. Burbidge R. **March 2016**. LTE-WLAN Aggregation (LWA) and LTE WLAN Radio Level Integration with IPsec Tunnel (LWIP). 3GPP  
       Prieiga per internetą: <https://www.3gpp.org/images/PDF/2016_03_LWA_LWIP_3GPPpresentation.pdf>
 
-11.  **November 2015**. The Voice of 5G for the Americas, LTE Aggregation & Unlicensed Spectrum.  
+11. 4G Americas. **November 2015**. The Voice of 5G for the Americas; LTE Aggregation & Unlicensed Spectrum white paper.  
       Prieiga per internetą: <https://www.5gamericas.org/wp-content/uploads/2019/07/4G_Americas_LTE_Aggregation__Unlicensed_Spectrum_White_Paper_-_November_2015.pdf>
     
-12.  **2015**. LTE unlicensed and Wi-Fi: Moving beyond coexistence (report).  
+12. Paolini M, Fili S. **2015**. LTE unlicensed and Wi-Fi: Moving beyond coexistence (report). Senza Fili Consulting  
       Prieiga per internetą: <https://ecfsapi.fcc.gov/file/60001076664.pdf>
     
-13.  **2015**. Ruckus Wireless: Beyond LTE unlicensed, with LTE plus Wi-Fi link aggregation.  
+13.  Paolini M, Fili S. **2015**. Ruckus Wireless: Beyond LTE unlicensed, with LTE plus Wi-Fi link aggregation. Senza Fili Consulting  
       Prieiga per internetą: <https://www.commscope.com/globalassets/digizuite/1084-1074-senzafili-laa-ruckus.pdf>
 
-14.  **June 2020**. SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks.  
+14. Anbalagan S., et al. **June 2020**. SDN-assisted efficient LTE-WiFi aggregation in next generation IoT networks.  Future Generation Computer Systems
+Volume 107, June 2020, p. 898-908
       Prieiga per internetą: <https://www.sciencedirect.com/science/article/abs/pii/S0167739X17310907>
       
-15.  **July 2020**. Mitigation technique for LTE-LAA and LTE-LWA coexistence.  
+15. A-mapat N., Moungnoul P. **July 2020**. Mitigation technique for LTE-LAA and LTE-LWA coexistence. IEEE  
        Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/9165524>
     
 16.  **April 2020**. An efficient SDN‐based LTE‐WiFi spectrum aggregation system for heterogeneous 5G networks.  
@@ -232,7 +233,7 @@ Prieiga per internetą: <https://res-www.zte.com.cn/mediares/zte/Files/PDF/White
 17.  **June 2020**. A Packet Level Steering Solution for Tightly Coupled LWIP Networks.  
        Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/9118009>
        
-18.  **June 2019**. Testbed to experiment with LTE WiFi Aggregation.
+18.  **June 2019**. Testbed to experiment with LTE WiFi Aggregation.  
        Prieiga per internetą: <https://ieeexplore.ieee.org/abstract/document/8802000>
 
 19. Informacijos ir ryšių technologijos, Europos regioninės plėtros fondo prioritetai, (žiūrėta 2020 m. gruodžio 2 d.)  
