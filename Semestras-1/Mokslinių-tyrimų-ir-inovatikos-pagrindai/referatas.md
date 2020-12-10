@@ -277,3 +277,12 @@ Volume 107, June 2020, p. 898-908
 
 32. **2017**. ITU-T Focus Group IMT-2020 Deliverables.  
        Prieiga per internetą: <https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29>
+
+# Trumpos išvados referato pristatymui
+
+* 5G nėra žutbūtina šiai dienai, labiau ji aktuali artimai ateičiai
+* 5G vardui bandoma priskirti labai daug inovacijų
+* 5G jau dabar yra labai sudėtinga, ir tai ne pabaiga
+* Tikėtina, jog dalies inovacijų nepavyks įgyvendinti – tada jos pakliūtų į 6G
+* Nepriklausomas 5G diegimui reikalaus daug investicijų
+* Jei bent 1/10 iš 5G standarto taptų įgyvendinta, techniškai jau būtų įspūdinga
