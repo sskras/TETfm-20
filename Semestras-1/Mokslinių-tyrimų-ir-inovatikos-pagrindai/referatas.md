@@ -292,14 +292,15 @@ _(kelios Andriaus Stanaičio mintys, išdėstytos Žygimanto Bliujaus, bei Sauli
   - „žalia“ RAN centralizacija [C-RAN],
   - pažeidžiama sauga, 
   - menkas apsijungimas su Wi-Fi
-* Iškyla ir nauji iššūkiai (fiziniai, architektūriniai, modeliavimo)
 * Per 10 m. atsirado pažangesnių sprendimų (puslaidininkiai, moduliacijos, virtualizavimas)
+* Iškyla ir nauji iššūkiai (fiziniai, architektūriniai, modeliavimo)
 
 # Trumpos išvados bendro referato pristatymui
 
-* 5G nėra žutbūtina šiai dienai, labiau ji aktuali artimai ateičiai
+* 5G nėra žūtbūtina šiai dienai, labiau ji aktuali artimai ateičiai
 * 5G vardui bandoma priskirti labai daug inovacijų
 * 5G jau dabar yra labai sudėtinga, ir tai ne pabaiga
 * Tikėtina, jog dalies inovacijų nepavyks įgyvendinti – tada jos pakliūtų į 6G
-* Nepriklausomas 5G diegimui reikalaus daug investicijų
+* Nepriklausomo 5G diegimas reikalaus daug investicijų
+* Pradiniam 5G paskleidimui bus pernaudojama 4G infrastruktūra
 * Jei bent 1/10 iš 5G standarto taptų įgyvendinta, techniškai jau būtų įspūdinga
