@@ -278,7 +278,24 @@ Volume 107, June 2020, p. 898-908
 32. **2017**. ITU-T Focus Group IMT-2020 Deliverables.  
        Prieiga per internetą: <https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-IMT-2017-2020-PDF-E.pdf#page=29>
 
-# Trumpos išvados referato pristatymui
+
+# Trumpas įvadas bendro referato pristatymui
+_(kelios Andriaus Stanaičio mintys, išdėstytos Žygimanto Bliujaus, bei Sauliaus Krasucko papildymas)_
+
+* Judriojo ryšio paslaugų tiekėjų tikslai:
+  - Augantis klientų skaičius;
+  - Esamų paslaugų kokybė (pralaidumas, aprėptis);
+  - Naujoviškos paslaugos (delsa <= 1ms, IoE, M2M, V2X);
+  - Paslaugomis patenkintas klientas.
+* 4G trūkumai yra kiekybiniai (plečiamumas, delsa) ir kokybiniai:
+  - nelankstus Core tinklas,
+  - „žalia“ RAN centralizacija [C-RAN],
+  - pažeidžiama sauga, 
+  - menkas apsijungimas su Wi-Fi
+* Iškyla ir nauji iššūkiai (fiziniai, architektūriniai, modeliavimo)
+* Per 10 m. atsirado pažangesnių sprendimų (puslaidininkiai, moduliacijos, virtualizavimas)
+
+# Trumpos išvados bendro referato pristatymui
 
 * 5G nėra žutbūtina šiai dienai, labiau ji aktuali artimai ateičiai
 * 5G vardui bandoma priskirti labai daug inovacijų
