@@ -10,3 +10,4 @@
 |   8 | 
 |   9 | 
 |  10 | 
+|     | <img width=350/>     | <img width=600/>                                                 | <img width=500/>                              | <img width=500/>
