@@ -1,7 +1,11 @@
 Tezių tema: Multipath TCP tyrimas duomenų centruose.
 
 Sprendžiami uždaviniai:
-* (architektūrinis) Kaip perduoti vieną TCP sesiją per kelis fiziškai atskirus kelius.
-* (optimizacinis) Kaip paskirstyti TCP srautą kiekvienam atskiram keliui taip, kad bendras tinklo apkrautumas būtų tolygus (nesudarytų „karštųjų taškų“).
+
+* Kaip (kokiais naujais būdais) perduoti vieną TCP sesiją per kelis fiziškai atskirus kelius.  
+  (architektūrinis uždavinys)
+  
+* Kaip paskirstyti TCP srautą kiekvienam šiam keliui taip, kad bendras tinklo apkrautumas būtų tolygus (tinkle nesudarytų „karštųjų taškų“).  
+  (optimizavimo uždavinys)
 
 Bandysiu ieškoti straipsnių apie MPTCP, kurie antrajam uždaviniui spręsti taiko intelektualiasias sistemas (Keywords: AI, NN).
