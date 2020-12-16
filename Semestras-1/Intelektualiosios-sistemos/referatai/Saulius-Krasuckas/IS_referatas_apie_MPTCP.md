@@ -66,3 +66,7 @@ https://doi.org/10.1007/978-981-15-0146-3_57
 <a id="10">[10]</a>
 CHUNG, Jonghwan, et al. **Machine learning based path management for mobile devices over MPTCP**. In: 2017 IEEE International Conference on Big Data and Smart Computing (BigComp). IEEE, **2017**. p. 206-209.  
 https://doi.org/10.1109/BIGCOMP.2017.7881739
+
+<a id="11">[11]</a>
+JI, Ruiwen, et al. **Multipath TCP-Based IoT Communication Evaluation: From the Perspective of Multipath Management with Machine Learning**. Sensors, **2020**, 20.22: 6573.  
+https://doi.org/10.3390/s20226573
