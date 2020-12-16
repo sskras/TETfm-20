@@ -55,6 +55,9 @@ https://doi.org/10.1186/s13677-015-0035-7
 MAI, Tianle, et al. **Self-learning Congestion Control of MPTCP in Satellites Communications**. In: 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC). IEEE, **2019**. p. 775-780.  
 https://doi.org/10.1109/IWCMC.2019.8766465
 
-##### tuščia
+<a id="8">[8]</a>
+SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
+https://doi.org/10.1109/IWCMC48107.2020.9148293
+
 ##### tuščia
 ##### tuščia
