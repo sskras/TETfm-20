@@ -51,7 +51,9 @@ https://doi.org/10.1109/LCN44214.2019.8990753
 WANG, Ting, et al. **Towards bandwidth guaranteed energy efficient data center networking**. Journal of Cloud Computing, **2015**, 4.1: 9.  
 https://doi.org/10.1186/s13677-015-0035-7
 
-##### tuščia
+<a id="7">[7]</a>
+MAI, Tianle, et al. **Self-learning Congestion Control of MPTCP in Satellites Communications**. In: 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC). IEEE, **2019**. p. 775-780.  
+
 ##### tuščia
 ##### tuščia
 ##### tuščia
