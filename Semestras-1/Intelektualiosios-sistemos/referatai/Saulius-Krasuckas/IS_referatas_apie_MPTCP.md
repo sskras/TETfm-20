@@ -35,6 +35,11 @@ https://www.semanticscholar.org/paper/Using-Random-Neural-Network-for-Load-Balan
 JIN, Heesang, et al. **CLEO: Machine learning for ECMP**. In: Proceedings of the 15th International Conference on emerging Networking EXperiments and Technologies. **2019**. p. 1-3.  
 https://doi.org/10.1145/3360468.3366768
 
+<a id="3">[3]</a>
+WILSONPRAKASH, S.; DEEPALAKSHMI, P. **Artificial Neural Network Based Load Balancing On Software Defined Networking**. In: 2019 IEEE International Conference on Intelligent Techniques in Control, Optimization and Signal Processing (INCOS). IEEE, **2019**. p. 1-4.  
+https://doi.org/10.1109/INCOS45849.2019.8951365
+
+
 ##### tuščia
 ##### tuščia
 ##### tuščia
