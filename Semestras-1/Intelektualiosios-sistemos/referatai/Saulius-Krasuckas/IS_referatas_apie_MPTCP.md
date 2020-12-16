@@ -62,3 +62,7 @@ https://doi.org/10.1109/IWCMC48107.2020.9148293
 <a id="9">[9]</a>
 THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
 https://doi.org/10.1007/978-981-15-0146-3_57
+
+<a id="10">[10]</a>
+CHUNG, Jonghwan, et al. **Machine learning based path management for mobile devices over MPTCP**. In: 2017 IEEE International Conference on Big Data and Smart Computing (BigComp). IEEE, **2017**. p. 206-209.  
+https://doi.org/10.1109/BIGCOMP.2017.7881739
