@@ -53,9 +53,8 @@ https://doi.org/10.1186/s13677-015-0035-7
 
 <a id="7">[7]</a>
 MAI, Tianle, et al. **Self-learning Congestion Control of MPTCP in Satellites Communications**. In: 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC). IEEE, **2019**. p. 775-780.  
+https://doi.org/10.1109/IWCMC.2019.8766465
 
-##### tuščia
-##### tuščia
 ##### tuščia
 ##### tuščia
 ##### tuščia
