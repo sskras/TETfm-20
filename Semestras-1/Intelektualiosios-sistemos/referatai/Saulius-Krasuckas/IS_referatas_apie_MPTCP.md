@@ -43,20 +43,10 @@ https://doi.org/10.1109/INCOS45849.2019.8951365
 LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  
 https://doi.org/10.1109/JSAC.2019.2933761
 
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
+<a id="5">[5]</a>
+HÖCHST, Jonas, et al. **Learning Wi-Fi Connection Loss Predictions for Seamless Vertical Handovers Using Multipath TCP**. In: 2019 IEEE 44th Conference on Local Computer Networks (LCN). IEEE, **2019**. p. 18-25.  
+https://doi.org/10.1109/LCN44214.2019.8990753
+
 ##### tuščia
 ##### tuščia
 ##### tuščia
