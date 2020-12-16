@@ -59,5 +59,6 @@ https://doi.org/10.1109/IWCMC.2019.8766465
 SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
 https://doi.org/10.1109/IWCMC48107.2020.9148293
 
-##### tuščia
-##### tuščia
+<a id="9">[9]</a>
+THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
+https://doi.org/10.1007/978-981-15-0146-3_57
