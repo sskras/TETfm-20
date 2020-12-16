@@ -39,6 +39,9 @@ https://doi.org/10.1145/3360468.3366768
 WILSONPRAKASH, S.; DEEPALAKSHMI, P. **Artificial Neural Network Based Load Balancing On Software Defined Networking**. In: 2019 IEEE International Conference on Intelligent Techniques in Control, Optimization and Signal Processing (INCOS). IEEE, **2019**. p. 1-4.  
 https://doi.org/10.1109/INCOS45849.2019.8951365
 
+<a id="4">[4]</a>
+LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  
+https://doi.org/10.1109/JSAC.2019.2933761
 
 ##### tuščia
 ##### tuščia
