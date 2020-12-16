@@ -1,3 +1,5 @@
+Testas su pirmuoju [[1]](#1) šaltiniu: 
+
 # Literatūra
 
 <a href="1">[1]</a>
