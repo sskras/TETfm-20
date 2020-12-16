@@ -47,10 +47,10 @@ https://doi.org/10.1109/JSAC.2019.2933761
 HÖCHST, Jonas, et al. **Learning Wi-Fi Connection Loss Predictions for Seamless Vertical Handovers Using Multipath TCP**. In: 2019 IEEE 44th Conference on Local Computer Networks (LCN). IEEE, **2019**. p. 18-25.  
 https://doi.org/10.1109/LCN44214.2019.8990753
 
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
+<a id="6">[6]</a>
+WANG, Ting, et al. **Towards bandwidth guaranteed energy efficient data center networking**. Journal of Cloud Computing, **2015**, 4.1: 9.  
+https://doi.org/10.1186/s13677-015-0035-7
+
 ##### tuščia
 ##### tuščia
 ##### tuščia
