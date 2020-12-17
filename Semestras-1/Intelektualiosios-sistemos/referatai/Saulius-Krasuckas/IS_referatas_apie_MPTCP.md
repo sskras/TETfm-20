@@ -30,7 +30,7 @@ Testas su pirmuoju [[1]](#1) šaltiniu:
 ## Straipsniai
 
 <a id="1">**1.**</a>
-LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  	
+LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  
 https://doi.org/10.1109/JSAC.2019.2933761
 
     Google Scholar cites: 19   
