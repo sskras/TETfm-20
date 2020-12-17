@@ -30,11 +30,19 @@ Testas su pirmuoju [[1]](#1) šaltiniu:
 ## Straipsniai
 
 <a id="1">[1]</a>
+LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  	
+https://doi.org/10.1109/JSAC.2019.2933761
+
+    Google Scholar cites: 19   
+    2019 JCR Impact Factor: 2/90 (Q1, Telecomunications)  
+    2019 Journal Impact Factor: 11.420    
+    5-Year impact factor: 9.803  
+
 JI, Ruiwen, et al. **Multipath TCP-Based IoT Communication Evaluation: From the Perspective of Multipath Management with Machine Learning**. Sensors, **2020**, 20.22: 6573.  
 https://doi.org/10.3390/s20226573
 
     Google Scholar cites: 0   
-    2019 JCR Impact Factor: 77/266 (Q2)  
+    2019 JCR Impact Factor: 77/266 (Q2, Engineering, electrical & electronic)  
     2019 Journal Impact Factor: 3.275  
     5-Year impact factor: 3.427  
 
@@ -43,10 +51,10 @@ WANG, Ting, et al. **Towards bandwidth guaranteed energy efficient data center n
 https://doi.org/10.1186/s13677-015-0035-7
 
     Google Scholar cites: 19   
-    2019 JCR Impact Factor: 66/156 (Q2)  
+    2019 JCR Impact Factor: 66/156 (Q2, Computer science, information systems)  
     2019 Journal Impact Factor: 2.788  
     5-Year impact factor: --  
-    2018 JCR Impact Factor: 79/155 (Q3)  
+    2018 JCR Impact Factor: 79/155 (Q3. Computer science, information systems)  
     2018 Journal Impact Factor: 2.140  
 
 <a id="3">[3]</a>
