@@ -55,6 +55,12 @@ https://doi.org/10.1186/s13677-015-0035-7
 <a id="6">[6]</a>
 <a id="7">[7]</a>
 <a id="8">[8]</a>
+<a id="9">[9]</a>
+<a id="10">[10]</a>
+<a id="11">[11]</a>
+
+## Konferencijos
+
 SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
 https://doi.org/10.1109/IWCMC48107.2020.9148293
 
@@ -62,18 +68,12 @@ https://doi.org/10.1109/IWCMC48107.2020.9148293
     Google Scholar H5-index: 11  
     Impact Score:	3.96  
 
-<a id="9">[9]</a>
 THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
 https://doi.org/10.1007/978-981-15-0146-3_57
 
     Google Scholar cites: --  
     Google Scholar H5-index: --  
     Impact Score:	--  
-
-<a id="10">[10]</a>
-<a id="11">[11]</a>
-
-## Konferencijos
 
 LIU, Peixiang. **Using Random Neural Network for Load Balancing in Data Centers**. In: Proceedings on the International Conference on Internet Computing (ICOMP). The Steering Committee of The World Congress in Computer Science, Computer Engineering and Applied Computing (WorldComp), **2015**. p. 3.  
 https://www.semanticscholar.org/paper/Using-Random-Neural-Network-for-Load-Balancing-in-Liu/19b16c8d11beadcf95fbfecc5f8dd2117a130ba2
