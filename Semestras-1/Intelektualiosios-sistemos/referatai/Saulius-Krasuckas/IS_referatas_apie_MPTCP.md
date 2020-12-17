@@ -38,19 +38,40 @@ Testas su pirmuoju [[1]](#1) šaltiniu:
 WANG, Ting, et al. **Towards bandwidth guaranteed energy efficient data center networking**. Journal of Cloud Computing, **2015**, 4.1: 9.  
 https://doi.org/10.1186/s13677-015-0035-7
 
+    Google Scholar cites: 19   
+    2019 JCR Impact Factor: 66/156 (Q2)  
+    2019 Journal Impact Factor: 2.788  
+    5-Year impact factor: --  
+    2018 JCR Impact Factor: 79/155 (Q3)  
+    2018 Journal Impact Factor: 2.140  
+
 <a id="7">[7]</a>
 <a id="8">[8]</a>
 SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
 https://doi.org/10.1109/IWCMC48107.2020.9148293
 
+    Google Scholar cites: --  
+    Google Scholar H5-index: 11  
+    Impact Score:	3.96  
+
 <a id="9">[9]</a>
 THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
 https://doi.org/10.1007/978-981-15-0146-3_57
+
+    Google Scholar cites: --  
+    Google Scholar H5-index: --  
+    Impact Score:	--  
 
 <a id="10">[10]</a>
 <a id="11">[11]</a>
 JI, Ruiwen, et al. **Multipath TCP-Based IoT Communication Evaluation: From the Perspective of Multipath Management with Machine Learning**. Sensors, **2020**, 20.22: 6573.  
 https://doi.org/10.3390/s20226573
+
+    Google Scholar cites: --   
+    2019 JCR Impact Factor: 77/266 (Q2)  
+    2019 Journal Impact Factor: 3.275  
+    5-Year impact factor: 3.427  
+
 
 ## Konferencijos
 
