@@ -30,11 +30,15 @@ Testas su pirmuoju [[1]](#1) šaltiniu:
 ## Straipsniai
 
 <a id="1">[1]</a>
+JI, Ruiwen, et al. **Multipath TCP-Based IoT Communication Evaluation: From the Perspective of Multipath Management with Machine Learning**. Sensors, **2020**, 20.22: 6573.  
+https://doi.org/10.3390/s20226573
+
+    Google Scholar cites: --   
+    2019 JCR Impact Factor: 77/266 (Q2)  
+    2019 Journal Impact Factor: 3.275  
+    5-Year impact factor: 3.427  
+
 <a id="2">[2]</a>
-<a id="3">[3]</a>
-<a id="4">[4]</a>
-<a id="5">[5]</a>
-<a id="6">[6]</a>
 WANG, Ting, et al. **Towards bandwidth guaranteed energy efficient data center networking**. Journal of Cloud Computing, **2015**, 4.1: 9.  
 https://doi.org/10.1186/s13677-015-0035-7
 
@@ -45,6 +49,10 @@ https://doi.org/10.1186/s13677-015-0035-7
     2018 JCR Impact Factor: 79/155 (Q3)  
     2018 Journal Impact Factor: 2.140  
 
+<a id="3">[3]</a>
+<a id="4">[4]</a>
+<a id="5">[5]</a>
+<a id="6">[6]</a>
 <a id="7">[7]</a>
 <a id="8">[8]</a>
 SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
@@ -64,14 +72,6 @@ https://doi.org/10.1007/978-981-15-0146-3_57
 
 <a id="10">[10]</a>
 <a id="11">[11]</a>
-JI, Ruiwen, et al. **Multipath TCP-Based IoT Communication Evaluation: From the Perspective of Multipath Management with Machine Learning**. Sensors, **2020**, 20.22: 6573.  
-https://doi.org/10.3390/s20226573
-
-    Google Scholar cites: --   
-    2019 JCR Impact Factor: 77/266 (Q2)  
-    2019 Journal Impact Factor: 3.275  
-    5-Year impact factor: 3.427  
-
 
 ## Konferencijos
 
