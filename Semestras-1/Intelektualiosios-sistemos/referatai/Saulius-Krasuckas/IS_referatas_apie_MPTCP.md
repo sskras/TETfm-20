@@ -61,27 +61,6 @@ https://doi.org/10.1186/s13677-015-0035-7
 
 ## Konferencijos
 
-SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
-https://doi.org/10.1109/IWCMC48107.2020.9148293
-
-    Google Scholar cites: 0  
-    Google Scholar H5-index: 11  
-    Guide2Research Impact Score: 3.96  
-
-THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
-https://doi.org/10.1007/978-981-15-0146-3_57
-
-    Google Scholar cites: 0  
-    Google Scholar H5-index: --  
-    Guide2Research Impact Score: --  
-
-LIU, Peixiang. **Using Random Neural Network for Load Balancing in Data Centers**. In: Proceedings on the International Conference on Internet Computing (ICOMP). The Steering Committee of The World Congress in Computer Science, Computer Engineering and Applied Computing (WorldComp), **2015**. p. 3.  
-https://www.semanticscholar.org/paper/Using-Random-Neural-Network-for-Load-Balancing-in-Liu/19b16c8d11beadcf95fbfecc5f8dd2117a130ba2
-
-    Google Scholar cites: 2  
-    Google Scholar H5-index: --  
-    Guide2Research Impact Score: --  
-
 JIN, Heesang, et al. **CLEO: Machine learning for ECMP**. In: Proceedings of the 15th International Conference on emerging Networking EXperiments and Technologies. **2019**. p. 1-3.  
 https://doi.org/10.1145/3360468.3366768
 
@@ -89,12 +68,12 @@ https://doi.org/10.1145/3360468.3366768
     Google Scholar H5-index: 13  
     Guide2Research Impact Score: 4.46  
 
-WILSONPRAKASH, S.; DEEPALAKSHMI, P. **Artificial Neural Network Based Load Balancing On Software Defined Networking**. In: 2019 IEEE International Conference on Intelligent Techniques in Control, Optimization and Signal Processing (INCOS). IEEE, **2019**. p. 1-4.  
-https://doi.org/10.1109/INCOS45849.2019.8951365
+SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
+https://doi.org/10.1109/IWCMC48107.2020.9148293
 
     Google Scholar cites: 0  
-    Google Scholar H5-index: --  
-    Guide2Research Impact Score: --  
+    Google Scholar H5-index: 11  
+    Guide2Research Impact Score: 3.96  
 
 MAI, Tianle, et al. **Self-learning Congestion Control of MPTCP in Satellites Communications**. In: 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC). IEEE, **2019**. p. 775-780.  
 https://doi.org/10.1109/IWCMC.2019.8766465
@@ -116,3 +95,25 @@ https://doi.org/10.1109/BIGCOMP.2017.7881739
     Google Scholar cites: 14  
     Google Scholar H5-index: 5  
     Guide2Research Impact Score: 1.65  
+
+THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
+https://doi.org/10.1007/978-981-15-0146-3_57
+
+    Google Scholar cites: 0  
+    Google Scholar H5-index: --  
+    Guide2Research Impact Score: --  
+
+LIU, Peixiang. **Using Random Neural Network for Load Balancing in Data Centers**. In: Proceedings on the International Conference on Internet Computing (ICOMP). The Steering Committee of The World Congress in Computer Science, Computer Engineering and Applied Computing (WorldComp), **2015**. p. 3.  
+https://www.semanticscholar.org/paper/Using-Random-Neural-Network-for-Load-Balancing-in-Liu/19b16c8d11beadcf95fbfecc5f8dd2117a130ba2
+
+    Google Scholar cites: 2  
+    Google Scholar H5-index: --  
+    Guide2Research Impact Score: --  
+
+WILSONPRAKASH, S.; DEEPALAKSHMI, P. **Artificial Neural Network Based Load Balancing On Software Defined Networking**. In: 2019 IEEE International Conference on Intelligent Techniques in Control, Optimization and Signal Processing (INCOS). IEEE, **2019**. p. 1-4.  
+https://doi.org/10.1109/INCOS45849.2019.8951365
+
+    Google Scholar cites: 0  
+    Google Scholar H5-index: --  
+    Guide2Research Impact Score: --  
+
