@@ -33,7 +33,7 @@ Testas su pirmuoju [[1]](#1) šaltiniu:
 LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  
 https://doi.org/10.1109/JSAC.2019.2933761
 
-    Google Scholar cites: 19   
+    Google Scholar cites: 7   
     2019 JCR Impact Factor: 2/90 (Q1, Telecomunications)  
     2019 Journal Impact Factor: 11.420    
     5-Year impact factor: 9.803  
