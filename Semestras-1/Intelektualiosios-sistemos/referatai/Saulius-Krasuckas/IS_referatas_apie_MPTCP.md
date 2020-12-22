@@ -1,29 +1,11 @@
+TCP protokolas sukurtas patikimam duomenų perdavimui IP tinkle:
+
+* išlaikomas paketų eiliškumas,
+* ištaisomos klaidos,
+* pranešamas siuntimo rezultatas,
+
 Testas su pirmuoju [[1]](#1) šaltiniu: 
 
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
-##### tuščia
 
 # Literatūra
 
