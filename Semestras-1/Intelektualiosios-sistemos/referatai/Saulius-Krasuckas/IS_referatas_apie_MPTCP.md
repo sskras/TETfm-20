@@ -9,7 +9,9 @@ Nuo 2010 m. ėmė plisti galiniai tinklo įrenginiai su keletu IP interfeisų, v
 Atsirado ir poreikis TCP sesijos duomenis perduoti keliais tokiais iš karto (pralaidumo didinimui).
 Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP tinklais.
 
-  <sub>(iš Wiki TCP ir [1])</sub>
+    Apibrėžimai iš [1] ir Wiki:  
+    - https://en.wikipedia.org/wiki/Transmission_Control_Protocol  
+    - https://en.wikipedia.org/wiki/Network_congestion#Congestion_control  
 
 Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra _Congestion Control_.
 Jis valdo srauto patekimą į tinklą ir leidžia išvengti tinklo perkrovų (grūsčių).
