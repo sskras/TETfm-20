@@ -12,6 +12,7 @@ Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinama
   <sub>(iš Wiki TCP ir [1])</sub>
 
 Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra _Congestion Control_.
+Jis valdo srauto patekimą į tinklą ir leidžia išvengti tinklo perkrovų (grūsčių).
 
 Testas su pirmuoju [[1]](#1) šaltiniu: 
 
