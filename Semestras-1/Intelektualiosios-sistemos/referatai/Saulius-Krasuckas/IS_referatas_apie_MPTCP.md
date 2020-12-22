@@ -10,7 +10,7 @@ Atsirado ir poreikis TCP sesijos duomenis perduoti keliais tokiais iš karto (pr
 Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP tinklais.
 
 Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra _Congestion Control_.
-Jis valdo srauto patekimą į tinklą ir leidžia išvengti tinklo perkrovų (grūsčių).
+Jis valdo srauto patekimą į tinklą ir leidžia išvengti perkrovų (grūsčių) tinkle.
 
     Apibrėžimai iš [1] ir Wiki:  
     - https://en.wikipedia.org/wiki/Transmission_Control_Protocol  
