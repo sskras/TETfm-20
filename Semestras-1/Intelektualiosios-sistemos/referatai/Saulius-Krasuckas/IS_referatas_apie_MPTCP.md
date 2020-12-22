@@ -11,7 +11,7 @@ Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinama
 
   <sub>(iš Wiki TCP ir [1])</sub>
 
-Tiek TCP, tiek MPTCP protokolo vienas esminių mechanizmų yra _Congestion Control_.
+Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra _Congestion Control_.
 
 Testas su pirmuoju [[1]](#1) šaltiniu: 
 
