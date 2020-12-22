@@ -7,7 +7,7 @@ TCP sukurtas patikimam duomenų perdavimui IP tinkle:
 Vienos sesijos duomenims perduoti TCP įprastai naudoja tik vieną IP intefeisą.
 Nuo 2010 m. ėmė plisti galiniai tinklo įrenginiai su keletu IP interfeisų, veikiančių vienu metu (LAN, DSL, Wi-Fi, LTE tinkluose).
 Atsirado ir poreikis TCP sesijos duomenis perduoti keliais tokiais iš karto (pralaidumo didinimui).
-Tam pradėtas kurti TCP standarto papildymas Multipath TCP (MPTCP).  
+Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_.  
   <sub>(iš Wiki TCP ir [1])</sub>
 
 Testas su pirmuoju [[1]](#1) šaltiniu: 
