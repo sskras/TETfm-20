@@ -1,8 +1,13 @@
-TCP protokolas sukurtas patikimam duomenų perdavimui IP tinkle:
+TCP sukurtas patikimam duomenų perdavimui IP tinkle:
 
 * išlaikomas paketų eiliškumas,
 * ištaisomos klaidos,
 * pranešamas siuntimo rezultatas,
+
+Vienos sesijos duomenims perduoti TCP įprastai naudoja tik vieną IP intefeisą.
+Paplito įrenginiai su keletu IP interfeisų, veikiančių vienu metu (LAN, DSL, Wi-Fi, LTE).
+Atsirado ir poreikis vienos TCP sesijos duomenis perduoti keliais tokiais iš karto (pralaidumo didinimui).
+Tam pradėtas kurti TCP standarto papildymas Multipath TCP (MPTCP).
 
 Testas su pirmuoju [[1]](#1) šaltiniu: 
 
