@@ -2,7 +2,7 @@ Tezių tema: Multipath TCP tyrimas duomenų centruose.
 
 Sprendžiami uždaviniai:
 
-* Kaip (kokiais naujais būdais) perduoti vieną TCP sesiją tinkle keletų fiziškai atskirų kelių.  
+* Kaip (kokiais naujais būdais) perduoti vieną TCP sesiją tinkle keletu fiziškai atskirų kelių.  
   (architektūrinis uždavinys)
   
 * Kaip paskirstyti TCP srautą kiekvienam šiam keliui taip, kad bendras tinklo apkrautumas būtų tolygus (tinkle nesusidarytų „karštieji taškai“).  
