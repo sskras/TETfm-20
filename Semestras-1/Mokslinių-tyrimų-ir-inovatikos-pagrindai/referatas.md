@@ -101,9 +101,10 @@ Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir
 3GPP organizacija pasiūlė būdus judriajam ryšiui tam panaudoti nelicencinio radijo spektro ruožus [11].
 
 Buvo akivaizdu, kad Wi-Fi įrangos gamintojai bus nusistatę prieš siekį išnaudoti 5 GHz ruožą [25]. 
-Šis ruožas tuomet gamintojas žadėjo daug potencialo (2,40 GHz ruožas gyvenamoje aplinkoje jau tada buvo ganėtinai užimtas) ir kuriame dabar veikia žymi dalis dabartinių Wi-Fi įrenginių.
+Šis ruožas tuomet Wi-Fi gamintojams dar žadėjo daug potencialo (o 2,40 GHz ruožas gyvenamoje aplinkoje jau buvo ganėtinai užimtas),
+kuriame dabar veikia žymi dalis dabartinių Wi-Fi įrenginių.
 
-Tačiau 3GPP savo 4G LTE specifikacijoje buvo numačiusi ir galimybę apjungti LTE su WLAN tiesiogiai (populiariai kalbant Wi-Fi).
+Tačiau 3GPP savo 4G LTE specifikacijoje buvo numačiusi ir galimybę apjungti LTE su WLAN tiesiogiai (populiariai kalbant, su Wi-Fi).
 Taip būtų sukuriamas heterogeninis radijo tinklas.
 Specifikacijos `Release-13` aprašytos dvi technologijos [10]:
 
