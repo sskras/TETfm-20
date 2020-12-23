@@ -10,8 +10,9 @@ Kartu kilo ir poreikis TCP sesijos duomenis perduoti keliais interfeisais iš ka
 Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP tinklais.
 
 Jis leidžia tos pačios aplikacijos (vienos TCP sesijos) duomenis perduoti keletu lygiagrečių MPTCP posrūvių (angl. _Subflow_).
+Įprastai šių posrūvių paketai keliauja per skirtingus IP interfeisus.
+Tačiau įmanoma ir kelis posrūvius užmegzti per tą patį interfeisą.
 [[1]](#1)
-
 
 Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra tinklo perkrovų valdymas (angl. _Congestion Control_).
 Jis valdo srauto patekimą į tinklą ir leidžia jame išvengti perkrovų (grūsčių).
