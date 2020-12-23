@@ -93,7 +93,7 @@ Tačiau ji nėra visiškai išbaigta ar nusistovėjusi: vyksta jos tyrinėjimai,
 Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir prasidėjusio įjungimo stipriai pasistūmės C-RAN masinis diegimas:
 
 ![image](https://user-images.githubusercontent.com/74717106/101058576-f31b8b80-3595-11eb-97db-c7b8a466e0e8.png)  
-`10 pav. Prognozuojama C-RAN rinkos plėtra 2106–2027 m.` [6]
+`10 pav. Prognozuojama C-RAN rinkos plėtra 2016–2027 m.` [6]
 
 ## Neišpopuliarėjusi LTE + WLAN agregacija
 
