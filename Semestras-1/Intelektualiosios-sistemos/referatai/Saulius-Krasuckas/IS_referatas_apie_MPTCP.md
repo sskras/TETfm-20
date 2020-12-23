@@ -7,15 +7,16 @@ TCP sukurtas patikimam duomenų perdavimui IP tinklais, jame:
 Vienos sesijos duomenims perduoti TCP įprastai naudoja tik vieną IP interfeisą.
 Nuo ~2010 m. ėmė plisti galiniai tinklo įrenginiai su keletu interfeisų, veikiančių vienu metu (LAN, DSL, Wi-Fi, LTE tinkluose).
 Kartu kilo ir poreikis TCP sesijos duomenis perduoti keliais interfeisais iš karto (pvz. pralaidumui ar patikimumui didinti).
-Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP infrastruktūra.
 
+Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP infrastruktūra.
 Jis aplikacijai leidžia (tos pačios) TCP sesijos duomenis perduoti keletu lygiagrečių MPTCP posrūvių (angl. _Subflow_).
-Įprastai posrūvių paketai keliauja per skirtingus IP interfeisus.
-Tačiau įmanoma kelis posrūvius užmegzti ir per tą patį interfeisą.
 [[1]](#1)
 
+Įprastai posrūvių paketai keliauja per skirtingus IP interfeisus.
+Tačiau įmanoma kelis posrūvius užmegzti ir per tą patį interfeisą.
+
 Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra tinklo perkrovų valdymas (angl. _Congestion Control_).
-Jis valdo srauto patekimą į tinklą ir leidžia jame išvengti perkrovų (grūsčių).
+Jis keičia srauto patekimą į tinklą ir leidžia šiame išvengti perkrovų (grūsčių).
 Įprastai tam būna mažinama paketų išsiuntimo sparta.
 
     Apibrėžimai iš [1] ir Wiki:  
