@@ -129,7 +129,7 @@ Tačiau nei šios dvi, nei apskritai kitos technologijos, skirtos mobiliojo ryš
 
 Taip teigia Olandijos IRT (informacijos ir ryšių technologijų [19, 20, 21]) švietimo ir tyrimų asociacija SURF (olan. Samenwerkende Universitaire RekenFaciliteiten [23]) kartu su Olandijos IRT tyrimų bendrove Stratix [24] jų bendroje ataskaitoje apie galimybes panaudoti 4G ir 5G gyvenamosiose patalpose [22].
 
-Pažymima, kad tiek čipų gamintojai Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojai atsilieka nuo kasdienybės (įskaitant Samsung) atsilieka nuo kasdienybės tiek teikdami šių technologijų palaikymą, tiek net ir implementuodami jas.
+Pažymima, kad tiek čipų gamintojai Intel, Ericsson, Nokia ir Qualcomm, tiek ir mob. telefonų gamintojai atsilieka (įskaitant Samsung) atsilieka nuo kasdienybės tiek teikdami šių technologijų palaikymą, tiek net ir implementuodami jas.
 
 Ataskaitos autoriai neaptiko paaiškinimų, kodėl taip nutikę, tik spekuliacijas.
 Jie spėja, kad apskritai visų nelicencinio spektro agregavimo technologijų vėlavimo priežastis yra per mažas rinkos poreikis.
