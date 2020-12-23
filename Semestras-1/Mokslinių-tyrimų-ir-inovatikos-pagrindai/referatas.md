@@ -87,7 +87,7 @@ Todėl C-RAN debesų architektūra turi būti kitokia nei DC debesų, ir irgi re
 C-RAN architektūra naudojama teoriškai jau nuo 3G, bet praktiškai pradėjo plisti tik 4G LTE tinkluose.
 Tačiau ji nėra visiškai išbaigta ar nusistovėjusi: vyksta jos tyrinėjimai, optimizavimai ir kiti tobulinimo darbai: [8].
 
-![image](https://user-images.githubusercontent.com/74717106/101074912-00427580-35aa-11eb-8d76-a53fcc054887.png)
+![image](https://user-images.githubusercontent.com/74717106/101074912-00427580-35aa-11eb-8d76-a53fcc054887.png)  
 `9 pav. Tyrimų objektas – skirtingos galimos RRH ir BBU skiriamosios ribos (A, B, C, D, E).` [5]
 
 Laikoma, kad būtent dėl 5G NR poreikių (didelio pralaidumo, mažos delsos) ir prasidėjusio įjungimo stipriai pasistūmės C-RAN masinis diegimas:
