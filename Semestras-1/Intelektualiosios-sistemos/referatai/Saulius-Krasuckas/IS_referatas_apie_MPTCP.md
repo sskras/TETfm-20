@@ -23,6 +23,7 @@ Jis keičia srauto patekimą į tinklą ir leidžia šiame išvengti perkrovų (
     - https://en.wikipedia.org/wiki/Transmission_Control_Protocol  
     - https://en.wikipedia.org/wiki/Network_congestion#Congestion_control  
 
+<div style="page-break-after: always;"></div>
 
 
 # Santrumpos
