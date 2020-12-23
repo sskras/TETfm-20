@@ -137,7 +137,7 @@ Grindžiama tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės (i�
 
 Internetinio leidinio "RCR Wireless News" straipsnelis [25] patvirtina, kad tokia pat situacija rinkoje buvo ir 2015 m.
 
-5Genesis konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad 3GPP pateiktos 4G LTE specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir net 5G NR atveju nėra išsamios [26].
+5Genesis konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad 3GPP pateiktos 4G LTE specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir net 5G NR atveju nėra pakankamai išsamios [26].
 
 Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 
