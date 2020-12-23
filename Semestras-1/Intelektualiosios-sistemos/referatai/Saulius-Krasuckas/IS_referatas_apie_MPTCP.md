@@ -6,17 +6,43 @@ TCP sukurtas patikimam duomenų perdavimui IP tinklais, jame:
 
 Vienos sesijos duomenims perduoti TCP įprastai naudoja tik vieną IP intefeisą.
 Nuo ~2010 m. ėmė plisti galiniai tinklo įrenginiai su keletu IP interfeisų, veikiančių vienu metu (LAN, DSL, Wi-Fi, LTE tinkluose).
-Kartu kilo ir poreikis TCP sesijos duomenis perduoti keliais tokiais iš karto (pvz. pralaidumui ar patikimumui didinti).
+Kartu kilo ir poreikis TCP sesijos duomenis perduoti keliais interfeisais iš karto (pvz. pralaidumui ar patikimumui didinti).
 Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP tinklais.
 
-Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra _Congestion Control_.
+Jis leidžia tos pačios aplikacijos (vienos TCP sesijos) duomenis perduoti keletu lygiagrečių MPTCP posrūvių (angl. _Subflow_).
+[[1]](#1)
+
+
+Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra tinklo perkrovų valdymas (angl. _Congestion Control_).
 Jis valdo srauto patekimą į tinklą ir leidžia jame išvengti perkrovų (grūsčių).
+Įprastai tam būna mažinama paketų išsiuntimo sparta.
 
     Apibrėžimai iš [1] ir Wiki:  
     - https://en.wikipedia.org/wiki/Transmission_Control_Protocol  
     - https://en.wikipedia.org/wiki/Network_congestion#Congestion_control  
 
-Testas su pirmuoju [[1]](#1) šaltiniu: 
+
+
+# Santrumpos
+
+| Santrumpa                | Pilnas terminas                                                                                                                     | 
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------| 
+| IP                       | (angl. Internet Protocol) TODO?
+| TCP                      | (angl. Transmission Control Protocol) TODO?
+| MPTCP                    | (angl. Multipath TCP) TODO?
+
+
+# Terminai užsienio kalba
+
+| Terminas                 | Vertimas į lietuvių k.                                                                                                              | 
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------| 
+| Congestion               | Grūstis
+| Congestion control       | Perkrovų valdymas
+| Subflow                  | Posrūvis (nuo žodžio „srovė“) arba* Posrautis (nuo žodžio „srautas“), angl. _Flow_.
+| Rate of packets          | Paketų išsiuntimo sparta
+
+[*] – jei nesimaišys su angl. _Stream_
+
 
 # Literatūra
 
