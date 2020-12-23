@@ -294,7 +294,7 @@ _(kelios grupioko _Pirato_ mintys, sutrauktos Žygimanto Bliujaus, pristačiusio
   - pažeidžiama sauga, 
   - menkas apsijungimas su Wi-Fi
 * Per 10 m. atsirado pažangesnių sprendimų (puslaidininkiai, moduliacijos, virtualizavimas)
-* Iškyla ir nauji iššūkiai (fiziniai, architektūriniai, modeliavimo)
+* Iškyla ir nauji iššūkiai (fizikiniai, architektūriniai, modeliavimo)
 
 # Trumpos išvados bendro referato pristatymui
 
