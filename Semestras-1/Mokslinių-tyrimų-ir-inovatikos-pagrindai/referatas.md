@@ -133,11 +133,11 @@ Pažymima, kad tiek čipų gamintojai Intel, Ericsson, Nokia ir Qualcomm, tiek i
 
 Ataskaitos autoriai neaptiko paaiškinimų, kodėl taip nutikę, tik spekuliacijas.
 Jie spėja, kad apskritai visų nelicencinio spektro agregavimo technologijų vėlavimo priežastis yra per mažas rinkos poreikis.
-Grindžiama tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės (išskyrus nebent Samsung) nedalyvauja aljansuose, remiančiuose šias technologijas.
+Grindžiama tuo, kad beveik visos pagrindinės telekomunikacinės bendrovės (išskyrus nebent Samsung) nedalyvauja aljansuose, remiančiuose tokias technologijas.
 
 Internetinio leidinio "RCR Wireless News" straipsnelis [25] patvirtina, kad tokia pat situacija rinkoje buvo ir 2015 m.
 
-5Genesis konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad 3GPP pateiktos 4G LTE specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir 5G NR atveju nėra išsamios apskritai [26].
+5Genesis konsorciumo 2019 m. „5G standartizavimo ir reguliavimo“ ataskaitoje D7.5 teigiama, kad 3GPP pateiktos 4G LTE specifikacijos kitų radijo technologijų agregavimo temą paliečia tik iš dalies, ir net 5G NR atveju nėra išsamios [26].
 
 Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 
@@ -148,14 +148,14 @@ Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC)
 Ataskaitoje pastebima, kad LWA ir jos naudojamas signalizacijos protokolas LWAAP nepalaiko vadinamosios Split architektūros bazinėse stotyse (RAN viduje).
 O šis funkcionalumas 5G NR technologijai yra kertinis ir netgi (kaip paminėta aprašant C-RAN).
 
-Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja 4G LTE trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus 5G NR atvejui.
+Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja 4G LTE trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus 5G NR atveju.
 
-O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje teigė [31], kad šių technologijų vystymas sustojo.
+O "Global mobile Suppliers Association" 2020 m. vidurio ataskaitoje apskritai teigė [31], kad šių technologijų vystymas sustojo.
 
-Tuo tarpu 5G NR gaires 2017 m. nubrėžęs standartas IMT-2020 numatė lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus [32].
+Tuo tarpu 5G NR gaires dar 2017 m. nubrėžęs standartas IMT-2020 numatė lankstesnius ir net efektyvesnius RAN ir WLAN apjungimo scenarijus [32].
 
 Akivaizdu, kad 4G LTE ir WLAN agregacija nėra nei paplitusi pasaulyje, nei suderinama su 5G NR siekiais.
-Tai dar vienas 4G LTE aspektas, kurį 5G NR privalės tobulinti.
+Tai dar vienas 4G LTE aspektas, kurį 5G NR (3GPP) privalės tobulinti.
 Ar pavyks šį sykį, didelis klausimas.
 
 # Skyriaus išvados
