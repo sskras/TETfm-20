@@ -146,7 +146,7 @@ Rašant referatą rasti tik keli sėkmingi ar bent jau planuoti įdiegimai:
 
 Iš vėlesnių diegimų pavyko aptikti tik "Athens Technology Center S.A." (ATC) atliktą 4G LTE agreguoto tinklo tyrimą projektui Fed4FIRE+. [30]
 Ataskaitoje pastebima, kad LWA ir jos naudojamas signalizacijos protokolas LWAAP nepalaiko vadinamosios Split architektūros bazinėse stotyse (RAN viduje).
-O šis funkcionalumas 5G NR technologijai yra kertinis ir netgi (kaip paminėta aprašant C-RAN).
+O šis funkcionalumas 5G NR technologijai yra kertinis (kaip paminėta aprašant C-RAN).
 
 Graikijos bendrovės ATC atlikti mobiliojo ryšio agregavimo tyrimai iliustruoja 4G LTE trūkumus šioje srityje ir eksperimentų keliu atskleidžia praktiškus būdus efektyviai agreguoti radijo tinklus 5G NR atveju.
 
@@ -281,7 +281,7 @@ Volume 107, June 2020, p. 898-908
 
 
 # Trumpas įvadas bendro referato pristatymui
-_(kelios Andriaus Stanaičio mintys, išdėstytos Žygimanto Bliujaus, bei Sauliaus Krasucko papildymas)_
+_(kelios grupioko _Pirato_ mintys, sutrauktos Žygimanto Bliujaus, pristačiusio referatą, bei Sauliaus Krasucko papildymas)_
 
 * Judriojo ryšio paslaugų tiekėjų tikslai:
   - Augantis klientų skaičius;
