@@ -5,18 +5,18 @@ TCP sukurtas patikimam duomenų perdavimui IP tinklais, jame:
 * pranešamas siuntimo rezultatas,
 
 Vienos sesijos duomenims perduoti TCP įprastai naudoja tik vieną IP interfeisą.
-Nuo ~2010 m. ėmė plisti galiniai tinklo įrenginiai su keletu interfeisų, veikiančių vienu metu (LAN, DSL, Wi-Fi, LTE tinkluose).
-Kartu kilo ir poreikis TCP sesijos duomenis perduoti keliais interfeisais iš karto (pvz. pralaidumui ar patikimumui didinti).
+Nuo ~2010 m. ėmė plisti galiniai tinklo įrenginiai su keletu interfeisų, veikiančių vienu metu (DSL, LAN, Wi-Fi, LTE tinkluose).
+Kartu kilo ir poreikis TCP sesijos duomenis perduoti keliais tokiais IP interfeisais iš karto (pvz. pralaidumui ar patikimumui didinti).
 
-Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esamais TCP/IP infrastruktūra.
-Jis aplikacijai leidžia (tos pačios) TCP sesijos duomenis perduoti keletu lygiagrečių MPTCP posrūvių (angl. _Subflow_).
+Tam pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esama TCP/IP infrastruktūra.
+Jis aplikacijai leidžia (tos pačios) TCP sesijos duomenis perduoti keletu lygiagrečių MPTCP posrūvių (angl. _Subflows_).
 [[1]](#1)
 
-Įprastai posrūvių paketai keliauja per skirtingus IP interfeisus.
+Įprastai šių posrūvių paketai keliauja per skirtingus IP interfeisus.
 Tačiau įmanoma kelis posrūvius užmegzti ir per tą patį interfeisą.
 
 Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra tinklo perkrovų valdymas (angl. _Congestion Control_).
-Jis keičia srauto patekimą į tinklą ir leidžia šiame išvengti perkrovų (grūsčių).
+Jis keičia srauto patekimą į tinklą ir taip leidžia šiame išvengti perkrovų (grūsčių).
 Įprastai tam būna mažinama paketų išsiuntimo sparta.
 
     Apibrėžimai iš [1] ir Wiki:  
@@ -44,8 +44,9 @@ Jis keičia srauto patekimą į tinklą ir leidžia šiame išvengti perkrovų (
 | Congestion control       | Perkrovų valdymas
 | Subflow                  | Posrūvis (nuo žodžio „srovė“) arba* Posrautis (nuo žodžio „srautas“), angl. _Flow_.
 | Rate of packets          | Paketų išsiuntimo sparta
+| TCP Stream               | TCP sesija
 
-[*] – jei nesimaišys su angl. _Stream_
+[*] – tiktų, jei nesimaišys su angl. _Stream_
 
 
 # Literatūra
