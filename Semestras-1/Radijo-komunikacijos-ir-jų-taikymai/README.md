@@ -1,1 +1,1 @@
-Kol kas planuojama patalpinti tik pastebėjimus apie laboratorių darbų (kursinio darbo) atlikimą naudojant Seamcat įrankį.
+Kol kas planuojama patalpinti tik pastebėjimus apie laboratorių darbų (kursinio projekto) atlikimą naudojant Seamcat įrankį.
