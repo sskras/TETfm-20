@@ -31,3 +31,60 @@ Here is the file list as of `2021-01-06`:
 11/19/2019 10:33 AM        <dir> source
  11/4/2019 10:48 AM          168 web.config
 ```
+
+### Downloading
+
+```
+$ curl -OLv http://www.seamcat.org/download/SEAMCAT-5.4.1.jar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* About to connect() to www.seamcat.org port 80 (#0)
+*   Trying 194.182.137.14...
+* Connected to www.seamcat.org (194.182.137.14) port 80 (#0)
+> GET /download/SEAMCAT-5.4.1.jar HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: www.seamcat.org
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: application/java-archive
+< Last-Modified: Fri, 24 Apr 2020 12:32:18 GMT
+< Accept-Ranges: bytes
+< ETag: "bed29664341ad61:0"
+< Server: Microsoft-IIS/10.0
+< X-Powered-By: ASP.NET
+< Date: Wed, 06 Jan 2021 13:58:51 GMT
+< Content-Length: 31481145
+< 
+{ [data not shown]
+Warning: Failed to create the file SEAMCAT-5.4.1.jar: Permission denied
+* Failed writing body (0 != 1092)
+  0 30.0M    0  1092    0     0   8808      0  0:59:34 --:--:--  0:59:34  8878
+* Closing connection 0
+curl: (23) Failed writing body (0 != 1092)
+[p@localhost seamcat]$ sudo curl -OLv http://www.seamcat.org/download/SEAMCAT-5.4.1.jar
+[sudo] password for p: 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* About to connect() to www.seamcat.org port 80 (#0)
+*   Trying 194.182.137.14...
+* Connected to www.seamcat.org (194.182.137.14) port 80 (#0)
+> GET /download/SEAMCAT-5.4.1.jar HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: www.seamcat.org
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: application/java-archive
+< Last-Modified: Fri, 24 Apr 2020 12:32:18 GMT
+< Accept-Ranges: bytes
+< ETag: "bed29664341ad61:0"
+< Server: Microsoft-IIS/10.0
+< X-Powered-By: ASP.NET
+< Date: Wed, 06 Jan 2021 13:58:58 GMT
+< Content-Length: 31481145
+< 
+{ [data not shown]
+100 30.0M  100 30.0M    0     0   796k      0  0:00:38  0:00:38 --:--:-- 1016k^B
+* Connection #0 to host www.seamcat.org left intact
+```
