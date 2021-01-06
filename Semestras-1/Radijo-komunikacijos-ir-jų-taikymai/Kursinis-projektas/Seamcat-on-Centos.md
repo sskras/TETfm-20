@@ -72,3 +72,30 @@ openjdk version "1.8.0_275"
 OpenJDK Runtime Environment (build 1.8.0_275-b01)
 OpenJDK 64-Bit Server VM (build 25.275-b01, mixed mode)
 ```
+### Check for free space:
+```
+$ df -Th .
+Filesystem     Type  Size  Used Avail Use% Mounted on
+rpool/seamcat  zfs   100G   31M  100G   1% /mnt/rpool/seamcat
+```
+Looks reasonably enough.
+
+### Try running it using CLI
+
+As `saukrs` doesn't run any Java apps on Linux, he needed to search for a usual way.  
+The https://google.com/search?q=run+jar+linux query leads to the first match on askubuntu.com:  
+[How can I execute a .jar file from the terminal](https://askubuntu.com/questions/101746/how-can-i-execute-a-jar-file-from-the-terminal#101751)  
+```
+java -jar Minecraft.jar
+```
+So here we go similarly with `Seamcat`:
+```
+$ java -jar SEAMCAT-5.4.1.jar 
+Initializing log4j with basic configuration
+Jan 06, 2021 4:13:53 PM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+Log4j configuration file not found. Setting log level back to INFO
+1 [main] INFO org.seamcat.migration.FileMigrator  - File /home/p/seamcat-app/SEAMCAT 5.4.1 rev 8a026e8f/temp/default-library.sli is at version 42
+13 [main] INFO org.seamcat.migration.FileMigrator  - Running migration org.seamcat.migration.settings.Rule043GenericNoiseFloorDistributionSettingsMigration
+```
+And YAY, we ar running, folks!
