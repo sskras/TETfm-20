@@ -5,7 +5,9 @@ https://moodle.vgtu.lt/pluginfile.php/118111/mod_resource/content/1/jxpiinstall.
 
 Which of course some students cannot handle (because of different OS they use, eg. Chrome OS, or CentOS Linux).
 
-Thus @saulius-krasuckas is about to investigate the way to run `Seamcat`.
+Thus [@saulius-krasuckas](https://github.com/saulius-krasuckas) is about to investigate the way to run `Seamcat` on CentOS.
+
+### Finding the downloads
 
 So, as you go to the https://www.seamcat.org/, you get redirected to CEPT homepage:  
 https://cept.org/eco/eco-tools-and-services/seamcat-spectrum-engineering-advanced-monte-carlo-analysis-tool
