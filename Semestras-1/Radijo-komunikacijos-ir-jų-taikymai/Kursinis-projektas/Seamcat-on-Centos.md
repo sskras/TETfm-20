@@ -19,7 +19,6 @@ You could access downloads directly here:
 https://www.seamcat.org/download/
 
 Here is the file list as of `2021-01-06`:
-
 ```
  4/24/2020  1:32 PM        <dir> plugin
  4/24/2020  1:32 PM     31481145 SEAMCAT-5.4.1.jar
@@ -31,9 +30,7 @@ Here is the file list as of `2021-01-06`:
 11/19/2019 10:33 AM        <dir> source
  11/4/2019 10:48 AM          168 web.config
 ```
-
 ### Downloading
-
 ```
 $ sudo curl -OLv http://www.seamcat.org/download/SEAMCAT-5.4.1.jar
 [sudo] password for p: 
@@ -60,4 +57,18 @@ $ sudo curl -OLv http://www.seamcat.org/download/SEAMCAT-5.4.1.jar
 { [data not shown]
 100 30.0M  100 30.0M    0     0   796k      0  0:00:38  0:00:38 --:--:-- 1016k^B
 * Connection #0 to host www.seamcat.org left intact
+```
+### Chek OpenJDK versions, if any:
+```
+$ rpm -qa | grep -i jdk
+java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8.x86_64
+java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+java-1.8.0-openjdk-headless-1.8.0.275.b01-0.el7_9.x86_64
+java-1.8.0-openjdk-1.8.0.275.b01-0.el7_9.x86_64
+copy-jdk-configs-3.3-10.el7_5.noarch
+
+$ java -version
+openjdk version "1.8.0_275"
+OpenJDK Runtime Environment (build 1.8.0_275-b01)
+OpenJDK 64-Bit Server VM (build 25.275-b01, mixed mode)
 ```
