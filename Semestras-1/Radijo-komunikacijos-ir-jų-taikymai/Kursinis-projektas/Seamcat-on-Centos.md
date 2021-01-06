@@ -82,7 +82,7 @@ Looks reasonably enough.
 
 ### Try running it using CLI
 
-As `saukrs` doesn't run any Java apps on Linux, he needed to search for a usual way.  
+As [@saulius-krasuckas](https://github.com/saulius-krasuckas)  doesn't run any Java apps on Linux, he needed to search for a usual way.  
 The https://google.com/search?q=run+jar+linux query leads to the first match on askubuntu.com:  
 [How can I execute a .jar file from the terminal](https://askubuntu.com/questions/101746/how-can-i-execute-a-jar-file-from-the-terminal#101751)  
 ```
