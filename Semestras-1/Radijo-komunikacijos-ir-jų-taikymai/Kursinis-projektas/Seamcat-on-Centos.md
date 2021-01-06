@@ -103,5 +103,7 @@ And YAY, we are up and running, folks!
 ### The result
 
 First run and the Welcome screen.
-
 ![image](https://user-images.githubusercontent.com/74717106/103779067-e0d0b980-503b-11eb-962b-7acca65de599.png)
+
+The `About` box:
+![image](https://user-images.githubusercontent.com/74717106/103780933-56d62000-503e-11eb-9701-4072065f2576.png)
