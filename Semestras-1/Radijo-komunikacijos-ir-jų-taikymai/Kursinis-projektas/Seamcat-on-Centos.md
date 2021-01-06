@@ -13,8 +13,8 @@ Thus [@saulius-krasuckas](https://github.com/saulius-krasuckas) is about to inve
 So, as you go to the https://www.seamcat.org/, you get redirected to CEPT homepage:  
 https://cept.org/eco/eco-tools-and-services/seamcat-spectrum-engineering-advanced-monte-carlo-analysis-tool
 
-Here, in the **Download** subsection you will be asked for registration, but I guess that isn't strictly required.  
-You should access downloads directly here:  
+Here, in the **Download** subsection you will be asked for *registration*, but I guess that isn't strictly required.  
+You could access downloads directly here:  
 
 https://www.seamcat.org/download/
 
