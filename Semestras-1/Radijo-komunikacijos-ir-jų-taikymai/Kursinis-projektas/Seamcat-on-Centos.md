@@ -4,7 +4,7 @@ As our instructor offered the class only these two files, I guess he means Windo
 .../118111/mod_resource/content/1/jxpiinstall.exe  
 ```
 
-Of course which some students cannot handle (because of different OS they use, eg. Chrome OS, or CentOS Linux).
+Of course which some students cannot handle because of the different OS they use (eg. Chrome OS, or CentOS Linux).
 
 Thus [@saulius-krasuckas](https://github.com/saulius-krasuckas) is about to investigate the way to run `Seamcat` on CentOS.
 
