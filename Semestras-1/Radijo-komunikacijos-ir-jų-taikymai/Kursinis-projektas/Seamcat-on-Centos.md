@@ -98,4 +98,10 @@ Log4j configuration file not found. Setting log level back to INFO
 1 [main] INFO org.seamcat.migration.FileMigrator  - File /home/p/seamcat-app/SEAMCAT 5.4.1 rev 8a026e8f/temp/default-library.sli is at version 42
 13 [main] INFO org.seamcat.migration.FileMigrator  - Running migration org.seamcat.migration.settings.Rule043GenericNoiseFloorDistributionSettingsMigration
 ```
-And YAY, we ar running, folks!
+And YAY, we are up and running, folks!
+
+### The result
+
+First run and the Welcome screen.
+
+![image](https://user-images.githubusercontent.com/74717106/103779067-e0d0b980-503b-11eb-962b-7acca65de599.png)
