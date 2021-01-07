@@ -5,3 +5,8 @@
 **Atliko:** Saulius Krasuckas  
 **Grupė:** TETfm-20  
 **Užduotis:** 11  
+
+### 1. Užduoties sąlygos
+
+![image](https://user-images.githubusercontent.com/74717106/103891375-64e57880-50f2-11eb-9270-1948213ee201.png)
+
