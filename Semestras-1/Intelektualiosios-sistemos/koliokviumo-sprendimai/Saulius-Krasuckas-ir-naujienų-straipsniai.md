@@ -38,6 +38,7 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
 
 Čia prireiks kalbotyros žinių apie semantiką (žodžių ir kitų kalbos ženklų reikšmes). Dar ši sritis vadinama lingvistine semantika.  
 Tada šios problemos uždavinių sprendimą būtų įmanoma formuluoti bent jau žmogui.  
+https://www.vle.lt/straipsnis/semantika/
 
 Toliau prireiks žinių apie natūralios kalbos apdorojimą (angl. Natural Language Processing, NLP).  
 Tai leistų formalizuoti bent dalį uždavinio, pvz. interpretuoti straipsnių pavadinimus.  
@@ -45,9 +46,12 @@ Tai leistų formalizuoti bent dalį uždavinio, pvz. interpretuoti straipsnių p
 Galbūt praverstų ir NLP posritis vad. natūralios kalbos supratimas (angl. Natural-language understanding, NLU | Natural-language interpretation, NLI).  
 NLI leistų išskirti, reziumuoti jau viso straipsnio temą.  
 
-Taip pat spėju, kad labai praverstų ir informacijos teorijos žinios.  
-Juk bet kuris kalbos vienetas perduoda socialinę informaciją.  
+Bet kuris kalbos vienetas perduoda socialinę informaciją.  
+https://www.vle.lt/straipsnis/kalbos-zenklas/
 
-Tad panašu, kad čia reikalingos stiprios tarpdisciplininės žinios.  
-Ir panašu, kad jos turi gana mažai bendro su Duomenų Centrų ir Telekomunikacijų inžinerija (man šiemet pasirinkta studijų kryptimi).  
+Tad spėju, kad labai praverstų ir informacijos teorijos žinios.  
+Turbūt praverstų prisiminti ir Tiūringo testą:  
+https://en.wikipedia.org/wiki/Turing_test
 
+Tad panašu, kad čia reikalingos užtikrintai tarpdisciplininės žinios.  
+Ir, mano manymu, jos turi gana mažai bendro su Duomenų Centrų ir Telekomunikacijų inžinerija (mano šiemet pasirinkta studijų kryptimi).  
