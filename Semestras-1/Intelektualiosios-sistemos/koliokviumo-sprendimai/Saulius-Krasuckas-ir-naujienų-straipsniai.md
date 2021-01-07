@@ -26,6 +26,8 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
 
 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas. (4)
 
-Įvardinti įvestį, išvestį (formuluojant užduotį reikia numatyti, kokio tipo ir kokie duomenys bus pateikiami sprendimo įėjime ir kokie duomenys bus gaunami išėjime, bei kaip tuos išėjimo duomenis reikia interpretuoti. Pavyzdžiui, sprendžiant pirmojo LD uždavinį įėjime pateikėme ne vaizdą, o du iš vaizdo apskaičiuotus požymius. Išėjimą turėjome vieną, o jo reikšmės 0 arba 1 nurodė, kokiai klasei priklauso vaizdas, kurio požymius siuntėme į įėjimą). (0,5)
-Veiksmų, kuriuos reikia atlikti eiliškumą (čia reiktų parašyti ar nubraižyti kažką panašaus į algoritmo schemą, kad ir ne 100% detalizuotą). (1)
-Formules, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę (pvz., kas per kintamasis ir iš kur jį paimti. Reiktų pabandyti surašyti (ar išsikopijuoti iš interneto) formules, kurios matematine kalba aprašo tai, ką intelektualioji sistema turi atlikti su įėjimo duomenimis tam, kad gautų išėjimo duomenis. Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.). (2,5)
+    i. Įvardinti įvestį, išvestį (formuluojant užduotį reikia numatyti, kokio tipo ir kokie duomenys bus pateikiami sprendimo įėjime ir kokie duomenys bus gaunami išėjime, bei kaip tuos išėjimo duomenis reikia interpretuoti. Pavyzdžiui, sprendžiant pirmojo LD uždavinį įėjime pateikėme ne vaizdą, o du iš vaizdo apskaičiuotus požymius. Išėjimą turėjome vieną, o jo reikšmės 0 arba 1 nurodė, kokiai klasei priklauso vaizdas, kurio požymius siuntėme į įėjimą). (0,5)
+
+    ii. Veiksmų, kuriuos reikia atlikti eiliškumą (čia reiktų parašyti ar nubraižyti kažką panašaus į algoritmo schemą, kad ir ne 100% detalizuotą). (1)
+
+    iii. Formules, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę (pvz., kas per kintamasis ir iš kur jį paimti. Reiktų pabandyti surašyti (ar išsikopijuoti iš interneto) formules, kurios matematine kalba aprašo tai, ką intelektualioji sistema turi atlikti su įėjimo duomenimis tam, kad gautų išėjimo duomenis. Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.). (2,5)
