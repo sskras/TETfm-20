@@ -20,8 +20,9 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
 
 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias. (3)
 
-Iš alternatyvų išrinkti geriausią, optimalų sprendimą. (0,5)
-Pateikti išskirtinius pasirinkto sprendimo būdo privalumus, lyginant su alternatyviaisiais (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti. Kuo kiti sprendimai yra blogesni ar mažiau tinkami problemai spręsti). (2,5)
+    i. Iš alternatyvų išrinkti geriausią, optimalų sprendimą. (0,5)
+
+    ii. Pateikti išskirtinius pasirinkto sprendimo būdo privalumus, lyginant su alternatyviaisiais (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti. Kuo kiti sprendimai yra blogesni ar mažiau tinkami problemai spręsti). (2,5)
 
 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas. (4)
 
