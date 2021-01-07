@@ -42,6 +42,7 @@ https://www.vle.lt/straipsnis/semantika/
 
 Toliau prireiks žinių apie natūralios kalbos apdorojimą (angl. Natural Language Processing, NLP).  
 Tai leistų formalizuoti bent dalį uždavinio, pvz. interpretuoti straipsnių pavadinimus.  
+https://en.wikipedia.org/wiki/Natural_language_processing
 
 Galbūt praverstų ir NLP posritis vad. natūralios kalbos supratimas (angl. Natural-language understanding, NLU | Natural-language interpretation, NLI).  
 NLI leistų išskirti, reziumuoti jau viso straipsnio temą.  
@@ -55,3 +56,5 @@ https://en.wikipedia.org/wiki/Turing_test
 
 Tad panašu, kad čia reikalingos užtikrintai tarpdisciplininės žinios.  
 Ir, mano manymu, jos turi gana mažai bendro su Duomenų Centrų ir Telekomunikacijų inžinerija (mano šiemet pasirinkta studijų kryptimi).  
+Todėl užduotis sukėlė nepaparastai stiprios aprovos simuliaciją mintyse.  
+Jei užduoties imsiuosi sąžiningai, būsiu tiesiog priverstas neformaliai studijuoti tris papildomas aukštojo mokslo sritis, kurios nebus susijusios su aukščiau minima inžinerija.  
