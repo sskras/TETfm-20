@@ -36,8 +36,8 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
 
 ### Pradinės mintys (juodraštis)
 
-Čia prireiks lingvistikos žinių apie semantiką (žodžių ir kitų kalbos ženklų reikšmes). Dar ši sritis vadinama lingvistine semantika.  
-Tada šį uždavinį būtų įmanoma užrašyti žmogui.  
+Čia prireiks kalbotyros žinių apie semantiką (žodžių ir kitų kalbos ženklų reikšmes). Dar ši sritis vadinama lingvistine semantika.  
+Tada šios problemos uždavinių sprendimą būtų įmanoma formuluoti bent jau žmogui.  
 
 Toliau prireiks žinių apie natūralios kalbos apdorojimą (angl. Natural Language Processing, NLP).  
 Tai leistų formalizuoti bent dalį uždavinio, pvz. interpretuoti straipsnių pavadinimus.  
