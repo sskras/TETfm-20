@@ -1,6 +1,6 @@
 ### Užduotis
 
-Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų portaluose rašo vis apie tą patį ir temomis, kurios jums neaktualios. Tuo tarpu jei panaršyti 10-20 naujienų portalų, ten kiekviename galime rasti po vieną-kitą tikrai jūsų interesų sritį šiuo momentu atitinkantį straipsnį. Tačiau norėtųsi, kad tokius straipsnius jums atrinktų automatiškai. Kokios intelektualiosios technologijos ir kaip galėtų būti panaudotos čia?
+Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų portaluose rašo vis apie tą patį ir temomis, kurios jums neaktualios. Tuo tarpu jei panaršyti 10-20 naujienų portalų, ten kiekviename galime rasti po vieną-kitą tikrai jūsų interesų sritį šiuo momentu atitinkantį straipsnį. Tačiau norėtųsi, kad tokius straipsnius jums atrinktų automatiškai. *Kokios intelektualiosios technologijos ir kaip galėtų būti panaudotos čia?*
 
 ### Vertinimo kriterijai ir užduoties žingsniai
 
@@ -31,3 +31,23 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
     ii. **Veiksmų**, kuriuos reikia atlikti **eiliškumą** (čia reiktų parašyti ar nubraižyti kažką panašaus į algoritmo schemą, kad ir ne 100% detalizuotą). (1)
 
     iii. **Formules, kurias reikia įgyvendinti** kartu su paaiškinimu, kas įeina į formulę (pvz., kas per kintamasis ir iš kur jį paimti. Reiktų pabandyti surašyti (ar išsikopijuoti iš interneto) formules, kurios matematine kalba aprašo tai, ką intelektualioji sistema turi atlikti su įėjimo duomenimis tam, kad gautų išėjimo duomenis. Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.). (2,5)
+
+----
+
+### Pradinės mintys (juodraštis)
+
+Čia prireiks lingvistikos žinių apie semantiką (žodžių ir kitų kalbos ženklų reikšmes). Dar ši sritis vadinama lingvistine semantika.  
+Tada šį uždavinį būtų įmanoma užrašyti žmogui.  
+
+Toliau prireiks žinių apie natūralios kalbos apdorojimą (angl. Natural Language Processing, NLP).  
+Tai leistų formalizuoti bent dalį uždavinio, pvz. interpretuoti straipsnių pavadinimus.  
+
+Galbūt praverstų ir NLP posritis vad. natūralios kalbos supratimas (angl. Natural-language understanding, NLU | Natural-language interpretation, NLI).  
+NLI leistų išskirti, reziumuoti jau viso straipsnio temą.  
+
+Taip pat spėju, kad labai praverstų ir informacijos teorijos žinios.  
+Juk bet kuris kalbos vienetas perduoda socialinę informaciją.  
+
+Tad panašu, kad čia reikalingos stiprios tarpdisciplininės žinios.  
+Ir panašu, kad jos turi gana mažai bendro su Duomenų Centrų ir Telekomunikacijų inžinerija (man šiemet pasirinkta studijų kryptimi).  
+
