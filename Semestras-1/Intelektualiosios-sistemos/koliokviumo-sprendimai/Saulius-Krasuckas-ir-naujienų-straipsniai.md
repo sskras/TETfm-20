@@ -14,8 +14,9 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
 
 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus. (2)
 
-Įvardinti 2-4 uždavinių sprendimo būdai (įvardinti, kokius metodus ar algoritmus galima būtų pritaikyti anksčiau išvardintiems uždaviniams spręsti; reikia pasirinkti tik tuos uždavinius, kur reikalingas/galimas intelektualiosios sistemos taikymas). (0,5)
-Pateikti argumentą (pvz., nuorodą į literatūrą), kodėl įvardintas sprendimo būdas tiktų (pateikti argumentus, kodėl tokio tipo uždaviniui spręsti parinkote būtent šį metodą. Pavyzdžiui, gal galima rasti nuorodą į mokslo straipsnį, kuriame aprašytas gėlių klasifikavimas su SOM tinklu, o jūsų uždavinys yra taip pat klasifikavimo uždavinys, turintis panašų požymių (įėjimų) ir klasių (išėjimų) skaičių. Nuorodą galima pateikti įvardinant autorių ir metus. Geriausia būtų pateikti DOI.). (1,5)
+    i. Įvardinti 2-4 uždavinių sprendimo būdai (įvardinti, kokius metodus ar algoritmus galima būtų pritaikyti anksčiau išvardintiems uždaviniams spręsti; reikia pasirinkti tik tuos uždavinius, kur reikalingas/galimas intelektualiosios sistemos taikymas). (0,5)
+
+    ii. Pateikti argumentą (pvz., nuorodą į literatūrą), kodėl įvardintas sprendimo būdas tiktų (pateikti argumentus, kodėl tokio tipo uždaviniui spręsti parinkote būtent šį metodą. Pavyzdžiui, gal galima rasti nuorodą į mokslo straipsnį, kuriame aprašytas gėlių klasifikavimas su SOM tinklu, o jūsų uždavinys yra taip pat klasifikavimo uždavinys, turintis panašų požymių (įėjimų) ir klasių (išėjimų) skaičių. Nuorodą galima pateikti įvardinant autorių ir metus. Geriausia būtų pateikti DOI.). (1,5)
 
 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias. (3)
 
