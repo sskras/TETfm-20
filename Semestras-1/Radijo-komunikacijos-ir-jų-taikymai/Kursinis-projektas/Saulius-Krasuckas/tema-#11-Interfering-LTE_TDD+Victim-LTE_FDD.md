@@ -1,5 +1,5 @@
 # Dviejų radijo ryšio linijų elektromagnetinės interferencijos tyrimas panaudojant SEAMCAT
-## Radijo komunikacijos ir jų taikymai <br /> <br /> Elektronikos fakultetas <br /> Vilnius Tech <br /> <br /> Kursinio darbo ataskaita
+## Radijo komunikacijos ir jų taikymai <br /> <br /> Elektronikos fakultetas <br /> VILNIUS TECH <br /> <br /> Kursinio darbo ataskaita
 
 **Data:** 2021-0x-yy  
 **Atliko:** Saulius Krasuckas  
