@@ -6,9 +6,11 @@ Kartais norisi pasiskaityti kokių nors naujienų, o populiariausiuose naujienų
 
 1. Gebėjimas suformuluoti uždavinį (-ius) pagal pateiktą problemą. (1)
 
-Suprasti problemą (įvardinti/paaiškinti, kur gali atsirasti neaiškumai kuriant/įgyvendinant problemos sprendimo algoritmą, kur galimi keli būdai spręsti uždavinį ir neaišku, kuris būdas yra geresnis, jei matyti, kad kažkokia komercinė sistema tokio pobūdžio problemą sprendžia, įžvelgti, kokius neapibrėžtumus šis komercinis įrankis sugebėjo išspręsti). Turi būti aprašytos probleminės vietos, reikalaujančios sprendimo. Įvardinti, kame yra sunkumai sprendžiant pateiktą problemą. Kurios problemos sprendimo dalys nėra akivaizdžios. (0,25)
-Išskaidyti į dalis, uždavinius, kuriuos išsprendus galima išspręsti ir problemą. (0,25)
-Aiškiai ir suprantamai įvairių sričių specialistams pateikti uždavinių formuluotes (turima omenyje ne suformuluoti užduotis skirtingiems specialistams, o paaiškinti uždavinius taip, kad jų prasmę, poreikį šiuos uždavinius spręsti matytų projektų vadovas, finansininkas, vadybininkas ir, pavyzdžiui, personalo vadybininkas). (0,5)
+    i. Suprasti problemą (įvardinti/paaiškinti, kur gali atsirasti neaiškumai kuriant/įgyvendinant problemos sprendimo algoritmą, kur galimi keli būdai spręsti uždavinį ir neaišku, kuris būdas yra geresnis, jei matyti, kad kažkokia komercinė sistema tokio pobūdžio problemą sprendžia, įžvelgti, kokius neapibrėžtumus šis komercinis įrankis sugebėjo išspręsti). Turi būti aprašytos probleminės vietos, reikalaujančios sprendimo. Įvardinti, kame yra sunkumai sprendžiant pateiktą problemą. Kurios problemos sprendimo dalys nėra akivaizdžios. (0,25)
+    
+    ii. Išskaidyti į dalis, uždavinius, kuriuos išsprendus galima išspręsti ir problemą. (0,25)
+    
+    iii. Aiškiai ir suprantamai įvairių sričių specialistams pateikti uždavinių formuluotes (turima omenyje ne suformuluoti užduotis skirtingiems specialistams, o paaiškinti uždavinius taip, kad jų prasmę, poreikį šiuos uždavinius spręsti matytų projektų vadovas, finansininkas, vadybininkas ir, pavyzdžiui, personalo vadybininkas). (0,5)
 
 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus. (2)
 
