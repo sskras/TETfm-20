@@ -26,7 +26,6 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       {
         "computeSessionId":"cc42751e-96f9-4363-a51b-611dbae7e617",
         "serviceUrl":"unset",
-        "computeResourceAddress":"10.97.32.165:8024"
       }
   }' \
   --compressed
