@@ -2,7 +2,6 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
   -H 'Connection: keep-alive' \
   -H 'Pragma: no-cache' \
   -H 'Cache-Control: no-cache' \
-  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36' \
   -H 'X-Requested-With: XMLHttpRequest' \
   -H 'Content-Type: application/json' \
   -H 'Accept: */*' \
