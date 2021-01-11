@@ -9,5 +9,24 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
   -H 'Sec-Fetch-Site: same-origin' \
   -H 'Sec-Fetch-Mode: cors' \
   -H 'Sec-Fetch-Dest: empty' \
-  --data-binary '{"uuid":"05367410","messages":{"ListVersion":[{"path":"/MATLAB Drive/Published/MMT 2020/tarpinio_perlaikymo_uzd_1.m","uuid":"C8A155BD"}]},"computeToken":{"computeSessionId":"cc42751e-96f9-4363-a51b-611dbae7e617","serviceUrl":"unset","computeResourceAddress":"10.97.32.165:8024"}}' \
+  --data-binary '
+  {
+    "uuid":"05367410",
+    "messages":
+    {
+      "ListVersion":
+      [
+        {
+          "path":"/MATLAB Drive/Published/MMT 2020/tarpinio_perlaikymo_uzd_1.m",
+          "uuid":"C8A155BD"
+        }
+      ]
+    },
+    "computeToken":
+      {
+        "computeSessionId":"cc42751e-96f9-4363-a51b-611dbae7e617",
+        "serviceUrl":"unset",
+        "computeResourceAddress":"10.97.32.165:8024"
+      }
+  }' \
   --compressed
