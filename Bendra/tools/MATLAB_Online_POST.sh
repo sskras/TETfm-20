@@ -16,6 +16,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
   -H 'Sec-Fetch-Site: same-origin' \
   -H 'Sec-Fetch-Mode: cors' \
   -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://wrprod01-prod-useast1.mathworks.com/remote/proxy/1.6/iframeProxyRelease.html?routingkey='"$COMP_RESC_ADDR" \
   --data-binary '
   {
     "uuid":"AC105222",
