@@ -2,6 +2,8 @@
 
 #FILE_PATH="RESTfull.m"
 FILE_PATH="$1"
+
+# TODO: get following vars via another REST calls:
 COMP_SESS_ID="0b71796c-ec81-4b52-93f9-7f01dfef8a97"
 COMP_RESC_ADDR="10.97.33.99:8025"
 
