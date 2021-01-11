@@ -21,7 +21,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       "ListVersion":
       [
         {
-          "path":"/MATLAB Drive/Published/",
+          "path":"/MATLAB Drive/Published/'"$FILE_PATH"'",
           "uuid":"C8A155BD"
         }
       ]
