@@ -17,7 +17,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       "ListVersion":
       [
         {
-          "path":"/MATLAB Drive/RESTfull.m",
+          "path":"/MATLAB Drive/Published/RESTfull.m",
           "uuid":"C8A155BD"
         }
       ]
