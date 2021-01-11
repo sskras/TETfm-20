@@ -33,7 +33,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
   }' \
   --compressed
 
-# on the first sight, both "uuid" fields seems to not matter much as we still get the same output except these two lines:
+# On the first sight, both "uuid" fields seems to not matter much as we still get the same output except these two lines:
 
 # --- old_UUIDs.txt       2021-01-11 14:12:10.630226700 +0200
 # +++ new_UUIDs.txt       2021-01-11 14:10:34.253427600 +0200
