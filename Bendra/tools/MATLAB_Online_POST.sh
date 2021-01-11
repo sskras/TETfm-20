@@ -11,14 +11,14 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
   -H 'Sec-Fetch-Dest: empty' \
   --data-binary '
   {
-    "uuid":"05367410",
+    "uuid":"CEE5E599",
     "messages":
     {
       "ListVersion":
       [
         {
           "path":"/MATLAB Drive/Published/RESTfull.m",
-          "uuid":"C8A155BD"
+          "uuid":"4C9D1233"
         }
       ]
     },
