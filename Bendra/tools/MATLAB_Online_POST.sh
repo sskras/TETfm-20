@@ -5,7 +5,7 @@ FILE_PATH="$1"
 COMP_SESS_ID="0b71796c-ec81-4b52-93f9-7f01dfef8a97"
 COMP_RESC_ADDR="10.97.33.99:8025"
 
-curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?routingkey='"$CRES_ADDR" \
+curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?routingkey='"$COMP_RESC_ADDR" \
   -H 'Connection: keep-alive' \
   -H 'Pragma: no-cache' \
   -H 'Cache-Control: no-cache' \
