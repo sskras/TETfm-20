@@ -33,7 +33,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       {
         "computeSessionId":"'"$COMP_SESS_ID"'",
         "serviceUrl":"unset",
-        "computeResourceAddress":"'$COMP_RESC_ADDR'"
+        "computeResourceAddress":"'"$COMP_RESC_ADDR"'"
       }
   }' \
   --compressed
