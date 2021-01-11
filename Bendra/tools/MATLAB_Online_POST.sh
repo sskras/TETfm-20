@@ -17,7 +17,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       "ListVersion":
       [
         {
-          "path":"/MATLAB Drive/Published/MMT 2020/tarpinio_perlaikymo_uzd_1.m",
+          "path":"/MATLAB Drive/RESTfull.m",
           "uuid":"C8A155BD"
         }
       ]
