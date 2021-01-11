@@ -2,8 +2,9 @@
 
 #FILE_PATH="RESTfull.m"
 FILE_PATH="$1"
+CRES_ADDR="10.97.32.53:8003"
 
-curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?routingkey=10.97.32.53:8003' \
+curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?routingkey='"$CRES_ADDR" \
   -H 'Connection: keep-alive' \
   -H 'Pragma: no-cache' \
   -H 'Cache-Control: no-cache' \
@@ -31,7 +32,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       {
         "computeSessionId":"070f85c8-e31f-4d99-8cc0-2149c04aa1b8",
         "serviceUrl":"unset",
-        "computeResourceAddress":"10.97.32.53:8003"
+        "computeResourceAddress":"'$CRES_ADDR'"
       }
   }' \
   --compressed
