@@ -1,3 +1,5 @@
+#!/bin/bash
+
 curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?routingkey=10.97.32.165:8024' \
   -H 'Connection: keep-alive' \
   -H 'Pragma: no-cache' \
