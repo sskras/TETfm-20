@@ -1,5 +1,7 @@
 #!/bin/bash
 
+FILE_PATH="RESTfull.m"
+
 curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?routingkey=10.97.32.165:8024' \
   -H 'Connection: keep-alive' \
   -H 'Pragma: no-cache' \
@@ -19,7 +21,7 @@ curl 'https://wrprod01-prod-useast1.mathworks.com/messageservice/json/secure?rou
       "ListVersion":
       [
         {
-          "path":"/MATLAB Drive/Published/RESTfull.m",
+          "path":"/MATLAB Drive/Published/",
           "uuid":"C8A155BD"
         }
       ]
