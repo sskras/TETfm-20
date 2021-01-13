@@ -27,9 +27,9 @@ Išmokti savarankiškai suprogramuoti paprasto netiesinio aproksimatoriaus mokym
 - Pasirenku [šią funkciją](https://www.desmos.com/calculator/ydjfscafzm) aproksimavimui:
 `y = 5 sin(8x) + 4 cos(16x + π/3)`
 
-(pagal "Example 2" čia: https://www.intmath.com/trigonometric-graphs/6-composite-trigonometric-graphs.php)
-
 ![image](https://user-images.githubusercontent.com/74717106/104397405-6b8e4880-5555-11eb-9c86-ac6ed781197f.png)
+
+(pagal "Example 2" čia: https://www.intmath.com/trigonometric-graphs/6-composite-trigonometric-graphs.php)
 
 - Pasirenku `tanh` kaip aktyvavimo funkciją paslėptajam sluoksniui.
 - Pasirenku 4 neuronus.
