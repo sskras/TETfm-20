@@ -8,7 +8,8 @@ Nuorodos iš Moodle:
 
 ### Trigonometrinių funkcijų testeris:
 
-(Kalkuliatorius / braižiklis)
+Kalkuliatorius / braižiklis.  
 
-Funkcijos diagramos pavzdys iš https://www.desmos.com/calculator/ydjfscafzm:  
+Funkcijos ir jos grafiko pavzdys: https://www.desmos.com/calculator/ydjfscafzm
+
 ![image](https://user-images.githubusercontent.com/74717106/104397405-6b8e4880-5555-11eb-9c86-ac6ed781197f.png)
