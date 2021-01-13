@@ -25,7 +25,7 @@ Išmokti savarankiškai suprogramuoti paprasto netiesinio aproksimatoriaus mokym
 ## Sprendimas
 
 - Pasirenku [šią funkciją](https://www.desmos.com/calculator/ydjfscafzm) aproksimavimui:
-y = 5 sin(8x) + 4 cos(16x + π/3)
+`y = 5 sin(8x) + 4 cos(16x + π/3)`
 
 (pagal "Example 2" čia: https://www.intmath.com/trigonometric-graphs/6-composite-trigonometric-graphs.php)
 
