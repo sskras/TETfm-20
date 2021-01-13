@@ -20,10 +20,13 @@ Išmokti savarankiškai suprogramuoti paprasto netiesinio aproksimatoriaus mokym
 2. Išspręskite paviršiaus aproksimavimo uždavinį, kai tinklas turi du įėjimus ir vieną išėjimą.
 
 ### Rekomenduojama literatūra
-- Neural Networks and Learning Machines (3rd Edition), <...> psl., <...> lentelė
+- Neural Networks and Learning Machines (3rd Edition), <...> psl., `1.1` lentelė
 
 ## Sprendimas
 
-Pasirenku [šią funkciją](https://www.desmos.com/calculator/ydjfscafzm): y = 5 sin(x) + 4 cos(2x + 3π)
+- Pasirenku [šią funkciją](https://www.desmos.com/calculator/ydjfscafzm): y = 5 sin(x) + 4 cos(2x + 3π)
 
 ![image](https://user-images.githubusercontent.com/74717106/104397405-6b8e4880-5555-11eb-9c86-ac6ed781197f.png)
+
+- Pasirenku `tanh` kaip aktyvavimo funkciją paslėptajam sluoksniui.
+- Pasirenku 4 neuronus.
