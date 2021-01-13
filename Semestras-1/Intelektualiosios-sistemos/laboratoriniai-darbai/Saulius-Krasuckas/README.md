@@ -27,6 +27,8 @@ Išmokti savarankiškai suprogramuoti paprasto netiesinio aproksimatoriaus mokym
 - Pasirenku [šią funkciją](https://www.desmos.com/calculator/ydjfscafzm) aproksimavimui:
 y = 5 sin(x) + 4 cos(2x + 3π)
 
+(pagal "Example 2" čia: https://www.intmath.com/trigonometric-graphs/6-composite-trigonometric-graphs.php)
+
 ![image](https://user-images.githubusercontent.com/74717106/104397405-6b8e4880-5555-11eb-9c86-ac6ed781197f.png)
 
 - Pasirenku `tanh` kaip aktyvavimo funkciją paslėptajam sluoksniui.
