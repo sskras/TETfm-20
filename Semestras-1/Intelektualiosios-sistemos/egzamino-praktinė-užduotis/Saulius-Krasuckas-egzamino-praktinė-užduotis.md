@@ -6,6 +6,13 @@
 
 `Autorius: Saulius Krasuckas`
 
+Šią užduotį spręsdami turite:
+
+1. Sužymėti visus koeficientus pateiktoje struktūroje.  
+2. Parašyti tinklo atsako (išėjimo) skaičiavimo formules.  
+3. Parašyti tinklo koeficientų atnaujinimo formules.  
+4. Įgyvendinti tinklo atsako (išėjimo) skaičiavimo ir koeficientų atnaujinimo formules Matlab (ar kitos programavimo aplinkos) kodu.  
+
 ## 1. Diagrama ir koeficientų sužymėjimas
 
 ![image](https://user-images.githubusercontent.com/74717106/104259545-50a2d200-548a-11eb-9851-e76888a90504.png)
