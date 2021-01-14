@@ -1,10 +1,10 @@
 %Classification using perceptron
 
     % Deja, visų ankstesnių mano pakeitimų istorija (2020-10-21 ... 2020-12-07)
-	% šiam failui buvo MATLAB Online sistemos sunaikinti automatiškai (po 30 d.)
-	%
-	% For details see MathWorks Inc Case # 04683547: Failure to access previous versions of my code in MATLAB Online
-	% https://servicerequest.mathworks.com/mysr/cp_case_detail1?cc=se&id=5003q00001N1Uhc
+    % šiam failui buvo MATLAB Online sistemos sunaikinti automatiškai (po 30 d.)
+    %
+    % For details see MathWorks Inc Case # 04683547: Failure to access previous versions of my code in MATLAB Online
+    % https://servicerequest.mathworks.com/mysr/cp_case_detail1?cc=se&id=5003q00001N1Uhc
 
 %Reading apple images
 A1=imread('apple_04.jpg');
