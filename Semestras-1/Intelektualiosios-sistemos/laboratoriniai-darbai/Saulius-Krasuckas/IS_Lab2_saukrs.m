@@ -59,6 +59,10 @@ for i=1:length(x)
 
     % tikslinu koeficientus išėjimo sl.:
     w2_11_n0 = w2_11_n0 + n * e(i) * y(i);
+    w2_21_n0 = w2_21_n0 + n * e(i) * y(i);
+    w2_31_n0 = w2_31_n0 + n * e(i) * y(i);
+    w2_41_n0 = w2_41_n0 + n * e(i) * y(i);
+    b2_1_n0  = b2_1_n0  + n * e(i);
 end
 
 fprintf("y:"); disp(y);
