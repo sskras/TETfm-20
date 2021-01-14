@@ -1,0 +1,93 @@
+Žingsnis 1    : klaida = 4.000000
+Žingsnis 2    : klaida = 6.000000
+Žingsnis 3    : klaida = 4.000000
+Žingsnis 4    : klaida = 4.000000
+Žingsnis 5    : klaida = 6.000000
+Žingsnis 6    : klaida = 4.000000
+Žingsnis 7    : klaida = 6.000000
+Žingsnis 8    : klaida = 4.000000
+Žingsnis 9    : klaida = 4.000000
+Žingsnis 10   : klaida = 6.000000
+Žingsnis 11   : klaida = 4.000000
+Žingsnis 12   : klaida = 6.000000
+Žingsnis 13   : klaida = 4.000000
+Žingsnis 14   : klaida = 4.000000
+Žingsnis 15   : klaida = 6.000000
+Žingsnis 16   : klaida = 4.000000
+Žingsnis 17   : klaida = 4.000000
+Žingsnis 18   : klaida = 6.000000
+Žingsnis 19   : klaida = 4.000000
+Žingsnis 20   : klaida = 6.000000
+Žingsnis 21   : klaida = 4.000000
+Žingsnis 22   : klaida = 4.000000
+Žingsnis 23   : klaida = 6.000000
+Žingsnis 24   : klaida = 4.000000
+Žingsnis 25   : klaida = 6.000000
+Žingsnis 26   : klaida = 4.000000
+Žingsnis 27   : klaida = 4.000000
+Žingsnis 28   : klaida = 6.000000
+Žingsnis 29   : klaida = 4.000000
+Žingsnis 30   : klaida = 4.000000
+Žingsnis 31   : klaida = 6.000000
+Žingsnis 32   : klaida = 4.000000
+Žingsnis 33   : klaida = 6.000000
+Žingsnis 34   : klaida = 4.000000
+Žingsnis 35   : klaida = 4.000000
+Žingsnis 36   : klaida = 6.000000
+Žingsnis 37   : klaida = 4.000000
+Žingsnis 38   : klaida = 4.000000
+Žingsnis 39   : klaida = 4.000000
+Žingsnis 40   : klaida = 2.000000
+Žingsnis 41   : klaida = 4.000000
+Žingsnis 42   : klaida = 6.000000
+Žingsnis 43   : klaida = 4.000000
+Žingsnis 44   : klaida = 2.000000
+Žingsnis 45   : klaida = 6.000000
+Žingsnis 46   : klaida = 4.000000
+Žingsnis 47   : klaida = 4.000000
+Žingsnis 48   : klaida = 6.000000
+Žingsnis 49   : klaida = 4.000000
+Žingsnis 50   : klaida = 4.000000
+Žingsnis 51   : klaida = 4.000000
+Žingsnis 52   : klaida = 4.000000
+Žingsnis 53   : klaida = 4.000000
+Žingsnis 54   : klaida = 2.000000
+Žingsnis 55   : klaida = 4.000000
+Žingsnis 56   : klaida = 6.000000
+Žingsnis 57   : klaida = 4.000000
+Žingsnis 58   : klaida = 2.000000
+Žingsnis 59   : klaida = 6.000000
+Žingsnis 60   : klaida = 4.000000
+Žingsnis 61   : klaida = 2.000000
+Žingsnis 62   : klaida = 6.000000
+Žingsnis 63   : klaida = 4.000000
+Žingsnis 64   : klaida = 4.000000
+Žingsnis 65   : klaida = 6.000000
+Žingsnis 66   : klaida = 4.000000
+Žingsnis 67   : klaida = 4.000000
+Žingsnis 68   : klaida = 4.000000
+Žingsnis 69   : klaida = 2.000000
+Žingsnis 70   : klaida = 4.000000
+Žingsnis 71   : klaida = 6.000000
+Žingsnis 72   : klaida = 4.000000
+Po šio žingsnio klaida = 0.000000
+
+Žingsnių: 72, n=0.430000, w1=3.359875, w2=4.180082, b=-3.740690
+
+Testinė matrica:
+    0.0884    0.0982    0.3648    0.4611    0.5522    0.1697    0.4919
+    0.6207    0.7909    0.8518    0.8252    0.8345    0.8405    0.8089
+
+(HSV-color, roundness)
+
+Laukiamo rezultato vektorius:
+    -1    -1     1     1     1     1     1
+
+Gautojo rezultato vektorius:
+    -1    -1     1     1     1     1     1
+
+Gautojo rezultato klaidos:
+     0     0     0     0     0     0     0
+
+
+>> 
