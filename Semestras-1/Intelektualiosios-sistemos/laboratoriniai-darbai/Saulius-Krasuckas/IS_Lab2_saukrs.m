@@ -61,4 +61,7 @@ for i=1:length(x)
     w2_11_n0 = w2_11_n0 + n * e(i) * y(i);
 end
 
+fprintf("y:"); disp(y);
+fprintf("e:"); disp(e);
+
 fprintf("Pabaiga.\n");
