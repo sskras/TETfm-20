@@ -60,12 +60,14 @@ for i=1:length(x)
     % imame tikslo funkciją = e^2/2;
     % jos išvestinė (pagal e) = e;
 
+	delta2 = 1 * e(i);
+
     % tikslinu koeficientus išėjimo sl.:
-    w2_11_n0 = w2_11_n0 + n * e(i) * y1;
-    w2_21_n0 = w2_21_n0 + n * e(i) * y2;
-    w2_31_n0 = w2_31_n0 + n * e(i) * y3;
-    w2_41_n0 = w2_41_n0 + n * e(i) * y4;
-    b2_1_n0  = b2_1_n0  + n * e(i);
+    w2_11_n0 = w2_11_n0 + n * delta2 * y1;
+    w2_21_n0 = w2_21_n0 + n * delta2 * y2;
+    w2_31_n0 = w2_31_n0 + n * delta2 * y3;
+    w2_41_n0 = w2_41_n0 + n * delta2 * y4;
+    b2_1_n0  = b2_1_n0  + n * delta2;
 end
 
 fprintf("y:"); disp(y);
