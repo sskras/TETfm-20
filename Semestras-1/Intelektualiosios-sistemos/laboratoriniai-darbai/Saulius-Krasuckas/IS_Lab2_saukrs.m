@@ -58,10 +58,10 @@ for i=1:length(x)
     % jos išvestinė pagal e = e;
 
     % tikslinu koeficientus išėjimo sl.:
-    w2_11_n0 = w2_11_n0 + n * e(i) * y(i);
-    w2_21_n0 = w2_21_n0 + n * e(i) * y(i);
-    w2_31_n0 = w2_31_n0 + n * e(i) * y(i);
-    w2_41_n0 = w2_41_n0 + n * e(i) * y(i);
+    w2_11_n0 = w2_11_n0 + n * e(i) * y1;
+    w2_21_n0 = w2_21_n0 + n * e(i) * y2;
+    w2_31_n0 = w2_31_n0 + n * e(i) * y3;
+    w2_41_n0 = w2_41_n0 + n * e(i) * y4;
     b2_1_n0  = b2_1_n0  + n * e(i);
 end
 
