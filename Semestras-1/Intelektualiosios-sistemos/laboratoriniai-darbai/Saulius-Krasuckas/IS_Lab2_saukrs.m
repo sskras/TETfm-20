@@ -54,20 +54,26 @@ for i=1:length(x)
 
     % žingsnis:
     n = 0.3;
-    % imame aktyvavimo funkciją = v;
+    % sumatoriaus aktyvavimo funkcija = v;
     % jos išvestinė (pagal v) = 1;
 
     % imame tikslo funkciją = e^2/2;
     % jos išvestinė (pagal e) = e;
 
+    % išėjimo sl. gradientas:
 	delta2 = 1 * e(i);
 
-    % tikslinu koeficientus išėjimo sl.:
+    % išėjimo sl. koeficientai (tikslinimas):
     w2_11_n0 = w2_11_n0 + n * delta2 * y1;
     w2_21_n0 = w2_21_n0 + n * delta2 * y2;
     w2_31_n0 = w2_31_n0 + n * delta2 * y3;
     w2_41_n0 = w2_41_n0 + n * delta2 * y4;
     b2_1_n0  = b2_1_n0  + n * delta2;
+
+    % paslėptojo sl. gradientai:
+
+    % phi(v) išvestinė pagal v = y * (1 - y);
+    delta1_1 = y(i) * (1 - y(i)) * delta2 * w2_11_n0;
 end
 
 fprintf("y:"); disp(y);
