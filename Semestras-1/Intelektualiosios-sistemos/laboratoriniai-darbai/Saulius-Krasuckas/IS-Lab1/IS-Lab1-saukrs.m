@@ -84,7 +84,7 @@ b  = randn(1);
 %v1 = <...>; % write your code here
 v1 = x1(1) * w1 + x2(1) * w2 + b;
 
-% calculate current output of the perceptron 
+% calculate current output of the perceptron
 if v1 > 0
 	y1 = 1;
 else
@@ -99,7 +99,7 @@ e1 = T(1) - y1;
 % v2 = <...> ; % write your code here
 v2 = x1(2) * w1 + x2(2) * w2 + b;
 
-% calculate current output of the perceptron 
+% calculate current output of the perceptron
 if v2 > 0
 	y2 = 1;
 else
@@ -138,7 +138,7 @@ end
 %
 e5 = T(5) - y5;
 
-% calculate the total error for these 5 inputs 
+% calculate the total error for these 5 inputs
 e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
 
 % lempinis:
@@ -148,65 +148,65 @@ i = 0;
 
 % write training algorithm
 while e ~= 0 % executes while the total error is not 0
-    
+
     i = i + 1;
     % fprintf("Žingsnis %-5d: klaida = %f\n", i, e);
-    
+
     % here should be your code of parameter update:
     %   calculate output for current example
-    % 
+    %
     %   calculate error for current example
-    % 
+    %
     %   update parameters using current inputs ant current error
-    
-    % 	w1 = 
+
+    % 	w1 =
     w1 = w1 + n*e1*x1(1);
     w1 = w1 + n*e2*x1(2);
     w1 = w1 + n*e3*x1(3);
     w1 = w1 + n*e4*x1(4);
     w1 = w1 + n*e5*x1(5);
-    
-    %   w2 = 
+
+    %   w2 =
     w2 = w2 + n*e1*x2(1);
     w2 = w2 + n*e2*x2(2);
     w2 = w2 + n*e3*x2(3);
     w2 = w2 + n*e4*x2(4);
     w2 = w2 + n*e5*x2(5);
-    
-    %   b = 
+
+    %   b =
     b = b + n*e1;
     b = b + n*e2;
     b = b + n*e3;
     b = b + n*e4;
     b = b + n*e5;
-    
+
     %   Test how good are updated parameters (weights) on all examples used for training:
     %   calculate outputs and errors for all 5 examples using current values of the parameter set {w1, w2, b}
     %   calculate 'v1', 'v2', 'v3',... 'v5'
-    % 
+    %
     v1 = x1(1) * w1 + x2(1) * w2 + b;
     v2 = x1(2) * w1 + x2(2) * w2 + b;
     v3 = x1(3) * w1 + x2(3) * w2 + b;
     v4 = x1(4) * w1 + x2(4) * w2 + b;
     v5 = x1(5) * w1 + x2(5) * w2 + b;
-    
+
     %   calculate 'y1', ..., 'y5'
-    % 
+    %
     y1 = sign(v1);
     y2 = sign(v2);
     y3 = sign(v3);
     y4 = sign(v4);
     y5 = sign(v5);
-    
+
     %   calculate 'e1', ... 'e5'
-    % 
+    %
     e1 = T(1) - y1;
     e2 = T(2) - y2;
     e3 = T(3) - y3;
     e4 = T(4) - y4;
     e5 = T(5) - y5;
-    
-    % calculate the total error for these 5 inputs 
+
+    % calculate the total error for these 5 inputs
     e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
 end
 
@@ -229,7 +229,7 @@ T_test=[-1;-1;1;1;1;1;1];
     v5_test = x1_test(5) * w1 + x2_test(5) * w2 + b;
     v6_test = x1_test(6) * w1 + x2_test(6) * w2 + b;
     v7_test = x1_test(7) * w1 + x2_test(7) * w2 + b;
-    
+
     y1_test = sign(v1_test);
     y2_test = sign(v2_test);
     y3_test = sign(v3_test);
@@ -237,7 +237,7 @@ T_test=[-1;-1;1;1;1;1;1];
     y5_test = sign(v5_test);
     y6_test = sign(v6_test);
     y7_test = sign(v7_test);
-    
+
     e1_test = T_test(1) - y1_test;
     e2_test = T_test(2) - y2_test;
     e3_test = T_test(3) - y3_test;
@@ -251,7 +251,7 @@ fprintf("\n");
 %% pagalbinė funkcija
 
 function res = tern(cond, a, b)
-   if cond 
+   if cond
        res = a;
    else
        res = b;
