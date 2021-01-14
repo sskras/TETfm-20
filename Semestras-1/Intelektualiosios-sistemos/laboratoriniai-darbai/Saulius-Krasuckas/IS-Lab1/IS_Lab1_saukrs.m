@@ -221,13 +221,14 @@ fprintf("Žingsnių: %d, n=%f, w1=%f, w2=%f, b=%f\n", i, n, w1, w2, b);
 
 % test set: A1,A2,A3,P1,P2
 % building test matrix 2x7
-x1_test=[hsv_value_P3 hsv_value_P4 hsv_value_A5 hsv_value_A6 hsv_value_A7 hsv_value_A8 hsv_value_A9];
-x2_test=[   metric_P3    metric_P4    metric_A5    metric_A6    metric_A7    metric_A8    metric_A9];
-% estimated test features are stored in test matrix P:
-P_test=[x1_test; x2_test];
+x1_test = [hsv_value_P3 hsv_value_P4 hsv_value_A5 hsv_value_A6 hsv_value_A7 hsv_value_A8 hsv_value_A9];
+x2_test = [   metric_P3    metric_P4    metric_A5    metric_A6    metric_A7    metric_A8    metric_A9];
 
-%Expected output vector
-T_test=[-1;-1;1;1;1;1;1];
+% estimated test features are stored in test matrix P:
+P_test = [x1_test; x2_test];
+
+% Expected output vector
+T_test = [-1;-1; 1; 1; 1; 1; 1];
 
     v1_test = x1_test(1) * w1 + x2_test(1) * w2 + b;
     v2_test = x1_test(2) * w1 + x2_test(2) * w2 + b;
