@@ -265,6 +265,19 @@ e_test = [ 0; 0; 0; 0; 0; 0; 0];
     e_test(6) = T_test(6) - y_test(6);
     e_test(7) = T_test(7) - y_test(7);
 
+fprintf("Testinė matrica:\n");
+disp(P_test);
+fprintf("(HSV-color, roundness)\n\n");
+
+fprintf("Laukiamo rezultato vektorius:\n");
+disp(T_test);
+
+fprintf("Gautojo rezultato vektorius:\n");
+disp(y_test);
+
+fprintf("Gautojo rezultato klaidos:\n");
+disp(e_test);
+
 fprintf("\n");
 
 %% pagalbinė funkcija
