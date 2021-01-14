@@ -16,9 +16,10 @@ plot(x, d, 'kx'); grid;
 w1_11_n0 = rand(1);  b1_1_n0  = rand(1);
 
 % Skaičiuoju tinklo atsaką,
-
 % pirmo neurono įėjimas:
-
 v1(1) = x(1) * w1_11_n0 + b1_1_n0;
+
+% antrojo neurono įėjimas:
+v2(1) = x(1) * w1_21_n0 + b1_2_n0;
 
 fprintf("Pabaiga.\n");
