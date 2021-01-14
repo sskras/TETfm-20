@@ -25,8 +25,9 @@ w2_41_n0 = rand(1);
 b2_1_n0  = rand(1);
 
 % Skaičiuoju tinklo atsaką,
+y = zeros(1, length(x));
 
-%for i=1:length(x)
+for i=1:length(x)
     % visų paslėptųjų neuronų įėjimai:
     v1 = x(i) * w1_11_n0 + b1_1_n0;
     v2 = x(i) * w1_21_n0 + b1_2_n0;
@@ -45,6 +46,6 @@ b2_1_n0  = rand(1);
            y2 * w2_21_n0 + ...
            y3 * w2_31_n0 + ...
            y4 * w2_41_n0;
-%end
+end
 
 fprintf("Pabaiga.\n");
