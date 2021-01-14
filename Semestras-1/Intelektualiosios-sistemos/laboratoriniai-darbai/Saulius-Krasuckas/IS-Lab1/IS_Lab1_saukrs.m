@@ -227,24 +227,27 @@ x2_test = [   metric_P3    metric_P4    metric_A5    metric_A6    metric_A7    m
 % estimated test features are stored in test matrix P:
 P_test = [x1_test; x2_test];
 
+% neuron values for the test input:
+v_test = [ 0; 0; 0; 0; 0; 0; 0];
+
 % Expected output vector
 T_test = [-1;-1; 1; 1; 1; 1; 1];
 
-    v1_test = x1_test(1) * w1 + x2_test(1) * w2 + b;
-    v2_test = x1_test(2) * w1 + x2_test(2) * w2 + b;
-    v3_test = x1_test(3) * w1 + x2_test(3) * w2 + b;
-    v4_test = x1_test(4) * w1 + x2_test(4) * w2 + b;
-    v5_test = x1_test(5) * w1 + x2_test(5) * w2 + b;
-    v6_test = x1_test(6) * w1 + x2_test(6) * w2 + b;
-    v7_test = x1_test(7) * w1 + x2_test(7) * w2 + b;
+    v_test(1) = x1_test(1) * w1 + x2_test(1) * w2 + b;
+    v_test(2) = x1_test(2) * w1 + x2_test(2) * w2 + b;
+    v_test(3) = x1_test(3) * w1 + x2_test(3) * w2 + b;
+    v_test(4) = x1_test(4) * w1 + x2_test(4) * w2 + b;
+    v_test(5) = x1_test(5) * w1 + x2_test(5) * w2 + b;
+    v_test(6) = x1_test(6) * w1 + x2_test(6) * w2 + b;
+    v_test(7) = x1_test(7) * w1 + x2_test(7) * w2 + b;
 
-    y1_test = sign(v1_test);
-    y2_test = sign(v2_test);
-    y3_test = sign(v3_test);
-    y4_test = sign(v4_test);
-    y5_test = sign(v5_test);
-    y6_test = sign(v6_test);
-    y7_test = sign(v7_test);
+    y1_test = sign(v_test(1));
+    y2_test = sign(v_test(2));
+    y3_test = sign(v_test(3));
+    y4_test = sign(v_test(4));
+    y5_test = sign(v_test(5));
+    y6_test = sign(v_test(6));
+    y7_test = sign(v_test(7));
 
     e1_test = T_test(1) - y1_test;
     e2_test = T_test(2) - y2_test;
