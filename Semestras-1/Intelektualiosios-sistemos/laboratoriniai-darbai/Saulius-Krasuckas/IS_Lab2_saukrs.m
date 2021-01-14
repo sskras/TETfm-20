@@ -31,11 +31,13 @@ v2 = x(1) * w1_21_n0 + b1_2_n0;
 v3 = x(1) * w1_31_n0 + b1_3_n0;
 v4 = x(1) * w1_41_n0 + b1_4_n0;
 
+% ... jų išėjimai:
 y1 = tanh(v1);
 y2 = tanh(v2);
 y3 = tanh(v3);
 y4 = tanh(v4);
 
+% iš. sl. neurono išėjimas:
 y = y1 * w2_11_n0 + ...
     y2 * w2_21_n0 + ...
     y3 * w2_31_n0 + ...
