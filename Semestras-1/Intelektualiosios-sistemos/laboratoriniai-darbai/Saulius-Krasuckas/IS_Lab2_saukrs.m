@@ -52,6 +52,13 @@ for i=1:length(x)
     % iteracijos klaida:
     e(i) = d(i) - y(i);
 
+    % žingsnis:
+    n = 0.3;
+    % imame tikslo funkciją = e^2/2;
+    % jos išvestinė pagal e = e;
+
+    % tikslinu koeficientus išėjimo sl.:
+    w2_11_n0 = w2_11_n0 + n * e(i) * y(i);
 end
 
 fprintf("Pabaiga.\n");
