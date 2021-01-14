@@ -233,8 +233,11 @@ v_test = [ 0; 0; 0; 0; 0; 0; 0];
 % activation-fn values for the test input:
 y_test = [ 0; 0; 0; 0; 0; 0; 0];
 
-% Expected output vector
+% expected output vector:
 T_test = [-1;-1; 1; 1; 1; 1; 1];
+
+% produced errors vector for test input:
+e_test = [ 0; 0; 0; 0; 0; 0; 0];
 
     v_test(1) = x1_test(1) * w1 + x2_test(1) * w2 + b;
     v_test(2) = x1_test(2) * w1 + x2_test(2) * w2 + b;
@@ -252,13 +255,13 @@ T_test = [-1;-1; 1; 1; 1; 1; 1];
     y_test(6) = sign(v_test(6));
     y_test(7) = sign(v_test(7));
 
-    e1_test = T_test(1) - y_test(1);
-    e2_test = T_test(2) - y_test(2);
-    e3_test = T_test(3) - y_test(3);
-    e4_test = T_test(4) - y_test(4);
-    e5_test = T_test(5) - y_test(5);
-    e6_test = T_test(6) - y_test(6);
-    e7_test = T_test(7) - y_test(7);
+    e_test(1) = T_test(1) - y_test(1);
+    e_test(2) = T_test(2) - y_test(2);
+    e_test(3) = T_test(3) - y_test(3);
+    e_test(4) = T_test(4) - y_test(4);
+    e_test(5) = T_test(5) - y_test(5);
+    e_test(6) = T_test(6) - y_test(6);
+    e_test(7) = T_test(7) - y_test(7);
 
 fprintf("\n");
 
