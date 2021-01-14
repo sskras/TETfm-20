@@ -30,7 +30,7 @@ y = zeros(1, length(x));
 e = zeros(1, length(x));
 
 for i=1:length(x)
-    % visų paslėptųjų neuronų įėjimai:
+    % paslėptojo sl. neuronų įėjimai:
     v1 = x(i) * w1_11_n0 + b1_1_n0;
     v2 = x(i) * w1_21_n0 + b1_2_n0;
     v3 = x(i) * w1_31_n0 + b1_3_n0;
@@ -54,8 +54,11 @@ for i=1:length(x)
 
     % žingsnis:
     n = 0.3;
+    % imame aktyvavimo funkciją = v;
+    % jos išvestinė (pagal v) = 1;
+
     % imame tikslo funkciją = e^2/2;
-    % jos išvestinė pagal e = e;
+    % jos išvestinė (pagal e) = e;
 
     % tikslinu koeficientus išėjimo sl.:
     w2_11_n0 = w2_11_n0 + n * e(i) * y1;
