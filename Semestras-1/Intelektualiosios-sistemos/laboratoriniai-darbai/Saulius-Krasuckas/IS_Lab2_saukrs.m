@@ -26,6 +26,8 @@ b2_1_n0  = rand(1);
 
 % Skaičiuoju tinklo atsaką,
 y = zeros(1, length(x));
+% ... ir kiekvienos iteracijos klaidas,
+e = zeros(1, length(x));
 
 for i=1:length(x)
     % visų paslėptųjų neuronų įėjimai:
@@ -46,6 +48,10 @@ for i=1:length(x)
            y2 * w2_21_n0 + ...
            y3 * w2_31_n0 + ...
            y4 * w2_41_n0;
+
+    % iteracijos klaida:
+    e(i) = d(i) - y(i);
+
 end
 
 fprintf("Pabaiga.\n");
