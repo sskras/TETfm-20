@@ -278,14 +278,4 @@ disp(y_test');
 fprintf("Gautojo rezultato klaidos:\n");
 disp(e_test');
 
-fprintf("\n");
-
-%% pagalbinė funkcija
-
-function res = tern(cond, a, b)
-   if cond
-       res = a;
-   else
-       res = b;
-   end
-end
+fprintf("Laboratorinis darbas nr. 1 baigtas.\n");
