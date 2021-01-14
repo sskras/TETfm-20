@@ -156,7 +156,7 @@ i = 0;
 while e ~= 0 % executes while the total error is not 0
 
     i = i + 1;
-    % fprintf("Žingsnis %-5d: klaida = %f\n", i, e);
+    fprintf("Žingsnis %-5d: klaida = %f\n", i, e);
 
     % here should be your code of parameter update:
     %   calculate output for current example
@@ -216,6 +216,7 @@ while e ~= 0 % executes while the total error is not 0
     e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
 end
 
+fprintf("Žingsnis %-5d: klaida = %f\n", i, e);
 fprintf("Žingsnių: %d, n=%f, w1=%f, w2=%f, b=%f\n", i, n, w1, w2, b);
 
 % test set: A1,A2,A3,P1,P2
