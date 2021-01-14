@@ -12,8 +12,10 @@ plot(x, d, 'kx'); grid;
 
 % Pasirenku naudoti 4 neuronų paslėptąjį sl.
 
-% Pradinės koeficientų reikšmės atsitiktinės:
+% Pradines koeficientų reikšmes imu atsitiktines:
 w1_11_n0 = rand(1);  b1_1_n0  = rand(1);
+w1_21_n0 = rand(1);  b1_2_n0  = rand(1);
+w1_31_n0 = rand(1);  b1_3_n0  = rand(1);
 
 % Skaičiuoju tinklo atsaką,
 % pirmo neurono įėjimas:
@@ -21,5 +23,8 @@ v1(1) = x(1) * w1_11_n0 + b1_1_n0;
 
 % antrojo neurono įėjimas:
 v2(1) = x(1) * w1_21_n0 + b1_2_n0;
+
+% trečiojo neurono įėjimas:
+v3(1) = x(1) * w1_31_n0 + b1_3_n0;
 
 fprintf("Pabaiga.\n");
