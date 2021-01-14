@@ -10,4 +10,15 @@ fprintf("d:"); disp(d);
 
 plot(x, d, 'kx'); grid;
 
+% Pasirenku naudoti 4 neuronų paslėptąjį sl.
+
+% Pradinės koeficientų reikšmės atsitiktinės:
+w1_11_n0 = rand(1);  b1_1_n0  = rand(1);
+
+% Skaičiuoju tinklo atsaką,
+
+% pirmo neurono įėjimas:
+
+v1(1) = x(1) * w1_11_n0 + b1_1_n0;
+
 fprintf("Pabaiga.\n");
