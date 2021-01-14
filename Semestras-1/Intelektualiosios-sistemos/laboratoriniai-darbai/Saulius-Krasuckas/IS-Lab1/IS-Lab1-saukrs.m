@@ -31,7 +31,8 @@ metric_A3=apvalumas_roundness(A3); %roundness
 %4th apple image(A4)
 hsv_value_A4=spalva_color(A4); %color
 metric_A4=apvalumas_roundness(A4); %roundness
-%5th apple image(A5)hsv_value_A5=spalva_color(A5); %color
+%5th apple image(A5)
+hsv_value_A5=spalva_color(A5); %color
 metric_A5=apvalumas_roundness(A5); %roundness
 %6th apple image(A6)
 hsv_value_A6=spalva_color(A6); %color
@@ -64,9 +65,9 @@ metric_P4=apvalumas_roundness(P4); %roundness
 %A1,A2,A3,P1,P2
 %building matrix 2x5
 x1=[hsv_value_A1 hsv_value_A2 hsv_value_A3 hsv_value_P1 hsv_value_P2];
-x2=[metric_A1 metric_A2 metric_A3 metric_P1 metric_P2];
+x2=[   metric_A1    metric_A2    metric_A3    metric_P1    metric_P2];
 % estimated features are stored in matrix P:
-P=[x1;x2];
+P=[x1; x2];
 
 %Desired output vector
 T=[1;1;1;-1;-1]; % <- ČIA ANKSČIAU BUVO KLAIDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -76,56 +77,183 @@ T=[1;1;1;-1;-1]; % <- ČIA ANKSČIAU BUVO KLAIDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % generate random initial values of w1, w2 and b
 w1 = randn(1);
 w2 = randn(1);
-b = randn(1);
+b  = randn(1);
 
 % calculate weighted sum with randomly generated parameters
+
 %v1 = <...>; % write your code here
+v1 = x1(1) * w1 + x2(1) * w2 + b;
+
 % calculate current output of the perceptron 
-if v > 0
-	y = 1;
+if v1 > 0
+	y1 = 1;
 else
-	y = -1;
+	y1 = -1;
 end
 % calculate the error
-e1 = T(1) - y;
+e1 = T(1) - y1;
 
 % repeat the same for the rest 4 inputs x1 and x2
 % calculate wieghted sum with randomly generated parameters
+
 % v2 = <...> ; % write your code here
+v2 = x1(2) * w1 + x2(2) * w2 + b;
+
 % calculate current output of the perceptron 
-if v > 0
-	y = 1;
+if v2 > 0
+	y2 = 1;
 else
-	y = -1;
+	y2 = -1;
 end
 % calculate the error
-e2 = T(2) - y;
+e2 = T(2) - y2;
 
-% <...> write the code for another 3 inputs
+v3 = x1(3) * w1 + x2(3) * w2 + b;
+%
+if v3 > 0
+	y3 = 1;
+else
+	y3 = -1;
+end
+%
+e3 = T(3) - y3;
+
+v4 = x1(4) * w1 + x2(4) * w2 + b;
+%
+if v4 > 0
+	y4 = 1;
+else
+	y4 = -1;
+end
+%
+e4 = T(4) - y4;
+
+v5 = x1(5) * w1 + x2(5) * w2 + b;
+%
+if v5 > 0
+	y5 = 1;
+else
+	y5 = -1;
+end
+%
+e5 = T(5) - y5;
 
 % calculate the total error for these 5 inputs 
 e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
 
+% lempinis:
+n = 0.43;
+% kiek žingsnių:
+i = 0;
+
 % write training algorithm
 while e ~= 0 % executes while the total error is not 0
-	% here should be your code of parameter update
-%   calculate output for current example
-% 
-%   calculate error for current example
-% 
-%   update parameters using current inputs ant current error
-% 	w1 = 
-%   w2 = 
-%   b = 
-% 
-%   Test how good are updated parameters (weights) on all examples used for training
-%   calculate outputs and errors for all 5 examples using current values of the parameter set {w1, w2, b}
-%   calculate 'v1', 'v2', 'v3',... 'v5'
-% 
-%   calculate 'y1', ..., 'y5'
-%     
-%   calculate 'e1', ... 'e5'
     
-	% calculate the total error for these 5 inputs 
-	e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
+    i = i + 1;
+    % fprintf("Žingsnis %-5d: klaida = %f\n", i, e);
+    
+    % here should be your code of parameter update:
+    %   calculate output for current example
+    % 
+    %   calculate error for current example
+    % 
+    %   update parameters using current inputs ant current error
+    
+    % 	w1 = 
+    w1 = w1 + n*e1*x1(1);
+    w1 = w1 + n*e2*x1(2);
+    w1 = w1 + n*e3*x1(3);
+    w1 = w1 + n*e4*x1(4);
+    w1 = w1 + n*e5*x1(5);
+    
+    %   w2 = 
+    w2 = w2 + n*e1*x2(1);
+    w2 = w2 + n*e2*x2(2);
+    w2 = w2 + n*e3*x2(3);
+    w2 = w2 + n*e4*x2(4);
+    w2 = w2 + n*e5*x2(5);
+    
+    %   b = 
+    b = b + n*e1;
+    b = b + n*e2;
+    b = b + n*e3;
+    b = b + n*e4;
+    b = b + n*e5;
+    
+    %   Test how good are updated parameters (weights) on all examples used for training:
+    %   calculate outputs and errors for all 5 examples using current values of the parameter set {w1, w2, b}
+    %   calculate 'v1', 'v2', 'v3',... 'v5'
+    % 
+    v1 = x1(1) * w1 + x2(1) * w2 + b;
+    v2 = x1(2) * w1 + x2(2) * w2 + b;
+    v3 = x1(3) * w1 + x2(3) * w2 + b;
+    v4 = x1(4) * w1 + x2(4) * w2 + b;
+    v5 = x1(5) * w1 + x2(5) * w2 + b;
+    
+    %   calculate 'y1', ..., 'y5'
+    % 
+    y1 = sign(v1);
+    y2 = sign(v2);
+    y3 = sign(v3);
+    y4 = sign(v4);
+    y5 = sign(v5);
+    
+    %   calculate 'e1', ... 'e5'
+    % 
+    e1 = T(1) - y1;
+    e2 = T(2) - y2;
+    e3 = T(3) - y3;
+    e4 = T(4) - y4;
+    e5 = T(5) - y5;
+    
+    % calculate the total error for these 5 inputs 
+    e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
+end
+
+fprintf("Žingsnių: %d, n=%f, w1=%f, w2=%f, b=%f\n", i, n, w1, w2, b);
+
+% test set: A1,A2,A3,P1,P2
+% building test matrix 2x7
+x1_test=[hsv_value_P3 hsv_value_P4 hsv_value_A5 hsv_value_A6 hsv_value_A7 hsv_value_A8 hsv_value_A9];
+x2_test=[   metric_P3    metric_P4    metric_A5    metric_A6    metric_A7    metric_A8    metric_A9];
+% estimated test features are stored in test matrix P:
+P_test=[x1_test; x2_test];
+
+%Expected output vector
+T_test=[-1;-1;1;1;1;1;1];
+
+    v1_test = x1_test(1) * w1 + x2_test(1) * w2 + b;
+    v2_test = x1_test(2) * w1 + x2_test(2) * w2 + b;
+    v3_test = x1_test(3) * w1 + x2_test(3) * w2 + b;
+    v4_test = x1_test(4) * w1 + x2_test(4) * w2 + b;
+    v5_test = x1_test(5) * w1 + x2_test(5) * w2 + b;
+    v6_test = x1_test(6) * w1 + x2_test(6) * w2 + b;
+    v7_test = x1_test(7) * w1 + x2_test(7) * w2 + b;
+    
+    y1_test = sign(v1_test);
+    y2_test = sign(v2_test);
+    y3_test = sign(v3_test);
+    y4_test = sign(v4_test);
+    y5_test = sign(v5_test);
+    y6_test = sign(v6_test);
+    y7_test = sign(v7_test);
+    
+    e1_test = T_test(1) - y1_test;
+    e2_test = T_test(2) - y2_test;
+    e3_test = T_test(3) - y3_test;
+    e4_test = T_test(4) - y4_test;
+    e5_test = T_test(5) - y5_test;
+    e6_test = T_test(6) - y6_test;
+    e7_test = T_test(7) - y7_test;
+
+fprintf("\n");
+
+%% pagalbinė funkcija
+
+function res = tern(cond, a, b)
+   if cond 
+       res = a;
+   else
+       res = b;
+   end
 end
