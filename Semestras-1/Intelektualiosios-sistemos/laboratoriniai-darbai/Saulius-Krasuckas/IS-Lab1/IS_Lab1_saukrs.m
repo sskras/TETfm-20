@@ -270,13 +270,13 @@ disp(P_test);
 fprintf("(HSV-color, roundness)\n\n");
 
 fprintf("Laukiamo rezultato vektorius:\n");
-disp(T_test);
+disp(T_test');
 
 fprintf("Gautojo rezultato vektorius:\n");
-disp(y_test);
+disp(y_test');
 
 fprintf("Gautojo rezultato klaidos:\n");
-disp(e_test);
+disp(e_test');
 
 fprintf("\n");
 
