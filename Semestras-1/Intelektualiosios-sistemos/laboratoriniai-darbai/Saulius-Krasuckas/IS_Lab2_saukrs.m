@@ -20,10 +20,12 @@ w1_41_n0 = rand(1);  b1_4_n0  = rand(1);
 
 % Skaičiuoju tinklo atsaką,
 % visų paslėptųjų neuronų įėjimai:
-v1(1) = x(1) * w1_11_n0 + b1_1_n0;
+v1 = x(1) * w1_11_n0 + b1_1_n0;
 v2(1) = x(1) * w1_21_n0 + b1_2_n0;
 v3(1) = x(1) * w1_31_n0 + b1_3_n0;
 v4(1) = x(1) * w1_41_n0 + b1_4_n0;
+
+y1 = tanh(v1);
 
 %for i=1:length(x)
 %    y1 = tanh(v1(i));
