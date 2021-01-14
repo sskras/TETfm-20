@@ -230,6 +230,9 @@ P_test = [x1_test; x2_test];
 % neuron values for the test input:
 v_test = [ 0; 0; 0; 0; 0; 0; 0];
 
+% activation-fn values for the test input:
+y_test = [ 0; 0; 0; 0; 0; 0; 0];
+
 % Expected output vector
 T_test = [-1;-1; 1; 1; 1; 1; 1];
 
@@ -241,21 +244,21 @@ T_test = [-1;-1; 1; 1; 1; 1; 1];
     v_test(6) = x1_test(6) * w1 + x2_test(6) * w2 + b;
     v_test(7) = x1_test(7) * w1 + x2_test(7) * w2 + b;
 
-    y1_test = sign(v_test(1));
-    y2_test = sign(v_test(2));
-    y3_test = sign(v_test(3));
-    y4_test = sign(v_test(4));
-    y5_test = sign(v_test(5));
-    y6_test = sign(v_test(6));
-    y7_test = sign(v_test(7));
+    y_test(1) = sign(v_test(1));
+    y_test(2) = sign(v_test(2));
+    y_test(3) = sign(v_test(3));
+    y_test(4) = sign(v_test(4));
+    y_test(5) = sign(v_test(5));
+    y_test(6) = sign(v_test(6));
+    y_test(7) = sign(v_test(7));
 
-    e1_test = T_test(1) - y1_test;
-    e2_test = T_test(2) - y2_test;
-    e3_test = T_test(3) - y3_test;
-    e4_test = T_test(4) - y4_test;
-    e5_test = T_test(5) - y5_test;
-    e6_test = T_test(6) - y6_test;
-    e7_test = T_test(7) - y7_test;
+    e1_test = T_test(1) - y_test(1);
+    e2_test = T_test(2) - y_test(2);
+    e3_test = T_test(3) - y_test(3);
+    e4_test = T_test(4) - y_test(4);
+    e5_test = T_test(5) - y_test(5);
+    e6_test = T_test(6) - y_test(6);
+    e7_test = T_test(7) - y_test(7);
 
 fprintf("\n");
 
