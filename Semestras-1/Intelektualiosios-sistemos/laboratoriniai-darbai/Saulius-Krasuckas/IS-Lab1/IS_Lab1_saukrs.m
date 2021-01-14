@@ -6,6 +6,8 @@
     % For details see MathWorks Inc Case # 04683547: Failure to access previous versions of my code in MATLAB Online
     % https://servicerequest.mathworks.com/mysr/cp_case_detail1?cc=se&id=5003q00001N1Uhc
 
+clc;
+
 %Reading apple images
 A1=imread('apple_04.jpg');
 A2=imread('apple_05.jpg');
@@ -216,8 +218,8 @@ while e ~= 0 % executes while the total error is not 0
     e = abs(e1) + abs(e2) + abs(e3) + abs(e4) + abs(e5);
 end
 
-fprintf("Žingsnis %-5d: klaida = %f\n", i, e);
-fprintf("Žingsnių: %d, n=%f, w1=%f, w2=%f, b=%f\n", i, n, w1, w2, b);
+fprintf("Po šio žingsnio klaida = %f\n\n", e);
+fprintf("Žingsnių: %d, n=%f, w1=%f, w2=%f, b=%f\n\n", i, n, w1, w2, b);
 
 % test set: A1,A2,A3,P1,P2
 % building test matrix 2x7
