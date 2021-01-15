@@ -2,10 +2,10 @@ clc;
 
     % žingsnis:
     n = 0.1;
-    LEARN_COUNT = 1000;
+    LEARN_COUNT = 1000000;
 
 % Aproksimavimo intervalas:
-x = 0.1:1/22:1;
+x = 0.1:1/44:1;
 fprintf("x:"); disp(x);
 
 % Aproksimuojamoji funkcija (tikrosios vertės):
@@ -158,7 +158,7 @@ end
 
 plot(x, d, 'kx', x, y, 'o'); grid;
 
-i = 10;
+i = 17;
 fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), y(i), e(i));
 
 % Ištaisius grubią klaidą reikalai pagerėjo:
@@ -174,5 +174,8 @@ fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), 
 %
 % Ir vis tiek ne stebuklas:
 % x = 0.509091, d = -7.904207, aproksimuotas y = 2.115965, paklaida e = -10.020171.
+
+% Davus 1 mln. apmokymų tinklas kreivę iki idealumo suaproksimuoja daug dažniau:
+% x = 0.463636, d = -4.983671, aproksimuotas y = -4.976609, paklaida e = -0.007061.
 
 fprintf("Pabaiga.\n");
