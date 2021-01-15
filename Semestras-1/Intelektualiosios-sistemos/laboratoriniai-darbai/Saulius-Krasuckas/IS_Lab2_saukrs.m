@@ -65,11 +65,11 @@ for i=1:length(x)
     delta2 = 1 * e(i);
 
     % išėjimo sl. koeficientai (tikslinimas):
-    w2_11_n0 = w2_11_n0 + n * delta2 * y1;
-    w2_12_n0 = w2_12_n0 + n * delta2 * y2;
-    w2_13_n0 = w2_13_n0 + n * delta2 * y3;
-    w2_14_n0 = w2_14_n0 + n * delta2 * y4;
-    b2_1_n0  = b2_1_n0  + n * delta2;
+    w2_11_n1 = w2_11_n0 + n * delta2 * y1;
+    w2_12_n1 = w2_12_n0 + n * delta2 * y2;
+    w2_13_n1 = w2_13_n0 + n * delta2 * y3;
+    w2_14_n1 = w2_14_n0 + n * delta2 * y4;
+    b2_1_n1  = b2_1_n0  + n * delta2;
 
     % paslėptojo sl. gradientai:
         % phi(v) išvestinė (pagal v) = y * (1 - y);
@@ -90,6 +90,12 @@ for i=1:length(x)
     b1_4_n0  = b1_4_n0  + n * delta1_4;
 
     % atnaujintus koeficientus įrašome į senųjų vietą (jau nebeverta saugoti):
+    w2_11_n0 = w2_11_n1;
+    w2_12_n0 = w2_12_n1;
+    w2_13_n0 = w2_13_n1;
+    w2_14_n0 = w2_14_n1;
+    b2_1_n0  = b2_1_n1;
+
     %% galimai šito nereikės, kadangi gradientų skaičiavimui reikalingos
     %% senosios w-vertės panaudotos prieš jų atnaujinimą
     %% (sugrupavus delta1_* skaičiavimus kartu, aukščiau).
