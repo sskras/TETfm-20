@@ -128,8 +128,9 @@ fprintf("e:"); disp(e);
 % patikrinkime perceptrono veiksnumą:
 
 x(i) = 0.7612; % tada y turėtų būti:
-d(i) = 2.198;
+d(i) = 5*sin(8*x(i)) + 4*cos(16*x(i) + pi/3); % 2.198;
 
+    % paslėptojo sl. neuronų įėjimai:
     v1 = x(i) * w1_11_n0 + b1_1_n0;
     v2 = x(i) * w1_21_n0 + b1_2_n0;
     v3 = x(i) * w1_31_n0 + b1_3_n0;
@@ -165,5 +166,8 @@ fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), 
 %
 % O su n=0.3 ir 20 taškų išvis baisu:
 % x = 0.761200, d = 2.198000, aproksimuotas y = 64.335443, paklaida e = -62.137443.
+%
+% Pakeitus tanh(v) į 1/(1+exp(-v)) mažai pagerėjimo:
+% x = 0.761200, d = 2.198011, aproksimuotas y = 46.124632, paklaida e = -43.926622.
 
 fprintf("Pabaiga.\n");
