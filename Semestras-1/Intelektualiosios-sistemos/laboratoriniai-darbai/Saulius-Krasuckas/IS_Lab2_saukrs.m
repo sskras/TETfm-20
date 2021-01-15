@@ -130,6 +130,7 @@ fprintf("e:"); disp(e);
 x(i) = 0.7612; % tada y turėtų būti:
 d(i) = 5*sin(8*x(i)) + 4*cos(16*x(i) + pi/3); % 2.198;
 
+for i=1:length(x)
     % paslėptojo sl. neuronų įėjimai:
     v1 = x(i) * w1_11_n0 + b1_1_n0;
     v2 = x(i) * w1_21_n0 + b1_2_n0;
@@ -157,6 +158,9 @@ d(i) = 5*sin(8*x(i)) + 4*cos(16*x(i) + pi/3); % 2.198;
 
     % iteracijos klaida:
     e(i) = d(i) - y(i);
+end
+
+plot(x, d, 'kx', x, y, 'o'); grid;
 
 fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), y(i), e(i));
 % kai x=0.7612, gauname y=1.212585 (vietoj 2.198)
