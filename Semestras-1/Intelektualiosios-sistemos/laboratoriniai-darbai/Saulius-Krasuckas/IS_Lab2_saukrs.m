@@ -84,7 +84,7 @@ for i=1:length(x)
     b2_1_n1  = b2_1_n0  + n * delta2;
 
     % paslėptojo sl. gradientai:
-        % phi(v) išvestinė (pagal v) = y * (1 - y);
+        % phi(v)=tanh(v) išvestinė (pagal v) = (1 - y * y);
     delta1_1 = y(i) * (1 - y(i)) * delta2 * w2_11_n0;
     delta1_2 = y(i) * (1 - y(i)) * delta2 * w2_12_n0;
     delta1_3 = y(i) * (1 - y(i)) * delta2 * w2_13_n0;
