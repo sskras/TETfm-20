@@ -1,5 +1,8 @@
 clc;
 
+    % žingsnis:
+    n = 0.3;
+
 % Aproksimavimo intervalas:
 x = 0.1:1/22:1;
 fprintf("x:"); disp(x);
@@ -52,8 +55,6 @@ for i=1:length(x)
     % iteracijos klaida:
     e(i) = d(i) - y(i);
 
-    % žingsnis:
-    n = 0.3;
     % sumatoriaus aktyvavimo funkcija = v;
     % jos išvestinė (pagal v) = 1;
 
