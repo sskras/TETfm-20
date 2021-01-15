@@ -75,10 +75,13 @@ for i=1:length(x)
     delta1_1 = y(i) * (1 - y(i)) * delta2 * w2_11_n0;
 
     % paslėptojo sl. koeficientai (tikslinimas):
-    w1_11_n1 = w1_11_n0 + n * delta1_1 * x(i);
+    w1_11_n0 = w1_11_n0 + n * delta1_1 * x(i);
 
     % atnaujintus koeficientus įrašome į senųjų vietą (jau nebeverta saugoti):
-    w1_11_n0 = w1_11_n1;
+    %% galimai šito nereikės, kadangi gradientų skaičiavimui reikalingos
+    %% senosios w-vertės panaudotos prieš jų atnaujinimą
+    %% (sugrupavus delta1_* skaičiavimus kartu, aukščiau).
+    %% w1_11_n0 = w1_11_n1;
 end
 
 fprintf("y:"); disp(y);
