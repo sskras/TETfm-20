@@ -6,9 +6,9 @@ clc;
     d = 5*sin(8*x) + 4*cos(16*x + pi/3);
 
     % žingsnis:
-    n = 0.1;
+    n = 0.04;
     % apmokymų sk.:
-    LEARN_COUNT = 1000000;
+    LEARN_COUNT = 100000;
 
 fprintf("x:"); disp(x);
 fprintf("d:"); disp(d);
@@ -160,17 +160,19 @@ end
 plot(x, d, 'kx', x, y, 'o'); grid;
 
 i = 17;
-fprintf("Atsitiktinai pasirinktas taškas:" + ...
+fprintf("Atsitiktinai pasirinktas taškas:\n" + ...
         "x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", ...
         x(i), d(i), y(i), e(i));
 
 % Iš grafiko matyti, kad DNT apsimokė piešti tiesę.
 % (jei naudoju nuo 1 iki 100 apmokymų)
 %
-% Davus 1 mln. apmokymų tinklas kreivę iki idealumo suaproksimuoja daug dažniau:
-% x = 0.463636, d = -4.983671, aproksimuotas y = -4.976609, paklaida e = -0.007061.
+% Parinkus žingsnį n=0.4 ir davus 100 tūkst. apmokymų
+% tinklas kreivę iki idealumo suaproksimuoja beveik visada:
+% x = 0.827273, d = 1.060342, aproksimuotas y = 1.060304, paklaida e = 0.000038.
 %
-% Bet tai pavyksta ne visada. Kartais nusivažiuoja uodega, o dar rečiau ir visa kreivė šiek tiek pagenda.
+% Bet jei žinsgnis tampa bent 0.1, prireikia ir 1 mln. apmokymų, ir pavyksta ne visada.
+% Kartais nusivažiuoja uodega, o dar rečiau ir visa kreivė šiek tiek pagenda.
 %
 % O pasirinkus tanh() kaip aktyvavimo f-ją, ir su šimtais tūkstančių iteracijų gaudavau beveik tiesę:(
 
