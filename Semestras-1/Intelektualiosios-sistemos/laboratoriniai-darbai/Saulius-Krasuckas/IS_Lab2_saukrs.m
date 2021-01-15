@@ -71,12 +71,14 @@ for i=1:length(x)
     b2_1_n0  = b2_1_n0  + n * delta2;
 
     % paslėptojo sl. gradientai:
-
-    % phi(v) išvestinė pagal v = y * (1 - y);
+        % phi(v) išvestinė pagal v = y * (1 - y);
     delta1_1 = y(i) * (1 - y(i)) * delta2 * w2_11_n0;
 
     % paslėptojo sl. koeficientai (tikslinimas):
     w1_11_n1 = w1_11_n0 + n * delta1_1 * x(i);
+
+    % atnaujintus koeficientus įrašome į senųjų vietą (jau nebeverta saugoti):
+    w1_11_n0 = w1_11_n1;
 end
 
 fprintf("y:"); disp(y);
