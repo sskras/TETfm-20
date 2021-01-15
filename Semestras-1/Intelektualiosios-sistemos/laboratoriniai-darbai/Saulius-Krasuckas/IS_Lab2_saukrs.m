@@ -2,14 +2,14 @@ clc;
 
     % žingsnis:
     n = 0.1;
+    % apmokymų sk.:
     LEARN_COUNT = 1000000;
+    % Aproksimavimo intervalas:
+    x = 0.1:1/44:1;
+    % Aproksimuojamoji funkcija (tikrosios vertės):
+    d = 5*sin(8*x) + 4*cos(16*x + pi/3);
 
-% Aproksimavimo intervalas:
-x = 0.1:1/44:1;
 fprintf("x:"); disp(x);
-
-% Aproksimuojamoji funkcija (tikrosios vertės):
-d = 5*sin(8*x) + 4*cos(16*x + pi/3);
 fprintf("d:"); disp(d);
 
 % Pasirenku naudoti 4 neuronų paslėptąjį sl.
