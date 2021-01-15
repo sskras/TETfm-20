@@ -85,12 +85,12 @@ for i=1:length(x)
 
     % paslėptojo sl. gradientai:
         % phi(v)=tanh(v) išvestinė (pagal v) = (1 - y * y);
-    delta1_1 = (1 - y(i) * y(i)) * delta2 * w2_11_n0;
-    delta1_2 = (1 - y(i) * y(i)) * delta2 * w2_12_n0;
-    delta1_3 = (1 - y(i) * y(i)) * delta2 * w2_13_n0;
-    delta1_4 = (1 - y(i) * y(i)) * delta2 * w2_14_n0;
-    delta1_5 = (1 - y(i) * y(i)) * delta2 * w2_15_n0;
-    delta1_6 = (1 - y(i) * y(i)) * delta2 * w2_16_n0;
+    delta1_1 = (1 - y1 * y1) * delta2 * w2_11_n0;
+    delta1_2 = (1 - y2 * y2) * delta2 * w2_12_n0;
+    delta1_3 = (1 - y3 * y3) * delta2 * w2_13_n0;
+    delta1_4 = (1 - y4 * y4) * delta2 * w2_14_n0;
+    delta1_5 = (1 - y5 * y5) * delta2 * w2_15_n0;
+    delta1_6 = (1 - y6 * y6) * delta2 * w2_16_n0;
 
     % paslėptojo sl. koeficientai (tikslinimas):
     w1_11_n0 = w1_11_n0 + n * delta1_1 * x(i);
