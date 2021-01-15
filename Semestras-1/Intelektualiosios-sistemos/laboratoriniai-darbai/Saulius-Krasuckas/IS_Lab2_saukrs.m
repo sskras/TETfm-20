@@ -11,8 +11,6 @@ fprintf("x:"); disp(x);
 d = 5*sin(8*x) + 4*cos(16*x + pi/3);
 fprintf("d:"); disp(d);
 
-plot(x, d, 'kx'); grid;
-
 % Pasirenku naudoti 4 neuronų paslėptąjį sl.
 
 % Pradines koeficientų reikšmes imu atsitiktines:
