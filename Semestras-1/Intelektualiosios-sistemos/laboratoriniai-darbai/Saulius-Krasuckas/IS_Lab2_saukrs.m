@@ -2,6 +2,7 @@ clc;
 
     % žingsnis:
     n = 0.1;
+    LEARN_COUNT = 1000;
 
 % Aproksimavimo intervalas:
 x = 0.1:1/22:1;
@@ -34,7 +35,7 @@ y = zeros(1, length(x));
 % ... ir kiekvienos iteracijos klaidas,
 e = zeros(1, length(x));
 
-for apmokymas=0:1:1000
+for apmokymas=0:1:LEARN_COUNT
 for i=1:length(x)
     % paslėptojo sl. neuronų įėjimai:
     v1 = x(i) * w1_11_n0 + b1_1_n0;
