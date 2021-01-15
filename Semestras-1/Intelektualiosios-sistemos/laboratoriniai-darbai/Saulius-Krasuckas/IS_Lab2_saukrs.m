@@ -81,10 +81,11 @@ for apmokymas=0:1:LEARN_COUNT
         w2_14_n1 = w2_14_n0 + n * delta2 * y4;
         w2_15_n1 = w2_15_n0 + n * delta2 * y5;
         w2_16_n1 = w2_16_n0 + n * delta2 * y6;
-        b2_1_n1  = b2_1_n0  + n * delta2;
+        b2_1_n0  = b2_1_n0  + n * delta2;
 
         % paslėptojo sl. gradientai:
-            % phi(v)=tanh(v) išvestinė (pagal v) = (1 - y * y);
+        %   phi(v)=tanh(v) išvestinė (pagal v) = (1 - y * y);
+
         delta1_1 = y1 * (1 - y1) * delta2 * w2_11_n0;
         delta1_2 = y2 * (1 - y2) * delta2 * w2_12_n0;
         delta1_3 = y3 * (1 - y3) * delta2 * w2_13_n0;
@@ -114,7 +115,6 @@ for apmokymas=0:1:LEARN_COUNT
         w2_14_n0 = w2_14_n1;
         w2_15_n0 = w2_15_n1;
         w2_16_n0 = w2_16_n1;
-        b2_1_n0  = b2_1_n1;
     end
 end
 
