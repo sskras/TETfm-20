@@ -46,12 +46,12 @@ for i=1:length(x)
     v6 = x(i) * w1_61_n0 + b1_6_n0;
 
     % ... jų išėjimai:
-    y1 = 1/(1 + exp(-v1));
-    y2 = 1/(1 + exp(-v2));
-    y3 = 1/(1 + exp(-v3));
-    y4 = 1/(1 + exp(-v4));
-    y5 = 1/(1 + exp(-v5));
-    y6 = 1/(1 + exp(-v6));
+    y1 = tanh(v1);
+    y2 = tanh(v2);
+    y3 = tanh(v3);
+    y4 = tanh(v4);
+    y5 = tanh(v5);
+    y6 = tanh(v6);
 
     % iš. sl. neurono išėjimas:
     y(i) = y1 * w2_11_n0 + ...
@@ -85,12 +85,12 @@ for i=1:length(x)
 
     % paslėptojo sl. gradientai:
         % phi(v)=tanh(v) išvestinė (pagal v) = (1 - y * y);
-    delta1_1 = y(i) * (1 - y(i)) * delta2 * w2_11_n0;
-    delta1_2 = y(i) * (1 - y(i)) * delta2 * w2_12_n0;
-    delta1_3 = y(i) * (1 - y(i)) * delta2 * w2_13_n0;
-    delta1_4 = y(i) * (1 - y(i)) * delta2 * w2_14_n0;
-    delta1_5 = y(i) * (1 - y(i)) * delta2 * w2_15_n0;
-    delta1_6 = y(i) * (1 - y(i)) * delta2 * w2_16_n0;
+    delta1_1 = (1 - y(i) * y(i)) * delta2 * w2_11_n0;
+    delta1_2 = (1 - y(i) * y(i)) * delta2 * w2_12_n0;
+    delta1_3 = (1 - y(i) * y(i)) * delta2 * w2_13_n0;
+    delta1_4 = (1 - y(i) * y(i)) * delta2 * w2_14_n0;
+    delta1_5 = (1 - y(i) * y(i)) * delta2 * w2_15_n0;
+    delta1_6 = (1 - y(i) * y(i)) * delta2 * w2_16_n0;
 
     % paslėptojo sl. koeficientai (tikslinimas):
     w1_11_n0 = w1_11_n0 + n * delta1_1 * x(i);
@@ -139,12 +139,12 @@ d(i) = 5*sin(8*x(i)) + 4*cos(16*x(i) + pi/3); % 2.198;
     v6 = x(i) * w1_61_n0 + b1_6_n0;
 
     % ... jų išėjimai:
-    y1 = 1/(1 + exp(-v1));
-    y2 = 1/(1 + exp(-v2));
-    y3 = 1/(1 + exp(-v3));
-    y4 = 1/(1 + exp(-v4));
-    y5 = 1/(1 + exp(-v5));
-    y6 = 1/(1 + exp(-v6));
+    y1 = tanh(v1);
+    y2 = tanh(v2);
+    y3 = tanh(v3);
+    y4 = tanh(v4);
+    y5 = tanh(v5);
+    y6 = tanh(v6);
 
     % iš. sl. neurono išėjimas:
     y(i) = y1 * w2_11_n0 + ...
