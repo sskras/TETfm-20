@@ -161,21 +161,14 @@ plot(x, d, 'kx', x, y, 'o'); grid;
 i = 17;
 fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), y(i), e(i));
 
-% Ištaisius grubią klaidą reikalai pagerėjo:
-% x = 0.761200, d = 2.198011, aproksimuotas y = 2.259677, paklaida e = -0.061666.
-%
-% Bet kitame taške jau vėl blogai:
-% x = 0.539000, d = -8.483715, aproksimuotas y = 2.197730, paklaida e = -10.681445.
-%
 % Iš grafiko matyti, kad DNT apsimokė piešti tiesę.
+% (jei naudoju nuo 1 iki 100 apmokymų)
 %
-% Pasižiūrėjęs į kolegos darbą supratau, kad jį (DNT) reikia apmokint bent
-% kelis tūkstančius sykių=). Pamėginkim.
-%
-% Ir vis tiek ne stebuklas:
-% x = 0.509091, d = -7.904207, aproksimuotas y = 2.115965, paklaida e = -10.020171.
-
 % Davus 1 mln. apmokymų tinklas kreivę iki idealumo suaproksimuoja daug dažniau:
 % x = 0.463636, d = -4.983671, aproksimuotas y = -4.976609, paklaida e = -0.007061.
+%
+% Bet tai pavyksta ne visada. Kartais nusivažiuoja uodega, o dar rečiau ir visa kreivė šiek tiek pagenda.
+%
+% O pasirinkus tanh() kaip aktyvavimo f-ją, ir su šimtais tūkstančių iteracijų gaudavau beveik tiesę:(
 
 fprintf("Pabaiga.\n");
