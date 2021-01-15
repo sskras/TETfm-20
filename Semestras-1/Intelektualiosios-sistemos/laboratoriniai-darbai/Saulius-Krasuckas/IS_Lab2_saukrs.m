@@ -124,8 +124,8 @@ fprintf("e:"); disp(e);
 
 % patikrinkime perceptrono veiksnumą:
 
-x(i) = 0.539; % tada y turėtų būti:
-d(i) = 5*sin(8*x(i)) + 4*cos(16*x(i) + pi/3); % -8.484;
+%x(i) = 0.539; % tada y turėtų būti:
+%d(i) = 5*sin(8*x(i)) + 4*cos(16*x(i) + pi/3); % -8.484;
 
 for i=1:length(x)
     % paslėptojo sl. neuronų įėjimai:
@@ -159,8 +159,9 @@ end
 
 plot(x, d, 'kx', x, y, 'o'); grid;
 
+i = 10;
 fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), y(i), e(i));
-%
+
 % Ištaisius grubią klaidą reikalai pagerėjo:
 % x = 0.761200, d = 2.198011, aproksimuotas y = 2.259677, paklaida e = -0.061666.
 %
@@ -171,5 +172,8 @@ fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), 
 %
 % Pasižiūrėjęs į kolegos darbą supratau, kad jį (DNT) reikia apmokint bent
 % kelis tūkstančius sykių=). Pamėginkim.
+%
+% Ir vis tiek ne stebuklas:
+% x = 0.509091, d = -7.904207, aproksimuotas y = 2.115965, paklaida e = -10.020171.
 
 fprintf("Pabaiga.\n");
