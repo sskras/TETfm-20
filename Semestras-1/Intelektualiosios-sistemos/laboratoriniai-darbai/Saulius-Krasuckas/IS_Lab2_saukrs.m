@@ -1,13 +1,14 @@
 clc;
 
+    % Aproksimavimo intervalas:
+    x = 0.1:1/22:1;
+    % Aproksimuojamoji funkcija (tikrosios vertės):
+    d = 5*sin(8*x) + 4*cos(16*x + pi/3);
+
     % žingsnis:
     n = 0.1;
     % apmokymų sk.:
     LEARN_COUNT = 1000000;
-    % Aproksimavimo intervalas:
-    x = 0.1:1/44:1;
-    % Aproksimuojamoji funkcija (tikrosios vertės):
-    d = 5*sin(8*x) + 4*cos(16*x + pi/3);
 
 fprintf("x:"); disp(x);
 fprintf("d:"); disp(d);
@@ -159,7 +160,9 @@ end
 plot(x, d, 'kx', x, y, 'o'); grid;
 
 i = 17;
-fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), y(i), e(i));
+fprintf("Atsitiktinai pasirinktas taškas:" + ...
+        "x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", ...
+        x(i), d(i), y(i), e(i));
 
 % Iš grafiko matyti, kad DNT apsimokė piešti tiesę.
 % (jei naudoju nuo 1 iki 100 apmokymų)
