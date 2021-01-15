@@ -79,6 +79,9 @@ for i=1:length(x)
 
     % paslėptojo sl. koeficientai (tikslinimas):
     w1_11_n0 = w1_11_n0 + n * delta1_1 * x(i);
+    w1_21_n0 = w1_21_n0 + n * delta1_2 * x(i);
+    w1_31_n0 = w1_31_n0 + n * delta1_3 * x(i);
+    w1_41_n0 = w1_41_n0 + n * delta1_4 * x(i);
 
     % atnaujintus koeficientus įrašome į senųjų vietą (jau nebeverta saugoti):
     %% galimai šito nereikės, kadangi gradientų skaičiavimui reikalingos
