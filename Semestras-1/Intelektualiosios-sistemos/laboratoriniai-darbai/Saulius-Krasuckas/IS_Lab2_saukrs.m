@@ -83,6 +83,11 @@ for i=1:length(x)
     w1_31_n0 = w1_31_n0 + n * delta1_3 * x(i);
     w1_41_n0 = w1_41_n0 + n * delta1_4 * x(i);
 
+    b1_1_n0  = b1_1_n0  + n * delta1_1;
+    b1_2_n0  = b1_2_n0  + n * delta1_2;
+    b1_3_n0  = b1_3_n0  + n * delta1_3;
+    b1_4_n0  = b1_4_n0  + n * delta1_4;
+
     % atnaujintus koeficientus įrašome į senųjų vietą (jau nebeverta saugoti):
     %% galimai šito nereikės, kadangi gradientų skaičiavimui reikalingos
     %% senosios w-vertės panaudotos prieš jų atnaujinimą
