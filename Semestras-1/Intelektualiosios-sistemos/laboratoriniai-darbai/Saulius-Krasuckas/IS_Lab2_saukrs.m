@@ -1,10 +1,10 @@
 clc;
 
     % žingsnis:
-    n = 0.1;
+    n = 0.3;
 
 % Aproksimavimo intervalas:
-x = 0.1:1/44:1;
+x = 0.1:1/22:1;
 fprintf("x:"); disp(x);
 
 % Aproksimuojamoji funkcija (tikrosios vertės):
@@ -159,5 +159,11 @@ d(i) = 2.198;
 
 fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), y(i), e(i));
 % kai x=0.7612, gauname y=1.212585 (vietoj 2.198)
+%
+% Po mano klaidos pataisymo paklaida vis tiek didoka su n=0.1 ir 40 taškų:
+% x = 0.761200, d = 2.198000, aproksimuotas y = 2.782822, paklaida e = -0.584822.
+%
+% O su n=0.3 ir 20 taškų išvis baisu:
+% x = 0.761200, d = 2.198000, aproksimuotas y = 64.335443, paklaida e = -62.137443.
 
 fprintf("Pabaiga.\n");
