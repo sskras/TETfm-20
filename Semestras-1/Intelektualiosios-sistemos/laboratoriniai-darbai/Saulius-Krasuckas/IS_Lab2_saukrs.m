@@ -19,9 +19,9 @@ w1_31_n0 = rand(1);  b1_3_n0  = rand(1);
 w1_41_n0 = rand(1);  b1_4_n0  = rand(1);
 
 w2_11_n0 = rand(1);
-w2_21_n0 = rand(1);
-w2_31_n0 = rand(1);
-w2_41_n0 = rand(1);
+w2_12_n0 = rand(1);
+w2_13_n0 = rand(1);
+w2_14_n0 = rand(1);
 b2_1_n0  = rand(1);
 
 % Skaičiuoju tinklo atsaką,
@@ -45,9 +45,9 @@ for i=1:length(x)
     % iš. sl. neurono išėjimas:
     y(i) =      b2_1_n0  + ...
            y1 * w2_11_n0 + ...
-           y2 * w2_21_n0 + ...
-           y3 * w2_31_n0 + ...
-           y4 * w2_41_n0;
+           y2 * w2_12_n0 + ...
+           y3 * w2_13_n0 + ...
+           y4 * w2_14_n0;
 
     % iteracijos klaida:
     e(i) = d(i) - y(i);
@@ -65,17 +65,17 @@ for i=1:length(x)
 
     % išėjimo sl. koeficientai (tikslinimas):
     w2_11_n0 = w2_11_n0 + n * delta2 * y1;
-    w2_21_n0 = w2_21_n0 + n * delta2 * y2;
-    w2_31_n0 = w2_31_n0 + n * delta2 * y3;
-    w2_41_n0 = w2_41_n0 + n * delta2 * y4;
+    w2_12_n0 = w2_12_n0 + n * delta2 * y2;
+    w2_13_n0 = w2_13_n0 + n * delta2 * y3;
+    w2_14_n0 = w2_14_n0 + n * delta2 * y4;
     b2_1_n0  = b2_1_n0  + n * delta2;
 
     % paslėptojo sl. gradientai:
         % phi(v) išvestinė pagal v = y * (1 - y);
     delta1_1 = y(i) * (1 - y(i)) * delta2 * w2_11_n0;
-    delta1_2 = y(i) * (1 - y(i)) * delta2 * w2_21_n0;
-    delta1_3 = y(i) * (1 - y(i)) * delta2 * w2_31_n0;
-    delta1_4 = y(i) * (1 - y(i)) * delta2 * w2_41_n0;
+    delta1_2 = y(i) * (1 - y(i)) * delta2 * w2_12_n0;
+    delta1_3 = y(i) * (1 - y(i)) * delta2 * w2_13_n0;
+    delta1_4 = y(i) * (1 - y(i)) * delta2 * w2_14_n0;
 
     % paslėptojo sl. koeficientai (tikslinimas):
     w1_11_n0 = w1_11_n0 + n * delta1_1 * x(i);
