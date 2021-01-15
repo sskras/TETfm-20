@@ -4,7 +4,7 @@ clc;
     n = 0.1;
 
 % Aproksimavimo intervalas:
-x = 0.1:1/22:1;
+x = 0.1:1/44:1;
 fprintf("x:"); disp(x);
 
 % Aproksimuojamoji funkcija (tikrosios vertės):
