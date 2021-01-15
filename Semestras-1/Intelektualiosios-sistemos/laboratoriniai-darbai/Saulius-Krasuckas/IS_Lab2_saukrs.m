@@ -107,6 +107,8 @@ fprintf("e:"); disp(e);
 
 % patikrinkime perceptrono veiksnumą:
 
+x(i) = 0.7612; % y turėtų būti 2.198:
+
     v1 = x(i) * w1_11_n0 + b1_1_n0;
     v2 = x(i) * w1_21_n0 + b1_2_n0;
     v3 = x(i) * w1_31_n0 + b1_3_n0;
@@ -124,5 +126,8 @@ fprintf("e:"); disp(e);
            y2 * w2_12_n0 + ...
            y3 * w2_13_n0 + ...
            y4 * w2_14_n0;
+
+fprintf("x = %f, aproksimuotas y = %f.\n", x(i), y(i));
+% kai x=0.7612, gauname y=1.212585 (vietoj 2.198)
 
 fprintf("Pabaiga.\n");
