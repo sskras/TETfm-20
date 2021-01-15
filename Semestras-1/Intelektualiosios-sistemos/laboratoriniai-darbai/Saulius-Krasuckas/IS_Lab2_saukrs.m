@@ -36,6 +36,7 @@ y = zeros(1, length(x));
 % ... ir kiekvienos iteracijos klaidas,
 e = zeros(1, length(x));
 
+for apmokymas=0:1:100000
 for i=1:length(x)
     % paslėptojo sl. neuronų įėjimai:
     v1 = x(i) * w1_11_n0 + b1_1_n0;
@@ -107,7 +108,7 @@ for i=1:length(x)
     b1_5_n0  = b1_5_n0  + n * delta1_5;
     b1_6_n0  = b1_6_n0  + n * delta1_6;
 
-    % atnaujintus koeficientus įrašome į senųjų vietą (jau nebeverta saugoti):
+    % atnaujintus paslėptojo sl. koeficientus įrašome į senųjų vietą (šių jau nebeverta saugoti):
     w2_11_n0 = w2_11_n1;
     w2_12_n0 = w2_12_n1;
     w2_13_n0 = w2_13_n1;
@@ -115,11 +116,7 @@ for i=1:length(x)
     w2_15_n0 = w2_15_n1;
     w2_16_n0 = w2_16_n1;
     b2_1_n0  = b2_1_n1;
-
-    %% galimai šito nereikės, kadangi gradientų skaičiavimui reikalingos
-    %% senosios w-vertės panaudotos prieš jų atnaujinimą
-    %% (sugrupavus delta1_* skaičiavimus kartu, aukščiau).
-    %% w1_11_n0 = w1_11_n1;
+end
 end
 
 fprintf("y:"); disp(y);
@@ -169,5 +166,10 @@ fprintf("x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", x(i), d(i), 
 %
 % Bet kitame taške jau vėl blogai:
 % x = 0.539000, d = -8.483715, aproksimuotas y = 2.197730, paklaida e = -10.681445.
+%
+% Iš grafiko matyti, kad DNT apsimokė piešti tiesę.
+%
+% Pasižiūrėjęs į kolegos darbą supratau, kad jį (DNT) reikia apmokint bent
+% kelis tūkstančius sykių=). Pamėginkim.
 
 fprintf("Pabaiga.\n");
