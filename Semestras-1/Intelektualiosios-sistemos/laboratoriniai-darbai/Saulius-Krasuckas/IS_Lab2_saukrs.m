@@ -166,11 +166,11 @@ fprintf("Atsitiktinai pasirinktas taškas:\n" + ...
         "x = %f, d = %f, aproksimuotas y = %f, paklaida e = %f.\n", ...
         x(i), d(i), y(i), e(i));
 
-% Iš grafiko matyti, kad DNT apsimokė piešti tiesę.
-% (jei naudoju nuo 1 iki 100 apmokymų)
+% Jei naudoju nuo 1 iki 100 apmokymų,
+% iš grafiko matyti, kad DNT apsimokė piešti tiesę.
 %
 % Parinkus žingsnį n=0.04 ir davus 100 tūkst. apmokymų
-% tinklas kreivę iki idealumo suaproksimuoja beveik visada:
+% tinklas kreivę iki akimi neatskiriamos paklaidos suaproksimuoja beveik visada:
 % x = 0.827273, d = 1.060342, aproksimuotas y = 1.060304, paklaida e = 0.000038.
 %
 % Bet jei žingsnis tampa bent 0.1, prireikia ir 1 mln. apmokymų, ir pavyksta ne visada.
