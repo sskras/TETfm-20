@@ -86,6 +86,8 @@ for apmokymas=0:1:LEARN_COUNT
 
         % paslėptojo sl. gradientai:
         %   phi(v)=tanh(v) išvestinė (pagal v) = (1 - y * y);
+        %   phi(v)=exp(v)  išvestinė (pagal v) = y * (1 - y);
+        % Pastarąją ir renkuosi:
 
         delta1_1 = y1 * (1 - y1) * delta2 * w2_11_n0;
         delta1_2 = y2 * (1 - y2) * delta2 * w2_12_n0;
@@ -167,11 +169,11 @@ fprintf("Atsitiktinai pasirinktas taškas:\n" + ...
 % Iš grafiko matyti, kad DNT apsimokė piešti tiesę.
 % (jei naudoju nuo 1 iki 100 apmokymų)
 %
-% Parinkus žingsnį n=0.4 ir davus 100 tūkst. apmokymų
+% Parinkus žingsnį n=0.04 ir davus 100 tūkst. apmokymų
 % tinklas kreivę iki idealumo suaproksimuoja beveik visada:
 % x = 0.827273, d = 1.060342, aproksimuotas y = 1.060304, paklaida e = 0.000038.
 %
-% Bet jei žinsgnis tampa bent 0.1, prireikia ir 1 mln. apmokymų, ir pavyksta ne visada.
+% Bet jei žingsnis tampa bent 0.1, prireikia ir 1 mln. apmokymų, ir pavyksta ne visada.
 % Kartais nusivažiuoja uodega, o dar rečiau ir visa kreivė šiek tiek pagenda.
 %
 % O pasirinkus tanh() kaip aktyvavimo f-ją, ir su šimtais tūkstančių iteracijų gaudavau beveik tiesę:(
