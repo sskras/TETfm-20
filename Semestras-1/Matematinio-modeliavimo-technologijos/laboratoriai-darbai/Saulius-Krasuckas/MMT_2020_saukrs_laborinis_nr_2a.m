@@ -3,8 +3,6 @@ function MMT_2020_saukrs_laborinis_nr_2a
     addpath('interp');
 
     clc; close all;
-    hold on;
-    ylim([2.7 3.5]);
 
     eile = 1; % aproksimacijos eilė
     Lagran_vkkl = 2; % Lagr. vidutinė kvadratinė klaida
@@ -41,7 +39,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     x7 = linspace(1, 5, 7);
     x9 = linspace(1, 5, 9);
 
-  % Galbūt būtų gražiau ir referinius taškus sukišti į celę.
+  % Gal būtų gražiau ir referinius taškus sukišti į t.p. celę.
   % TODO:
   % aproksim{Lagran_x, eil2} = linspace(1, 5, 2);
   % aproksim{Lagran_x, eil3} = linspace(1, 5, 3);
@@ -93,6 +91,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Lagran_makl, eil7} = max(abs(y_ - yL7));
     aproksim{Lagran_makl, eil9} = max(abs(y_ - yL9));
 
+    hold on;
     title('Aproksimacija Lagranžo daugianariu');
     % Braižau 100 taškų aproksimacijas per pradinius taškus:
     plot(x_, yL2, 'y', 'DisplayName', 'Lagr. 2 t.');
@@ -100,24 +99,25 @@ function MMT_2020_saukrs_laborinis_nr_2a
     plot(x_, yL5, 'm', 'DisplayName', 'Lagr. 5 t.');
     plot(x_, yL7, 'r', 'DisplayName', 'Lagr. 7 t.');
     plot(x_, yL9, 'g', 'DisplayName', 'Lagr. 9 t.');
-
+    %
     xlabel('x');
     ylabel('y');
     legend;
     grid;
+    ylim([2.7 3.5]);
     hold off;
 
     figure;
     hold on;
-
     title('Maksimali ir vidutinė kvadratinė klaidos');
     % Atvaizduoju vidutinės kvadratinės ir maksimalios
     % klaidų priklausomybes nuo aproksimavimo eilės:
-    plot([aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], 'r', 'DisplayName', 'Lagran_vkkl');
-    plot([aproksim{eile,:}], [aproksim{Lagran_makl,:}], 'g', 'DisplayName', 'Lagran_makl');
-
+    plot([aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], 'r', 'DisplayName', 'Lagran. vid. kv.');
+    plot([aproksim{eile,:}], [aproksim{Lagran_makl,:}], 'g', 'DisplayName', 'Lagran. maksimali');
+    %
     xlabel('aproksimavimo eilė');
     ylabel('klaidos dydis');
+    legend;
     grid;
     hold off;
 end
