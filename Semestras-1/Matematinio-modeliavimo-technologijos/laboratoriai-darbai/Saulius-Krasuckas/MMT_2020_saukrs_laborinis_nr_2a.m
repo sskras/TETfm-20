@@ -4,9 +4,13 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     clc; close all;
 
-    eile = 1; % aproksimacijos eilė
+    % Konstantos indeksuoti celės eilutėms:
+    %
+    eile        = 1; % aproksimacijos eilė
     Lagran_vkkl = 2; % Lagr. vidutinė kvadratinė klaida
     Lagran_makl = 3; % Lagr. maksimali klaida
+    Niuton_vkkl = 4; % Niut. vidutinė kvadratinė klaida
+    Niuton_makl = 5; % Niut. maksimali klaida
 
     aproksim = {};
     aproksim(eile, :) = {2, 3, 5, 7, 9};
@@ -101,20 +105,28 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yN7 = polyval(N7, x_);
     yN9 = polyval(N9, x_);
 
+    % Lagranžo aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Niuton_vkkl, eil2} = immse(y_, yN2);
+    aproksim{Niuton_vkkl, eil3} = immse(y_, yN3);
+    aproksim{Niuton_vkkl, eil5} = immse(y_, yN5);
+    aproksim{Niuton_vkkl, eil7} = immse(y_, yN7);
+    aproksim{Niuton_vkkl, eil9} = immse(y_, yN9);
+
+    % Lagranžo aproksimacijų maksimali klaida:
+    aproksim{Niuton_makl, eil2} = max(abs(y_ - yN2));
+    aproksim{Niuton_makl, eil3} = max(abs(y_ - yN3));
+    aproksim{Niuton_makl, eil5} = max(abs(y_ - yN5));
+    aproksim{Niuton_makl, eil7} = max(abs(y_ - yN7));
+    aproksim{Niuton_makl, eil9} = max(abs(y_ - yN9));
+
+    % Atvaizdavimas
+
     hold on;
-    title('Aproksimacija Lagranžo daugianariu');
-    % Braižau 100 taškų aproksimacijas per pradinius taškus:
-    plot(x_, yL2, 'y', 'DisplayName', 'Lagr. 2 t.');
-    plot(x_, yL3, 'b', 'DisplayName', 'Lagr. 3 t.');
-    plot(x_, yL5, 'm', 'DisplayName', 'Lagr. 5 t.');
-    plot(x_, yL7, 'r', 'DisplayName', 'Lagr. 7 t.');
-    plot(x_, yL9, 'g', 'DisplayName', 'Lagr. 9 t.');
-    % Atvaizduoju referinius taškus atvirkštine tvarka, 
-    % kad ne tankesni taškai užgožtų retesnius, o atv.:
-    plot(x9, y9, '*', 'DisplayName', '9 taškai');
-    plot(x7, y7, '*', 'DisplayName', '7 taškai');
-    plot(x5, y5, '*', 'DisplayName', '5 taškai');
-    plot(x3, y3, '*', 'DisplayName', '3 taškai');
+    title('Antros eilės aproksimacijos');
+    % Braižau 100 taškų aproksimacijas per du taškus:
+    plot(x_, yL2, 'b', 'DisplayName', 'Lagr. 2 t.');
+    plot(x_, yN2, 'm', 'DisplayName', 'Niut. 2 t.');
+    % Atvaizduoju referinius taškus:
     plot(x2, y2, '*', 'DisplayName', '2 taškai');
     %
     xlabel('x');
@@ -126,9 +138,13 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     figure;
     hold on;
-    title('Aproksimacija Niutono daugianariu');
+    title('Aukštesnių eilių proksimacijos');
     % Braižau 100 taškų aproksimacijas per pradinius taškus:
-    plot(x_, yN2, 'y', 'DisplayName', 'Niut. 2 t.');
+    plot(x_, yL3, 'b', 'DisplayName', 'Lagr. 3 t.');
+    plot(x_, yL5, 'm', 'DisplayName', 'Lagr. 5 t.');
+    plot(x_, yL7, 'r', 'DisplayName', 'Lagr. 7 t.');
+    plot(x_, yL9, 'g', 'DisplayName', 'Lagr. 9 t.');
+
     plot(x_, yN3, 'b', 'DisplayName', 'Niut. 3 t.');
     plot(x_, yN5, 'm', 'DisplayName', 'Niut. 5 t.');
     plot(x_, yN7, 'r', 'DisplayName', 'Niut. 7 t.');
@@ -139,7 +155,6 @@ function MMT_2020_saukrs_laborinis_nr_2a
     plot(x7, y7, '*', 'DisplayName', '7 taškai');
     plot(x5, y5, '*', 'DisplayName', '5 taškai');
     plot(x3, y3, '*', 'DisplayName', '3 taškai');
-    plot(x2, y2, '*', 'DisplayName', '2 taškai');
     %
     xlabel('x');
     ylabel('y');
@@ -155,6 +170,10 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % klaidų priklausomybes nuo aproksimavimo eilės:
     plot([aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], 'r', 'DisplayName', 'Lagran. vid. kv.');
     plot([aproksim{eile,:}], [aproksim{Lagran_makl,:}], 'g', 'DisplayName', 'Lagran. maksimali');
+    % Panašu, kad „Niutono" kreivės visiškai paslepia 
+    % Lagranžo kreives. Bet vaizduokim vis tiek:
+    plot([aproksim{eile,:}], [aproksim{Niuton_vkkl,:}], 'b', 'DisplayName', 'Niutono vid. kv.');
+    plot([aproksim{eile,:}], [aproksim{Niuton_makl,:}], 'm', 'DisplayName', 'Niutono maksimali');
     %
     xlabel('aproksimavimo eilė');
     ylabel('klaidos dydis');
