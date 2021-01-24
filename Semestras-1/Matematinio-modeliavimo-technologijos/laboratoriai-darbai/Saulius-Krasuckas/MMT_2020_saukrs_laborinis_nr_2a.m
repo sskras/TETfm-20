@@ -53,21 +53,14 @@ function MMT_2020_saukrs_laborinis_nr_2a
     y7 = f(x7);
     y9 = f(x9);
 
-    % Atvaizduoju referinius taškus atvirkštine tvarka, 
-    % kad ne tankesni taškai užgožtų retesnius, o atv.:
-    plot(x9, y9, '*', 'DisplayName', '9 taškai');
-    plot(x7, y7, '*', 'DisplayName', '7 taškai');
-    plot(x5, y5, '*', 'DisplayName', '5 taškai');
-    plot(x3, y3, '*', 'DisplayName', '3 taškai');
-    plot(x2, y2, '*', 'DisplayName', '2 taškai');
-
+    % ---- ----
     % Skaičiuoju Lagranžo daugianario koeficientus
     % kai taškų skaičius kinta:
-    [l2,~] = lagran(x2, y2);
-    [l3,~] = lagran(x3, y3);
-    [l5,~] = lagran(x5, y5);
-    [l7,~] = lagran(x7, y7);
-    [l9,~] = lagran(x9, y9);
+    [l2,~] = lagranp(x2, y2);
+    [l3,~] = lagranp(x3, y3);
+    [l5,~] = lagranp(x5, y5);
+    [l7,~] = lagranp(x7, y7);
+    [l9,~] = lagranp(x9, y9);
 
     % Pagal Lagranžo koef-us apskaičiuoju 
     % po 100 taškų diagramai:
@@ -91,6 +84,23 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Lagran_makl, eil7} = max(abs(y_ - yL7));
     aproksim{Lagran_makl, eil9} = max(abs(y_ - yL9));
 
+    % ---- ----
+    % Skaičiuoju Niutono daugianario koeficientus
+    % kai taškų skaičius kinta:
+    N2 = niutonp(x2, y2);
+    N3 = niutonp(x3, y3);
+    N5 = niutonp(x5, y5);
+    N7 = niutonp(x7, y7);
+    N9 = niutonp(x9, y9);
+
+    % Pagal Niutono koeficientus apskaičiuoju 
+    % po 100 taškų diagramai:
+    yN2 = polyval(N2, x_);
+    yN3 = polyval(N3, x_);
+    yN5 = polyval(N5, x_);
+    yN7 = polyval(N7, x_);
+    yN9 = polyval(N9, x_);
+
     hold on;
     title('Aproksimacija Lagranžo daugianariu');
     % Braižau 100 taškų aproksimacijas per pradinius taškus:
@@ -99,6 +109,37 @@ function MMT_2020_saukrs_laborinis_nr_2a
     plot(x_, yL5, 'm', 'DisplayName', 'Lagr. 5 t.');
     plot(x_, yL7, 'r', 'DisplayName', 'Lagr. 7 t.');
     plot(x_, yL9, 'g', 'DisplayName', 'Lagr. 9 t.');
+    % Atvaizduoju referinius taškus atvirkštine tvarka, 
+    % kad ne tankesni taškai užgožtų retesnius, o atv.:
+    plot(x9, y9, '*', 'DisplayName', '9 taškai');
+    plot(x7, y7, '*', 'DisplayName', '7 taškai');
+    plot(x5, y5, '*', 'DisplayName', '5 taškai');
+    plot(x3, y3, '*', 'DisplayName', '3 taškai');
+    plot(x2, y2, '*', 'DisplayName', '2 taškai');
+    %
+    xlabel('x');
+    ylabel('y');
+    legend;
+    grid;
+    ylim([2.7 3.5]);
+    hold off;
+
+    figure;
+    hold on;
+    title('Aproksimacija Niutono daugianariu');
+    % Braižau 100 taškų aproksimacijas per pradinius taškus:
+    plot(x_, yN2, 'y', 'DisplayName', 'Niut. 2 t.');
+    plot(x_, yN3, 'b', 'DisplayName', 'Niut. 3 t.');
+    plot(x_, yN5, 'm', 'DisplayName', 'Niut. 5 t.');
+    plot(x_, yN7, 'r', 'DisplayName', 'Niut. 7 t.');
+    plot(x_, yN9, 'g', 'DisplayName', 'Niut. 9 t.');
+    % Atvaizduoju referinius taškus atvirkštine tvarka, 
+    % kad ne tankesni taškai užgožtų retesnius, o atv.:
+    plot(x9, y9, '*', 'DisplayName', '9 taškai');
+    plot(x7, y7, '*', 'DisplayName', '7 taškai');
+    plot(x5, y5, '*', 'DisplayName', '5 taškai');
+    plot(x3, y3, '*', 'DisplayName', '3 taškai');
+    plot(x2, y2, '*', 'DisplayName', '2 taškai');
     %
     xlabel('x');
     ylabel('y');
