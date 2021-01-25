@@ -163,6 +163,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % ---- Atvaizdavimas ----
 
+    figure;
     hold on;
     title('Antros eilės aproksimacijos');
     % Braižau 100 taškų aproksimacijas per du taškus:
