@@ -64,9 +64,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     y7 = f(x7);
     y9 = f(x9);
 
-    % ---- ----
-
-    % Skaičiuoju Lagranžo daugianario koeficientus
+%   % Skaičiuoju Lagranžo daugianario koeficientus
     % kai taškų skaičius kinta:
     [l2,~] = lagranp(x2, y2);
     [l3,~] = lagranp(x3, y3);
@@ -96,9 +94,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Lagran_makl, eil7} = max(abs(y_ - yL7));
     aproksim{Lagran_makl, eil9} = max(abs(y_ - yL9));
 
-    % ---- ----
-
-    % Skaičiuoju Niutono daugianario koeficientus
+%   % Skaičiuoju Niutono daugianario koeficientus
     % kai taškų skaičius kinta:
     N2 = niutonp(x2, y2);
     N3 = niutonp(x3, y3);
@@ -128,9 +124,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Niuton_makl, eil7} = max(abs(y_ - yN7));
     aproksim{Niuton_makl, eil9} = max(abs(y_ - yN9));
 
-    % ---- ----
-
-    % Skaičiuoju Čebyševo daugianario koeficientus
+%   % Skaičiuoju Čebyševo daugianario koeficientus
     % kai taškų skaičius kinta:
     [c2, xm2, ym2] = cheby(@f, 2-1, x_min, x_max);
     [c3, xm3, ym3] = cheby(@f, 3-1, x_min, x_max);
@@ -138,7 +132,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     [c7, xm7, ym7] = cheby(@f, 7-1, x_min, x_max);
     [c9, xm9, ym9] = cheby(@f, 9-1, x_min, x_max);
     % Taip pat ir Čebyševo mazgus [xm ym].
-    % (Čia taškų skaičius -1, nes metodas grąžina +1 koef.)
+    % (Čia taškų skaičiui -1, nes metodas grąžina +1 koef.)
 
     % Pagal Čebyševo koeficientus apskaičiuoju 
     % po 100 taškų diagramai:
@@ -148,19 +142,22 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yC7 = polyval(c7, x_);
     yC9 = polyval(c9, x_);
 
-    % Niutono aproksimacijų vidutinė kvadratinė klaida:
+    % Čebyševo aproksimacijų vidutinė kvadratinė klaida:
     aproksim{Cebyse_vkkl, eil2} = immse(y_, yC2);
     aproksim{Cebyse_vkkl, eil3} = immse(y_, yC3);
     aproksim{Cebyse_vkkl, eil5} = immse(y_, yC5);
     aproksim{Cebyse_vkkl, eil7} = immse(y_, yC7);
     aproksim{Cebyse_vkkl, eil9} = immse(y_, yC9);
 
-    % Niutono aproksimacijų maksimali klaida:
+    % Čebyševo aproksimacijų maksimali klaida:
     aproksim{Cebyse_makl, eil2} = max(abs(y_ - yC2));
     aproksim{Cebyse_makl, eil3} = max(abs(y_ - yC3));
     aproksim{Cebyse_makl, eil5} = max(abs(y_ - yC5));
     aproksim{Cebyse_makl, eil7} = max(abs(y_ - yC7));
     aproksim{Cebyse_makl, eil9} = max(abs(y_ - yC9));
+
+%   % Skaičiuoju Pade daugianarių koeficientus
+    % kai taškų skaičius kinta:
 
     % ---- Atvaizdavimas ----
 
@@ -173,7 +170,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % Visų eilių klaidos priklausomybė:
     klaidos_priklausomybes_nuo_eiles_diagrama('Vidutinė kvadratinė', [aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], [aproksim{Niuton_vkkl,:}], [aproksim{Cebyse_vkkl,:}])
     klaidos_priklausomybes_nuo_eiles_diagrama('Maksimali', [aproksim{eile,:}], [aproksim{Lagran_makl,:}], [aproksim{Niuton_makl,:}], [aproksim{Cebyse_makl,:}])
-end
+end % of program.
 
 function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn)
 
@@ -201,7 +198,7 @@ end
 
 function klaidos_priklausomybes_nuo_eiles_diagrama(klaidos_tipas, eile, L_klaida, N_klaida, C_klaida)
 % Atvaizduoju klaidos priklausomybę nuo aproksimavimo eilės:
-    figure;
+    figure('Name', klaidos_tipas);
     hold on;
     title([klaidos_tipas ' klaida']);
 
