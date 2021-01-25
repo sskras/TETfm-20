@@ -1,151 +1,218 @@
-TCP sukurtas patikimam duomenų perdavimui IP tinklais, jame:
+function MMT_2020_saukrs_laborinis_nr_2a
 
-* išlaikomas paketų eiliškumas,
-* ištaisomos klaidos,
-* pranešamas siuntimo rezultatas,
+    % Prijungiu funkcijas iš dėstytojo modulių (iš .zip):
+    addpath('interp');
 
-Vienos sesijos duomenims perduoti TCP įprastai naudoja tik vieną IP interfeisą.
-Nuo ~2003 m. ėmė plisti galiniai tinklo įrenginiai su keletu interfeisų, veikiančių vienu metu (LAN, Wi-Fi, LTE, DSL tinkluose).
-Palaipsniui kilo ir poreikis TCP sesijos (angl. TCP Stream) duomenis perduoti keliais tokiais IP interfeisais iš karto: 
-pvz. pralaidumui ar patikimumui didinti.
+    clc; close all;
 
-Tam 2008 m. pradėtas kurti TCP standarto papildymas _Multipath TCP (MPTCP)_, suderinamas su esama TCP/IP infrastruktūra.
-Jis aplikacijai leidžia (tos pačios) TCP sesijos duomenis perduoti keletu lygiagrečių MPTCP posrūvių (angl. _Subflows_).
-[[1]](#1)
+    % Interpoliacijos intervalas:
+    x_min = 1;
+    x_max = 5;
 
-Įprastai šių posrūvių paketai keliauja per skirtingus IP interfeisus.
-Tačiau įmanoma kelis posrūvius užmegzti ir per tą patį interfeisą.
+    % Konstantos indeksuoti celės eilutėms:
+    %
+    eile        = 1; % aproksimacijos eilė
+    Lagran_vkkl = 2; % Lagr. vidutinė kvadratinė klaida
+    Lagran_makl = 3; % Lagr. maksimali klaida
+    Niuton_vkkl = 4; % Niut. vidutinė kvadratinė klaida
+    Niuton_makl = 5; % Niut. maksimali klaida
+    Cebyse_vkkl = 6; % Čeby. vidutinė kvadratinė klaida
+    Cebyse_makl = 7; % Čeby. maksimali klaida
 
-Vienas esminių tiek TCP, tiek MPTCP mechanizmų yra tinklo perkrovų valdymas (angl. _Congestion Control_).
-Jis keičia srauto patekimą į tinklą ir taip leidžia šiame išvengti perkrovų (grūsčių).
-Įprastai tam būna mažinama paketų išsiuntimo sparta.
+    aproksim = {};
+    aproksim(eile, :) = {2, 3, 5, 7, 9};
 
-    Apibrėžimai iš [1] ir Wiki:  
-    - https://en.wikipedia.org/wiki/Transmission_Control_Protocol  
-    - https://en.wikipedia.org/wiki/Network_congestion#Congestion_control  
+    % Tikrinu celės elementų indeksaciją:
+  % for i = 1:length(aproksim)
+  %     fprintf("%d ", aproksim{eile, i});
+  % end
 
-<div style="page-break-after: always;"></div>
-<div class="pagebreak"></div>
+    % Programinis indekso radimas pagal eilę,
+    % pvz. 7-ta eilė grąžina 4-tą indeksą:
+  % find([aproksim{eile, :}] == 7)
 
+    % Šįkart apsieisiu panaudodamas tik konstantas, vaizdžiau:
+    eil2 = 1;
+    eil3 = 2;
+    eil5 = 3;
+    eil7 = 4;
+    eil9 = 5;
 
-# Santrumpos
+    % x-masyvas daugianarių braižymui:
+    x_ = linspace(x_min, x_max, 100);
+    % y-masyvas su tikrosiomis reikšmėmis:
+    y_ = f(x_);
 
-| Santrumpa                | Pilnas terminas                                                                                                                     | 
-|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------| 
-| IP                       | (angl. Internet Protocol) TODO?
-| TCP                      | (angl. Transmission Control Protocol) TODO?
-| MPTCP                    | (angl. Multipath TCP) TODO?
+    % skirtingų eilių x-taškai Lagranžui ir Niutonui:
+    x2 = linspace(x_min, x_max, 2);
+    x3 = linspace(x_min, x_max, 3);
+    x5 = linspace(x_min, x_max, 5);
+    x7 = linspace(x_min, x_max, 7);
+    x9 = linspace(x_min, x_max, 9);
 
+  % Gal būtų gražiau ir referinius taškus sukišti į t.p. celę.
+  % TODO:
+  % aproksim{Lagran_x, eil2} = linspace(1, 5, 2);
+  % aproksim{Lagran_x, eil3} = linspace(1, 5, 3);
+  % aproksim{Lagran_x, eil5} = linspace(1, 5, 5);
+  % aproksim{Lagran_x, eil7} = linspace(1, 5, 7);
+  % aproksim{Lagran_x, eil9} = linspace(1, 5, 9);
 
-# Terminai užsienio kalba
+    y2 = f(x2);
+    y3 = f(x3);
+    y5 = f(x5);
+    y7 = f(x7);
+    y9 = f(x9);
 
-| Terminas                 | Vertimas į lietuvių k.                                                                                                              | 
-|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------| 
-| Congestion               | Grūstis
-| Congestion control       | Perkrovų valdymas
-| Subflow                  | Posrūvis (nuo žodžio „srovė“) arba* Posrautis (nuo žodžio „srautas“), angl. _Flow_.
-| Rate of packets          | Paketų išsiuntimo sparta
-| TCP Stream               | TCP sesija
+%   % Skaičiuoju Lagranžo daugianario koeficientus
+    % kai taškų skaičius kinta:
+    [l2,~] = lagranp(x2, y2);
+    [l3,~] = lagranp(x3, y3);
+    [l5,~] = lagranp(x5, y5);
+    [l7,~] = lagranp(x7, y7);
+    [l9,~] = lagranp(x9, y9);
 
-[*] – tiktų, jei nesimaišys su angl. _Stream_
+    % Pagal Lagranžo koef-us apskaičiuoju 
+    % po 100 taškų diagramai:
+    yL2 = polyval(l2, x_);
+    yL3 = polyval(l3, x_);
+    yL5 = polyval(l5, x_);
+    yL7 = polyval(l7, x_);
+    yL9 = polyval(l9, x_);
 
+    % Lagranžo aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Lagran_vkkl, eil2} = immse(y_, yL2);
+    aproksim{Lagran_vkkl, eil3} = immse(y_, yL3);
+    aproksim{Lagran_vkkl, eil5} = immse(y_, yL5);
+    aproksim{Lagran_vkkl, eil7} = immse(y_, yL7);
+    aproksim{Lagran_vkkl, eil9} = immse(y_, yL9);
 
-# Literatūra
+    % Lagranžo aproksimacijų maksimali klaida:
+    aproksim{Lagran_makl, eil2} = max(abs(y_ - yL2));
+    aproksim{Lagran_makl, eil3} = max(abs(y_ - yL3));
+    aproksim{Lagran_makl, eil5} = max(abs(y_ - yL5));
+    aproksim{Lagran_makl, eil7} = max(abs(y_ - yL7));
+    aproksim{Lagran_makl, eil9} = max(abs(y_ - yL9));
 
-## Straipsniai
+%   % Skaičiuoju Niutono daugianario koeficientus
+    % kai taškų skaičius kinta:
+    N2 = niutonp(x2, y2);
+    N3 = niutonp(x3, y3);
+    N5 = niutonp(x5, y5);
+    N7 = niutonp(x7, y7);
+    N9 = niutonp(x9, y9);
 
-<a id="1">**1.**</a>
-LI, Wenzhong, et al. **SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks**. IEEE Journal on Selected Areas in Communications, **2019**, 37.11: 2621-2633.  
-https://doi.org/10.1109/JSAC.2019.2933761
+    % Pagal Niutono koeficientus apskaičiuoju 
+    % po 100 taškų diagramai:
+    yN2 = polyval(N2, x_);
+    yN3 = polyval(N3, x_);
+    yN5 = polyval(N5, x_);
+    yN7 = polyval(N7, x_);
+    yN9 = polyval(N9, x_);
 
-    Google Scholar cites: 7   
-    2019 JCR Impact Factor: 2/90 (Q1, Telecomunications)  
-    2019 Journal Impact Factor: 11.420    
-    5-Year impact factor: 9.803  
+    % Niutono aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Niuton_vkkl, eil2} = immse(y_, yN2);
+    aproksim{Niuton_vkkl, eil3} = immse(y_, yN3);
+    aproksim{Niuton_vkkl, eil5} = immse(y_, yN5);
+    aproksim{Niuton_vkkl, eil7} = immse(y_, yN7);
+    aproksim{Niuton_vkkl, eil9} = immse(y_, yN9);
 
-<a id="2">**2**.</a>
-JI, Ruiwen, et al. **Multipath TCP-Based IoT Communication Evaluation: From the Perspective of Multipath Management with Machine Learning**. Sensors, **2020**, 20.22: 6573.  
-https://doi.org/10.3390/s20226573
+    % Niutono aproksimacijų maksimali klaida:
+    aproksim{Niuton_makl, eil2} = max(abs(y_ - yN2));
+    aproksim{Niuton_makl, eil3} = max(abs(y_ - yN3));
+    aproksim{Niuton_makl, eil5} = max(abs(y_ - yN5));
+    aproksim{Niuton_makl, eil7} = max(abs(y_ - yN7));
+    aproksim{Niuton_makl, eil9} = max(abs(y_ - yN9));
 
-    Google Scholar cites: 0   
-    2019 JCR Impact Factor: 77/266 (Q2, Engineering, electrical & electronic)  
-    2019 Journal Impact Factor: 3.275  
-    5-Year impact factor: 3.427  
+%   % Skaičiuoju Čebyševo daugianario koeficientus
+    % kai taškų skaičius kinta:
+    [c2, xm2, ym2] = cheby(@f, 2-1, x_min, x_max);
+    [c3, xm3, ym3] = cheby(@f, 3-1, x_min, x_max);
+    [c5, xm5, ym5] = cheby(@f, 5-1, x_min, x_max);
+    [c7, xm7, ym7] = cheby(@f, 7-1, x_min, x_max);
+    [c9, xm9, ym9] = cheby(@f, 9-1, x_min, x_max);
+    % Taip pat ir Čebyševo mazgus [xm ym].
+    % (Čia taškų skaičiui -1, nes metodas grąžina +1 koef.)
 
-<a id="3">**3**.</a>
-WANG, Ting, et al. **Towards bandwidth guaranteed energy efficient data center networking**. Journal of Cloud Computing, **2015**, 4.1: 9.  
-https://doi.org/10.1186/s13677-015-0035-7
+    % Pagal Čebyševo koeficientus apskaičiuoju 
+    % po 100 taškų diagramai:
+    yC2 = polyval(c2, x_);
+    yC3 = polyval(c3, x_);
+    yC5 = polyval(c5, x_);
+    yC7 = polyval(c7, x_);
+    yC9 = polyval(c9, x_);
 
-    Google Scholar cites: 19   
-    2019 JCR Impact Factor: 66/156 (Q2, Computer science, information systems)  
-    2019 Journal Impact Factor: 2.788  
-    5-Year impact factor: --  
-    2018 JCR Impact Factor: 79/155 (Q3. Computer science, information systems)  
-    2018 Journal Impact Factor: 2.140  
+    % Čebyševo aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Cebyse_vkkl, eil2} = immse(y_, yC2);
+    aproksim{Cebyse_vkkl, eil3} = immse(y_, yC3);
+    aproksim{Cebyse_vkkl, eil5} = immse(y_, yC5);
+    aproksim{Cebyse_vkkl, eil7} = immse(y_, yC7);
+    aproksim{Cebyse_vkkl, eil9} = immse(y_, yC9);
 
-## Konferencijos
+    % Čebyševo aproksimacijų maksimali klaida:
+    aproksim{Cebyse_makl, eil2} = max(abs(y_ - yC2));
+    aproksim{Cebyse_makl, eil3} = max(abs(y_ - yC3));
+    aproksim{Cebyse_makl, eil5} = max(abs(y_ - yC5));
+    aproksim{Cebyse_makl, eil7} = max(abs(y_ - yC7));
+    aproksim{Cebyse_makl, eil9} = max(abs(y_ - yC9));
 
-<a id="4">**4**.</a>
-JIN, Heesang, et al. **CLEO: Machine learning for ECMP**. In: Proceedings of the 15th International Conference on emerging Networking EXperiments and Technologies. **2019**. p. 1-3.  
-https://doi.org/10.1145/3360468.3366768
+    % ---- Atvaizdavimas ----
 
-    Google Scholar cites: 0  
-    Google Scholar H5-index: 13  
-    Guide2Research Impact Score: 4.46  
+    % Vienos eilės proksimacijų šeima:
+    n_tosios_eiles_aproksimaciju_diagrama(2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2);
+    n_tosios_eiles_aproksimaciju_diagrama(3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3);
+    n_tosios_eiles_aproksimaciju_diagrama(5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5);
+    n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7);
+    n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9);
+    % Visų eilių klaidos priklausomybė:
+    klaidos_priklausomybes_nuo_eiles_diagrama('Vidutinė kvadratinė', [aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], [aproksim{Niuton_vkkl,:}], [aproksim{Cebyse_vkkl,:}])
+    klaidos_priklausomybes_nuo_eiles_diagrama('Maksimali', [aproksim{eile,:}], [aproksim{Lagran_makl,:}], [aproksim{Niuton_makl,:}], [aproksim{Cebyse_makl,:}])
+end % of program.
 
-<a id="5">**5**.</a>
-SILVA, Fabio; TOGOU, Mohammed Amine; MUNTEAN, Gabriel-Miro. **AVIRA: Enhanced Multipath for Content-aware Adaptive Virtual Reality**. In: 2020 International Wireless Communications and Mobile Computing (IWCMC). IEEE, **2020**. p. 917-922.  
-https://doi.org/10.1109/IWCMC48107.2020.9148293
+function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn)
 
-    Google Scholar cites: 0  
-    Google Scholar H5-index: 11  
-    Guide2Research Impact Score: 3.96  
+    % Pernaudosiu n kaip stringą diagramos apiforminimui:
+    n = strcat(' ', string(n));
 
-<a id="6">**6**.</a>
-MAI, Tianle, et al. **Self-learning Congestion Control of MPTCP in Satellites Communications**. In: 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC). IEEE, **2019**. p. 775-780.  
-https://doi.org/10.1109/IWCMC.2019.8766465
+    figure;
+    hold on;    
+    title(strcat(n, '-os eilės aproksimacija'));
+    % Braižau 100 taškų aproksimacijas per du taškus:
+    plot(x_,  yLn, 'b', 'DisplayName', 'Lagranžo daugianariu');
+    plot(x_,  yNn, 'm', 'DisplayName', 'Niutono daugianariu');
+    plot(x_,  yCn, 'r', 'DisplayName', 'Čebyševo daugianariu');
+    % Atvaizduoju referinius taškus:
+    plot(xn,   yn, '*', 'DisplayName', strcat(string(length(yn)), ' taškai L+N.'));
+    plot(xmn, ymn, '*', 'DisplayName', strcat(string(length(ymn)), ' mazgai Č.'));
 
-    Google Scholar cites: 2  
-    Google Scholar H5-index: 11  
-    Guide2Research Impact Score: 3.96  
+    xlabel('x');
+    ylabel('y');
+    legend;
+    grid;
+    ylim([2.7 3.5]);
+    hold off;
+end
 
-<a id="7">**7**.</a>
-HÖCHST, Jonas, et al. **Learning Wi-Fi Connection Loss Predictions for Seamless Vertical Handovers Using Multipath TCP**. In: 2019 IEEE 44th Conference on Local Computer Networks (LCN). IEEE, **2019**. p. 18-25.  
-https://doi.org/10.1109/LCN44214.2019.8990753
+function klaidos_priklausomybes_nuo_eiles_diagrama(klaidos_tipas, eile, L_klaida, N_klaida, C_klaida)
+% Atvaizduoju klaidos priklausomybę nuo aproksimavimo eilės:
+    figure('Name', klaidos_tipas);
+    hold on;
+    title([klaidos_tipas ' klaida']);
 
-    Google Scholar cites: 0  
-    Google Scholar H5-index: 6  
-    Guide2Research Impact Score: 2.31  
+    plot(eile, L_klaida, 'r', 'DisplayName', 'Lagranžo daugianariui');
+    % Panašu, kad „Niutono" kreivė visiškai paslepia 
+    % Lagranžo kreivę. Bet vaizduokim vis tiek:
+    plot(eile, N_klaida, 'g', 'DisplayName', 'Niutono daugianariui');
+    plot(eile, C_klaida, 'b', 'DisplayName', 'Čebyševo daugianariui');
 
-<a id="8">**8**.</a>
-CHUNG, Jonghwan, et al. **Machine learning based path management for mobile devices over MPTCP**. In: 2017 IEEE International Conference on Big Data and Smart Computing (BigComp). IEEE, **2017**. p. 206-209.  
-https://doi.org/10.1109/BIGCOMP.2017.7881739
+    xlabel('aproksimavimo eilė');
+    ylabel('klaidos dydis');
+    legend;
+    grid;
+    hold off;
+end
 
-    Google Scholar cites: 14  
-    Google Scholar H5-index: 5  
-    Guide2Research Impact Score: 1.65  
-
-<a id="9">**9**.</a>
-THAKUR, Neha Rupesh; KUNTE, Ashwini S. **Analysis of MPTCP Packet Scheduling, The Need of Data Hungry Applications**. In: Inventive Communication and Computational Technologies. Springer, Singapore, **2020**. p. 599-617.  
-https://doi.org/10.1007/978-981-15-0146-3_57
-
-    Google Scholar cites: 0  
-    Google Scholar H5-index: --  
-    Guide2Research Impact Score: --  
-
-<a id="10">**10**.</a>
-LIU, Peixiang. **Using Random Neural Network for Load Balancing in Data Centers**. In: Proceedings on the International Conference on Internet Computing (ICOMP). The Steering Committee of The World Congress in Computer Science, Computer Engineering and Applied Computing (WorldComp), **2015**. p. 3.  
-https://www.semanticscholar.org/paper/Using-Random-Neural-Network-for-Load-Balancing-in-Liu/19b16c8d11beadcf95fbfecc5f8dd2117a130ba2
-
-    Google Scholar cites: 2  
-    Google Scholar H5-index: --  
-    Guide2Research Impact Score: --  
-
-<a id="11">**11**.</a>
-WILSONPRAKASH, S.; DEEPALAKSHMI, P. **Artificial Neural Network Based Load Balancing On Software Defined Networking**. In: 2019 IEEE International Conference on Intelligent Techniques in Control, Optimization and Signal Processing (INCOS). IEEE, **2019**. p. 1-4.  
-https://doi.org/10.1109/INCOS45849.2019.8951365
-
-    Google Scholar cites: 0  
-    Google Scholar H5-index: --  
-    Guide2Research Impact Score: --  
-
+% Duotoji funkcija (93052026 mod 6) #0:
+function ret = f(x)
+    ret = (1+x) ./ log(1+x);
+end
