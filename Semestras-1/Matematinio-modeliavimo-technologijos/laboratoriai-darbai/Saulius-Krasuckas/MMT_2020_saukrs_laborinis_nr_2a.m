@@ -36,7 +36,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % y-masyvas su tikrosiomis reikšmėmis:
     y_ = f(x_);
 
-    % skirtingi taškų rinkiniai Lagranžui:
+    % skirtingų eilių taškų rinkiniai Lagranžui ir Niutonui:
     x2 = linspace(1, 5, 2);
     x3 = linspace(1, 5, 3);
     x5 = linspace(1, 5, 5);
@@ -58,6 +58,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     y9 = f(x9);
 
     % ---- ----
+
     % Skaičiuoju Lagranžo daugianario koeficientus
     % kai taškų skaičius kinta:
     [l2,~] = lagranp(x2, y2);
@@ -89,6 +90,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Lagran_makl, eil9} = max(abs(y_ - yL9));
 
     % ---- ----
+
     % Skaičiuoju Niutono daugianario koeficientus
     % kai taškų skaičius kinta:
     N2 = niutonp(x2, y2);
@@ -149,6 +151,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     plot(x_, yN5, 'm', 'DisplayName', 'Niut. 5 t.');
     plot(x_, yN7, 'r', 'DisplayName', 'Niut. 7 t.');
     plot(x_, yN9, 'g', 'DisplayName', 'Niut. 9 t.');
+
     % Atvaizduoju referinius taškus atvirkštine tvarka, 
     % kad ne tankesni taškai užgožtų retesnius, o atv.:
     plot(x9, y9, '*', 'DisplayName', '9 taškai');
