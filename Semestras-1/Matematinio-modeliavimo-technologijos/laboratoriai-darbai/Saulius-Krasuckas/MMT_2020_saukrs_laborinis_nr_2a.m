@@ -4,6 +4,10 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     clc; close all;
 
+    % Interpoliacijos intervalas:
+    x_min = 1;
+    x_max = 5;
+
     % Konstantos indeksuoti celės eilutėms:
     %
     eile        = 1; % aproksimacijos eilė
@@ -24,7 +28,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % pvz. 7-ta eilė grąžina 4-tą indeksą:
   % find([aproksim{eile, :}] == 7)
 
-    % Šįkart apsieisiu panaudodamas konstantas, vaizdžiau:
+    % Šįkart apsieisiu panaudodamas tik konstantas, vaizdžiau:
     eil2 = 1;
     eil3 = 2;
     eil5 = 3;
@@ -32,16 +36,16 @@ function MMT_2020_saukrs_laborinis_nr_2a
     eil9 = 5;
 
     % x-masyvas daugianarių braižymui:
-    x_ = linspace(1, 5, 100);
+    x_ = linspace(x_min, x_max, 100);
     % y-masyvas su tikrosiomis reikšmėmis:
     y_ = f(x_);
 
-    % skirtingų eilių taškų rinkiniai Lagranžui ir Niutonui:
-    x2 = linspace(1, 5, 2);
-    x3 = linspace(1, 5, 3);
-    x5 = linspace(1, 5, 5);
-    x7 = linspace(1, 5, 7);
-    x9 = linspace(1, 5, 9);
+    % skirtingų eilių x-taškai Lagranžui ir Niutonui:
+    x2 = linspace(x_min, x_max, 2);
+    x3 = linspace(x_min, x_max, 3);
+    x5 = linspace(x_min, x_max, 5);
+    x7 = linspace(x_min, x_max, 7);
+    x9 = linspace(x_min, x_max, 9);
 
   % Gal būtų gražiau ir referinius taškus sukišti į t.p. celę.
   % TODO:
@@ -121,13 +125,33 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Niuton_makl, eil7} = max(abs(y_ - yN7));
     aproksim{Niuton_makl, eil9} = max(abs(y_ - yN9));
 
-    % Atvaizdavimas
+    % ---- ----
+
+    % Skaičiuoju Čebyševo daugianario koeficientus
+    % kai taškų skaičius kinta:
+    [c2, xC2, YC2] = cheby(@f, 2-1, x_min, x_max);
+    [c3, xC3, YC3] = cheby(@f, 3-1, x_min, x_max);
+    [c5, xC5, YC5] = cheby(@f, 5-1, x_min, x_max);
+    [c7, xC7, YC7] = cheby(@f, 7-1, x_min, x_max);
+    [c9, xC9, YC9] = cheby(@f, 9-1, x_min, x_max);
+    % (čia taškų skaičius -1, nes metodas grąžina +1 koef.)
+
+    % Pagal Čebyševo koeficientus apskaičiuoju 
+    % po 100 taškų diagramai:
+    yC2 = polyval(c2, x_);
+    yC3 = polyval(c3, x_);
+    yC5 = polyval(c5, x_);
+    yC7 = polyval(c7, x_);
+    yC9 = polyval(c9, x_);
+
+    % ---- Atvaizdavimas ----
 
     hold on;
     title('Antros eilės aproksimacijos');
     % Braižau 100 taškų aproksimacijas per du taškus:
     plot(x_, yL2, 'b', 'DisplayName', 'Lagr. 2 t.');
     plot(x_, yN2, 'm', 'DisplayName', 'Niut. 2 t.');
+    plot(x_, yC2, 'r', 'DisplayName', 'Čeby. 2 t.');
     % Atvaizduoju referinius taškus:
     plot(x2, y2, '*', 'DisplayName', '2 taškai');
     %
@@ -140,24 +164,42 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     figure;
     hold on;
-    title('Aukštesnių eilių proksimacijos');
+    title('Trečios eilės proksimacijos');
     % Braižau 100 taškų aproksimacijas per pradinius taškus:
     plot(x_, yL3, 'b', 'DisplayName', 'Lagr. 3 t.');
+    plot(x_, yN3, 'b', 'DisplayName', 'Niut. 3 t.');
+    plot(x_, yC3, 'm', 'DisplayName', 'Čeby. 3 t.');
+    % Atvaizduoju referinius:
+    plot(x3, y3, '*', 'DisplayName', '3 taškai');
+    %
+    xlabel('x');
+    ylabel('y');
+    legend;
+    grid;
+    ylim([2.7 3.5]);
+    hold off;
+
+    figure;
+    hold on;
+    title('Aukštesnių eilių proksimacijos');
+    % Braižau 100 taškų aproksimacijas per pradinius taškus:
     plot(x_, yL5, 'm', 'DisplayName', 'Lagr. 5 t.');
     plot(x_, yL7, 'r', 'DisplayName', 'Lagr. 7 t.');
     plot(x_, yL9, 'g', 'DisplayName', 'Lagr. 9 t.');
 
-    plot(x_, yN3, 'b', 'DisplayName', 'Niut. 3 t.');
     plot(x_, yN5, 'm', 'DisplayName', 'Niut. 5 t.');
     plot(x_, yN7, 'r', 'DisplayName', 'Niut. 7 t.');
     plot(x_, yN9, 'g', 'DisplayName', 'Niut. 9 t.');
+
+    plot(x_, yC5, 'r', 'DisplayName', 'Čeby. 5 t.');
+    plot(x_, yC7, 'g', 'DisplayName', 'Čeby. 7 t.');
+    plot(x_, yC9, 'b', 'DisplayName', 'Čeby. 9 t.');
 
     % Atvaizduoju referinius taškus atvirkštine tvarka, 
     % kad ne tankesni taškai užgožtų retesnius, o atv.:
     plot(x9, y9, '*', 'DisplayName', '9 taškai');
     plot(x7, y7, '*', 'DisplayName', '7 taškai');
     plot(x5, y5, '*', 'DisplayName', '5 taškai');
-    plot(x3, y3, '*', 'DisplayName', '3 taškai');
     %
     xlabel('x');
     ylabel('y');
