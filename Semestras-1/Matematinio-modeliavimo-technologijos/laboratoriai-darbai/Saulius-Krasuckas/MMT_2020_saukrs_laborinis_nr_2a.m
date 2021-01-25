@@ -18,6 +18,8 @@ function MMT_2020_saukrs_laborinis_nr_2a
     Niuton_makl = 5; % Niut. maksimali klaida
     Cebyse_vkkl = 6; % Čeby. vidutinė kvadratinė klaida
     Cebyse_makl = 7; % Čeby. maksimali klaida
+    Pade_vkkl   = 8; % Padė vidutinė kvadratinė klaida
+    Pade_makl   = 9; % Padė maksimali klaida
 
     aproksim = {};
     aproksim(eile, :) = {2, 3, 5, 7, 9};
@@ -186,6 +188,20 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yP7 = polyval(Skai7, x_-x0) ./ polyval(Vard7, x_-x0);
     yP9 = polyval(Skai9, x_-x0) ./ polyval(Vard9, x_-x0);
 
+    % Padė aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Pade_vkkl, eil2} = immse(y_, yP2);
+    aproksim{Pade_vkkl, eil3} = immse(y_, yP3);
+    aproksim{Pade_vkkl, eil5} = immse(y_, yP5);
+    aproksim{Pade_vkkl, eil7} = immse(y_, yP7);
+    aproksim{Pade_vkkl, eil9} = immse(y_, yP9);
+
+    % Padė aproksimacijų maksimali klaida:
+    aproksim{Pade_makl, eil2} = max(abs(y_ - yP2));
+    aproksim{Pade_makl, eil3} = max(abs(y_ - yP3));
+    aproksim{Pade_makl, eil5} = max(abs(y_ - yP5));
+    aproksim{Pade_makl, eil7} = max(abs(y_ - yP7));
+    aproksim{Pade_makl, eil9} = max(abs(y_ - yP9));
+
     % ---- Atvaizdavimas ----
 
     % Vienos eilės proksimacijų šeima:
@@ -205,12 +221,16 @@ function MMT_2020_saukrs_laborinis_nr_2a
         'Vidutinė kvadratinė', [aproksim{eile,:}], ...
         [aproksim{Lagran_vkkl,:}], ...
         [aproksim{Niuton_vkkl,:}], ...
-        [aproksim{Cebyse_vkkl,:}])
+        [aproksim{Cebyse_vkkl,:}], ...
+        [aproksim{Pade_vkkl,:}] ...
+    )
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
         'Maksimali', [aproksim{eile,:}], ...
         [aproksim{Lagran_makl,:}], ...
         [aproksim{Niuton_makl,:}], ...
-        [aproksim{Cebyse_makl,:}])
+        [aproksim{Cebyse_makl,:}], ...
+        [aproksim{Pade_makl,:}] ...
+    )
 end % of program.
 
 function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn, yPn)
@@ -238,17 +258,18 @@ function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn
     hold off;
 end
 
-function klaidos_priklausomybes_nuo_eiles_diagrama(klaidos_tipas, eile, L_klaida, N_klaida, C_klaida)
+function klaidos_priklausomybes_nuo_eiles_diagrama(klaidos_tipas, eile, L_klaida, N_klaida, C_klaida, P_klaida)
 % Atvaizduoju klaidos priklausomybę nuo aproksimavimo eilės:
     figure;
     hold on;
     title([klaidos_tipas ' klaida']);
 
-    plot(eile, L_klaida, 'r', 'DisplayName', 'Lagranžo daugianariui');
+    plot(eile, L_klaida, 'b', 'DisplayName', 'Lagranžo daugianariui');
     % Panašu, kad „Niutono" kreivė visiškai paslepia 
     % Lagranžo kreivę. Bet vaizduokim vis tiek:
-    plot(eile, N_klaida, 'g', 'DisplayName', 'Niutono daugianariui');
-    plot(eile, C_klaida, 'b', 'DisplayName', 'Čebyševo daugianariui');
+    plot(eile, N_klaida, 'm', 'DisplayName', 'Niutono daugianariui');
+    plot(eile, C_klaida, 'r', 'DisplayName', 'Čebyševo daugianariui');
+    plot(eile, P_klaida, 'g', 'DisplayName', 'Pade daugianariams');
 
     xlabel('aproksimavimo eilė');
     ylabel('klaidos dydis');
