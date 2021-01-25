@@ -40,19 +40,19 @@ function MMT_2020_saukrs_laborinis_nr_2a
     Spline_vkkl = 8; % Spline vidutinė kvadratinė klaida
     Spline_makl = 9; % Spline maksimali klaida
 
-    aproksim = {};
-    aproksim(eile, :) = {2, 3, 5, 7, 9};
+    rez = {};
+    rez(eile, :) = {2, 3, 5, 7, 9};
 
     % Mokinuosi celės elementų indeksaciją:
 
-  % for i = 1:length(aproksim)
-  %     fprintf("%d ", aproksim{eile, i});
+  % for i = 1:length(rez)
+  %     fprintf("%d ", rez{eile, i});
   % end
 
     % Programinis indekso radimas pagal eilės dydį,
     % pvz. 7-ta eilė grąžina 4-tą indeksą:
 
-  % find([aproksim{eile, :}] == 7)
+  % find([rez{eile, :}] == 7)
 
     % Šįkart apsieisiu panaudodamas tik konstantas, vaizdžiau:
     eil2 = 1;
@@ -96,18 +96,18 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yL9 = polyval(l9, x_);
 
     % Lagranžo aproksimacijų vidutinė kvadratinė klaida:
-    aproksim{Lagran_vkkl, eil2} = immse(y_, yL2);
-    aproksim{Lagran_vkkl, eil3} = immse(y_, yL3);
-    aproksim{Lagran_vkkl, eil5} = immse(y_, yL5);
-    aproksim{Lagran_vkkl, eil7} = immse(y_, yL7);
-    aproksim{Lagran_vkkl, eil9} = immse(y_, yL9);
+    rez{Lagran_vkkl, eil2} = immse(y_, yL2);
+    rez{Lagran_vkkl, eil3} = immse(y_, yL3);
+    rez{Lagran_vkkl, eil5} = immse(y_, yL5);
+    rez{Lagran_vkkl, eil7} = immse(y_, yL7);
+    rez{Lagran_vkkl, eil9} = immse(y_, yL9);
 
     % Lagranžo aproksimacijų maksimali klaida:
-    aproksim{Lagran_makl, eil2} = max(abs(y_ - yL2));
-    aproksim{Lagran_makl, eil3} = max(abs(y_ - yL3));
-    aproksim{Lagran_makl, eil5} = max(abs(y_ - yL5));
-    aproksim{Lagran_makl, eil7} = max(abs(y_ - yL7));
-    aproksim{Lagran_makl, eil9} = max(abs(y_ - yL9));
+    rez{Lagran_makl, eil2} = max(abs(y_ - yL2));
+    rez{Lagran_makl, eil3} = max(abs(y_ - yL3));
+    rez{Lagran_makl, eil5} = max(abs(y_ - yL5));
+    rez{Lagran_makl, eil7} = max(abs(y_ - yL7));
+    rez{Lagran_makl, eil9} = max(abs(y_ - yL9));
 
 %   % Skaičiuoju Niutono daugianario koeficientus
     % kai taškų skaičius kinta:
@@ -146,20 +146,20 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yC9 = polyval(c9, x_);
 
     % Čebyševo aproksimacijų vidutinė kvadratinė klaida:
-    aproksim{Cebyse_vkkl, eil2} = immse(y_, yC2);
-    aproksim{Cebyse_vkkl, eil3} = immse(y_, yC3);
-    aproksim{Cebyse_vkkl, eil5} = immse(y_, yC5);
-    aproksim{Cebyse_vkkl, eil7} = immse(y_, yC7);
-    aproksim{Cebyse_vkkl, eil9} = immse(y_, yC9);
+    rez{Cebyse_vkkl, eil2} = immse(y_, yC2);
+    rez{Cebyse_vkkl, eil3} = immse(y_, yC3);
+    rez{Cebyse_vkkl, eil5} = immse(y_, yC5);
+    rez{Cebyse_vkkl, eil7} = immse(y_, yC7);
+    rez{Cebyse_vkkl, eil9} = immse(y_, yC9);
 
     % Čebyševo aproksimacijų maksimali klaida:
-    aproksim{Cebyse_makl, eil2} = max(abs(y_ - yC2));
-    aproksim{Cebyse_makl, eil3} = max(abs(y_ - yC3));
-    aproksim{Cebyse_makl, eil5} = max(abs(y_ - yC5));
-    aproksim{Cebyse_makl, eil7} = max(abs(y_ - yC7));
-    aproksim{Cebyse_makl, eil9} = max(abs(y_ - yC9));
+    rez{Cebyse_makl, eil2} = max(abs(y_ - yC2));
+    rez{Cebyse_makl, eil3} = max(abs(y_ - yC3));
+    rez{Cebyse_makl, eil5} = max(abs(y_ - yC5));
+    rez{Cebyse_makl, eil7} = max(abs(y_ - yC7));
+    rez{Cebyse_makl, eil9} = max(abs(y_ - yC9));
 
-%   % Skaičiuoju Pade daugianarių koeficientus
+%   % Skaičiuoju Padė daugianarių koeficientus
     % kai taškų skaičius kinta:
 
     % Skleidimui Teiloro eilute pasirenku x-tašką maždaug
@@ -175,7 +175,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % 9 = 5 + 4 eilės
     %
     % Nei teorijoje, nei užduotyje nerandu, kaip tiksliai įvardinta
-    % Pade racionacioniosios f-jos eilė (ją skaidant ar kopijuojant)
+    % Padė racionacioniosios f-jos eilė (ją skaidant ar kopijuojant)
     %
     [Skai2, Vard2, Teil2] = padeap(@f, x0, 1, 1, x_min, x_max);
     [Skai3, Vard3, Teil3] = padeap(@f, x0, 2, 1, x_min, x_max);
@@ -199,18 +199,18 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yT9 = polyval(Teil9, x_-x0);
 
     % Padė aproksimacijų vidutinė kvadratinė klaida:
-    aproksim{Pade_vkkl, eil2} = immse(y_, yP2);
-    aproksim{Pade_vkkl, eil3} = immse(y_, yP3);
-    aproksim{Pade_vkkl, eil5} = immse(y_, yP5);
-    aproksim{Pade_vkkl, eil7} = immse(y_, yP7);
-    aproksim{Pade_vkkl, eil9} = immse(y_, yP9);
+    rez{Pade_vkkl, eil2} = immse(y_, yP2);
+    rez{Pade_vkkl, eil3} = immse(y_, yP3);
+    rez{Pade_vkkl, eil5} = immse(y_, yP5);
+    rez{Pade_vkkl, eil7} = immse(y_, yP7);
+    rez{Pade_vkkl, eil9} = immse(y_, yP9);
 
     % Padė aproksimacijų maksimali klaida:
-    aproksim{Pade_makl, eil2} = max(abs(y_ - yP2));
-    aproksim{Pade_makl, eil3} = max(abs(y_ - yP3));
-    aproksim{Pade_makl, eil5} = max(abs(y_ - yP5));
-    aproksim{Pade_makl, eil7} = max(abs(y_ - yP7));
-    aproksim{Pade_makl, eil9} = max(abs(y_ - yP9));
+    rez{Pade_makl, eil2} = max(abs(y_ - yP2));
+    rez{Pade_makl, eil3} = max(abs(y_ - yP3));
+    rez{Pade_makl, eil5} = max(abs(y_ - yP5));
+    rez{Pade_makl, eil7} = max(abs(y_ - yP7));
+    rez{Pade_makl, eil9} = max(abs(y_ - yP9));
 
 %   % Skaičiuoju splainų y-taškus pagal x-taškus
     % kai referinių taškų skaičius kinta:
@@ -222,18 +222,18 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yS9 = spline(x9, y9, x_);
 
     % Spline aproksimacijų vidutinė kvadratinė klaida:
-    aproksim{Spline_vkkl, eil2} = immse(y_, yS2);
-    aproksim{Spline_vkkl, eil3} = immse(y_, yS3);
-    aproksim{Spline_vkkl, eil5} = immse(y_, yS5);
-    aproksim{Spline_vkkl, eil7} = immse(y_, yS7);
-    aproksim{Spline_vkkl, eil9} = immse(y_, yS9);
+    rez{Spline_vkkl, eil2} = immse(y_, yS2);
+    rez{Spline_vkkl, eil3} = immse(y_, yS3);
+    rez{Spline_vkkl, eil5} = immse(y_, yS5);
+    rez{Spline_vkkl, eil7} = immse(y_, yS7);
+    rez{Spline_vkkl, eil9} = immse(y_, yS9);
 
     % Spline aproksimacijų maksimali klaida:
-    aproksim{Spline_makl, eil2} = max(abs(y_ - yS2));
-    aproksim{Spline_makl, eil3} = max(abs(y_ - yS3));
-    aproksim{Spline_makl, eil5} = max(abs(y_ - yS5));
-    aproksim{Spline_makl, eil7} = max(abs(y_ - yS7));
-    aproksim{Spline_makl, eil9} = max(abs(y_ - yS9));
+    rez{Spline_makl, eil2} = max(abs(y_ - yS2));
+    rez{Spline_makl, eil3} = max(abs(y_ - yS3));
+    rez{Spline_makl, eil5} = max(abs(y_ - yS5));
+    rez{Spline_makl, eil7} = max(abs(y_ - yS7));
+    rez{Spline_makl, eil9} = max(abs(y_ - yS9));
 
     % ---- Atvaizdavimas ----
 
@@ -251,18 +251,18 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % Visų eilių klaidos priklausomybė:
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
-        'Vidutinė kvadratinė', [aproksim{eile,:}], ...
-        [aproksim{Lagran_vkkl,:}], ...
-        [aproksim{Cebyse_vkkl,:}], ...
-        [aproksim{Pade_vkkl,:}], ...
-        [aproksim{Spline_vkkl,:}] ...
+        'Vidutinė kvadratinė', [rez{eile,:}], ...
+        [rez{Lagran_vkkl,:}], ...
+        [rez{Cebyse_vkkl,:}], ...
+        [rez{Pade_vkkl,:}], ...
+        [rez{Spline_vkkl,:}] ...
     )
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
-        'Maksimali', [aproksim{eile,:}], ...
-        [aproksim{Lagran_makl,:}], ...
-        [aproksim{Cebyse_makl,:}], ...
-        [aproksim{Pade_makl,:}], ...
-        [aproksim{Spline_makl,:}] ...
+        'Maksimali', [rez{eile,:}], ...
+        [rez{Lagran_makl,:}], ...
+        [rez{Cebyse_makl,:}], ...
+        [rez{Pade_makl,:}], ...
+        [rez{Spline_makl,:}] ...
     )
 end % of program.
 
