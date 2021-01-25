@@ -163,55 +163,12 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % ---- Atvaizdavimas ----
 
-    % kuriu paprogramę apkrosimacijų šeimos piešimui.
+    % Paprogramė aproksimacijų šeimos piešimui:
     n_tosios_eiles_aproksimaciju_diagrama(2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2);
-
-    figure;
-    hold on;
-    title('Trečios eilės aproksimacijos');
-    % Braižau 100 taškų aproksimacijas per pradinius taškus:
-    plot(x_, yL3, 'b', 'DisplayName', 'Lagr. 3 t.');
-    plot(x_, yN3, 'b', 'DisplayName', 'Niut. 3 t.');
-    plot(x_, yC3, 'm', 'DisplayName', 'Čeby. 3 t.');
-    % Atvaizduoju referinius:
-    plot(x3, y3, '*', 'DisplayName', '3 taškai L+N');
-    plot(xm3, ym3, '*', 'DisplayName', '3 taškai Č');
-    %
-    xlabel('x');
-    ylabel('y');
-    legend;
-    grid;
-    ylim([2.7 3.5]);
-    hold off;
-
-    figure;
-    hold on;
-    title('Aukštesnių eilių proksimacijos');
-    % Braižau 100 taškų aproksimacijas per pradinius taškus:
-    plot(x_, yL5, 'm', 'DisplayName', 'Lagr. 5 t.');
-    plot(x_, yL7, 'r', 'DisplayName', 'Lagr. 7 t.');
-    plot(x_, yL9, 'g', 'DisplayName', 'Lagr. 9 t.');
-
-    plot(x_, yN5, 'm', 'DisplayName', 'Niut. 5 t.');
-    plot(x_, yN7, 'r', 'DisplayName', 'Niut. 7 t.');
-    plot(x_, yN9, 'g', 'DisplayName', 'Niut. 9 t.');
-
-    plot(x_, yC5, 'r', 'DisplayName', 'Čeby. 5 t.');
-    plot(x_, yC7, 'g', 'DisplayName', 'Čeby. 7 t.');
-    plot(x_, yC9, 'b', 'DisplayName', 'Čeby. 9 t.');
-
-    % Atvaizduoju referinius taškus atvirkštine tvarka, 
-    % kad ne tankesni taškai užgožtų retesnius, o atv.:
-    plot(x9, y9, '*', 'DisplayName', '9 taškai');
-    plot(x7, y7, '*', 'DisplayName', '7 taškai');
-    plot(x5, y5, '*', 'DisplayName', '5 taškai');
-    %
-    xlabel('x');
-    ylabel('y');
-    legend;
-    grid;
-    ylim([2.7 3.5]);
-    hold off;
+    n_tosios_eiles_aproksimaciju_diagrama(3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3);
+    n_tosios_eiles_aproksimaciju_diagrama(5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5);
+    n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7);
+    n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9);
 
     figure;
     hold on;
