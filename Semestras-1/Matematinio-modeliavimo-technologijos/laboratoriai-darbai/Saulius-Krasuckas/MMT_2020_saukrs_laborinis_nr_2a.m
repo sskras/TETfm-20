@@ -33,23 +33,23 @@ function MMT_2020_saukrs_laborinis_nr_2a
     eile        = 1; % aproksimacijos eilės
     Lagran_vkkl = 2; % Lagr. vidutinė kvadratinė klaida
     Lagran_makl = 3; % Lagr. maksimali klaida
-    Niuton_vkkl = 4; % Niut. vidutinė kvadratinė klaida
-    Niuton_makl = 5; % Niut. maksimali klaida
-    Cebyse_vkkl = 6; % Čeby. vidutinė kvadratinė klaida
-    Cebyse_makl = 7; % Čeby. maksimali klaida
-    Pade_vkkl   = 8; % Padė vidutinė kvadratinė klaida
-    Pade_makl   = 9; % Padė maksimali klaida
+    Cebyse_vkkl = 4; % Čeby. vidutinė kvadratinė klaida
+    Cebyse_makl = 5; % Čeby. maksimali klaida
+    Pade_vkkl   = 6; % Padė vidutinė kvadratinė klaida
+    Pade_makl   = 7; % Padė maksimali klaida
 
     aproksim = {};
     aproksim(eile, :) = {2, 3, 5, 7, 9};
 
     % Tikrinu celės elementų indeksaciją:
+
   % for i = 1:length(aproksim)
   %     fprintf("%d ", aproksim{eile, i});
   % end
 
     % Programinis indekso radimas pagal eilę,
     % pvz. 7-ta eilė grąžina 4-tą indeksą:
+
   % find([aproksim{eile, :}] == 7)
 
     % Šįkart apsieisiu panaudodamas tik konstantas, vaizdžiau:
@@ -70,14 +70,6 @@ function MMT_2020_saukrs_laborinis_nr_2a
     x5 = linspace(x_min, x_max, 5);
     x7 = linspace(x_min, x_max, 7);
     x9 = linspace(x_min, x_max, 9);
-
-  % Gal būtų gražiau ir referinius taškus sukišti į t.p. celę.
-  % TODO:
-  % aproksim{Lagran_x, eil2} = linspace(1, 5, 2);
-  % aproksim{Lagran_x, eil3} = linspace(1, 5, 3);
-  % aproksim{Lagran_x, eil5} = linspace(1, 5, 5);
-  % aproksim{Lagran_x, eil7} = linspace(1, 5, 7);
-  % aproksim{Lagran_x, eil9} = linspace(1, 5, 9);
 
     y2 = f(x2);
     y3 = f(x3);
@@ -131,19 +123,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yN7 = polyval(N7, x_);
     yN9 = polyval(N9, x_);
 
-    % Niutono aproksimacijų vidutinė kvadratinė klaida:
-    aproksim{Niuton_vkkl, eil2} = immse(y_, yN2);
-    aproksim{Niuton_vkkl, eil3} = immse(y_, yN3);
-    aproksim{Niuton_vkkl, eil5} = immse(y_, yN5);
-    aproksim{Niuton_vkkl, eil7} = immse(y_, yN7);
-    aproksim{Niuton_vkkl, eil9} = immse(y_, yN9);
-
-    % Niutono aproksimacijų maksimali klaida:
-    aproksim{Niuton_makl, eil2} = max(abs(y_ - yN2));
-    aproksim{Niuton_makl, eil3} = max(abs(y_ - yN3));
-    aproksim{Niuton_makl, eil5} = max(abs(y_ - yN5));
-    aproksim{Niuton_makl, eil7} = max(abs(y_ - yN7));
-    aproksim{Niuton_makl, eil9} = max(abs(y_ - yN9));
+    % Niutono aproksimacijų klaidų neskaičiuosime (pagal užduotį)
 
 %   % Skaičiuoju Čebyševo daugianario koeficientus
     % kai taškų skaičius kinta:
@@ -245,14 +225,12 @@ function MMT_2020_saukrs_laborinis_nr_2a
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
         'Vidutinė kvadratinė', [aproksim{eile,:}], ...
         [aproksim{Lagran_vkkl,:}], ...
-        [aproksim{Niuton_vkkl,:}], ...
         [aproksim{Cebyse_vkkl,:}], ...
         [aproksim{Pade_vkkl,:}] ...
     )
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
         'Maksimali', [aproksim{eile,:}], ...
         [aproksim{Lagran_makl,:}], ...
-        [aproksim{Niuton_makl,:}], ...
         [aproksim{Cebyse_makl,:}], ...
         [aproksim{Pade_makl,:}] ...
     )
@@ -287,7 +265,7 @@ end
 
 function klaidos_priklausomybes_nuo_eiles_diagrama( ...
     klaidos_tipas, eile, ...
-    L_klaida, N_klaida, C_klaida, P_klaida)
+    L_klaida, C_klaida, P_klaida)
 % Atvaizduoju klaidos priklausomybę nuo aproksimavimo eilės:
     figure;
     hold on;
