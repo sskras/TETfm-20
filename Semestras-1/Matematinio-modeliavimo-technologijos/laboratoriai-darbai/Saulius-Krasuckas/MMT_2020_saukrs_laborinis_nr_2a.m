@@ -159,6 +159,14 @@ function MMT_2020_saukrs_laborinis_nr_2a
 %   % Skaičiuoju Pade daugianarių koeficientus
     % kai taškų skaičius kinta:
 
+    % Skleidimui Teiloro eilute pasirenku x-tašką maždaug
+    % ten, kur funkcija kinta staigiausiai:
+    x0 = 1.8;
+
+    [Skai2, Vard2, Teil2] = padeap(@f, x0, 1, 1, x_min, x_max);
+
+    yP2 = polyval(Skai2, x_-x0) ./ polyval(Vard2, x_-x0);
+
     % ---- Atvaizdavimas ----
 
     % Vienos eilės proksimacijų šeima:
@@ -198,7 +206,7 @@ end
 
 function klaidos_priklausomybes_nuo_eiles_diagrama(klaidos_tipas, eile, L_klaida, N_klaida, C_klaida)
 % Atvaizduoju klaidos priklausomybę nuo aproksimavimo eilės:
-    figure('Name', klaidos_tipas);
+    figure;
     hold on;
     title([klaidos_tipas ' klaida']);
 
