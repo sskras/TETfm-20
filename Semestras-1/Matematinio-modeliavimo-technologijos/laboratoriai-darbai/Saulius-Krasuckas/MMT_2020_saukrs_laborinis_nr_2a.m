@@ -164,17 +164,25 @@ function MMT_2020_saukrs_laborinis_nr_2a
     x0 = 1.8;
 
     [Skai2, Vard2, Teil2] = padeap(@f, x0, 1, 1, x_min, x_max);
+    [Skai3, Vard3, Teil3] = padeap(@f, x0, 2, 1, x_min, x_max);
+    [Skai5, Vard5, Teil5] = padeap(@f, x0, 3, 2, x_min, x_max);
+    [Skai7, Vard7, Teil7] = padeap(@f, x0, 4, 3, x_min, x_max);
+    [Skai9, Vard9, Teil9] = padeap(@f, x0, 5, 4, x_min, x_max);
 
     yP2 = polyval(Skai2, x_-x0) ./ polyval(Vard2, x_-x0);
+    yP3 = polyval(Skai3, x_-x0) ./ polyval(Vard3, x_-x0);
+    yP5 = polyval(Skai5, x_-x0) ./ polyval(Vard5, x_-x0);
+    yP7 = polyval(Skai7, x_-x0) ./ polyval(Vard7, x_-x0);
+    yP9 = polyval(Skai9, x_-x0) ./ polyval(Vard9, x_-x0);
 
     % ---- Atvaizdavimas ----
 
     % Vienos eilės proksimacijų šeima:
     n_tosios_eiles_aproksimaciju_diagrama(2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2, yP2);
-    n_tosios_eiles_aproksimaciju_diagrama(3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3, yP2);
-    n_tosios_eiles_aproksimaciju_diagrama(5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5, yP2);
-    n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7, yP2);
-    n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9, yP2);
+    n_tosios_eiles_aproksimaciju_diagrama(3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3, yP3);
+    n_tosios_eiles_aproksimaciju_diagrama(5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5, yP5);
+    n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7, yP7);
+    n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9, yP9);
     % Visų eilių klaidos priklausomybė:
     klaidos_priklausomybes_nuo_eiles_diagrama('Vidutinė kvadratinė', [aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], [aproksim{Niuton_vkkl,:}], [aproksim{Cebyse_vkkl,:}])
     klaidos_priklausomybes_nuo_eiles_diagrama('Maksimali', [aproksim{eile,:}], [aproksim{Lagran_makl,:}], [aproksim{Niuton_makl,:}], [aproksim{Cebyse_makl,:}])
