@@ -176,18 +176,18 @@ end
 
 function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn)
 
-    n = string(n);
+    n = strcat(' ', string(n));
 
     figure;
     hold on;    
     title(strcat(n, '-os eilės aproksimacijos'));
     % Braižau 100 taškų aproksimacijas per du taškus:
-    plot(x_, yLn, 'b', 'DisplayName', 'Lagr. n t.');
-    plot(x_, yNn, 'm', 'DisplayName', 'Niut. n t.');
-    plot(x_, yCn, 'r', 'DisplayName', 'Čeby. n t.');
+    plot(x_,  yLn, 'b', 'DisplayName', 'Lagranžo daugianariu');
+    plot(x_,  yNn, 'm', 'DisplayName', 'Niutono daugianariu');
+    plot(x_,  yCn, 'r', 'DisplayName', 'Čebyševo daugianariu');
     % Atvaizduoju referinius taškus:
-    plot(xn, yn, '*', 'DisplayName', strcat(n, ' taškai L+N'));
-    plot(xmn, ymn, '*', 'DisplayName', strcat(n, ' mazgai Č'));
+    plot(xn,   yn, '*', 'DisplayName', strcat(n, ' taškai L+N.'));
+    plot(xmn, ymn, '*', 'DisplayName', strcat(n, ' mazgai Č.'));
 
     xlabel('x');
     ylabel('y');
