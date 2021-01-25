@@ -170,17 +170,17 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % ---- Atvaizdavimas ----
 
     % Vienos eilės proksimacijų šeima:
-    n_tosios_eiles_aproksimaciju_diagrama(2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2);
-    n_tosios_eiles_aproksimaciju_diagrama(3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3);
-    n_tosios_eiles_aproksimaciju_diagrama(5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5);
-    n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7);
-    n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9);
+    n_tosios_eiles_aproksimaciju_diagrama(2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2, yP2);
+    n_tosios_eiles_aproksimaciju_diagrama(3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3, yP2);
+    n_tosios_eiles_aproksimaciju_diagrama(5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5, yP2);
+    n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7, yP2);
+    n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9, yP2);
     % Visų eilių klaidos priklausomybė:
     klaidos_priklausomybes_nuo_eiles_diagrama('Vidutinė kvadratinė', [aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], [aproksim{Niuton_vkkl,:}], [aproksim{Cebyse_vkkl,:}])
     klaidos_priklausomybes_nuo_eiles_diagrama('Maksimali', [aproksim{eile,:}], [aproksim{Lagran_makl,:}], [aproksim{Niuton_makl,:}], [aproksim{Cebyse_makl,:}])
 end % of program.
 
-function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn)
+function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn, yPn)
 
     % Pernaudosiu n kaip stringą diagramos apiforminimui:
     n = strcat(' ', string(n));
@@ -192,6 +192,7 @@ function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn
     plot(x_,  yLn, 'b', 'DisplayName', 'Lagranžo daugianariu');
     plot(x_,  yNn, 'm', 'DisplayName', 'Niutono daugianariu');
     plot(x_,  yCn, 'r', 'DisplayName', 'Čebyševo daugianariu');
+    plot(x_,  yPn, 'g', 'DisplayName', 'Pade daugianariais');
     % Atvaizduoju referinius taškus:
     plot(xn,   yn, '*', 'DisplayName', strcat(string(length(yn)), ' taškai L+N.'));
     plot(xmn, ymn, '*', 'DisplayName', strcat(string(length(ymn)), ' mazgai Č.'));
