@@ -187,6 +187,9 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yP7 = polyval(Skai7, x_-x0) ./ polyval(Vard7, x_-x0);
     yP9 = polyval(Skai9, x_-x0) ./ polyval(Vard9, x_-x0);
 
+    % Skaičiuoju Padė koef-ų radimui panaudoto skleidinio
+    % Teiloro eilute aproksimuotą f-ją (formuluotė brrr):
+
     yT2 = polyval(Teil2, x_-x0);
     yT3 = polyval(Teil3, x_-x0);
     yT5 = polyval(Teil5, x_-x0);
