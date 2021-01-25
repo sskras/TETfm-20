@@ -18,13 +18,13 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % Programa braižo 7 diagramas:
     %
-    % (Figure 1) atvaizduota 2-os eilės aproksimacija
-    % (Figure 2) atvaizduota 3-os eilės aproksimacija
-    % (Figure 3) atvaizduota 5-os eilės aproksimacija
-    % (Figure 4) atvaizduota 7-os eilės aproksimacija
-    % (Figure 5) atvaizduota 9-os eilės aproksimacija
-    % (Figure 6) atvaizduota vidutinės kv. klaidos kitimai
-    % (Figure 7) atvaizduota maksimalios klaidos kitimai
+    % (Figure 1) vaizduojama 2-os eilės aproksimacija
+    % (Figure 2) vaizduojama 3-os eilės aproksimacija
+    % (Figure 3) vaizduojama 5-os eilės aproksimacija
+    % (Figure 4) vaizduojama 7-os eilės aproksimacija
+    % (Figure 5) vaizduojama 9-os eilės aproksimacija
+    % (Figure 6) vaizduojami vidutinės kv. klaidos kitimai
+    % (Figure 7) vaizduojami maksimalios klaidos kitimai
 
     clc; close all;
 
