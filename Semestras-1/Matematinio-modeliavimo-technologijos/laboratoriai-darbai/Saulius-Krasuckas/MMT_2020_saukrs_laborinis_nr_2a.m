@@ -37,17 +37,19 @@ function MMT_2020_saukrs_laborinis_nr_2a
     Cebyse_makl = 5; % Čeby. maksimali klaida
     Pade_vkkl   = 6; % Padė vidutinė kvadratinė klaida
     Pade_makl   = 7; % Padė maksimali klaida
+    Spline_vkkl = 8; % Spline vidutinė kvadratinė klaida
+    Spline_makl = 9; % Spline maksimali klaida
 
     aproksim = {};
     aproksim(eile, :) = {2, 3, 5, 7, 9};
 
-    % Tikrinu celės elementų indeksaciją:
+    % Mokinuosi celės elementų indeksaciją:
 
   % for i = 1:length(aproksim)
   %     fprintf("%d ", aproksim{eile, i});
   % end
 
-    % Programinis indekso radimas pagal eilę,
+    % Programinis indekso radimas pagal eilės dydį,
     % pvz. 7-ta eilė grąžina 4-tą indeksą:
 
   % find([aproksim{eile, :}] == 7)
@@ -210,37 +212,62 @@ function MMT_2020_saukrs_laborinis_nr_2a
     aproksim{Pade_makl, eil7} = max(abs(y_ - yP7));
     aproksim{Pade_makl, eil9} = max(abs(y_ - yP9));
 
+%   % Skaičiuoju splainų y-taškus pagal x-taškus
+    % kai referinių taškų skaičius kinta:
+
+    yS2 = spline(x2, y2, x_);
+    yS3 = spline(x3, y3, x_);
+    yS5 = spline(x5, y5, x_);
+    yS7 = spline(x7, y7, x_);
+    yS9 = spline(x9, y9, x_);
+
+    % Spline aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Spline_vkkl, eil2} = immse(y_, yS2);
+    aproksim{Spline_vkkl, eil3} = immse(y_, yS3);
+    aproksim{Spline_vkkl, eil5} = immse(y_, yS5);
+    aproksim{Spline_vkkl, eil7} = immse(y_, yS7);
+    aproksim{Spline_vkkl, eil9} = immse(y_, yS9);
+
+    % Spline aproksimacijų maksimali klaida:
+    aproksim{Spline_makl, eil2} = max(abs(y_ - yS2));
+    aproksim{Spline_makl, eil3} = max(abs(y_ - yS3));
+    aproksim{Spline_makl, eil5} = max(abs(y_ - yS5));
+    aproksim{Spline_makl, eil7} = max(abs(y_ - yS7));
+    aproksim{Spline_makl, eil9} = max(abs(y_ - yS9));
+
     % ---- Atvaizdavimas ----
 
     % Vienos eilės proksimacijų šeima:
     n_tosios_eiles_aproksimaciju_diagrama( ...
-        2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2, yP2, yT2);
+        2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2, yP2, yT2, yS2);
     n_tosios_eiles_aproksimaciju_diagrama( ...
-        3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3, yP3, yT3);
+        3, x3, y3, xm3, ym3, x_, yL3, yN3, yC3, yP3, yT3, yS3);
     n_tosios_eiles_aproksimaciju_diagrama( ...
-        5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5, yP5, yT5);
+        5, x5, y5, xm5, ym5, x_, yL5, yN5, yC5, yP5, yT5, yS5);
     n_tosios_eiles_aproksimaciju_diagrama( ...
-        7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7, yP7, yT7);
+        7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7, yP7, yT7, yS7);
     n_tosios_eiles_aproksimaciju_diagrama( ...
-        9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9, yP9, yT9);
+        9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9, yP9, yT9, yS9);
 
     % Visų eilių klaidos priklausomybė:
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
         'Vidutinė kvadratinė', [aproksim{eile,:}], ...
         [aproksim{Lagran_vkkl,:}], ...
         [aproksim{Cebyse_vkkl,:}], ...
-        [aproksim{Pade_vkkl,:}] ...
+        [aproksim{Pade_vkkl,:}], ...
+        [aproksim{Spline_vkkl,:}] ...
     )
     klaidos_priklausomybes_nuo_eiles_diagrama( ...
         'Maksimali', [aproksim{eile,:}], ...
         [aproksim{Lagran_makl,:}], ...
         [aproksim{Cebyse_makl,:}], ...
-        [aproksim{Pade_makl,:}] ...
+        [aproksim{Pade_makl,:}], ...
+        [aproksim{Spline_makl,:}] ...
     )
 end % of program.
 
 function n_tosios_eiles_aproksimaciju_diagrama( ...
-    n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn, yPn, yTn)
+    n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn, yPn, yTn, ySn)
 
     % Pernaudosiu n kaip stringą diagramos apiforminimui:
     n = strcat(' ', string(n));
@@ -250,10 +277,11 @@ function n_tosios_eiles_aproksimaciju_diagrama( ...
     title(strcat(n, '-os eilės aproksimacija'));
     % Braižau 100 taškų aproksimacijas per du taškus:
     plot(x_,  yLn, 'm', 'DisplayName', 'Lagranžo daugianariu');
-    plot(x_,  yNn, 'y*', 'DisplayName', 'Niutono daugianariu');
+    plot(x_,  yNn, 'y', 'DisplayName', 'Niutono daugianariu');
     plot(x_,  yCn, 'r', 'DisplayName', 'Čebyševo daugianariu');
     plot(x_,  yPn, 'g', 'DisplayName', 'Padė daugianariais');
     plot(x_,  yTn, 'b', 'DisplayName', 'Teiloro eilute iš Padė');
+    plot(x_,  ySn, 'c', 'DisplayName', 'Spline daugianariais');
     % Atvaizduoju referinius taškus:
     plot(xn,   yn, 'o', 'DisplayName', strcat(string(length(yn)), ' taškai L+N.'));
     plot(xmn, ymn, 'o', 'DisplayName', strcat(string(length(ymn)), ' mazgai Č.'));
@@ -262,13 +290,13 @@ function n_tosios_eiles_aproksimaciju_diagrama( ...
     ylabel('y');
     legend;
     grid;
-    ylim([2.7 3.5]);
+    ylim([2.7 3.8]);
     hold off;
 end
 
 function klaidos_priklausomybes_nuo_eiles_diagrama( ...
     klaidos_tipas, eile, ...
-    L_klaida, C_klaida, P_klaida)
+    L_klaida, C_klaida, P_klaida, S_klaida)
 % Atvaizduoju klaidos priklausomybę nuo aproksimavimo eilės:
     figure;
     hold on;
@@ -277,6 +305,7 @@ function klaidos_priklausomybes_nuo_eiles_diagrama( ...
     plot(eile, L_klaida, 'm', 'DisplayName', 'Lagranžo daugianariui');
     plot(eile, C_klaida, 'r', 'DisplayName', 'Čebyševo daugianariui');
     plot(eile, P_klaida, 'g', 'DisplayName', 'Padė daugianariams');
+    plot(eile, S_klaida, 'c', 'DisplayName', 'Spline daugianariams');
 
     xlabel('aproksimavimo eilė');
     ylabel('klaidos dydis');
