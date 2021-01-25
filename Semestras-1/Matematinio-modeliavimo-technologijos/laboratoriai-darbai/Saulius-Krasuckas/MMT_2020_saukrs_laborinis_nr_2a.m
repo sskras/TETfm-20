@@ -15,6 +15,8 @@ function MMT_2020_saukrs_laborinis_nr_2a
     Lagran_makl = 3; % Lagr. maksimali klaida
     Niuton_vkkl = 4; % Niut. vidutinė kvadratinė klaida
     Niuton_makl = 5; % Niut. maksimali klaida
+    Cebyse_vkkl = 6; % Čeby. vidutinė kvadratinė klaida
+    Cebyse_makl = 7; % Čeby. maksimali klaida
 
     aproksim = {};
     aproksim(eile, :) = {2, 3, 5, 7, 9};
@@ -111,14 +113,14 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yN7 = polyval(N7, x_);
     yN9 = polyval(N9, x_);
 
-    % Lagranžo aproksimacijų vidutinė kvadratinė klaida:
+    % Niutono aproksimacijų vidutinė kvadratinė klaida:
     aproksim{Niuton_vkkl, eil2} = immse(y_, yN2);
     aproksim{Niuton_vkkl, eil3} = immse(y_, yN3);
     aproksim{Niuton_vkkl, eil5} = immse(y_, yN5);
     aproksim{Niuton_vkkl, eil7} = immse(y_, yN7);
     aproksim{Niuton_vkkl, eil9} = immse(y_, yN9);
 
-    % Lagranžo aproksimacijų maksimali klaida:
+    % Niutono aproksimacijų maksimali klaida:
     aproksim{Niuton_makl, eil2} = max(abs(y_ - yN2));
     aproksim{Niuton_makl, eil3} = max(abs(y_ - yN3));
     aproksim{Niuton_makl, eil5} = max(abs(y_ - yN5));
@@ -129,12 +131,13 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % Skaičiuoju Čebyševo daugianario koeficientus
     % kai taškų skaičius kinta:
-    [c2, xC2, YC2] = cheby(@f, 2-1, x_min, x_max);
-    [c3, xC3, YC3] = cheby(@f, 3-1, x_min, x_max);
-    [c5, xC5, YC5] = cheby(@f, 5-1, x_min, x_max);
-    [c7, xC7, YC7] = cheby(@f, 7-1, x_min, x_max);
-    [c9, xC9, YC9] = cheby(@f, 9-1, x_min, x_max);
-    % (čia taškų skaičius -1, nes metodas grąžina +1 koef.)
+    [c2, xm2, ym2] = cheby(@f, 2-1, x_min, x_max);
+    [c3, xm3, ym3] = cheby(@f, 3-1, x_min, x_max);
+    [c5, xm5, ym5] = cheby(@f, 5-1, x_min, x_max);
+    [c7, xm7, ym7] = cheby(@f, 7-1, x_min, x_max);
+    [c9, xm9, ym9] = cheby(@f, 9-1, x_min, x_max);
+    % Taip pat ir Čebyševo mazgus [xm ym].
+    % (Čia taškų skaičius -1, nes metodas grąžina +1 koef.)
 
     % Pagal Čebyševo koeficientus apskaičiuoju 
     % po 100 taškų diagramai:
@@ -143,6 +146,20 @@ function MMT_2020_saukrs_laborinis_nr_2a
     yC5 = polyval(c5, x_);
     yC7 = polyval(c7, x_);
     yC9 = polyval(c9, x_);
+
+    % Niutono aproksimacijų vidutinė kvadratinė klaida:
+    aproksim{Cebyse_vkkl, eil2} = immse(y_, yC2);
+    aproksim{Cebyse_vkkl, eil3} = immse(y_, yC3);
+    aproksim{Cebyse_vkkl, eil5} = immse(y_, yC5);
+    aproksim{Cebyse_vkkl, eil7} = immse(y_, yC7);
+    aproksim{Cebyse_vkkl, eil9} = immse(y_, yC9);
+
+    % Niutono aproksimacijų maksimali klaida:
+    aproksim{Cebyse_makl, eil2} = max(abs(y_ - yC2));
+    aproksim{Cebyse_makl, eil3} = max(abs(y_ - yC3));
+    aproksim{Cebyse_makl, eil5} = max(abs(y_ - yC5));
+    aproksim{Cebyse_makl, eil7} = max(abs(y_ - yC7));
+    aproksim{Cebyse_makl, eil9} = max(abs(y_ - yC9));
 
     % ---- Atvaizdavimas ----
 
@@ -153,7 +170,8 @@ function MMT_2020_saukrs_laborinis_nr_2a
     plot(x_, yN2, 'm', 'DisplayName', 'Niut. 2 t.');
     plot(x_, yC2, 'r', 'DisplayName', 'Čeby. 2 t.');
     % Atvaizduoju referinius taškus:
-    plot(x2, y2, '*', 'DisplayName', '2 taškai');
+    plot(x2, y2, '*', 'DisplayName', '2 taškai L+N');
+    plot(xm2, ym2, '*', 'DisplayName', '2 mazgai Č');
     %
     xlabel('x');
     ylabel('y');
@@ -164,13 +182,14 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     figure;
     hold on;
-    title('Trečios eilės proksimacijos');
+    title('Trečios eilės aproksimacijos');
     % Braižau 100 taškų aproksimacijas per pradinius taškus:
     plot(x_, yL3, 'b', 'DisplayName', 'Lagr. 3 t.');
     plot(x_, yN3, 'b', 'DisplayName', 'Niut. 3 t.');
     plot(x_, yC3, 'm', 'DisplayName', 'Čeby. 3 t.');
     % Atvaizduoju referinius:
-    plot(x3, y3, '*', 'DisplayName', '3 taškai');
+    plot(x3, y3, '*', 'DisplayName', '3 taškai L+N');
+    plot(xm3, ym3, '*', 'DisplayName', '3 taškai Č');
     %
     xlabel('x');
     ylabel('y');
@@ -213,12 +232,15 @@ function MMT_2020_saukrs_laborinis_nr_2a
     title('Maksimali ir vidutinė kvadratinė klaidos');
     % Atvaizduoju vidutinės kvadratinės ir maksimalios
     % klaidų priklausomybes nuo aproksimavimo eilės:
-    plot([aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], 'r', 'DisplayName', 'Lagran. vid. kv.');
-    plot([aproksim{eile,:}], [aproksim{Lagran_makl,:}], 'g', 'DisplayName', 'Lagran. maksimali');
+    plot([aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], 'r', 'DisplayName', 'Lagranžo vid. kv.');
+    plot([aproksim{eile,:}], [aproksim{Lagran_makl,:}], 'g', 'DisplayName', 'Lagranžo maksimali');
     % Panašu, kad „Niutono" kreivės visiškai paslepia 
     % Lagranžo kreives. Bet vaizduokim vis tiek:
     plot([aproksim{eile,:}], [aproksim{Niuton_vkkl,:}], 'b', 'DisplayName', 'Niutono vid. kv.');
     plot([aproksim{eile,:}], [aproksim{Niuton_makl,:}], 'm', 'DisplayName', 'Niutono maksimali');
+    %
+    plot([aproksim{eile,:}], [aproksim{Cebyse_vkkl,:}], 'y', 'DisplayName', 'Čebyševo vid. kv.');
+    plot([aproksim{eile,:}], [aproksim{Cebyse_makl,:}], 'c', 'DisplayName', 'Čebyševo maksimali');
     %
     xlabel('aproksimavimo eilė');
     ylabel('klaidos dydis');
