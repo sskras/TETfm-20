@@ -163,23 +163,8 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % ---- Atvaizdavimas ----
 
-    figure;
-    hold on;
-    title('Antros eilės aproksimacijos');
-    % Braižau 100 taškų aproksimacijas per du taškus:
-    plot(x_, yL2, 'b', 'DisplayName', 'Lagr. 2 t.');
-    plot(x_, yN2, 'm', 'DisplayName', 'Niut. 2 t.');
-    plot(x_, yC2, 'r', 'DisplayName', 'Čeby. 2 t.');
-    % Atvaizduoju referinius taškus:
-    plot(x2, y2, '*', 'DisplayName', '2 taškai L+N');
-    plot(xm2, ym2, '*', 'DisplayName', '2 mazgai Č');
-    %
-    xlabel('x');
-    ylabel('y');
-    legend;
-    grid;
-    ylim([2.7 3.5]);
-    hold off;
+    % kuriu paprogramę apkrosimacijų šeimos piešimui.
+    n_tosios_eiles_aproksimaciju_diagrama(2, x2, y2, xm2, ym2, x_, yL2, yN2, yC2);
 
     figure;
     hold on;
@@ -253,4 +238,24 @@ end
 % Duotoji funkcija (93052026 mod 6) #0:
 function ret = f(x)
     ret = (1+x) ./ log(1+x);
+end
+
+function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn)
+    figure;
+    hold on;
+    title('n-tos eilės aproksimacijos');
+    % Braižau 100 taškų aproksimacijas per du taškus:
+    plot(x_, yLn, 'b', 'DisplayName', 'Lagr. n t.');
+    plot(x_, yNn, 'm', 'DisplayName', 'Niut. n t.');
+    plot(x_, yCn, 'r', 'DisplayName', 'Čeby. n t.');
+    % Atvaizduoju referinius taškus:
+    plot(xn, yn, '*', 'DisplayName', 'n taškai L+N');
+    plot(xmn, ymn, '*', 'DisplayName', 'n mazgai Č');
+    %
+    xlabel('x');
+    ylabel('y');
+    legend;
+    grid;
+    ylim([2.7 3.5]);
+    hold off;
 end
