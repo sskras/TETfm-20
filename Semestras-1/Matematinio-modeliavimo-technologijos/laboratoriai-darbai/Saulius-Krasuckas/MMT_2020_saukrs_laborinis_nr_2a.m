@@ -1,5 +1,6 @@
 function MMT_2020_saukrs_laborinis_nr_2a
 
+    % Prijungiu funkcijas iš dėstytojo modulių (iš .zip):
     addpath('interp');
 
     clc; close all;
@@ -170,24 +171,25 @@ function MMT_2020_saukrs_laborinis_nr_2a
     n_tosios_eiles_aproksimaciju_diagrama(7, x7, y7, xm7, ym7, x_, yL7, yN7, yC7);
     n_tosios_eiles_aproksimaciju_diagrama(9, x9, y9, xm9, ym9, x_, yL9, yN9, yC9);
     % Visų eilių klaidos priklausomybė:
-    klaidos_priklausomybes_nuo_eiles_diagrama('vid. kv.', [aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], [aproksim{Niuton_vkkl,:}], [aproksim{Cebyse_vkkl,:}])
-    klaidos_priklausomybes_nuo_eiles_diagrama('maksimali', [aproksim{eile,:}], [aproksim{Lagran_makl,:}], [aproksim{Niuton_makl,:}], [aproksim{Cebyse_makl,:}])
+    klaidos_priklausomybes_nuo_eiles_diagrama('Vidutinė kvadratinė', [aproksim{eile,:}], [aproksim{Lagran_vkkl,:}], [aproksim{Niuton_vkkl,:}], [aproksim{Cebyse_vkkl,:}])
+    klaidos_priklausomybes_nuo_eiles_diagrama('Maksimali', [aproksim{eile,:}], [aproksim{Lagran_makl,:}], [aproksim{Niuton_makl,:}], [aproksim{Cebyse_makl,:}])
 end
 
 function n_tosios_eiles_aproksimaciju_diagrama(n, xn, yn, xmn, ymn, x_, yLn, yNn, yCn)
 
+    % Pernaudosiu n kaip stringą diagramos apiforminimui:
     n = strcat(' ', string(n));
 
     figure;
     hold on;    
-    title(strcat(n, '-os eilės aproksimacijos'));
+    title(strcat(n, '-os eilės aproksimacija'));
     % Braižau 100 taškų aproksimacijas per du taškus:
     plot(x_,  yLn, 'b', 'DisplayName', 'Lagranžo daugianariu');
     plot(x_,  yNn, 'm', 'DisplayName', 'Niutono daugianariu');
     plot(x_,  yCn, 'r', 'DisplayName', 'Čebyševo daugianariu');
     % Atvaizduoju referinius taškus:
-    plot(xn,   yn, '*', 'DisplayName', strcat(n, ' taškai L+N.'));
-    plot(xmn, ymn, '*', 'DisplayName', strcat(n, ' mazgai Č.'));
+    plot(xn,   yn, '*', 'DisplayName', strcat(string(length(yn)), ' taškai L+N.'));
+    plot(xmn, ymn, '*', 'DisplayName', strcat(string(length(ymn)), ' mazgai Č.'));
 
     xlabel('x');
     ylabel('y');
@@ -203,11 +205,11 @@ function klaidos_priklausomybes_nuo_eiles_diagrama(klaidos_tipas, eile, L_klaida
     hold on;
     title([klaidos_tipas ' klaida']);
 
-    plot(eile, L_klaida, 'r', 'DisplayName', ['Lagranžo ' klaidos_tipas]);
+    plot(eile, L_klaida, 'r', 'DisplayName', 'Lagranžo daugianariui');
     % Panašu, kad „Niutono" kreivė visiškai paslepia 
     % Lagranžo kreivę. Bet vaizduokim vis tiek:
-    plot(eile, N_klaida, 'g', 'DisplayName', ['Niutono ' klaidos_tipas]);
-    plot(eile, C_klaida, 'b', 'DisplayName', ['Čebyševo ' klaidos_tipas]);
+    plot(eile, N_klaida, 'g', 'DisplayName', 'Niutono daugianariui');
+    plot(eile, C_klaida, 'b', 'DisplayName', 'Čebyševo daugianariui');
 
     xlabel('aproksimavimo eilė');
     ylabel('klaidos dydis');
