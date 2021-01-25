@@ -3,15 +3,34 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % Prijungiu funkcijas iš dėstytojo modulių (iš .zip):
     addpath('interp');
 
-    clc; close all;
+    % Duotoji funkcija (93052026 mod 6) yra #0. Kodas apačioje:
+    % 
+    % function ret = f(x)
+    %     ret = (1+x) ./ log(1+x);
+    % end
 
     % Interpoliacijos intervalas:
     x_min = 1;
     x_max = 5;
 
+    % Aproksimacijų braižymui:
+    diagramos_tasku_sk = 100;
+
+    % Programa braižo 7 diagramas:
+    %
+    % (Figure 1) atvaizduota 2-os eilės aproksimacija
+    % (Figure 2) atvaizduota 3-os eilės aproksimacija
+    % (Figure 3) atvaizduota 5-os eilės aproksimacija
+    % (Figure 4) atvaizduota 7-os eilės aproksimacija
+    % (Figure 5) atvaizduota 9-os eilės aproksimacija
+    % (Figure 6) atvaizduota vidutinės kv. klaidos kitimai
+    % (Figure 7) atvaizduota maksimalios klaidos kitimai
+
+    clc; close all;
+
     % Konstantos indeksuoti celės eilutėms:
     %
-    eile        = 1; % aproksimacijos eilė
+    eile        = 1; % aproksimacijos eilės
     Lagran_vkkl = 2; % Lagr. vidutinė kvadratinė klaida
     Lagran_makl = 3; % Lagr. maksimali klaida
     Niuton_vkkl = 4; % Niut. vidutinė kvadratinė klaida
@@ -41,7 +60,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     eil9 = 5;
 
     % x-masyvas daugianarių braižymui:
-    x_ = linspace(x_min, x_max, 100);
+    x_ = linspace(x_min, x_max, diagramos_tasku_sk);
     % y-masyvas su tikrosiomis reikšmėmis:
     y_ = f(x_);
 
@@ -255,8 +274,8 @@ function n_tosios_eiles_aproksimaciju_diagrama( ...
     plot(x_,  yPn, 'g', 'DisplayName', 'Padė daugianariais');
     plot(x_,  yTn, 'b', 'DisplayName', 'Teiloro eilute iš Padė');
     % Atvaizduoju referinius taškus:
-    plot(xn,   yn, '*', 'DisplayName', strcat(string(length(yn)), ' taškai L+N.'));
-    plot(xmn, ymn, '*', 'DisplayName', strcat(string(length(ymn)), ' mazgai Č.'));
+    plot(xn,   yn, 'o', 'DisplayName', strcat(string(length(yn)), ' taškai L+N.'));
+    plot(xmn, ymn, 'o', 'DisplayName', strcat(string(length(ymn)), ' mazgai Č.'));
 
     xlabel('x');
     ylabel('y');
