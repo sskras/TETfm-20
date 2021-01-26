@@ -28,4 +28,10 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % x1(end) = 10.000000
     % size(x1) = [1 100]
 
+    % Lygčių sistemai paruošiu matricą A iš 
+    % nuskaitytų x1 duomenų pirmame stulpelyje:
+    A(:, 1) = x1';
+    % ... ir vienetų antrame stulpelyje, formulė (3.8.2):
+    A(:, 2) = ones(size(x1));
+
 end % of program.
