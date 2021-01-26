@@ -31,20 +31,21 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % x1(end) = 10.000000
     % size(x1) = [1 100]
 
-    % Fiksuoju x stulpelio pavidalu:
+    % Fiksuoju duomenis x stulpelio pavidalu kaip x:
     x = x1';
-
-    % Lygčių sistemai paruošiu matricą A iš 
-    % nuskaitytų x1 duomenų pirmame stulpelyje:
-    A(:, 1) = x;
-    % ... ir vienetų antrame stulpelyje, formulė (3.8.2):
-    A(:, 2) = ones(size(x1));
+    y = yd1';
 
     % Ištiesinu x į x':
     x_ = 1 ./ x;
 
-    % Skaičiuoju TLS atsakymą:
-    theta = A \ x_;
+    % Lygčių sistemai paruošiu matricą A iš 
+    % ... nuskaitytų x1 duomenų pirmame stulpelyje:
+    A(:, 1) = x_;
+    % ... ir vienetų antrame stulpelyje, formulė (3.8.2):
+    A(:, 2) = ones(size(x));
+
+    % Skaičiuoju TLS atsakymą iš A ir y:
+    theta = A \ y;
 
     % Išsitraukiu a ir b:
     a = theta(1);
