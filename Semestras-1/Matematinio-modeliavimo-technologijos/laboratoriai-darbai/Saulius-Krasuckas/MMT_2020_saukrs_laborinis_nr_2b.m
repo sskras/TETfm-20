@@ -46,25 +46,63 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % Skaičiuoju TLS atsakymą iš A ir y:
     a_b = A \ y
-
-    % Išsitraukiu a ir b:
-    a = a_b(1);
-    b = a_b(2);
+    
+    % a_b =
+    %     0.5132
+    %     4.9786
 
     % Skaičiuoju y1 pagal vektorių x, koef. a ir b:
-    y1 = f(a_b, x);
+    y1 = f(a_b, x1);
     
-    koef = lsqcurvefit(@f, [5; 1], x1, yd1);
+    % Kviečiu lsqcurvefit(), paduodu:
+    %
+    % užduoties f-ją,
+    % pradinį artinį [5, 1],
+    % nuskaitytus duomenis x1 ir yd1
+    koef = lsqcurvefit(@f, [5; 1], x1, yd1)
+
+    % Local minimum found.
+    %
+    % Optimization completed because the size of the gradient is less than
+    % the value of the optimality tolerance.
+    %
+    % <stopping criteria details>
+    %
+    % koef =
+    % 
+    %     0.5132
+    %     4.9786
+    %
+    % lsq
+    % 
+    % Optimization completed: The first-order optimality measure, 1.256496e-07,
+    % is less than options.OptimalityTolerance = 1.000000e-06.
+
+    % Apskaičiuoju kreivę pagal naujus koeficientus:
+    y_lscf1 = f(koef, x1);
 
     figure; hold on;
-    % Brėžiu yd1 ir y1 grafikus:
+
+    % Nuskaitytų duomenų diagrama:
     plot(x1, yd1, 'bx');
+
+    % Aproksimacija su "\":
     plot(x1, y1, 'r');
+
+    % Aproksimacija su lsqcurvefit():
+    plot(x1, y_lscf1, 'go');
+
     grid on;
     legend( ...
         'Pateikti duomenys', ...
-        'Ištiesinimo aproksimacija panaudojant operatorių "\\"' ...
+        'Ištiesinimo aproksimacija su operatorium "\\"', ...
+        'Ištiesinimo aproksimacija su lsqcurvefit()' ...
     );
+
+    disp(['lscurvefit() apskaičiuoja lygiai tokius pačius ' ...
+        'koeficientus kaip ir A\y, todėl jos rezultatą ' ...
+        'y_lscf1 žymiu apskritimais, kad atsiskirtų nuo y1.' ...
+    ]);
 end % of program.
 
 % Duotoji funkcija (93052026 mod 6) #0:
