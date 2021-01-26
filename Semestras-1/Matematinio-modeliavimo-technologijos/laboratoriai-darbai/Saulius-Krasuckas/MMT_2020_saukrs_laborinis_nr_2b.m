@@ -54,8 +54,12 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % Skaičiuoju y1 pagal vektorių x, a ir b:
     y1 = a ./ x1 + b;
 
-    % Brėžiu y1 ir yd1 grafikus:
-    figure;
-    plot(x1, yd1, 'bx', x1, y1, 'r');
-    legend('Pateikti duomenys', 'Ištiesinimo aproksimacija panaudojant operatorių "\\"');
+    % Brėžiu yd1 ir y1 grafikus:
+    figure; hold on;
+    plot(x1, yd1, 'bx');
+    plot(x1, y1, 'r');
+    legend( ...
+        'Pateikti duomenys', ...
+        'Ištiesinimo aproksimacija panaudojant operatorių "\\"' ...
+    );
 end % of program.
