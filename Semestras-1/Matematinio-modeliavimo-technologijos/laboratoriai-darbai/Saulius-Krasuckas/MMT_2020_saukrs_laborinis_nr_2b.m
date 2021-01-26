@@ -19,6 +19,13 @@ function MMT_2020_saukrs_laborinis_nr_2a
     %
     %     "data1.mat"
 
-    
+    % Iš failo nuskaitome vektorius x1 ir yd1:
+    load('data1.mat');
+    fprintf('x1(1) = %f\n', x1(1));
+    fprintf('x1(end) = %f\n', x1(end));
+    fprintf('size(x1) = %s\n', mat2str(size(x1)));
+    % x1(1) = 0.100000
+    % x1(end) = 10.000000
+    % size(x1) = [1 100]
 
 end % of program.
