@@ -45,17 +45,19 @@ function MMT_2020_saukrs_laborinis_nr_2a
     A(:, 2) = ones(size(x));
 
     % Skaičiuoju TLS atsakymą iš A ir y:
-    theta = A \ y;
+    a_b = A \ y
 
     % Išsitraukiu a ir b:
-    a = theta(1);
-    b = theta(2);
+    a = a_b(1);
+    b = a_b(2);
 
     % Skaičiuoju y1 pagal vektorių x, koef. a ir b:
-    y1 = f(theta, x);
+    y1 = f(a_b, x);
+    
+    koef = lsqcurvefit(@f, [5; 1], x1, yd1);
 
-    % Brėžiu yd1 ir y1 grafikus:
     figure; hold on;
+    % Brėžiu yd1 ir y1 grafikus:
     plot(x1, yd1, 'bx');
     plot(x1, y1, 'r');
     grid on;
