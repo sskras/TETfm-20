@@ -1,4 +1,4 @@
-function MMT_2020_saukrs_laborinis_nr_2a
+function MMT_2020_saukrs_laborinis_nr_2b
 
     % Prijungiu funkcijas iš dėstytojo modulių (iš .zip):
     addpath('approx');
@@ -100,8 +100,8 @@ function MMT_2020_saukrs_laborinis_nr_2a
     );
 
     disp(['lscurvefit() apskaičiuoja lygiai tokius pačius ' ...
-        'koeficientus kaip ir A\y, todėl jos rezultatą ' ...
-        'y_lscf1 žymiu apskritimais, kad atsiskirtų nuo y1.' ...
+        'koeficientus kaip ir A\y, todėl jos grafiką y_lscf1' ...
+        'atvaizduoju apskritimais, kad atsiskirtų nuo y1.' ...
     ]);
 end % of program.
 
