@@ -51,15 +51,23 @@ function MMT_2020_saukrs_laborinis_nr_2a
     a = theta(1);
     b = theta(2);
 
-    % Skaičiuoju y1 pagal vektorių x, a ir b:
-    y1 = a ./ x1 + b;
+    % Skaičiuoju y1 pagal vektorių x, koef. a ir b:
+    y1 = f(theta, x);
 
     % Brėžiu yd1 ir y1 grafikus:
     figure; hold on;
     plot(x1, yd1, 'bx');
     plot(x1, y1, 'r');
+    grid on;
     legend( ...
         'Pateikti duomenys', ...
         'Ištiesinimo aproksimacija panaudojant operatorių "\\"' ...
     );
 end % of program.
+
+% Duotoji funkcija (93052026 mod 6) #0:
+function ret = f(koef, x)
+    a = koef(1);
+    b = koef(2);
+    ret = a ./ x + b;
+end
