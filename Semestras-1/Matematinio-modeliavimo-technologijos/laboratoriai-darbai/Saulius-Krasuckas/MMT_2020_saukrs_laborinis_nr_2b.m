@@ -2,6 +2,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
 
     % Prijungiu funkcijas iš dėstytojo modulių (iš .zip):
     addpath('approx');
+    clc; close all;
 
     % Duotoji funkcija (93052026 mod 3) yra #0:
     %
@@ -49,7 +50,10 @@ function MMT_2020_saukrs_laborinis_nr_2a
     a = theta(1);
     b = theta(2);
 
-    % Skaičiuoju y pagal x, a, b:
-    y = a/x1 + b;
-    
+    % Skaičiuoju y1 pagal vektorių x, a ir b:
+    y1 = a ./ x1 + b;
+
+    % Brėžiu y1 ir yd1 grafikus:
+    figure;
+    plot(x1, yd1, 'bx', x1, y1, 'r');
 end % of program.
