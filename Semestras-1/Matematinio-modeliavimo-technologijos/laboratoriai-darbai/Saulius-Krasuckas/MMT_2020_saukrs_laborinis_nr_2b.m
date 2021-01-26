@@ -42,5 +42,14 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % Ištiesinu x į x':
     x_ = 1 ./ x;
 
+    % Skaičiuoju TLS atsakymą:
     theta = A \ x_;
+
+    % Išsitraukiu a ir b:
+    a = theta(1);
+    b = theta(2);
+
+    % Skaičiuoju y pagal x, a, b:
+    y = a/x1 + b;
+    
 end % of program.
