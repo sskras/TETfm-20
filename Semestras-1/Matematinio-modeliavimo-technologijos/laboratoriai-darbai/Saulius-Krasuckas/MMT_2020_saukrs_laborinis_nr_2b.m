@@ -31,7 +31,7 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % x1(end) = 10.000000
     % size(x1) = [1 100]
 
-    % Fiksuoju duomenis x stulpelio pavidalu kaip x:
+    % Fiksuoju duomenis stulpelių pavidalu:
     x = x1';
     y = yd1';
 
@@ -57,4 +57,5 @@ function MMT_2020_saukrs_laborinis_nr_2a
     % Brėžiu y1 ir yd1 grafikus:
     figure;
     plot(x1, yd1, 'bx', x1, y1, 'r');
+    legend('Pateikti duomenys', 'Ištiesinimo aproksimacija panaudojant operatorių "\\"');
 end % of program.
