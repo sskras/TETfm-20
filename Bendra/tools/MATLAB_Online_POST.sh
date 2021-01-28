@@ -2,7 +2,7 @@
 
 # run the script like this:
 #
-#    $ bash MATLAB_Online_POST.sh "MMT 2020/teorija/6, NLS/run_newton2.m"
+#    $ bash MATLAB_Online_POST.sh "MMT 2020/laboratoriniai/1. TLS sprendimas/MMT_2020_saukrs_laborinis_nr_1.m"
 
 #FILE_PATH="RESTfull.m"
 FILE_PATH="$1"
