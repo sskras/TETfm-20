@@ -3,7 +3,7 @@ function MMT_2020_saukrs_laborinis_nr_3()
     clc;
 
     % Fizikinės konstantos:
-    k = 1.38e-23; %  J/K
+    k = 1.380e-23; %  J/K
     e = 1.602e-19; %  C
 
     % Duota kreivė:
@@ -18,9 +18,9 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % I_1 = I_{01} \cdot (e^{{U e}/{kT_1}} - 1)
     %     = I_{01} \cdot (e^{{U e}/{k(t_1 + 273.15})} - 1) ;
     % $$
-    %
+
     % Rasime nežinomus diodo parametrus I_{01} ir t_1 pagal
-    % du laisvai pasirinktus taškus A (U_a, I_1a) ir B (U_b, I_1b).
+    % du laisvai pasirinktus taškus A=(U_a, I_1a) ir B=(U_b, I_1b).
     %
     % Perdarome funkciją į įprastinį pavidalą:
     %
@@ -33,8 +33,8 @@ function MMT_2020_saukrs_laborinis_nr_3()
     %
     % $$
     % \begin{cases}
-    % f_{1a}(I_{01}, t_1) = 0 \\
-    % f_{1b}(I_{01}, t_1) = 0
+    % f_{1_A}(I_{01}, t_1) = 0 \\
+    % f_{1_B}(I_{01}, t_1) = 0
     % \end{cases}
     % $$
     %
@@ -59,9 +59,10 @@ function MMT_2020_saukrs_laborinis_nr_3()
         ret(2) = I_01 * (exp(U_b*e / (k*t_1)) - 1) - I_1b;
     end
 
-    disp(f1([1, 300]));
+    % Tikrinu, ar f1() skaičiuoja:
+    disp(f1([0.01, 300]));
     
-    % Funkcija pasitikrinimui:
+    % Atsakymo (tikroji) funkcija pasitikrinimui:
     function ret = I(U)
 
         % Duomenys pasitikrinimui:
@@ -79,5 +80,5 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % I(0.12 V) = 0.198083 mA artimas pasirinktiems 0,2 mA.
     % I(0.15 V) = 0.746815 mA artimas pasirinktiems 0,8 mA.
 
-    % Bus randa
+    % 
 end % of main
