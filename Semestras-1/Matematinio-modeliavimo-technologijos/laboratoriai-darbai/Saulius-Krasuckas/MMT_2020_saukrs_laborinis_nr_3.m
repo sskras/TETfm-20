@@ -146,12 +146,18 @@ function MMT_2020_saukrs_laborinis_nr_3()
 
     % Braižau diodo VACh prie rastų I_0 ir t1 reikšmių:
     UU = linspace(-0.05, 0.18, tasku_sk);
-    II = I(UU, I_01_newt, t_1_newt);
+    IIn = I(UU, I_01_newt, t_1_newt);
+    IIt = I(UU, I_01_tikr, t_1_tikr);
 
-    xlabel('U, V');
-    ylabel('I_1, A');
-    plot(UU, II);
-    xlim([-0.05 0.17]);
+    figure;
+    plot(UU, IIn, 'r');
+    % Braižau ir tikrąją VACh:
+    plot(UU, IIt, 'b');
+    xlim([-0.05 0.173]);
     ylim([-1e-4 10e-4]);
     grid on;
+   %grid minor;
+    set(gca,'xtick',[-0.04:0.02:0.16])
+    xlabel('U, V');
+    ylabel('I_1, A');
 end % of main
