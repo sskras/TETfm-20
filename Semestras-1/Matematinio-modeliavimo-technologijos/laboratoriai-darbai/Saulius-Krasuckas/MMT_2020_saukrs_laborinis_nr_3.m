@@ -152,9 +152,9 @@ function MMT_2020_saukrs_laborinis_nr_3()
     figure;
     title('Diodo VACh');
     hold on;
-    plot(UU, IIn, 'r');
-    % Braižau ir tikrąją VACh:
-    plot(UU, IIt, 'b');
+
+    plot(UU, IIn, 'r', 'DisplayName', ['Niutono met., ', mat2str([I_01_newt, t_1_newt])]);
+    plot(UU, IIt, 'b', 'DisplayName', ['Tikroji VACh, ', mat2str([I_01_tikr, t_1_tikr])]);
 
     xlim([-0.05 0.173]);
     ylim([-1e-4 10e-4]);
@@ -165,5 +165,6 @@ function MMT_2020_saukrs_laborinis_nr_3()
     set(gca, 'GridLineStyle', ':');
     xlabel('U, V');
     ylabel('I_1, A');
+    legend('Location', 'NorthWest');
     hold off;
 end % of main
