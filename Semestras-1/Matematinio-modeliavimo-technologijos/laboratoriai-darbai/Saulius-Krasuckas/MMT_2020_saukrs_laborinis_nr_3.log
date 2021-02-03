@@ -1,15 +1,15 @@
 Pradinis taškas x0=
-     1   300
+     1    20
 
 f1(x0)=
-  102.9049  343.8264
+  114.8134  394.2724
 
 Apskaičiuota su newtons():       I_01 = 0.951742 μA, t=-12.890927 °C
-Apskaičiuota su fsolve():        I_01 = 0.951742 μA, t=-12.890928 °C
+Apskaičiuota su fsolve():        I_01 = 0.951742 μA, t=-12.890930 °C
 Tikrosios reikšmės (užduotyje):  I_01 = 1.000000 μA, t=-10.000000 °C
 
 I_0 paklaida: 4.826 %
-t paklaida:   1.099 %
+t paklaida:   -28.909 %
 
 I(0.120 V) = 0.198083 mA
 I(0.151 V) = 0.780542 mA
