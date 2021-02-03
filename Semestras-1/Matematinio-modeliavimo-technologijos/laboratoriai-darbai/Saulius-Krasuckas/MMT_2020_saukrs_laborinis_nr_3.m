@@ -1,6 +1,8 @@
 function MMT_2020_saukrs_laborinis_nr_3()
 
     clc;
+    clear all;
+    close all;
 
     % Fizikinės konstantos:
     k = 1.380e-23; % J/K
@@ -85,7 +87,7 @@ function MMT_2020_saukrs_laborinis_nr_3()
     
     % Kviečiu dėstytojo funkciją, skaičiuojančią pagal 
     % modifikuotą Niutono metodą (su paderinamu žingsnio dydžiu):
-    [x,fx,xx] = newtons(@f1, x0);
+    [x,~,~] = newtons(@f1, x0);
 
     I_01_newt = x(1);
     t_1_newt  = x(2);
@@ -102,15 +104,39 @@ function MMT_2020_saukrs_laborinis_nr_3()
     t_1_tikr  =             -10; %°C
     t_1_tikr  = t_1_tikr - abs0; % K
 
+    % Susikuriu funkciją aiškesniam reikšmių vaizdavimui konsolėje:
     function i_konsole(title, I, t)
-        %
-        fprintf('%-30s I_01 = %f μA, t=%f °C\n', strcat(title,':'), I*1e6, t+abs0);
+        title = [title ':'];
+        fprintf('%-32s I_01 = %f μA, t=%f °C\n', title, I*1e6, t+abs0);
     end
-    i_konsole('Apskaičiuota su newtons()',  I_01_newt, t_1_newt);
-    i_konsole('Apskaičiuota su fsolve()',   I_01_fsol, t_1_fsol);
-    i_konsole('Tikrosios vertės (užduoty)', I_01_tikr, t_1_tikr);
 
-    % Tikrinu pasirinktus taškus pagal duotus pasitikrinimo duomenis:
+    i_konsole('Apskaičiuota su newtons()',      I_01_newt, t_1_newt);
+    i_konsole('Apskaičiuota su fsolve()',       I_01_fsol, t_1_fsol);
+    i_konsole('Tikrosios reikšmės (užduotyje)', I_01_tikr, t_1_tikr);
+
+    % Gaunu:
+    % Apskaičiuota su newtons():     I_01 = 0.951742 μA, t=-12.890927 °C
+    % Apskaičiuota su fsolve():      I_01 = 0.951742 μA, t=-12.890928 °C
+    % Tikrosios vertės (užduoty):    I_01 = 1.000000 μA, t=-10.000000 °C
+
+    % Matyti, kad MATLABo fsolve() ir dėstytojo newtons() funkcijos grąžina
+    % beveik identiškas reikšmes.
+    %
+    % Taip pat matyti, kad reikšmės šiek tiek skiriasi nuo tikrųjų.
+    % Santykinės paklaidos:
+    
+    fprintf('\n');
+    fprintf('I_0 paklaida: %.3f %%\n', (1 - I_01_newt/I_01_tikr)*100);
+    fprintf('t paklaida:   %.3f %%\n', (1 - t_1_newt/t_1_tikr)*100);
+
+    % Gaunu:
+    % I_0 paklaida: 4.826 %
+    % t paklaida:   1.099 %
+
+    % Manau, kad paklaidos atsirado dėl atraminių (referinių) taškų 
+    % parinkimo iš akies, apytiksliai.
+
+    % Dar tikrinu pasirinktus taškus pagal duotus pasitikrinimo duomenis:
     fprintf('\n');
     fprintf('I(%.3f V) = %f mA\n', U_a, I(U_a, I_01_tikr, t_1_tikr)*1000);
     fprintf('I(%.3f V) = %f mA\n', U_b, I(U_b, I_01_tikr, t_1_tikr)*1000);
@@ -118,5 +144,14 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % I(0.120 V) = 0.198083 mA artimas pasirinktiems 0,2 mA.
     % I(0.151 V) = 0.780542 mA artimas pasirinktiems 0,8 mA.
 
-    % 
+    % Braižau diodo VACh prie rastų I_0 ir t1 reikšmių:
+    UU = linspace(-0.05, 0.18, tasku_sk);
+    II = I(UU, I_01_newt, t_1_newt);
+
+    xlabel('U, V');
+    ylabel('I_1, A');
+    plot(UU, II);
+    xlim([-0.05 0.17]);
+    ylim([-1e-4 10e-4]);
+    grid on;
 end % of main
