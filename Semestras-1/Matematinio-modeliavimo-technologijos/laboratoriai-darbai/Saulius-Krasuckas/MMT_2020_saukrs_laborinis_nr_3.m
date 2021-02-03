@@ -89,7 +89,6 @@ function MMT_2020_saukrs_laborinis_nr_3()
 
     I_01_newt = x(1);
     t_1_newt  = x(2);
-    fprintf('Apskaičiuota su newtons(): I_01 = %f μA, t=%f °C\n', I_01_newt*1e6, t_1_newt+abs0);
 
     % Kviečiu fsolve():
     options = optimset('Display', 'off', 'MaxIter', 20);
@@ -97,15 +96,22 @@ function MMT_2020_saukrs_laborinis_nr_3()
 
     I_01_fsol = xfsolve(1);
     t_1_fsol  = xfsolve(2);
-    fprintf('Apskaičiuota su fsolve(): I_01 = %f μA, t=%f °C\n', I_01_fsol*1e6, t_1_fsol+abs0);
 
     % Duomenys pasitikrinimui iš užduoties:
     I_01_tikr =            1e-6; % A (1 μA)
     t_1_tikr  =             -10; %°C
     t_1_tikr  = t_1_tikr - abs0; % K
-    fprintf('Tikrosios vertės (užduoty): I_01 = %f μA, t=%f °C\n\n', I_01_tikr*1e6, t_1_tikr+abs0);
+
+    function i_konsole(title, I, t)
+        %
+        fprintf('%-30s I_01 = %f μA, t=%f °C\n', strcat(title,':'), I*1e6, t+abs0);
+    end
+    i_konsole('Apskaičiuota su newtons()',  I_01_newt, t_1_newt);
+    i_konsole('Apskaičiuota su fsolve()',   I_01_fsol, t_1_fsol);
+    i_konsole('Tikrosios vertės (užduoty)', I_01_tikr, t_1_tikr);
 
     % Tikrinu pasirinktus taškus pagal duotus pasitikrinimo duomenis:
+    fprintf('\n');
     fprintf('I(%.3f V) = %f mA\n', U_a, I(U_a, I_01_tikr, t_1_tikr)*1000);
     fprintf('I(%.3f V) = %f mA\n', U_b, I(U_b, I_01_tikr, t_1_tikr)*1000);
 
@@ -114,8 +120,3 @@ function MMT_2020_saukrs_laborinis_nr_3()
 
     % 
 end % of main
-
-function rezultatai_konsoleje(title, I, t)
-    %
-    fprintf('%30s: I_01 = %f μA, t=%f °C\n', title, I*1e6, t+abs0);
-end
