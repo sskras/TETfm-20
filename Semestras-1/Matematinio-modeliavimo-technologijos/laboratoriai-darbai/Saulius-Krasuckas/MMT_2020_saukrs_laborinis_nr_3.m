@@ -150,14 +150,20 @@ function MMT_2020_saukrs_laborinis_nr_3()
     IIt = I(UU, I_01_tikr, t_1_tikr);
 
     figure;
+    title('Diodo VACh');
+    hold on;
     plot(UU, IIn, 'r');
     % Braižau ir tikrąją VACh:
     plot(UU, IIt, 'b');
+
     xlim([-0.05 0.173]);
     ylim([-1e-4 10e-4]);
+
+    box on;
     grid on;
-   %grid minor;
-    set(gca,'xtick',[-0.04:0.02:0.16])
+    set(gca, 'xtick', [-0.04:0.02:0.16]);
+    set(gca, 'GridLineStyle', ':');
     xlabel('U, V');
     ylabel('I_1, A');
+    hold off;
 end % of main
