@@ -16,6 +16,11 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % I = I_0 \cdot (e^{\frac{U \ e}{kT}} - 1) ;
     % $$
 
+    % Uždavinyje nagrinėjama funkcija:
+    function ret = I(U, I_0, t)
+        ret = I_0 * (exp(U*e / (k*t)) - 1);
+    end
+
     % (93052026 mod 3) = 0, renkuosi I_01, t_1:
     %
     % $$
@@ -76,22 +81,17 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % modifikuotą Niutono metodą (su paderinamu žingsnio dydžiu):
     [x,fx,xx] = newtons(@f1, x0);
 
-    fprintf('Apskaičiuota su newtons(): I_01 = %f μA, t=%f °C\n\n', x(1)*1e6, x(2)+abs0);
+    fprintf('Apskaičiuota su newtons(): I_01 = %f μA, t=%f °C\n', x(1)*1e6, x(2)+abs0);
     
-    % Uždavinyje nagrinėjama funkcija:
-    function ret = I(U, I_0, t)
-
-        ret = I_0 * (exp(U*e / (k*t)) - 1);
-    end
-
-    % Duomenys pasitikrinimui:
+    % Duomenys pasitikrinimui iš užduoties:
     I_01_tikr =            1e-6; % A (1 μA)
     t_1_tikr  =             -10; %°C
     t_1_tikr  = t_1_tikr - abs0; % K
+    fprintf('Tikrosios vertės (užduoty): I_01 = %f μA, t=%f °C\n\n', I_01_tikr*1e6, t_1_tikr+abs0);
 
     % Tikrinu pasirinktus taškus pagal duotus pasitikrinimo duomenis:
-    fprintf('I(%.3f V) = %f mA\n', U_a, I(U_a)*1000);
-    fprintf('I(%.3f V) = %f mA\n', U_b, I(U_b)*1000);
+    fprintf('I(%.3f V) = %f mA\n', U_a, I(U_a, I_01_tikr, t_1_tikr)*1000);
+    fprintf('I(%.3f V) = %f mA\n', U_b, I(U_b, I_01_tikr, t_1_tikr)*1000);
 
     % I(0.120 V) = 0.198083 mA artimas pasirinktiems 0,2 mA.
     % I(0.151 V) = 0.780542 mA artimas pasirinktiems 0,8 mA.
