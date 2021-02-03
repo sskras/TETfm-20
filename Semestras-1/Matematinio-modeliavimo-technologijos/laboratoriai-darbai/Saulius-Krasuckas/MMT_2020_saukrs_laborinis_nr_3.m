@@ -20,6 +20,7 @@ function MMT_2020_saukrs_laborinis_nr_3()
 
     % Uždavinyje nagrinėjama funkcija:
     function ret = I(U, I_0, t)
+        t = t - abs0;
         ret = I_0 * (exp(U*e / (k*t)) - 1);
     end
 
