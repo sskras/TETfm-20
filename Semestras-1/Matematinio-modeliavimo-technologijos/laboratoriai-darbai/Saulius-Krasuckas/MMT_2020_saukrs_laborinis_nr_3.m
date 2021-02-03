@@ -3,15 +3,19 @@ function MMT_2020_saukrs_laborinis_nr_3()
     clc;
 
     % Fizikinės konstantos:
-    k = 1.380e-23; %  J/K
-    e = 1.602e-19; %  C
+    k = 1.380e-23; % J/K
+    e = 1.602e-19; % C
+    abs0 =-273.15; %°C, absoliutaus nulio t-ra
+
+    % Braižymui:
+    tasku_sk = 100;
 
     % Duota kreivė:
     %
     % $$
     % I = I_0 \cdot (e^{\frac{U \ e}{kT}} - 1) ;
     % $$
-    %
+
     % (93052026 mod 3) = 0, renkuosi I_01, t_1:
     %
     % $$
@@ -22,10 +26,11 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % Rasime nežinomus diodo parametrus I_{01} ir t_1 pagal
     % du laisvai pasirinktus taškus A=(U_a, I_1a) ir B=(U_b, I_1b).
     %
-    % Perdarome funkciją į įprastinį pavidalą:
+    % Perdarome funkciją į tradicinį lygties formą pavidalą:
     %
     % $$
-    % I_{01} (e^{{U e}/{k(t_1 + 273.15})} - 1) - I_1 = 0
+    % I_{01} (e^{{U e}/{k(t_1 + 273.15})} - 1) - I_1 = 0 =
+    %
     % = f_1(I_{01}, t_1) ;
     % $$
     %
@@ -49,8 +54,8 @@ function MMT_2020_saukrs_laborinis_nr_3()
     %   (0.12 V, 0,2 mA)
     %   (0.15 V, 0,8 mA)
 
-    U_a = 0.12; I_1a = 0.2e-3;
-    U_b = 0.15; I_1b = 0.8e-3;
+    U_a = 0.120; I_1a = 0.2e-3;
+    U_b = 0.151; I_1b = 0.8e-3;
     
     function ret = f1(x)
         I_01 = x(1);
@@ -62,23 +67,34 @@ function MMT_2020_saukrs_laborinis_nr_3()
     % Tikrinu, ar f1() skaičiuoja:
     disp(f1([0.01, 300]));
     
-    % Atsakymo (tikroji) funkcija pasitikrinimui:
-    function ret = I(U)
+    % Pradiniam taškui parenku:
+    % I = 1 A (lempinė vertė)
+    % T = 300 K (kambario t)
+    x0 = [1, 300];
 
-        % Duomenys pasitikrinimui:
-        I_01 =         1e-6; %  A (1 μA)
-        t_1  =          -10; % °C
-        t_1  = t_1 + 273.15; %  K
+    % Kviečiu dėstytojo funkciją, skaičiuojančią pagal 
+    % modifikuotą Niutono metodą (su paderinamu žingsnio dydžiu):
+    [x,fx,xx] = newtons(@f1, x0);
 
-        ret = I_01 * (exp(U*e / (k*t_1)) - 1);
+    fprintf('Apskaičiuota su newtons(): I_01 = %f μA, t=%f °C\n\n', x(1)*1e6, x(2)+abs0);
+    
+    % Uždavinyje nagrinėjama funkcija:
+    function ret = I(U, I_0, t)
+
+        ret = I_0 * (exp(U*e / (k*t)) - 1);
     end
 
-    % Tikrinu pasirinktus taškus pagal pasitikrinimo duomenis:
-    fprintf('I(0.12 V) = %f mA\n', I(0.12)*1000);
-    fprintf('I(0.15 V) = %f mA\n', I(0.15)*1000);
+    % Duomenys pasitikrinimui:
+    I_01_tikr =            1e-6; % A (1 μA)
+    t_1_tikr  =             -10; %°C
+    t_1_tikr  = t_1_tikr - abs0; % K
 
-    % I(0.12 V) = 0.198083 mA artimas pasirinktiems 0,2 mA.
-    % I(0.15 V) = 0.746815 mA artimas pasirinktiems 0,8 mA.
+    % Tikrinu pasirinktus taškus pagal duotus pasitikrinimo duomenis:
+    fprintf('I(%.3f V) = %f mA\n', U_a, I(U_a)*1000);
+    fprintf('I(%.3f V) = %f mA\n', U_b, I(U_b)*1000);
+
+    % I(0.120 V) = 0.198083 mA artimas pasirinktiems 0,2 mA.
+    % I(0.151 V) = 0.780542 mA artimas pasirinktiems 0,8 mA.
 
     % 
 end % of main
