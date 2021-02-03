@@ -69,20 +69,36 @@ function MMT_2020_saukrs_laborinis_nr_3()
         ret(2) = I_01 * (exp(U_b*e / (k*t_1)) - 1) - I_1b;
     end
 
-    % Tikrinu, ar f1() skaičiuoja:
-    disp(f1([0.01, 300]));
-    
     % Pradiniam taškui parenku:
     % I = 1 A (lempinė vertė)
     % T = 300 K (kambario t)
     x0 = [1, 300];
 
+    % Tikrinu, ar mano f1() skaičiuoja:
+    disp('Pradinis taškas x0='); disp(x0);
+    disp('f1(x0)='); disp(f1(x0));
+
+    % OK, kažką skaičiuoja:
+    %
+    % f1(x0)=
+    %   102.9049  343.8264
+    
     % Kviečiu dėstytojo funkciją, skaičiuojančią pagal 
     % modifikuotą Niutono metodą (su paderinamu žingsnio dydžiu):
     [x,fx,xx] = newtons(@f1, x0);
 
-    fprintf('Apskaičiuota su newtons(): I_01 = %f μA, t=%f °C\n', x(1)*1e6, x(2)+abs0);
-    
+    I_01_newt = x(1);
+    t_1_newt  = x(2);
+    fprintf('Apskaičiuota su newtons(): I_01 = %f μA, t=%f °C\n', I_01_newt*1e6, t_1_newt+abs0);
+
+    % Kviečiu fsolve():
+    options = optimset('Display', 'off', 'MaxIter', 20);
+    xfsolve = fsolve(@f1, x0, options);
+
+    I_01_fsol = xfsolve(1);
+    t_1_fsol  = xfsolve(2);
+    fprintf('Apskaičiuota su fsolve(): I_01 = %f μA, t=%f °C\n', I_01_fsol*1e6, t_1_fsol+abs0);
+
     % Duomenys pasitikrinimui iš užduoties:
     I_01_tikr =            1e-6; % A (1 μA)
     t_1_tikr  =             -10; %°C
@@ -98,3 +114,8 @@ function MMT_2020_saukrs_laborinis_nr_3()
 
     % 
 end % of main
+
+function rezultatai_konsoleje(title, I, t)
+    %
+    fprintf('%30s: I_01 = %f μA, t=%f °C\n', title, I*1e6, t+abs0);
+end
