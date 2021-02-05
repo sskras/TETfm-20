@@ -28,6 +28,16 @@ https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v
 > | 38                    | 2570 MHz – 2620 MHz                                       | 2570 MHz – 2620 MHz                                         | TDD         |
 > | 7                     | 2500 MHz – 2570 MHz                                       | 2620 MHz – 2690 MHz                                         | FDD         |
 
+Ir pagal LR RRT įsakymą 
+**DĖL NACIONALINĖS RADIJO DAŽNIŲ PASKIRSTYMO LENTELĖS IR RADIJO DAŽNIŲ NAUDOJIMO PLANO PATVIRTINIMO IR KAI KURIŲ LIETUVOS RESPUBLIKOS RYŠIŲ REGULIAVIMO TARNYBOS DIREKTORIAUS ĮSAKYMŲ PRIPAŽINIMO NETEKUSIAIS GALIOS**  
+Priėmimo data: 2016 m. birželio 21 d. Nr. 1V-698  
+Galiojanti suvestinė redakcija (nuo 2020-09-15)  
+https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr#:~:text=2570
+
+![image](https://user-images.githubusercontent.com/74717106/107042269-3d093380-67ca-11eb-8960-5c4132b32fbd.png)
+
+
+
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
 (dažniai, galios, antenų aukščiai su pagrindimu, kokiu šaltiniu remtasi)
 
