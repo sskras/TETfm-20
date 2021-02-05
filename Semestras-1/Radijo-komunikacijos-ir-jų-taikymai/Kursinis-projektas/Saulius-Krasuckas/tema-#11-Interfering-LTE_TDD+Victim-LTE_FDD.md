@@ -36,7 +36,7 @@ https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr#:~:
 
 ![image](https://user-images.githubusercontent.com/74717106/107042269-3d093380-67ca-11eb-8960-5c4132b32fbd.png)
 
-Tai 38-ta ir 7-ta E-UTRA juostos.
+Tai 38-ta ir 7-ta **E-UTRA** juostos.
 
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
 
