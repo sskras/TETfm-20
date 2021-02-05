@@ -20,6 +20,12 @@ taip pat Lietuvos elektroninių ryšių reguliavimo institucija LR Ryšių regul
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
 (dažniai, galios, antenų aukščiai su pagrindimu, kokiu šaltiniu remtasi)
 
+Pamėginsiu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriuose (Utenos raj.)
+
+Victim Link naudoja LTE-2600 FDD: 
+- Tx yra judrioji stotis (Kazys, Nokia 3310 4G)
+- Rx yra bazinė stotis (Telia 7AF_Medeniai_VB, Huawei)
+
 ### (d) Modeliavimo scenarijaus aprašymas
 (kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
 
