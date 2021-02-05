@@ -51,7 +51,7 @@ Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (
 
 `TODO` Victim Link (telefono) TX galia.
 
-| Parametras      | Interfering Link Tx<br/>LTE TDD BS | Interfering Link Rx<br/>LTE TDD UE | Victim Link Tx<br/>LTE FDD UE | Victim Link Rx<br/>LTE FDD BS |
+| Parametras      | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
 |-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
 | Dažnis          | 2580 MHz                           | t. p.                              | 2560 MHz                      | t. p.                         |
 | Galia           | 2\*40 W = ~49 dBm                  | -                                  | TODO dBm                      | -                             |
