@@ -24,7 +24,11 @@ Pamėginsiu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriu
 
 Victim Link naudoja LTE-2600 FDD: 
 - Tx yra judrioji stotis (Kazys, Nokia 3310 4G)
-- Rx yra bazinė stotis (Telia 7AF_Medeniai_VB, Huawei)
+- Rx yra bazinė stotis (Telia 7AF_Medeniai_VB)
+
+Interfering Link naudoja LTE-2600 TDD:
+- Tx yra bazinė stotis (Telia 612_Tauragnai tarkime, nes neturiu Mezon duomenų)
+- Rx yra judrioji stotis (Saulius, nešiojamas modemas Huawei E5573s-606)
 
 ### (d) Modeliavimo scenarijaus aprašymas
 (kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
