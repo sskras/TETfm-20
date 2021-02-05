@@ -40,6 +40,25 @@ Tai 38-ta ir 7-ta **E-UTRA** juostos.
 
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
 
+Dažnius, kadangi juostos nepersidengia, parinkau tarpusavyje pačius artimiausius:
+- TDD DL juosta: 2570 MHz – 2620 MHz
+- FDD UL juosta: 2500 MHz – 2570 MHz
+
+_Worst-case_ bus, kai vieno TDD DL kanalo „apačia“ sutaps su FDD kanalo viršumi: **2570 MHz**.  
+Iš šios ribos atėmus ir prie jos pridėjus po pusę kanalo pločio (10 MHz), gaunu **2560** ir **2580** MHz.  
+
+Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (Huawei) specifikacijų.
+
+| Parametras      | Interfering Link Tx<br/>LTE TDD BS | Interfering Link Rx<br/>LTE TDD UE | Victim Link Tx<br/>LTE TDD UE | Victim Link Rx<br/>LTE TDD BS |
+|-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
+| Dažnis          | 2560 MHz                           | t. p.                              | 2580 MHz                      | t. p.                         |
+| Galia           | 2\*40 W = ~49 dBm                  | -                                  | TODO dBm                      | -                             |
+| Antenos aukštis | 67 m                               | 1.5 m                              | 1.5 m                         | 31.5 m                        |
+| ...
+
+### (d) Modeliavimo scenarijaus aprašymas
+(kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
+
 Mėginu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriuose (Utenos raj.)
 
 Interfering Link naudoja LTE-2600 TDD ryšį:
@@ -50,24 +69,6 @@ Victim Link naudoja LTE-2600 FDD ryšį:
 - Tx yra judrioji stotis (Kazys, Nokia 3310 4G)
 - Rx yra bazinė stotis (Telia 7AF_Medeniai_VB)
 
-Dažnius, kadangi juostos nepersidengia, parinkau tarpusavyje pačius artimiausius:
-- TDD DL juosta: 2570 MHz – 2620 MHz
-- FDD UL juosta: 2500 MHz – 2570 MHz
-
-_Worst-case_ bus, kai vieno TDD DL kanalo „apačia“ sutaps su FDD kanalo viršumi: **2570 MHz**.  
-Iš šios ribos atėmus ir prie jos pridėjus po pusę kanalo pločio (10 MHz), gaunu **2560** ir **2580** MHz.  
-
-Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (Huawei) specifikacijų.
-
-| Parametras      | Interfering Link Tx<br/>LTE TDD BS | Interfering Link Rx<br/>LTE TDD UE | Victim Link Tx<br/>LTE TDD US | Victim Link Rx<br/>LTE TDD BS |
-|-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
-| Dažnis          | 2560 MHz                           | t. p.                              | 2580 MHz                      | t. p.                         |
-| Galia           | 2\*40 W = ~49 dBm                  | -                                  | TODO dBm                      | -                             |
-| Antenos aukštis | 67 m                               | 1.5 m                              | 31.5 m                        | 1.5 m                         |
-| ...
-
-### (d) Modeliavimo scenarijaus aprašymas
-(kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
 
 ### (e) Interferencijos kriterijaus, sklidimo modelio pasirinkimo logika.
 
