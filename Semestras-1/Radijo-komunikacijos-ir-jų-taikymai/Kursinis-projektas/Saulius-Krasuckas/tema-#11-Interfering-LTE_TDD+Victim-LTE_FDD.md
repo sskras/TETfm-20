@@ -19,12 +19,12 @@ Dažnius pasirinkau pagal **3GPP TS 36.101** version 15.9.0 Release 15:
 https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v150900p.pdf#page=43
 
 > Table 5.5-1 E-UTRA operating bands
-> 
-> | E-UTRA Operating Band | Uplink (UL) operating band<br/>BS receive<br/>UE transmit | Downlink (DL) operating band<br/>BS transmit<br/>UE receive | Duplex Mode |
-> | :-------------------: | :-------------------------------------------------------: | :---------------------------------------------------------: |-------------|
-> |                       | **F_UL_low – F_UL_high**                                  | **F_DL_low – F_DL_high**                                    |             |
-> | 38                    | 2570 MHz – 2620 MHz                                       | 2570 MHz – 2620 MHz                                         | TDD         |
-> | 7                     | 2500 MHz – 2570 MHz                                       | 2620 MHz – 2690 MHz                                         | FDD         |
+
+| E-UTRA Operating Band | Uplink (UL) operating band<br/>BS receive<br/>UE transmit | Downlink (DL) operating band<br/>BS transmit<br/>UE receive | Duplex Mode |
+| :-------------------: | :-------------------------------------------------------: | :---------------------------------------------------------: |-------------|
+|                       | **F_UL_low – F_UL_high**                                  | **F_DL_low – F_DL_high**                                    |             |
+| 38                    | 2570 MHz – 2620 MHz                                       | 2570 MHz – 2620 MHz                                         | TDD         |
+| 7                     | 2500 MHz – 2570 MHz                                       | 2620 MHz – 2690 MHz                                         | FDD         |
 
 Ir pagal LR **RRT** įsakymą:  
 
