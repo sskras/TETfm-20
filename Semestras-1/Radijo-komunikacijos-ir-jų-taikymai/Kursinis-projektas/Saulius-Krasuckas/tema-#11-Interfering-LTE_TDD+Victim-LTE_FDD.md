@@ -36,7 +36,7 @@ https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr#:~:
 
 ![image](https://user-images.githubusercontent.com/74717106/107042269-3d093380-67ca-11eb-8960-5c4132b32fbd.png)
 
-Taigi, tai 38-ta ir 7-ta E-UTRA juostos.
+Tai 38-ta ir 7-ta E-UTRA juostos.
 
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
 
@@ -50,10 +50,13 @@ Interfering Link naudoja LTE-2600 TDD ryšį:
 - Tx yra bazinė stotis (Telia 612_Tauragnai, tarkime, nes neturiu Mezon duomenų)
 - Rx yra judrioji stotis (Saulius, nešiojamas modemas Huawei E5573s-606)
 
+TDD: 2570 MHz – 2620 MHz  
+FDD: 2500 MHz – 2570 MHz  
+
 | Parametras      | Interfering Link Tx<br/>LTE TDD BS | Interfering Link Rx<br/>LTE TDD UE | Victim Link Tx<br/>LTE TDD US | Victim Link Rx<br/>LTE TDD BS |
 |-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
-| Dažnis          | 
-| Galia           | 2\*40 W ≈ 49 dBm                   | -                                  | 49 dBm                        |                               |
+| Dažnis          | 2560 MHz                           | t. p.                              | 2580 MHz                      | t. p.                         |
+| Galia           | 2\*40 W = ~49 dBm                  | -                                  | 49 dBm                        | -                             |
 | Antenos aukštis | 67 m                               | 1.5 m                              | 31.5 m                        | 1.5 m                         |
 
 (dažniai, galios, antenų aukščiai su pagrindimu, kokiu šaltiniu remtasi)
