@@ -19,7 +19,7 @@ taip pat Lietuvos elektroninių ryšių reguliavimo institucija LR Ryšių regul
 
 Pradžiai iš Wikipedia:
 
-38 	TDD 	2600 	IMT-E 	41 	2570 – 2620 	N/A 	5, 10, 15, 20 	IMT-E Duplex Spacing
+38 	TDD 	2600 	IMT-E 	41 	2570 – 2620 	N/A 	5, 10, 15, 20 	IMT-E Duplex Spacing  
 7 	FDD 	2600 	IMT-E 		2500 – 2570 	2620 – 2690 	120 	5, 10, 15, 20 	
 
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
