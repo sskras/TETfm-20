@@ -14,10 +14,8 @@
 (Iš kokių elementų jos susideda, kokie pagrindiniai veikimo principai)
 
 ### (b) Kokios dažnių juostos yra priskirtos ir naudojamos tiriamųjų radijo ryšio sistemų
-(Radijo dažnių reguliavimas pagal ITU radijo reglamentą RR arba CEPT/ECC/ECO priskyrimas 
-taip pat Lietuvos elektroninių ryšių reguliavimo institucija LR Ryšių reguliavimo tarnyba)
 
-Pagal **3GPP TS 36.101** version 15.9.0 Release 15:  
+Dažnius pasirinkau pagal **3GPP TS 36.101** version 15.9.0 Release 15:  
 https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v150900p.pdf#page=43
 
 > Table 5.5-1 E-UTRA operating bands
@@ -28,28 +26,39 @@ https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v
 > | 38                    | 2570 MHz – 2620 MHz                                       | 2570 MHz – 2620 MHz                                         | TDD         |
 > | 7                     | 2500 MHz – 2570 MHz                                       | 2620 MHz – 2690 MHz                                         | FDD         |
 
-Ir pagal LR RRT įsakymą 
+Ir pagal LR **RRT** įsakymą:  
+
 **DĖL NACIONALINĖS RADIJO DAŽNIŲ PASKIRSTYMO LENTELĖS IR RADIJO DAŽNIŲ NAUDOJIMO PLANO PATVIRTINIMO IR KAI KURIŲ LIETUVOS RESPUBLIKOS RYŠIŲ REGULIAVIMO TARNYBOS DIREKTORIAUS ĮSAKYMŲ PRIPAŽINIMO NETEKUSIAIS GALIOS**  
+
 Priėmimo data: 2016 m. birželio 21 d. Nr. 1V-698  
 Galiojanti suvestinė redakcija (nuo 2020-09-15)  
 https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr#:~:text=2570
 
 ![image](https://user-images.githubusercontent.com/74717106/107042269-3d093380-67ca-11eb-8960-5c4132b32fbd.png)
 
-
+Taigi, tai 38-ta ir 7-ta E-UTRA juostos.
 
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
-(dažniai, galios, antenų aukščiai su pagrindimu, kokiu šaltiniu remtasi)
 
-Pamėginsiu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriuose (Utenos raj.)
+Mėginu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriuose (Utenos raj.)
 
-Victim Link naudoja LTE-2600 FDD: 
+Victim Link naudoja LTE-2600 FDD ryšį: 
 - Tx yra judrioji stotis (Kazys, Nokia 3310 4G)
 - Rx yra bazinė stotis (Telia 7AF_Medeniai_VB)
 
-Interfering Link naudoja LTE-2600 TDD:
+Interfering Link naudoja LTE-2600 TDD ryšį:
 - Tx yra bazinė stotis (Telia 612_Tauragnai, tarkime, nes neturiu Mezon duomenų)
 - Rx yra judrioji stotis (Saulius, nešiojamas modemas Huawei E5573s-606)
+
+| Parametras      | Interfering Link Tx<br/>LTE TDD BS | Interfering Link Rx<br/>LTE TDD UE | Victim Link Tx<br/>LTE TDD US | Victim Link Rx<br/>LTE TDD BS |
+|-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
+| Dažnis          | 
+| Galia           | 2\*40 W ≈ 49 dBm                   | -                                  | 49 dBm                        |                               |
+| Antenos aukštis | 67 m                               | 1.5 m                              | 31.5 m                        | 1.5 m                         |
+
+(dažniai, galios, antenų aukščiai su pagrindimu, kokiu šaltiniu remtasi)
+
+
 
 ### (d) Modeliavimo scenarijaus aprašymas
 (kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
