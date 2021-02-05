@@ -17,6 +17,11 @@
 (Radijo dažnių reguliavimas pagal ITU radijo reglamentą RR arba CEPT/ECC/ECO priskyrimas 
 taip pat Lietuvos elektroninių ryšių reguliavimo institucija LR Ryšių reguliavimo tarnyba)
 
+Pradžiai iš Wikipedia:
+
+38 	TDD 	2600 	IMT-E 	41 	2570 – 2620 	N/A 	5, 10, 15, 20 	IMT-E Duplex Spacing
+7 	FDD 	2600 	IMT-E 		2500 – 2570 	2620 – 2690 	120 	5, 10, 15, 20 	
+
 ### (c) Pagrindiniai radijo ryšio sistemų parametrai
 (dažniai, galios, antenų aukščiai su pagrindimu, kokiu šaltiniu remtasi)
 
@@ -27,7 +32,7 @@ Victim Link naudoja LTE-2600 FDD:
 - Rx yra bazinė stotis (Telia 7AF_Medeniai_VB)
 
 Interfering Link naudoja LTE-2600 TDD:
-- Tx yra bazinė stotis (Telia 612_Tauragnai tarkime, nes neturiu Mezon duomenų)
+- Tx yra bazinė stotis (Telia 612_Tauragnai, tarkime, nes neturiu Mezon duomenų)
 - Rx yra judrioji stotis (Saulius, nešiojamas modemas Huawei E5573s-606)
 
 ### (d) Modeliavimo scenarijaus aprašymas
