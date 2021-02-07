@@ -13,6 +13,18 @@
 ### 1. Teorinis tiriamųjų radijo sistemų veikimo aprašymas
 (Iš kokių elementų jos susideda, kokie pagrindiniai veikimo principai)
 
+Abi užduoties sistemos yra **LTE**. [RAN / belaidės dalies](https://www.researchgate.net/profile/Liljana_Gavrilovska/publication/277215242/figure/fig4/AS:669299148603409@1536584760155/LTE-RAN-architecture-including-femtocells-HeNBs-and-network-management.png) (E-UTRAN) architektūra:
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/74717106/107157338-480bc180-698c-11eb-9a96-148d7b50d648.png" width="65%">
+</p>
+
+LTE [kabelinės / paketinės / IP dalies](https://www.netmanias.com/en/?m=attach&no=23081) architektūra:
+
+![image](https://user-images.githubusercontent.com/74717106/107157437-c7999080-698c-11eb-9879-1597843e37ab.png)
+
+
+
 ### 2. Kokios dažnių juostos yra priskirtos ir naudojamos tiriamųjų radijo ryšio sistemų
 
 Dažnius pasirinkau pagal **3GPP TS 36.101** version 15.9.0 Release 15:  
