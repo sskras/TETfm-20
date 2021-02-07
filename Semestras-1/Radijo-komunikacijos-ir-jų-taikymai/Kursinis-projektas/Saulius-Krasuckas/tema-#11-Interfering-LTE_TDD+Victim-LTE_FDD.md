@@ -16,7 +16,7 @@
 ### 2. Kokios dažnių juostos yra priskirtos ir naudojamos tiriamųjų radijo ryšio sistemų
 
 Dažnius pasirinkau pagal **3GPP TS 36.101** version 15.9.0 Release 15:  
-https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v150900p.pdf#page=43
+[https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v150900p.pdf](https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/15.09.00_60/ts_136101v150900p.pdf#page=4)
 
 > Table 5.5-1 E-UTRA operating bands
 
@@ -32,7 +32,7 @@ Ir pagal LR **RRT** įsakymą:
 
 Priėmimo data: 2016 m. birželio 21 d. Nr. 1V-698  
 Galiojanti suvestinė redakcija (nuo 2020-09-15)  
-https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr#:~:text=2570
+[https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr](https://www.e-tar.lt/portal/lt/legalAct/6e718fd037a011e69101aaab2992cbcd/asr#:~:text=2570)
 
 ![image](https://user-images.githubusercontent.com/74717106/107042269-3d093380-67ca-11eb-8960-5c4132b32fbd.png)
 
