@@ -173,6 +173,9 @@ Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio. Vertė = 12 dB.
 
 ### 6. Pirminio modeliavimo rezultato (Probability of interference) pristatymas.
 
+Deja, simuliacijai nepatinka "Unwanted emissions range:"  
+![image](https://user-images.githubusercontent.com/74717106/107249019-96c46480-6a3b-11eb-8cbd-80309d6a400f.png)
+
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
 (kad sumažintume probability of interference, pvz., nuo 100% iki 5% ar 0%)
 
