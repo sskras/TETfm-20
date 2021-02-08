@@ -158,17 +158,17 @@ Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 | Local environment      | Outdoor                            | Indoor                             | Indoor                        | Outdoor                       |
 | General enironment     | -                                  | Rural                              | -                             | Rural                         |
 
-Sklidimo modelį Victim ir Interfering sistemoms parinkau Extendeda Hata pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz ir iki 40 km.  
-
-Sklidimo modelis taro trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land".  
-
-Šį modelį būčiau būčiau išmėginęs dėl kalvotos vietovės ir abiems linkams, bet pritrūkau duomenų apie kalvotumą bei miškų aukščius.  
-
 **Relating positioning of Interfering Link** Mode pasirinkau None. Nes trukdantysis siųstuvas ir trukdomasis imtuvas yra BS, nejudantys objektai.
 
 ### 5. Interferencijos kriterijaus, sklidimo modelio pasirinkimo logika.
 
 Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio. Vertė = 12 dB.
+
+Sklidimo modelį Victim ir Interfering sistemoms parinkau **Extendeda Hata** pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz ir iki 40 km.  
+
+Sklidimo modelis tarp trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land".  
+
+Šį modelį būčiau dėl kalvotos vietovės būčiau išmėginęs ir abiems tiesioginiams linkams (Victim ir Interfering), bet pritrūkau duomenų apie kalvotumą bei miškų aukščius.  
 
 
 ### 6. Pirminio modeliavimo rezultato (Probability of interference) pristatymas.
@@ -179,6 +179,9 @@ Deja, simuliacijai nepatinka "Unwanted emissions range:"
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
 (kad sumažintume probability of interference, pvz., nuo 100% iki 5% ar 0%)
 
+Trūksta.
+
 ### 8. Išvados
 (ar sistemos yra elektromagnetiškai suderinamos, ir kokia konfigūracija būtina)
 
+Trūksta.
