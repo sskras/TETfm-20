@@ -118,9 +118,8 @@ Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (
 | Parametras      | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
 |-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
 | Dažnis          | 2580 MHz                           | t. p.                              | 2560 MHz                      | t. p.                         |
-| Galia           | 2\*40 W = ~49 dBm                  | -                                  | TODO dBm                      | -                             |
-| Antenos aukštis | 25 m                               | 1.5 m                              | 1.5 m                         | 31.5 m                        |
-| ...
+| Galia           | 2\*40 W = ~49 dBm                  | -                                  | 23 dBm                        | -                             |
+| Antenos aukštis | 67 m                               | 1.5 m                              | 1.5 m                         | 31.5 m                        |
 
 ### 4. Modeliavimo scenarijaus aprašymas
 (kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
@@ -132,16 +131,38 @@ Interfering Link naudoja LTE-2600 TDD ryšį:
 - Rx yra judrioji stotis (Saulius, nešiojamas modemas Huawei E5573s-606)
 - atstumas 7460 m.
 - skersinis atstumas kambaryje: 3 m.
-- Rx judėjimo kampas atžvilgiu Tx: 0.0230412°
+- Padengimo zona: 8 km.
 
 Victim Link naudoja LTE-2600 FDD ryšį: 
 - Tx yra judrioji stotis (Kazys, Nokia 3310 4G)
 - Rx yra bazinė stotis (Telia 7AF_Medeniai_VB)
 - atstumas 3970 km.
 - skersinio judėjimo atstumas kambaryje: 3 m.
-- Tx judėjimo kampas atžvilgiu Rx: 0.04329656°
 
-Atstumas tarp Interfering Tx ir Victim Rx: 3510 m
+Atstumas tarp Interfering Tx ir Victim Rx: 3510 m.  
+Victim Link bazinė stotis atsiduria beveik Interfering Link viduryje.
+
+Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
+- https://docdb.cept.org/download/d8623f8a-1ff1/CEPTREP063.pdf
+- https://docdb.cept.org/download/090b56ac-eee8/ECCREP187.PDF
+
+| Parametras             | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
+|------------------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
+| Azimuth ref., °        | 50                                 | 0                                  | 0                             | 20                            |
+| Noise floor, dBm       | -                                  | -92                                | -                             | -96                           |
+| Sensitivity Floor, dBm | -                                  | -94                                | -                             | -101.5                        |
+| Reception Bandw., MHz  | -                                  | 18000                              | -                             | 18000                         |
+| Interference Crit., dB | -                                  | C/I = 12                           | -                             | C/I = 12                      |
+| Path azimuth, °        | -                                  | 0 – 0.0230412                      | -                             | 0 - 0.04329656                |
+| Coverage Radius, m.    | 8000                               | -                                  | -                             | 6000                          |
+| Path Distance Factor   | -                                  | 0.9325                             | -                             | 0.661666667                   |
+| Propagation Model      | -                                  | Extended Hata                      | -                             | Extended Hata                 |
+| Local environment      | Outdoor                            | Indoor                             | Indoor                        | Outdoor                       |
+| General enironment     | -                                  | Rural                              | -                             | Rural                         |
+
+Sklidimo modelį abiems sistemoms parinkau Extendeda Hata pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz ir iki 40 km.
+
+"ITU-R P.1546-4 land" modelį būčiau išmėginęs dėl kalvotos vietovės, bet pritrūkau duomenų apie kalvotumą bei miškų aukščius.
 
 ### 5. Interferencijos kriterijaus, sklidimo modelio pasirinkimo logika.
 
