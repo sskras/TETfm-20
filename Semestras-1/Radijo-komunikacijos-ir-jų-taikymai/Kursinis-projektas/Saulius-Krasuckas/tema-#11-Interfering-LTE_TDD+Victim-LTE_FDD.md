@@ -179,6 +179,12 @@ Kadangi trukdo bazinė stotis bazinei stočiai (nejudantys objektai), čia pasir
 Deja, simuliacijai nepatinka "Unwanted emissions range:"  
 ![image](https://user-images.githubusercontent.com/74717106/107249019-96c46480-6a3b-11eb-8cbd-80309d6a400f.png)
 
+Parenku Interfering Link siųstuvo _Unwanted Emission Mask_ pagal
+[ECC Report 249](https://docdb.cept.org/download/32604bf0-7ac0/ECCRep249.pdf):
+
+![Screenshot from 2021-02-08 20-09-58](https://user-images.githubusercontent.com/74717106/107262738-9763f780-6a49-11eb-9112-5402b00c3a20.png)
+
+
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
 (kad sumažintume probability of interference, pvz., nuo 100% iki 5% ar 0%)
 
