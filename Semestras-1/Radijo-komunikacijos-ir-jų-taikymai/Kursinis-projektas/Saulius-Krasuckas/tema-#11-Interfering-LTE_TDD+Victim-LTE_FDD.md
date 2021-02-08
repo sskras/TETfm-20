@@ -182,7 +182,7 @@ Deja, simuliacijai nepatinka "Unwanted emissions range:"
 Parenku Interfering Link siųstuvo _Unwanted Emission Mask_ pagal
 [ECC Report 249](https://docdb.cept.org/download/32604bf0-7ac0/ECCRep249.pdf):
 
-![Screenshot from 2021-02-08 20-09-58](https://user-images.githubusercontent.com/74717106/107262738-9763f780-6a49-11eb-9112-5402b00c3a20.png)
+![klaida](https://user-images.githubusercontent.com/74717106/107274842-a2268880-6a59-11eb-8890-6eb457a63562.png)
 
 
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
