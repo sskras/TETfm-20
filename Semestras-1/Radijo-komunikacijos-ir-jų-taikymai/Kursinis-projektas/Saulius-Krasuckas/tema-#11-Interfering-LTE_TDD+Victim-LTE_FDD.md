@@ -1,7 +1,7 @@
 # Dviejų radijo ryšio linijų elektromagnetinės interferencijos tyrimas panaudojant SEAMCAT
 ## Radijo komunikacijos ir jų taikymai <br /> <br /> Elektronikos fakultetas <br /> VILNIUS TECH <br /> <br /> Kursinio darbo ataskaita
 
-**Data:** 2021-0x-yy  
+**Data:** 2021-02-04  
 **Atliko:** Saulius Krasuckas  
 **Grupė:** TETfm-20  
 **Užduotis:** 11  
@@ -19,9 +19,11 @@ Abi užduoties sistemos yra **LTE**. [RAN / belaidės dalies](https://www.resear
 <img src="https://user-images.githubusercontent.com/74717106/107157338-480bc180-698c-11eb-9a96-148d7b50d648.png" width="65%">
 </p>
 
-LTE [kabelinės / paketinės / IP dalies](https://www.netmanias.com/en/?m=attach&no=23081) architektūra:
+LTE [paketinės / IP / kabelinės dalies](https://www.netmanias.com/en/?m=attach&no=23081) architektūra:
 
-![image](https://user-images.githubusercontent.com/74717106/107157437-c7999080-698c-11eb-9879-1597843e37ab.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/74717106/107157437-c7999080-698c-11eb-9879-1597843e37ab.png" width="85%">
+</p>
 
 
 
