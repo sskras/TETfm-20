@@ -109,11 +109,9 @@ Dažnius, kadangi juostos nepersidengia, parinkau tarpusavyje pačius artimiausi
 _Worst-case_ bus, kai vieno TDD DL kanalo „apačia“ sutaps su FDD kanalo viršumi: **2570 MHz**.  
 Prie šios ribos pridėjus ir iš jos atėmus po pusę kanalo pločio (10 MHz), gaunu **2580** ir **2560** MHz.  
 
-Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (Huawei) specifikacijų.
-
-`TODO`:
-- Victim Link (telefono) TX galia.
-- Victim Link (bstoties) RX Sensitivity + Reception bandwidth.
+Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (Huawei) specifikacijų.  
+Trukdomosios UE galia imta iš ETSI ataskaitos:  
+[ETSI TS 136 101 V14.3.0 (2017-04)](https://www.etsi.org/deliver/etsi_ts/136100_136199/136101/14.03.00_60/ts_136101v140300p.pdf)
 
 | Parametras      | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
 |-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
@@ -143,8 +141,8 @@ Atstumas tarp Interfering Tx ir Victim Rx: 3510 m.
 Victim Link bazinė stotis atsiduria beveik Interfering Link viduryje.
 
 Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
-- https://docdb.cept.org/download/d8623f8a-1ff1/CEPTREP063.pdf
-- https://docdb.cept.org/download/090b56ac-eee8/ECCREP187.PDF
+- [ECC Report 187](https://docdb.cept.org/download/d8623f8a-1ff1/CEPTREP063.pdf)
+- [CEPT Report 63](https://docdb.cept.org/download/090b56ac-eee8/ECCREP187.PDF)
 
 | Parametras             | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
 |------------------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
