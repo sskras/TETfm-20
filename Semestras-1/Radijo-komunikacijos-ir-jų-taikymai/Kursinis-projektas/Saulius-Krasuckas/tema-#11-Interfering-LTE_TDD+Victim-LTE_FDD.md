@@ -149,7 +149,7 @@ Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 | Azimuth ref., °        | 50                                 | 0                                  | 0                             | 20                            |
 | Noise floor, dBm       | -                                  | -92                                | -                             | -96                           |
 | Sensitivity Floor, dBm | -                                  | -94                                | -                             | -101.5                        |
-| Reception Bandw., MHz  | -                                  | 18000                              | -                             | 18000                         |
+| Reception Bandw., kHz  | -                                  | 18.000                             | -                             | 18.000                        |
 | Interference Crit., dB | -                                  | C/I = 12                           | -                             | C/I = 12                      |
 | Path azimuth, °        | -                                  | 0 – 0.0230412                      | -                             | 0 - 0.04329656                |
 | Coverage Radius, m.    | 8000                               | -                                  | -                             | 6000                          |
