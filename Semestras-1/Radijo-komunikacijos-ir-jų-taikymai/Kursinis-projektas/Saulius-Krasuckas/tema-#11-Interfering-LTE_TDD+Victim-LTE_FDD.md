@@ -158,18 +158,21 @@ Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 | Local environment      | Outdoor                            | Indoor                             | Indoor                        | Outdoor                       |
 | General enironment     | -                                  | Rural                              | -                             | Rural                         |
 
-**Relating positioning of Interfering Link** Mode pasirinkau None. Nes trukdantysis siųstuvas ir trukdomasis imtuvas yra BS, nejudantys objektai.
-
 ### 5. Interferencijos kriterijaus, sklidimo modelio pasirinkimo logika.
 
 Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio. Vertė = 12 dB.
 
-Sklidimo modelį Victim ir Interfering sistemoms parinkau **Extendeda Hata** pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz ir iki 40 km.  
+Sklidimo modelį Victim ir Interfering sistemoms parinkau **Extendeda Hata** pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz, ir iki 40 km.  
 
-Sklidimo modelis tarp trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land".  
+Sklidimo modelis tarp trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land", nes abi BS įrengtos pakankamai aukštai.  
 
 Šį modelį būčiau dėl kalvotos vietovės būčiau išmėginęs ir abiems tiesioginiams linkams (Victim ir Interfering), bet pritrūkau duomenų apie kalvotumą bei miškų aukščius.  
 
+**Relative positioning of Interfering Link** nustatymai:  
+
+Kadangi trukdo bazinė stotis bazinei stočiai (nejudantys objektai), čia pasirinkau:
+- _Mode_ = "None"
+- _Number of active transmitters_ = 1
 
 ### 6. Pirminio modeliavimo rezultato (Probability of interference) pristatymas.
 
