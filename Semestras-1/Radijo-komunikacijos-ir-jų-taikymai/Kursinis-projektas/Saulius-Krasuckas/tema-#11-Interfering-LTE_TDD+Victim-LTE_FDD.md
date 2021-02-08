@@ -177,7 +177,7 @@ Kadangi trukdo bazinė stotis bazinei stočiai (nejudantys objektai), čia pasir
 ### 6. Pirminio modeliavimo rezultato (Probability of interference) pristatymas.
 
 Deja, simuliacijai nepatinka "Unwanted emissions range:"  
-![image](https://user-images.githubusercontent.com/74717106/107249019-96c46480-6a3b-11eb-8cbd-80309d6a400f.png)
+![klaida](https://user-images.githubusercontent.com/74717106/107274842-a2268880-6a59-11eb-8890-6eb457a63562.png)
 
 Parenku Interfering Link siųstuvo _Unwanted Emission Mask_ pagal
 [ECC Report 249](https://docdb.cept.org/download/32604bf0-7ac0/ECCRep249.pdf):
