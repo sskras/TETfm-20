@@ -111,13 +111,15 @@ Prie šios ribos pridėjus ir iš jos atėmus po pusę kanalo pločio (10 MHz), 
 
 Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (Huawei) specifikacijų.
 
-`TODO` Victim Link (telefono) TX galia.
+`TODO`:
+- Victim Link (telefono) TX galia.
+- Victim Link (bstoties) RX Sensitivity + Reception bandwidth.
 
 | Parametras      | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
 |-----------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
 | Dažnis          | 2580 MHz                           | t. p.                              | 2560 MHz                      | t. p.                         |
 | Galia           | 2\*40 W = ~49 dBm                  | -                                  | TODO dBm                      | -                             |
-| Antenos aukštis | 67 m                               | 1.5 m                              | 1.5 m                         | 31.5 m                        |
+| Antenos aukštis | 25 m                               | 1.5 m                              | 1.5 m                         | 31.5 m                        |
 | ...
 
 ### 4. Modeliavimo scenarijaus aprašymas
@@ -126,15 +128,25 @@ Trukdančiosios BS galia ir antenų aukščiai imti iš realios Telia įrangos (
 Mėginu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriuose (Utenos raj.)
 
 Interfering Link naudoja LTE-2600 TDD ryšį:
-- Tx yra bazinė stotis (Telia 612_Tauragnai, tarkime, nes neturiu Mezon duomenų)
+- Tx yra bazinė stotis (Telia 624_Pramones_11_Utena, tarkime, nes neturiu tikslių Mezon duomenų)
 - Rx yra judrioji stotis (Saulius, nešiojamas modemas Huawei E5573s-606)
+- atstumas 7460 m.
+- skersinis atstumas kambaryje: 3 m.
+- Rx judėjimo kampas atžvilgiu Tx: 0.0230412°
 
 Victim Link naudoja LTE-2600 FDD ryšį: 
 - Tx yra judrioji stotis (Kazys, Nokia 3310 4G)
 - Rx yra bazinė stotis (Telia 7AF_Medeniai_VB)
+- atstumas 3970 km.
+- skersinio judėjimo atstumas kambaryje: 3 m.
+- Tx judėjimo kampas atžvilgiu Rx: 0.04329656°
 
+Atstumas tarp Interfering Tx ir Victim Rx: 3510 m
 
 ### 5. Interferencijos kriterijaus, sklidimo modelio pasirinkimo logika.
+
+Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio.
+
 
 ### 6. Pirminio modeliavimo rezultato (Probability of interference) pristatymas.
 
