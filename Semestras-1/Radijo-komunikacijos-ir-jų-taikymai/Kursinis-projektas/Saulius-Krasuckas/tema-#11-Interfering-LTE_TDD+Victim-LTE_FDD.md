@@ -13,18 +13,66 @@
 ### 1. Teorinis tiriamųjų radijo sistemų veikimo aprašymas
 (Iš kokių elementų jos susideda, kokie pagrindiniai veikimo principai)
 
-Abi užduoties sistemos yra **LTE**. [RAN / belaidės dalies](https://www.researchgate.net/profile/Liljana_Gavrilovska/publication/277215242/figure/fig4/AS:669299148603409@1536584760155/LTE-RAN-architecture-including-femtocells-HeNBs-and-network-management.png) (E-UTRAN) architektūra:
+Abi užduoties sistemos yra **LTE**. LTE – _ketvirtos kartos (4G) belaidžio plačiajuosčio ryšio standartas_, sukurtas organizacijų projekto **3GPP**.
+
+Bet formaliai LTE (LTE Advanced) atitiktų **3.95G** ryšį, o tikrosios 4G belaidžio ryšio technologijos dėl to 2012 m. ITU buvo pervadintos į "True 4G".
+
+Fizinių atžvilgiu LTE naudoja du komunikavimo būdus (dupleksus):
+
+- FDD (angl. Frequency-division duplexing)
+- TDD (angl. Time-division duplexing)
+
+FDD tai Full-duplex ryšys, kuomet Uplink ir Downlink srautams naudojami skirtingi (gana artimi) radijo kanalai.
+TDD ryšys naudoja tą patį radijo kanalą, todėl yra Half-duplex. Bet jis emuliuoja Full-duplex veikimą išskaidydamas priėmimą ir siuntimą į trumpus laikinius intervalus ir naudodamas juos laikinėje ašyje pakaitomis (alternuodamas).
+
+Taip pat LTE naudoja ir šias technologijas:
+
+- Carrier Aggregation – kelių radijo kanalų apjungimas vieno vartotojo ryšiui.
+- Antenna Diversity – kelių signalo dedamųjų (atspindžių) apjungimas.
+- MIMO (ang. Multiple-Input Multiple-Output) – kelių radijo signalų perdavimas (su keletu antenų) ir srautų apjungimas vienu metu.
+- Beamforming – spinduliuotės kryptingumo siaurinimas.
+
+LTE sistema veikia tik paketų komutavimo pagrindu (angl. _Packet Switching_; nebelieka jokio _Circuit Switching_).
+
+LTE tinklą sudaro:
+
+| Komponentas | Terminas anglų k.                         | Prasmė
+|-------------|-------------------------------------------|----------------------------
+| UE          | User Equipment                            | Naudotojo įranga
+| E-UTRA      | Evolved Universal Terrestial Radio Access | Antžeminė radijo prieiga
+| EPC         | Evolved Packet Core                       | Paketinio tinklo branduolys
+
+LTE [radijo / belaidės dalies](https://www.researchgate.net/profile/Liljana_Gavrilovska/publication/277215242/figure/fig4/AS:669299148603409@1536584760155/LTE-RAN-architecture-including-femtocells-HeNBs-and-network-management.png) (E-UTRAN) architektūra:
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/74717106/107157338-480bc180-698c-11eb-9a96-148d7b50d648.png" width="75%">
 </p>
 
-LTE [paketinės / IP / kabelinės dalies](https://www.netmanias.com/en/?m=attach&no=23081) architektūra:
+| Komponentas  | Terminas anglų k.                         | Prasmė
+|--------------|-------------------------------------------|---------------------------
+| eNB, eNodeB  | Evolved Node B                            | Bazinė stotis
+| HeNB         | Home eNodeB                               | Femtocelės bazinė stotis
+| OMC          | Operation and Maintenance Center          | RAN valdymo centras
+
+LTE [kabelinės / paketinės / IP dalies](https://www.netmanias.com/en/?m=attach&no=23081) (EPC) architektūra:
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/74717106/107157437-c7999080-698c-11eb-9879-1597843e37ab.png" width="85%">
 </p>
 
+| Komponentas  | Terminas anglų k.                         | Prasmė
+|--------------|-------------------------------------------|---------------------------
+| MME          | Mobility Management Entity                | Radijo prieigos valdymo mazgas
+| HSS          | Home Subscriber Server                    | Operatoriaus abonentų DB servisas
+| Serving GW   | Serving Gateway                           | UE prisijungimo šliuzas
+| DPI          | Deep Packet Inspection                    | Paketų (L7) inspektavimas
+| PDN          | Packet Data Network                       | Išorinis paketinis tinklas, internetas
+| PGW          | PDN Gateway                               | Internetinis šliuzas
+| PCRF         | Policy Control and Charging Rules Function| Veiklos valdymas (įsk. QoS) ir apmokestinimas
+| SPR          | Subscriber Profile Repositories           | Abonentų profilių saugykla
+| OCS          | Online Charging System                    | Apmokestinimo ir kreditingumo valdymo mazgas
+| OFCS         | Offline Charging system                   | CDR generatorius
+| CDR          | Charging Data Records                     | Apmokestinimo (įvykių) įrašai
 
 
 ### 2. Kokios dažnių juostos yra priskirtos ir naudojamos tiriamųjų radijo ryšio sistemų
