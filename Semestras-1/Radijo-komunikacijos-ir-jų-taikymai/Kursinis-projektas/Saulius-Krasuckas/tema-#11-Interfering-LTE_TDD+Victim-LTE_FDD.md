@@ -1,7 +1,7 @@
 # Dviejų radijo ryšio linijų elektromagnetinės interferencijos tyrimas panaudojant SEAMCAT
 ## Radijo komunikacijos ir jų taikymai <br /> <br /> Elektronikos fakultetas <br /> VILNIUS TECH <br /> <br /> Kursinio darbo ataskaita
 
-**Data:** 2021-02-05  
+**Data:** 2021-02-09  
 **Atliko:** Saulius Krasuckas  
 **Grupė:** TETfm-20  
 **Užduotis:** 11  
@@ -139,7 +139,9 @@ Victim Link naudoja LTE-2600 FDD ryšį:
 Atstumas tarp Interfering Tx ir Victim Rx: 3510 m.  
 
 Victim Link bazinė stotis atsiduria beveik Interfering Link viduryje:
-![image](https://user-images.githubusercontent.com/74717106/107305482-c00ce100-6a8b-11eb-85cc-3fb713ecbb80.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/74717106/107305482-c00ce100-6a8b-11eb-85cc-3fb713ecbb80.png" width="85%">
+</p>
 
 Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 - [ECC Report 187](https://docdb.cept.org/download/d8623f8a-1ff1/CEPTREP063.pdf)
@@ -162,11 +164,15 @@ Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 
 Taip pat pagal [ECC Report 249](https://docdb.cept.org/download/32604bf0-7ac0/ECCRep249.pdf)
 tikslinu Interfering Link Tx _Unwanted Emission Mask_:  
-![Screenshot from 2021-02-08 20-09-58](https://user-images.githubusercontent.com/74717106/107262738-9763f780-6a49-11eb-9112-5402b00c3a20.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/74717106/107262738-9763f780-6a49-11eb-9112-5402b00c3a20.png" width="85%">
+</p>
 
 Aproksimuoju šiais taškais:
 
-![image](https://user-images.githubusercontent.com/74717106/107297738-a021f100-6a7c-11eb-8c37-5302673dd44e.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/74717106/107297738-a021f100-6a7c-11eb-8c37-5302673dd44e.png" width="85%">
+</p>
 
 Priešingu atveju būna klaida ("Emissions range [...] does not match [...] victim receiver frequency range").
 
