@@ -183,7 +183,7 @@ Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio. Reikšmę parenku
 Sklidimo modelį Victim ir Interfering sistemoms parinkau **Extendeda Hata** pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz, ir iki 40 km.  
 
 Sklidimo modelis tarp trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land", nes abi BS įrengtos pakankamai aukštai, apie 50 m. 
-Taip pat ir dažnis bei atstumas.  
+Taip pat tinkami ir dažnis bei atstumas.  
 
 Šį modelį dėl kalvotos vietovės būčiau išmėginęs ir abiems tiesioginiams linkams (Victim ir Interfering), tačiau pritrūkau duomenų apie kalvotumą bei miškų aukščius.  
 
@@ -216,7 +216,7 @@ Atlikti pakeitimai:
 - TDD IL-Tx BS perkėliau toliau nuo VL-Rx BS, atstumas išaugo nuo 3.9 iki 8.8 km (iš esmės į gretimą miestelį).
 - TDD IL-Tx BS sumažinau antenos aukštį nuo 67 iki 25 m.
 - TDD IL-Tx BS palenkiau anteną (Elevation pasikeitė nuo 0 iki -20°).
-- TDD IL-Tx BS sumažinau siųstumo galią nuo 49 iki 43 dBi.
+- TDD IL-Tx BS sumažinau siųstuvo galią nuo 49 iki 43 dBi.
 - FDD VL-Tx BS sumažinau imtuvo jautrumą nuo -101.5 iki -91 dBm.
 
 Interferencijos tikimybė esant C/I = 9 nukrito iki **0.92%**:  
@@ -237,10 +237,10 @@ Interferencijos tikimybė esant C/I = 9 nukrito iki **0.92%**:
 
 (d) Nėra aišku, ar visi iš eilės šie pakeitimai būtini teigiamam rezultatui pasiekti. Papildomų keitimo iteracijų nebeatlikau.  
 
-(e) Dalis šių pakeitimų galimai pakenkė pirminėms funkcijoms (Interfering Link ir Victim Link ryšio kokybei). Šių tyrimų irgi nebeatlikau.  
+(e) Dalis šių pakeitimų galimai pakenkė pirminėms funkcijoms (Interfering Link ir Victim Link ryšio kokybei). Šių tyrimų irgi neatlikau.  
 
-(f) Programoje neradau būdo nurodyti tikslaus BS ir MS tarpusavio išsidėstymo, kaip matyti iš pav. poskyryje 6. Tačiau:  
+(f) Programoje neradau būdo nurodyti tikslų BS ir MS tarpusavio išsidėstymą, kaip matyti iš taškų pasiskirstymo pav. poskyryje 6. Tačiau:  
 
-Kadangi nagrinėjau iš esmės nejudančias MS, kortelėse **Transmitter to Receiver Path** galop ėmiau atkreipti dėmesį į **Relative Location** nustatymą **Correlated Distance**.  
-Pasinaudojus **Delta X** ir **Delta Y** parametrais čia ir **Transmitter to Victim Link Receiver Path** kortelėje galimai būtų pavykę gauti tikslų topologinį išsidėstymą ir realistiškesnę interferencijos tikimybę.  
+Kadangi nagrinėjau iš esmės nejudančias MS, kortelėse **Transmitter to Receiver Path** galop ėmiau atkreipti dėmesį į **Relative Location** nustatymą **Correlated Distance**.
+Pasinaudojus **Delta X** ir **Delta Y** parametrais čia ir **Transmitter to Victim Link Receiver Path** kortelėje galimai būtų pavykę gauti tikslų topologinį išsidėstymą ir realistiškesnę interferencijos tikimybę. 
 Deja, poliarinių koordinačių pervedimas dekartinę sistemą užtruko, ir ši hipotezė liko nebepatikrinta.
