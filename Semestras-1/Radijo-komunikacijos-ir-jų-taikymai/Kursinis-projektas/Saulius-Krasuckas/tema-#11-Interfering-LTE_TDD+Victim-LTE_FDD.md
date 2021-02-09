@@ -120,7 +120,6 @@ Trukdomosios UE galia imta iš ETSI ataskaitos:
 | Antenos aukštis | 67 m                               | 1.5 m                              | 1.5 m                         | 31.5 m                        |
 
 ### 4. Modeliavimo scenarijaus aprašymas
-(kaip išdėstomos radijo ryšio sistemų Tx ir Rx, kokie atstumai, padengimo zonos ir t.t.)
 
 Mėginu modeliuoti judrųjį ryšį savo tėviškėje, vienkiemyje Katlėriuose (Utenos raj.)
 
@@ -138,7 +137,9 @@ Victim Link naudoja LTE-2600 FDD ryšį:
 - skersinio judėjimo atstumas kambaryje: 3 m.
 
 Atstumas tarp Interfering Tx ir Victim Rx: 3510 m.  
-Victim Link bazinė stotis atsiduria beveik Interfering Link viduryje.
+
+Victim Link bazinė stotis atsiduria beveik Interfering Link viduryje:
+![image](https://user-images.githubusercontent.com/74717106/107305482-c00ce100-6a8b-11eb-85cc-3fb713ecbb80.png)
 
 Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 - [ECC Report 187](https://docdb.cept.org/download/d8623f8a-1ff1/CEPTREP063.pdf)
