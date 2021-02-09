@@ -225,5 +225,6 @@ Interferencijos tikimybė esant C/I = 9 nukrito iki **0.92%**:
 (d) Nėra aišku, ar visi iš eilės šie pakeitimai būtini teigiamam rezultatui pasiekti. Papildomų keitimo iteracijų nebeatlikau.  
 (e) Dalis šių pakeitimų galimai pakenkė pirminėms funkcijoms (Interfering Link ir Victim Link ryšio kokybei). Šių tyrimų irgi nebeatlikau.  
 (f) Programoje neradau būdo nurodyti tikslaus BS ir MS tarpusavio išsidėstymo, kaip matyti iš pav. poskyryje 6.  
+
 Kadangi nagrinėjau iš esmės nejudančias MS, vėliau kortelėse **Transmitter to Receiver Path** ėmiau atkreipti dėmesį į **Relative Location** nustatymą **Correlated Distance**.  
 Pasinaudojus **Delta X** ir **Delta Y** parametrais čia ir **Transmitter to Victim Link Receiver Path** kortelėje galimai būtų pavykę gauti tikslų topologinį išsidėstymą ir realistiškesnę interferencijos tikimybę.
