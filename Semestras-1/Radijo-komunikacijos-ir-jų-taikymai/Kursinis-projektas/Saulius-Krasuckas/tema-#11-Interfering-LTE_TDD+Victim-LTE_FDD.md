@@ -220,12 +220,21 @@ Interferencijos tikimybė esant C/I = 9 nukrito iki **0.92%**:
 ### 8. Išvados
 
 (a) Pirminė, visiškai mėgėjiška RAN konfigūracija lėmė stiprią radijo sistemų interferenciją.  
-(b) Pakeitus dalį parametrų, interferencijos tikimybės nukrito iki 1%, kai C/I = 9.  
+
+(b) Pakeitus dalį parametrų, interferencijos tikimybės nukrito iki 1%, kai C/I = 9:   
+
+- Didžiausią poveikį padarė IL-Tx galios bei antenos aukščio mažinimas.
+- Taip pat stipriai interferencijos tikimybę sumažino ir VL-Rx jautrumo pamažinimas.
+- Patikrinti ir keli kiti parametrai, veikiantys interferenciją. Tai rodo, kad egzistuoja bent keli būdai pasiekti rezultatui.
 
 (c) Kai C/I = 12, intererencijos tikimybė tampa tik 3%.  
-(d) Nėra aišku, ar visi iš eilės šie pakeitimai būtini teigiamam rezultatui pasiekti. Papildomų keitimo iteracijų nebeatlikau.  
-(e) Dalis šių pakeitimų galimai pakenkė pirminėms funkcijoms (Interfering Link ir Victim Link ryšio kokybei). Šių tyrimų irgi nebeatlikau.  
-(f) Programoje neradau būdo nurodyti tikslaus BS ir MS tarpusavio išsidėstymo, kaip matyti iš pav. poskyryje 6.  
 
-Kadangi nagrinėjau iš esmės nejudančias MS, vėliau kortelėse **Transmitter to Receiver Path** ėmiau atkreipti dėmesį į **Relative Location** nustatymą **Correlated Distance**.  
-Pasinaudojus **Delta X** ir **Delta Y** parametrais čia ir **Transmitter to Victim Link Receiver Path** kortelėje galimai būtų pavykę gauti tikslų topologinį išsidėstymą ir realistiškesnę interferencijos tikimybę.
+(d) Nėra aišku, ar visi iš eilės šie pakeitimai būtini teigiamam rezultatui pasiekti. Papildomų keitimo iteracijų nebeatlikau.  
+
+(e) Dalis šių pakeitimų galimai pakenkė pirminėms funkcijoms (Interfering Link ir Victim Link ryšio kokybei). Šių tyrimų irgi nebeatlikau.  
+
+(f) Programoje neradau būdo nurodyti tikslaus BS ir MS tarpusavio išsidėstymo, kaip matyti iš pav. poskyryje 6. Tačiau:  
+
+Kadangi nagrinėjau iš esmės nejudančias MS, kortelėse **Transmitter to Receiver Path** galop ėmiau atkreipti dėmesį į **Relative Location** nustatymą **Correlated Distance**.  
+Pasinaudojus **Delta X** ir **Delta Y** parametrais čia ir **Transmitter to Victim Link Receiver Path** kortelėje galimai būtų pavykę gauti tikslų topologinį išsidėstymą ir realistiškesnę interferencijos tikimybę.  
+Deja, poliarinių koordinačių pervedimas dekartinę sistemą užtruko, ir ši hipotezė liko nebepatikrinta.
