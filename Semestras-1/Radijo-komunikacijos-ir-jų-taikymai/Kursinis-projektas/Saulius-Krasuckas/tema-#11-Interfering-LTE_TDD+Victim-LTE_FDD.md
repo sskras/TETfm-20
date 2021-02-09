@@ -197,14 +197,24 @@ iRSS vektorius:
   <img src="https://user-images.githubusercontent.com/74717106/107299588-7074e800-6a80-11eb-87d2-b326f6bf82c1.png" width="45%">
 </p>
 
-Deja, interferencijos tikimybė labai aukšta, apie 90%:  
-![image](https://user-images.githubusercontent.com/74717106/107299775-e11c0480-6a80-11eb-8012-28a5135da8dd.png)
+Deja, interferencijos tikimybė labai aukšta, apie 99%:  
+![image](https://user-images.githubusercontent.com/74717106/107302014-44a83100-6a85-11eb-9bf3-f079ad454207.png)
 
 
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
 (kad sumažintume probability of interference, pvz., nuo 100% iki 5% ar 0%)
 
-Trūksta.
+Atlikti pakeitimai:
+
+- FDD VL-Tx MS padidinau antenos stiprinimą nuo 2 iki 7 dBi (tariame, kad naudosime išorinę LTE anteną).
+- TDD IL-Tx BS sumažinau antenos aukštį nuo 67 iki 25 m.
+- TDD IL-Tx BS palenkiau anteną (Elevation pasikeitė nuo 0 iki -20°).
+- TDD IL-Tx BS sumažinau siųstumo galią nuo 49 iki 43 dBi.
+- FDD VL-Tx BS sumažinau imtuvo jautrumą nuo -101.5 iki -91 dBm.
+
+Interferencijos tikimybė esant C/I = 9 nukrito iki **0.92%**:  
+![image](https://user-images.githubusercontent.com/74717106/107306578-c8661b80-6a8d-11eb-9655-7921a3104884.png)
+
 
 ### 8. Išvados
 (ar sistemos yra elektromagnetiškai suderinamos, ir kokia konfigūracija būtina)
