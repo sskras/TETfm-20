@@ -144,29 +144,41 @@ Kitus parametrus pasirenku pagal literatūrą ir Seamcat instrukcijas:
 - [ECC Report 187](https://docdb.cept.org/download/d8623f8a-1ff1/CEPTREP063.pdf)
 - [CEPT Report 63](https://docdb.cept.org/download/090b56ac-eee8/ECCREP187.PDF)
 
-| Parametras             | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS   |
-|------------------------|------------------------------------|------------------------------------|-------------------------------|-------------------------------|
-| Azimuth ref., °        | 50                                 | 0                                  | 0                             | 20                            |
-| Noise floor, dBm       | -                                  | -92                                | -                             | -96                           |
-| Sensitivity Floor, dBm | -                                  | -94                                | -                             | -101.5                        |
-| Reception Bandw., kHz  | -                                  | 18.000                             | -                             | 18.000                        |
-| Interference Crit., dB | -                                  | C/I = 12                           | -                             | C/I = 12                      |
-| Path azimuth, °        | -                                  | 0 – 0.0230412                      | -                             | 0 - 0.04329656                |
-| Coverage Radius, m.    | 8000                               | -                                  | -                             | 6000                          |
-| Path Distance Factor   | -                                  | 0.9325                             | -                             | 0.661666667                   |
-| Propagation Model      | -                                  | Extended Hata                      | -                             | Extended Hata                 |
-| Local environment      | Outdoor                            | Indoor                             | Indoor                        | Outdoor                       |
-| General enironment     | -                                  | Rural                              | -                             | Rural                         |
+| Parametras             | Interfering Link Tx <br/> TDD BS   | Interfering Link Rx <br/> TDD UE   | Victim Link Tx <br/> FDD UE   | Victim Link Rx <br/> FDD BS |
+|------------------------|------------------------------------|------------------------------------|-------------------------------|-----------------------------|
+| Azimuth ref., °        | 50                                 | 0                                  | 0                             | 20                          |
+| Noise floor, dBm       | -                                  | -92                                | -                             | -96                         |
+| Sensitivity Floor, dBm | -                                  | -94                                | -                             | -101.5                      |
+| Reception Bandw., kHz  | -                                  | 18.000                             | -                             | 18.000                      |
+| Interference Crit., dB | -                                  | C/I = 9                            | -                             | C/I = 9                     |
+| Path azimuth, °        | -                                  | 0 – 0.0230412                      | -                             | 0 - 0.04329656              |
+| Coverage Radius, m.    | 8000                               | -                                  | -                             | 6000                        |
+| Path Distance Factor   | -                                  | 0.9325                             | -                             | 0.661666667                 |
+| Propagation Model      | -                                  | Extended Hata                      | -                             | Extended Hata               |
+| Local environment      | Outdoor                            | Indoor                             | Indoor                        | Outdoor                     |
+| General enironment     | -                                  | Rural                              | -                             | Rural                       |
+
+
+Taip pat pagal [ECC Report 249](https://docdb.cept.org/download/32604bf0-7ac0/ECCRep249.pdf)
+tikslinu Interfering Link Tx _Unwanted Emission Mask_:  
+![Screenshot from 2021-02-08 20-09-58](https://user-images.githubusercontent.com/74717106/107262738-9763f780-6a49-11eb-9112-5402b00c3a20.png)
+
+Aproksimuoju šiais taškais:
+
+![image](https://user-images.githubusercontent.com/74717106/107297738-a021f100-6a7c-11eb-8c37-5302673dd44e.png)
+
+Priešingu atveju būna klaida ("Emissions range [...] does not match [...] victim receiver frequency range").
 
 ### 5. Interferencijos kriterijaus, sklidimo modelio pasirinkimo logika.
 
-Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio. Vertė = 12 dB.
+Renkuosi C/I kriterijų, nes abi sistemos yra judriojo ryšio. Reikšmę parenku gana žemą, 9 dB, nes ryšiui nelabai palankios sąlygos (iš asm. patirties).
 
 Sklidimo modelį Victim ir Interfering sistemoms parinkau **Extendeda Hata** pagal kaimišką vietovę (be didesnių užstatymų) bei dažnių ir atstumų ruožus: 30 MHz – 3 GHz, ir iki 40 km.  
 
-Sklidimo modelis tarp trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land", nes abi BS įrengtos pakankamai aukštai.  
+Sklidimo modelis tarp trukdančiojo siųstuvo ir trukdomojo imtuvo – "ITU-R P.1546-4 land", nes abi BS įrengtos pakankamai aukštai, apie 50 m. 
+Taip pat ir dažnis bei atstumas.  
 
-Šį modelį būčiau dėl kalvotos vietovės būčiau išmėginęs ir abiems tiesioginiams linkams (Victim ir Interfering), bet pritrūkau duomenų apie kalvotumą bei miškų aukščius.  
+Šį modelį dėl kalvotos vietovės būčiau išmėginęs ir abiems tiesioginiams linkams (Victim ir Interfering), tačiau pritrūkau duomenų apie kalvotumą bei miškų aukščius.  
 
 **Relative positioning of Interfering Link** nustatymai:  
 
@@ -174,15 +186,19 @@ Kadangi trukdo bazinė stotis bazinei stočiai (nejudantys objektai), čia pasir
 - _Mode_ = "None"
 - _Number of active transmitters_ = 1
 
+
 ### 6. Pirminio modeliavimo rezultato (Probability of interference) pristatymas.
 
-Deja, simuliacijai nepatinka "Unwanted emissions range:"  
-![klaida](https://user-images.githubusercontent.com/74717106/107274842-a2268880-6a59-11eb-8890-6eb457a63562.png)
+![image](https://user-images.githubusercontent.com/74717106/107299417-fcd2db00-6a7f-11eb-967e-f614f64bdb84.png)
 
-Parenku Interfering Link siųstuvo _Unwanted Emission Mask_ pagal
-[ECC Report 249](https://docdb.cept.org/download/32604bf0-7ac0/ECCRep249.pdf):
+iRSS vektorius:  
+<p align="center" float="middle" width="100%">
+  <img src="https://user-images.githubusercontent.com/74717106/107299567-65ba5300-6a80-11eb-88ed-cfe4e5a8e06b.png" width="45%">
+  <img src="https://user-images.githubusercontent.com/74717106/107299588-7074e800-6a80-11eb-87d2-b326f6bf82c1.png" width="45%">
+</p>
 
-![Screenshot from 2021-02-08 20-09-58](https://user-images.githubusercontent.com/74717106/107262738-9763f780-6a49-11eb-9112-5402b00c3a20.png)
+Deja, interferencijos tikimybė labai aukšta, apie 90%:  
+![image](https://user-images.githubusercontent.com/74717106/107299775-e11c0480-6a80-11eb-8012-28a5135da8dd.png)
 
 
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
