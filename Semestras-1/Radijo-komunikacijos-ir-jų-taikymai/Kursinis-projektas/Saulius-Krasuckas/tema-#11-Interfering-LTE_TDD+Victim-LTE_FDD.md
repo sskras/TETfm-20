@@ -202,11 +202,11 @@ Deja, interferencijos tikimybė labai aukšta, apie 99%:
 
 
 ### 7. Pasiūlymai, kaip galima koreguoti radijo ryšio sistemas
-(kad sumažintume probability of interference, pvz., nuo 100% iki 5% ar 0%)
 
 Atlikti pakeitimai:
 
 - FDD VL-Tx MS padidinau antenos stiprinimą nuo 2 iki 7 dBi (tariame, kad naudosime išorinę LTE anteną).
+- TDD IL-Tx BS perkėliau toliau nuo VL-Rx BS, atstumas išaugo nuo 3.9 iki 8.8 km (iš esmės į gretimą miestelį).
 - TDD IL-Tx BS sumažinau antenos aukštį nuo 67 iki 25 m.
 - TDD IL-Tx BS palenkiau anteną (Elevation pasikeitė nuo 0 iki -20°).
 - TDD IL-Tx BS sumažinau siųstumo galią nuo 49 iki 43 dBi.
@@ -217,6 +217,13 @@ Interferencijos tikimybė esant C/I = 9 nukrito iki **0.92%**:
 
 
 ### 8. Išvados
-(ar sistemos yra elektromagnetiškai suderinamos, ir kokia konfigūracija būtina)
 
-Trūksta.
+(a) Pirminė, visiškai mėgėjiška RAN konfigūracija lėmė stiprią radijo sistemų interferenciją.  
+(b) Pakeitus dalį parametrų, interferencijos tikimybės nukrito iki 1%, kai C/I = 9.  
+
+(c) Kai C/I = 12, intererencijos tikimybė tampa tik 3%.  
+(d) Nėra aišku, ar visi iš eilės šie pakeitimai būtini teigiamam rezultatui pasiekti. Papildomų keitimo iteracijų nebeatlikau.  
+(e) Dalis šių pakeitimų galimai pakenkė pirminėms funkcijoms (Interfering Link ir Victim Link ryšio kokybei). Šių tyrimų irgi nebeatlikau.  
+(f) Programoje neradau būdo nurodyti tikslaus BS ir MS tarpusavio išsidėstymo, kaip matyti iš pav. poskyryje 6.  
+Kadangi nagrinėjau iš esmės nejudančias MS, vėliau kortelėse **Transmitter to Receiver Path** ėmiau atkreipti dėmesį į **Relative Location** nustatymą **Correlated Distance**.  
+Pasinaudojus **Delta X** ir **Delta Y** parametrais čia ir **Transmitter to Victim Link Receiver Path** kortelėje galimai būtų pavykę gauti tikslų topologinį išsidėstymą ir realistiškesnę interferencijos tikimybę.
