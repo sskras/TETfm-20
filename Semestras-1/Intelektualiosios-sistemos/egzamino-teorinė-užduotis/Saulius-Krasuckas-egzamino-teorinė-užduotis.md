@@ -122,7 +122,6 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda auk
 (Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
-
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
@@ -179,11 +178,11 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExOD
-I3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3
-ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNS
-w2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4
-NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OS
-wtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4
-NTQ3Njc1XX0=
+eyJoaXN0b3J5IjpbMjk4OTA2ODc3LDQ5NDc5MTE4MywtMTAxMD
+U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
+NjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC
+05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3
+Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LD
+E5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUz
+ODU2NjRdfQ==
 -->
