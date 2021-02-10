@@ -65,7 +65,7 @@ Probleminės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Jis laikomas pačiu sun
+Iš visų 7 jis laikomas pačiu sunkiausiu.
 
 Laikau, kad sprendimo priėmimas kardinaliai skiriasi priklausomai nuo to, ar asmuo šiuo metu dirba. O kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MT
-M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
-LTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbOTkyNjU2MTExLC05MjUzODU2NjQsLTU1OD
+U0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIs
+OTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
 -->
