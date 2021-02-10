@@ -84,9 +84,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Tiksliausiai prognozuojančio metodo išrinkimas.
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos apmokymas;
-* Intelektualiosios sistemos patikrinimas.
+* Intelektualiosios sistemos tikslumo įvertinimas.
 
-(Ir galiausiai Produkcija!)
+(Galiausiai Produkcija!)
 
 ---
 
@@ -147,7 +147,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTQwMTg5NzksMTExNjE0NjEyOSwtNT
+eyJoaXN0b3J5IjpbLTE2MTE0NzAyMTcsMTExNjE0NjEyOSwtNT
 U3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2
 Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC
 05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1
