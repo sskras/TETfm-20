@@ -84,9 +84,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
-* Įėjimo modeliui paduodamų duomenų tipų suskaitmeninimas  
-* (pvz. darbdavio tipas)
-
+* Modeliui paduodamų duomenų tipų mato sukūrimas  
+  (pvz. darbdavio tipui aprašyti)
+* P
 .
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
@@ -146,7 +146,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjk3Njc5MCwtNTU3MDY3Njg5LC0xOD
+eyJoaXN0b3J5IjpbLTk0ODY4NDY5MywtNTU3MDY3Njg5LC0xOD
 c4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5
 OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLT
 U1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAy
