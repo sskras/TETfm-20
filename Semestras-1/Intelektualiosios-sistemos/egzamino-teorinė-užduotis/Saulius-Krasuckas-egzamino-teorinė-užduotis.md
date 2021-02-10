@@ -50,7 +50,7 @@ Probleminės-informacinės vietos:
 * turimi ne visi duomenys apie asmenį. Tiek fiziniai (pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas), tiek ir psichologiniai (etinės/moralinės nuostatos, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi savo metro / tikslaus mato, t. y. nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis, nurodoma metais, o ne įvardnant specifiką).
-* nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. išsekimas, „perdegimas (angl. _Job burnout_), noras supaprastinti gyvenamąją aplinką (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
+* nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. disforiją, nulemtą „perdegimo“ (angl. _Job burnout_), polinkį supaprastinti gyvenimo būdą (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
 
 [Iš šaltinių](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 nuoseklių sprendimų. Ši užduotis mano interpretavimu atitinka patį pirmąjį – angl. _Considering a change_ sprendimą:
 
@@ -197,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5NzQwNjYsODQwMzAyNzU1LDE3NTQ1Nz
-cyNzEsMTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIwOTYs
-LTEyNzQ1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4Mz
-Q1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgs
-LTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nz
-czODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3
-Nl19
+eyJoaXN0b3J5IjpbLTg5NTUzNzM0MSw1NTk3NDA2Niw4NDAzMD
+I3NTUsMTc1NDU3NzI3MSwxODY2MDQ5Mjg4LDEwOTQyMjU5NDMs
+MTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2MTEyLC00OT
+Y3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMTA1ODUxOCwt
+MTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1OD
+AxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1
+MDE1XX0=
 -->
