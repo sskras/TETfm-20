@@ -65,7 +65,7 @@ Probleminės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Iš visų 7 jis, sprendimas priimti pokytį laikomas pačiu sunkiausiu. Pagal literatūros paieškos rezultatus panašu, kad toks jis ne tik priimančiajam, bet ir prognozuotojui.
+Iš visų 7 jis, sprendimas priimti pokytį laikomas asmeniui pačiu sunkiausiu. Pagal literatūros paieškos rezultatus panašu, kad toks jis ne tik priimančiajam, bet ir prognozuotojui.
 
 Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. O kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ4NDUwNDUxLDk5MjY1NjExMSwtOTI1Mz
-g1NjY0LC01NTg1NDc2NzUsOTgxMzgyNzcyLC0yMzMxNTI2ODMs
-LTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbMTM1NTMzOTcyOCw5OTI2NTYxMTEsLTkyNT
+M4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgz
+LC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4OV19
 -->
