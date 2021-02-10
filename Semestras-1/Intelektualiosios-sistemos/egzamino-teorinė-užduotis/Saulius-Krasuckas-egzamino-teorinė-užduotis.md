@@ -165,7 +165,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Išėjimą turėjome vieną, o jo reikšmės 0 arba 1 nurodė,  
    kokiai klasei priklauso vaizdas, kurio požymius siuntėme į įėjimą).  
 
-Įvestis yra slankaus kablelio vektorius, sudarytas iš pateiktų duomenų. Kaip aprašyti darbo srities patirtį, reikėtų atskiro tyrimo, galbūt eksperimentinio.
+Įvestis yra slankaus kablelio vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, kaip aprašyti darbo srities patirtį, normos nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
   |  
@@ -180,11 +180,11 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTE0Nzc5Miw0OTQ3OTExODMsLTEwMT
-A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
-MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
-wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
-NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NS
-wxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1
-Mzg1NjY0XX0=
+eyJoaXN0b3J5IjpbLTIwNDEwODM4NDEsNDk0NzkxMTgzLC0xMD
+EwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2Mjkw
+NzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMT
+AsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcw
+Njc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2Nz
+UsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTky
+NTM4NTY2NF19
 -->
