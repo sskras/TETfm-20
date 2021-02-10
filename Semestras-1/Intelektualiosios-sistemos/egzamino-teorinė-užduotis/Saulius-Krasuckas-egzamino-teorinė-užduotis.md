@@ -50,9 +50,9 @@ Probleminės-informacinės vietos:
 * turimi ne visi duomenys apie asmenį. Tiek fiziniai (pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas), tiek ir psichologiniai (etinės/moralinės nuostatos, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi savo metro / tikslaus mato, t. y. nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis, nurodoma metais, o ne įvardnant specifiką).
-* nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. disforiją, nulemtą „perdegimo“ (angl. _Job burnout_), polinkį supaprastinti gyvenimo būdą (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
+* nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. disforiją, nulemtą „perdegimo“ (angl. _Job burnout_), polinkį supaprastinti gyvenimo būdą (angl. _Career downshift_), kt. Šią būseną laikau ypač svarbia laiko momentu, kai asmuo gauna darbo pasiūlymą.
 
-[Iš šaltinių](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 nuoseklių sprendimų. Ši užduotis mano interpretavimu atitinka patį pirmąjį – angl. _Considering a change_ sprendimą:
+[Iš šaltinio](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 nuoseklių sprendimų. Ši užduotis mano interpretavimu atitinka patį pirmąjį – angl. _Considering a change_ sprendimą:
 
 ![image](https://user-images.githubusercontent.com/74717106/107552178-cb6f2200-6bdb-11eb-8139-f0bfba2ed833.png)
 
@@ -62,7 +62,7 @@ Iš visų septynių jis, *sprendimas priimti pokytį* laikomas asmeniui pačiu s
 
 Pagal literatūros paieškos rezultatus panašu, kad šį sprendimą sunku ne tik priimti, bet ir prognozuoti.
 
-Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. Kadangi neradau šaltinių kaip spręsti šį uždavinį tiesiogiai, skeliu jį į dvi dalis:
+Laikau, kad priklausomai nuo to, ar asmuo šiuo metu apskritai turi darbo, sprendimo priėmimas keičiasi iš esmės. Kadangi neradau šaltinių kaip spręsti šį uždavinį tiesiogiai, skeliu jį į dvi dalis:
 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
@@ -197,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NTUzNzM0MSw1NTk3NDA2Niw4NDAzMD
-I3NTUsMTc1NDU3NzI3MSwxODY2MDQ5Mjg4LDEwOTQyMjU5NDMs
-MTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2MTEyLC00OT
-Y3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMTA1ODUxOCwt
-MTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1OD
-AxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1
-MDE1XX0=
+eyJoaXN0b3J5IjpbOTI0OTQ5OTcwLDU1OTc0MDY2LDg0MDMwMj
+c1NSwxNzU0NTc3MjcxLDE4NjYwNDkyODgsMTA5NDIyNTk0Mywx
+NTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Nj
+c5NDIyMCwyODM0NTczLDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0x
+MTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MD
+EwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUw
+MTVdfQ==
 -->
