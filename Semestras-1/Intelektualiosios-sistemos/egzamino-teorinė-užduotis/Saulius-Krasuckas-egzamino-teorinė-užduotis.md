@@ -72,7 +72,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją. Ją performuluoju taip: 
+Kadangi pirmajai daliai sprendimų neradau, sprendžiu antrąją. Ją performuluoju taip: 
 
 Kiek tikėtina, jog konkretus **darbuotojas** (nebe konretus kandidatas) norės pakeisti darbo vietą.
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** (nebe konretus kandidatas) norės 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MjgxMjg4MiwtNTU4NTQ3Njc1LDk4MT
+eyJoaXN0b3J5IjpbLTE0MTk2NTEyOCwtNTU4NTQ3Njc1LDk4MT
 M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
 LTcwOTQwMzQ4OV19
 -->
