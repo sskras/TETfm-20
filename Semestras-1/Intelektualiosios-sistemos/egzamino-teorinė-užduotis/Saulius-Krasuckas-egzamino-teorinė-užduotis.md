@@ -137,10 +137,9 @@ Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja vi
 
   1. Iš alternatyvų **išrinkti geriausią, optimalų sprendimą**.  (0,5)
 
-Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
+Iš **ADT**, **MLP**, **RF** ir **GBDT** rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
 
-Iš **ADT**, **MLP**, **RF** ir **GBDT** renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.  
-
+Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.  
 
 --
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
@@ -175,7 +174,7 @@ Iš **ADT**, **MLP**, **RF** ir **GBDT** renkuosi **RF** intelektualį metodą. 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczOTY0OTg0MywtMTAxMDU4NTE4LC0xMT
+eyJoaXN0b3J5IjpbMTc0MjY1NTE2OCwtMTAxMDU4NTE4LC0xMT
 gyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEw
 NzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUwMT
 UsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xODc4
