@@ -184,6 +184,10 @@ O po testų palikti produkcijai tik vieną.
 Čia tektų konstruoti _Decision Trees_:
 ![image](https://user-images.githubusercontent.com/74717106/107565706-9fa86800-6bec-11eb-8d42-1b366d940e73.png)
 
+Tam pradėtume nuo vieno mazgo (_Node_) ir jį dalintume:
+![image](https://user-images.githubusercontent.com/74717106/107566021-0299ff00-6bed-11eb-9285-2fcb56b3d631.png)
+
+Iki galutinio rezultato:
 ![image](https://user-images.githubusercontent.com/74717106/107565776-b77fec00-6bec-11eb-9be7-25ce35e41f92.png)
 
   
@@ -196,11 +200,11 @@ O po testų palikti produkcijai tik vieną.
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODU3NjEzMDAsMjgzNDU3Myw0OTQ3OT
-ExODMsLTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4
-NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMT
-UwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYx
-MjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMT
-E4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1
-NjExMV19
+eyJoaXN0b3J5IjpbMzA3NDY3NDQxLDI4MzQ1NzMsNDk0NzkxMT
+gzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcs
+LTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MD
+U5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5
+LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExOD
+A5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYx
+MTFdfQ==
 -->
