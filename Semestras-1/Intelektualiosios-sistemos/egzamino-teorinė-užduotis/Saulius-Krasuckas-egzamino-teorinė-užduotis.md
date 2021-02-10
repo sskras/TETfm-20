@@ -74,7 +74,7 @@ Taip pat laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo 
 
 Dėl laiko stokos ir dabartinės epidemi-socio-ekonominės situacijos (kai bedarbis turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
 
-Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą.
+Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą?
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -135,7 +135,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjM4ODM5MzEsOTkyNjU2MTExLC05Mj
-UzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4
-MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
+eyJoaXN0b3J5IjpbOTgwNzIxMjcwLC0xMTIzODgzOTMxLDk5Mj
+Y1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOTgxMzgyNzcy
+LC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5ND
+AzNDg5XX0=
 -->
