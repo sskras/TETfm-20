@@ -134,7 +134,7 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie ir mano d
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
-Tačiau šis straipsnis pasiūlė susieti darbuotojų 
+Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (
 
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
@@ -175,11 +175,11 @@ Tačiau šis straipsnis pasiūlė susieti darbuotojų
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDIyMzg5NzMsLTEwMTA1ODUxOCwtMT
-E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
-MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
-E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
-ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
-k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
-NTg1NDc2NzVdfQ==
+eyJoaXN0b3J5IjpbMTc2Nzk2NzUwNiwtMTAxMDU4NTE4LC0xMT
+gyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEw
+NzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUwMT
+UsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xODc4
+ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OT
+ksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLTU1
+ODU0NzY3NV19
 -->
