@@ -62,10 +62,10 @@ Iš visų septynių jis, *sprendimas priimti pokytį* laikomas asmeniui pačiu s
 
 Pagal literatūros paieškos rezultatus panašu, kad šį sprendimą sunku ne tik priimti, bet ir prognozuoti.
 
-Laikau, kad priklausomai nuo to, ar asmuo šiuo metu apskritai turi darbo, sprendimo priėmimas keičiasi iš esmės. Kadangi neradau šaltinių kaip spręsti šį uždavinį tiesiogiai, skeliu jį į dvi dalis:
+Laikau, kad priklausomai nuo to, ar asmuo šiuo metu apskritai yra įdarbintas, sprendimo priėmimas keičiasi iš esmės. Kadangi neradau šaltinių kaip spręsti šį uždavinį tiesiogiai, skeliu jį į dvi dalis:
 
-* ar ieško darbo nedirbantysis;
-* ar ieško naujo darbo dirbantysis.
+* ar darbo ieško nedirbantysis;
+* ar naujo darbo ieško dirbantysis.
 
 Ir dėl laiko stokos bei dabartinės epidemi-socio-ekonominės situacijos (kai bedarbis turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
 
@@ -197,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI0OTQ5OTcwLDU1OTc0MDY2LDg0MDMwMj
-c1NSwxNzU0NTc3MjcxLDE4NjYwNDkyODgsMTA5NDIyNTk0Mywx
-NTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Nj
-c5NDIyMCwyODM0NTczLDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0x
-MTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MD
-EwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUw
-MTVdfQ==
+eyJoaXN0b3J5IjpbMTM5ODU1Nzk5OSw1NTk3NDA2Niw4NDAzMD
+I3NTUsMTc1NDU3NzI3MSwxODY2MDQ5Mjg4LDEwOTQyMjU5NDMs
+MTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2MTEyLC00OT
+Y3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMTA1ODUxOCwt
+MTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1OD
+AxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1
+MDE1XX0=
 -->
