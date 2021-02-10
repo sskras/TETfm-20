@@ -129,7 +129,7 @@ Remdamasis šia publikacija pasirinkau **MLP** ir **RF**. Jie ir mano nepasirink
 
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
-O pagal šios publikacijos aukščiausius rezultatus pasirinkau
+O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **XGB** ir **GBDT**
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
@@ -170,7 +170,7 @@ O pagal šios publikacijos aukščiausius rezultatus pasirinkau
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMzc3MDA0OSwtMTE4Mjc3MzMwOCwtMT
+eyJoaXN0b3J5IjpbLTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMT
 c4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4
 OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LD
 ExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5
