@@ -123,7 +123,7 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda auk
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)  
 (Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
-O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
+O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:  
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
@@ -198,11 +198,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQ1NTA4NDgsMTQ3NzIyNjExMiwtND
-k2Nzk0MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgs
-LTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNT
-gwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYx
-NTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLT
-E4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAz
-MTk5OV19
+eyJoaXN0b3J5IjpbMTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxND
+c3MjI2MTEyLC00OTY3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMs
+LTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMT
+YyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4
+NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLT
+U1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0
+NjY3NV19
 -->
