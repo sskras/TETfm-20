@@ -76,7 +76,7 @@ Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar as
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Dėl laiko stokos ir dabartinės epidemi-socio-ekonominės situacijos (kai bedarbis turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
+Ir dėl laiko stokos bei dabartinės epidemi-socio-ekonominės situacijos (kai bedarbis turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
 
 Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą?
 
@@ -141,8 +141,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExOTM4OTk1LDExODA5NDY2NzUsMTk1Mj
-AzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2
-NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NT
-g0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExOD
+A5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYx
+MTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMj
+MzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4
+OV19
 -->
