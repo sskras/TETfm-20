@@ -181,7 +181,11 @@ O po testų palikti produkcijai tik vieną.
 
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
 
-(Trūksta)
+Čia tektų konstruoti _Decision Trees_:
+![image](https://user-images.githubusercontent.com/74717106/107565706-9fa86800-6bec-11eb-8d42-1b366d940e73.png)
+
+![image](https://user-images.githubusercontent.com/74717106/107565776-b77fec00-6bec-11eb-9be7-25ce35e41f92.png)
+
   
   3. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
   |  
@@ -192,11 +196,11 @@ O po testų palikti produkcijai tik vieną.
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgzNDU3Myw0OTQ3OTExODMsLTEwMTA1OD
-UxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYx
-Niw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOT
-MwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4
-OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOT
-UyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1
-NjY0XX0=
+eyJoaXN0b3J5IjpbLTIwODU3NjEzMDAsMjgzNDU3Myw0OTQ3OT
+ExODMsLTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4
+NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMT
+UwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYx
+MjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMT
+E4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1
+NjExMV19
 -->
