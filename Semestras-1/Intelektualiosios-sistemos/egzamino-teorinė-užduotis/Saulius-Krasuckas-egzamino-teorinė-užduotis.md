@@ -141,7 +141,7 @@ Iš **ADT**, **MLP**, **RF** ir **GBDT** rinkčiausi **MLT** kaip praktiškai pa
 
 Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.
 
-Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
+Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:  
 [Ribes, E., Touahri, K., & Perthame, B. (2017). Employee turnover prediction and retention policies design: a case study.  _arXiv preprint arXiv:1707.01377_.](https://arxiv.org/abs/1707.01377)
 
 ![image](https://user-images.githubusercontent.com/74717106/107563709-12641400-6bea-11eb-8bc5-f4cb9bde5eb0.png)
@@ -201,11 +201,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMjgwNTk2LDI4MzQ1NzMsNDk0NzkxMT
-gzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcs
-LTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MD
-U5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5
-LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExOD
-A5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYx
-MTFdfQ==
+eyJoaXN0b3J5IjpbLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MT
+E4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3
+LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNT
+A1OTg1MjEwLC05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEy
+OSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMT
+gwOTQ2Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2
+MTExXX0=
 -->
