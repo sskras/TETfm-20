@@ -50,7 +50,7 @@ Probleminės vietos:
 * turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis; etinės/moralinės vertybės, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis).
-* nėra žinoma, kiek turimi duomenys atspindi asmens momentinę psichologinę būseną (kuri ypač svarbi tą akimirką, kai jis gauna darbo pasiūlymą).
+* nėra žinoma, kiek turimi duomenys atspindi asmens momentinę psichologinę būseną (pvz. išsekimas, „p. Ji ypač svarbi tą akimirką, kai asmuo gauna darbo pasiūlymą.
 
 .
 
@@ -113,6 +113,7 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxMzgyNzcyLC0yMzMxNTI2ODMsLTQ1OD
-QwMjIyLDk0NjQ0ODAwNCwtNzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbLTc1ODY0MDQ3NSw5ODEzODI3NzIsLTIzMz
+E1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODld
+fQ==
 -->
