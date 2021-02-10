@@ -83,6 +83,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas;
 * Tiksliausiai prognozuojančio metodo išrinkimas.
 * Apmokymo duomenų rinkinio paieška;
+* Intelektualiosios sistemos prototipo programavimas;
 * Intelektualiosios sistemos apmokymas;
 * Intelektualiosios sistemos tikslumo įvertinimas.
 * Frontendo šiai sistemai sukūrimas.
@@ -146,7 +147,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTUwMTQ5MzAsNjY4Njk0NzYsMTExNj
+eyJoaXN0b3J5IjpbLTEyNTk1MTAyNDMsNjY4Njk0NzYsMTExNj
 E0NjEyOSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5
 NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOT
 kyNjU2MTExLC05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3
