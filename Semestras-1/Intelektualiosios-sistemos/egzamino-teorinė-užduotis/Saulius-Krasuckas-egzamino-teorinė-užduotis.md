@@ -124,14 +124,14 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda auk
 (Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:  
-[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
+[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction  on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
-Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusiųjų darbdavių keitimo laikus) su darbdavių įmonėmis specifiniu grafu:
+Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (ankstesnių darbdavių keitimo laikus) su darbdavių įmonėmis naudojant specifinį grafą:
 ![image](https://user-images.githubusercontent.com/74717106/107562084-0a0ad980-6be8-11eb-98a3-4d052a3eb6bc.png)
 
-Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja visų metodų tikslumas:
+Turint tokią informaciją (jei tiksliai užpildyti šie duomenys) padidėja visų _Tree-_ metodų tikslumas:
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
 ----
@@ -197,7 +197,7 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQwNjY5NTE1LDEzOTg1NTc5OTksNTU5Nz
+eyJoaXN0b3J5IjpbNDk3MTYxODY4LDEzOTg1NTc5OTksNTU5Nz
 QwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEsMTg2NjA0OTI4OCwx
 MDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNzQ1NTA4NDgsMTQ3Nz
 IyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0x
