@@ -121,9 +121,9 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda auk
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)  
 (Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
-[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
-
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
+
+[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
 Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių darbdavių keitimo laikus) su darbdavių įmonėmis specifiniu grafu:
@@ -179,11 +179,11 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjI2OTg2MDcsLTEwMTA1ODUxOCwtMT
-E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
-MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
-E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
-ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
-k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
-NTg1NDc2NzVdfQ==
+eyJoaXN0b3J5IjpbNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExOD
+I3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3
+ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNS
+w2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4
+NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OS
+wtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4
+NTQ3Njc1XX0=
 -->
