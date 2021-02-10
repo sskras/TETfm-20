@@ -54,7 +54,7 @@ Angl. terminai, kuriais rėmiausi ieškodamas sprendimo būdų:
 * _Staff turnover_
 * _Voluntary employee turnover_
 
-Informacinės probleminės vietos:
+Probleminės-informacinės vietos:
 
 * turimi ne visi duomenys apie asmenį. Tiek fiziniai (pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas), tiek ir psichologiniai (etinės/moralinės nuostatos, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
@@ -135,8 +135,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NjQ3MDgxMCwtMTEyMzg4MzkzMSw5OT
-I2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3
-MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOT
-QwMzQ4OV19
+eyJoaXN0b3J5IjpbLTE5NTE0ODczNzksLTExMjM4ODM5MzEsOT
+kyNjU2MTExLC05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3
+NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MD
+k0MDM0ODldfQ==
 -->
