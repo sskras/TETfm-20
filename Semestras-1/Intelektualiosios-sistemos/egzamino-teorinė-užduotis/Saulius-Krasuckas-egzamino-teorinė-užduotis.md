@@ -72,7 +72,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Kadangi p
+Kadangi pirmajai daliai sprendimų neradau, spręsiu tik antrąją.
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -133,7 +133,7 @@ Kadangi p
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MjIzNDM0LC01NTg1NDc2NzUsOTgxMz
+eyJoaXN0b3J5IjpbOTM3MDY4MTEwLC01NTg1NDc2NzUsOTgxMz
 gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
 NzA5NDAzNDg5XX0=
 -->
