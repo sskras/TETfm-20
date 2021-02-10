@@ -139,7 +139,10 @@ Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja vi
 
 Iš **ADT**, **MLP**, **RF** ir **GBDT** rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
 
-Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.  
+Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.
+
+Taip pat **RF** „laimi“ ir šioje publikacijoje:
+Ribes, E., Touahri, K., & Perthame, B. (2017). Employee turnover prediction and retention policies design: a case study.  _arXiv preprint arXiv:1707.01377_.
 
 --
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
@@ -174,11 +177,11 @@ Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MjY1NTE2OCwtMTAxMDU4NTE4LC0xMT
-gyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEw
-NzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUwMT
-UsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xODc4
-ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OT
-ksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLTU1
-ODU0NzY3NV19
+eyJoaXN0b3J5IjpbLTEyNDY4NjYzNzQsLTEwMTA1ODUxOCwtMT
+E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
+MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
+E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
+ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
+k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
+NTg1NDc2NzVdfQ==
 -->
