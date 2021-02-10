@@ -120,9 +120,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Nuorodą galima pateikti įvardinant autorių ir metus.  
    Geriausia būtų pateikti DOI.).  
 
-Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.
+[Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
-MLP duoda gana aukštus rezultatus 
+Remdamasis šia publikacija pasirinkau MLP ir  duoda gana aukštus rezultatus 
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
@@ -163,11 +163,11 @@ MLP duoda gana aukštus rezultatus
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc5NTM1NjIsLTExODI3NzMzMDgsLTE3OD
-U1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkz
-OTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMT
-E2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4
-OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMS
-w5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4
-Mjc3Ml19
+eyJoaXN0b3J5IjpbLTE1MzQ4OTk4MjEsLTExODI3NzMzMDgsLT
+E3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nzcz
+ODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3Ni
+wxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzEx
+OTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4Mz
+kzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4
+MTM4Mjc3Ml19
 -->
