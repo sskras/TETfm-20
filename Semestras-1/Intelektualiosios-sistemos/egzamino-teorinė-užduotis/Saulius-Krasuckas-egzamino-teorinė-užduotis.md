@@ -123,6 +123,7 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda auk
 
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
+
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
 Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių darbdavių keitimo laikus) su darbdavių įmonėmis specifiniu grafu:
@@ -178,7 +179,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk4OTA2ODc3LDQ5NDc5MTE4MywtMTAxMD
+eyJoaXN0b3J5IjpbLTU1MTMxNDEzLDQ5NDc5MTE4MywtMTAxMD
 U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
 NjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC
 05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3
