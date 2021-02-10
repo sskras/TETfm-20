@@ -141,7 +141,7 @@ Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja vi
 
 Iš **ADT**, **MLP**, **RF** ir **GBDT** rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
 
-Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.
+Tad renkuosi **RF** intelektualųjį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.
 
 Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:  
 [Ribes, E., Touahri, K., & Perthame, B. (2017). Employee turnover prediction and retention policies design: a case study.  _arXiv preprint arXiv:1707.01377_.](https://arxiv.org/abs/1707.01377)
@@ -198,11 +198,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxND
-c3MjI2MTEyLC00OTY3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMs
-LTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMT
-YyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4
-NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLT
-U1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0
-NjY3NV19
+eyJoaXN0b3J5IjpbMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMj
+c0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTcz
+LDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNz
+g1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5
+Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUwMTUsNjY4Njk0NzYsMT
+ExNjE0NjEyOSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkz
+ODk5NV19
 -->
