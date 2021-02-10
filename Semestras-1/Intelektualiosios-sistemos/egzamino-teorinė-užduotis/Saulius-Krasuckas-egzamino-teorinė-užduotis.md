@@ -67,7 +67,8 @@ Probleminės vietos:
 
 Laikau, kad sprendimo priėmimas kardinaliai skiriasi priklausomai nuo to, ar asmuo šiuo metu dirba.
 
-Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai. 
+Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
+ar ieško darbo nedirbantysis 
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -128,7 +129,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai.
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMDc1NTU3LC01NTg1NDc2NzUsOTgxMz
-gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
-NzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbLTEwNjMzMTYxNjUsLTU1ODU0NzY3NSw5OD
+EzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0
+LC03MDk0MDM0ODldfQ==
 -->
