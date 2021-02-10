@@ -166,7 +166,7 @@ Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikac
 
 Išvestis yra slankaus kablelio skaliaras, AUC-ROC rodiklis (angl. _Area under the receiver operating characteristic curve_).
 
-Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
+Bet prototipavimo fazei siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
 
 * Accuracy, 
 * Precision, 
@@ -200,11 +200,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NDEyNDEwNSwxNzU0NTc3MjcxLDE4Nj
-YwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUw
-ODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5ND
-c5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUw
-Nzg3LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC
-0xNTA1OTg1MjEwLC05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0
-NjEyOV19
+eyJoaXN0b3J5IjpbODQwMzAyNzU1LDE3NTQ1NzcyNzEsMTg2Nj
+A0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNzQ1NTA4
+NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMsNDk0Nz
+kxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3
+ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLT
+E1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2
+MTI5XX0=
 -->
