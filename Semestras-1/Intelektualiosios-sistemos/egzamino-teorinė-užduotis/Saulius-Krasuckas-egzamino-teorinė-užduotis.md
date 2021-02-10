@@ -162,7 +162,7 @@ Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikac
 
 Įvestis yra slankaus kablelio vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, kaip aprašyti darbo srities patirtį, normos nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
-Išvestis yra skaliaras, AUC-ROC (angl. _Area under the receiver operating characteristic curve_).
+Išvestis yra skaliaras, AUC-ROC rodiklis (angl. _Area under the receiver operating characteristic curve_).
 
 Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
 
@@ -198,7 +198,7 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNDYyNTY1MiwxODY2MDQ5Mjg4LDEwOT
+eyJoaXN0b3J5IjpbMjA2NTcwMTg5MSwxODY2MDQ5Mjg4LDEwOT
 QyMjU5NDMsMTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2
 MTEyLC00OTY3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMT
 A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
