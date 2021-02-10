@@ -34,7 +34,8 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
   (įvardinti/paaiškinti,  
    kur gali atsirasti neaiškumai kuriant/įgyvendinant problemos sprendimo algoritmą,  
    kur galimi keli būdai spręsti uždavinį ir neaišku,  
-   kuris būdas yra geresnis, jei matyti, kad kažkokia komercinė sistema tokio pobūdžio problemą sprendžia,  
+   kuris būdas yra geresnis, jei matyti,  
+   kad kažkokia komercinė sistema tokio pobūdžio problemą sprendžia,  
    įžvelgti, kokius neapibrėžtumus šis komercinis įrankis sugebėjo išspręsti).  
   |  
   Turi būti aprašytos probleminės vietos, reikalaujančios sprendimo.  
