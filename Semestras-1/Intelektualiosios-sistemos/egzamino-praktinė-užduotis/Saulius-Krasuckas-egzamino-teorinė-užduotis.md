@@ -72,7 +72,7 @@ Egzamino teorinės užduoties vertinimo principai:
 
   3. (b) **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
   |  
-  (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti. 
+  (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti.  
    Kuo kiti sprendimai yra blogesni ar mažiau tinkami problemai spręsti).  
 
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
