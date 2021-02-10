@@ -65,14 +65,14 @@ Probleminės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Iš visų 7 jis, sprendimas priimti pokytį laikomas asmeniui pačiu sunkiausiu. Pagal literatūros paieškos rezultatus panašu, kad toks jis ne tik priimančiajam, bet ir prognozuotojui.
+Iš visų 7 jis, sprendimas priimti pokytį laikomas asmeniui pačiu sunkiausiu. Pagal literatūros paieškos rezultatus panašu, kad jį sunku ne tik priimti, bet ir prognozuoti.
 
-Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. O kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
+Taip pat laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. O kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Dėl laiko stokos ir dabartinės epidemi-socio-ekonominės situacijos (kai bedarbiai turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
+Dėl laiko stokos ir dabartinės epidemi-socio-ekonominės situacijos (kai bedarbis turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
 
 Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą.
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NTMzOTcyOCw5OTI2NTYxMTEsLTkyNT
-M4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgz
-LC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbLTExMjM4ODM5MzEsOTkyNjU2MTExLC05Mj
+UzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4
+MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
 -->
