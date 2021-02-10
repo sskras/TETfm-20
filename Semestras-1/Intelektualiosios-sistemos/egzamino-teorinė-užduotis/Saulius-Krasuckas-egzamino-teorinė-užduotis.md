@@ -80,7 +80,7 @@ Ir dėl laiko stokos bei dabartinės epidemi-socio-ekonominės situacijos (kai b
 
 Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą?
 
-	 (Angl. raktiniu terminu pasirinkau _Voluntary employee turnover_)
+(Angl. raktiniais terminu pasirinkau _Voluntary employee turnover_ ir _career path prediction_)
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -141,9 +141,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExOD
-A5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYx
-MTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMj
-MzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4
-OV19
+eyJoaXN0b3J5IjpbLTE0MDk5MTQ4OTgsLTE4Nzg4NjQ5OTMsNz
+ExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4
+MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LD
+k4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgw
+MDQsLTcwOTQwMzQ4OV19
 -->
