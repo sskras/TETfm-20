@@ -80,8 +80,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Anketos duomenų suskaitmeninimas;
 * Paieška intelektualiųjų metodų, kurie apskritai tinka karjeros pasikeitimų prognozėms;
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas;
-* 
-* Tiksliausiai prognozuojančio metodo išrinkimas.
+* du ;
+* Tiksliausiai prognozuojančios kombinacijos išrinkimas.
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos prototipo programavimas;
 * Intelektualiosios sistemos apmokymas;
@@ -151,10 +151,10 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjIzMjUzMjYsLTE1MDU5ODUyMTAsLT
-kzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2
-ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMT
-k1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4
-NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgzLC
-00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbMjE0NzU3NjAyLC0xNTA1OTg1MjEwLC05Mz
+A2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5
+LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NT
+IwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2
+NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4MywtND
+U4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
 -->
