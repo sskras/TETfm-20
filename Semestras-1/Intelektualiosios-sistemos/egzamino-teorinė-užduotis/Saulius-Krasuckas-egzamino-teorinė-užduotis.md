@@ -109,7 +109,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Daugiasluoksnis perceptronas (angl. MLP)
 * Random Forest (RF)
 * XGBoost (XGB)
-* 
+* Gradient Boosting Decision Tree (GBDT)
 
 ---
   2. Pateikti argumentą (pvz., nuorodą į literatūrą), **kodėl įvardintas sprendimo būdas tiktų**  (1,5)  
@@ -156,7 +156,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzA1NjQyMTMsLTE2MjkwNzI2MTYsNT
+eyJoaXN0b3J5IjpbLTExMzg4MTU2MTAsLTE2MjkwNzI2MTYsNT
 gwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYx
 NTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLT
 E4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAz
