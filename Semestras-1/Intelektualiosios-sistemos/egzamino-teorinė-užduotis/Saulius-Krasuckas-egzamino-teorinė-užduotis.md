@@ -177,13 +177,13 @@ O po testų palikti produkcijai tik vieną.
 ---
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
 
-Čia tektų konstruoti _Decision Trees_:
+Čia tektų konstruoti _Decision Trees_:  
 ![image](https://user-images.githubusercontent.com/74717106/107565706-9fa86800-6bec-11eb-8d42-1b366d940e73.png)
 
-Tam pradėtume nuo vieno mazgo (_Node_) ir jį dalintume:
+Tam pradėtume nuo vieno mazgo (_Node_) ir jį dalintume:  
 ![image](https://user-images.githubusercontent.com/74717106/107566021-0299ff00-6bed-11eb-9285-2fcb56b3d631.png)
 
-Iki galutinio rezultato:
+Iki galutinio rezultato:  
 ![image](https://user-images.githubusercontent.com/74717106/107565776-b77fec00-6bec-11eb-9be7-25ce35e41f92.png)
 
 ---
@@ -198,11 +198,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4Mz
-Q1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgs
-LTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nz
-czODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3
-NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNz
-ExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4
-MzkzMV19
+eyJoaXN0b3J5IjpbLTEyNzQ1NTA4NDgsMTQ3NzIyNjExMiwtND
+k2Nzk0MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgs
+LTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNT
+gwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYx
+NTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLT
+E4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAz
+MTk5OV19
 -->
