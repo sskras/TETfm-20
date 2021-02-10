@@ -190,21 +190,19 @@ Tam pradėtume nuo vieno mazgo (_Node_) ir jį dalintume:
 Iki galutinio rezultato:
 ![image](https://user-images.githubusercontent.com/74717106/107565776-b77fec00-6bec-11eb-9be7-25ce35e41f92.png)
 
-  
-  3. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
-  |  
-  (pvz., kas per kintamasis ir iš kur jį paimti.  
-   Reiktų pabandyti surašyti (ar išsikopijuoti iš interneto) formules, kurios matematine kalba aprašo tai,  
-   ką intelektualioji sistema turi atlikti su įėjimo duomenimis tam,  
-   kad gautų išėjimo duomenis.  
-   Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
+Tam naudotume statistinį Gini kriterijų:
 
+![image](https://user-images.githubusercontent.com/74717106/107566178-3aa14200-6bed-11eb-9b49-c45cf5487502.png)
+
+  3. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
+
+(Trūksta)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA3NDY3NDQxLDI4MzQ1NzMsNDk0NzkxMT
-gzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcs
-LTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MD
-U5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5
-LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExOD
-A5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYx
-MTFdfQ==
+eyJoaXN0b3J5IjpbLTE4MDQ0NzY3MTMsMjgzNDU3Myw0OTQ3OT
+ExODMsLTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4
+NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMT
+UwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYx
+MjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMT
+E4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1
+NjExMV19
 -->
