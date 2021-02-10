@@ -65,14 +65,14 @@ Probleminės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Iš visų 7 jis, sprendimas priimti pokytį laikomas pačiu sunkiausiu. Pagal literatūros paieškos rezultatus panašu, kad toks jis ne tik asmeniui, 
+Iš visų 7 jis, sprendimas priimti pokytį laikomas pačiu sunkiausiu. Pagal literatūros paieškos rezultatus panašu, kad toks jis ne tik priimančiajam, bet ir prognozuotojui.
 
-Laikau, kad sprendimo priėmimas kardinaliai skiriasi priklausomai nuo to, ar asmuo šiuo metu dirba. O kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
+Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. O kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Kadangi pirmajai daliai sprendimų neradau, dėl laiko stokos ir sprendžiu antrąją ją truputį pageneralizuodamas: 
+Dėl laiko stokos ir sprendžiu antrąją ją truputį pageneralizuodamas: 
 
 Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą.
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDg5ODY5NzksOTkyNjU2MTExLC05Mj
-UzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4
-MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
+eyJoaXN0b3J5IjpbNzYwMjc0MTgxLDk5MjY1NjExMSwtOTI1Mz
+g1NjY0LC01NTg1NDc2NzUsOTgxMzgyNzcyLC0yMzMxNTI2ODMs
+LTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5NDAzNDg5XX0=
 -->
