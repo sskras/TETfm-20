@@ -84,7 +84,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
   * įėjimų filtravimo būdo parinkimas (jei išvis priimtinas, angl. _Feature selection_);
   * klasifikavimo metodo parinkimas;
 * Tikslumo kriterijaus pasirinkimas (_Accuracy_, _Precision_, _Recall_, _F_1_, _AUC_);
-* Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta čia nesvarbu).
+* Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta nesvarbu).
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos prototipo programavimas;
 * Intelektualiosios sistemos apmokymas;
@@ -112,7 +112,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
 Ir priedas jiems:
 
-* Dynamic Bipartite Graph Embedding (DBGE)
+* Dynamic Bipartite Graph Embedding (DBGE) 
 
 ---
   2. Pateikti argumentą (pvz., nuorodą į literatūrą), **kodėl įvardintas sprendimo būdas tiktų**  (1,5)  
@@ -197,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwODAwMTgyLDEzOTg1NTc5OTksNTU5Nz
-QwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEsMTg2NjA0OTI4OCwx
-MDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNzQ1NTA4NDgsMTQ3Nz
-IyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0x
-MDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2Mj
-kwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUy
-MTBdfQ==
+eyJoaXN0b3J5IjpbLTE2MzIxNTUyNSwxMzk4NTU3OTk5LDU1OT
+c0MDY2LDg0MDMwMjc1NSwxNzU0NTc3MjcxLDE4NjYwNDkyODgs
+MTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0Nz
+cyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MTE4Mywt
+MTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNj
+I5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1
+MjEwXX0=
 -->
