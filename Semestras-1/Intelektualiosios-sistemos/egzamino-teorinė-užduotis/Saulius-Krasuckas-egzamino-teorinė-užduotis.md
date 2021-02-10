@@ -65,9 +65,7 @@ Probleminės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Laikau, kad sprendimo priėmimas kardinaliai skiriasi priklausomai nuo to, ar asmuo šiuo metu dirba.
-
-Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
+Laikau, kad sprendimo priėmimas kardinaliai skiriasi priklausomai nuo to, ar asmuo šiuo metu dirba. Oadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
@@ -135,7 +133,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMTE1ODAxMiwtNTU4NTQ3Njc1LDk4MT
+eyJoaXN0b3J5IjpbMTY5MDg2NTAyNCwtNTU4NTQ3Njc1LDk4MT
 M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
 LTcwOTQwMzQ4OV19
 -->
