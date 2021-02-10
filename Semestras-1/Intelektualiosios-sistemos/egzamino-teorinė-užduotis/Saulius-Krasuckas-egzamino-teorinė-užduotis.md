@@ -46,8 +46,8 @@ Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darb�
 
 Probleminės vietos:
 * turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis)
-* dalis turimų duomenų nėra pilni (pvz. )
-* dalis turimų duomenų nėra tiksliai pamatuojami (nėra nešališko mato)
+* dalis turimų duomenų nėra pilni / pateikti netiksliai (pvz. įmonės dydis)
+* dalis turimų duomenų neturi nešališko mato, nėra tiksliai pamatuojami (pvz. )
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -108,6 +108,6 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5ND
-AzNDg5XX0=
+eyJoaXN0b3J5IjpbLTEzNzU4NDAzNTQsLTQ1ODQwMjIyLDk0Nj
+Q0ODAwNCwtNzA5NDAzNDg5XX0=
 -->
