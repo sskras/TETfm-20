@@ -105,6 +105,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
 * Daugiasluoksnis perceptronas (angl. MLP)
 * Random Forest (RF)
+* Alternating decision tree (ADT)
+
 * XGBoost (XGB)
 * Gradient Boosting Decision Tree (GBDT)
 * Dynamic Bipartite Graph Embedding (DBGE)
@@ -125,7 +127,6 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 Remdamasis šia publikacija pasirinkau **MLP** ir **RF**. Jie ir mano nepasirinktas ADT metodas duoda aukštus rezultatus:
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)
 
-(ADT, angl. _Alternating decision tree_ nesirinkau kaip labiau statistinio, o ne intelektualiojo metodo)
 
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
@@ -170,11 +171,11 @@ O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTA1ODUxOCwtMTE4Mjc3MzMwOCwtMT
-c4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4
-OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LD
-ExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5
-Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgzOT
-MxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOTgx
-MzgyNzcyXX0=
+eyJoaXN0b3J5IjpbLTE0OTg1NDY5NjIsLTEwMTA1ODUxOCwtMT
+E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
+MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
+E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
+ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
+k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
+NTg1NDc2NzVdfQ==
 -->
