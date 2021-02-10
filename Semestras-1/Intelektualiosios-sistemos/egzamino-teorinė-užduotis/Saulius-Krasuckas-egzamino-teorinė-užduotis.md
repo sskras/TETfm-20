@@ -151,7 +151,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 **RF** „laimi“ visuose trijose apžvelgtose publikacijose. Bet to, jis yra gan paprastas, jau klasikinis metodas (angl.) _Ensemble Learning_ srityje.
 
-**DBGE** yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų).
+**DBGE** yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai darbdavių keitimo dinamikos, jį irgi naudočiau.
 
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
@@ -178,7 +178,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzM2MTAwMjQsNDk0NzkxMTgzLC0xMD
+eyJoaXN0b3J5IjpbLTE4ODAxMzYxNzQsNDk0NzkxMTgzLC0xMD
 EwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2Mjkw
 NzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMT
 AsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcw
