@@ -84,7 +84,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
-Suformuoti ir aprašyti įėjimo duomenų 
+Įėjimo modeliui paduodamų duomenų tipų apibrėžimas 
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
   |  
@@ -143,9 +143,9 @@ Suformuoti ir aprašyti įėjimo duomenų
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MT
-E5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgz
-OTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOT
-gxMzgyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAw
-NCwtNzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbLTE0NDU3NzI4NTgsLTU1NzA2NzY4OSwtMT
+g3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMx
+OTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC
+01NTg1NDc2NzUsOTgxMzgyNzcyLC0yMzMxNTI2ODMsLTQ1ODQw
+MjIyLDk0NjQ0ODAwNCwtNzA5NDAzNDg5XX0=
 -->
