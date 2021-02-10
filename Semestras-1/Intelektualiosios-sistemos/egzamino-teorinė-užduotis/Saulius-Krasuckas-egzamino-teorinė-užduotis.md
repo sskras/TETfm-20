@@ -120,6 +120,11 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Nuorodą galima pateikti įvardinant autorių ir metus.  
    Geriausia būtų pateikti DOI.).  
 
+MLP 
+
+![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
+
+![image](https://user-images.githubusercontent.com/74717106/107560090-98319080-6be5-11eb-8ff6-38d32702374e.png)
 
 
 ### 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias.
@@ -156,7 +161,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODQ4NzIwMCwtMTE4Mjc3MzMwOCwtMT
+eyJoaXN0b3J5IjpbMTgxNTcxNTI0NSwtMTE4Mjc3MzMwOCwtMT
 c4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4
 OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LD
 ExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5
