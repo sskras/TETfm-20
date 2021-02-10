@@ -80,10 +80,10 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
   (pvz. kaip skaičiumi aprašyti darbdavio tipą – konstantų enumeracija?)
 * Anketos duomenų suskaitmeninimas;
 * Paieška intelektualiųjų metodų, kurie apskritai tinka karjeros pasikeitimų prognozėms;
-* Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas. Į tai įeina
-  * įėjimų filtravimo būdo parinkimas (jei išvis priimtina, angl. _Feature selection_);
+* Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas. Jie apima:
+  * įėjimų filtravimo būdo parinkimas (jei išvis priimtinas, angl. _Feature selection_);
   * klasifikavimo metodo parinkimas;
-* Tikslumo kriterijaus pasirinkimas (Accuracy, Precision, Recall, F_1, AUC);
+* Tikslumo kriterijaus pasirinkimas (_Accuracy_, _Precision_, _Recall_, _F_1_, _AUC_);
 * Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta čia nesvarbu).
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos prototipo programavimas;
@@ -197,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5ODU1Nzk5OSw1NTk3NDA2Niw4NDAzMD
-I3NTUsMTc1NDU3NzI3MSwxODY2MDQ5Mjg4LDEwOTQyMjU5NDMs
-MTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2MTEyLC00OT
-Y3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMTA1ODUxOCwt
-MTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1OD
-AxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1
-MDE1XX0=
+eyJoaXN0b3J5IjpbODYwODAwMTgyLDEzOTg1NTc5OTksNTU5Nz
+QwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEsMTg2NjA0OTI4OCwx
+MDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNzQ1NTA4NDgsMTQ3Nz
+IyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0x
+MDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2Mj
+kwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUy
+MTBdfQ==
 -->
