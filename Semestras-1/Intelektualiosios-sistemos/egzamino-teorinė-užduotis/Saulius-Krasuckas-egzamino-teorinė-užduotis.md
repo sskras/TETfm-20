@@ -1,4 +1,5 @@
 
+
 # IS :: Egzamino teorinė užduotis
 
 `Data: 2021-02-10`  
@@ -99,6 +100,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Sukurti intelektualiąją sistemą;
 * Ištestuoti ją ir paruošti naudojimui.
 
+---
 ### 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus.
 
   1. **Įvardinti 2-4** uždavinių sprendimo **būdai**  (0,5)  
@@ -132,7 +134,7 @@ Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių dar
 Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja visų metodų tikslumas:
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
-
+----
 ### 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias.
 
   1. Iš alternatyvų **išrinkti geriausią, optimalų sprendimą**.  (0,5)
@@ -153,17 +155,10 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 **DBGE** yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai darbdavių keitimo dinamikos, jį irgi naudočiau.
 
+---
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
   1. **Įvardinti įvestį, išvestį**  (0,5)  
-  |  
-  (formuluojant užduotį reikia numatyti, kokio tipo ir kokie duomenys bus pateikiami sprendimo įėjime  
-   ir kokie duomenys bus gaunami išėjime,  
-   bei kaip tuos išėjimo duomenis reikia interpretuoti.  
-   Pavyzdžiui, sprendžiant pirmojo LD uždavinį įėjime pateikėme ne vaizdą,  
-   o du iš vaizdo apskaičiuotus požymius.  
-   Išėjimą turėjome vieną, o jo reikšmės 0 arba 1 nurodė,  
-   kokiai klasei priklauso vaizdas, kurio požymius siuntėme į įėjimą).  
 
 Įvestis yra slankaus kablelio vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, kaip aprašyti darbo srities patirtį, normos nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
@@ -179,6 +174,7 @@ Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
 
 O po testų palikti produkcijai tik vieną.
 
+---
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
 
 Čia tektų konstruoti _Decision Trees_:
@@ -190,22 +186,23 @@ Tam pradėtume nuo vieno mazgo (_Node_) ir jį dalintume:
 Iki galutinio rezultato:
 ![image](https://user-images.githubusercontent.com/74717106/107565776-b77fec00-6bec-11eb-9be7-25ce35e41f92.png)
 
+---
+  3. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
+
 Tam naudotume statistinį Gini kriterijų:
 
 ![image](https://user-images.githubusercontent.com/74717106/107566178-3aa14200-6bed-11eb-9b49-c45cf5487502.png)
 
-  3. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
-
-(Trūksta)
+(Daugiau trūksta)
 
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MT
-E4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3
-LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNT
-A1OTg1MjEwLC05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEy
-OSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMT
-gwOTQ2Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2
-MTExXX0=
+eyJoaXN0b3J5IjpbMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4Mz
+Q1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgs
+LTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nz
+czODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3
+NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNz
+ExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4
+MzkzMV19
 -->
