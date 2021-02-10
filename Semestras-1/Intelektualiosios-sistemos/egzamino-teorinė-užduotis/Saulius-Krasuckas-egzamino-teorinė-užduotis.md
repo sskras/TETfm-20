@@ -65,7 +65,7 @@ Probleminės-informacinės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Iš visų septynių jis, *sprendimas priimti pokytį* laikomas asmeniui pačiu sunkiausiu. Apskritai karjeros 
+Iš visų septynių jis, *sprendimas priimti pokytį* laikomas asmeniui pačiu sunkiausiu. Apskritai karjeriniai sprendimai yra vieni iš sunkiausių gyvenimo pokyčių, ir Holmes-Rache stre
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/03/21221358/Career-Changes-747x328.png)
 
@@ -139,7 +139,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc2OTY2NDAxLC0xMTIzODgzOTMxLDk5Mj
+eyJoaXN0b3J5IjpbMTUxNzU1NDI2LC0xMTIzODgzOTMxLDk5Mj
 Y1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOTgxMzgyNzcy
 LC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5ND
 AzNDg5XX0=
