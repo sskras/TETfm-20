@@ -151,9 +151,9 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 ---
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
 
-**RF** „laimi“ visose trijose apžvelgtose publikacijose. Bet to, jis yra gan paprastas, jau klasikinis metodas (angl.) _Ensemble Learning_ srityje.
+Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikacijose. Bet to, jis yra gan paprastas, jau klasikinis metodas vadinamojoje (angl.) _Ensemble Learning_ srityje.
 
-**DBGE** yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai darbdavių keitimo dinamikos, jį irgi naudočiau.
+**DBGE** algoritmas yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai darbdavių keitimo dinamikos, jį irgi naudočiau.
 
 ---
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
@@ -198,11 +198,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1OD
-g5NzIwOTYsLTEyNzQ1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0
-MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExOD
-I3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3
-ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNS
-w2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4
-NjQ5OTNdfQ==
+eyJoaXN0b3J5IjpbNDgxMzk3MDE3LDE4NjYwNDkyODgsMTA5ND
+IyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0NzcyMjYx
+MTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MTE4MywtMTAxMD
+U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
+NjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC
+05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3
+Njg5XX0=
 -->
