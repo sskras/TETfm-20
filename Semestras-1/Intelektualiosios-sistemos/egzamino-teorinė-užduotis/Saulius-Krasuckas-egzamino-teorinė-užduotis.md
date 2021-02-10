@@ -53,11 +53,11 @@ Probleminės-informacinės vietos:
 
 [Iš šaltinių](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 nuoseklių sprendimų. Ši užduotis mano interpretavimu atitinka patį pirmąjį – angl. _Considering a change_ sprendimą:
 
-![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
+![image](https://user-images.githubusercontent.com/74717106/107552178-cb6f2200-6bdb-11eb-8139-f0bfba2ed833.png)
 
 Iš visų septynių jis, *sprendimas priimti pokytį* laikomas asmeniui pačiu sunkiausiu. Apskritai karjeriniai sprendimai yra vieni iš sunkiausių gyvenimo pokyčių, ir Holmes-Rache streso skalėje perkopia vidurį (36):
 
-![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/03/21221358/Career-Changes-747x328.png)
+![image](https://user-images.githubusercontent.com/74717106/107552209-d45ff380-6bdb-11eb-980c-591d8edb205b.png)
 
 Pagal literatūros paieškos rezultatus panašu, kad šį sprendimą sunku ne tik priimti, bet ir prognozuoti.
 
@@ -141,9 +141,10 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xOD
-c4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5
-OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLT
-U1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAy
-MjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
+eyJoaXN0b3J5IjpbLTE0MTcxNDI0NjksMTExNjE0NjEyOSwtNT
+U3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2
+Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC
+05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1
+MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ
+==
 -->
