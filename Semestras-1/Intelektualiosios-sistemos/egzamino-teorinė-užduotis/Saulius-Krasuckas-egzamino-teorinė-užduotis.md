@@ -128,7 +128,6 @@ Ir priedas jiems:
 Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie ir mano duoda aukščiausius rezultatus:
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)
 
-
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
@@ -140,11 +139,13 @@ Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių dar
 Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja visų metodų tikslumas:
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
-Tad renkuo
 
 ### 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias.
 
   1. Iš alternatyvų **išrinkti geriausią, optimalų sprendimą**.  (0,5)
+
+Renkuosi **RF** intelektualiojo metodo bei **DBGE**.  
+Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia
 
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
   |  
@@ -176,11 +177,11 @@ Tad renkuo
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk5OTQyNTI2LC0xMDEwNTg1MTgsLTExOD
-I3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3
-ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNS
-w2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4
-NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OS
-wtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4
-NTQ3Njc1XX0=
+eyJoaXN0b3J5IjpbLTEwMjc5MzY0NzcsLTEwMTA1ODUxOCwtMT
+E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
+MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
+E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
+ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
+k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
+NTg1NDc2NzVdfQ==
 -->
