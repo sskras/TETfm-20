@@ -45,9 +45,11 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
 Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darbą (ar įsidarbinti, jei šiuo metu asmuo nedirba) pagal ribotą duomenų rinkinį.
 
 Probleminės vietos:
-* turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis)
-* dalis turimų duomenų nėra pilni / pateikti netiksliai (pvz. įmonės dydis)
-* dalis turimų duomenų neturi nešališko mato, nėra tiksliai pamatuojami (pvz. )
+* turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis);
+* dalis turimų duomenų nėra pilni / pateikti netiksliai (pvz. įmonės dydis);
+* dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai pamatuojami (pvz. darbo srityje patirtis).
+
+T
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -108,6 +110,6 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzU4NDAzNTQsLTQ1ODQwMjIyLDk0Nj
+eyJoaXN0b3J5IjpbLTEyODk3ODYxMzksLTQ1ODQwMjIyLDk0Nj
 Q0ODAwNCwtNzA5NDAzNDg5XX0=
 -->
