@@ -72,7 +72,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Kadangi pirmajai daliai sprendimų neradau, sprendžiu antrąją ją truputį pageneralizuodamas: 
+Kadangi pirmajai daliai sprendimų neradau, dėl laiko stokos ir sprendžiu antrąją ją truputį pageneralizuodamas: 
 
 Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą.
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2Mjc5MTc4NywtNTU4NTQ3Njc1LDk4MT
+eyJoaXN0b3J5IjpbMTYzMTE1ODAxMiwtNTU4NTQ3Njc1LDk4MT
 M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
 LTcwOTQwMzQ4OV19
 -->
