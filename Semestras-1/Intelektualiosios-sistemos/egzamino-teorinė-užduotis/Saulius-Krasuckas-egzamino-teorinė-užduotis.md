@@ -165,7 +165,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Išėjimą turėjome vieną, o jo reikšmės 0 arba 1 nurodė,  
    kokiai klasei priklauso vaizdas, kurio požymius siuntėme į įėjimą).  
 
-Įvestis yra slankaus kablelio vektorius. Kaip aprašyti darbo srities patirtį, reikėtų atskiro tyrimo.
+Įvestis yra slankaus kablelio vektorius, sudarytas iš pateiktų duomenų. Kaip aprašyti darbo srities patirtį, reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
   |  
@@ -180,7 +180,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTcyMDk5NSw0OTQ3OTExODMsLTEwMT
+eyJoaXN0b3J5IjpbLTk3NTE0Nzc5Miw0OTQ3OTExODMsLTEwMT
 A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
 MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
 wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
