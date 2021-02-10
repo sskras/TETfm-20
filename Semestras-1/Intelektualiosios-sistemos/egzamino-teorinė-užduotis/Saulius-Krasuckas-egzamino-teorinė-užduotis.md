@@ -82,7 +82,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas. Į tai įeina
   * įėjimų filtravimo būdo parinkimas (jei išvis priimtina, angl. _Feature selection_);
   * klasifikavimo metodo parinkimas;
-* Tikslumo kriterijau pasirinkimas (Accuracy, Precision, Recall, F_1, AUC);
+* Tikslumo kriterijaus pasirinkimas (Accuracy, Precision, Recall, F_1, AUC);
 * Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta čia nesvarbu).
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos prototipo programavimas;
@@ -167,9 +167,15 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 Įvestis yra slankaus kablelio vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, kaip aprašyti darbo srities patirtį, normos nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
-Išvestis yra skaliaras, ROC-AUC (angl. _Area under the receiver operating characteristic curve_).
+Išvestis yra skaliaras, AUC-ROC (angl. _Area under the receiver operating characteristic curve_).
 
-Nors prototipavimo metui siūlyčia
+Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir :
+
+* Accuracy, 
+* Precision, 
+* Recall, 
+* F_1, 
+* AUC-ROC
 
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
   |  
@@ -184,7 +190,7 @@ Nors prototipavimo metui siūlyčia
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODkwNzM4Nyw0OTQ3OTExODMsLTEwMT
+eyJoaXN0b3J5IjpbMTkyNDQ2OTMwMyw0OTQ3OTExODMsLTEwMT
 A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
 MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
 wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
