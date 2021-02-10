@@ -105,7 +105,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
   (įvardinti, kokius metodus ar algoritmus galima būtų pritaikyti anksčiau išvardintiems uždaviniams spręsti; 
    reikia pasirinkti tik tuos uždavinius, kur reikalingas/galimas intelektualiosios sistemos taikymas).  
 
-
+I
 
 ---
   2. Pateikti argumentą (pvz., nuorodą į literatūrą), **kodėl įvardintas sprendimo būdas tiktų**  (1,5)  
@@ -152,7 +152,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzE4ODYzNDMsNTgwMTA3ODM3LC00Nz
+eyJoaXN0b3J5IjpbLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nz
 czODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3
 NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNz
 ExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4
