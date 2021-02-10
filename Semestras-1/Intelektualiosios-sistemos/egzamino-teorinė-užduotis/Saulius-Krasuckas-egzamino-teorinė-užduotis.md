@@ -134,12 +134,13 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie ir mano d
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
-Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių darbdavių keitimo laikus) su darbdavių įmonėmis 
+Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių darbdavių keitimo laikus) su darbdavių įmonėmis specifiniu grafu:
+![image](https://user-images.githubusercontent.com/74717106/107562084-0a0ad980-6be8-11eb-98a3-4d052a3eb6bc.png)
 
+Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja visų metodų tikslumas:
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
-![image](https://user-images.githubusercontent.com/74717106/107560090-98319080-6be5-11eb-8ff6-38d32702374e.png)
-
+Tad renkuo
 
 ### 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias.
 
@@ -175,11 +176,11 @@ Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (buvusių dar
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NjY1MTgyNiwtMTAxMDU4NTE4LC0xMT
-gyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEw
-NzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUwMT
-UsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xODc4
-ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OT
-ksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLTU1
-ODU0NzY3NV19
+eyJoaXN0b3J5IjpbMjk5OTQyNTI2LC0xMDEwNTg1MTgsLTExOD
+I3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3
+ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNS
+w2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4
+NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OS
+wtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4
+NTQ3Njc1XX0=
 -->
