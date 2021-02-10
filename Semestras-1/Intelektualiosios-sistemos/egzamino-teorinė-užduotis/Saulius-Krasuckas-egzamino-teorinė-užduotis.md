@@ -47,10 +47,10 @@ Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darb�
 Angl. terminas, kuriuo rėmiausi ieškodamas sprendimo būdų: _Job search behaviour_
 
 Probleminės vietos:
-* turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis; etinės/moralinės vertybės, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
+* turimi ne visi duomenys apie asmenį (tiek fiziniai: pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas, tiek ir pr; etinės/moralinės vertybės, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis).
-* nėra žinoma, kiek turimi duomenys atspindi asmens momentinę psichologinę būseną (pvz. išsekimas, „p. Ji ypač svarbi tą akimirką, kai asmuo gauna darbo pasiūlymą.
+* nėra žinoma, kiek turimi duomenys atspindi asmens momentinę psichologinę būseną (pvz. išsekimas, „perdegimas“, noras . Ji ypač svarbi tą akimirką, kai asmuo gauna darbo pasiūlymą.
 
 .
 
@@ -113,7 +113,7 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1ODY0MDQ3NSw5ODEzODI3NzIsLTIzMz
-E1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODld
-fQ==
+eyJoaXN0b3J5IjpbLTEzMjQ1NTkwMzAsOTgxMzgyNzcyLC0yMz
+MxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5NDAzNDg5
+XX0=
 -->
