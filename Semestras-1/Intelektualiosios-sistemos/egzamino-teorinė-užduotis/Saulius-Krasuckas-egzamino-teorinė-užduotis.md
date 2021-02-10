@@ -72,7 +72,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją. Ją performuluoju taip: Kiek tikėtina, jog konkretus kandidatas norės
+Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją. Ją performuluoju taip: Kiek tikėtina, jog konkretus **darbuotojas** (ne konretus kandidatas) norės kei
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -133,7 +133,7 @@ Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją. Ją perfor
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE3NjE0OTUzLC01NTg1NDc2NzUsOTgxMz
-gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
-NzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbMTc1NTAzMjI5MywtNTU4NTQ3Njc1LDk4MT
+M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
+LTcwOTQwMzQ4OV19
 -->
