@@ -153,7 +153,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikacijose. Bet to, jis yra gan paprastas, jau klasikinis metodas vadinamojoje (angl.) _Ensemble Learning_ srityje.
 
-**DBGE** algoritmas yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai daug darbdavių keitimo dinamikos, jį irgi naudočiau.
+**DBGE** algoritmas yra naujovė. Jis patikslina visus 6 tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai daug darbdavių keitimo dinamikos, jį irgi naudočiau.
 
 ---
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
@@ -198,7 +198,7 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NTcwMTg5MSwxODY2MDQ5Mjg4LDEwOT
+eyJoaXN0b3J5IjpbMTc0Nzc3ODY0OCwxODY2MDQ5Mjg4LDEwOT
 QyMjU5NDMsMTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2
 MTEyLC00OTY3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMT
 A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
