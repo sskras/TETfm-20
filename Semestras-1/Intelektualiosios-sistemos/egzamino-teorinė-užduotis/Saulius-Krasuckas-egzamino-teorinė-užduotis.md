@@ -61,9 +61,10 @@ Probleminės vietos:
 * dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis, nurodoma metais, o ne įvardnant specifiką).
 * nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. išsekimas, „perdegimas (angl. _Job burnout_), noras supaprastinti gyvenamąją aplinką (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
 
-Iš šaltinių matyti, kad darbo keitimo procesas susideda iš 7 etapų. Ši užduotis skirta tik pirmajam:
-https://www.indeed.com/lead/science-behind-job-search
+[Iš šaltinių](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 etapų. Ši užduotis atitinka tik pirmąjį – angl. _Considering a change_:
+
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
+
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
@@ -123,7 +124,7 @@ https://www.indeed.com/lead/science-behind-job-search
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4Mzc2NTMxLC01NTg1NDc2NzUsOTgxMz
-gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
-NzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbLTEzNTUzMDY4NjksLTU1ODU0NzY3NSw5OD
+EzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0
+LC03MDk0MDM0ODldfQ==
 -->
