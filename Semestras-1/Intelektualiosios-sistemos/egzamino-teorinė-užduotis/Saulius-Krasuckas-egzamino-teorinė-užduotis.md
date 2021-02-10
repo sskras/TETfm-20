@@ -85,7 +85,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos apmokymas;
 * Intelektualiosios sistemos patikrinimas.
-* Produkcija!
+
+(Ir galiausiai Produkcija!)
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
   |  
@@ -144,7 +145,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTU2NjE0MDEsMTExNjE0NjEyOSwtNT
+eyJoaXN0b3J5IjpbLTEyNTg2NDYzMzYsMTExNjE0NjEyOSwtNT
 U3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2
 Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC
 05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1
