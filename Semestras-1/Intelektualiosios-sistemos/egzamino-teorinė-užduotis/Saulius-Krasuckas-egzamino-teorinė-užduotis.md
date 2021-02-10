@@ -122,7 +122,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
 [Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
-Remdamasis šia publikacija pasirinkau MLP ir  duoda gana aukštus rezultatus 
+Remdamasis šia publikacija pasirinkau MLP ir RF. Jie ir mano nepasirinktas ADT metodas duoda aukštus rezultatus:
+![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)
+(A
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
@@ -163,7 +165,7 @@ Remdamasis šia publikacija pasirinkau MLP ir  duoda gana aukštus rezultatus
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzQ4OTk4MjEsLTExODI3NzMzMDgsLT
+eyJoaXN0b3J5IjpbLTE4NjY3Njg5MjYsLTExODI3NzMzMDgsLT
 E3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nzcz
 ODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3Ni
 wxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzEx
