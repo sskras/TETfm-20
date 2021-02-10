@@ -42,7 +42,7 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
   Įvardinti, kame yra sunkumai sprendžiant pateiktą problemą.  
   Kurios problemos sprendimo dalys nėra akivaizdžios.  
   
-Problema siejasi su psichologija: nuspėti asmens sprendimą dėl darbo keitimo pagal ribotą duomenų rinkinį.  
+Problema siejasi su psichologijos sritimi: nuspėti asmens sprendimą dėl darbo keitimo pagal ribotą duomenų rinkinį.  
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -103,5 +103,5 @@ Problema siejasi su psichologija: nuspėti asmens sprendimą dėl darbo keitimo 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjM3NzE2MzZdfQ==
+eyJoaXN0b3J5IjpbNjU1ODI4MzhdfQ==
 -->
