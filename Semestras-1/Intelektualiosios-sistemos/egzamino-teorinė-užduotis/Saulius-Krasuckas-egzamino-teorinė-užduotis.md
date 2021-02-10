@@ -82,6 +82,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas. Į tai įeina
   * įėjimų filtravimo būdo parinkimas (jei išvis priimtina, angl. _Feature selection_);
   * klasifikavimo metodo parinkimas;
+* Tikslumo kriterijau pasirinkimas (Accuracy, Precision, Recall, F_1, AUC);
 * Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta čia nesvarbu).
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos prototipo programavimas;
@@ -152,11 +153,11 @@ I
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nz
-czODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3
-NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNz
-ExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4
-MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LD
-k4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgw
-MDRdfQ==
+eyJoaXN0b3J5IjpbMjM2MTcxNTc2LC0xNjI5MDcyNjE2LDU4MD
+EwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUw
+MTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xOD
+c4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5
+OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLT
+U1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAy
+MjJdfQ==
 -->
