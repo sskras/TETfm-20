@@ -106,7 +106,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
   (įvardinti, kokius metodus ar algoritmus galima būtų pritaikyti anksčiau išvardintiems uždaviniams spręsti; 
    reikia pasirinkti tik tuos uždavinius, kur reikalingas/galimas intelektualiosios sistemos taikymas).  
 
-I
+* Random Forest
 
 ---
   2. Pateikti argumentą (pvz., nuorodą į literatūrą), **kodėl įvardintas sprendimo būdas tiktų**  (1,5)  
@@ -153,7 +153,7 @@ I
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2MTM5NDc3LC0xNjI5MDcyNjE2LDU4MD
+eyJoaXN0b3J5IjpbNDY2Nzg4NDQyLC0xNjI5MDcyNjE2LDU4MD
 EwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUw
 MTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xOD
 c4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5
