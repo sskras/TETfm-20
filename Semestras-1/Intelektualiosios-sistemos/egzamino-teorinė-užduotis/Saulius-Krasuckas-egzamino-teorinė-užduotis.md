@@ -149,7 +149,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 ---
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
 
-**RF** „laimi“ visuose trijose apžvelgtose publikacijose. Jis 
+**RF** „laimi“ visuose trijose apžvelgtose publikacijose. Jis yra gan 
 
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
@@ -176,11 +176,11 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc5MzA4MzU2LDQ5NDc5MTE4MywtMTAxMD
-U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
-NjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC
-05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3
-Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LD
-E5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUz
-ODU2NjRdfQ==
+eyJoaXN0b3J5IjpbMTQ1MzA2ODQ4OCw0OTQ3OTExODMsLTEwMT
+A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
+MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
+wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
+NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NS
+wxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1
+Mzg1NjY0XX0=
 -->
