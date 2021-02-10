@@ -122,11 +122,14 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
 [Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
-Remdamasis šia publikacija pasirinkau MLP ir RF. Jie ir mano nepasirinktas ADT metodas duoda aukštus rezultatus:
+Remdamasis šia publikacija pasirinkau **MLP** ir **RF**. Jie ir mano nepasirinktas ADT metodas duoda aukštus rezultatus:
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)
 
 (ADT, angl. _Alternating decision tree_ nesirinkau kaip labiau statistinio, o ne intelektualiojo metodo)
 
+[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
+
+O pagal šios publikacijos aukščiausius rezultatus pasirinkau
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
@@ -167,7 +170,7 @@ Remdamasis šia publikacija pasirinkau MLP ir RF. Jie ir mano nepasirinktas ADT 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzk3NDIwMCwtMTE4Mjc3MzMwOCwtMT
+eyJoaXN0b3J5IjpbMTkwMzc3MDA0OSwtMTE4Mjc3MzMwOCwtMT
 c4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4
 OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LD
 ExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5
