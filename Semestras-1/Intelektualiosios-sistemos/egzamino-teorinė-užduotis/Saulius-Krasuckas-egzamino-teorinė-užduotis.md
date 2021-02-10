@@ -155,7 +155,7 @@ Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikac
 
 **DBGE** algoritmas yra naujovė. Jis patikslina visus 6 tirtus metodus (kai kuriuos iki kelių procentų). Todėl jei anketose atsispindi pakankamai daug darbdavių keitimo dinamikos, jį irgi naudočiau.  
 
-![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
+![image](https://user-images.githubusercontent.com/74717106/107560090-98319080-6be5-11eb-8ff6-38d32702374e.png)
 
 ---
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
@@ -200,11 +200,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNzUxMTcwNywxODY2MDQ5Mjg4LDEwOT
-QyMjU5NDMsMTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2
-MTEyLC00OTY3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMT
-A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
-MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
-wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
-NzY4OV19
+eyJoaXN0b3J5IjpbMTE2MDA3OTQwLDE4NjYwNDkyODgsMTA5ND
+IyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0NzcyMjYx
+MTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MTE4MywtMTAxMD
+U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
+NjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC
+05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3
+Njg5XX0=
 -->
