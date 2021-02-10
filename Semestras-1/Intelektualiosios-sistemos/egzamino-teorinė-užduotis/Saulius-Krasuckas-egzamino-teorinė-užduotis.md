@@ -46,12 +46,12 @@ Problema siejasi su psichologijos (turbūt socialinės psichologijos) sritimi: n
 
 Angl. terminai, kuriais rėmiausi ieškodamas sprendimo būdų:
 
-* _Staff turnover_
 * _Job offer acceptance_
 * _Job offer turndown_
 * _Job acceptance decisions_
 * _Job search behaviour_
 * _Career decision making process_
+* _Staff turnover_
 * _Voluntary employee turnover_
 
 Probleminės vietos:
@@ -72,7 +72,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
 
-Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją.
+Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją. Ją performuluoju taip: Kiek tikėtina, jog konkretus kandidatas norės
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -133,7 +133,7 @@ Kadangi pirmajai daliai sprendimų neradau, sprendžiu tik antrąją.
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIzNDYyNjkzLC01NTg1NDc2NzUsOTgxMz
+eyJoaXN0b3J5IjpbMzE3NjE0OTUzLC01NTg1NDc2NzUsOTgxMz
 gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
 NzA5NDAzNDg5XX0=
 -->
