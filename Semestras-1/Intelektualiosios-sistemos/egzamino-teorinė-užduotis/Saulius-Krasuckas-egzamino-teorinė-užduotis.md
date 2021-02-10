@@ -1,3 +1,4 @@
+
 # IS :: Egzamino teorinė užduotis
 
 `Data: 2021-02-10`  
@@ -40,6 +41,8 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
   Turi būti aprašytos probleminės vietos, reikalaujančios sprendimo.  
   Įvardinti, kame yra sunkumai sprendžiant pateiktą problemą.  
   Kurios problemos sprendimo dalys nėra akivaizdžios.  
+  
+Problema siejasi su psichologija: nuspėti asmens sprendimą dėl darbo keitimo pagal ribotą duomenų rinkinį.  
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -98,3 +101,7 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
    ką intelektualioji sistema turi atlikti su įėjimo duomenimis tam,  
    kad gautų išėjimo duomenis.  
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwNjM3NzE2MzZdfQ==
+-->
