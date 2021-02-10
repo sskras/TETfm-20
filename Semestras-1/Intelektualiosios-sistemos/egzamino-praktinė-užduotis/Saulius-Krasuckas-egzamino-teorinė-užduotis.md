@@ -29,7 +29,7 @@ Egzamino teorinės užduoties vertinimo principai:
 
 ### 1. Gebėjimas suformuluoti uždavinį (-ius) pagal pateiktą problemą.
 
-  1. (a) Suprasti problemą  (0,25)  
+  1. (a) **Suprasti problemą**  (0,25)  
   |  
   (įvardinti/paaiškinti,  
    kur gali atsirasti neaiškumai kuriant/įgyvendinant problemos sprendimo algoritmą,  
@@ -41,9 +41,9 @@ Egzamino teorinės užduoties vertinimo principai:
   Įvardinti, kame yra sunkumai sprendžiant pateiktą problemą.  
   Kurios problemos sprendimo dalys nėra akivaizdžios.  
 
-  1. (b) Išskaidyti į dalis, uždavinius, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
+  1. (b) **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
-  1. (c) Aiškiai ir suprantamai įvairių sričių specialistams pateikti uždavinių formuluotes  (0,5)  
+  1. (c) Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
   |  
   (turima omenyje ne suformuluoti užduotis skirtingiems specialistams, 
    o paaiškinti uždavinius taip, kad jų prasmę, poreikį šiuos uždavinius spręsti matytų 
@@ -51,13 +51,13 @@ Egzamino teorinės užduoties vertinimo principai:
 
 ### 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus.
 
-  2. (a) Įvardinti 2-4 uždavinių sprendimo būdai  (0,5)  
+  2. (a) **Įvardinti 2-4** uždavinių sprendimo **būdai**  (0,5)  
   |  
   (įvardinti, kokius metodus ar algoritmus galima būtų pritaikyti anksčiau išvardintiems uždaviniams spręsti; 
    reikia pasirinkti tik tuos uždavinius, kur reikalingas/galimas intelektualiosios sistemos taikymas).  
 
-  2. (b) Pateikti argumentą (pvz., nuorodą į literatūrą), kodėl įvardintas sprendimo būdas tiktų  (1,5)  
-  |
+  2. (b) Pateikti argumentą (pvz., nuorodą į literatūrą), **kodėl įvardintas sprendimo būdas tiktų**  (1,5)  
+  |  
   (pateikti argumentus, kodėl tokio tipo uždaviniui spręsti parinkote būtent šį metodą.  
    Pavyzdžiui, gal galima rasti nuorodą į mokslo straipsnį,  
    kuriame aprašytas gėlių klasifikavimas su SOM tinklu,  
@@ -68,17 +68,17 @@ Egzamino teorinės užduoties vertinimo principai:
 
 ### 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias.
 
-  3. (a) Iš alternatyvų išrinkti geriausią, optimalų sprendimą.  (0,5)
+  3. (a) Iš alternatyvų **išrinkti geriausią, optimalų sprendimą**.  (0,5)
 
-  3. (b) Pateikti išskirtinius pasirinkto sprendimo būdo privalumus, lyginant su alternatyviaisiais  (2,5)  
+  3. (b) **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
   |  
   (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti. 
    Kuo kiti sprendimai yra blogesni ar mažiau tinkami problemai spręsti).  
 
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
-  4. (a) Įvardinti įvestį, išvestį  (0,5)  
-  |
+  4. (a) **Įvardinti įvestį, išvestį**  (0,5)  
+  |  
   (formuluojant užduotį reikia numatyti, kokio tipo ir kokie duomenys bus pateikiami sprendimo įėjime  
    ir kokie duomenys bus gaunami išėjime,  
    bei kaip tuos išėjimo duomenis reikia interpretuoti.  
@@ -87,11 +87,11 @@ Egzamino teorinės užduoties vertinimo principai:
    Išėjimą turėjome vieną, o jo reikšmės 0 arba 1 nurodė,  
    kokiai klasei priklauso vaizdas, kurio požymius siuntėme į įėjimą).  
 
-  4. (b) Veiksmų, kuriuos reikia atlikti eiliškumą  (1)  
+  4. (b) **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
   |  
   (čia reiktų parašyti ar nubraižyti kažką panašaus į algoritmo schemą, kad ir ne 100% detalizuotą).  
   
-  4. (c) Formules, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
+  4. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
   |  
   (pvz., kas per kintamasis ir iš kur jį paimti.  
    Reiktų pabandyti surašyti (ar išsikopijuoti iš interneto) formules, kurios matematine kalba aprašo tai,  
