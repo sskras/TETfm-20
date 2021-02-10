@@ -46,13 +46,16 @@ Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darb�
 
 Angl. terminai, kuriais rėmiausi ieškodamas sprendimo būdų:
 
+* _Staff turnover_
 * _Job offer acceptance_
+* _Job offer turndown_
 * _Job acceptance decisions_
 * _Job search behaviour_
 * _Career decision making process_
-* 
+* _Voluntary employee turnover_
 
 Probleminės vietos:
+
 * turimi ne visi duomenys apie asmenį. Tiek fiziniai (pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas), tiek ir psichologiniai (etinės/moralinės nuostatos, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis metais, o ne specifika).
@@ -119,7 +122,7 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTUxMDcxNywtNTU4NTQ3Njc1LDk4MT
+eyJoaXN0b3J5IjpbLTI2MjEzNDg4NywtNTU4NTQ3Njc1LDk4MT
 M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
 LTcwOTQwMzQ4OV19
 -->
