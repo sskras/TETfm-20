@@ -74,7 +74,7 @@ Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai, skeliu 
 
 Kadangi pirmajai daliai sprendimų neradau, sprendžiu antrąją.  Be to, ją truputį pageneralizuoju: 
 
-Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe konretus kandidatas) norės pakeisti darbo vietą.
+Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kandidatas) norės pakeisti darbo vietą.
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -135,7 +135,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe konretus kandidata
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTQxODAyNTMsLTU1ODU0NzY3NSw5OD
-EzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0
-LC03MDk0MDM0ODldfQ==
+eyJoaXN0b3J5IjpbMTI1NzA3NTMyMCwtNTU4NTQ3Njc1LDk4MT
+M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
+LTcwOTQwMzQ4OV19
 -->
