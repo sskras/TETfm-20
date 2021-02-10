@@ -90,7 +90,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Paieška intelektualiųjų metodų, kurie apskritai tinka karjeros pasikeitimų prognozėms;
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas;
 * Tiksliausiai prognozuojančio metodo išrinkimas.
-* Apmokymo duomenų 
+* Apmokymo duomenų rinkinio paieška;
+* Intlektual
 .
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
@@ -150,7 +151,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczNjAyMTE0LC01NTcwNjc2ODksLTE4Nz
+eyJoaXN0b3J5IjpbNjI3MTQ1NDYxLC01NTcwNjc2ODksLTE4Nz
 g4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5
 OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNT
 U4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIy
