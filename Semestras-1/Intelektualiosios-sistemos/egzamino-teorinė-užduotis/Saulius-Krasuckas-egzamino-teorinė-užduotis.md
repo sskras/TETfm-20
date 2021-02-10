@@ -59,13 +59,12 @@ Probleminės vietos:
 * turimi ne visi duomenys apie asmenį. Tiek fiziniai (pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas), tiek ir psichologiniai (etinės/moralinės nuostatos, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis, nurodoma metais, o ne įvardnant specifiką).
-* nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. išsekimas, „perdegimas (angl. _Job burnout_), noras supaprastinti gyvenimo būdą (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
+* nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. išsekimas, „perdegimas (angl. _Job burnout_), noras supaprastinti gyvenamąją aplinką (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
 
-.
-
-  2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
+Iš šaltinių matyti, kad darbo keitimo procesas susideda iš 7 etapų. O mūsų uždavinys nagrinėja tik pi
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
+  2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
   |  
@@ -124,7 +123,7 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMzNjc2OTA0LC01NTg1NDc2NzUsOTgxMz
-gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
-NzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbLTIxMDA0MTkzOTIsLTU1ODU0NzY3NSw5OD
+EzODI3NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0
+LC03MDk0MDM0ODldfQ==
 -->
