@@ -169,7 +169,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 Išvestis yra skaliaras, AUC-ROC (angl. _Area under the receiver operating characteristic curve_).
 
-Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir po testų palikti tik vieną:
+Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
 
 * Accuracy, 
 * Precision, 
@@ -177,9 +177,11 @@ Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir 
 * F_1, 
 * AUC-ROC
 
+O po testų palikti produkcijai tik vieną.
+
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
-  |  
-  (čia reiktų parašyti ar nubraižyti kažką panašaus į algoritmo schemą, kad ir ne 100% detalizuotą).  
+
+(Trūksta)
   
   3. **Formules**, kurias reikia įgyvendinti kartu su paaiškinimu, kas įeina į formulę  (2,5)  
   |  
@@ -190,11 +192,11 @@ Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTM0NTM1Miw0OTQ3OTExODMsLTEwMT
-A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
-MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
-wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
-NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NS
-wxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1
-Mzg1NjY0XX0=
+eyJoaXN0b3J5IjpbMjgzNDU3Myw0OTQ3OTExODMsLTEwMTA1OD
+UxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYx
+Niw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOT
+MwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4
+OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOT
+UyMDMxOTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1
+NjY0XX0=
 -->
