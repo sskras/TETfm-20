@@ -80,8 +80,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Anketos duomenų suskaitmeninimas;
 * Paieška intelektualiųjų metodų, kurie apskritai tinka karjeros pasikeitimų prognozėms;
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas. Į tai įeina
-  * Iėjimų filtravimo būdo parinkimas (angl.jei išvis priimtina);
-  * 
+  * įėjimų filtravimo būdo parinkimas (jei išvis priimtina, angl. _Feature selection_);
+  * klasifikavimo metodo parinkimas;
 * Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta nesvarbu).
 * Apmokymo duomenų rinkinio paieška;
 * Intelektualiosios sistemos prototipo programavimas;
@@ -152,7 +152,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MjM0MDQwMCw1ODAxMDc4MzcsLTQ3Nz
+eyJoaXN0b3J5IjpbMTA3NzY0NjQ5NCw1ODAxMDc4MzcsLTQ3Nz
 M4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2
 LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MT
 E5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgz
