@@ -120,6 +120,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Nuorodą galima pateikti įvardinant autorių ir metus.  
    Geriausia būtų pateikti DOI.).  
 
+
+
 ### 3. Gebėjimas įtikinti, kad jūsų priimtas sprendimas yra geriausias.
 
   1. Iš alternatyvų **išrinkti geriausią, optimalų sprendimą**.  (0,5)
@@ -154,11 +156,11 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLT
-E2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5
-ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC
-01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5
-NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMT
-EsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMz
-MTUyNjgzXX0=
+eyJoaXN0b3J5IjpbMTM0ODQ4NzIwMCwtMTE4Mjc3MzMwOCwtMT
+c4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAxMDc4MzcsLTQ3NzM4
+OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MDE1LDY2ODY5NDc2LD
+ExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5
+Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgzOT
+MxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOTgx
+MzgyNzcyXX0=
 -->
