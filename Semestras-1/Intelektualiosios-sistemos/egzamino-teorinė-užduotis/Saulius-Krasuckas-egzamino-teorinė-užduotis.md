@@ -47,12 +47,12 @@ Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darb�
 Angl. terminas, kuriuo rėmiausi ieškodamas sprendimo būdų: _Job search behaviour_
 
 Probleminės vietos:
-* turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis, pasaulėžiūra, charakterio modelis);
-* dalis turimų duomenų nėra pilni / pateikti netiksliai (pvz. įmonės dydis);
+* turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis, etinės/moralinės vertybės, charakterio modelis);
+* dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
 * dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai pamatuojami (pvz. darbo srityje patirtis).
 * turimi duomenys nebūtinai atspindi dabartinę psichologinę asmens būseną.
 
-T
+.
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -113,6 +113,6 @@ T
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNTYyNjE1OCwtNDU4NDAyMjIsOTQ2ND
+eyJoaXN0b3J5IjpbLTY2OTMwMDgyNiwtNDU4NDAyMjIsOTQ2ND
 Q4MDA0LC03MDk0MDM0ODldfQ==
 -->
