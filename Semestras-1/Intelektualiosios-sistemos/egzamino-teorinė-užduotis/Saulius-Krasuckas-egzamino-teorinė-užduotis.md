@@ -42,7 +42,7 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
   Įvardinti, kame yra sunkumai sprendžiant pateiktą problemą.  
   Kurios problemos sprendimo dalys nėra akivaizdžios.  
   
-Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį dėl darbo keitimo (ar įsidarbinimo, j) pagal ribotą duomenų rinkinį.
+Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį dėl darbo keitimo (ar įsidarbinimo, jei asmuo nedirba) pagal ribotą duomenų rinkinį.
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -103,5 +103,5 @@ Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį dėl darbo k
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTE4ODY1OSwtNzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbNDE4NDMyNTQzLC03MDk0MDM0ODldfQ==
 -->
