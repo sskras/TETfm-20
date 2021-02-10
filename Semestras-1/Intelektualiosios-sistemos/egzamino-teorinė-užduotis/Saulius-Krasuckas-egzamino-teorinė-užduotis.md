@@ -44,7 +44,9 @@ Kokius intelektualiuosius metodus galima būtų čia pritaikyti, norint apskaič
   
 Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darbą (ar įsidarbinti, jei šiuo metu asmuo nedirba) pagal ribotą duomenų rinkinį. 
 
-Angl. terminas, kuriuo rėmiausi ieškodamas sprendimo būdų: _Job search behaviour_
+Angl. terminai, kuriais rėmiausi ieškodamas sprendimo būdų:
+* _Job search behaviour_
+* _Career des
 
 Probleminės vietos:
 * turimi ne visi duomenys apie asmenį. Tiek fiziniai (pvz. šeimyninė padėtis, ilgalaikė stresinė būsena, pvz. kortizolio „šaltinių“ aktyvavimasis / išsekimas), tiek ir psichologiniai (etinės/moralinės nuostatos, pvz. stabilumas yra vertybė; charakterio modelis, pvz. nesėkmės vengimas ar per didelis pasitikėjimas savimi) nuo kurių priklauso polinkis / galutinis sprendimas;
@@ -113,7 +115,7 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMz
-E1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODld
-fQ==
+eyJoaXN0b3J5IjpbMTQwMjAxOTQ3LC01NTg1NDc2NzUsOTgxMz
+gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
+NzA5NDAzNDg5XX0=
 -->
