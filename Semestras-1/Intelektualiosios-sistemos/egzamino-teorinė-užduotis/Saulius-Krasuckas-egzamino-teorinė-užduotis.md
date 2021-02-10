@@ -95,9 +95,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
 
 * Analizuoti ir paruošti anketų duomenis;
-* Atlikti metodo parinkimą;
+* Atlikti intelekualiojo metodo parinkimą;
 * Sukurti intelektualiąją sistemą;
-* Testuoti ją ir paruošti naudojimui.
+* Ištestuoti ją ir paruošti naudojimui.
 
 ### 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus.
 
@@ -153,7 +153,7 @@ I
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM2MTcxNTc2LC0xNjI5MDcyNjE2LDU4MD
+eyJoaXN0b3J5IjpbODQ2MTM5NDc3LC0xNjI5MDcyNjE2LDU4MD
 EwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUw
 MTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xOD
 c4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5
