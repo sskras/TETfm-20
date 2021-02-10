@@ -169,7 +169,7 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 Išvestis yra skaliaras, AUC-ROC (angl. _Area under the receiver operating characteristic curve_).
 
-Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir :
+Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir po testų palikti tik vieną:
 
 * Accuracy, 
 * Precision, 
@@ -190,7 +190,7 @@ Nors prototipavimo metui siūlyčiau išėjime skaičiuoti visus 5 skaliarus ir 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDQ2OTMwMyw0OTQ3OTExODMsLTEwMT
+eyJoaXN0b3J5IjpbMTM4NTM0NTM1Miw0OTQ3OTExODMsLTEwMT
 A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
 MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
 wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
