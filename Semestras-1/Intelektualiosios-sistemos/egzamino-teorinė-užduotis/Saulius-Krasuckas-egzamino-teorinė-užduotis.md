@@ -102,9 +102,6 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 ### 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus.
 
   1. **Įvardinti 2-4** uždavinių sprendimo **būdai**  (0,5)  
-  |  
-  (įvardinti, kokius metodus ar algoritmus galima būtų pritaikyti anksčiau išvardintiems uždaviniams spręsti; 
-   reikia pasirinkti tik tuos uždavinius, kur reikalingas/galimas intelektualiosios sistemos taikymas).  
 
 * Daugiasluoksnis perceptronas (angl. MLP)
 * Random Forest (RF)
@@ -157,11 +154,11 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNT
-gwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYx
-NTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLT
-E4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAz
-MTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NC
-wtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NTg0
-MDIyMl19
+eyJoaXN0b3J5IjpbLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLT
+E2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5
+ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC
+01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5
+NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMT
+EsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMz
+MTUyNjgzXX0=
 -->
