@@ -71,7 +71,7 @@ Iš visų septynių jis, *sprendimas priimti pokytį* laikomas asmeniui pačiu s
 
 Pagal literatūros paieškos rezultatus panašu, kad šį sprendimą sunku ne tik priimti, bet ir prognozuoti.
 
-Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. Kadangi neradau šaltinių apie spręstų šį uždavinį tiesiogiai, skeliu jį į dvi dalis: 
+Laikau, kad sprendimo priėmimas keičiasi iš esmės priklausomai nuo to, ar asmuo šiuo metu dirba. Kadangi neradau šaltinių kaip spręsti šį uždavinį tiesiogiai, skeliu jį į dvi dalis:
 
 * ar ieško darbo nedirbantysis;
 * ar ieško naujo darbo dirbantysis.
@@ -139,7 +139,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5OTQ3NDUzOSwtMTEyMzg4MzkzMSw5OT
+eyJoaXN0b3J5IjpbMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OT
 I2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3
 MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOT
 QwMzQ4OV19
