@@ -49,8 +49,8 @@ Angl. terminas, kuriuo rėmiausi ieškodamas sprendimo būdų: _Job search behav
 Probleminės vietos:
 * turimi ne visi duomenys apie asmenį (pvz. šeimyninė padėtis, etinės/moralinės vertybės, charakterio modelis);
 * dalis turimų duomenų nėra pilni / pateikiami netiksliai (pvz. įmonės dydis);
-* dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai pamatuojami (pvz. darbo srityje patirtis).
-* turimi duomenys nebūtinai atspindi dabartinę psichologinę asmens būseną.
+* dalis turimų duomenų neturi vienareikšmiško mato, nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis).
+* nėra žinoma, kiek turimi duomenys atspindi asmens dabartinę psichologinę būseną.
 
 .
 
@@ -113,6 +113,6 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTMwMDgyNiwtNDU4NDAyMjIsOTQ2ND
+eyJoaXN0b3J5IjpbMTUxNDM1NDA5OCwtNDU4NDAyMjIsOTQ2ND
 Q4MDA0LC03MDk0MDM0ODldfQ==
 -->
