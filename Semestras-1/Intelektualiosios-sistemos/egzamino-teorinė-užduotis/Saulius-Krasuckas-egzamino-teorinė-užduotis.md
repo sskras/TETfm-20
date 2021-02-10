@@ -162,7 +162,7 @@ Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikac
 
   1. **Įvardinti įvestį, išvestį**  (0,5)  
 
-Įvestis yra slankaus kablelio vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, kaip aprašyti darbo srities patirtį, normos nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
+Įvestis yra slankaus kablelio tipo vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, kaip aprašyti darbo srities patirtį, metrikos nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
 Išvestis yra skaliaras, AUC-ROC rodiklis (angl. _Area under the receiver operating characteristic curve_).
 
@@ -200,11 +200,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDU3NzI3MSwxODY2MDQ5Mjg4LDEwOT
-QyMjU5NDMsMTU4ODk3MjA5NiwtMTI3NDU1MDg0OCwxNDc3MjI2
-MTEyLC00OTY3OTQyMjAsMjgzNDU3Myw0OTQ3OTExODMsLTEwMT
-A1ODUxOCwtMTE4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3
-MjYxNiw1ODAxMDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMC
-wtOTMwNjE1MDE1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2
-NzY4OV19
+eyJoaXN0b3J5IjpbLTQyMzEzMzg1MSwxNzU0NTc3MjcxLDE4Nj
+YwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUw
+ODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5ND
+c5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUw
+Nzg3LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC
+0xNTA1OTg1MjEwLC05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0
+NjEyOV19
 -->
