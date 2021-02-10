@@ -114,14 +114,6 @@ Ir priedas jiems:
 
 ---
   2. Pateikti argumentą (pvz., nuorodą į literatūrą), **kodėl įvardintas sprendimo būdas tiktų**  (1,5)  
-  |  
-  (pateikti argumentus, kodėl tokio tipo uždaviniui spręsti parinkote būtent šį metodą.  
-   Pavyzdžiui, gal galima rasti nuorodą į mokslo straipsnį,  
-   kuriame aprašytas gėlių klasifikavimas su SOM tinklu,  
-   o jūsų uždavinys yra taip pat klasifikavimo uždavinys,  
-   turintis panašų požymių (įėjimų) ir klasių (išėjimų) skaičių.  
-   Nuorodą galima pateikti įvardinant autorių ir metus.  
-   Geriausia būtų pateikti DOI.).  
 
 [Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
@@ -149,10 +141,13 @@ Iš **ADT**, **MLP**, **RF** ir **GBDT** renkuosi **RF** intelektualį metodą. 
 
 Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
 
+--
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
   |  
   (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti.  
    Kuo kiti sprendimai yra blogesni ar mažiau tinkami problemai spręsti).  
+
+
 
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
@@ -179,7 +174,7 @@ Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų,
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU5OTM1MzAsLTEwMTA1ODUxOCwtMT
+eyJoaXN0b3J5IjpbLTE1MDM0MzQzMjcsLTEwMTA1ODUxOCwtMT
 E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
 MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
 E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
