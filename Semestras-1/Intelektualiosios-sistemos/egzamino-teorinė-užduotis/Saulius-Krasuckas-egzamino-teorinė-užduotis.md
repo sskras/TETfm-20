@@ -137,9 +137,10 @@ Turint tokią informaciją (jei tiksliai užpildyti tokie duomenys) padidėja vi
 
   1. Iš alternatyvų **išrinkti geriausią, optimalų sprendimą**.  (0,5)
 
+Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
+
 Iš **ADT**, **MLP**, **RF** ir **GBDT** renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **DBGE** metodu.  
 
-Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų, kaip jo tikslumą keičia **DBGE**.
 
 --
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
@@ -147,7 +148,7 @@ Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų,
   (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti.  
    Kuo kiti sprendimai yra blogesni ar mažiau tinkami problemai spręsti).  
 
-
+**RF** visuose trijose apžvelgtose publikacijos
 
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
@@ -174,11 +175,11 @@ Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų,
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDM0MzQzMjcsLTEwMTA1ODUxOCwtMT
-E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
-MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
-E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
-ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
-k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
-NTg1NDc2NzVdfQ==
+eyJoaXN0b3J5IjpbMTczOTY0OTg0MywtMTAxMDU4NTE4LC0xMT
+gyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEw
+NzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC05MzA2MTUwMT
+UsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3Njg5LC0xODc4
+ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OT
+ksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUzODU2NjQsLTU1
+ODU0NzY3NV19
 -->
