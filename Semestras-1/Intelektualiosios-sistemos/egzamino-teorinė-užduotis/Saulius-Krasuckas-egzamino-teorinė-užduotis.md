@@ -151,6 +151,8 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 
 **RF** „laimi“ visuose trijose apžvelgtose publikacijose. Bet to, jis yra gan paprastas, jau klasikinis metodas (angl.) _Ensemble Learning_ srityje.
 
+**DBGE** yra naujovė, kuri patikslina visus tirtus metodus (kai kuriuos iki kelių procentų).
+
 ### 4. Aiškiai pateikti sprendimą, kad būtų aišku ką turi įgyvendinti programuotojas.
 
   1. **Įvardinti įvestį, išvestį**  (0,5)  
@@ -176,11 +178,11 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5Njk0Njc0LDQ5NDc5MTE4MywtMTAxMD
-U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
-NjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1MjEwLC
-05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MDY3
-Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1LD
-E5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05MjUz
-ODU2NjRdfQ==
+eyJoaXN0b3J5IjpbLTIxMzM2MTAwMjQsNDk0NzkxMTgzLC0xMD
+EwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2Mjkw
+NzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUyMT
+AsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcw
+Njc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2Nz
+UsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTky
+NTM4NTY2NF19
 -->
