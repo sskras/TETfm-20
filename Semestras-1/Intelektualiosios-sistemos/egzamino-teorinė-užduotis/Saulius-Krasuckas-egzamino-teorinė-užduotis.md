@@ -168,14 +168,8 @@ Išvestis yra slankaus kablelio skaliaras, AUC-ROC rodiklis (angl. _Area under t
 
 Bet prototipavimo fazei siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
 
-* , 
-* , 
-* , 
-* , 
-* 
-
-| Accuracy | Precision | Recall | F_1 | AUC-ROC
-|----------|-----------|--------|-----|
+| Accuracy | Precision | Recall | F_1 | AUC-ROC |
+|----------|-----------|--------|-----|---------|
 
 O po testų palikti produkcijai tik vieną.
 
@@ -203,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTYyNDkyMzksODQwMzAyNzU1LDE3NT
-Q1NzcyNzEsMTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIw
-OTYsLTEyNzQ1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLD
-I4MzQ1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMz
-MDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC
-00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2
-OTQ3Nl19
+eyJoaXN0b3J5IjpbNTU5NzQwNjYsODQwMzAyNzU1LDE3NTQ1Nz
+cyNzEsMTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIwOTYs
+LTEyNzQ1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4Mz
+Q1NzMsNDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgs
+LTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00Nz
+czODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3
+Nl19
 -->
