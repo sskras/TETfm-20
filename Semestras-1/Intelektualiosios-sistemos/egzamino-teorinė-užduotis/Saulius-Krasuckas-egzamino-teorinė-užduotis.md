@@ -92,7 +92,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
 
 * Analizuoti ir paruošti anketų duomenis;
-* Atlikti intelektualiojo metodo parinkimą;
+* Atlikti metodo parinkimą;
 * Sukurti intelektualiąją sistemą;
 * Testuoti ją ir paruošti naudojimui.
 
@@ -147,10 +147,10 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDMzNDk2MjYsNjY4Njk0NzYsMTExNj
-E0NjEyOSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5
-NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOT
-kyNjU2MTExLC05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3
-NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MD
-k0MDM0ODldfQ==
+eyJoaXN0b3J5IjpbLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MT
+Q2MTI5LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1
+LDExODA5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OT
+I2NTYxMTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3
+MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOT
+QwMzQ4OV19
 -->
