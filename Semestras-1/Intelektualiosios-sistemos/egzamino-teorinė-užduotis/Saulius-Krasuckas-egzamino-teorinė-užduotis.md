@@ -75,12 +75,12 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 ---
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
-* Klasifikacijos mato (normos) aprašymas / sukūrimas kiekvienam duomenų tipui, kurį paduosime modeliui;  
+* Mato (metrikos) aprašymas / sukūrimas kiekvienam duomenų tipui, kurį paduosime modeliui;  
   (pvz. kaip skaičiumi aprašyti darbdavio tipą – konstantų enumeracija?)
 * Anketos duomenų suskaitmeninimas;
 * Paieška intelektualiųjų metodų, kurie apskritai tinka karjeros pasikeitimų prognozėms;
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas. Į tai įeina
-  * klasifikavimo būdo parinkimas (jei išvis priimtina);
+  * ti būdo parinkimas (jei išvis priimtina);
   * 
 * Tiksliausiai prognozuojančios kombinacijos išrinkimas (sparta nesvarbu).
 * Apmokymo duomenų rinkinio paieška;
@@ -152,11 +152,11 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NTIwMTY1OSwtNDc3Mzg5Mzk5LC0xNT
-A1OTg1MjEwLC05MzA2MTUwMTUsNjY4Njk0NzYsMTExNjE0NjEy
-OSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMT
-gwOTQ2Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2
-MTExLC05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLT
-IzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0
-ODldfQ==
+eyJoaXN0b3J5IjpbNTgwMTA3ODM3LC00NzczODkzOTksLTE1MD
+U5ODUyMTAsLTkzMDYxNTAxNSw2Njg2OTQ3NiwxMTE2MTQ2MTI5
+LC01NTcwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExOD
+A5NDY2NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYx
+MTEsLTkyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMj
+MzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4
+OV19
 -->
