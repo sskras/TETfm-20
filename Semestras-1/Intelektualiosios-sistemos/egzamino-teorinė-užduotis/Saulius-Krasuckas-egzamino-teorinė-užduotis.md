@@ -91,7 +91,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Kelių metodų turimam duomenų (angl. _Features_) rinkiniui apdroti parinkimas;
 * Tiksliausiai prognozuojančio metodo išrinkimas.
 * Apmokymo duomenų rinkinio paieška;
-* Intlektual
+* Intelektualiosios sistemos paieška.
 .
 
   3. Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
@@ -151,9 +151,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI3MTQ1NDYxLC01NTcwNjc2ODksLTE4Nz
-g4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5
-OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNT
-U4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIy
-Miw5NDY0NDgwMDQsLTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbLTEyODY0OTMxOTksLTU1NzA2NzY4OSwtMT
+g3ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMx
+OTk5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC
+01NTg1NDc2NzUsOTgxMzgyNzcyLC0yMzMxNTI2ODMsLTQ1ODQw
+MjIyLDk0NjQ0ODAwNCwtNzA5NDAzNDg5XX0=
 -->
