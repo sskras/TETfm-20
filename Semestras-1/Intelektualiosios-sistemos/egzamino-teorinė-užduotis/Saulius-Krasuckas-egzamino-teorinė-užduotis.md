@@ -125,8 +125,9 @@ Ir priedas jiems:
 
 [Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
-Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie ir mano duoda aukščiausius rezultatus:
+Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda aukščiausius rezultatus:
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)
+(Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
@@ -177,7 +178,7 @@ Rinkčiausi **MLT** kaip praktiškai pažįstamą metodą, bet neturiu duomenų,
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjc5MzY0NzcsLTEwMTA1ODUxOCwtMT
+eyJoaXN0b3J5IjpbLTEyOTY2NDcyOTAsLTEwMTA1ODUxOCwtMT
 E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
 MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
 E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
