@@ -65,7 +65,9 @@ Probleminės vietos:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
-Kadangi 
+Laikau, kad sprendimo priėmimas kardinaliai skiriasi priklausomai nuo to, ar asmuo šiuo metu dirba.
+
+Kadangi neradau straipsnių, kurie spręstų šį uždavinį tiesiogiai. 
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
@@ -126,7 +128,7 @@ Kadangi
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMTg4OTg3NiwtNTU4NTQ3Njc1LDk4MT
-M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
-LTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbMjAzMDc1NTU3LC01NTg1NDc2NzUsOTgxMz
+gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
+NzA5NDAzNDg5XX0=
 -->
