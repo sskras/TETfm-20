@@ -61,7 +61,7 @@ Probleminės-informacinės vietos:
 * dalis turimų duomenų neturi savo metro / tikslaus mato, t. y. nėra nešališkai išreiškiami / pamatuojami (pvz. darbo srityje patirtis, nurodoma metais, o ne įvardnant specifiką).
 * nėra žinoma, kiek turimi duomenys atspindi momentinę asmens būseną, pvz. išsekimas, „perdegimas (angl. _Job burnout_), noras supaprastinti gyvenamąją aplinką (angl. _Career downshift_). Šią būseną laikau ypač svarbia akimirką, kai asmuo gauna darbo pasiūlymą.
 
-[Iš šaltinių](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 nuoseklių sprendimų. Ši užduotis atitinka patį pirmąjį – angl. _Considering a change_ sprendimą:
+[Iš šaltinių](https://www.indeed.com/lead/science-behind-job-search) matyti, kad darbo keitimo procesas susideda iš 7 nuoseklių sprendimų. Ši užduotis mano interpretavimu atitinka patį pirmąjį – angl. _Considering a change_ sprendimą:
 
 ![](https://d341ezm4iqaae0.cloudfront.net/assets/2020/02/16233227/Decision-Making-Process-1024x548.png)
 
@@ -135,8 +135,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzY4ODg3OTMsLTExMjM4ODM5MzEsOT
-kyNjU2MTExLC05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3
-NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MD
-k0MDM0ODldfQ==
+eyJoaXN0b3J5IjpbOTE0MTk5ODg1LC0xMTIzODgzOTMxLDk5Mj
+Y1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOTgxMzgyNzcy
+LC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5ND
+AzNDg5XX0=
 -->
