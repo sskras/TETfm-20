@@ -45,8 +45,8 @@ Egzamino teorinės užduoties vertinimo principai:
 
   1. (c) Aiškiai ir suprantamai įvairių sričių **specialistams pateikti uždavinių formuluotes**  (0,5)  
   |  
-  (turima omenyje ne suformuluoti užduotis skirtingiems specialistams, 
-   o paaiškinti uždavinius taip, kad jų prasmę, poreikį šiuos uždavinius spręsti matytų 
+  (turima omenyje ne suformuluoti užduotis skirtingiems specialistams,  
+   o paaiškinti uždavinius taip, kad jų prasmę, poreikį šiuos uždavinius spręsti matytų  
    projektų vadovas, finansininkas, vadybininkas ir, pavyzdžiui, personalo vadybininkas).  
 
 ### 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus.
