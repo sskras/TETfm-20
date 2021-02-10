@@ -95,6 +95,8 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    o paaiškinti uždavinius taip, kad jų prasmę, poreikį šiuos uždavinius spręsti matytų  
    projektų vadovas, finansininkas, vadybininkas ir, pavyzdžiui, personalo vadybininkas).  
 
+* Paruošti anketų duomenis;
+
 ### 2. Gebėjimas argumentuotai pateikti kelis galimus problemos uždavinių sprendimus.
 
   1. **Įvardinti 2-4** uždavinių sprendimo **būdai**  (0,5)  
@@ -146,10 +148,10 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5NDQ3NjI0LDY2ODY5NDc2LDExMTYxND
-YxMjksLTU1NzA2NzY4OSwtMTg3ODg2NDk5Myw3MTE5Mzg5OTUs
-MTE4MDk0NjY3NSwxOTUyMDMxOTk5LC0xMTIzODgzOTMxLDk5Mj
-Y1NjExMSwtOTI1Mzg1NjY0LC01NTg1NDc2NzUsOTgxMzgyNzcy
-LC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwtNzA5ND
-AzNDg5XX0=
+eyJoaXN0b3J5IjpbLTEyODEwNDkxODQsNjY4Njk0NzYsMTExNj
+E0NjEyOSwtNTU3MDY3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5
+NSwxMTgwOTQ2Njc1LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOT
+kyNjU2MTExLC05MjUzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3
+NzIsLTIzMzE1MjY4MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MD
+k0MDM0ODldfQ==
 -->
