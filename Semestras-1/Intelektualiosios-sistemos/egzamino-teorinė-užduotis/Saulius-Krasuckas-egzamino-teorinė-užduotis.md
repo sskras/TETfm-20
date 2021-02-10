@@ -46,7 +46,7 @@ Problema siejasi su psichologijos sritimi: nuspėti asmens polinkį keisti darb�
 
 Angl. terminai, kuriais rėmiausi ieškodamas sprendimo būdų:
 
-* _Job offer acceptance)
+* _Job offer acceptance_
 * _Job acceptance decisions_
 * _Job search behaviour_
 * _Career decision making process_
@@ -119,7 +119,7 @@ Probleminės vietos:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyMDE5MTIzLC01NTg1NDc2NzUsOTgxMz
-gyNzcyLC0yMzMxNTI2ODMsLTQ1ODQwMjIyLDk0NjQ0ODAwNCwt
-NzA5NDAzNDg5XX0=
+eyJoaXN0b3J5IjpbMTU0OTUxMDcxNywtNTU4NTQ3Njc1LDk4MT
+M4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIyMiw5NDY0NDgwMDQs
+LTcwOTQwMzQ4OV19
 -->
