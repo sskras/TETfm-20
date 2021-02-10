@@ -144,9 +144,9 @@ Tad renkuosi **RF** intelektualį metodą. Taip pat siūlau jį kombinuoti su **
 Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
 [Ribes, E., Touahri, K., & Perthame, B. (2017). Employee turnover prediction and retention policies design: a case study.  _arXiv preprint arXiv:1707.01377_.](https://arxiv.org/abs/1707.01377)
 
+![image](https://user-images.githubusercontent.com/74717106/107563709-12641400-6bea-11eb-8bc5-f4cb9bde5eb0.png)
 
-
---
+---
   2. **Pateikti išskirtinius** pasirinkto sprendimo būdo **privalumus**, lyginant su alternatyviaisiais  (2,5)  
   |  
   (pateikti argumentus, kodėl jūsų pasirinktas sprendimas geresnis nei kiti.  
@@ -179,11 +179,11 @@ Taip pat **RF** „laimi“ ir šioje, kiek senesnėje publikacijoje:
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwNDk0MzkxLC0xMDEwNTg1MTgsLTExOD
-I3NzMzMDgsLTE3ODU1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3
-ODM3LC00NzczODkzOTksLTE1MDU5ODUyMTAsLTkzMDYxNTAxNS
-w2Njg2OTQ3NiwxMTE2MTQ2MTI5LC01NTcwNjc2ODksLTE4Nzg4
-NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5OS
-wtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNTU4
-NTQ3Njc1XX0=
+eyJoaXN0b3J5IjpbLTE2MDg1NTk0NzEsLTEwMTA1ODUxOCwtMT
+E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
+MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
+E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
+ODg2NDk5Myw3MTE5Mzg5OTUsMTE4MDk0NjY3NSwxOTUyMDMxOT
+k5LC0xMTIzODgzOTMxLDk5MjY1NjExMSwtOTI1Mzg1NjY0LC01
+NTg1NDc2NzVdfQ==
 -->
