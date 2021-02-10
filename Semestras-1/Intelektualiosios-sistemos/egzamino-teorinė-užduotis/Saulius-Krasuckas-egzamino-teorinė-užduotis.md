@@ -105,10 +105,11 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
 * Daugiasluoksnis perceptronas (angl. MLP)
 * Random Forest (RF)
-* Alternating decision tree (ADT)
-
-* XGBoost (XGB)
+* Alternating Decision Tree (ADT)
 * Gradient Boosting Decision Tree (GBDT)
+
+Ir priedas jiems:
+
 * Dynamic Bipartite Graph Embedding (DBGE)
 
 ---
@@ -124,7 +125,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
 [Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
-Remdamasis šia publikacija pasirinkau **MLP** ir **RF**. Jie ir mano nepasirinktas ADT metodas duoda aukštus rezultatus:
+Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie ir mano duoda aukščiaus rezultatus:
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)
 
 
@@ -171,7 +172,7 @@ O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF 
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTg1NDY5NjIsLTEwMTA1ODUxOCwtMT
+eyJoaXN0b3J5IjpbLTIwNTYzNzcwNjMsLTEwMTA1ODUxOCwtMT
 E4Mjc3MzMwOCwtMTc4NTU1MDc4NywtMTYyOTA3MjYxNiw1ODAx
 MDc4MzcsLTQ3NzM4OTM5OSwtMTUwNTk4NTIxMCwtOTMwNjE1MD
 E1LDY2ODY5NDc2LDExMTYxNDYxMjksLTU1NzA2NzY4OSwtMTg3
