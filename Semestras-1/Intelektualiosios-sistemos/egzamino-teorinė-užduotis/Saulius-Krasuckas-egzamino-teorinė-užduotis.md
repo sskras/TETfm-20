@@ -84,9 +84,10 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 
   2. **Išskaidyti į dalis, uždavinius**, kuriuos išsprendus galima išspręsti ir problemą.  (0,25)
 
-* Mato (normos) aprašymas / sukūrimas kiekvienam duomenų tipui, kurį paduodame modeliui  
+* Mato (normos) aprašymas / sukūrimas kiekvienam duomenų tipui, kurį paduodame modeliui;  
   (pvz. kaip skaičiumi aprašyti darbdavio tipą – konstantų enumeracija?)
-* Anketos duomenų suskaitmeninimas.
+* Anketos duomenų suskaitmeninimas;
+* Pasirinkimas tokių intelektualiųjų metodų, kurie gebėtų 
 * 
 .
 
@@ -147,7 +148,7 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MDI1NTIzLC01NTcwNjc2ODksLTE4Nz
+eyJoaXN0b3J5IjpbMzQwMjE2OTQxLC01NTcwNjc2ODksLTE4Nz
 g4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2NzUsMTk1MjAzMTk5
 OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLTkyNTM4NTY2NCwtNT
 U4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUyNjgzLC00NTg0MDIy
