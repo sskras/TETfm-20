@@ -124,14 +124,14 @@ Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda auk
 (Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
 O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:  
-[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction  on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
+[Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
 Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (ankstesnių darbdavių keitimo laikus) su darbdavių įmonėmis naudojant specifinį grafą:
 ![image](https://user-images.githubusercontent.com/74717106/107562084-0a0ad980-6be8-11eb-98a3-4d052a3eb6bc.png)
 
-Turint tokią informaciją (jei tiksliai užpildyti šie duomenys) padidėja visų _Tree-_ metodų tikslumas:
+Turint tokią informaciją (jei tiksliai užpildyti šie duomenys) padidėja visų _Tree-based_ metodų tikslumas:
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
 ----
@@ -197,11 +197,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3MTYxODY4LDEzOTg1NTc5OTksNTU5Nz
-QwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEsMTg2NjA0OTI4OCwx
-MDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNzQ1NTA4NDgsMTQ3Nz
-IyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMsNDk0NzkxMTgzLC0x
-MDEwNTg1MTgsLTExODI3NzMzMDgsLTE3ODU1NTA3ODcsLTE2Mj
-kwNzI2MTYsNTgwMTA3ODM3LC00NzczODkzOTksLTE1MDU5ODUy
-MTBdfQ==
+eyJoaXN0b3J5IjpbMTkxNzE0NDQ4MiwxMzk4NTU3OTk5LDU1OT
+c0MDY2LDg0MDMwMjc1NSwxNzU0NTc3MjcxLDE4NjYwNDkyODgs
+MTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0Nz
+cyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MTE4Mywt
+MTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNj
+I5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5Mzk5LC0xNTA1OTg1
+MjEwXX0=
 -->
