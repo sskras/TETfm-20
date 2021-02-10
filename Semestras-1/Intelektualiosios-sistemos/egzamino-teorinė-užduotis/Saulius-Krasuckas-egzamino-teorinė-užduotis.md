@@ -86,7 +86,6 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
 * Intelektualiosios sistemos apmokymas;
 * Intelektualiosios sistemos tikslumo įvertinimas.
 
-(Galiausiai Produkcija!:)
 
 ---
 
@@ -147,9 +146,9 @@ Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis
    Mokymo procese naudojamas formules galima praleisti, jei mokymas atliekamas tik vieną kartą.).  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MzEwOTg2NywxMTE2MTQ2MTI5LC01NT
-cwNjc2ODksLTE4Nzg4NjQ5OTMsNzExOTM4OTk1LDExODA5NDY2
-NzUsMTk1MjAzMTk5OSwtMTEyMzg4MzkzMSw5OTI2NTYxMTEsLT
-kyNTM4NTY2NCwtNTU4NTQ3Njc1LDk4MTM4Mjc3MiwtMjMzMTUy
-NjgzLC00NTg0MDIyMiw5NDY0NDgwMDQsLTcwOTQwMzQ4OV19
+eyJoaXN0b3J5IjpbNjY4Njk0NzYsMTExNjE0NjEyOSwtNTU3MD
+Y3Njg5LC0xODc4ODY0OTkzLDcxMTkzODk5NSwxMTgwOTQ2Njc1
+LDE5NTIwMzE5OTksLTExMjM4ODM5MzEsOTkyNjU2MTExLC05Mj
+UzODU2NjQsLTU1ODU0NzY3NSw5ODEzODI3NzIsLTIzMzE1MjY4
+MywtNDU4NDAyMjIsOTQ2NDQ4MDA0LC03MDk0MDM0ODldfQ==
 -->
