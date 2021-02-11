@@ -119,11 +119,11 @@ Ir priedas jiems:
 
 [Zhao, Y., Hryniewicki, M. K., Cheng, F., Fu, B., & Zhu, X. (2018, September). Employee turnover prediction with machine learning: A reliable approach. In _Proceedings of SAI intelligent systems conference_ (pp. 737-758). Springer, Cham.](https://doi.org/10.1007/978-3-030-01057-7_56)
 
-Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda aukščiausius rezultatus:  
+Remdamasis šia publikacija pasirinkau **ADT**, **MLP** ir **RF**. Jie duoda tiksliausius rezultatus:  
 ![image](https://user-images.githubusercontent.com/74717106/107560615-3c1b3c00-6be6-11eb-95c7-976db6640d71.png)  
 (Tikslumo kriterijumi pasirinkau AUC (klasių išsibalansavimui įvertinti)
 
-O pagal šios publikacijos aukščiausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:  
+O pagal šios publikacijos tiksliausius rezultatus pasirinkau jau minėtą RF bei **GBDT**:  
 [Cai, X., Shang, J., Jin, Z., Liu, F., Qiang, B., Xie, W., & Zhao, L. (2020). DBGE: employee turnover prediction based on dynamic bipartite graph embedding.  _IEEE Access_,  _8_, 10390-10402.](https://doi.org/10.1109/ACCESS.2020.2965544)
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
@@ -194,11 +194,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTQ2NDA2OTcsLTM1NzU4NjM1NywxMz
-k4NTU3OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNzU0NTc3Mjcx
-LDE4NjYwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMj
-c0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTcz
-LDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNz
-g1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5
-Mzk5XX0=
+eyJoaXN0b3J5IjpbLTU5NjQwNjQ1NywtMzU3NTg2MzU3LDEzOT
+g1NTc5OTksNTU5NzQwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEs
+MTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNz
+Q1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMs
+NDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3OD
+U1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkz
+OTldfQ==
 -->
