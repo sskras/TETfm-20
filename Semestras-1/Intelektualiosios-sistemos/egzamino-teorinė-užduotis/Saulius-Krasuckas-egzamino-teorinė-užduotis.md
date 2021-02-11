@@ -164,14 +164,8 @@ Pagal **AUC** kriterijų **RF** „laimi“ visose trijose apžvelgtose publikac
 
 Įvestis yra slankaus kablelio tipo vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, metrikos aprašyti darbo srityje patirčiai nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
-Išvestis yra vienas bitas – dvejatainė loginė reikšmė AUC-ROC rodiklis (angl. _Area under the receiver operating characteristic curve_).
+Išvestis yra vienas bitas – dvejetainė loginė (ang. _Boolean_) reikšmė.
 
-Bet prototipavimo fazei siūlyčiau išėjime skaičiuoti visus 5 skaliarus:
-
-| Accuracy | Precision | Recall | F_1 | AUC-ROC |
-|----------|-----------|--------|-----|---------|
-
-O po testų palikti produkcijai tik vieną.
 
 ---
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
@@ -197,11 +191,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjA0NDgyOCwtMzU3NTg2MzU3LDEzOT
-g1NTc5OTksNTU5NzQwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEs
-MTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNz
-Q1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMs
-NDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3OD
-U1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkz
-OTldfQ==
+eyJoaXN0b3J5IjpbLTIwNDExMjE5NDMsLTM1NzU4NjM1NywxMz
+k4NTU3OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNzU0NTc3Mjcx
+LDE4NjYwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMj
+c0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTcz
+LDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNz
+g1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5
+Mzk5XX0=
 -->
