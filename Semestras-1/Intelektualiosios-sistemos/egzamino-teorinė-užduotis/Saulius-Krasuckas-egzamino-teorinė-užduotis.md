@@ -171,12 +171,15 @@ Išvestis yra vienas bitas – dvejetainė loginė (ang. _Boolean_) reikšmė.
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
 
 Čia tektų konstruoti _Decision Trees_:  
+
 ![image](https://user-images.githubusercontent.com/74717106/107565706-9fa86800-6bec-11eb-8d42-1b366d940e73.png)
 
 Tam pradėtume nuo vieno mazgo (_Node_) ir jį dalintume:  
+
 ![image](https://user-images.githubusercontent.com/74717106/107566021-0299ff00-6bed-11eb-9285-2fcb56b3d631.png)
 
-Iki galutinio rezultato:  
+Kartodami iki galutinio rezultato:  
+
 ![image](https://user-images.githubusercontent.com/74717106/107565776-b77fec00-6bec-11eb-9be7-25ce35e41f92.png)
 
 ---
@@ -191,7 +194,7 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDExMjE5NDMsLTM1NzU4NjM1NywxMz
+eyJoaXN0b3J5IjpbLTEwOTQ2NDA2OTcsLTM1NzU4NjM1NywxMz
 k4NTU3OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNzU0NTc3Mjcx
 LDE4NjYwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMj
 c0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTcz
