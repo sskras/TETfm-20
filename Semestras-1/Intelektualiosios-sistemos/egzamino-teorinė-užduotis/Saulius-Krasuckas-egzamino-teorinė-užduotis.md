@@ -69,7 +69,7 @@ Laikau, kad priklausomai nuo to, ar asmuo šiuo metu apskritai yra įdarbintas, 
 
 Ir dėl laiko stokos bei dabartinės epidemi-socio-ekonominės situacijos (kai bedarbis turi labai stiprių stimulų įsidarbinti), sprendžiu tik antrąją, ją truputį pageneralizuodamas:
 
-Kiek tikėtina, jog konkretus **darbuotojas** apskritai (nebe tik kursų dalyvis) norės pakeisti darbo vietą?
+Kiek tikėtina, jog konkretus **darbuotojas** (nebe tik kursų dalyvis) norės pakeisti darbo vietą?
 
 (Galutiniais angl. raktiniais terminais pasirinkau _Voluntary employee turnover_ ir _Career path prediction_)
 
@@ -194,11 +194,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY4MDcyMzQ1LC0yMTQyMDE0ODIsLTEzOT
-AzMTI3MTIsLTM1NzU4NjM1NywxMzk4NTU3OTk5LDU1OTc0MDY2
-LDg0MDMwMjc1NSwxNzU0NTc3MjcxLDE4NjYwNDkyODgsMTA5ND
-IyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUwODQ4LDE0NzcyMjYx
-MTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5NDc5MTE4MywtMTAxMD
-U4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUwNzg3LC0xNjI5MDcy
-NjE2XX0=
+eyJoaXN0b3J5IjpbLTE5ODY5NDI4MjUsMjY4MDcyMzQ1LC0yMT
+QyMDE0ODIsLTEzOTAzMTI3MTIsLTM1NzU4NjM1NywxMzk4NTU3
+OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNzU0NTc3MjcxLDE4Nj
+YwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUw
+ODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5ND
+c5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUw
+Nzg3XX0=
 -->
