@@ -128,10 +128,10 @@ O pagal šios publikacijos tiksliausius rezultatus pasirinkau jau minėtą RF be
 
 ![image](https://user-images.githubusercontent.com/74717106/107560048-8b14a180-6be5-11eb-8500-d39745f61ab9.png)
 
-Tačiau šis straipsnis pasiūlė susieti kandidato darbo patirtį (ankstesnių darbdavių keitimo laikus) su darbdavių įmonėmis naudojant specifinį grafą:  
+Tačiau dar šis straipsnis pasiūlė susieti kandidato darbo patirtį (ankstesnių darbdavių keitimo laikus) su darbdavių įmonėmis naudojant specifinį grafą:  
 ![image](https://user-images.githubusercontent.com/74717106/107562084-0a0ad980-6be8-11eb-98a3-4d052a3eb6bc.png)
 
-Turint tokią informaciją (jei tiksliai užpildyti šie duomenys) padidėja visų _Tree-based_ metodų tikslumas:  
+Turint tokią informaciją (jei šie duomenys užpildyti tiksliai) padidėja visų _Tree-based_ metodų tikslumas:  
 ![image](https://user-images.githubusercontent.com/74717106/107561899-c57f3e00-6be7-11eb-901e-f45b19ceaedb.png)
 
 ----
@@ -194,11 +194,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NjQwNjQ1NywtMzU3NTg2MzU3LDEzOT
-g1NTc5OTksNTU5NzQwNjYsODQwMzAyNzU1LDE3NTQ1NzcyNzEs
-MTg2NjA0OTI4OCwxMDk0MjI1OTQzLDE1ODg5NzIwOTYsLTEyNz
-Q1NTA4NDgsMTQ3NzIyNjExMiwtNDk2Nzk0MjIwLDI4MzQ1NzMs
-NDk0NzkxMTgzLC0xMDEwNTg1MTgsLTExODI3NzMzMDgsLTE3OD
-U1NTA3ODcsLTE2MjkwNzI2MTYsNTgwMTA3ODM3LC00NzczODkz
-OTldfQ==
+eyJoaXN0b3J5IjpbLTEzOTAzMTI3MTIsLTM1NzU4NjM1NywxMz
+k4NTU3OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNzU0NTc3Mjcx
+LDE4NjYwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMj
+c0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTcz
+LDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNz
+g1NTUwNzg3LC0xNjI5MDcyNjE2LDU4MDEwNzgzNywtNDc3Mzg5
+Mzk5XX0=
 -->
