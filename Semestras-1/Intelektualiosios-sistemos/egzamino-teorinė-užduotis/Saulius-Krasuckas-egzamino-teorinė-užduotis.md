@@ -164,8 +164,10 @@ Pagal **AUC** kriterijų **RF** pirmauja visose trijose apžvelgtose publikacijo
 
 Įvestis yra slankaus kablelio tipo vektorius, sudarytas iš anketoje pateikiamų duomenų. Tiesa, metrikos aprašyti darbo srityje patirčiai nesugalvojau – reikėtų atskiro tyrimo, galbūt eksperimentinio.
 
-Išvestis yra vienas bitas – dvejetainė loginė (ang. _Boolean_) reikšmė.
+Išvestis yra vienas bitas – dvejetainė loginė (ang. _Boolean_) reikšmė:  
 
+* asmuo linkęs keisti darbą,
+* asmuo nelinkęs keisti darbo.
 
 ---
   2. **Veiksmų**, kuriuos reikia atlikti **eiliškumą**  (1)  
@@ -194,11 +196,11 @@ Tam naudotume statistinį Gini kriterijų:
 ---
 (Pabaiga)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODY5NDI4MjUsMjY4MDcyMzQ1LC0yMT
-QyMDE0ODIsLTEzOTAzMTI3MTIsLTM1NzU4NjM1NywxMzk4NTU3
-OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNzU0NTc3MjcxLDE4Nj
-YwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcyMDk2LC0xMjc0NTUw
-ODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMCwyODM0NTczLDQ5ND
-c5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzczMzA4LC0xNzg1NTUw
-Nzg3XX0=
+eyJoaXN0b3J5IjpbLTIwNzk1NzM0MTYsLTE5ODY5NDI4MjUsMj
+Y4MDcyMzQ1LC0yMTQyMDE0ODIsLTEzOTAzMTI3MTIsLTM1NzU4
+NjM1NywxMzk4NTU3OTk5LDU1OTc0MDY2LDg0MDMwMjc1NSwxNz
+U0NTc3MjcxLDE4NjYwNDkyODgsMTA5NDIyNTk0MywxNTg4OTcy
+MDk2LC0xMjc0NTUwODQ4LDE0NzcyMjYxMTIsLTQ5Njc5NDIyMC
+wyODM0NTczLDQ5NDc5MTE4MywtMTAxMDU4NTE4LC0xMTgyNzcz
+MzA4XX0=
 -->
