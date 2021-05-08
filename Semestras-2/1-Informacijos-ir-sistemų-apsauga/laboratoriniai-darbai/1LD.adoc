@@ -207,14 +207,14 @@ Taip pat praminta "Disk Destroyer".
 | peržiūri tekstinį failą puslapiais
 |`more <failas>` +
   Vidinės komandos: +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`Space`   išvesti `k` eilučių teksto (per ekrano dydį) +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`Enter`   išvesti `1` eilutę teksto +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`d`       prasukti `k` eilučių (įprastai `11`) +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`q`, `Q`  išeiti +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`b`       prasukti ekraną atgal +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`h`, `?`  Help, galimų komandų sąrašas +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`=`       eilutės numeris +
-{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`'`       grįžti į paieškos pradžią
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `Space`   išvesti `k` eilučių teksto (per ekrano dydį) +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `Enter`   išvesti `1` eilutę teksto +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `d`       prasukti `k` eilučių (įprastai `11`) +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `q`, `Q`  išeiti +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `b`       prasukti ekraną atgal +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `h`, `?`  Help, galimų komandų sąrašas +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `=`       eilutės numeris +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `'`       grįžti į paieškos pradžią
 
 | `less`
 | peržiūrėti tekstinį failą
