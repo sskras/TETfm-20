@@ -105,4 +105,32 @@ Taip pat praminta "Disk Destroyer".
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `x` leidimas vykdyti; +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `-` nėra leidimo. +
 
+|*`mkdir`*
+| sukuria katalogus
+|`mkdir [raktai] <katalogas>`
+
+|*`mount`*
+| prijungia failų sistemas
+|
+
+|*`mv`*
+| perkelia failus
+|`mv [raktai] <ŠALTINIS> <KATALOGAS>`
+
+|*`rm`*
+| trina failus
+|`rm [-r] [-f] [-i] <katalogas ... [byla1 ...]>`
+
+|*`rmdir`*
+| trina katalogus
+|
+
+|*`touch`*
+| sukuria failus, keičia failų datą
+|`touch [-a] [-m] [-c] [LAIKAS] <failas>` +
+ +
+`-a` pakeisti tik paskutinio priėjimo (Access) laiką; +
+`-m` pakeisti tik paskutinės modifikacijos laiką; +
+`-c` nekurti failų, jei jie neegzistuoja.
+
 |===
