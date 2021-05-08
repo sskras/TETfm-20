@@ -135,4 +135,93 @@ Taip pat praminta "Disk Destroyer".
 | išveda ar apjungia failus
 |`cat <failas>`
 
+|*`cut`*
+| išveda failus ar jų dalis
+|
+
+| `cmp`
+| palygina failus tarpusavyje
+|
+
+| `diff`
+| parodo skirtumus tarp failų
+|
+
+| `fold`
+| perkelia ilgas eilutes
+|
+
+| `grep`
+| ieško duomenų tekste
+|
+
+| `head`
+| išveda failo pradžią
+|
+
+| `join`
+| apjungia eilutes iš skirtingų failų pagal stulpelį
+|
+
+| `paste`
+| apjungia failų eilutes
+|
+
+| `pr`
+| suskaido bylą į puslapius
+|
+
+| `sed`
+| srauto redaktorius
+|
+
+| `sort`
+| rūšiuoja duomenis iš failo
+|
+
+| `split`
+| suskaido failus į dalis
+|
+
+| `strings`
+| išgauna tekstą iš failų
+| (bet kokių, pvz. dvejetainių)
+
+| `sum`
+| apskaičiuoja kontrolinę sumą
+|
+
+| `tail`
+| išveda failo pabaigą
+|
+
+| `tr`
+| keičia simbolius
+|
+
+| `uniq`
+| šalina vienodas eilutes iš surūšiuotų failų
+|
+
+| `more`
+| peržiūri tekstinį failą puslapiais
+|`more <failas>` +
+  Vidinės komandos: +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`Space`   išvesti `k` eilučių teksto (per ekrano dydį) +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`Enter`   išvesti `1` eilutę teksto +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`d`       prasukti `k` eilučių (įprastai `11`) +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`q`, `Q`  išeiti +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`b`       prasukti ekraną atgal +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`h`, `?`  Help, galimų komandų sąrašas +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`=`       eilutės numeris +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`'`       grįžti į paieškos pradžią
+
+| `less`
+| peržiūrėti tekstinį failą
+|
+
+| `wc`
+| skaičiuoja baitus, žodžius, eilutes
+|
+
 |===
