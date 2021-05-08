@@ -229,4 +229,130 @@ Taip pat praminta "Disk Destroyer".
 | skaičiuoja baitus, žodžius, eilutes
 |
 
+3+| +++<center>+++Sisteminės komandos+++</center>+++
+
+| `basename`
+| išgauna failo vardą iš pilno kelio
+|
+
+|*`date`*
+| parodo arba nustato datą bei laiką
+|
+
+| `dirname`
+| išgauna katalogo vardą iš pilno kelio
+|
+
+|*`echo`*
+| išveda tekstą, pateiktą parametruose
+|
+
+| `env`
+| nustato aplinkos kintamuosius
+|
+
+| `expr`
+| apskaičiuoja įvairias išraiškas
+|
+
+| `false`
+| grąžina rezultatą `False`
+| (Exit code = 1)
+
+|*`groups`*
+| išveda duomenis apie vartotojų priklausomybę grupėms
+|
+
+|*`hostname`*
+| parodo arba nustato sistemos vardą
+|
+
+| `id`
+| parodo tikslius vartotojo identifikatorius
+|
+
+| `kill`
+| perduoda signalą procesui
+|
+
+| `logname`
+| parodo prisijungimo vardą
+|
+
+| `nice`
+| nustato proceso prioritetą
+|
+
+| `pathchk`
+| patikrina kelius
+|
+
+| `printenv`
+| išveda aplinkos kintamuosius
+|
+
+|*`cd`*
+| pereina į katalogą
+|`cd <katalogas>`
+
+|*`pwd`*
+| išveda dabartinio katalogo pavadinimą
+|
+
+| `sleep`
+| nieko nedaro nurodytą laiko tarpą
+|
+
+| `stty`
+| nustato terminalo parametrus
+|
+
+|*`su`*
+| leidžia prisijungti kito vartotojo vardu
+|
+
+| `tee`
+| sukuria keletą išvedimo kanalų
+|
+
+| `test`
+| patikrina bylą ir simbolių eilutę
+|
+
+| `true`
+| grąžina rezultatą `True`
+| (Exit code = 0)
+
+| `tty`
+| išveda prisijungtojo terminalo vardą
+|
+
+|*`uname`*
+| išveda pagrindinius duomenis apie OS
+|
+
+| `users`
+| praneša apie tai, kas dabar dirba sistemoje
+|
+
+|*`who`*
+| praneša apie tai, kokie vartotojai yra užregistruoti
+|
+
+|*`whoami`*
+| pasako, kas jūs esate
+|
+
+|*`clear`*
+| išvalo ekraną, jei tik įmanoma
+|
+
+|*`history`*
+| parodo vykdytų komandų sąrašą
+|
+
+|*`groups`*
+| parodo grupių pavadinimus, kurioms priklauso vartotojas
+|
+
 |===
