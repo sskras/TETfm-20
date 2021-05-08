@@ -57,16 +57,16 @@ Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą 
 
 | `dd`
 | vykdo keitimus kopijuojant
-| Kilo iš termino "https://en.wikipedia.org/wiki/Dd_(Unix)#History[Data Definition]".
+| Pagal terminą "https://en.wikipedia.org/wiki/Dd_(Unix)#History[data definition]".
 Taip pat praminta "Disk Destroyer".
 
 |*`df`*
 | parodo, kiek yra laisvos vietos
-|
+|**d**isk **f**ree
 
-|*`df`*
+|*`du`*
 | parodo, kiek vietos sunaudojama
-|
+|**d**isk **u**sage (**d**irectory **u**sage)
 
 | `find`
 | ieško failų
