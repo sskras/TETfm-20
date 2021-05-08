@@ -1,9 +1,8 @@
 Informacijos ir sistemų apsauga
 
-# Laboratorinis darbas #1: Pažintis su Ubuntu (Debian šeimos) Linux OS
-https://moodle.garsva.lt/mod/assign/view.php?id=294
+# Laboratorinis darbas #1:<br />[Pažintis su Ubuntu (Debian šeimos) Linux OS](https://moodle.garsva.lt/mod/assign/view.php?id=294)
 
-## Užduotis
+### Užduotis
 Perskaitykite aprašymą ir išsibandykite Linux komandas.  
 Ataskaitoje pateikite duotos Linux komandos aprašymą. Jei komandos neturite, praneškite.  
 Jei laboratorinio darbo metu susidūrėte su problemomis, aprašykite jas ir jų sprendimą.  
