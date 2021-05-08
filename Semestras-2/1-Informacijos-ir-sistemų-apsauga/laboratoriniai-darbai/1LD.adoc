@@ -47,6 +47,10 @@ Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą 
 | keičia failo atributus
 |
 
+|*`cat`*
+| išveda ar apjungia failus
+|`cat <failas>`
+
 |*`cp`*
 | kopijuoja failus
 |
@@ -151,7 +155,7 @@ Taip pat praminta "Disk Destroyer".
 | perkelia ilgas eilutes
 |
 
-| `grep`
+|*`grep`*
 | ieško duomenų tekste
 |
 
@@ -206,6 +210,7 @@ Taip pat praminta "Disk Destroyer".
 | `more`
 | peržiūri tekstinį failą puslapiais
 |`more <failas>` +
+  +
   Vidinės komandos: +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `Space`   išvesti `k` eilučių teksto (per ekrano dydį) +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `Enter`   išvesti `1` eilutę teksto +
