@@ -14,3 +14,15 @@ Susipažinti su Linux OS bazinėmis komandomis, išsiaiškinti jų struktūrą b
 Susipažinti su Linux OS katalogų ir failų struktūra, vartotojų teisėmis į failus ir katalogus.
 
 ## Linux OS pagrindinės komandos, direktorijos ir programos
+
+Linux OS komandas paprastai sudaro trys dalys:
+* pavadinimas;
+* parametrai – raktai, nurodantys komandai kaip pakeisti jos veikimą tam tikrai užduočiai;
+* įvesties/išvesties failai, kuriuose pateikiami duomenys ar komandai nurodoma vieta, kur išvesti duomenis.
+
+Komandas sudaro viena, dvi arba visos trys dalys.
+Pirmoji dalis turi būti visada.
+Komandą nutraukti dažniausiai įmanoma kombinacija `Ctrl+C`.
+O `Tab` užbaigia pradėtą rašyti komandą arba failą/katalogą.
+
+### Bazinės Linux OS komandos
