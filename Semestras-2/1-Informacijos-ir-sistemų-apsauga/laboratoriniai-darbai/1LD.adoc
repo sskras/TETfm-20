@@ -47,10 +47,6 @@ Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą 
 | keičia failo atributus
 |
 
-|*`cat`*
-| apjungia failus
-|
-
 |*`cp`*
 | kopijuoja failus
 |
@@ -132,5 +128,11 @@ Taip pat praminta "Disk Destroyer".
 `-a` pakeisti tik paskutinio priėjimo (Access) laiką; +
 `-m` pakeisti tik paskutinės modifikacijos laiką; +
 `-c` nekurti failų, jei jie neegzistuoja.
+
+3+| +++<center>+++Duomenų apdorojimo komandos+++</center>+++
+
+|*`cat`*
+| išveda ar apjungia failus
+|`cat <failas>`
 
 |===
