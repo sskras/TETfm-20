@@ -27,3 +27,53 @@ Komandą nutraukti dažniausiai įmanoma kombinacija `Ctrl+C`.
 O `Tab` užbaigia pradėtą rašyti komandą arba failą/katalogą.
 
 ### Bazinės Linux OS komandos
+
+Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą `man <komanda>`, `<komanda> -h` arba daugiau teksto išvedančia komanda `<komanda> --help`.
+
+|===
+|Komanda |Trumpas aprašymas | Patikslinimai
+
+3+| +++<center>+++Darbas su bylomis+++</center>+++
+
+| `chgrp`
+| keičia failo priklausomybę grupei
+|
+
+|*`chown`*
+| keičia failo priklausomybę vartotojui
+|
+
+|*`chmod`*
+| keičia failo atributus
+|
+
+|*`cat`*
+| apjungia failus
+|
+
+|*`cp`*
+| kopijuoja failus
+|
+
+| `dd`
+| vykdo keitimus kopijuojant
+| Kilo iš termino "https://en.wikipedia.org/wiki/Dd_(Unix)#History[Data Definition]".
+Taip pat praminta "Disk Destroyer".
+
+|*`df`*
+| parodo, kiek yra laisvos vietos
+|
+
+|*`df`*
+| parodo, kiek vietos sunaudojama
+|
+
+| `find`
+| ieško failų
+|
+
+|*`ln`*
+| sukuria nuorodas
+| `-s` sukuria simbolines nuorodas
+
+|===
