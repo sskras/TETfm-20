@@ -31,7 +31,7 @@ O `Tab` užbaigia pradėtą rašyti komandą arba failą/katalogą.
 Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą `man <komanda>`, `<komanda> -h` arba daugiau teksto išvedančia komanda `<komanda> --help`.
 
 |===
-|Komanda |Trumpas aprašymas | Patikslinimai
+|Komanda |Trumpas{nbsp}aprašymas{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} |Patikslinimai
 
 3+| +++<center>+++Darbas su bylomis+++</center>+++
 
@@ -75,5 +75,34 @@ Taip pat praminta "Disk Destroyer".
 |*`ln`*
 | sukuria nuorodas
 | `-s` sukuria simbolines nuorodas
+
+|*`ls`*
+| parodo katalogo turinį
+|`-a` išveda visus failus. +
+ `-d` išveda tik diretorijų vardus. +
+ `-F` prideda požymio simbolį: +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} katalogai `/` +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Sockets `=` +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} simbolinės nuorodos `@` +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} vykdomieji failai `*` +
+ `-L` išveda simbolinės nuorodos adresatą. +
+ `-l` ilgasis sąrašas – eilutės pradžioje išveda režimą (_Mode_), nuorodų informaciją, savininką, dydį, paskutinės modifikacijos laiką.
+  Pirmame simbolyje nurodomas tipas: +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `d` direktorija +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `-` ištisinis (įprastas) failas +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `b` blokinis (Block-type) specialus failas +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `c` baitinis, grynasis (Character-type, Raw) specialus failas +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `l` simbolinė nuoroda +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `s` Socket +
+  Kiti 9 simboliai suskirstyti į 3 grupes po 3 simbolius.
+  Jie rodo leidimus naudoti failą: +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pirmieji 3 rodo leidimus įrašo savininkui (Owner); +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} kiti 3 rodo leidimus nurodytos grupės vartotojams; +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} paskutiniai 3 rodo leidimus likusiems vartotojams. +
+  Nurodymai galimi tokie: +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `r` leidimas skaityti; +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `w` leidimas rašyti; +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `x` leidimas vykdyti; +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} `-` nėra leidimo. +
 
 |===
