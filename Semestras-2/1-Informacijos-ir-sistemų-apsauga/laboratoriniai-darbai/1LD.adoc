@@ -376,7 +376,8 @@ Taip pat praminta "Disk Destroyer".
 
 ### Darbo eiga
 
-. OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:
+. *OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:*
+
   * Startuokite virtualų kompiuterį "laboratorija" su Debian šeimos Linux OS.
   * Prisijunkite supervartotojo `root` teisėmis.
   * Pažiūrėkite, kurioje direktorijoje prisijungę prie sistemos: +
@@ -419,7 +420,7 @@ Taip pat praminta "Disk Destroyer".
   * Patikrinkite, ar pavyko: +
     `pwd`
 
-. Vartotojų sukūrimas, trynimas, keli prisijungimai vienu metu:
+. *Vartotojų sukūrimas, trynimas, keli prisijungimai vienu metu:*
 
   * Sukurkite naujo vartotojo prisijungimą: +
     `adduser`
@@ -452,7 +453,7 @@ Taip pat praminta "Disk Destroyer".
     `exit`
 
 . Persijunkite ...
-. Išbadykite ...
+. Išbandykite ...
 . Persijunkite ...
 . Sukurkite ...
 . Susipažinkite ...
