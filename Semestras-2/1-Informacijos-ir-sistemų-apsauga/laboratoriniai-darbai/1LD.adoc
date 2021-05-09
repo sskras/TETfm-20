@@ -395,7 +395,8 @@ Taip pat praminta "Disk Destroyer".
     `mkdir dir`
   * Nukopijuokite failą į direktoriją, kurioje esate: +
     `cp /etc/profile .` +
-    Atkreipkite dėmesį, kad vietoj direktorijos, į kurią reikia kopijuoti, parašytas taškas.
+     +
+    _Atkreipkite dėmesį, kad vietoj direktorijos, į kurią reikia kopijuoti, parašytas taškas._
   * Peržiūrėkite nukopijuotąjį failą: +
     `more profile`
   * Nukelkite failą į kitą direktoriją: +
@@ -418,7 +419,38 @@ Taip pat praminta "Disk Destroyer".
   * Patikrinkite, ar pavyko: +
     `pwd`
 
-. Sukurkite ...
+. `TODO`
+
+  * Sukurkite naujo vartotojo prisijungimą: +
+    `adduser`
+  ** Nurodykite jo vardą – savo vardo šešiaženklę kombinaciją.
+  ** Slaptažodį sugalvokite patys ir suveskite, taip pat jį užsirašykite.
+  ** Suveskite kitą informaciją
+  * Peržiūrėkite slaptažodžių failus: +
+    `cat /etc/passwd` +
+    `cat /etc/shadow`
+  * Ištrinkite vartotojus, kuriuos sukūrė kiti studentai iki vartotojo `identd`: +
+    `userdel <vardas>`
+  * Pakeiskite `root` slaptažodį į savo sugalvotą, užsirašykite jį: +
+    `passwd root` +
+     +
+    _Jį pametus nepavyks prisijungti prie sistemos._
+  * Išsijunkite iš dabartinio prisijungimo: +
+    `exit`
+  * ... ir prisijunkite naujai sukurtu vartotoju.
+  * Pasižiūrėkite kokioms grupėms priklausote: +
+    `groups`
+  * ... ir kokioje direktorijoje atsiradote: +
+    `pwd`
+  * Prisijunkite prie kitos darbinės aplinkos kaip `root`: +
+    `Alt + F2`
+  * Grįžkite į pirmąją aplinką: +
+    `Alt + F1`
+  * ... paskui vėl atgal: +
+    `Alt + F2`
+  * ... ir atsijunkite: +
+    `exit`
+
 . Persijunkite ...
 . Išbadykite ...
 . Persijunkite ...
