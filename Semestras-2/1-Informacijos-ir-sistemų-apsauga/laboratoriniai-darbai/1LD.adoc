@@ -376,7 +376,7 @@ Taip pat praminta "Disk Destroyer".
 
 ### Darbo eiga
 
-. Startuokite ...
+. OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:
   * Startuokite virtualų kompiuterį "laboratorija" su Debian šeimos Linux OS.
   * Prisijunkite supervartotojo `root` teisėmis.
   * Pažiūrėkite, kurioje direktorijoje prisijungę prie sistemos: +
