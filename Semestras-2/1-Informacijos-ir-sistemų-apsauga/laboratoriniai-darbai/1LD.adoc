@@ -376,57 +376,102 @@ Taip pat praminta "Disk Destroyer".
 
 ### Darbo eiga
 
-. *OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:*
+*1. OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:*
 
-  * Startuokite virtualų kompiuterį "laboratorija" su Debian šeimos Linux OS.
-  * Prisijunkite supervartotojo `root` teisėmis.
-  * Pažiūrėkite, kurioje direktorijoje prisijungę prie sistemos: +
-    `pwd`
-  * Pereikite į šakninę direktoriją: +
-    `cd /`
-  * Peržiūrėkite direktorijas: +
-    `ls`
-  * Sukurkite testinę direktoriją: +
-    `mkdir /testas`
-  * Pereikite į ją: +
-    `cd /testas`
-  * ... ir patikrinkite, ar tikrai esate joje: +
-    `pwd`
-  * Sukurite subdirektoriją: +
-    `mkdir dir`
-  * Nukopijuokite failą į direktoriją, kurioje esate: +
-    `cp /etc/profile .` +
-     +
-    _Atkreipkite dėmesį, kad vietoj direktorijos, į kurią reikia kopijuoti, parašytas taškas._
-  * Peržiūrėkite nukopijuotąjį failą: +
-    `more profile`
-  * Nukelkite failą į kitą direktoriją: +
-    `mv profile dir`
-  * Pereikite į tą direktoriją: +
-    `cd dir`
-  * ... ir pažiūrėkite, ar failas ten: +
-    `ls`
-  * Pervadinkite failą: +
-    `mv profile myprofile`
-  * Patikrinkite, ar pasikeitė failo pavadinimas: +
-    `ls`
-  * Išveskite failo turinį į ekraną: +
-    `cat myprofile`
-  * Ištrinkite failą: +
-    `rm myprofile` +
-    Trynimo atstatyti nebus galima.
-  * Pereikite į aukštesnę direktoriją: +
-    `cd ..`
-  * Patikrinkite, ar pavyko: +
-    `pwd`
+[cols=3]
+|===
 
-. *Vartotojų sukūrimas, trynimas, keli prisijungimai vienu metu:*
+| Startuokite virtualų kompiuterį "laboratorija" su Debian šeimos Linux OS.
+| `{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`
+|
 
-  * Sukurkite naujo vartotojo prisijungimą: +
-    `adduser`
-  ** Nurodykite jo vardą – savo vardo šešiaženklę kombinaciją.
-  ** Slaptažodį sugalvokite patys ir suveskite, taip pat jį užsirašykite.
-  ** Suveskite kitą informaciją
+| Prisijunkite supervartotojo `root` teisėmis.
+|
+|
+
+| Pažiūrėkite, kurioje direktorijoje prisijungę prie sistemos:
+|`pwd`
+|
+
+| Pereikite į šakninę direktoriją:
+|`cd /`
+|
+
+| Peržiūrėkite direktorijas:
+|`ls`
+|
+
+| Sukurkite testinę direktoriją:
+|`mkdir /testas`
+|
+
+| Pereikite į ją:
+|`cd /testas`
+|
+
+| ... ir patikrinkite, ar tikrai esate joje:
+|`pwd`
+|
+
+| Sukurite subdirektoriją:
+|`mkdir dir`
+|
+
+| Nukopijuokite failą į direktoriją, kurioje esate:
+|`cp /etc/profile .`
+| Atkreipkite dėmesį, kad vietoj direktorijos, į kurią reikia kopijuoti, parašytas taškas
+
+| Peržiūrėkite nukopijuotąjį failą:
+|`more profile`
+|
+
+| Nukelkite failą į kitą direktoriją:
+|`mv profile dir`
+|
+
+| Pereikite į tą direktoriją:
+|`cd dir`
+|
+
+| ... ir pažiūrėkite, ar failas ten:
+|`ls`
+|
+
+| Pervadinkite failą:
+|`mv profile myprofile`
+|
+
+| Patikrinkite, ar pasikeitė failo pavadinimas:
+|`ls`
+|
+
+| Išveskite failo turinį į ekraną:
+|`cat myprofile`
+|
+
+| Ištrinkite failą:
+|`rm myprofile`
+| Trynimo atstatyti nebus galima
+
+| Pereikite į aukštesnę direktoriją: +
+|`cd ..`
+|
+
+| Patikrinkite, ar pavyko: +
+|`pwd`
+|
+|===
+
+*2. Vartotojų kūrimas, trynimas, lygiagretūs prisijungimai:*
+
+[cols=3]
+|===
+
+| Sukurkite naujo vartotojo prisijungimą:
+|`adduser`
+|
+
+|===
   * Peržiūrėkite slaptažodžių failus: +
     `cat /etc/passwd` +
     `cat /etc/shadow`
