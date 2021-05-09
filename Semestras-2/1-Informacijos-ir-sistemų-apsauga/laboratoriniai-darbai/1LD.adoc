@@ -419,7 +419,7 @@ Taip pat praminta "Disk Destroyer".
   * Patikrinkite, ar pavyko: +
     `pwd`
 
-. `TODO`
+. Vartotojų sukūrimas, trynimas, keli prisijungimai vienu metu:
 
   * Sukurkite naujo vartotojo prisijungimą: +
     `adduser`
