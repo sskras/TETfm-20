@@ -37,6 +37,7 @@ Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą 
 |===
 |Komanda |Trumpas{nbsp}aprašymas{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} |Patikslinimai
 
+3+|||
 3+| +++<center>+++Darbas su bylomis+++</center>+++
 
 | `chgrp`
@@ -375,8 +376,6 @@ Taip pat praminta "Disk Destroyer".
 
 
 ### Darbo eiga
-
-*1. OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:*
 
 [cols=3]
 |===
