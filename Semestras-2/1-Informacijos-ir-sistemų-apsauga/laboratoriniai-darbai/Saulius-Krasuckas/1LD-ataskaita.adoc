@@ -7,14 +7,14 @@
 
 Komanda `diff` parodo skirtumus tarp _dviejų_ tekstinių failų.
 
-Ji juos lygina po eilutę ir išveda pakitimų sąrašą (irgi tekstiniu pavidalu). +
+Ji juos lygina po eilutę ir išveda pakitimų sąrašą (irgi tekstinį). +
 Turint vieną iš failų ir šį sąrašą, paprasta atkurti kitą failą. +
 Atkūrimui skirta komanda `patch` (čia neaprašoma).
 
-Siekiama minimalaus skirtumų sąrašo. +
-Tam `diff` suranda mažiausią galimą failų skirtumų rinkinį (išskyrus retus atvejus). +
-O jei failai identiški, neišvedamas joks tekstas. +
-Yra keli šio sąrašo formatai.
+Siekiama minimizuoti skirtumų sąrašą. +
+Tam `diff` suranda mažiausią galimą skirtumų rinkinį (išskyrus retus atvejus). +
+Jei failai identiški, neišvedamas joks tekstas. +
+Išvedimo formatai yra keli.
 
 ##### Formatai
 
