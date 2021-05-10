@@ -37,7 +37,7 @@ Kiekvienos komandos anglišką aprašymą galima pažiūrėt naudojant komandą 
 |===
 |Komanda |Trumpas{nbsp}aprašymas{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} |Patikslinimai
 
-3+|||
+3+|
 3+| +++<center>+++Darbas su bylomis+++</center>+++
 
 | `chgrp`
@@ -626,9 +626,34 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |`mount`
 |
 
+3+| +++<center>+++ *5. Archyvuoti failai ir nuorodos:* +++</center>+++
+
+| Persijunkite `root` vartotoju, pereikite į direktoriją testas:
+|`cd /testas`
+|
+
+| Suarchyvuokite failą `test1`:
+|`gzip test1`
+|
+
+| Pažiūrėkite, ar jį sukūrė ir koks suarchyvuoto failo dydis:
+|`ls -al`
+|
+
+| Išachyvuokite failą:
+|`gunzip test1.gz`
+|
+
+| Sukurkite simbolinę nuorodą į failą `testas2` pavadinimu `bandau`:
+|`ln -s test2 bandau`
+|
+
+| Pasižiūrėkite kaip vaizduojamas nuorodos failas:
+|`ls -al`
+|
+
 |===
 
-. Persijunkite ...
 . Sukurkite ...
 . Susipažinkite ...
 
