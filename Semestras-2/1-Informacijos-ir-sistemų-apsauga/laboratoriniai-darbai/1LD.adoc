@@ -384,7 +384,7 @@ Taip pat praminta "Disk Destroyer".
 3+| +++<center>+++ *1. OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:* +++</center>+++
 
 | Startuokite virtualų kompiuterį "laboratorija" su Debian šeimos Linux OS.
-| `{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`
+|`{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`
 |
 
 | Prisijunkite supervartotojo `root` teisėmis.
@@ -626,6 +626,7 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |`mount`
 |
 
+3+| {nbsp}
 3+| +++<center>+++ *5. Archyvuoti failai ir nuorodos:* +++</center>+++
 
 | Persijunkite `root` vartotoju, pereikite į direktoriją testas:
@@ -652,6 +653,7 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |`ls -al`
 |
 
+3+| {nbsp}
 3+| +++<center>+++ *6. Failų redagavimas, filtravimas, naršymas:* +++</center>+++
 
 | Sukurkite kelių sakinių tekstinį failą `txt.txt` naudodami tekstinį redaktorių `vi`:
@@ -706,7 +708,7 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |`Ctrl`+`o`
 |
 
-3+| +++<center>+++ *7. Susipažinkite ... :* +++</center>+++
+3+| +++<center>+++ *7. Mašinos išjungimas :* +++</center>+++
 
 | Susipažinkite su išjungimo komandos galimybėmis:
 |`shutdown --help`
