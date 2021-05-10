@@ -521,7 +521,7 @@ a| Sukurkite naujo vartotojo prisijungimą:
 |
 
 3+| {nbsp}
-3+| +++<center>+++ *3. Failų kūrimas ir teisės :* +++</center>+++
+3+| +++<center>+++ *3. Failų kūrimas ir teisės:* +++</center>+++
 
 | Persijunkite kaip vartotojas `root`
 |
@@ -708,7 +708,7 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |`Ctrl` + `o`
 |
 
-3+| +++<center>+++ *7. Mašinos išjungimas :* +++</center>+++
+3+| +++<center>+++ *7. Mašinos išjungimas:* +++</center>+++
 
 | Susipažinkite su išjungimo komandos galimybėmis:
 |`shutdown --help`
