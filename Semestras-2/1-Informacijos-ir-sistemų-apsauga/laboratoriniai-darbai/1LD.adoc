@@ -453,11 +453,11 @@ Taip pat praminta "Disk Destroyer".
 |`rm myprofile`
 | Trynimo atstatyti nebus galima
 
-| Pereikite į aukštesnę direktoriją: +
+| Pereikite į aukštesnę direktoriją:
 |`cd ..`
 |
 
-| Patikrinkite, ar pavyko: +
+| Patikrinkite, ar pavyko:
 |`pwd`
 |
 |===
@@ -467,35 +467,60 @@ Taip pat praminta "Disk Destroyer".
 [cols=3]
 |===
 
-| Sukurkite naujo vartotojo prisijungimą:
+a| Sukurkite naujo vartotojo prisijungimą: 
+
+  ** Nurodykite jo vardą – savo vardo šešiaženklę kombinaciją.
+  ** Slaptažodį sugalvokite patys ir suveskite, taip pat jį užsirašykite.
+  ** Suveskite kitą informaciją
+
 |`adduser`
 |
 
+| Peržiūrėkite slaptažodžių failus:
+|`cat /etc/passwd` +
+ `cat /etc/shadow`
+|
+
+| Ištrinkite vartotojus, kuriuos sukūrė kiti studentai iki vartotojo `identd`:
+|`userdel <vardas>`
+|
+
+| Pakeiskite `root` slaptažodį į savo sugalvotą, užsirašykite jį:
+|`passwd root`
+| Jį pametus nepavyks prisijungti prie sistemos
+
+| Išsijunkite iš dabartinio prisijungimo:
+|`exit`
+|
+
+| ... ir prisijunkite naujai sukurtu vartotoju.
+|
+|
+
+| Pasižiūrėkite kokioms grupėms priklausote:
+|`groups`
+|
+
+| ... ir kokioje direktorijoje atsiradote:
+|`pwd`
+|
+
+| Prisijunkite prie kitos darbinės aplinkos kaip `root`:
+|`Alt + F2`
+|
+
+| Grįžkite į pirmąją aplinką:
+|`Alt + F1`
+|
+
+| ... paskui vėl atgal:
+|`Alt + F2`
+|
+
+| ... ir atsijunkite:
+|`exit`
+|
 |===
-  * Peržiūrėkite slaptažodžių failus: +
-    `cat /etc/passwd` +
-    `cat /etc/shadow`
-  * Ištrinkite vartotojus, kuriuos sukūrė kiti studentai iki vartotojo `identd`: +
-    `userdel <vardas>`
-  * Pakeiskite `root` slaptažodį į savo sugalvotą, užsirašykite jį: +
-    `passwd root` +
-     +
-    _Jį pametus nepavyks prisijungti prie sistemos._
-  * Išsijunkite iš dabartinio prisijungimo: +
-    `exit`
-  * ... ir prisijunkite naujai sukurtu vartotoju.
-  * Pasižiūrėkite kokioms grupėms priklausote: +
-    `groups`
-  * ... ir kokioje direktorijoje atsiradote: +
-    `pwd`
-  * Prisijunkite prie kitos darbinės aplinkos kaip `root`: +
-    `Alt + F2`
-  * Grįžkite į pirmąją aplinką: +
-    `Alt + F1`
-  * ... paskui vėl atgal: +
-    `Alt + F2`
-  * ... ir atsijunkite: +
-    `exit`
 
 . Persijunkite ...
 . Išbandykite ...
