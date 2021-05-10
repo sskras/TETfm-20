@@ -586,9 +586,48 @@ Ką reiškia toks komandos raktas?
 |
 | Koks klaidos pranešimas bandant peržiūrėti failą `test1`? Kodėl?
 
+3+| +++<center>+++ *4. Failų paieška, disko vieta, data:* +++</center>+++
+
+| Išbandykite failų paieškos komandas:
+|`locate` +
+ `find` +
+ `whereis`
+| Kuo skiriasi paieškos komandos?
+
+| Ieškokite failo `passwd`:
+|`locate passwd`
+|
+
+a| Raskite:
+
+** kiek liko laisvos disko vietos:
+
+|`df`
+|
+
+a| ** ir kiek vietos užima direktorijos, esančios `usr` direktorijoje:
+|`cd /usr` +
+ `du`
+| (pereinant į ją)
+
+a| ** kokius naudingus raktus jos turi, pvz.
+|`df -h`
+|
+
+| Išvalykite langą:
+|`clear`
+|
+
+| Patikrinkite laiko nustatymus:
+|`date`
+|
+
+| Pasižiūrėkite, kokie dalmenys yra prijungti:
+|`mount`
+|
+
 |===
 
-. Išbandykite ...
 . Persijunkite ...
 . Sukurkite ...
 . Susipažinkite ...
