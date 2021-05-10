@@ -652,10 +652,71 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |`ls -al`
 |
 
+3+| +++<center>+++ *6. Failų redagavimas, filtravimas, naršymas:* +++</center>+++
+
+| Sukurkite kelių sakinių tekstinį failą `txt.txt` naudodami tekstinį redaktorių `vi`:
+|`vi txt.txt.`
+| Jo aprašymą rasite čia: https://translate.google.com/translate?sl=en&tl=lt&u=https%3A%2F%2Fwww.verticalsysadmin.com%2Fcasitvi%2Flagmonster_vi.html[*lagmonster.org/docs/vi.html* pass:[<br />] (kopija + vertimas)]
+
+| Šį failą paredaguokite kitu tekstų redaktoriumi `nano`:
+|`nano txt.txt`
+|
+
+| Susipažinkite su `nano` komandomis
+|
+|
+
+| Pakeistą failą išsaugokite.
+|
+|
+
+| Tekstinio failo gale pridėkite savo vardą:
+|`echo "vardas" >> txt.txt`
+|
+
+| Patikrinkite, ar pavyko:
+|`cat txt.txt`
+|
+
+| Peržiūrėkite tik tą failo eilutę, kurioje yra Jūsų vardas:
+|`cat txt.txt \| grep vardas`
+|
+
+| Peržvelkite `grep` galimybes:
+|`man grep`
+|
+
+| Paleiskite pseudografinę naršyklę "Midnight Commander":
+|`mc`
+|
+
+| Laikinai sustabdykite ją:
+|`Ctrl`+`z`
+|
+
+| Pasižiūrėkite sustabdytus procesus:
+|`jobs`
+|
+
+| ... ir vėl grįžkite į ją:
+|`fg`
+|
+
+| Pasinaudokite panašia pačios failų naršyklės funkcija:
+|`Ctrl`+`o`
+|
+
+3+| +++<center>+++ *7. Susipažinkite ... :* +++</center>+++
+
+| Susipažinkite su išjungimo komandos galimybėmis:
+|`shutdown --help`
+|
+
+| Išjunkite virtualų kompiuterį:
+|`shutdown -h now`
+|
 |===
 
-. Sukurkite ...
-. Susipažinkite ...
 
 ### Ataskaitos turinys
 
