@@ -693,7 +693,7 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |
 
 | Laikinai sustabdykite ją:
-|`Ctrl`+`z`
+|`Ctrl` + `z`
 |
 
 | Pasižiūrėkite sustabdytus procesus:
