@@ -1,1 +1,20 @@
+### Darbo Tikslas
 
+Susipažinti su Linux OS bazinėmis komandomis, išsiaiškinti jų struktūrą bei išmokti jomis naudotis įvairiose situacijose. +
+Susipažinti su Linux OS katalogų ir failų struktūra, vartotojų teisėmis į failus ir katalogus.
+
+### Duotosios Linux komandos aprašymas
+
+##### Komanda `diff`
+
+
+### Viso darbo išvados
+
+. Prieš šį laboratorinį darbą iš esmės turėjo eiti dar vienas, pasiruošiamasis/įvadinis laboratorinis darbas. +
+Jį siūlau pavadinti „Lab. infrastruktūros ir įrankių pasiruošimas“. +
+Į jį siūlau įtraukti ir susipažinimą su neuniversitetiniais įrankiais 
+https://moodle.garsva.lt/[Moodle] bei http://www.tinklusaugumas.lt/[tinklusaugumas.lt] _wiki_.
+
+. Šiais Web-aplikacijų laikais yra nepatogu skaityti laboratorinio darbo aprašą Online. +
+Dėl to didžiąją jo dalį perkėliau į `TETfm-20` grupės GitHub repozitoriją:
+https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/1LD.adoc[1LD.adoc]
