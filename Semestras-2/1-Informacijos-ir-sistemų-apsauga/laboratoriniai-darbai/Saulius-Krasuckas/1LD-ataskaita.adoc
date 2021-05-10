@@ -1,7 +1,7 @@
 ### Darbo Tikslas
 
-Susipažinti su Linux OS bazinėmis komandomis, išsiaiškinti jų struktūrą bei išmokti jomis naudotis įvairiose situacijose. +
-Susipažinti su Linux OS katalogų ir failų struktūra, vartotojų teisėmis į failus ir katalogus.
+* [ ] Susipažinti su Linux OS bazinėmis komandomis, išsiaiškinti jų struktūrą bei išmokti jomis naudotis įvairiose situacijose. +
+* [ ] Susipažinti su Linux OS katalogų ir failų struktūra, vartotojų teisėmis į failus ir katalogus.
 
 ### Duotosios Linux komandos aprašymas
 
