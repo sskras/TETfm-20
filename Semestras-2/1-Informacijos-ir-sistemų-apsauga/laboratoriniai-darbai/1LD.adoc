@@ -381,6 +381,9 @@ Taip pat praminta "Disk Destroyer".
 [cols=3]
 |===
 
+|||
+3+| +++<center>+++ *1. OS startas, `root` prisijungimas, pagrindiniai veiksmai su failais ir direktorijomis:* +++</center>+++
+
 | Startuokite virtualų kompiuterį "laboratorija" su Debian šeimos Linux OS.
 | `{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`
 |
@@ -460,12 +463,9 @@ Taip pat praminta "Disk Destroyer".
 | Patikrinkite, ar pavyko:
 |`pwd`
 |
-|===
 
-*2. Vartotojų kūrimas, trynimas, lygiagretūs prisijungimai:*
-
-[cols=3]
-|===
+3+| {nbsp}
+3+| +++<center>+++ *2. Vartotojų kūrimas, trynimas, lygiagretūs prisijungimai:* +++</center>+++
 
 a| Sukurkite naujo vartotojo prisijungimą: 
 
