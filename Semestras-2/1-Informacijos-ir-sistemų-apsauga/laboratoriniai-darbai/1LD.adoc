@@ -26,7 +26,7 @@ Linux OS komandas paprastai sudaro trys dalys:
 
 Komandas sudaro viena, dvi arba visos trys dalys.
 Pirmoji dalis turi būti visada.
-Komandą nutraukti dažniausiai įmanoma kombinacija `Ctrl+C`.
+Komandą nutraukti dažniausiai įmanoma kombinacija `Ctrl` + `C`.
 O `Tab` užbaigia pradėtą rašyti komandą arba failą/katalogą.
 
 
@@ -505,15 +505,15 @@ a| Sukurkite naujo vartotojo prisijungimą:
 |
 
 | Prisijunkite prie kitos darbinės aplinkos kaip `root`:
-|`Alt + F2`
+|`Alt` + `F2`
 |
 
 | Grįžkite į pirmąją aplinką:
-|`Alt + F1`
+|`Alt` + `F1`
 |
 
 | ... paskui vėl atgal:
-|`Alt + F2`
+|`Alt` + `F2`
 |
 
 | ... ir atsijunkite:
@@ -705,7 +705,7 @@ a| ** kokius naudingus raktus jos turi, pvz.
 |
 
 | Pasinaudokite panašia pačios failų naršyklės funkcija:
-|`Ctrl`+`o`
+|`Ctrl` + `o`
 |
 
 3+| +++<center>+++ *7. Mašinos išjungimas :* +++</center>+++
