@@ -3,14 +3,28 @@
 * [ ] Susipažinti su Linux OS bazinėmis komandomis, išsiaiškinti jų struktūrą bei išmokti jomis naudotis įvairiose situacijose. +
 * [ ] Susipažinti su Linux OS katalogų ir failų struktūra, vartotojų teisėmis į failus ir katalogus.
 
-### Duotosios Linux komandos aprašymas
+### Duotosios Linux komandos aprašymas: `diff`
 
-##### Komanda `diff`
+Komanda `diff` parodo skirtumus tarp _dviejų_ tekstinių failų.
 
+Ji juos lygina po eilutę ir išveda pakitimų sąrašą (irgi tekstiniu pavidalu). +
+Turint vieną iš failų ir šį sąrašą, paprasta atkurti kitą failą. +
+Atkūrimui skirta komanda `patch` (čia neaprašoma).
+
+Siekiama minimalaus skirtumų sąrašo. +
+Tam `diff` suranda mažiausią galimą failų skirtumų rinkinį (išskyrus retus atvejus). +
+O jei failai identiški, neišvedamas joks tekstas. +
+Yra keli šio sąrašo formatai.
+
+##### Formatai
+
+##### Populiariausi raktai
+
+##### Pavyzdys
 
 ### Viso darbo išvados
 
-. Prieš šį laboratorinį darbą iš esmės turėjo eiti dar vienas, pasiruošiamasis/įvadinis laboratorinis darbas. +
+. Prieš šį laboratorinį darbą iš esmės turėjo eiti dar vienas, įvadinis laboratorinis darbas. +
 Jį siūlau pavadinti „Lab. infrastruktūros ir įrankių pasiruošimas“. +
 Į jį siūlau įtraukti ir susipažinimą su neuniversitetiniais įrankiais 
 https://moodle.garsva.lt/[Moodle] bei http://www.tinklusaugumas.lt/[tinklusaugumas.lt] _wiki_.
