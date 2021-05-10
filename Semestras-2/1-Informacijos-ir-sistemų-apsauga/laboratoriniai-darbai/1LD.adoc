@@ -519,9 +519,75 @@ a| Sukurkite naujo vartotojo prisijungimą:
 | ... ir atsijunkite:
 |`exit`
 |
+
+3+| {nbsp}
+3+| +++<center>+++ *3. Failų kūrimas ir teisės :* +++</center>+++
+
+| Persijunkite kaip vartotojas `root`
+|
+|
+
+| Patekite į direktoriją testas:
+|`cd /testas`
+|
+
+| Sukurkite du skirtingus failus; su turiniu:
+|`echo "testas" > test1`
+| Komanda `echo` išveda tekstą, o simbolis `>` nurodo, kad išvedamą tekstą reikia nukreipti į failą
+
+| ... ir tuščią:
+|`touch test2`
+|
+
+| Patikrinkite, ar failai sukurti:
+|`ls`
+|
+
+| Žvilgtelkite, kas tų failų viduje:
+|`cat test1` +
+ `cat test2`
+|
+
+| Patikrinkite, kokios sukurtų failų teisės:
+|`ls -al`
+| Toks raktų rašymas yra identiškas +
+`ls -a -l` +
+Ką reiškia toks komandos raktas?
+
+| Pakeiskite teises į tokias, kurios failui `test1` leistų jo peržiūrą ir redagavimą tik failo savininkui:
+|`chmod 600 test1`
+| Ką reiškia toks failo teisių keitimo raktas?
+
+| Patikrinkite, kaip pasikeitė teisės:
+|`ls -al`
+|
+
+| Persijunkite kaip root naudodami `su`
+|
+|
+
+| Patikrinkite savo vartotoją:
+|`whoami`
+|
+
+| Pereikite į direktoriją `testas`:
+|`cd /testas`
+|
+
+| Perimkite `test2` failo teises:
+|`chown root.root test2`
+|
+
+| Persijunkite savo vartotoju, pereikite į direktoriją `testas` ir peržiūrėkite teises
+|
+|
+
+| Pabandykite peržiūrėti sukurtų failų turinius
+|
+| Koks klaidos pranešimas bandant peržiūrėti failą `test1`? Kodėl?
+
 |===
 
-. Persijunkite ...
 . Išbandykite ...
 . Persijunkite ...
 . Sukurkite ...
