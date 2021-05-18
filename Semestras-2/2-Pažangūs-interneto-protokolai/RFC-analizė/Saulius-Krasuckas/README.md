@@ -8,3 +8,5 @@
 - Visgi remiantis juo įmanomos prastos implementacijos.
 - Tačiau trūkumų išvengti lengva.
 - Daug sunkiau patikrinti specifikacijos _įgalinamą spartą_ nei specifikacijos _korektiškumą_.
+- Pateikiamas rinkinys algoritmų, kurie buvo testuoti.
+- Juos kombinuojant sparta nenukenčia.
