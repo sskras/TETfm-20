@@ -16,7 +16,7 @@
 
 #### Apie sistemą:
 
-- `/proc/cpuinfo`
+- `/proc/cpuinfo` \
   Mašinos (sisteminių) procesorių duomenys: 
   - gamintojas, 
   - modelis, 
