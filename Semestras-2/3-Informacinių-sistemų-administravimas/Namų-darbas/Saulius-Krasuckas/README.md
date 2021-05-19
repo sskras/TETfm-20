@@ -38,16 +38,17 @@
   - aptarnaujantį CPU branduolį.
   
 - `/proc/loadavg` \
-  Sisteminė apkrova (angl. System load):
+  Sisteminė apkrova (angl. _System load_):
   - tai santykinis kieks procesų, kurie eilėje laukia savo kodo vykdymo;
   - jei ji < `1`, pvz. `0.8`, tada eilė nepilna, ir CPU turi `0.2` (20%) laisvo laiko;
   - jei ji > `1`, pvz. `1.8`, tada eilė užpildyta, ir `0.8` proceso laukia eilėje (CPU nespėja);
   - laukimas galimas dėl įv. priežasčių, pvz. CPU vykdo kitus procesus arba laukia I/O operacijos pabaigos.
   - Šiame faile:
-    - 3 skaičiai tai **apkrovos dydis** integruojant pagal **1 min., 5 min. ir 15 min.** intervalus,
-    - branduolio **aktyvių procesinių vienetų** (angl. Scheduling Entities) skaičius,
+    - pirmi 3 skaičiai – **apkrovos dydis** integruojant pagal **1 min., 5 min. ir 15 min.** intervalus,
+    - branduolio **aktyvių procesinių vienetų** (angl. _Scheduling Entities_) skaičius,
     - branduolio **bendras procesinių vienetų** (t. y. procesų ir gijų) skaičius.
-  Maždaug atitinka komandos `w` primą eilutę
+  
+  Maždaug atitinka pirmą komandos `w` eilutę
 
 - `/proc/meminfo` \
   Pati įvairiausia atminties (tiek fizinės, tiek `Swap`) naudojimo statistika. (Labai plati)
@@ -104,7 +105,7 @@
       Proceso I/O statistika.
 
     - `/proc/$PID/limits` \
-      Proceso vad. resursų ribos (angl. Limits):
+      Proceso vad. resursų ribos (angl. _Limits_):
 
       - ribos pavadinimas,
       - Soft Limit dydis,
