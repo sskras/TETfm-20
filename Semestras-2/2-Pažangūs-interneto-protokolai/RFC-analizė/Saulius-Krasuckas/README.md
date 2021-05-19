@@ -22,4 +22,4 @@
 - gavimo patvirtinimui įvardija nuskaitytą baitą su didžiausiu numeriu;
 - taip patvirtinama, kad gauti baitai ir su visais mažesniais numeriais;
 - prašo tai patvirtinti greitai,
-- tačiau nenurodo nei kaip greitai, nei po kiek duomenų.
+- tačiau nenurodo nei kaip greitai, nei po kiekos naujų duomenų.
