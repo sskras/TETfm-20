@@ -20,7 +20,7 @@
 - yra TCP protokolui kertinis;
 - reikalauja, kai duomenys pasiekia gavėją, kad atgal būtų išsiųstas patvirtinimas;
 - numeruoja duomenų baitus iš eilės,
-- gavimo patvirtinimui įvardija nuskaitytą baitą su didžiausiu numeriu;
+- patvirtinimui įvardija didžiausią numerį iš visų gautų baitų + `1`;
 - taip patvirtinama, kad gauti baitai ir su visais mažesniais numeriais;
 - prašo tai patvirtinti greitai,
 - tačiau nenurodo nei kaip greitai, nei po kiekos naujų duomenų.
