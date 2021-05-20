@@ -1,15 +1,19 @@
 ### Linux PROC failinė sistema: struktūra ir savybės
 
-- Ši failinė sistema (FS) yra fantominė (diske neegzistuoja)
-- Direktorijų hierarchijoje ji yra `/proc`
+- Tai paprastas kelias programoms pasiekti daugelį branduolio vidinių struktūrų \
+  (panaudojant Syscall `read()`)
+- Ši failinė sistema (FS) yra fantominė, ji diske fiziškai neegzistuoja
+- Direktorijų hierarchijoje jos vardas `/proc`
 - Ją operacijų sistemos (OS) branduolys susikuria atmintyje
-- Jai atsiradus ji buvo skirta talpinti informacijai **apie procesus**
+- Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
+- Jai atsiradus ji buvo skirta talpinti informaciją **apie procesus**
 - Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
 - Jos failai įprastai yra tekstiniai (ASCII), bet ne visada
-- Kai kada šie tekstiniai duomenys nėra lengvai skaitomi
-- Todėl yra daug komandų, kurios tik nuskaito šiuos duomenis, juos performatuoja ir išvedima į ekraną
-- Dalis šių failų tinka ir įrašymui
-- Tokiu būdu keičiami kai kurie procesų arba visos OS  nustatymai
+- Net ir kai kurie jos tekstiniai duomenys nėra lengvai skaitomi \
+  (pvz. ilgai eilė skaičių, atskirtų tarpais)
+- Todėl nemažai komandų tik nuskaito šiuos duomenis iš `/proc`, juos performatuoja ir išveda į ekraną patogesniu pavidalu
+- Dalis šių failų reaguoja ir į įrašymą,
+- Tokiu būdu keičiami kai kurie procesų arba visos OS nustatymai
 - Išsami informacija: `man proc`
 
 #### Svarbesni failai ir direktorijos
@@ -81,7 +85,7 @@
   - `init` proceso `PID` visada yra `1`.
   
 - `/proc/self` \
-  Simbolinė nuorodą į tą `/proc/$PID` direktoriją, kuri aprašo patį procesą, kuris ir kreipiasi į `/proc` failus.
+  Simbolinė nuorodą į tą `/proc/$PID` direktoriją, kuri aprašo patį procesą, kuris ir vykdo kreipimąsi į `/proc` failus.
 
 - `/proc/[0-9]*/`, kur simboliais `[0-9]*` žymimas skaitinis numeris.
 
@@ -112,4 +116,4 @@
       - Hard Limit dydis,
       - ribos vienetai.
 
-    - `/proc/$PID/`
+    - `/proc/$PID/...`
