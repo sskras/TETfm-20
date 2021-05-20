@@ -3,16 +3,16 @@
 - Tai paprastas kelias programoms pasiekti daugelį branduolio vidinių struktūrų \
   (panaudojant Syscall `read()`)
 - Ši failinė sistema (FS) yra fantominė, ji diske fiziškai neegzistuoja
-- Direktorijų hierarchijoje jos vardas `/proc`
+- Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Ją operacijų sistemos (OS) branduolys susikuria atmintyje
 - Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
 - Jai atsiradus ji buvo skirta talpinti informaciją **apie procesus**
 - Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
 - Jos failai įprastai yra tekstiniai (ASCII), bet ne visada
-- Net ir kai kurie jos tekstiniai duomenys nėra lengvai skaitomi \
+- Net ir kai kurie tekstiniai jos duomenys nėra lengvai skaitomi \
   (pvz. ilgai eilė skaičių, atskirtų tarpais)
 - Todėl nemažai komandų tik nuskaito šiuos duomenis iš `/proc`, juos performatuoja ir išveda į ekraną patogesniu pavidalu
-- Dalis šių failų reaguoja ir į įrašymą,
+- Daliai šių failų galioja ir įrašymas
 - Tokiu būdu keičiami kai kurie procesų arba visos OS nustatymai
 - Išsami informacija: `man proc`
 
