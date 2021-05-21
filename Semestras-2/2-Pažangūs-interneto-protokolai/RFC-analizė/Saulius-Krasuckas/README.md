@@ -42,5 +42,5 @@
 - tada siuntėjo reikalaujama laikyti, kad gavėjas sugedo,
 - ir uždaryti šį ryšį.
 - Šiame mechanizme taip pat neapibrėžiama sparta, kuri nurodytų:
-- (a) kokiose situacijose gavėjui vertėtų praplėsti _langą_,
-- (b) ir kaip siuntėjas turėtų reaguot į tokią pasikeitusią info.
+  - kokiose situacijose gavėjui vertėtų praplėsti _langą_,
+  - nei kaip tiksliai siuntėjas turėtų reaguoti į tokią pasikeitusią informaciją.
