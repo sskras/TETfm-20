@@ -16,7 +16,7 @@
 
 #### 2. Mechanizmai
 
-- **Patvirtinimo** mechanizmas:
+**Patvirtinimo** mechanizmas:
 - yra TCP protokolui kertinis;
 - reikalauja, kai duomenys pasiekia gavėją, kad atgal būtų išsiųstas patvirtinimas;
 - numeruoja duomenų baitus iš eilės,
@@ -25,5 +25,5 @@
 - prašo tai patvirtinti greitai,
 - tačiau nenurodo nei kaip greitai, nei po kiekos naujų duomenų.
 
-- **Lango** mechanizmas:
-- 
+**Lango** mechanizmas:
+- .
