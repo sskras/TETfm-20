@@ -26,4 +26,21 @@
 - tačiau nenurodo nei kaip greitai, nei po kiekos naujų duomenų.
 
 **Lango** mechanizmas:
-- .
+- yra srauto valdymo įrankis;
+- ir nurodo duomenų gavėjui pasitaikius progai pranešti dar vieną skaičių:
+- tai daugmaž dydis laisvos buferio dalies, kurioje tilptų papildomi duomenys.
+- Šio skaičiaus dimensija yra baitai,
+- o jis pats vadinamas **langu**
+- ir siuntėjui nurodo didžiausią duomenų porciją, leidžiamą išsiųsti gavėjui, 
+- kol pastarasis nepranešė apie naujai atidarytą _langą_.
+- Kartais gavėjo buferyje laisvos vietos nėra visai,
+- tuomet jis praneša apie nulinio dydžio _langą_.
+- Taip nutikus siuntėjo reikalaujama kartais siųsti gavėjui po mažą duomenų segmentą
+- ir taip patikrinti, ar jau priimami nauji duomenys.
+- Jeigu _langas_ lieka uždarytas (ties 0 B) pakankamai ilgą laiką, 
+- o siuntėjas nustoja gauti atsakymus iš gavėjo,
+- tada siuntėjo reikalaujama laikyti, kad gavėjas sugedo,
+- ir uždaryti šį ryšį.
+- Šiame mechanizme taip pat neapibrėžiama sparta, kuri nurodytų:
+- (a) kokiose situacijose gavėjui vertėtų praplėsti _langą_,
+- (b) ir kaip siuntėjas turėtų reaguot į tokią pasikeitusią info.
