@@ -1,24 +1,29 @@
 ### Linux PROC failinė sistema: struktūra ir savybės
 
 - Tai paprastas kelias programoms pasiekti daugelį branduolio vidinių struktūrų \
-  (panaudojant Syscall `read()`)
+  (panaudojant paprasčiausią skaitymo operaciją, Syscall `read()`)
 - Ši failinė sistema (FS) yra fantominė, ji diske fiziškai neegzistuoja
-- Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Ją operacijų sistemos (OS) branduolys susikuria atmintyje
+- Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
+- TODO: apie „nulinius“ failų dydžius (nes talpiname ne disko, ir dydis dinamiškai kinta)
 - Jai atsiradus ji buvo skirta talpinti informaciją **apie procesus**
 - Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
 - Jos failai įprastai yra tekstiniai (ASCII), bet ne visada
 - Net ir kai kurie tekstiniai jos duomenys nėra lengvai skaitomi \
   (pvz. ilgai eilė skaičių, atskirtų tarpais)
 - Todėl nemažai komandų tik nuskaito šiuos duomenis iš `/proc`, juos performatuoja ir išveda į ekraną patogesniu pavidalu
-- Daliai šių failų galioja ir įrašymas
-- Tokiu būdu keičiami kai kurie procesų arba visos OS nustatymai
-- Išsami informacija: `man proc`
+- Dauguma jos failų turi tik skaitymo režimą
+- Tačiau daliai failų galioja ir įrašymas
+- Tokiu būdu keičiami kai kurie procesų arba visos OS (branduolio) nustatymai
+- Šitaip įgalinamas dinaminis keitimas: be branduolio perkompiliavimo ir be perkrovimo (kol OS veikia)
+- Išsami informacija: `man proc`, 
+- aprašo kiekvieną čią talpinamą failą ir tikslią jo struktūrą
+- Visų šių duomenų apibendrinimui yra programa `procinfo`
 
 #### Svarbesni failai ir direktorijos
 
-#### Apie sistemą:
+#### Apie visą sistemą:
 
 - `/proc/cpuinfo` \
   Mašinos (sisteminių) procesorių duomenys: 
