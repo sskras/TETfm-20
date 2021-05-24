@@ -4,6 +4,7 @@
 - Dauguma *nix operacijų sistemų (OS) ją irgi turi, bet ne visos, pvz. _OpenBSD_
 - Leidžia lengvai pasiekti OS informaciją ir net joje kai ką pakeisti\
   (panaudojant paprasčiausią skaitymo operaciją, `read()` _Syscall_ arba komandą `cat`)
+- Atspindi pradinę Unix idėją: **_"Everything is a file"_**
 - Sukūrus `/proc` failinę sistemą (FS) ji buvo skirta talpinti informaciją **apie procesus**
 - Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
 - Tikslus direktorių ir failų rinkinys priklauso nuo:
