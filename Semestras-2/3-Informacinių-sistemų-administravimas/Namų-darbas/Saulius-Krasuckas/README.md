@@ -21,7 +21,10 @@
   - _Shell_ nukreipimo `>` arba _Syscall_ `write(2)`.
     
     ```
-    $ TODO 
+    $ free -h
+                  total        used        free      shared  buff/cache   available
+    Mem:           3.6G        1.7G        1.1G        319M        851M        1.3G
+    Swap:          8.1G          0B        8.1G
     ```
 - Sukūrus `/proc` failinę sistemą (FS), ji buvo skirta talpinti informaciją **apie procesus**
 - Taip atspindėta pradinė Unix idėja: **_"Everything is a file"_** \
