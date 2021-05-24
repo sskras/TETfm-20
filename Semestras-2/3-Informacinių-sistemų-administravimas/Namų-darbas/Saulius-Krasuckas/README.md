@@ -1,13 +1,16 @@
 ### Linux PROC failinė sistema: struktūra ir savybės
 
 - Tai **interfeisas į daugelį vidinių duomenų struktūrų** Linux branduolyje
-- Dauguma *nix operacijų sistemų (OS) ją irgi turi, bet ne visos, pvz. _OpenBSD_
-- Leidžia lengvai pasiekti OS informaciją ir net joje kai ką pakeisti\
+- Dauguma *nix operacijų sistemų (OS) ją irgi turi, bet ne visos, pvz. neturi:
+  - _HP-UX_
+  - _OpenBSD_ (nuo v5.7, 2015-05)
+- Leidžia lengvai pasiekti OS informaciją ir net joje kai ką pakeisti \
   (panaudojant paprasčiausią skaitymo operaciją, `read()` _Syscall_ arba komandą `cat`)
-- Atspindi pradinę Unix idėją: **_"Everything is a file"_**
 - Sukūrus `/proc` failinę sistemą (FS) ji buvo skirta talpinti informaciją **apie procesus**
-- Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
-- Tikslus direktorių ir failų rinkinys priklauso nuo:
+- Atspindima pradinė Unix idėja: **_"Everything is a file"_**, įskaitant ir procesus
+- Vėliau/Linukse pradėta talpinti informacija ir **apie visą sistemą** \
+  (konkrečią mašinos ir OS kombinaciją)
+- Tikslus direktorijų ir failų rinkinys priklauso nuo:
   - branduolio Source kodo versijos ir revizijos (turinio);
   - tikslios branduolio konfigūracijos (daug ką įmanoma atjungti).
 - Ši FS yra fantominė: 
