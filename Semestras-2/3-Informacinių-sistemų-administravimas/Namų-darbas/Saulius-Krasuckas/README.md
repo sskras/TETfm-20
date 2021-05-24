@@ -102,9 +102,9 @@
 
 - `/proc/[0-9]*/`, kur simboliais `[0-9]*` žymimas skaitinis numeris.
 
-  - Tokia direktorija sukuriama kiekvienam OS vykdomam procesui.
+  - Tokia direktorija sukuriama kiekvienam OS tuo metu vykdomam procesui.
   - Jos varde nurodomas to proceso `PID`.
-  - Jos įdomiausi failai:
+  - Įdomiausi failai:
 
     - `/proc/$PID/cmdline` \
       Pilna proceso omandinė eilutė.
