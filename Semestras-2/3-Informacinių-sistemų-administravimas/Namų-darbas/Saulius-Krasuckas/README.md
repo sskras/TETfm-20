@@ -302,7 +302,7 @@
     - TCP Sequence numerių nustatymas
   - [Linux Internals: How /proc/self/mem writes to unwritable memory](https://offlinemark.com/2021/05/12/an-obscure-quirk-of-proc/) \
     `2021-05` mėnesio naujiena: Proceso R/O _Virtual Memory_ puslapių pakeitimas per `/proc/*/mem`
-- Trūkumas #2: istoriškai ir nuo konfigūracijos kintanti struktūra.
+- Trūkumas #2: nuo branduolio konfigūracijos priklausanti ir evoliuciškai besikeičianti struktūra.
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
