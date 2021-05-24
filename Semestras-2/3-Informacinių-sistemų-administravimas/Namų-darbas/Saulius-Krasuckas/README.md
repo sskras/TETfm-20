@@ -14,16 +14,28 @@
 - Leidžia lengvai pasiekti OS informaciją (ir kai ką joje net pakeisti)
 - Tam pakanka paprasčiausių failo skaitymo ar rašymo operacijų:
   - komandos `cat(1)` arba _Syscall_ `read(2)`. Pvz.:
-    
     ```
-    $ TODO 
+    $ cat /proc/cpuinfo | egrep '^(model name|core|cpu MHz)' | sort | uniq -c
+          2 core id		: 0
+          2 core id		: 1
+          1 cpu MHz		: 1293.945
+          1 cpu MHz		: 1486.358
+          1 cpu MHz		: 1548.461
+          1 cpu MHz		: 1768.035
+          4 model name	: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz
     ```
   - _Shell_ nukreipimo `>` arba _Syscall_ `write(2)`.
-    
     ```
     $ free -h
                   total        used        free      shared  buff/cache   available
-    Mem:           3.6G        1.7G        1.1G        319M        851M        1.3G
+    Mem:           3.6G        953M        2.0G        118M        652M        2.3G
+    Swap:          8.1G          0B        8.1G
+
+    $ sudo bash -c "echo 1 > /proc/sys/vm/drop_caches"
+
+    $ free -h
+                  total        used        free      shared  buff/cache   available
+    Mem:           3.6G        953M        2.3G        116M        398M        2.3G
     Swap:          8.1G          0B        8.1G
     ```
 - Sukūrus `/proc` failinę sistemą (FS), ji buvo skirta talpinti informaciją **apie procesus**
