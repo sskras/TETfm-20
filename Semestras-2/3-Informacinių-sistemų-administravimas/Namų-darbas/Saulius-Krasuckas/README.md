@@ -236,6 +236,21 @@
 
   - Tokia direktorija sukuriama kiekvienam OS tuo metu vykdomam procesui.
   - Jos varde nurodomas to proceso `PID`.
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<a id="9"></a>
+---
+9 [Kita](#10)
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Svarbesni failai ir direktorijos, patęsimas
+#### Apie procesus, pabaiga:
+
+- ...
   - Įdomiausi failai:
 
     - `/proc/$PID/cmdline` \
@@ -265,9 +280,9 @@
 
 <p>&nbsp;</p>
 
-<a id="9"></a>
+<a id="10"></a>
 ---
-9 [Kita](#10)
+10 [Kita](#11)
 
 ### Reziume
 
@@ -293,9 +308,9 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<a id="10"></a>
+<a id="11"></a>
 ---
-10
+11 (paskutinė skaidrė)
 
 ## Linux PROC failinė sistema: struktūra ir savybės
 
