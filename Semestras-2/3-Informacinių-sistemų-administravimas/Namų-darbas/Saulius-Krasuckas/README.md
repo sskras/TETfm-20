@@ -36,12 +36,6 @@
     Mem:           3.6G        953M        2.3G        116M        398M        2.3G
     Swap:          8.1G          0B        8.1G
     ```
-- Sukūrus `/proc` failinę sistemą (FS), ji buvo skirta talpinti informaciją **apie procesus**
-- Taip atspindėta pradinė Unix idėja: **_"Everything is a file"_** \
-  (įskaitant procesus)
-- Vėliau / Linukse pradėta talpinti informacija ir **apie visą sistemą** \
-  (konkrečią mašinos ir OS kombinaciją)
-
 
 <a id="2"></a>
 ---
@@ -50,18 +44,22 @@
 ## Linux PROC failinė sistema: struktūra ir savybės
 ### Struktūra
 
+- Sukūrus PROC failinę sistemą (FS), ji buvo skirta talpinti informaciją **apie procesus**
+- Taip atspindėta pradinė Unix idėja: **_"Everything is a file"_** (įskaitant procesus)
+- Vėliau / Linukse pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
 - Tikslus direktorijų ir failų rinkinys priklauso nuo:
   - branduolio Source kodo versijos ir revizijos (turinio);
-  - tikslios branduolio konfigūracijos (daug ką įmanoma atjungti).
+  - tikslios branduolio konfigūracijos (daug ką įmanoma atjungti);
+  - vykdomų procesų.
+- Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Ši FS yra fantominė: 
   - ji diske fiziškai neegzistuoja;
   - dar vadinama pseudofailų sistema;
   - ją OS branduolys susikuria atmintyje.
-- Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
 - Visi failai, išskyrus `/proc/kcore` ir `/proc/bus/pci/*/*`, yra 0B dydžio
-- nes talpinami ne įprastoje talpykloje, o kinta kartais labai dinamiškai \
-  (ir dydžių apskaičiavimas sukeltų papildomą CPU apkrovą be didesnės naudos)
+- nes talpinami ne įprastoje kaupiklyje, o kinta dinamiškai, kartais itin staigai \
+  (dydžių apskaičiavimas sukeltų papildomą CPU apkrovą be didesnės naudos)
 - Jos failai įprastai yra tekstiniai (ASCII), bet ne visada
 - Net ir kai kurie tekstiniai jos duomenys nėra lengvai skaitomi \
   (pvz. ilgai eilė skaičių, atskirtų tarpais)
