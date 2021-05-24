@@ -287,7 +287,7 @@
 
 <a id="10"></a>
 ---
-10 [Kita](#11)
+10 [Paskutinė](#11)
 
 ### Apibendrinimas
 
