@@ -2,7 +2,7 @@
 
 <a id="1"></a>
 ---
-1
+1 [Kita](#2)
 
 ## Linux PROC failinė sistema: struktūra ir savybės
 ### Kas tai?
@@ -43,14 +43,12 @@
   (konkrečią mašinos ir OS kombinaciją)
 
 
-[Kita](#2)
-
 <a id="2"></a>
 ---
-2
+2 [Kita](#3)
 
 ## Linux PROC failinė sistema: struktūra ir savybės
-### Kas tai?
+### Struktūra
 
 - Tikslus direktorijų ir failų rinkinys priklauso nuo:
   - branduolio Source kodo versijos ir revizijos (turinio);
