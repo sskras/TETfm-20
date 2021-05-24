@@ -75,8 +75,11 @@
 ---
 3 [Kita](#4)
 
+## Linux PROC failinė sistema: struktūra ir savybės
+### Struktūra, pratęsimas
+
 - Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
-- Visi failai, išskyrus `/proc/kcore` ir `/proc/bus/pci/*/*`, yra 0B dydžio
+- Visi failai, išskyrus `/proc/kcore` ir `/proc/bus/pci/*/*`, yra 0B dydžio:
   ```
   $ sudo du -hs /proc
   0	/proc
@@ -99,8 +102,14 @@
 - aprašo kiekvieną čią talpinamą failą ir tikslią jo struktūrą
 - Visų šių duomenų apibendrinimui yra programa `procinfo`
 
-#### Svarbesni failai ir direktorijos
+<p>&nbsp;</p>
 
+<a id="4"></a>
+---
+4 [Kita](#5)
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Svarbesni failai ir direktorijos
 #### Apie visą sistemą:
 
 - `/proc/cpuinfo` \
@@ -114,6 +123,12 @@
   - ir kiti, įsk. [_Feature_ bitus](https://en.wikipedia.org/wiki/CPUID#EAX.3D1:_Processor_Info_and_Feature_Bits):
   ![image](https://user-images.githubusercontent.com/74717106/118803122-a27dbd80-b8ab-11eb-8cc4-a0f45bd7ae60.png)
   
+<a id="5"></a>
+---
+5 [Kita](#6)
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Svarbesni failai ir direktorijos, patęsimas
 - `/proc/filesystems` \
   Šiuo metu aptarnaujamų FS tipų (tiek fantominių, tiek tikrų) sąrašas. \
   Sąrašą sudaro tiek į branduolį statiškai įkompiliuotos, tiek ir branduolio moduliais tvarkomos FS.
@@ -137,6 +152,13 @@
   
   Maždaug atitinka pirmą komandos `w` eilutę
 
+<a id="6"></a>
+---
+6 [Kita](#7)
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Svarbesni failai ir direktorijos, patęsimas
+
 - `/proc/locks` \
   \
   Failų rakinimo sąrašas, kuriame matyti pvz.:
@@ -159,6 +181,16 @@
 - `/proc/net/` \
   Direktorija su informacija apie tinklo protokolų naudojimą. (Labai platu)
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<a id="7"></a>
+---
+7 [Kita](#8)
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Svarbesni failai ir direktorijos, patęsimas
+
 - `/proc/scsi/` \
   Direktorija su SCSI pasistemės informacija:
   - SCSI įrenginių sąrašas;
@@ -177,6 +209,17 @@
 - `/proc/version` \
   Šiuo metu veikiančio (įkelto) OS branduolio versija. Maždaug atitinka komandą `uname -a`.
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<a id="8"></a>
+---
+8 [Kita](#9)
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Svarbesni failai ir direktorijos, patęsimas
 #### Apie procesus:
 
 - `/proc/1/` \
@@ -220,6 +263,11 @@
 
     - `/proc/$PID/...`
 
+<p>&nbsp;</p>
+
+<a id="9"></a>
+---
+9 [Kita](#10)
 #### Reziume
 
 - `/proc` FS leidžia „pjaustyti“ sistemos (ypač branduolio) būseną pačiais įvairiausiais pjūviais
@@ -233,4 +281,4 @@
     - TCP Sequence numerių nustatymas
   - [Linux Internals: How /proc/self/mem writes to unwritable memory](https://offlinemark.com/2021/05/12/an-obscure-quirk-of-proc/) \
     `2021-05` mėnesio naujiena: Proceso R/O _Virtual Memory_ puslapių pakeitimas per `/proc/*/mem`
-- 
+- Trūkumas #2: istoriškai ir nuo konfigūracijos kintanti struktūra.
