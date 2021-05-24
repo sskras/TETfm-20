@@ -12,7 +12,7 @@
   - _HP-UX_
   - _OpenBSD_ (nuo v5.7, 2015-05)
 - Leidžia lengvai pasiekti OS informaciją (ir kai ką joje net pakeisti)
-- Tam pakanka paprasčiausių failo skaitymo ar rašymo operacijų:
+- Pakanka paprasčiausių failo skaitymo ar rašymo operacijų:
   - komandos `cat(1)` arba _Syscall_ `read(2)`. Pvz.:
     ```
     $ cat /proc/cpuinfo | egrep '^(model name|core|cpu MHz)' | sort | uniq -c
@@ -24,15 +24,13 @@
           1 cpu MHz		: 1768.035
           4 model name	: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz
     ```
-  - _Shell_ srauto nukreipimo `>` arba _Syscall_ `write(2)`.
+  - _Shell_ srauto nukreipimo `>` arba _Syscall_ `write(2)`. Pvz:
     ```
     $ free -h
                   total        used        free      shared  buff/cache   available
     Mem:           3.6G        953M        2.0G        118M        652M        2.3G
     Swap:          8.1G          0B        8.1G
-
     $ sudo bash -c "echo 1 > /proc/sys/vm/drop_caches"
-
     $ free -h
                   total        used        free      shared  buff/cache   available
     Mem:           3.6G        953M        2.3G        116M        398M        2.3G
