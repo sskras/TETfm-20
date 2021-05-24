@@ -4,19 +4,28 @@
 ---
 1
 
-### Linux PROC failinė sistema: struktūra ir savybės
+## Linux PROC failinė sistema: struktūra ir savybės
+### Kas tai?
 
-- Tai **interfeisas į daugelį vidinių duomenų struktūrų** Linux branduolyje
-- Ją turi daugelis *nix operacijų sistemų (OS), bet ne visos, pvz. neturi:
+- **Interfeisas į daugelį vidinių duomenų struktūrų** Linux branduolyje
+- Ją turi daugelis ***nix** operacijų sistemų (OS), bet ne visos. Pvz. šios neturi:
   - _HP-UX_
   - _OpenBSD_ (nuo v5.7, 2015-05)
-- Leidžia lengvai pasiekti OS informaciją ir joje kai ką net pakeisti
-- tam panaudojant paprasčiausią failo skaitymo operaciją: 
-  - komandą `cat(1)`;
-  - _Syscall_ `read(2)`.
+- Leidžia lengvai pasiekti OS informaciją (ir kai ką joje net pakeisti)
+- Tam pakanka paprasčiausių failo skaitymo ar rašymo operacijų:
+  - komandą `cat(1)` arba _Syscall_ `read(2)`. Pvz.:
+    
+    ```
+    $ TODO 
+    ```
+  - _Shell_ nukreipimą `>` arba _Syscall_ `write(2)`.
+    
+    ```
+    $ TODO 
+    ```
 - Sukūrus `/proc` failinę sistemą (FS), ji buvo skirta talpinti informaciją **apie procesus**
-- Taip atspindėta pradinė Unix idėja: \
-  **_"Everything is a file"_** (įskaitant procesus)
+- Taip atspindėta pradinė Unix idėja: **_"Everything is a file"_** \
+  (įskaitant procesus)
 - Vėliau / Linukse pradėta talpinti informacija ir **apie visą sistemą** \
   (konkrečią mašinos ir OS kombinaciją)
 
@@ -26,6 +35,9 @@
 <a id="2"></a>
 ---
 2
+
+## Linux PROC failinė sistema: struktūra ir savybės
+### Kas tai?
 
 - Tikslus direktorijų ir failų rinkinys priklauso nuo:
   - branduolio Source kodo versijos ir revizijos (turinio);
@@ -176,7 +188,7 @@
 
 - `/proc` FS leidžia „pjaustyti“ sistemos (ypač branduolio) būseną pačiais įvairiausiais pjūviais
 - Privalumas, kad programoms (angl. _Userspace_) nebereikia kreiptis į branduolį ir naudoti „brangius“ _Syscall_ kvietimus, pvz. `ioctl(2)`.
-- Trūkumas, kad sunkiau užtikrinti tarpprocesinį saugumą, informacijos nutekėjimą ir net atakas:
+- Trūkumas, kad sunkiau užtikrinti tarpprocesinį saugumą, informacijos nutekėjimą ir net išvengti atakų:
   - [CS 6431. Security Issues in Web Applications](https://present5.com/cs-6431-security-issues-in-web-applications-vitaly/#:~:text=What%20Can%20Be%20Learned%20from%20Proc) \
     Bent tam tikrose versijose / distribucijose (iki `2014-10-09`):
     - "Peeping Tom" ataka
