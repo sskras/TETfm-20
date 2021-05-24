@@ -1,17 +1,33 @@
+[Pradžia](#1)
+
+<a id="1"></a>
+---
+1
+
 ### Linux PROC failinė sistema: struktūra ir savybės
 
 - Tai **interfeisas į daugelį vidinių duomenų struktūrų** Linux branduolyje
-- Dauguma *nix operacijų sistemų (OS) ją irgi turi, bet ne visos, pvz. neturi:
+- Ją turi daugelis *nix operacijų sistemų (OS), bet ne visos, pvz. neturi:
   - _HP-UX_
   - _OpenBSD_ (nuo v5.7, 2015-05)
-- Leidžia lengvai pasiekti OS informaciją ir net joje kai ką pakeisti \
-- Tam panaudojant paprasčiausią skaitymo operaciją: 
-  - komandą `cat`;
-  - `read(2)` _Syscall_.
-- Sukūrus `/proc` failinę sistemą (FS) ji buvo skirta talpinti informaciją **apie procesus**
-- Taip atspindima pradinė Unix idėja: **_"Everything is a file"_** (įskaitant ir procesus)
+- Leidžia lengvai pasiekti OS informaciją ir joje kai ką net pakeisti
+- tam panaudojant paprasčiausią failo skaitymo operaciją: 
+  - komandą `cat(1)`;
+  - _Syscall_ `read(2)`.
+- Sukūrus `/proc` failinę sistemą (FS), ji buvo skirta talpinti informaciją **apie procesus**
+- Taip atspindėta pradinė Unix idėja: \
+  **_"Everything is a file"_** (įskaitant procesus)
 - Vėliau / Linukse pradėta talpinti informacija ir **apie visą sistemą** \
   (konkrečią mašinos ir OS kombinaciją)
+
+<p>&nbsp;</p>
+
+[Kita](#2)
+
+<a id="2"></a>
+---
+2
+
 - Tikslus direktorijų ir failų rinkinys priklauso nuo:
   - branduolio Source kodo versijos ir revizijos (turinio);
   - tikslios branduolio konfigūracijos (daug ką įmanoma atjungti).
@@ -74,6 +90,19 @@
   
   Maždaug atitinka pirmą komandos `w` eilutę
 
+- `/proc/locks` \
+  \
+  Failų rakinimo sąrašas, kuriame matyti pvz.:
+  - Užrakto tipas: `ADVISORY`, `MANDATORY`
+  - Rakinamos prieigos tipas: `READ`, `WRITE`
+  - Failą užrakinusio proceso `PID`
+  - Failo identifikatorius, sudarytas iš:
+    - `MAJOR-DEVICE`:
+    - `MINOR-DEVICE`:
+    - `INODE-NUMBER`
+  - Rakinamo ruožo pradžia
+  - Rakinamo ruožo pabaiga
+
 - `/proc/meminfo` \
   Pati įvairiausia atminties (tiek fizinės, tiek `Swap`) naudojimo statistika. (Labai plati)
   
@@ -82,6 +111,12 @@
 
 - `/proc/net/` \
   Direktorija su informacija apie tinklo protokolų naudojimą. (Labai platu)
+
+- `/proc/scsi/` \
+  Direktorija su SCSI pasistemės informacija:
+  - SCSI įrenginių sąrašas;
+  - SCSI hostų ir draiverių konfigūracijas;
+  - SCSI statistika.
 
 - `/proc/stat` \
   Apibendrinta CPU, atminties, procesų vykdymo ir I/O statistika.
@@ -137,3 +172,18 @@
       - ribos vienetai.
 
     - `/proc/$PID/...`
+
+#### Reziume
+
+- `/proc` FS leidžia „pjaustyti“ sistemos (ypač branduolio) būseną pačiais įvairiausiais pjūviais
+- Privalumas, kad programoms (angl. _Userspace_) nebereikia kreiptis į branduolį ir naudoti „brangius“ _Syscall_ kvietimus, pvz. `ioctl(2)`.
+- Trūkumas, kad sunkiau užtikrinti tarpprocesinį saugumą, informacijos nutekėjimą ir net atakas:
+  - [CS 6431. Security Issues in Web Applications](https://present5.com/cs-6431-security-issues-in-web-applications-vitaly/#:~:text=What%20Can%20Be%20Learned%20from%20Proc) \
+    Bent tam tikrose versijose / distribucijose (iki `2014-10-09`):
+    - "Peeping Tom" ataka
+    - "Memento" ataka
+    - klavišų paspaudimų sekimas
+    - TCP Sequence numerių nustatymas
+  - [Linux Internals: How /proc/self/mem writes to unwritable memory](https://offlinemark.com/2021/05/12/an-obscure-quirk-of-proc/) \
+    `2021-05` mėnesio naujiena: Proceso R/O _Virtual Memory_ puslapių pakeitimas per `/proc/*/mem`
+- 
