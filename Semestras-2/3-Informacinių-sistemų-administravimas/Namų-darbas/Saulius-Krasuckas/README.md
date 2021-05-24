@@ -13,12 +13,12 @@
   - _OpenBSD_ (nuo v5.7, 2015-05)
 - Leidžia lengvai pasiekti OS informaciją (ir kai ką joje net pakeisti)
 - Tam pakanka paprasčiausių failo skaitymo ar rašymo operacijų:
-  - komandą `cat(1)` arba _Syscall_ `read(2)`. Pvz.:
+  - komandos `cat(1)` arba _Syscall_ `read(2)`. Pvz.:
     
     ```
     $ TODO 
     ```
-  - _Shell_ nukreipimą `>` arba _Syscall_ `write(2)`.
+  - _Shell_ nukreipimo `>` arba _Syscall_ `write(2)`.
     
     ```
     $ TODO 
