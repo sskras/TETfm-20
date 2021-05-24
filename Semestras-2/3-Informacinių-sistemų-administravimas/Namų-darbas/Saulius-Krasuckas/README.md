@@ -24,7 +24,7 @@
           1 cpu MHz		: 1768.035
           4 model name	: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz
     ```
-  - _Shell_ nukreipimo `>` arba _Syscall_ `write(2)`.
+  - _Shell_ srauto nukreipimo `>` arba _Syscall_ `write(2)`.
     ```
     $ free -h
                   total        used        free      shared  buff/cache   available
