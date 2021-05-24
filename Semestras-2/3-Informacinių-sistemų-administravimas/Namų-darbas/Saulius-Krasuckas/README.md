@@ -152,6 +152,8 @@
   
   Maždaug atitinka pirmą komandos `w` eilutę
 
+<p>&nbsp;</p>
+
 <a id="6"></a>
 ---
 6 [Kita](#7)
@@ -213,6 +215,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <a id="8"></a>
 ---
@@ -241,6 +244,8 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <a id="9"></a>
 ---
@@ -252,7 +257,7 @@
 
 - ...
   - Įdomiausi failai:
-
+    
     - `/proc/$PID/cmdline` \
       Pilna proceso omandinė eilutė.
 
@@ -288,7 +293,7 @@
 
 - `/proc` FS leidžia „pjaustyti“ sistemos (ypač branduolio) būseną pačiais įvairiausiais pjūviais
 - Privalumas, kad programoms (angl. _Userspace_) nebereikia kreiptis į branduolį ir naudoti „brangius“ _Syscall_ kvietimus, pvz. `ioctl(2)`.
-- Trūkumas, kad sunkiau užtikrinti tarpprocesinį saugumą, informacijos nutekėjimą ir net išvengti atakų:
+- Trūkumas, kad sunkiau užtikrinti tarpprocesinį saugumą, informacijos nutekėjimą ir išvengti atakų:
   - [CS 6431. Security Issues in Web Applications](https://present5.com/cs-6431-security-issues-in-web-applications-vitaly/#:~:text=What%20Can%20Be%20Learned%20from%20Proc) \
     Bent tam tikrose versijose / distribucijose (iki `2014-10-09`):
     - "Peeping Tom" ataka
@@ -325,6 +330,8 @@
 
 ### Ir laukiu Jūsų klausimų (pačių įvairiausių).
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
