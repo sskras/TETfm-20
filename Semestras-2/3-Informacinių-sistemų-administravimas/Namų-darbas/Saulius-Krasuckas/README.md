@@ -52,6 +52,21 @@
   - tikslios branduolio konfigūracijos (daug ką įmanoma atjungti);
   - vykdomų procesų.
 - Direktorijų hierarchijoje ji talpinama čia: `/proc`
+  ```
+  $ ls -Al /proc
+  total 0
+  dr-xr-xr-x.  9 root           root                         0 May 24 14:46 1
+  dr-xr-xr-x.  9 root           root                         0 May 24 14:47 10
+  dr-xr-xr-x.  9 root           root                         0 May 24 11:48 1018
+  dr-xr-xr-x.  9 root           root                         0 May 24 11:48 1019
+    ...
+  dr-xr-xr-x.  4 root           root                         0 May 24 15:28 tty
+  -r--r--r--.  1 root           root                         0 May 24 15:28 uptime
+  -r--r--r--.  1 root           root                         0 May 24 15:28 version
+  -r--------.  1 root           root                         0 May 24 15:28 vmallocinfo
+  -r--r--r--.  1 root           root                         0 May 24 15:28 vmstat
+  -r--r--r--.  1 root           root                         0 May 24 15:28 zoneinfo
+  ```
 - Ši FS yra fantominė: 
   - ji diske fiziškai neegzistuoja;
   - dar vadinama pseudofailų sistema;
