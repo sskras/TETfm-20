@@ -141,7 +141,7 @@
   
 - `/proc/loadavg` \
   Sisteminė apkrova (angl. _System load_):
-  - tai santykinis kieks procesų, kurie eilėje laukia savo kodo vykdymo;
+  - tai santykinis kiekis procesų, kurie eilėje laukia savo kodo vykdymo;
   - jei ji < `1`, pvz. `0.8`, tada eilė nepilna, ir CPU turi `0.2` (20%) laisvo laiko;
   - jei ji > `1`, pvz. `1.8`, tada eilė užpildyta, ir `0.8` proceso laukia eilėje (CPU nespėja);
   - laukimas galimas dėl įv. priežasčių, pvz. CPU vykdo kitus procesus arba laukia I/O operacijos pabaigos.
@@ -150,7 +150,7 @@
     - branduolio **aktyvių procesinių vienetų** (angl. _Scheduling Entities_) skaičius,
     - branduolio **bendras procesinių vienetų** (t. y. procesų ir gijų) skaičius.
   
-  Maždaug atitinka pirmą komandos `w` eilutę
+  Maždaug atitinka pirmą komandos `w` išvestą eilutę
 
 <p>&nbsp;</p>
 
@@ -252,8 +252,8 @@
 9 [Kita](#10)
 
 ## Linux PROC failinė sistema: struktūra ir savybės
-### Svarbesni failai ir direktorijos, patęsimas
-#### Apie procesus, pabaiga:
+### Svarbesni failai ir direktorijos, pabaiga
+#### Apie procesus:
 
 - ...
   - Įdomiausi failai:
@@ -289,7 +289,7 @@
 ---
 10 [Kita](#11)
 
-### Reziume
+### Apibendrinimas
 
 - `/proc` FS leidžia „pjaustyti“ sistemos (ypač branduolio) būseną pačiais įvairiausiais pjūviais
 - Privalumas, kad programoms (angl. _Userspace_) nebereikia kreiptis į branduolį ir naudoti „brangius“ _Syscall_ kvietimus, pvz. `ioctl(2)`.
