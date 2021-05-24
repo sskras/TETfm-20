@@ -6,6 +6,9 @@
 - Ją operacijų sistemos (OS) branduolys susikuria atmintyje
 - Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
+- Tikslus direktorių ir failų rinkinys priklauso nuo:
+  - konkrečios branduolio Source kodo versijos ir revizijos;
+  - konkrečios konfigūracijos.
 - TODO: apie „nulinius“ failų dydžius (nes talpiname ne disko, ir dydis dinamiškai kinta)
 - Jai atsiradus ji buvo skirta talpinti informaciją **apie procesus**
 - Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
