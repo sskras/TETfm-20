@@ -24,7 +24,7 @@
           1 cpu MHz		: 1768.035
           4 model name	: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz
     ```
-  - _Shell_ srauto nukreipimo `>` arba _Syscall_ `write(2)`. Pvz:
+  - _Shell_ srauto nukreipimo `>` arba _Syscall_ `write(2)`. Pvz.:
     ```
     $ free -h
                   total        used        free      shared  buff/cache   available
@@ -268,7 +268,8 @@
 <a id="9"></a>
 ---
 9 [Kita](#10)
-#### Reziume
+
+### Reziume
 
 - `/proc` FS leidžia „pjaustyti“ sistemos (ypač branduolio) būseną pačiais įvairiausiais pjūviais
 - Privalumas, kad programoms (angl. _Userspace_) nebereikia kreiptis į branduolį ir naudoti „brangius“ _Syscall_ kvietimus, pvz. `ioctl(2)`.
@@ -282,3 +283,37 @@
   - [Linux Internals: How /proc/self/mem writes to unwritable memory](https://offlinemark.com/2021/05/12/an-obscure-quirk-of-proc/) \
     `2021-05` mėnesio naujiena: Proceso R/O _Virtual Memory_ puslapių pakeitimas per `/proc/*/mem`
 - Trūkumas #2: istoriškai ir nuo konfigūracijos kintanti struktūra.
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<a id="10"></a>
+---
+10
+
+## Linux PROC failinė sistema: struktūra ir savybės
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+# Labai dėkoju Jums už dėmesį :)
+
+### Ir laukiu Jūsų klausimų (pačių įvairiausių).
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
