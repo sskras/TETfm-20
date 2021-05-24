@@ -337,7 +337,7 @@
 
 # Labai dėkoju Jums už dėmesį :)
 
-### Ir laukiu klausimų (pačių įvairiausių)
+### Ir laukiu klausimų (įvairiausių)
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
