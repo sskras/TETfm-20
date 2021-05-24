@@ -5,10 +5,12 @@
   - _HP-UX_
   - _OpenBSD_ (nuo v5.7, 2015-05)
 - Leidžia lengvai pasiekti OS informaciją ir net joje kai ką pakeisti \
-  (panaudojant paprasčiausią skaitymo operaciją, `read()` _Syscall_ arba komandą `cat`)
+- Tam panaudojant paprasčiausią skaitymo operaciją: 
+  - komandą `cat`;
+  - `read(2)` _Syscall_.
 - Sukūrus `/proc` failinę sistemą (FS) ji buvo skirta talpinti informaciją **apie procesus**
-- Atspindima pradinė Unix idėja: **_"Everything is a file"_**, įskaitant ir procesus
-- Vėliau/Linukse pradėta talpinti informacija ir **apie visą sistemą** \
+- Taip atspindima pradinė Unix idėja: **_"Everything is a file"_** (įskaitant ir procesus)
+- Vėliau / Linukse pradėta talpinti informacija ir **apie visą sistemą** \
   (konkrečią mašinos ir OS kombinaciją)
 - Tikslus direktorijų ir failų rinkinys priklauso nuo:
   - branduolio Source kodo versijos ir revizijos (turinio);
