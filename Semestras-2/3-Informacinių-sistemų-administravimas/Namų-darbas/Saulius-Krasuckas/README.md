@@ -318,12 +318,21 @@
 11 (paskutinė skaidrė)
 
 ## Linux PROC failinė sistema: struktūra ir savybės
+### Literatūra
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+- `2001-12-03` https://tldp.org/LDP/sag/html/proc-fs.html  
+- `2004-07-30` https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html
+- `2009-06-09` https://www.kernel.org/doc/html/latest/filesystems/proc.html
+- `2014-10-09` https://present5.com/cs-6431-security-issues-in-web-applications-vitaly/
+- `2018-10-10` https://ops.tips/blog/a-month-of-proc/
+- `2018-10-25` https://ops.tips/blog/what-is-that-proc-thing/
+- `2019-01-31` https://www.geeksforgeeks.org/proc-file-system-linux/
+- `2019-04-27` https://speakerdeck.com/samuelkarp/linux-container-primitives-cgroups-namespaces-and-more-linuxfest-northwest-2019
+- `2020-03-16` https://www.redhat.com/sysadmin/linux-proc-filesystem
+- `2020-04-02` https://opensource.com/article/20/4/proc-filesystem
+- `2020-06-24` https://www.journaldev.com/41537/proc-file-system-in-linux
+- `2021-01-14` https://en.wikipedia.org/wiki/Procfs
+
 <p>&nbsp;</p>
 
 # Labai dėkoju Jums už dėmesį :)
