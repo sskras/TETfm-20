@@ -1,6 +1,11 @@
 ### Linux PROC failinė sistema: struktūra ir savybės
 
-- Tai interfeisas daugelį vidinių duomenų struktūrų Linux branduolyje
+- Sukūrus `/proc` FS ji buvo skirta talpinti informaciją **apie procesus**
+- Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
+- Tikslus direktorių ir failų rinkinys priklauso nuo:
+  - konkrečios branduolio Source kodo versijos ir revizijos;
+  - konkrečios konfigūracijos.
+- Tai **interfeisas į daugelį vidinių duomenų struktūrų** Linux branduolyje
 - Dauguma *nix OS jį irgi turi, bet ne visos, pvz. _OpenBSD_
 - Leidžia pasiekti daugelį branduolio vidinių struktūrų \
   (panaudojant paprasčiausią skaitymo operaciją, `read()` _Syscall_)
@@ -9,14 +14,9 @@
 - Ją operacijų sistemos (OS) branduolys susikuria atmintyje
 - Direktorijų hierarchijoje ji talpinama čia: `/proc`
 - Veikimo metu branduolys joje „sukuria“ daugelį direktorijų ir failų
-- Visi failai, išskyrus keletą, yra 0B dydžio
-- nes jie talpinami ne įprastoje talpykloje, o kartais kinta labai dinamiškai \
-  (tad dydžių apskaičiavimas sukeltų papildomą CPU apkrovą)
-- Jai atsiradus ji buvo skirta talpinti informaciją **apie procesus**
-- Vėliau pradėta talpinti informacija ir **apie visą sistemą** (konkrečią mašinos ir OS kombinaciją)
-- Tikslus direktorių ir failų rinkinys priklauso nuo:
-  - konkrečios branduolio Source kodo versijos ir revizijos;
-  - konkrečios konfigūracijos.
+- Visi failai, išskyrus `/proc/kcore` ir `/proc/bus/pci/*/*`, yra 0B dydžio
+- Nes talpinami ne įprastoje talpykloje, o kinta kartais labai dinamiškai \
+  (ir dydžių apskaičiavimas sukeltų papildomą CPU apkrovą be didesnės naudos)
 - Jos failai įprastai yra tekstiniai (ASCII), bet ne visada
 - Net ir kai kurie tekstiniai jos duomenys nėra lengvai skaitomi \
   (pvz. ilgai eilė skaičių, atskirtų tarpais)
