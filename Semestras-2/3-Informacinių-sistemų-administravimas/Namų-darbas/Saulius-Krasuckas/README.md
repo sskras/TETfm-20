@@ -20,7 +20,6 @@
 - Vėliau / Linukse pradėta talpinti informacija ir **apie visą sistemą** \
   (konkrečią mašinos ir OS kombinaciją)
 
-<p>&nbsp;</p>
 
 [Kita](#2)
 
