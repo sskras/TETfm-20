@@ -77,16 +77,24 @@
 
 - Veikimo metu branduolys joje patalpina daugelį direktorijų ir failų
 - Visi failai, išskyrus `/proc/kcore` ir `/proc/bus/pci/*/*`, yra 0B dydžio
-- nes talpinami ne įprastoje kaupiklyje, o kinta dinamiškai, kartais itin staigai \
-  (dydžių apskaičiavimas sukeltų papildomą CPU apkrovą be didesnės naudos)
+  ```
+  $ sudo du -hs /proc
+  0	/proc
+  ```
+- ... nes talpinami ne įprastame kaupiklyje, o kinta dinamiškai, kartais itin staigai \
+  (dydžių apskaičiavimas sukeltų papildomą CPU apkrovą be didesnės naudos, todėl neatliekamas)
 - Jos failai įprastai yra tekstiniai (ASCII), bet ne visada
+  ```
+  $ cat /proc/loadavg 
+  0.14 0.16 0.15 1/909 24928
+  ```
 - Net ir kai kurie tekstiniai jos duomenys nėra lengvai skaitomi \
   (pvz. ilgai eilė skaičių, atskirtų tarpais)
 - Todėl nemažai komandų tik nuskaito šiuos duomenis iš `/proc`, juos performatuoja ir išveda į ekraną patogesniu pavidalu
 - Dauguma jos failų turi tik skaitymo režimą
 - Tačiau daliai failų galioja ir įrašymas
 - Tokiu būdu keičiami kai kurie procesų arba visos OS (branduolio) nustatymai
-- Šitaip įgalinamas dinaminis keitimas: be branduolio perkompiliavimo ir be perkrovimo (kol OS veikia)
+- Ir įgalinamas dinaminis keitimas: be branduolio perkompiliavimo ir be perkrovimo (kol OS veikia)
 - Išsami informacija: `man proc`, 
 - aprašo kiekvieną čią talpinamą failą ir tikslią jo struktūrą
 - Visų šių duomenų apibendrinimui yra programa `procinfo`
