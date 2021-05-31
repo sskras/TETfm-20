@@ -4,3 +4,9 @@
 **Parengė:** doc. dr. Lukas Pavilanskas \
 lukas.pavilanskas@ieee.org \
 2021-02-04
+
+#### 1. Darbo tikslas
+
+Ištirti, įsisavinti ir išmokti analizuoti paketinių duomenų srautus ir jų charakteristikas.
+Savarankiškai išanalizuoti, įvertinti jų tipus ir matematinius modelius.
+Gebėti įvertinti susijusių su šių srautų charakteristikomis paslaugų kokybės rodiklius.
