@@ -56,6 +56,7 @@ Savarankiškai išanalizuoti, įvertinti jų tipus ir matematinius modelius.
 
 Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, kokybės rodiklius.
 
+
 ### 2. Bendra _Capture_ failo statistika
 
 [source,C]
@@ -103,4 +104,17 @@ Interface #0 info:
 | Vidutinė sparta           | 833 kbps
 | Vidutinis paketo dydis    | 761.65 B
 | Vidutinė paketinė sparta  | 136 pps
+|===
 
+
+### 3. Išsamūs rezultatai
+
+1.{nbsp}
+
+ * Šaltinio ir paskirties mazgai:
+[source,C]
+----
+T
+----
+ * Juos sugrupuoti pagal srautus.
+ * Gautas mazgų grupes (ir srautus) charakterizuoti ir palyginti.
