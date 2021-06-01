@@ -59,7 +59,7 @@ Pagrįsti ir priartinti matematiniai pateiktų srautų modeliai ir jiems taikyti
 
 #### 4. Užduoties vykdymui naudotinos programinės priemonės
 
-**Ethereal/Wireshark** (https://www.wireshark.org/), **tcpdump** (http://www.tcpdump.org/), **libpcap** (http://yuba.stanford.edu/~cascado/pcap/section1.html), OS: **Linux**.
+**Ethereal/Wireshark** (https://www.wireshark.org/), **tcpdump** (http://www.tcpdump.org/), **libpcap** (http://yuba.stanford.edu/~casado/pcap/section1.html), OS: **Linux**.
 
 #### 5. Terminai, darbo eiga
 
@@ -67,6 +67,3 @@ Pagrįsti ir priartinti matematiniai pateiktų srautų modeliai ir jiems taikyti
 Kiekvieno užsiėmimo metu studentai pristato atliktą užduoties dalį
 bei konsultuojasi su dėstytoju iškilusiais klausimais.
 Paskutiniame užsiėmime studentas pateikia galutinę atlikto darbo ataskaitą.
-
-
-
