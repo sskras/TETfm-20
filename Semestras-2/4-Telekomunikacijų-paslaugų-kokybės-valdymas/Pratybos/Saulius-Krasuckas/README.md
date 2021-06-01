@@ -1,1 +1,17 @@
+# Vilnius TECH
+## Elektronikos fakultetas
+### Kompiuterijos ir ryšių technologijų katedra
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Modulis ELKRM17205
+### Telekomunikacijų pauslaugų kokybės valdymas
+#### Pratybų užduotis nr. 6, `1520080923.pcap.gz`
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
