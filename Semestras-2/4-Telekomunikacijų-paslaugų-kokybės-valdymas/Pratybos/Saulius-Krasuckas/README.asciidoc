@@ -43,5 +43,18 @@ Modulis ELKRM17205
 VILNIUS, 2021
 
 <<<
+---
 
-### Antras puslapis
+[.text-left]
+## Ataskaita
+
+### 1. Darbo tikslas
+
+Ištirti, įsisavinti ir išmokti analizuoti paketinių duomenų srautus ir jų charakteristikas.
+
+Savarankiškai išanalizuoti, įvertinti jų tipus ir matematinius modelius.
+
+Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, kokybės rodiklius.
+
+### 2. Bendra _Capture_ failo statistika
+
