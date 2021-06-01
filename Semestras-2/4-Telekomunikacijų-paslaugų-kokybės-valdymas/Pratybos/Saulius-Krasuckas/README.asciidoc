@@ -58,3 +58,34 @@ Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, ko
 
 ### 2. Bendra _Capture_ failo statistika
 
+```
+[p@h ~]$ capinfos /rpool/VGTU-studijos/1520080923.pcap.gz 
+File name:           /rpool/VGTU-studijos/1520080923.pcap.gz
+File type:           Wireshark/tcpdump/... - pcap (gzip compressed)
+File encapsulation:  Ethernet
+File timestamp precision:  microseconds (6)
+Packet size limit:   file hdr: 65535 bytes
+Packet size limit:   inferred: 68 bytes
+Number of packets:   42k
+File size:           2,548kB
+Data size:           32MB
+Capture duration:    313.451723 seconds
+First packet time:   2008-09-21 21:00:00.000132
+Last packet time:    2008-09-21 21:05:13.451855
+Data byte rate:      104kBps
+Data bit rate:       833kbps
+Average packet size: 761.65 bytes
+Average packet rate: 136 packets/s
+SHA256:              a980de740f93624e935d70dafe42a9a6f2e8059d2ec0d1c2b7f9aabd167fc271
+RIPEMD160:           32115718d9119aba53bd051cca00e09c6e4e9410
+SHA1:                558060efa6af7189c445278fae88f79c24446d5a
+Strict time order:   True
+Number of interfaces in file: 1
+Interface #0 info:
+                     Encapsulation = Ethernet (1 - ether)
+                     Capture length = 65535
+                     Time precision = microseconds (6)
+                     Time ticks per second = 1000000
+                     Number of stat entries = 0
+                     Number of packets = 42858
+```
