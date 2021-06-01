@@ -58,7 +58,8 @@ Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, ko
 
 ### 2. Bendra _Capture_ failo statistika
 
-```
+[source,C]
+----
 [p@h ~]$ capinfos /rpool/VGTU-studijos/1520080923.pcap.gz 
 File name:           /rpool/VGTU-studijos/1520080923.pcap.gz
 File type:           Wireshark/tcpdump/... - pcap (gzip compressed)
@@ -88,4 +89,14 @@ Interface #0 info:
                      Time ticks per second = 1000000
                      Number of stat entries = 0
                      Number of packets = 42858
-```
+
+----
+
+|===
+| Paketų skaičius           | 42858
+| Duomenų apimtis           | 32 MiB
+| Įrašymo trukmė            | 313.451723 s
+| Vidutinė sparta           | 833 kbps
+| Vidutinis paketo dydis    | 761.65 B
+| Vidutinė paketinė sparta  | 136 pps
+
