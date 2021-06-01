@@ -92,6 +92,10 @@ Interface #0 info:
 
 ----
 
+<<<
+---
+
+.Suapvalinta pagrindinė statistika
 |===
 | Paketų skaičius           | 42858
 | Duomenų apimtis           | 32 MiB
