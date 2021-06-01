@@ -9,7 +9,7 @@ lukas.pavilanskas@ieee.org \
 
 Ištirti, įsisavinti ir išmokti analizuoti paketinių duomenų srautus ir jų charakteristikas.
 Savarankiškai išanalizuoti, įvertinti jų tipus ir matematinius modelius.
-Gebėti įvertinti susijusių su šių srautų charakteristikomis paslaugų kokybės rodiklius.
+Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, kokybės rodiklius.
 
 #### 2. Laukiami rezultatai
 
