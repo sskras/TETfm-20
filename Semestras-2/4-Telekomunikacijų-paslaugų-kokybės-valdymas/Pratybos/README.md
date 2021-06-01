@@ -14,3 +14,5 @@ Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, ko
 #### 2. Laukiami rezultatai
 
 Skaitiškai, statistiškai ir grafiškai pateikti duomenų srautus charakterizuojantys rezultatai.
+Pagrįsti ir priartinti matematiniai pateiktų srautų modeliai ir jiems taikytini QoS rodikliai.
+**Apibendrintos išvados**.
