@@ -50,16 +50,19 @@ Pagrįsti ir priartinti matematiniai pateiktų srautų modeliai ir jiems taikyti
    
 8. Papildomos užduotys:
    
-   * **Naudojantis literatūra** parinkti **labiausiai atitinkantį teorinį matematinį srauto modelį**.
+   a. **Naudojantis literatūra** parinkti **labiausiai atitinkantį teorinį matematinį srauto modelį**.
      Pasirinkimą nuosekliai pagrįsti ir paaiškinti pasirinkto srautą charakterizuojančio matematinio modelio kintamuosius ir fizikinę prasmę.
      
-   * Susiejant gautus rezultatus su QoS rodikliais, suformuluoti bendras pateikto paketinio srauto **charakterizuojančias išvadas**.
+   b. Susiejant gautus rezultatus su QoS rodikliais, suformuluoti bendras pateikto paketinio srauto **charakterizuojančias išvadas**.
      Apibūdinti srautą bei pateikti pavyzdžius, kur toks srautas gali būti sutinkamas.
      **Išvadose turi būti pateikti pagrįsti QoS užtikrinančių priemonių pasiūlymai.**
 
 #### 4. Užduoties vykdymui naudotinos programinės priemonės
 
-**Ethereal/Wireshark** (https://www.wireshark.org/), **tcpdump** (http://www.tcpdump.org/), **libpcap** (http://yuba.stanford.edu/~casado/pcap/section1.html), OS: **Linux**.
+* **Ethereal/Wireshark** (https://www.wireshark.org/)
+* **tcpdump** (http://www.tcpdump.org/)
+* **libpcap** (http://yuba.stanford.edu/~casado/pcap/section1.html)
+* OS: **Linux**
 
 #### 5. Terminai, darbo eiga
 
