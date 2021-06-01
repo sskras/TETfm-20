@@ -13,4 +13,4 @@ Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, ko
 
 #### 2. Laukiami rezultatai
 
-Skaitiškai, statistiškai ir grafiškai pateiktus duomenų srautus charakterizuojantys rezultatai.
+Skaitiškai, statistiškai ir grafiškai pateikti duomenų srautus charakterizuojantys rezultatai.
