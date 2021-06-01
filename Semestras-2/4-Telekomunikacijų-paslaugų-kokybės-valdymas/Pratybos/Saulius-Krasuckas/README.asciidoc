@@ -1,21 +1,47 @@
-= Vilnius TECH
+# Vilnius TECH
 
-== Elektronikos fakultetas
+[.text-center]
+## Elektronikos fakultetas
 
-=== Kompiuterijos ir ryšių technologijų katedra
+### Kompiuterijos ir ryšių technologijų katedra
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+{nbsp}
 
-==== Modulis ELKRM17205
+{nbsp}
 
-=== Telekomunikacijų pauslaugų kokybės valdymas
+{nbsp}
 
-==== Pratybų užduotis nr. 6, `1520080923.pcap.gz`
+{nbsp}
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+### Telekomunikacijų paslaugų kokybės valdymas
+Modulis ELKRM17205
+
+#### Pratybų užduotis nr. 6, +
+`1520080923.pcap.gz`
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** doc. dr. Lukas Pavilanskas
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2021
+
+<<<
+
+### Antras puslapis
