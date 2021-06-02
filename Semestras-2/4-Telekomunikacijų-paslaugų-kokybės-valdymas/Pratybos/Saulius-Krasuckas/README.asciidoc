@@ -62,6 +62,9 @@ Gebėti įvertinti paslaugų, susijusių su šių srautų charakteristikomis, ko
 Statistika nuskaityta su _Wireshark_ paketo įrankiu `capinfos`:
 [source,C]
 ----
+[p@localhost VGTU-studijos]$ capinfos -v | head -1
+Capinfos (Wireshark) 3.4.0 (Git commit 9733f173ea5e)
+
 [p@h ~]$ capinfos /rpool/VGTU-studijos/1520080923.pcap.gz 
 File name:           /rpool/VGTU-studijos/1520080923.pcap.gz
 File type:           Wireshark/tcpdump/... - pcap (gzip compressed)
@@ -115,7 +118,10 @@ Interface #0 info:
  * Šaltinio ir paskirties mazgai:
 
 ----
-[p@h VGTU-studijos]$ tshark -Qnz endpoints,eth -r 1520080923.pcap.gz 2>/dev/null | awk '!/^Filter/ {print} /^[0-9a-f]/ && !/^ff:ff:ff:ff:ff:ff/ {HOST++} END {print "\nIš viso aptikta mazgų: "HOST}'
+[p@localhost VGTU-studijos]$ tshark -v | head -1
+TShark (Wireshark) 3.4.0 (Git commit 9733f173ea5e)
+
+[p@h VGTU-studijos]$ tshark -Qnz endpoints,eth -r 1520080923.pcap.gz 2>/dev/null | awk '!/^Filter/ {print} /^[0-9a-f]/ && !/^ff:ff:ff:ff:ff:ff/ {HOSTS++} END {print "\nIš viso aptikta mazgų: "HOSTS}'
 ================================================================================
 Ethernet Endpoints
                        |  Packets  | |  Bytes  | | Tx Packets | | Tx Bytes | | Rx Packets | | Rx Bytes |
@@ -127,6 +133,13 @@ ff:ff:ff:ff:ff:ff             14          1426          0               0       
 ================================================================================
 
 Iš viso aptikta mazgų: 4
+
+[p@localhost VGTU-studijos]$ tshark -Qz endpoints,eth -r 1520080923.pcap.gz 2>/dev/null | awk '!/^(Ethernet|Filter| |===)/ {print $1}'
+Foxconn_84:23:d8
+D-Link_30:95:99
+D-Link_30:95:66
+Broadcast
+IPv4mcast_40:98:8f
 ----
 
 .Mazgų sąrašas
