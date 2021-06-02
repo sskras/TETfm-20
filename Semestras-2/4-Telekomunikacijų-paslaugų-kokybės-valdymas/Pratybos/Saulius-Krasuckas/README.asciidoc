@@ -94,7 +94,7 @@ Interface #0 info:
 
 ----
 
-.Keli pagrindiniai įrašo rodikliai:
+.Keli pagrindiniai įrašo rodikliai
 |===
 | Paketų skaičius           | 42858
 | Duomenų apimtis           | 32 MiB
@@ -128,6 +128,18 @@ ff:ff:ff:ff:ff:ff             14          1426          0               0       
 
 Iš viso aptikta mazgų: 4
 ----
+
+.Mazgų sąrašas
+[options="header"]
+|===
+| Mazgas              |  Packets  |    Bytes    | Tx Packets   | Tx Bytes   | Rx Packets   | Rx Bytes 
+| `00:15:58:84:23:d8` |     42843 |    32641100 |    18519     |   2198543  |    24324     |  30442557   
+| `00:19:5b:30:95:99` |     34312 |    27475781 |    19851     |  25832172  |    14461     |   1643609   
+| `00:19:5b:30:95:66` |      8546 |     5166906 |     4488     |   4611972  |     4058     |    554934   
+| `ff:ff:ff:ff:ff:ff` |        14 |        1426 |        0     |         0  |       14     |      1426   
+| `01:00:5e:40:98:8f` |         1 |         161 |        0     |         0  |        1     |       161   
+|===
+
 
  * Juos sugrupuoti pagal srautus.
 
