@@ -1,8 +1,13 @@
-Vilniaus Gedimino technikos universitetas
-Kompiuterijos ir ryšių inžinerijos katedra
-Pažangūs interneto protokolai. Kursinio projekto užduotis
+[.text-center]
+==== Vilniaus Gedimino technikos universitetas
+[.text-center]
+==== Kompiuterijos ir ryšių inžinerijos katedra
+[.text-center]
+== Pažangūs interneto protokolai. Kursinio projekto užduotis
 
-Individuali užduotis Nr.:7
+==== Individuali užduotis Nr.: 7
+[.text-left]
+===== {nbsp}
 
 Studentui: Sauliui Krasuckui
 Pavadinimas: TCP HighSpeed, TCP BIC protokolų palyginimas
