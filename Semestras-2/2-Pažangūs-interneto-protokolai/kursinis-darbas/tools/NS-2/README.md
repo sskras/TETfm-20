@@ -3,6 +3,29 @@ For this course [@saulius-krasuckas](saulius-krasuckas) needs to run NS-2 on the
 Let's try building it in the form of `.rpm` from some `.spec` files found on the net:
 
 - [x] 1. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/ns2.spec
+  - [x] 1. Needs to downgrade the error checking:
+  ```
+  --- a/configure	2021-06-07 10:44:59.039389424 +0300
+  +++ b/configure	2021-06-07 10:45:42.963392675 +0300
+  @@ -5118,14 +5118,14 @@
+   if test "$enable_debug" = "yes" ; then
+    V_CCOPT="-g"
+    if test "$CC" = gcc ; then
+  -		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings -Wno-parentheses -Werror"
+  +		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings -fpermissive -Wno-parentheses -Werror"
+      V_DEFINE="$V_DEFINE -fsigned-char -fno-inline"
+    fi
+   else
+    V_CCOPT="$OonS"
+    V_DEFINE="$V_DEFINE -DNDEBUG"
+    if test "$CC" = gcc ; then
+  -		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings"
+  +		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings -fpermissive"
+    fi
+   fi
+
+  ```
+  - [ ] X. End of `ns2.spec` build
 - [x] 2. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/tclcl.spec
 - [x] 3. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/otcl.spec
   - [x] 1. Needs to drop the patch: 
@@ -27,5 +50,29 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
    %build
    ./configure --enable-static
   ```
+  - [x] X. End of `otcl` build
 - [ ] 4. `TODO`
 - [x] X. End of SPECs
+
+The needed dev-dependencies:
+```
+Packages Altered:
+    Dep-Install expat-devel-2.1.0-12.el7.x86_64        @base
+    Dep-Install fontconfig-devel-2.13.0-4.3.el7.x86_64 @base
+    Dep-Install freetype-devel-2.8-14.el7_9.1.x86_64   @updates
+    Install     gcc-c++-4.8.5-44.el7.x86_64            @base
+    Install     glibc-static-2.17-324.el7_9.x86_64     @updates
+    Dep-Install libICE-devel-1.0.9-9.el7.x86_64        @base
+    Dep-Install libSM-devel-1.2.2-2.el7.x86_64         @base
+    Dep-Install libXft-devel-2.3.2-2.el7.x86_64        @base
+    Dep-Install libXrender-devel-0.9.10-1.el7.x86_64   @base
+    Install     libXt-devel-1.1.5-3.el7.x86_64         @base
+    Dep-Install libpng-devel-2:1.5.13-8.el7.x86_64     @base
+    Dep-Install libstdc++-devel-4.8.5-44.el7.x86_64    @base
+    Install     libstdc++-static-4.8.5-44.el7.x86_64   @base
+    Dep-Install libuuid-devel-2.23.2-65.el7_9.1.x86_64 @updates
+    Dep-Install tcl-1:8.5.13-8.el7.x86_64              @base
+    Install     tcl-devel-1:8.5.13-8.el7.x86_64        @base
+    Dep-Install tk-1:8.5.13-6.el7.x86_64               @base
+    Install     tk-devel-1:8.5.13-6.el7.x86_64         @base
+```
