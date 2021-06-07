@@ -3,6 +3,7 @@ For this course [@saulius-krasuckas](saulius-krasuckas) needs to run NS-2 on the
 Let's try building it in the form of `.rpm` from some `.spec` files found on the net:
 
 - [x] 1. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/ns2.spec
+- [x] 2. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/tclcl.spec
 - [x] X. End of SPECs
 
 
