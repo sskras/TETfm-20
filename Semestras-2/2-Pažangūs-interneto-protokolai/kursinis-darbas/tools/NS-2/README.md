@@ -72,7 +72,7 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
    ./configure --enable-static
   ```
   - [x] X. End of `otcl` build
-- [ ] 4. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/nam.spec
+- [x] 4. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/nam.spec
   - [x] 1. Needs to downgrade the error checking:
   ```
 	--- nam.spec	2021-06-07 11:07:47.684490724 +0300
