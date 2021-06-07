@@ -76,12 +76,12 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
 - [x] X. End of SPECs
 
 The needed dev-dependencies:
-- gcc-c++
-- libXt-devel 
-- tcl-devel 
-- tk-devel 
-- libstdc++-static 
-- glibc-static
+- `gcc-c++`
+- `libXt-devel`
+- `tcl-devel`
+- `tk-devel`
+- `libstdc++-static`
+- `glibc-static`
 
 The CLI:
 ```
