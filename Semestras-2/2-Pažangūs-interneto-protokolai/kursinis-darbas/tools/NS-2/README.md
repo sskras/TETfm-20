@@ -112,3 +112,15 @@ Packages Altered:
     Dep-Install tk-1:8.5.13-6.el7.x86_64               @base
     Install     tk-devel-1:8.5.13-6.el7.x86_64         @base
 ```
+
+More deps:
+```
+[p@localhost SPECS]$ rpmbuild -v -bl nam.spec 
+error: Failed build dependencies:
+	libXmu-devel is needed by nam-1.15-5.el7.x86_64
+
+[p@localhost SPECS]$ sudo yum install libXmu-devel
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+  ...
+```
