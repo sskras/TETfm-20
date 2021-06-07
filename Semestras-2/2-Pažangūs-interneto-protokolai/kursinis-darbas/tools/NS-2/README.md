@@ -4,6 +4,7 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
 
 - [x] 1. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/ns2.spec
 - [x] 2. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/tclcl.spec
+- [x] 3. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/otcl.spec
 - [x] X. End of SPECs
 
 
