@@ -73,6 +73,50 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
   ```
   - [x] X. End of `otcl` build
 - [ ] 4. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/nam.spec
+  - [x] 1. Needs to downgrade the error checking:
+  ```
+	--- nam.spec	2021-06-07 11:07:47.684490724 +0300
+	+++ nam-el7.9.spec	2021-06-07 11:11:57.386509205 +0300
+	@@ -10,6 +10,7 @@
+	 Source0:        https://sourceforge.net/projects/nsnam/files/nam-1/%{version}/%{name}-src-%{version}.tar.gz
+	 Patch0:		https://gitlab.com/ThanosApostolou/fedora-specs/raw/master/SOURCES/nam-1.15-gcc61.patch
+	 Patch1:		https://gitlab.com/ThanosApostolou/fedora-specs/raw/master/SOURCES/nam-1.15-tcl86.patch
+	+Patch2:		nam-1.15-gcc-use-fpermissive.patch
+
+	 Requires:	libX11
+	 Requires:	libXt
+	@@ -33,6 +34,7 @@
+	 %setup
+	 %patch0 -p1
+	 %patch1 -p1
+	+%patch2 -p1
+
+	 %build
+	 ./configure --prefix=/usr
+  ```
+  The downgrading patch:
+  ```
+	--- a/configure	2021-06-07 11:13:50.991517614 +0300
+	+++ b/configure	2021-06-07 11:14:37.867521083 +0300
+	@@ -5037,14 +5037,14 @@
+	 if test "$enable_debug" = "yes" ; then
+		V_CCOPT="-g"
+		if test "$CC" = gcc ; then
+	-		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings -Wno-parentheses -Werror"
+	+		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings -fpermissive -Wno-parentheses -Werror"
+			V_DEFINE="$V_DEFINE -fsigned-char -fno-inline"
+		fi
+	 else
+		V_CCOPT="$OonS"
+		V_DEFINE="$V_DEFINE -DNDEBUG"
+		if test "$CC" = gcc ; then
+	-		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings"
+	+		V_CCOPT="$V_CCOPT -Wall -Wno-write-strings -fpermissive"
+		fi
+	 fi
+
+  ```
+  - [x] X. End of `nam.spec` build
 - [x] X. End of SPECs
 
 The needed dev-dependencies:
