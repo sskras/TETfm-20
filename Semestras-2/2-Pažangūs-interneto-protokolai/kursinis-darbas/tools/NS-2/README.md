@@ -46,7 +46,7 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
    fi
 
   ```
-  - [ ] X. End of `ns2.spec` build
+  - [x] X. End of `ns2.spec` build
 - [x] 2. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/tclcl.spec
 - [x] 3. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/otcl.spec
   - [x] 1. Needs to drop the patch: 
