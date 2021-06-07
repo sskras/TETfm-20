@@ -168,3 +168,100 @@ Loaded plugins: fastestmirror, langpacks
 Loading mirror speeds from cached hostfile
   ...
 ```
+
+Installation:
+```
+$ sudo yum install nam-1.15-5.el7.x86_64.rpm ns2-2.35-4.el7.x86_64.rpm tclcl-1.20-4.el7.x86_64.rpm otcl-1.14-6.el7.x86_64.rpm 
+Loaded plugins: fastestmirror, langpacks
+Examining nam-1.15-5.el7.x86_64.rpm: nam-1.15-5.el7.x86_64
+Marking nam-1.15-5.el7.x86_64.rpm to be installed
+Examining ns2-2.35-4.el7.x86_64.rpm: ns2-2.35-4.el7.x86_64
+Marking ns2-2.35-4.el7.x86_64.rpm to be installed
+Examining tclcl-1.20-4.el7.x86_64.rpm: tclcl-1.20-4.el7.x86_64
+Marking tclcl-1.20-4.el7.x86_64.rpm to be installed
+Examining otcl-1.14-6.el7.x86_64.rpm: otcl-1.14-6.el7.x86_64
+Marking otcl-1.14-6.el7.x86_64.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package nam.x86_64 0:1.15-5.el7 will be installed
+--> Processing Dependency: tcl for package: nam-1.15-5.el7.x86_64
+Loading mirror speeds from cached hostfile
+ * base: centos.koyanet.lv
+ * epel: ftp.icm.edu.pl
+ * extras: centos.hitme.net.pl
+ * nux-dextop: mirror.li.nux.ro
+ * rpmfusion-free-updates: ftp.icm.edu.pl
+ * rpmfusion-nonfree-tainted: ftp.icm.edu.pl
+ * rpmfusion-nonfree-updates: ftp.icm.edu.pl
+ * updates: centos.slaskdatacenter.com
+https://copr-be.cloud.fedoraproject.org/results/gnikandrov/tox-im/epel-7-x86_64/repodata/repomd.xml: [Errno 14] HTTPS Error 404 - Not Found
+Trying other mirror.
+To address this issue please refer to the below wiki article 
+
+https://wiki.centos.org/yum-errors
+
+If above article doesn't help to resolve this issue please use https://bugs.centos.org/.
+
+--> Processing Dependency: tk for package: nam-1.15-5.el7.x86_64
+--> Processing Dependency: libtcl8.5.so()(64bit) for package: nam-1.15-5.el7.x86_64
+--> Processing Dependency: libtk8.5.so()(64bit) for package: nam-1.15-5.el7.x86_64
+---> Package ns2.x86_64 0:2.35-4.el7 will be installed
+---> Package otcl.x86_64 0:1.14-6.el7 will be installed
+---> Package tclcl.x86_64 0:1.20-4.el7 will be installed
+--> Running transaction check
+---> Package tcl.x86_64 1:8.5.13-8.el7 will be installed
+---> Package tk.x86_64 1:8.5.13-6.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================
+ Package                 Arch                     Version                             Repository                                  Size
+=======================================================================================================================================
+Installing:
+ nam                     x86_64                   1.15-5.el7                          /nam-1.15-5.el7.x86_64                     810 k
+ ns2                     x86_64                   2.35-4.el7                          /ns2-2.35-4.el7.x86_64                     5.1 M
+ otcl                    x86_64                   1.14-6.el7                          /otcl-1.14-6.el7.x86_64                    186 k
+ tclcl                   x86_64                   1.20-4.el7                          /tclcl-1.20-4.el7.x86_64                   1.2 M
+Installing for dependencies:
+ tcl                     x86_64                   1:8.5.13-8.el7                      base                                       1.9 M
+ tk                      x86_64                   1:8.5.13-6.el7                      base                                       1.4 M
+
+Transaction Summary
+=======================================================================================================================================
+Install  4 Packages (+2 Dependent packages)
+
+Total size: 11 M
+Total download size: 3.3 M
+Installed size: 15 M
+Is this ok [y/d/N]: 
+Downloading packages:
+(1/2): tcl-8.5.13-8.el7.x86_64.rpm                                                                              | 1.9 MB  00:00:00     
+(2/2): tk-8.5.13-6.el7.x86_64.rpm                                                                               | 1.4 MB  00:00:01     
+---------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                  2.3 MB/s | 3.3 MB  00:00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:tcl-8.5.13-8.el7.x86_64                                                                                           1/6 
+  Installing : 1:tk-8.5.13-6.el7.x86_64                                                                                            2/6 
+  Installing : otcl-1.14-6.el7.x86_64                                                                                              3/6 
+  Installing : tclcl-1.20-4.el7.x86_64                                                                                             4/6 
+  Installing : nam-1.15-5.el7.x86_64                                                                                               5/6 
+  Installing : ns2-2.35-4.el7.x86_64                                                                                               6/6 
+  Verifying  : tclcl-1.20-4.el7.x86_64                                                                                             1/6 
+  Verifying  : 1:tcl-8.5.13-8.el7.x86_64                                                                                           2/6 
+  Verifying  : nam-1.15-5.el7.x86_64                                                                                               3/6 
+  Verifying  : 1:tk-8.5.13-6.el7.x86_64                                                                                            4/6 
+  Verifying  : ns2-2.35-4.el7.x86_64                                                                                               5/6 
+  Verifying  : otcl-1.14-6.el7.x86_64                                                                                              6/6 
+
+Installed:
+  nam.x86_64 0:1.15-5.el7         ns2.x86_64 0:2.35-4.el7         otcl.x86_64 0:1.14-6.el7         tclcl.x86_64 0:1.20-4.el7        
+
+Dependency Installed:
+  tcl.x86_64 1:8.5.13-8.el7                                          tk.x86_64 1:8.5.13-6.el7                                         
+
+Complete!
+```
