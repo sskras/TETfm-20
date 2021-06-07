@@ -5,6 +5,27 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
 - [x] 1. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/ns2.spec
   - [x] 1. Needs to downgrade the error checking:
   ```
+  --- ns2.spec	2021-06-07 10:49:33.846409764 +0300
+  +++ ns2-el7.9.spec	2021-06-07 10:49:36.114409932 +0300
+  @@ -12,6 +12,7 @@
+   Patch1:		https://gitlab.com/ThanosApostolou/fedora-specs/raw/master/SOURCES/ns-2.35-tcl86.patch
+   Patch2:		https://gitlab.com/ThanosApostolou/fedora-specs/raw/master/SOURCES/ns-2.35-getopts.patch
+   Patch3:		https://gitlab.com/ThanosApostolou/fedora-specs/raw/master/SOURCES/ns-2.35-gcc-compile-errors.patch
+  +Patch4:		ns-2.35-gcc-use-fpermissive.patch
+
+   Requires:	libX11
+   Requires:	libXt
+  @@ -35,6 +36,7 @@
+   %patch1 -p1
+   %patch2 -p1
+   %patch3 -p1
+  +%patch4 -p1
+
+   %build
+   ./configure --prefix=/usr --enable-static
+  ```
+  The downgrading patch:
+  ```
   --- a/configure	2021-06-07 10:44:59.039389424 +0300
   +++ b/configure	2021-06-07 10:45:42.963392675 +0300
   @@ -5118,14 +5118,14 @@
