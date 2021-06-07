@@ -27,5 +27,5 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
    %build
    ./configure --enable-static
   ```
-  - [ ] 
+- [ ] 4. `TODO`
 - [x] X. End of SPECs
