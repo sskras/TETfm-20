@@ -76,6 +76,21 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
 - [x] X. End of SPECs
 
 The needed dev-dependencies:
+- gcc-c++
+- libXt-devel 
+- tcl-devel 
+- tk-devel 
+- libstdc++-static 
+- glibc-static
+
+The CLI:
+```
+[p@localhost SPECS]$ sudo yum install gcc-c++ libXt-devel tcl-devel tk-devel libstdc++-static glibc-static
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+```
+
+The yum history info:
 ```
 Packages Altered:
     Dep-Install expat-devel-2.1.0-12.el7.x86_64        @base
