@@ -276,7 +276,8 @@ set a 20
 set b 30
 set c [expr $a + $b]
 puts $c
-
+```
+```
 [p@localhost ns-2-test]$ ns add.tcl
 50
 ```
@@ -287,7 +288,8 @@ Test simulation:
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  2113  100  2113    0     0   2908      0 --:--:-- --:--:-- --:--:--  2906
-
+```
+```
 [p@localhost ns-2-test]$ cat simple.tcl 
 #Create a simulator object
 set ns [new Simulator]
@@ -381,7 +383,8 @@ puts "CBR interval = [$cbr set interval_]"
 
 #Run the simulation
 $ns run
-
+```
+```
 [p@localhost ns-2-test]$ ns simple.tcl 
 CBR packet size = 1000
 CBR interval = 0.0080000000000000002
