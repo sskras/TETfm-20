@@ -265,3 +265,18 @@ Dependency Installed:
 
 Complete!
 ```
+
+Testing:
+```
+[p@localhost src]$ mkdir ns-2-test
+[p@localhost src]$ cd ns-2-test
+[p@localhost ns-2-test]$ vim add.tcl
+[p@localhost ns-2-test]$ cat add.tcl
+set a 20
+set b 30
+set c [expr $a + $b]
+puts $c
+
+[p@localhost ns-2-test]$ ns add.tcl
+50
+```
