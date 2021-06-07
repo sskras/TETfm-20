@@ -72,7 +72,7 @@ Let's try building it in the form of `.rpm` from some `.spec` files found on the
    ./configure --enable-static
   ```
   - [x] X. End of `otcl` build
-- [ ] 4. https://gitlab.com/ThanosApostolou/fedora-specs/-/blob/master/SPECS/nam.spec
+- [ ] 4. https://gitlab.com/ThanosApostolou/fedora-specs/-/raw/master/SPECS/nam.spec
 - [x] X. End of SPECs
 
 The needed dev-dependencies:
