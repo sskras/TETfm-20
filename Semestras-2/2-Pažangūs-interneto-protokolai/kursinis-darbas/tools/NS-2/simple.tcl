@@ -1,3 +1,49 @@
+# Sample output:
+#
+#    $ cat out.tr | grep '^r .* 2 3' | awk -f Throughput.awk
+#    0.24s: 1.08 Mbps
+#    0.35s: 1.00 Mbps
+#    0.45s: 1.00 Mbps
+#    0.55s: 1.00 Mbps
+#    0.66s: 1.00 Mbps
+#    0.76s: 1.00 Mbps
+#    0.87s: 1.00 Mbps
+#    0.97s: 1.00 Mbps
+#    1.07s: 1.00 Mbps
+#    1.18s: 1.20 Mbps
+#    1.28s: 1.53 Mbps
+#    1.38s: 1.70 Mbps
+#    1.48s: 1.70 Mbps
+#    1.58s: 1.70 Mbps
+#    1.68s: 1.28 Mbps
+#    1.79s: 1.53 Mbps
+#    1.89s: 1.70 Mbps
+#    1.99s: 1.70 Mbps
+#    2.09s: 1.70 Mbps
+#    2.19s: 1.70 Mbps
+#    2.29s: 1.70 Mbps
+#    2.39s: 1.34 Mbps
+#    2.50s: 1.53 Mbps
+#    2.60s: 1.61 Mbps
+#    2.70s: 1.70 Mbps
+#    2.80s: 1.70 Mbps
+#    2.90s: 1.70 Mbps
+#    3.00s: 1.70 Mbps
+#    3.10s: 1.70 Mbps
+#    3.20s: 1.70 Mbps
+#    3.31s: 1.58 Mbps
+#    3.41s: 1.32 Mbps
+#    3.51s: 1.61 Mbps
+#    3.61s: 1.70 Mbps
+#    3.71s: 1.70 Mbps
+#    3.81s: 1.70 Mbps
+#    3.91s: 1.70 Mbps
+#    4.01s: 1.70 Mbps
+#    4.12s: 1.70 Mbps
+#    4.23s: 1.12 Mbps
+#    4.33s: 1.00 Mbps
+#    4.43s: 1.00 Mbps
+
 BEGIN {
 	recv = 0
 	currTime = prevTime = 0
