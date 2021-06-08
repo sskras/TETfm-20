@@ -62,3 +62,7 @@ $udp_source_2 set fid_ 2
 
 # Prijungiame šį srauto šaltinį prie siustuvo_2:
 $ns attach-agent $node_siustuvas_2 $udp_source_2
+
+# Tegul imtuvas priima ir jį (per agentą su turbūt begaliniu pralaidumu, Null):
+set udp_destination [new Agent/Null]
+$ns attach-agent $node_imtuvas $udp_destination
