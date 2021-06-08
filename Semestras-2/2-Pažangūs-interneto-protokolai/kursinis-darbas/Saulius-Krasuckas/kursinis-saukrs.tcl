@@ -38,3 +38,6 @@ set tcp_source_1 [new Agent/TCP]
 # Priskiriame jam Flow-id ir klasę:
 $tcp_source_1 set fid_ 1
 $tcp_source_1 set class_ 2
+
+# Prijungiame srauto šaltinį prie siustuvo_1:
+$ns attach-agent $node_siustuvas_1 $tcp_source_1
