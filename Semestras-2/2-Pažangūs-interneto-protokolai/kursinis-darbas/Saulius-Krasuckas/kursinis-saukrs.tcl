@@ -7,6 +7,7 @@ $ns trace-all $nf
 
 # Prireiks uždarymo procedūros:
 proc finish {} {
+    puts "Simuliacijos pabaiga."
     # pasiimam pora globalių kintamųjų:
     global ns nf
     # išsaugom treiso likučius į failą:
@@ -83,3 +84,11 @@ $ns at 0.1 "$cbr2 start"
 $ns at 1.0 "$ftp1 start"
 $ns at 4.0 "$ftp1 stop"
 $ns at 4.5 "$cbr2 stop"
+
+# Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:
+$ns at 5.0 "finish"
+
+puts "Simuliacijos pradžia..."
+
+# Pradedame:
+$ns run
