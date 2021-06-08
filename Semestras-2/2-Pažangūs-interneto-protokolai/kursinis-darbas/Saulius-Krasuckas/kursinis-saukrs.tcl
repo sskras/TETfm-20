@@ -53,3 +53,9 @@ $ns connect $tcp_source_1 $tcp_destination
 set ftp1 [new Application/FTP]
 $ftp1 attach-agent $tcp_source_1
 $ftp1 set type_ FTP
+
+# Tegul siustuvas_2 turi vieną UDP srauto šaltinį:
+set udp_source_2 [new Agent/UDP]
+
+# Priskiriame jam Flow-id:
+$udp_source_2 set fid_ 2
