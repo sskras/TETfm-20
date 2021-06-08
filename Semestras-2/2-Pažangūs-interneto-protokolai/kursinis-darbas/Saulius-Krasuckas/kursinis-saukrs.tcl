@@ -41,3 +41,7 @@ $tcp_source_1 set class_ 2
 
 # Prijungiame srauto šaltinį prie siustuvo_1:
 $ns attach-agent $node_siustuvas_1 $tcp_source_1
+
+# Tegul imtuvas priima irgi TCP transportu:
+set tcp_destination [new Agent/TCPSink]
+$ns attach-agent $node_imtuvas $tcp_destination
