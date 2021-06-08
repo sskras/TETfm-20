@@ -66,3 +66,6 @@ $ns attach-agent $node_siustuvas_2 $udp_source_2
 # Tegul imtuvas priima ir jį (per agentą su turbūt begaliniu pralaidumu, Null):
 set udp_destination [new Agent/Null]
 $ns attach-agent $node_imtuvas $udp_destination
+
+# Sujungiame UDP agentus tarp "siustuvas_2" ir "imtuvas":
+$ns connect $udp_source_2 $udp_destination
