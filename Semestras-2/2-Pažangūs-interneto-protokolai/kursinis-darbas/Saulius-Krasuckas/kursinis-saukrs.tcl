@@ -36,9 +36,10 @@ $ns queue-limit $node_parinktuvas $node_imtuvas 10
 # Tegul siustuvas_1 turi vieną TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
 
-# Priskiriame jam Flow-id ir klasę:
-$tcp_source_1 set fid_ 1
+# Priskiriame jam klasę ir Flow-id:
 $tcp_source_1 set class_ 2
+$tcp_source_1 set fid_ 1
+# (jei "fid_" priskiriame prieš "class_", Trace faile Flow-id tampa = 2 kažkodėl)
 
 # Prijungiame srauto šaltinį prie siustuvo_1:
 $ns attach-agent $node_siustuvas_1 $tcp_source_1
