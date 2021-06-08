@@ -31,3 +31,10 @@ $ns duplex-link $node_parinktuvas $node_imtuvas 1.7Mb 20ms DropTail
 
 # Tiriamai linijai nustatome Queue Size pagal pvz.:
 $ns queue-limit $node_parinktuvas $node_imtuvas 10
+
+# Tegul siustuvas_1 turi vieną TCP srauto šaltinį:
+set tcp_source_1 [new Agent/TCP]
+
+# Priskiriame jam Flow-id ir klasę:
+$tcp_source_1 set fid_ 1
+$tcp_source_1 set class_ 2
