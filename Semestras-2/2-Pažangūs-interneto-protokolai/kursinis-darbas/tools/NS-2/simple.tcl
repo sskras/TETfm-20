@@ -27,6 +27,7 @@ BEGIN {
 		# if time value is bigger then tic calculate throughput ant print it
 		if (currTime >= tic) {
 			printf("%.2fs: %2.2f Mbps\n", time, (recv/currTime)*8/1000000)
+			recv = 0
 			currTime = 0
 		}
 		prevTime = time
