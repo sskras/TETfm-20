@@ -17,3 +17,9 @@ proc finish {} {
     # TODO ateičiai
     exit 0
 }
+
+# Kuriame nodus (pagal sample.tcl pradžiai):
+set node_siustuvas_1   [$ns node]
+set node_siustuvas_2   [$ns node]
+set node_parinktuvas   [$ns node]
+set node_imtuvas       [$ns node]
