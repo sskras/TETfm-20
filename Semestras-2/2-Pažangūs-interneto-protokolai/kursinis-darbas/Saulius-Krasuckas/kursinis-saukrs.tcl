@@ -2,7 +2,7 @@
 set ns [new Simulator]
 
 # Generuosime TR-formato treisus:
-set nf [open kursinis-saukrs.tcl w]
+set nf [open kursinis-saukrs.tr w]
 $ns trace-all $nf
 
 # Prireiks uždarymo procedūros:
