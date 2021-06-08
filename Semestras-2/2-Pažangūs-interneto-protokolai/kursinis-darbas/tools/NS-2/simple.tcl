@@ -9,6 +9,10 @@ $ns color 2 Red
 set nf [open out.nam w]
 $ns namtrace-all $nf
 
+#Open the TR trace file
+set nf [open out.tr w]
+$ns trace-all $nf
+
 #Define a 'finish' procedure
 proc finish {} {
     global ns nf
