@@ -45,3 +45,6 @@ $ns attach-agent $node_siustuvas_1 $tcp_source_1
 # Tegul imtuvas priima irgi TCP transportu:
 set tcp_destination [new Agent/TCPSink]
 $ns attach-agent $node_imtuvas $tcp_destination
+
+# Sujungiame TCP agentus tarp "siustuvas_1" ir "imtuvas":
+$ns connect $tcp_source_1 $tcp_destination
