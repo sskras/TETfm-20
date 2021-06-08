@@ -48,3 +48,8 @@ $ns attach-agent $node_imtuvas $tcp_destination
 
 # Sujungiame TCP agentus tarp "siustuvas_1" ir "imtuvas":
 $ns connect $tcp_source_1 $tcp_destination
+
+# Prisegame FTP užpildą (Payload) prie pirmojo TCP srauto šaltinio:
+set ftp1 [new Application/FTP]
+$ftp1 attach-agent $tcp_source_1
+$ftp1 set type_ FTP
