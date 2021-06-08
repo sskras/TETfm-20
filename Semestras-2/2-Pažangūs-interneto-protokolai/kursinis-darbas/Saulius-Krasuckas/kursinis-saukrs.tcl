@@ -69,3 +69,11 @@ $ns attach-agent $node_imtuvas $udp_destination
 
 # Sujungiame UDP agentus tarp "siustuvas_2" ir "imtuvas":
 $ns connect $udp_source_2 $udp_destination
+
+# Prisegame CBR užpildą (Payload) prie UDP srauto šaltinio:
+set cbr2 [new Application/Traffic/CBR]
+$cbr2 attach-agent $udp_source_2
+$cbr2 set type_ CBR
+$cbr2 set packet_size_ 1000
+$cbr2 set rate_ 1mb
+$cbr2 set random_ false
