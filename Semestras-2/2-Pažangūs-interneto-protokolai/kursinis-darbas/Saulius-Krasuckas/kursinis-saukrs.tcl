@@ -24,7 +24,10 @@ set node_siustuvas_2   [$ns node]
 set node_parinktuvas   [$ns node]
 set node_imtuvas       [$ns node]
 
-# Sukuriame reikiamas ryšio linijas:
+# Sukuriame reikiamas ryšio linijas pagal pvz.:
 $ns duplex-link $node_siustuvas_1 $node_parinktuvas 2Mb 10ms DropTail
 $ns duplex-link $node_siustuvas_2 $node_parinktuvas 2Mb 10ms DropTail
 $ns duplex-link $node_parinktuvas $node_imtuvas 1.7Mb 20ms DropTail
+
+# Tiriamai linijai nustatome Queue Size pagal pvz.:
+$ns queue-limit $node_parinktuvas $node_imtuvas 10
