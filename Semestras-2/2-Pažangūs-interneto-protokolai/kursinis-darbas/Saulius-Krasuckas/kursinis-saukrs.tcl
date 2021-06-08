@@ -23,3 +23,8 @@ set node_siustuvas_1   [$ns node]
 set node_siustuvas_2   [$ns node]
 set node_parinktuvas   [$ns node]
 set node_imtuvas       [$ns node]
+
+# Sukuriame reikiamas ryšio linijas:
+$ns duplex-link $node_siustuvas_1 $node_parinktuvas 2Mb 10ms DropTail
+$ns duplex-link $node_siustuvas_2 $node_parinktuvas 2Mb 10ms DropTail
+$ns duplex-link $node_parinktuvas $node_imtuvas 1.7Mb 20ms DropTail
