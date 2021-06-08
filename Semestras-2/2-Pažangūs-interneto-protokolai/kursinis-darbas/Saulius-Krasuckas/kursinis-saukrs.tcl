@@ -59,3 +59,6 @@ set udp_source_2 [new Agent/UDP]
 
 # Priskiriame jam Flow-id:
 $udp_source_2 set fid_ 2
+
+# Prijungiame šį srauto šaltinį prie siustuvo_2:
+$ns attach-agent $node_siustuvas_2 $udp_source_2
