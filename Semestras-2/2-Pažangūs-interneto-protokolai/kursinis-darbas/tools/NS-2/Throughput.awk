@@ -60,13 +60,10 @@ BEGIN {
 
 	# Init prevTime to the first packet recv time
 	if(prevTime == 0)
-	{
 		prevTime = time
-	}
 
 	# # calculating throughput per time interval tic
 	if ( event == "r" ) {
-		
 		# adding received packet sizes
 		recv += pkt_size
 		currTime += (time - prevTime)
