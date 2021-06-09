@@ -49,6 +49,7 @@ $ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 1ms        DropTai
 
 # Tiriamai linijai:
 $ns queue-limit $node_parinktuvas $node_parinktuvas_2 10            ; # nustatome Queue Size pagal pvz.
+$ns lossmodel $NUOSTOLIAI $node_parinktuvas $node_parinktuvas_2     ; # prijungiame praradimų mechanizmą
 
 # Sukuriame pirmą TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
