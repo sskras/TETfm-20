@@ -54,7 +54,7 @@ $ftp1 set type_ FTP
 
 # Sukuriame UDP srauto šaltinį:
 set udp_source_2 [new Agent/UDP]
-$udp_source_2 set fid_ 2                ; # priskiriam Flow-id
+$udp_source_2 set fid_ 0                ; # priskiriam Flow-id
 $node_siustuvas_2 attach $udp_source_2  ; # Prijungiame jį prie siustuvo_2
 
 # Sukuriame UDP srauto imtuvą (per Null-agentą su turbūt begaliniu pralaidumu):
