@@ -30,8 +30,16 @@ set node_imtuvas       [$ns node]   ; # TODO
 # Tiriamojo tinklo parametrai:
 set SPARTA 100Mb
 set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
+
 puts "Kanalų sparta: $SPARTA"
 puts "Linijos vėlinimas: $VELINIMAS"
+
+# Įjungiame praradimų mechanizmą:
+set NUOSTOLIAI [new ErrorModel]
+$NUOSTOLIAI set rate_ 0.000                     ; # Error rate: vieneto dalys; pradžiai be nuostolių
+$NUOSTOLIAI unit pkt                            ; # Error unit: paketai (Default)
+$NUOSTOLIAI ranvar [new RandomVariable/Uniform] ; # Random variable: turbūt (0; 1), pagal tolygios tikimybės skirstinį
+$NUOSTOLIAI drop-target [new Agent/Null]        ; # Target for dropped packets
 
 # Sukuriame reikiamas ryšio linijas pagal pvz.:
 $ns duplex-link $node_siustuvas_1 $node_parinktuvas   $SPARTA 1ms        DropTail
