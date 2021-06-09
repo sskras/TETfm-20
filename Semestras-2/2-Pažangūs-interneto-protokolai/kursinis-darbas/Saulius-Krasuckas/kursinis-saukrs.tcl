@@ -8,22 +8,19 @@ $ns trace-all $nf
 # Prireiks uždarymo procedūros:
 proc finish {} {
     puts "Simuliacijos pabaiga."
-    # pasiimam pora globalių kintamųjų:
-    global ns nf
-    # išsaugom treiso likučius į failą:
-    $ns flush-trace
-    # uždarom treisą:
-    close $nf
+    global ns nf                    ; # pasiimam pora globalių kintamųjų:
+    $ns flush-trace                 ; # išsaugom treiso likučius į failą:
+    close $nf                       ; # uždarom treisą:
     # startuojam vizualizaciją
     # TODO ateičiai
     exit 0
 }
 
 # Kuriame nodus (pagal sample.tcl pradžiai):
-set node_siustuvas_1   [$ns node] ; # 0
-set node_siustuvas_2   [$ns node] ; # 1
-set node_parinktuvas   [$ns node] ; # 2
-set node_imtuvas       [$ns node] ; # 3
+set node_siustuvas_1   [$ns node]   ; # 0
+set node_siustuvas_2   [$ns node]   ; # 1
+set node_parinktuvas   [$ns node]   ; # 2
+set node_imtuvas       [$ns node]   ; # 3
 
 # Sukuriame reikiamas ryšio linijas pagal pvz.:
 $ns duplex-link $node_siustuvas_1 $node_parinktuvas 2Mb 10ms DropTail
@@ -36,7 +33,7 @@ $ns queue-limit $node_parinktuvas $node_imtuvas 10
 # Tegul siustuvas_1 turi vieną TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
 $tcp_source_1 set class_ 2
-$tcp_source_1 set fid_ 1          ; # priskiriam Flow-id
+$tcp_source_1 set fid_ 1            ; # priskiriam Flow-id
 
 # BUG: jei "fid_" priskiriame prieš "class_", Trace-faile Flow-id tampa = 1 kažkodėl
 
