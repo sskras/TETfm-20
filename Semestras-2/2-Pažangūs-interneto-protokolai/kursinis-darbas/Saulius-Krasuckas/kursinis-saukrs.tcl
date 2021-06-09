@@ -29,12 +29,14 @@ set node_imtuvas       [$ns node]   ; # 3
 
 # Sukuriame reikiamas ryšio linijas pagal pvz.:
 set SPARTA 100Mb
+set VELINIMAS 2ms
 puts "Kanalų sparta: $SPARTA"
+puts "Linijos vėlinimas: $VELINIMAS"
 
-$ns duplex-link $node_siustuvas_1 $node_parinktuvas   $SPARTA 10ms DropTail
-$ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 10ms DropTail
-$ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA 20ms DropTail
-$ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 10ms DropTail
+$ns duplex-link $node_siustuvas_1 $node_parinktuvas   $SPARTA 1ms        DropTail
+$ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 1ms        DropTail
+$ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA $VELINIMAS DropTail   ; # Tiriamoji linija
+$ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 1ms        DropTail
 
 # Tiriamai linijai nustatome Queue Size pagal pvz.:
 $ns queue-limit $node_parinktuvas $node_parinktuvas_2 10
