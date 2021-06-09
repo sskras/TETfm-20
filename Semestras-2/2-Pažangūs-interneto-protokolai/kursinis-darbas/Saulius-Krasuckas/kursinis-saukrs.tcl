@@ -32,11 +32,13 @@ set SPARTA 100Mb
 set QDEPTH 10                       ; # Queue Size paketais (pagal simple.tcl pvz.)
 set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
+set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 
 puts "Kanalų sparta: $SPARTA"
 puts "Parinktuvų buferių gylis: $QDEPTH"
 puts "Linijos vėlinimas: $VELINIMAS"
 puts "Paketų praradimas: $PRARADIMAS"
+puts "Congestion Window lubos: $WND_SIZE"
 
 # Įjungiame praradimų mechanizmą:
 set NUOSTOLIAI [new ErrorModel]
@@ -59,6 +61,7 @@ $ns lossmodel $NUOSTOLIAI $node_parinktuvas $node_parinktuvas_2     ; # prijungi
 set tcp_source_1 [new Agent/TCP/Linux]
 $tcp_source_1 set class_ 2              ; # BUG: jei "fid_" priskiriame prieš "class_", Trace-faile Flow-id tampa = 2
 $tcp_source_1 set fid_ 1                ; # Flow-id
+$tcp_source_1 set window_ $WND_SIZE     ; # Congestion Window lubos
 $tcp_source_1 select_ca highspeed       ; # Congestion-control algoritmas = Highspeed-TCP (hstcp)
 $node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siustuvo
 
@@ -66,6 +69,7 @@ $node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siustuvo
 set tcp_source_2 [new Agent/TCP/Linux]
 $tcp_source_2 set class_ 2
 $tcp_source_2 set fid_ 2
+$tcp_source_2 set window_ $WND_SIZE
 $tcp_source_2 select_ca bic             ; # Congestion-control algoritmas = TCP BIC
 $node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame prie siustuvo
 
