@@ -23,10 +23,11 @@ proc finish {} {
 # Kuriame nodus (pagal sample.tcl pradžiai):
 set node_siustuvas_1   [$ns node]   ; # 0
 set node_siustuvas_2   [$ns node]   ; # 1
-set node_parinktuvas   [$ns node]   ; # 2
+set node_parinktuvas   [$ns node]   ; # TODO
 set node_parinktuvas_2 [$ns node]   ; # TODO
-set node_imtuvas       [$ns node]   ; # 3
+set node_imtuvas       [$ns node]   ; # TODO
 
+# Tiriamojo tinklo parametrai:
 set SPARTA 100Mb
 set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
 puts "Kanalų sparta: $SPARTA"
@@ -44,22 +45,22 @@ $ns queue-limit $node_parinktuvas $node_parinktuvas_2 10
 # Sukuriame pirmą TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
 $tcp_source_1 set class_ 2              ; # BUG: jei "fid_" priskiriame prieš "class_", Trace-faile Flow-id tampa = 2
-$tcp_source_1 set fid_ 1                ; # priskiriam Flow-id
-$node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame jį prie siustuvo_1
+$tcp_source_1 set fid_ 1                ; # Flow-id
+$node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siustuvo
 
 # Sukuriame antrą TCP srauto šaltinį:
 set tcp_source_2 [new Agent/TCP]
 $tcp_source_2 set class_ 2
 $tcp_source_2 set fid_ 2
-$node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame jį prie siustuvo_2
+$node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame prie siustuvo
 
 # Sukuriame vieną TCP srauto imtuvą:
 set tcp_destination [new Agent/TCPSink]
-$node_imtuvas attach $tcp_destination   ; # Prijungiame jį prie imtuvo nodo
+$node_imtuvas attach $tcp_destination   ; # Prijungiame prie imtuvo nodo
 
 # Sukuriame antrą TCP srauto imtuvą:
 set tcp_destination_2 [new Agent/TCPSink]
-$node_imtuvas attach $tcp_destination_2 ; # Prijungiame jį prie imtuvo nodo
+$node_imtuvas attach $tcp_destination_2 ; # Prijungiame prie imtuvo nodo
 
 # Sujungiame TCP agentus tarp "siustuvas_1" ir "imtuvas":
 $ns connect $tcp_source_1 $tcp_destination
@@ -67,12 +68,12 @@ $ns connect $tcp_source_2 $tcp_destination_2
 
 # Sukuriame pirmą FTP užpildą (Payload):
 set ftp1 [new Application/FTP]
-$ftp1 attach-agent $tcp_source_1        ; # Prisegame jį prie TCP šaltinio
+$ftp1 attach-agent $tcp_source_1        ; # Prisegame prie TCP šaltinio
 $ftp1 set type_ FTP
 
 # Sukuriame antrą FTP užpildą (Payload):
 set ftp2 [new Application/FTP]
-$ftp2 attach-agent $tcp_source_2        ; # Prisegame jį prie TCP šaltinio
+$ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
