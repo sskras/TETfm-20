@@ -34,7 +34,7 @@ $ns duplex-link $node_parinktuvas $node_imtuvas 1.7Mb 20ms DropTail
 # Tiriamai linijai nustatome Queue Size pagal pvz.:
 $ns queue-limit $node_parinktuvas $node_imtuvas 10
 
-# Sukuriame vieną TCP srauto šaltinį:
+# Sukuriame pirmą TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
 $tcp_source_1 set class_ 2              ; # BUG: jei "fid_" priskiriame prieš "class_", Trace-faile Flow-id tampa = 2
 $tcp_source_1 set fid_ 1                ; # priskiriam Flow-id
@@ -67,26 +67,6 @@ $ftp1 set type_ FTP
 set ftp2 [new Application/FTP]
 $ftp2 attach-agent $tcp_source_2        ; # Prisegame jį prie TCP šaltinio
 $ftp2 set type_ FTP
-
-# Sukuriame UDP srauto šaltinį:
-set udp_source_2 [new Agent/UDP]
-$udp_source_2 set fid_ 0                ; # priskiriam Flow-id
-$node_siustuvas_2 attach $udp_source_2  ; # Prijungiame jį prie siustuvo_2
-
-# Sukuriame UDP srauto imtuvą (per Null-agentą su turbūt begaliniu pralaidumu):
-set udp_destination [new Agent/Null]
-$node_imtuvas attach $udp_destination   ; # Prijungiame jį prie imtuvo nodo
-
-# Sujungiame UDP agentus tarp "siustuvas_2" ir "imtuvas":
-$ns connect $udp_source_2 $udp_destination
-
-# Sukuriame CBR užpildą (Payload):
-set cbr2 [new Application/Traffic/CBR]
-$cbr2 attach-agent $udp_source_2        ; # Prisegame jį prie UDP šaltinio
-$cbr2 set type_ CBR
-$cbr2 set packet_size_ 1000
-$cbr2 set rate_ 1mb
-$cbr2 set random_ false
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 $ns at 0.1 "$ftp1 start"
