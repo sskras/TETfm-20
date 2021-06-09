@@ -30,13 +30,15 @@ set node_imtuvas       [$ns node]   ; # TODO
 # Tiriamojo tinklo parametrai:
 set SPARTA 100Mb
 set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
+set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
 
 puts "Kanalų sparta: $SPARTA"
 puts "Linijos vėlinimas: $VELINIMAS"
+puts "Paketų praradimas: $PRARADIMAS"
 
 # Įjungiame praradimų mechanizmą:
 set NUOSTOLIAI [new ErrorModel]
-$NUOSTOLIAI set rate_ 0.06                      ; # Error rate: vieneto dalys; pradžiai be nuostolių
+$NUOSTOLIAI set rate_ $PRARADIMAS               ; # Error rate: vieneto dalys
 $NUOSTOLIAI unit pkt                            ; # Error unit: paketai (Default)
 $NUOSTOLIAI ranvar [new RandomVariable/Uniform] ; # Random variable: turbūt (0; 1), pagal tolygios tikimybės skirstinį
 $NUOSTOLIAI drop-target [new Agent/Null]        ; # Target for dropped packets
