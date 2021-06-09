@@ -34,11 +34,13 @@ set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumen
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 
+puts "=================================="
 puts "Kanalų sparta: $SPARTA"
 puts "Parinktuvų buferių gylis: $QDEPTH"
 puts "Linijos vėlinimas: $VELINIMAS"
 puts "Paketų praradimas: $PRARADIMAS"
 puts "Congestion Window lubos: $WND_SIZE"
+puts "=================================="
 
 # Įjungiame praradimų mechanizmą:
 set NUOSTOLIAI [new ErrorModel]
