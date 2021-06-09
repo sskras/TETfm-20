@@ -16,8 +16,7 @@ proc finish {} {
     $ns flush-trace                 ; # išsaugom treiso likučius į failą
     close $ntf                      ; # uždarom treisą
     close $nmf                      ; # uždarom NAM-treisą
-    # startuojam vizualizaciją
-    exec nam kursinis-saukrs.nam &
+    exec nam kursinis-saukrs.nam &  ; # startuojam vizualizaciją
     exit 0
 }
 
