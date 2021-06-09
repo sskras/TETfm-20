@@ -27,12 +27,12 @@ set node_parinktuvas   [$ns node]   ; # 2
 set node_parinktuvas_2 [$ns node]   ; # TODO
 set node_imtuvas       [$ns node]   ; # 3
 
-# Sukuriame reikiamas ryšio linijas pagal pvz.:
 set SPARTA 100Mb
-set VELINIMAS 2ms
+set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
 puts "Kanalų sparta: $SPARTA"
 puts "Linijos vėlinimas: $VELINIMAS"
 
+# Sukuriame reikiamas ryšio linijas pagal pvz.:
 $ns duplex-link $node_siustuvas_1 $node_parinktuvas   $SPARTA 1ms        DropTail
 $ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 1ms        DropTail
 $ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA $VELINIMAS DropTail   ; # Tiriamoji linija
