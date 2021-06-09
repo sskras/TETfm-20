@@ -89,8 +89,8 @@ $cbr2 set rate_ 1mb
 $cbr2 set random_ false
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
-$ns at 0.0 "$ftp2 start"
 $ns at 1.0 "$ftp1 start"
+$ns at 0.2 "$ftp2 start"
 $ns at 4.0 "$ftp1 stop"
 $ns at 4.9 "$ftp2 stop"
 
