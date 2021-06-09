@@ -5,14 +5,19 @@ set ns [new Simulator]
 set ntf [open kursinis-saukrs.tr w]
 $ns trace-all $ntf
 
+# Generuosime NAM-formato treisus:
+set nmf [open kursinis-saukrs.nam w]
+$ns namtrace-all $nmf
+
 # Prireiks uždarymo procedūros:
 proc finish {} {
     puts "Simuliacijos pabaiga."
     global ns ntf                   ; # pasiimam pora globalių kintamųjų:
-    $ns flush-trace                 ; # išsaugom treiso likučius į failą:
+    $ns flush-trace                 ; # išsaugom treiso likučius į failą
     close $ntf                      ; # uždarom treisą:
+    close $nmf                      ; # uždarom NAM-treisą
     # startuojam vizualizaciją
-    # TODO ateičiai
+    exec nam kursinis-saukrs.nam &
     exit 0
 }
 
@@ -77,6 +82,11 @@ $ns at 4.5 "$cbr2 stop"
 
 # Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:
 $ns at 5.0 "finish"
+
+# Tinklo topologiją žymime grafiškai:
+$ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
+$ns duplex-link-op $node_siustuvas_2 $node_parinktuvas orient right-up
+$ns duplex-link-op $node_parinktuvas $node_imtuvas     orient right
 
 puts "Simuliacijos pradžia..."
 
