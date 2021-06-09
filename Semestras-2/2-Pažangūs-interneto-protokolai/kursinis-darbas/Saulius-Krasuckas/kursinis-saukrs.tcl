@@ -86,6 +86,10 @@ $ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
 $ns duplex-link-op $node_siustuvas_2 $node_parinktuvas orient right-up
 $ns duplex-link-op $node_parinktuvas $node_imtuvas     orient right
 
+# Skirtingos spalvos skirtingiems Flow-id:
+$ns color 1 Blue
+$ns color 2 Red
+
 puts "Simuliacijos pradžia..."
 
 # Pradedame:
