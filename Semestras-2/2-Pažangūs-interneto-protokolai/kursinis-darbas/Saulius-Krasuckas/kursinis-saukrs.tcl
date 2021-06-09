@@ -63,9 +63,10 @@ $tcp_source_1 select_ca highspeed       ; # Congestion-control algoritmas = High
 $node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siustuvo
 
 # Sukuriame antrą TCP srauto šaltinį:
-set tcp_source_2 [new Agent/TCP]
+set tcp_source_2 [new Agent/TCP/Linux]
 $tcp_source_2 set class_ 2
 $tcp_source_2 set fid_ 2
+$tcp_source_2 select_ca highspeed       ; # Congestion-control algoritmas = TCP BIC
 $node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame prie siustuvo
 
 # Sukuriame vieną TCP srauto imtuvą:
