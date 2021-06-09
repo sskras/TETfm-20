@@ -68,15 +68,15 @@ $tcp_source_2 set fid_ 2
 $node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame prie siustuvo
 
 # Sukuriame vieną TCP srauto imtuvą:
-set tcp_destination [new Agent/TCPSink]
-$node_imtuvas attach $tcp_destination   ; # Prijungiame prie imtuvo nodo
+set tcp_destination_1 [new Agent/TCPSink]
+$node_imtuvas attach $tcp_destination_1 ; # Prijungiame prie imtuvo nodo
 
 # Sukuriame antrą TCP srauto imtuvą:
 set tcp_destination_2 [new Agent/TCPSink]
 $node_imtuvas attach $tcp_destination_2 ; # Prijungiame prie imtuvo nodo
 
 # Sujungiame TCP agentus tarp "siustuvas_1" ir "imtuvas":
-$ns connect $tcp_source_1 $tcp_destination
+$ns connect $tcp_source_1 $tcp_destination_1
 $ns connect $tcp_source_2 $tcp_destination_2
 
 # Sukuriame pirmą FTP užpildą (Payload):
