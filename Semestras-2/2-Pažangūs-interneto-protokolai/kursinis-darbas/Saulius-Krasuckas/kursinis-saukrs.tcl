@@ -28,10 +28,13 @@ set node_parinktuvas_2 [$ns node]   ; # TODO
 set node_imtuvas       [$ns node]   ; # 3
 
 # Sukuriame reikiamas ryšio linijas pagal pvz.:
-$ns duplex-link $node_siustuvas_1 $node_parinktuvas 2Mb 10ms DropTail
-$ns duplex-link $node_siustuvas_2 $node_parinktuvas 2Mb 10ms DropTail
-$ns duplex-link $node_parinktuvas $node_parinktuvas_2 1.7Mb 20ms DropTail
-$ns duplex-link $node_parinktuvas_2 $node_imtuvas 2Mb 10ms DropTail
+set SPARTA 100Mb
+puts "Kanalų sparta: $SPARTA"
+
+$ns duplex-link $node_siustuvas_1 $node_parinktuvas   $SPARTA 10ms DropTail
+$ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 10ms DropTail
+$ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA 20ms DropTail
+$ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 10ms DropTail
 
 # Tiriamai linijai nustatome Queue Size pagal pvz.:
 $ns queue-limit $node_parinktuvas $node_parinktuvas_2 10
