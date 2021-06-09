@@ -42,7 +42,7 @@ $node_siustuvas_1 attach $tcp_source_1
 
 # Sukuriame vieną TCP srauto imtuvą:
 set tcp_destination [new Agent/TCPSink]
-$ns attach-agent $node_imtuvas $tcp_destination
+$node_imtuvas attach $tcp_destination
 
 # Sujungiame TCP agentus tarp "siustuvas_1" ir "imtuvas":
 $ns connect $tcp_source_1 $tcp_destination
@@ -61,7 +61,7 @@ $node_siustuvas_2 attach $udp_source_2
 
 # Sukuriame UDP srauto imtuvą (per Null-agentą su turbūt begaliniu pralaidumu):
 set udp_destination [new Agent/Null]
-$ns attach-agent $node_imtuvas $udp_destination
+$node_imtuvas attach $udp_destination
 
 # Sujungiame UDP agentus tarp "siustuvas_2" ir "imtuvas":
 $ns connect $udp_source_2 $udp_destination
