@@ -30,7 +30,7 @@ $ns duplex-link $node_parinktuvas $node_imtuvas 1.7Mb 20ms DropTail
 # Tiriamai linijai nustatome Queue Size pagal pvz.:
 $ns queue-limit $node_parinktuvas $node_imtuvas 10
 
-# Tegul siustuvas_1 turi vieną TCP srauto šaltinį:
+# Sukuriame vieną TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
 $tcp_source_1 set class_ 2
 $tcp_source_1 set fid_ 1            ; # priskiriam Flow-id
@@ -40,7 +40,7 @@ $tcp_source_1 set fid_ 1            ; # priskiriam Flow-id
 # Prijungiame srauto šaltinį prie siustuvo_1:
 $node_siustuvas_1 attach $tcp_source_1
 
-# Tegul imtuvas priima irgi TCP transportu:
+# Sukuriame vieną TCP srauto imtuvą:
 set tcp_destination [new Agent/TCPSink]
 $ns attach-agent $node_imtuvas $tcp_destination
 
@@ -52,16 +52,14 @@ set ftp1 [new Application/FTP]
 $ftp1 attach-agent $tcp_source_1
 $ftp1 set type_ FTP
 
-# Tegul siustuvas_2 turi vieną UDP srauto šaltinį:
+# Sukuriame vieną UDP srauto šaltinį:
 set udp_source_2 [new Agent/UDP]
-
-# Priskiriame jam Flow-id:
-$udp_source_2 set fid_ 2
+$udp_source_2 set fid_ 2            ; # priskiriam Flow-id
 
 # Prijungiame šį srauto šaltinį prie siustuvo_2:
 $node_siustuvas_2 attach $udp_source_2
 
-# Tegul imtuvas priima ir jį (per agentą su turbūt begaliniu pralaidumu, Null):
+# Sukuriame UDP srauto imtuvą (per Null-agentą su turbūt begaliniu pralaidumu):
 set udp_destination [new Agent/Null]
 $ns attach-agent $node_imtuvas $udp_destination
 
