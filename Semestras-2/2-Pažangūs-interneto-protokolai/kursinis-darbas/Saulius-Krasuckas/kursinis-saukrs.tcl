@@ -29,10 +29,12 @@ set node_imtuvas       [$ns node]   ; # TODO
 
 # Tiriamojo tinklo parametrai:
 set SPARTA 100Mb
+set QDEPTH 10                       ; # Queue Size paketais (pagal simple.tcl pvz.)
 set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
 
 puts "Kanalų sparta: $SPARTA"
+puts "Parinktuvų buferių gylis: $QDEPTH"
 puts "Linijos vėlinimas: $VELINIMAS"
 puts "Paketų praradimas: $PRARADIMAS"
 
@@ -50,7 +52,7 @@ $ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA $VELINIMAS DropTai
 $ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 1ms        DropTail
 
 # Tiriamajai linijai:
-$ns queue-limit $node_parinktuvas $node_parinktuvas_2 10            ; # nustatome Queue Size pagal pvz.
+$ns queue-limit $node_parinktuvas $node_parinktuvas_2 $QDEPTH       ; # nurodome Queue Size
 $ns lossmodel $NUOSTOLIAI $node_parinktuvas $node_parinktuvas_2     ; # prijungiame praradimų mechanizmą
 
 # Sukuriame pirmą TCP srauto šaltinį:
