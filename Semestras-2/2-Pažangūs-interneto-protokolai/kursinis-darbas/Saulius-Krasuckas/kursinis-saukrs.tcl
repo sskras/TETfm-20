@@ -47,8 +47,8 @@ $ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 1ms        DropTai
 $ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA $VELINIMAS DropTail   ; # Tiriamoji linija
 $ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 1ms        DropTail
 
-# Tiriamai linijai nustatome Queue Size pagal pvz.:
-$ns queue-limit $node_parinktuvas $node_parinktuvas_2 10
+# Tiriamai linijai:
+$ns queue-limit $node_parinktuvas $node_parinktuvas_2 10            ; # nustatome Queue Size pagal pvz.
 
 # Sukuriame pirmą TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
