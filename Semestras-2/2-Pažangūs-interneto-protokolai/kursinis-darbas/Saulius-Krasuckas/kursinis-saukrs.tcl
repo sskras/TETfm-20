@@ -49,7 +49,7 @@ $NUOSTOLIAI drop-target [new Agent/Null]        ; # Target for dropped packets
 $ns duplex-link $node_siustuvas_1 $node_parinktuvas   $SPARTA 1ms        DropTail
 $ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 1ms        DropTail
 $ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA $VELINIMAS DropTail   ; # Tiriamoji linija
-$ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 1ms        DropTail
+$ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 10ms       DropTail
 
 # Tiriamajai linijai:
 $ns queue-limit $node_parinktuvas $node_parinktuvas_2 $QDEPTH       ; # nurodome Queue Size
