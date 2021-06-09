@@ -24,15 +24,17 @@ proc finish {} {
 set node_siustuvas_1   [$ns node]   ; # 0
 set node_siustuvas_2   [$ns node]   ; # 1
 set node_parinktuvas   [$ns node]   ; # 2
+set node_parinktuvas_2 [$ns node]   ; # TODO
 set node_imtuvas       [$ns node]   ; # 3
 
 # Sukuriame reikiamas ryšio linijas pagal pvz.:
 $ns duplex-link $node_siustuvas_1 $node_parinktuvas 2Mb 10ms DropTail
 $ns duplex-link $node_siustuvas_2 $node_parinktuvas 2Mb 10ms DropTail
-$ns duplex-link $node_parinktuvas $node_imtuvas 1.7Mb 20ms DropTail
+$ns duplex-link $node_parinktuvas $node_parinktuvas_2 1.7Mb 20ms DropTail
+$ns duplex-link $node_parinktuvas_2 $node_imtuvas 2Mb 10ms DropTail
 
 # Tiriamai linijai nustatome Queue Size pagal pvz.:
-$ns queue-limit $node_parinktuvas $node_imtuvas 10
+$ns queue-limit $node_parinktuvas $node_parinktuvas_2 10
 
 # Sukuriame pirmą TCP srauto šaltinį:
 set tcp_source_1 [new Agent/TCP]
@@ -80,7 +82,8 @@ $ns at 5.0 "finish"
 # Tinklo topologiją žymime grafiškai:
 $ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
 $ns duplex-link-op $node_siustuvas_2 $node_parinktuvas orient right-up
-$ns duplex-link-op $node_parinktuvas $node_imtuvas     orient right
+$ns duplex-link-op $node_parinktuvas   $node_parinktuvas_2 orient right
+$ns duplex-link-op $node_parinktuvas_2 $node_imtuvas       orient right
 
 # Skirtingos spalvos skirtingiems Flow-id:
 $ns color 1 Blue
