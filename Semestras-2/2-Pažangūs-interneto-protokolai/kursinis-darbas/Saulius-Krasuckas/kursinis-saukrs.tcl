@@ -56,9 +56,10 @@ $ns queue-limit $node_parinktuvas $node_parinktuvas_2 $QDEPTH       ; # nurodome
 $ns lossmodel $NUOSTOLIAI $node_parinktuvas $node_parinktuvas_2     ; # prijungiame praradimų mechanizmą
 
 # Sukuriame pirmą TCP srauto šaltinį:
-set tcp_source_1 [new Agent/TCP]
+set tcp_source_1 [new Agent/TCP/Linux]
 $tcp_source_1 set class_ 2              ; # BUG: jei "fid_" priskiriame prieš "class_", Trace-faile Flow-id tampa = 2
 $tcp_source_1 set fid_ 1                ; # Flow-id
+$tcp_source_1 select_ca highspeed       ; # Congestion-control algoritmas = Highspeed-TCP (hstcp)
 $node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siustuvo
 
 # Sukuriame antrą TCP srauto šaltinį:
