@@ -38,10 +38,10 @@ set tcp_source_1 [new Agent/TCP]
 $tcp_source_1 set class_ 2
 $tcp_source_1 set fid_ 1          ; # priskiriam Flow-id
 
-# (jei "fid_" priskiriame prieš "class_", Trace faile Flow-id tampa = 2 kažkodėl)
+# BUG: jei "fid_" priskiriame prieš "class_", Trace-faile Flow-id tampa = 1 kažkodėl
 
 # Prijungiame srauto šaltinį prie siustuvo_1:
-$ns attach-agent $node_siustuvas_1 $tcp_source_1
+$node_siustuvas_1 attach $tcp_source_1
 
 # Tegul imtuvas priima irgi TCP transportu:
 set tcp_destination [new Agent/TCPSink]
@@ -62,7 +62,7 @@ set udp_source_2 [new Agent/UDP]
 $udp_source_2 set fid_ 2
 
 # Prijungiame šį srauto šaltinį prie siustuvo_2:
-$ns attach-agent $node_siustuvas_2 $udp_source_2
+$node_siustuvas_2 attach $udp_source_2
 
 # Tegul imtuvas priima ir jį (per agentą su turbūt begaliniu pralaidumu, Null):
 set udp_destination [new Agent/Null]
