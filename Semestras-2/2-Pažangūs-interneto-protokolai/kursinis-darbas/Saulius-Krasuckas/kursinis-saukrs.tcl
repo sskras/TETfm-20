@@ -12,9 +12,9 @@ $ns namtrace-all $nmf
 # Prireiks uždarymo procedūros:
 proc finish {} {
     puts "Simuliacijos pabaiga."
-    global ns ntf                   ; # pasiimam pora globalių kintamųjų:
+    global ns ntf nmf               ; # pasiimam pora globalių kintamųjų
     $ns flush-trace                 ; # išsaugom treiso likučius į failą
-    close $ntf                      ; # uždarom treisą:
+    close $ntf                      ; # uždarom treisą
     close $nmf                      ; # uždarom NAM-treisą
     # startuojam vizualizaciją
     exec nam kursinis-saukrs.nam &
