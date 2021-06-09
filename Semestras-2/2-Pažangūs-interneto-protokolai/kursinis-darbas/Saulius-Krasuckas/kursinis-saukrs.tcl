@@ -36,7 +36,7 @@ puts "Linijos vėlinimas: $VELINIMAS"
 
 # Įjungiame praradimų mechanizmą:
 set NUOSTOLIAI [new ErrorModel]
-$NUOSTOLIAI set rate_ 0.000                     ; # Error rate: vieneto dalys; pradžiai be nuostolių
+$NUOSTOLIAI set rate_ 0.06                      ; # Error rate: vieneto dalys; pradžiai be nuostolių
 $NUOSTOLIAI unit pkt                            ; # Error unit: paketai (Default)
 $NUOSTOLIAI ranvar [new RandomVariable/Uniform] ; # Random variable: turbūt (0; 1), pagal tolygios tikimybės skirstinį
 $NUOSTOLIAI drop-target [new Agent/Null]        ; # Target for dropped packets
@@ -47,7 +47,7 @@ $ns duplex-link $node_siustuvas_2 $node_parinktuvas   $SPARTA 1ms        DropTai
 $ns duplex-link $node_parinktuvas $node_parinktuvas_2 $SPARTA $VELINIMAS DropTail   ; # Tiriamoji linija
 $ns duplex-link $node_parinktuvas_2 $node_imtuvas     $SPARTA 1ms        DropTail
 
-# Tiriamai linijai:
+# Tiriamajai linijai:
 $ns queue-limit $node_parinktuvas $node_parinktuvas_2 10            ; # nustatome Queue Size pagal pvz.
 $ns lossmodel $NUOSTOLIAI $node_parinktuvas $node_parinktuvas_2     ; # prijungiame praradimų mechanizmą
 
