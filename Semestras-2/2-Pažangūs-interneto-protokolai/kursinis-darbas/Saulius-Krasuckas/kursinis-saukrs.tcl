@@ -134,7 +134,7 @@ for {set i 0} {$i < [llength $STARTAI]} {incr i} {
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 #$ns at $PRADZIA "$ftp1 start"
-$ns at $PRADZIA "$ftp2 start"
+#$ns at $PRADZIA "$ftp2 start"
 $ns at $STABDIS "$ftp1 stop"
 $ns at $STABDIS "$ftp2 stop"
 
