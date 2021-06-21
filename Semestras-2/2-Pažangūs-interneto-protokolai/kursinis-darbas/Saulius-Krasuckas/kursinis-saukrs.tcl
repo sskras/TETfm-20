@@ -8,10 +8,8 @@ set MSS 1448                        ; # Maximum Segment Size
 
 # Failų vardai:
 set SESSION_NAME [lindex $argv 3]
-
 if {$SESSION_NAME == ""} {
-    puts "Radau tuščią \$SESSION_NAME"
-    exit 1
+    set SESSION_NAME "kursinis-saukrs"
 }
 
 puts "=================================="
