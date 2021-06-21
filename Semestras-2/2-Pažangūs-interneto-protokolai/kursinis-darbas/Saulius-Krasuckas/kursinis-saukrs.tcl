@@ -126,10 +126,15 @@ $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
 # Siųstuvų paleidimai:
+foreach {KADA KURIS} $STARTAI {
+    puts "Paleidimas: $KADA, $KURIS"
+    $ns at $KADA $KURIS
+}
+
 for {set i 0} {$i < [llength $STARTAI]} {incr i} {
     set PRADEDAM [lindex $STARTAI $i]
     puts "Paleidimas $i: $PRADEDAM"
-    $ns at $PRADZIA $PRADEDAM
+#   $ns at $PRADZIA $PRADEDAM
 }
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
