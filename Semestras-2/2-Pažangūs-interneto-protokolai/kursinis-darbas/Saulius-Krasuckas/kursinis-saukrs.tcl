@@ -1,3 +1,20 @@
+# Tiriamojo tinklo parametrai:
+set SPARTA 100Mb
+set QDEPTH 10                       ; # Queue Size paketais (pagal simple.tcl pvz.)
+set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
+set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
+set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
+set MSS 1448                        ; # Maximum Segment Size
+
+puts "=================================="
+puts "Kanalų sparta: $SPARTA"
+puts "Parinktuvų buferių gylis: $QDEPTH"
+puts "Linijos vėlinimas: $VELINIMAS"
+puts "Paketų praradimas: $PRARADIMAS"
+puts "Congestion Window lubos: $WND_SIZE"
+puts "MSS: $MSS"
+puts "=================================="
+
 # Susidėliokim simuliatorių:
 set ns [new Simulator]
 
@@ -26,23 +43,6 @@ set node_siustuvas_2   [$ns node]   ; # 1
 set node_parinktuvas   [$ns node]   ; # TODO
 set node_parinktuvas_2 [$ns node]   ; # TODO
 set node_imtuvas       [$ns node]   ; # TODO
-
-# Tiriamojo tinklo parametrai:
-set SPARTA 100Mb
-set QDEPTH 10                       ; # Queue Size paketais (pagal simple.tcl pvz.)
-set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
-set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
-set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
-set MSS 1448                        ; # Maximum Segment Size
-
-puts "=================================="
-puts "Kanalų sparta: $SPARTA"
-puts "Parinktuvų buferių gylis: $QDEPTH"
-puts "Linijos vėlinimas: $VELINIMAS"
-puts "Paketų praradimas: $PRARADIMAS"
-puts "Congestion Window lubos: $WND_SIZE"
-puts "MSS: $MSS"
-puts "=================================="
 
 # Įjungiame praradimų mechanizmą:
 set NUOSTOLIAI [new ErrorModel]
