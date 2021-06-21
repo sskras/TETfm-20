@@ -6,11 +6,13 @@ set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumen
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
 
-# Failų vardai:
+# Pavadinimai:
 set SESSION_NAME [lindex $argv 3]
 if {$SESSION_NAME == ""} {
     set SESSION_NAME "kursinis-saukrs"
 }
+
+set TRACE_NAME "$SESSION_NAME.tr"
 
 puts "=================================="
 puts "Kanalų sparta: $SPARTA"
@@ -20,13 +22,14 @@ puts "Paketų praradimas: $PRARADIMAS"
 puts "Congestion Window lubos: $WND_SIZE"
 puts "MSS: $MSS"
 puts "Trace-sesija: '$SESSION_NAME'"
+puts "Trace-failas: '$TRACE_NAME'"
 puts "=================================="
 
 # Susidėliokim simuliatorių:
 set ns [new Simulator]
 
 # Generuosime TR-formato treisus:
-set ntf [open kursinis-saukrs.tr w]
+set ntf [open $TRACE_NAME w]
 $ns trace-all $ntf
 
 # Generuosime NAM-formato treisus:
