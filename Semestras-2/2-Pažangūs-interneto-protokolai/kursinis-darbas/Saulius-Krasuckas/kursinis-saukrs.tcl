@@ -23,7 +23,9 @@ puts "\$argc = $argc"
 for {set i 4} {$i < $argc} {incr i} {
     set PRADEDAM [lindex $argv $i]
     puts "\$argv($i) = '$PRADEDAM'"
+    lappend STARTAI $PRADEDAM
 }
+puts "Sukaupti \$STARTAI: $STARTAI"
 
 puts "=================================="
 puts "Kanalų sparta: $SPARTA"
