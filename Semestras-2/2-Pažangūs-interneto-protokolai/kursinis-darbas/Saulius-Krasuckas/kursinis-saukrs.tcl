@@ -115,8 +115,8 @@ $ftp2 set type_ FTP
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 $ns at 0.1 "$ftp1 start"
-$ns at 0.2 "$ftp2 start"
-$ns at 40 "$ftp1 stop"
+$ns at 0.1 "$ftp2 start"
+$ns at 49 "$ftp1 stop"
 $ns at 49 "$ftp2 stop"
 
 # Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:

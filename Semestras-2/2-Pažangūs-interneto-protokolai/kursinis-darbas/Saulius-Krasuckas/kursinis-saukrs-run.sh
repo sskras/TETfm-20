@@ -5,7 +5,7 @@ shopt -s lastpipe
 echo "$(basename $0): Startuoju, cmd-line: "$*
 DIR=$(dirname $0)
 
-FNAME_PREFIX="saukrs-abu-srautai-skirtingai"
+FNAME_PREFIX="saukrs-abu-srautai-kartu"
 LOSS="0.00"
 echo "$LOSS * 100" | bc -q | xargs printf "%d\n" | read LOSS_P
 
