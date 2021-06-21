@@ -10,7 +10,6 @@ echo "$LOSS * 100" | bc -q | xargs printf "%d\n" | read LOSS_P
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
-    echo "Skaičiuoju pagal \$DELAY=$DELAY"
 #   ns $DIR/kursinis-saukrs.tcl -- "${DELAY}ms" ${LOSS} "kursinis-saukrs_HSTCP_+_BIC,_${DELAY}ms_${LOSS_P}%-loss" \
     ns $DIR/kursinis-saukrs.tcl -- "${DELAY}ms" ${LOSS} "kursinis-saukrs" \
         0.1 '$ftp1 start' \
@@ -18,6 +17,8 @@ for DELAY in 2 6 80; do
         290 '$ftp1 stop'  \
         290 '$ftp2 stop'  \
         300 'finish'
+    echo
+    echo Išsitraukiame tiriamosios linijos duomenis:
     echo
 done
 

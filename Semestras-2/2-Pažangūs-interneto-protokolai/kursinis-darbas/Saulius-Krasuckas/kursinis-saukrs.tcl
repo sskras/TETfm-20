@@ -18,12 +18,8 @@ if {$SESSION_NAME == ""} {
 set TRACE_NAME "$SESSION_NAME.tr"
 set NAM_NAME   "$SESSION_NAME.nam"
 
-# Siųstuvų paleidimai:
-puts "\$argc = $argc"
-
 for {set i 4} {$i < $argc} {incr i} {
-    set PRADEDAM [lindex $argv $i]
-    lappend STARTAI $PRADEDAM
+    lappend STARTAI [lindex $argv $i]
 }
 #puts "Sukaupti \$STARTAI: $STARTAI"
 
