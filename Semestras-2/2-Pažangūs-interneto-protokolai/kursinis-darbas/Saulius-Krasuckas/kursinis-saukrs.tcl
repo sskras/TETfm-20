@@ -13,6 +13,7 @@ if {$SESSION_NAME == ""} {
 }
 
 set TRACE_NAME "$SESSION_NAME.tr"
+set NAM_NAME   "$SESSION_NAME.nam"
 
 puts "=================================="
 puts "Kanalų sparta: $SPARTA"
@@ -23,6 +24,7 @@ puts "Congestion Window lubos: $WND_SIZE"
 puts "MSS: $MSS"
 puts "Trace-sesija: '$SESSION_NAME'"
 puts "Trace-failas: '$TRACE_NAME'"
+puts "NAM-failas: '$NAM_NAME'"
 puts "=================================="
 
 # Susidėliokim simuliatorių:
@@ -33,7 +35,7 @@ set ntf [open $TRACE_NAME w]
 $ns trace-all $ntf
 
 # Generuosime NAM-formato treisus:
-set nmf [open kursinis-saukrs.nam w]
+set nmf [open $NAM_NAME w]
 $ns namtrace-all $nmf
 
 # Prireiks uždarymo procedūros:
