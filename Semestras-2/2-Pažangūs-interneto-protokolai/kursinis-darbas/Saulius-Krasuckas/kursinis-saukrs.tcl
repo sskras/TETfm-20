@@ -5,6 +5,8 @@ set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumen
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
+set TRUKME 500                      ; # modeliavimo trukmė
+set STABDIS 490                     ; # visų siųstuvų stabdymo laikas, s
 
 # Pavadinimai:
 set SESSION_NAME [lindex $argv 3]   ; # iš komandinės eilutės (trečias argumentas, nebūtinas)
@@ -116,11 +118,11 @@ $ftp2 set type_ FTP
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 $ns at 0.1 "$ftp1 start"
 $ns at 0.1 "$ftp2 start"
-$ns at 49 "$ftp1 stop"
-$ns at 49 "$ftp2 stop"
+$ns at $STABDIS "$ftp1 stop"
+$ns at $STABDIS "$ftp2 stop"
 
 # Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:
-$ns at 50 "finish"
+$ns at $TRUKME "finish"
 
 # Tinklo topologiją žymime grafiškai:
 $ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
