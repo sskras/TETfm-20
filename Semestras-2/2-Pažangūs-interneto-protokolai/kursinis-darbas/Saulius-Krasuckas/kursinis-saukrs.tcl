@@ -123,13 +123,12 @@ foreach {KADA KAS} $STARTAI {
     puts "Grafikas: $KADA, $KAS"
     $ns at $KADA $KAS
 }
-
     # Jį anksčiau rankiniu būdu pildydavau taip:
-#$ns at $PRADZIA "$ftp1 start"
-#$ns at $PRADZIA "$ftp2 start"
-#$ns at $STABDIS "$ftp1 stop"
-#$ns at $STABDIS "$ftp2 stop"
-#$ns at $TRUKME "finish"
+    #$ns at $PRADZIA "$ftp1 start"
+    #$ns at $PRADZIA "$ftp2 start"
+    #$ns at $STABDIS "$ftp1 stop"
+    #$ns at $STABDIS "$ftp2 stop"
+    #$ns at $TRUKME "finish"
 
 # Tinklo topologiją žymime grafiškai:
 $ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
