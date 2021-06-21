@@ -35,7 +35,8 @@ $ns trace-all $ntf
 
 # Generuosime NAM-formato treisus:
 set nmf [open $NAM_NAME w]
-$ns namtrace-all $nmf
+# kurį laiką negeneruosime:
+#$ns namtrace-all $nmf
 
 # Prireiks uždarymo procedūros:
 proc finish {} {
