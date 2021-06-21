@@ -15,7 +15,9 @@ for DELAY in 0 2 4; do
     ns $DIR/kursinis-saukrs.tcl -- "${DELAY}ms" ${LOSS} "kursinis-saukrs" \
         0.1 '$ftp1 start' \
         0.2 '$ftp2 start' \
-        ;
+        490 '$ftp1 stop'  \
+        490 '$ftp2 stop'  \
+        300 'finish'
     echo
 done
 

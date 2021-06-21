@@ -125,20 +125,20 @@ set ftp2 [new Application/FTP]
 $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
-# Siųstuvų įvykiai:
+# Užpildome tinklo įvykių grafiką:
 foreach {KADA KURIS} $STARTAI {
-    puts "Tvarkaraštis: $KADA, $KURIS"
+    puts "Grafikas: $KADA, $KAS"
     $ns at $KADA $KURIS
 }
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 #$ns at $PRADZIA "$ftp1 start"
 #$ns at $PRADZIA "$ftp2 start"
-$ns at $STABDIS "$ftp1 stop"
-$ns at $STABDIS "$ftp2 stop"
+#$ns at $STABDIS "$ftp1 stop"
+#$ns at $STABDIS "$ftp2 stop"
 
 # Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:
-$ns at $TRUKME "finish"
+#$ns at $TRUKME "finish"
 
 # Tinklo topologiją žymime grafiškai:
 $ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
