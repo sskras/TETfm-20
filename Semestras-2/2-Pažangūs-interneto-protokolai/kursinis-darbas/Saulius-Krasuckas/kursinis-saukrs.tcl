@@ -6,6 +6,7 @@ set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumen
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
 set TRUKME 500                      ; # modeliavimo trukmė
+set PRADZIA 0.1                     ; # visų siųstuvų starto laikas, s
 set STABDIS 490                     ; # visų siųstuvų stabdymo laikas, s
 
 # Pavadinimai:
@@ -116,8 +117,8 @@ $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
-$ns at 0.1 "$ftp1 start"
-$ns at 0.1 "$ftp2 start"
+$ns at $PRADZIA "$ftp1 start"
+$ns at $PRADZIA "$ftp2 start"
 $ns at $STABDIS "$ftp1 stop"
 $ns at $STABDIS "$ftp2 stop"
 
