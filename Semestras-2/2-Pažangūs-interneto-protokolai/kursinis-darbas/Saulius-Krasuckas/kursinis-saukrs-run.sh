@@ -6,7 +6,7 @@ echo "$0: Startuoju, cmd-line: "$*
 
 FNAME_PREFIX="saukrs-bandomasis"
 
-DELAY="2"; LOSS="0.00"
+LOSS="0.00"
 echo "$LOSS * 100" | bc -q | xargs printf "%d\n" | read LOSS_P
 
 for DELAY in 2 4; do
