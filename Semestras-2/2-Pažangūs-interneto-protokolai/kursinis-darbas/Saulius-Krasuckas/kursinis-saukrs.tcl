@@ -20,12 +20,12 @@ set NAM_NAME   "$SESSION_NAME.nam"
 
 # Siųstuvų paleidimai:
 puts "\$argc = $argc"
+
 for {set i 4} {$i < $argc} {incr i} {
     set PRADEDAM [lindex $argv $i]
-    puts "\$argv($i) = '$PRADEDAM'"
     lappend STARTAI $PRADEDAM
 }
-puts "Sukaupti \$STARTAI: $STARTAI"
+#puts "Sukaupti \$STARTAI: $STARTAI"
 
 puts "=================================="
 puts "Kanalų sparta: $SPARTA"
@@ -124,6 +124,12 @@ $ftp1 set type_ FTP
 set ftp2 [new Application/FTP]
 $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
+
+# Siųstuvų paleidimai:
+for {set i 0} {$i < [llength $STARTAI]} {incr i} {
+    set PRADEDAM [lindex $STARTAI $i]
+    puts "Paleidimas $i: $PRADEDAM"
+}
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 $ns at $PRADZIA "$ftp1 start"
