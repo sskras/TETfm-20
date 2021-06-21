@@ -52,6 +52,8 @@ BEGIN {
 }
 
 {
+    if (NR != 2) next
+
 	# Trace line format: normal
 	if ($2 != "-t") {
 		event = $1
@@ -60,7 +62,7 @@ BEGIN {
 	}
 
 	# Init prevTime to the first packet recv time
-	if(prevTime == 0)
+	if (prevTime == 0)
     {
 		prevTime = time
         start_time = time
@@ -83,9 +85,9 @@ BEGIN {
 }
 
 END {
-	print("")
     printf("Total data transmitted: %d Bytes\n", recv_total)
     duration = prevTime - start_time
     printf("Transmission duration: %f seconds\n", duration)
+    if (duration == 0) exit
     printf("Average throughput: %f Mbps\n", (recv_total/duration*8/1000000))
 }
