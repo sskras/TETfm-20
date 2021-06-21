@@ -5,7 +5,7 @@ set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumen
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
-set TRUKME 500                      ; # modeliavimo trukmė
+set TRUKME 500                      ; # modeliavimo trukmė, s
 set PRADZIA 0.1                     ; # visų siųstuvų starto laikas, s
 set STABDIS 490                     ; # visų siųstuvų stabdymo laikas, s
 
@@ -83,7 +83,7 @@ $tcp_source_1 set fid_ 1                ; # Flow-id
 $tcp_source_1 set window_ $WND_SIZE     ; # Congestion Window lubos
 $tcp_source_1 set packetSize_ $MSS      ; # Maximum Segment Size
 $tcp_source_1 select_ca highspeed       ; # Congestion-control algoritmas = Highspeed-TCP (hstcp)
-$node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siustuvo
+$node_siustuvas_1 attach $tcp_source_1  ; # Prijungiame prie siųstuvo #1
 
 # Sukuriame antrą TCP srauto šaltinį:
 set tcp_source_2 [new Agent/TCP/Linux]
@@ -92,15 +92,15 @@ $tcp_source_2 set fid_ 2
 $tcp_source_2 set window_ $WND_SIZE
 $tcp_source_2 set packetSize_ $MSS
 $tcp_source_2 select_ca bic             ; # Congestion-control algoritmas = TCP BIC
-$node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame prie siustuvo
+$node_siustuvas_2 attach $tcp_source_2  ; # Prijungiame prie siųstuvo #2
 
-# Sukuriame vieną TCP srauto imtuvą:
+# Sukuriame vieną TCP srauto gavėją:
 set tcp_destination_1 [new Agent/TCPSink]
-$node_imtuvas attach $tcp_destination_1 ; # Prijungiame prie imtuvo nodo
+$node_imtuvas attach $tcp_destination_1 ; # Prijungiame prie imtuvo
 
-# Sukuriame antrą TCP srauto imtuvą:
+# Sukuriame antrą TCP srauto gavėją:
 set tcp_destination_2 [new Agent/TCPSink]
-$node_imtuvas attach $tcp_destination_2 ; # Prijungiame prie imtuvo nodo
+$node_imtuvas attach $tcp_destination_2 ; # Prijungiame prie imtuvo
 
 # Sujungiame TCP agentus tarp "siustuvas_1" ir "imtuvas":
 $ns connect $tcp_source_1 $tcp_destination_1
