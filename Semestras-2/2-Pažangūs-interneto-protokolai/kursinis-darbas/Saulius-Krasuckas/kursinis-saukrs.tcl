@@ -18,6 +18,13 @@ if {$SESSION_NAME == ""} {
 set TRACE_NAME "$SESSION_NAME.tr"
 set NAM_NAME   "$SESSION_NAME.nam"
 
+# Siųstuvų paleidimai:
+puts "\$argc = $argc"
+for {set i 4} {$i < $argc} {incr i} {
+    set PRADEDAM [lindex $argv $i]
+    puts "\$argv($i) = '$PRADEDAM'"
+}
+
 puts "=================================="
 puts "Kanalų sparta: $SPARTA"
 puts "Parinktuvų buferių gylis: $QDEPTH"
