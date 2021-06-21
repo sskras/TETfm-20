@@ -19,6 +19,8 @@ for DELAY in 2 6 80; do
         300 'finish'
     echo
     echo Išsitraukiame tiriamosios linijos duomenis:
+    ls -l kursinis-saukrs.tr
+    cat kursinis-saukrs.tr | grep '^r .* 2 3' | awk -f $DIR/../tools/NS-2/Throughput.awk
     echo
 done
 
