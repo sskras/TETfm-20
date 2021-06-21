@@ -52,7 +52,8 @@ BEGIN {
 }
 
 {
-    if (NR != 2) next
+    # Skip empty lines
+    if (NF < 6 || $6 == 0) next
 
 	# Trace line format: normal
 	if ($2 != "-t") {
