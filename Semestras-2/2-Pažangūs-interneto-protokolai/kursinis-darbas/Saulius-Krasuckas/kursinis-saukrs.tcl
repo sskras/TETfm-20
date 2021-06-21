@@ -115,11 +115,11 @@ $ftp2 set type_ FTP
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
 $ns at 0.1 "$ftp1 start"
 $ns at 0.2 "$ftp2 start"
-$ns at 4.0 "$ftp1 stop"
-$ns at 4.9 "$ftp2 stop"
+$ns at 40 "$ftp1 stop"
+$ns at 49 "$ftp2 stop"
 
 # Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:
-$ns at 5.0 "finish"
+$ns at 50 "finish"
 
 # Tinklo topologiją žymime grafiškai:
 $ns duplex-link-op $node_siustuvas_1 $node_parinktuvas orient down
