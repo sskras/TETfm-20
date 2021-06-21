@@ -126,9 +126,9 @@ $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
 # Užpildome tinklo įvykių grafiką:
-foreach {KADA KURIS} $STARTAI {
+foreach {KADA KAS} $STARTAI {
     puts "Grafikas: $KADA, $KAS"
-    $ns at $KADA $KURIS
+    $ns at $KADA $KAS
 }
 
 # Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
