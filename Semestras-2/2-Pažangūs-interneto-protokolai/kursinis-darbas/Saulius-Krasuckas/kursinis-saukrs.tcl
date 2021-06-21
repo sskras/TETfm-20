@@ -6,6 +6,14 @@ set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumen
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
 
+# Failų vardai:
+set SESSION_NAME [lindex $argv 3]
+
+if {$SESSION_NAME == ""} {
+    puts "Radau tuščią \$SESSION_NAME"
+    exit 1
+}
+
 puts "=================================="
 puts "Kanalų sparta: $SPARTA"
 puts "Parinktuvų buferių gylis: $QDEPTH"
@@ -13,6 +21,7 @@ puts "Linijos vėlinimas: $VELINIMAS"
 puts "Paketų praradimas: $PRARADIMAS"
 puts "Congestion Window lubos: $WND_SIZE"
 puts "MSS: $MSS"
+puts "Trace-sesija: '$SESSION_NAME'"
 puts "=================================="
 
 # Susidėliokim simuliatorių:
@@ -33,7 +42,7 @@ proc finish {} {
     $ns flush-trace                 ; # išsaugom treiso likučius į failą
     close $ntf                      ; # uždarom treisą
     close $nmf                      ; # uždarom NAM-treisą
-    exec nam kursinis-saukrs.nam &  ; # startuojam vizualizaciją
+#   exec nam kursinis-saukrs.nam &  ; # startuojam vizualizaciją
     exit 0
 }
 
