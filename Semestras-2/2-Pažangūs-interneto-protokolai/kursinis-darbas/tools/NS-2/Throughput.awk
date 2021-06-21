@@ -46,6 +46,7 @@
 
 BEGIN {
 	recv = 0
+	recv_total = 0
 	currTime = prevTime = 0
 	tic = 0.1
 }
@@ -60,16 +61,20 @@ BEGIN {
 
 	# Init prevTime to the first packet recv time
 	if(prevTime == 0)
+    {
 		prevTime = time
+        start_time = time
+    }
 
 	# # calculating throughput per time interval tic
 	if ( event == "r" ) {
 		# adding received packet sizes
 		recv += pkt_size
+		recv_total += pkt_size
 		currTime += (time - prevTime)
 		# if time value is bigger then tic calculate throughput ant print it
 		if (currTime >= tic) {
-			printf("%.2fs: %2.2f Mbps\n", time, (recv/currTime)*8/1000000)
+#			printf("%.2f s: %2.2f Mbps\n", time, (recv/currTime)*8/1000000)
 			recv = 0
 			currTime = 0
 		}
@@ -79,4 +84,8 @@ BEGIN {
 
 END {
 	print("")
+    printf("Total data transmitted: %d Bytes\n", recv_total)
+    duration = prevTime - start_time
+    printf("Transmission duration: %f seconds\n", duration)
+    printf("Average throughput: %f Mbps\n", (recv_total/duration*8/1000000))
 }
