@@ -5,9 +5,6 @@ set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumen
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
 set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
-set TRUKME 500                      ; # modeliavimo trukmė, s
-set PRADZIA 0.1                     ; # visų siųstuvų starto laikas, s
-set STABDIS 490                     ; # visų siųstuvų stabdymo laikas, s
 
 # Pavadinimai:
 set SESSION_NAME [lindex $argv 3]   ; # iš komandinės eilutės (trečias argumentas, nebūtinas)
@@ -121,19 +118,17 @@ set ftp2 [new Application/FTP]
 $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
-# Užpildome tinklo įvykių grafiką:
+# Užpildome tinklo įvykių grafiką iš cmd-line argumentų:
 foreach {KADA KAS} $STARTAI {
     puts "Grafikas: $KADA, $KAS"
     $ns at $KADA $KAS
 }
 
-# Sudarome tinklo įvykių grafiką (vėlgi pagal pvz.):
+    # Jį anksčiau rankiniu būdu pildydavau taip:
 #$ns at $PRADZIA "$ftp1 start"
 #$ns at $PRADZIA "$ftp2 start"
 #$ns at $STABDIS "$ftp1 stop"
 #$ns at $STABDIS "$ftp2 stop"
-
-# Įvykdome uždarymo procedūrą praėjus 5s simuliacijos laiko:
 #$ns at $TRUKME "finish"
 
 # Tinklo topologiją žymime grafiškai:
