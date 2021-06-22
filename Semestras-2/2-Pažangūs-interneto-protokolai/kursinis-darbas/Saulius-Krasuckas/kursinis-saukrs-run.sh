@@ -5,7 +5,7 @@ shopt -s lastpipe
 DIR=$(builtin cd $(dirname $0)"/.."; pwd)
 FILE_PREFIX="kursinis-saukrs"
 
-LOSS_P="5" #%
+LOSS_P="0" #%
 echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
