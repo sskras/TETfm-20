@@ -8,13 +8,14 @@ FILE_PREFIX="kursinis-saukrs"
 LOSS_P="0" #%
 echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 
+# $ftp1 veikia steke su CC-algoritmu HSTCP
+# $ftp2 veikia steke su CC-algoritmu BIC
+
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
-    # $ftp1 veikia steke su CC-HSTCP algoritmu
-    # $ftp2 veikia steke su CC-BIC algoritmu
     ns $DIR/Saulius-Krasuckas/kursinis-saukrs.tcl -- "${DELAY}ms" ${LOSS} ${FILE_PREFIX} \
         0.1 '$ftp1 start' \
-        0.2 '$ftp2 start' \
+        0.1 '$ftp2 start' \
         290 '$ftp1 stop'  \
         290 '$ftp2 stop'  \
         300 'finish'
@@ -25,4 +26,4 @@ done
 
 ls -l *.{tr,nam,throughput}
 echo "Trinam?"; read
-rm -v *.{tr,nam,throughput}
+rm -v *.{tr,nam}
