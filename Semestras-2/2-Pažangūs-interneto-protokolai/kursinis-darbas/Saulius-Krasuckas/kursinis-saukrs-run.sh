@@ -2,7 +2,6 @@
 
 shopt -s lastpipe
 
-echo "$(basename $0): Startuoju, cmd-line: "$*
 DIR=$(dirname $0)
 
 LOSS="0.00"
@@ -14,9 +13,9 @@ for DELAY in 2 6 80; do
     ns $DIR/kursinis-saukrs.tcl -- "${DELAY}ms" ${LOSS} "kursinis-saukrs" \
         0.1 '$ftp1 start' \
         0.2 '$ftp2 start' \
-        290 '$ftp1 stop'  \
-        290 '$ftp2 stop'  \
-        300 'finish'
+        2.0 '$ftp1 stop'  \
+        2.0 '$ftp2 stop'  \
+        3.0 'finish'
     echo
     echo Išsitraukiame tiriamosios linijos duomenis:
     ls -l kursinis-saukrs.tr
