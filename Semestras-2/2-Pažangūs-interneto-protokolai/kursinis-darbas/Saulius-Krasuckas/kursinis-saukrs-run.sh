@@ -19,7 +19,7 @@ for DELAY in 2 6 80; do
     echo
     echo Išsitraukiame tiriamosios linijos duomenis:
     ls -l kursinis-saukrs.tr
-    cat kursinis-saukrs.tr | grep '^r .* 2 3' | awk -f $DIR/../tools/NS-2/Throughput.awk 1>kursinis-saukrs.throughput.txt
+    cat kursinis-saukrs.tr | grep '^r .* 2 3' | awk -f $DIR/../tools/NS-2/Throughput.awk 2>&1 1>kursinis-saukrs.throughput.txt
     # TODO: atskirti reziume spausdinimą ir packet_size(t) ištraukimą į stderr + stdout
     echo
 done
