@@ -18,9 +18,9 @@ for DELAY in 2 6 80; do
         2.0 '$ftp2 stop'  \
         3.0 'finish'
     echo
-    cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f $DIR/tools/NS-2/Throughput.awk 2>&1 1>kursinis-saukrs.throughput.txt
+    cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f $DIR/tools/NS-2/Throughput.awk 2>&1 1>${FILE_PREFIX}-${DELAY}ms.throughput
 done
 
-ls -l *.{tr,nam,throughput.txt}
+ls -l *.{tr,nam,throughput}
 echo "Trinam?"; read
-rm -v *.{tr,nam,throughput.txt}
+rm -v *.{tr,nam,throughput}
