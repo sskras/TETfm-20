@@ -27,9 +27,6 @@ puts "Linijos vėlinimas: $VELINIMAS"
 puts "Paketų praradimas: $PRARADIMAS"
 puts "Congestion Window lubos: $WND_SIZE"
 puts "MSS: $MSS"
-puts " TR-failas: '$TRACE_NAME'"
-puts "NAM-failas: '$NAM_NAME'"
-puts "=================================="
 
 # Susidėliokim simuliatorių:
 set ns [new Simulator]
@@ -118,9 +115,9 @@ set ftp2 [new Application/FTP]
 $ftp2 attach-agent $tcp_source_2        ; # Prisegame prie TCP šaltinio
 $ftp2 set type_ FTP
 
-# Užpildome tinklo įvykių grafiką iš cmd-line argumentų:
+# Užpildome tinklo įvykių tvarkaraštį iš cmd-line argumentų:
 foreach {KADA KAS} $STARTAI {
-    puts "Grafikas: $KADA, $KAS"
+    puts "Tvarkaraštis: $KADA, $KAS"
     $ns at $KADA $KAS
 }
     # Jį anksčiau rankiniu būdu pildydavau taip:
