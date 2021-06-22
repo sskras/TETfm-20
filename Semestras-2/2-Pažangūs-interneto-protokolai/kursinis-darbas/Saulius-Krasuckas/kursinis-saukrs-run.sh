@@ -25,5 +25,4 @@ for DELAY in 2 6 80; do
 done
 
 ls -l *.{tr,nam,throughput}
-echo "Trinam?"; read
 rm -v *.{tr,nam}
