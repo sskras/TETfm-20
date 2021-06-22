@@ -18,13 +18,9 @@ for DELAY in 2 6 80; do
         2.0 '$ftp2 stop'  \
         3.0 'finish'
     echo
-    echo Išsitraukiame tiriamosios linijos duomenis:
-    ls -l kursinis-saukrs.tr
     cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f $DIR/tools/NS-2/Throughput.awk 2>&1 1>kursinis-saukrs.throughput.txt
-    # TODO: atskirti reziume spausdinimą ir packet_size(t) ištraukimą į stderr + stdout
-    echo
 done
 
-ls -l *.{tr,nam}
+ls -l *.{tr,nam,throughput.txt}
 echo "Trinam?"; read
-rm -v *.{tr,nam}
+rm -v *.{tr,nam,throughput.txt}
