@@ -86,9 +86,9 @@ BEGIN {
 }
 
 END {
-    printf("Total data transmitted: %d Bytes\n", recv_total)
+    print sprintf("Total data transmitted: %d Bytes", recv_total)                   > "/dev/stderr"
     duration = prevTime - start_time
-    printf("Transmission duration: %f seconds\n", duration)
+    print sprintf("Transmission duration: %f seconds", duration)                    > "/dev/stderr"
     if (duration == 0) exit
-    printf("Average throughput: %f Mbps\n", (recv_total/duration*8/1000000))
+    print sprintf("Average throughput: %f Mbps\n", (recv_total/duration*8/1000000)) > "/dev/stderr"
 }
