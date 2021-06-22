@@ -20,7 +20,6 @@ for {set i 4} {$i < $argc} {incr i} {
 }
 #puts "Sukaupti \$STARTAI: $STARTAI"
 
-puts "=================================="
 puts "Kanalų sparta: $SPARTA"
 puts "Parinktuvų buferių gylis: $QDEPTH"
 puts "Linijos vėlinimas: $VELINIMAS"

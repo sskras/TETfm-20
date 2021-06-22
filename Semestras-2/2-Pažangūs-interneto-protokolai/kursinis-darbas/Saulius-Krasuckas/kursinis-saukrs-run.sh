@@ -19,10 +19,9 @@ for DELAY in 2 6 80; do
         290 '$ftp1 stop'  \
         290 '$ftp2 stop'  \
         300 'finish'
-    echo
     cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f $DIR/tools/NS-2/Throughput.awk 2>&1 \
       1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput
 done
 
-ls -l *.{tr,nam,throughput}
-rm -v *.{tr,nam}
+ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
+rm -v ${FILE_PREFIX}*.{tr,nam}
