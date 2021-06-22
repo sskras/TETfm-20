@@ -5,8 +5,8 @@ shopt -s lastpipe
 DIR=$(builtin cd $(dirname $0)"/.."; pwd)
 FILE_PREFIX="kursinis-saukrs"
 
-LOSS="0.00"
-echo "$LOSS * 100" | bc -q | xargs printf "%d\n" | read LOSS_P
+LOSS_P="5" #%
+echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
@@ -20,6 +20,9 @@ for DELAY in 2 6 80; do
     echo
     cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f $DIR/tools/NS-2/Throughput.awk 2>&1 1>${FILE_PREFIX}-${DELAY}ms.throughput
 done
+
+echo "LOSS_P: ${LOSS_P}%"
+echo "LOSS: ${LOSS}"
 
 ls -l *.{tr,nam,throughput}
 echo "Trinam?"; read
