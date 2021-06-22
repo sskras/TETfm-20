@@ -87,7 +87,10 @@ BEGIN {
 
 END {
     duration = prevTime - start_time
-    if (duration == 0) exit
+    if (duration == 0) {
+        print "Trasmission duration is zero, cannot compute."                       > "/dev/stderr"
+        exit
+    }
     print sprintf("Total data transmitted: %d Bytes", recv_total)                   > "/dev/stderr"
     print sprintf("Transmission duration: %f seconds", duration)                    > "/dev/stderr"
     print sprintf("Average throughput: %f Mbps\n", (recv_total/duration*8/1000000)) > "/dev/stderr"
