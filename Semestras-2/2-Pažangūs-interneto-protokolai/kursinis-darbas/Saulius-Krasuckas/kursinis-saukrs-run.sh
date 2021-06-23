@@ -5,11 +5,11 @@ shopt -s lastpipe
 DIR=$(builtin cd $(dirname $0)"/.."; pwd)
 FILE_PREFIX="kursinis-saukrs"
 SCRIPT_TCL="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
-SCRIPT_GPL="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
+SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_AWK="$DIR/tools/NS-2/Throughput.awk"
 TMP_TRACEFILE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
-OUT_DIAGRAM_1="${FILE_PREFIX}-0%.throughput-by-time.png"
+OUT1="${FILE_PREFIX}-0%.throughput-by-time.png"
 
 # Išvalome logą:
 > ${LOG_S}
@@ -42,7 +42,7 @@ TH1c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_TCL} -- "80ms" 0.00 ${TMP_TRAC
 # Stabdau išvesties dubliavimą į logą:
 exec > /dev/tty 2>&1
 
-gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}        # Braižome pirmą diagramą
+gnuplot -e 'out1="'${OUT1}'"' ${SCRIPT_PLT}                     # Braižome pirmą diagramą
 gio open ${OUT_DIAGRAM_1}                                       # Atidarome pirmą diagramą:
 rm -v ${TMP_TRACEFILE}*                                         # Ištriname tarpinius (Trace-) failus:
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
