@@ -16,9 +16,9 @@ for DELAY in 2 6 80; do
     ns $DIR/Saulius-Krasuckas/kursinis-saukrs.tcl -- "${DELAY}ms" ${LOSS} ${FILE_PREFIX} \
         0.1 '$ftp1 start' \
         0.1 '$ftp2 start' \
-        298 '$ftp1 stop'  \
-        298 '$ftp2 stop'  \
-        300 'finish'
+        2.8 '$ftp1 stop'  \
+        2.8 '$ftp2 stop'  \
+        3.0 'finish'
     cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f $DIR/tools/NS-2/Throughput.awk 2>&1 \
       1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput
 done
