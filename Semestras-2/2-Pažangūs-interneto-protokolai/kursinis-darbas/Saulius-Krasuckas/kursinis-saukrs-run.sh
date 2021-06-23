@@ -7,7 +7,7 @@ FILE_PREFIX="kursinis-saukrs"
 SCRIPT_TCL="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
 SCRIPT_GPL="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_AWK="$DIR/tools/NS-2/Throughput.awk"
-DIAGRAM1="kursinis-saukrs-0%.throughput-by-time.png"
+OUT_DIAGRAM_1="kursinis-saukrs-0%.throughput-by-time.png"
 
 LOSS_P="0" #%
 echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
@@ -30,5 +30,5 @@ done
 ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
 rm -v ${FILE_PREFIX}*.{tr,nam}
 
-gnuplot -e 'file_out="'${DIAGRAM1}'"' ${SCRIPT_GPL}
-gio open ${DIAGRAM1}
+gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}
+gio open ${OUT_DIAGRAM_1}
