@@ -36,14 +36,10 @@ for DELAY in 2 6 80; do
     cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | tee -a ${OUT_SIMUL_LOG}
 done
 
-# Braižome pirmą diagramą:
-gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}
+gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}        # Braižome pirmą diagramą
 
-# Atidarome pirmą diagramą:
-gio open ${OUT_DIAGRAM_1}
+gio open ${OUT_DIAGRAM_1}                                       # Atidarome pirmą diagramą:
 
-# Ištriname tarpinius (Trace-) failus:
-rm -v ${TMP_TRACEFILE}*
+rm -v ${TMP_TRACEFILE}*                                         # Ištriname tarpinius (Trace-) failus:
 
-# Parodome sukurtus failus:
-ls -l ${FILE_PREFIX}*
+ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
