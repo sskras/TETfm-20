@@ -6,10 +6,10 @@ DIR=$(builtin cd $(dirname $0)"/.."; pwd)
 FILE_PREFIX="kursinis-saukrs"
 SCRIPT_NS2="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
 SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
-SCRIPT_THR="$DIR/tools/NS-3/Throughput.awk"
+SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
-OUT1= "${FILE_PREFIX}-0%.throughput-by-time.png"
+OUT1="${FILE_PREFIX}-0%.throughput-by-time.png"
 
 # Išvalome logą:
 > ${LOG_S}
