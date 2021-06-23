@@ -27,3 +27,4 @@ ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
 rm -v ${FILE_PREFIX}*.{tr,nam}
 
 gnuplot $DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p
+gio open band.png
