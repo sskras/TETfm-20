@@ -4,6 +4,7 @@ set output "band.png"
 set xlabel "Laikas, s"
 set ylabel "Pralaidumas, Mbps"
 set format y "%.0f"
+set mxtics 5
 set grid x y mx my
 
 plot "kursinis-saukrs-2ms-0%.throughput"  using 1:($2/1000000) with lines, \
