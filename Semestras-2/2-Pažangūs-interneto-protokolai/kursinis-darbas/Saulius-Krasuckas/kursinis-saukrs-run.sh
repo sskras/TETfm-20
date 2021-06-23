@@ -35,8 +35,11 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
 exec > >(tee -i ${LOG_S}) 2>&1
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
+TH1a=${FILE_PREFIX}--2ms-0%.throughput
 eval ns ${SCRIPT_TCL} --  "2ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}--2ms-0%.throughput
+TH1b=${FILE_PREFIX}--6ms-0%.throughput
 eval ns ${SCRIPT_TCL} --  "6ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}--6ms-0%.throughput
+TH1c=${FILE_PREFIX}-80ms-0%.throughput
 eval ns ${SCRIPT_TCL} -- "80ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}-80ms-0%.throughput
 
 # Stabdau išvesties dubliavimą į logą:
