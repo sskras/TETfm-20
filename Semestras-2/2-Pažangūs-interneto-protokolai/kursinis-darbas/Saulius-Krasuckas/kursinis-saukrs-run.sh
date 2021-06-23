@@ -31,16 +31,14 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
     3.0 'finish'
 ----------------------
 
-# Dubliuoju išvestį į logą:
-exec > >(tee -i ${LOG_S}) 2>&1
+exec > >(tee -i ${LOG_S}) 2>&1                                  # Dubliuoju išvestį į logą
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
 TH1a=${FILE_PREFIX}--2ms-0%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH1a}
 TH1b=${FILE_PREFIX}--6ms-0%.thr; eval ns ${SCRIPT_NS2} --  "6ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH1b}
 TH1c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_NS2} -- "80ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH1c}
 
-# Stabdau išvesties dubliavimą į logą:
-exec > /dev/tty 2>&1
+exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą į logą
 
 gnuplot -e 'out="'${OUT1}'"' ${SCRIPT_PLT}                      # Braižome pirmą diagramą
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
