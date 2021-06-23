@@ -40,7 +40,12 @@ TH1c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_NS2} -- "80ms" 0.00 ${TRACE} $
 
 exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą į logą
 
-gnuplot -e 'in1="'${TH1a}'"; in2="'${TH1b}'"; in3="'${TH1c}'"; out="'${OUT1}'"' ${SCRIPT_PLT}   # Braižome pirmą diagramą
+gnuplot -e         \
+'in1="'${TH1a}'"; '\
+'in2="'${TH1b}'"; '\
+'in3="'${TH1c}'"; '\
+'out="'${OUT1}'"' ${SCRIPT_PLT}                                 # Braižome pirmą diagramą
+
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
 rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
