@@ -8,11 +8,11 @@ SCRIPT_TCL="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
 SCRIPT_GPL="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_AWK="$DIR/tools/NS-2/Throughput.awk"
 TMP_TRACEFILE="${FILE_PREFIX}.tr"
-OUT_SIMUL_LOG="${FILE_PREFIX}.log"
+LOG_S="${FILE_PREFIX}.log"
 OUT_DIAGRAM_1="${FILE_PREFIX}-0%.throughput-by-time.png"
 
 # Išvalome logą:
-> ${OUT_SIMUL_LOG}
+> ${LOG_S}
 
 xthr () # eXtract THRoughput: funkcija ištraukia pralaidumą tiriamojoje linijoje tarp Node 2 ir Node 3 (parinktuvų)
 {
@@ -31,10 +31,16 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
     3.0 'finish'
 ----------------------
 
+# Dubliuoju išvestį į logą:
+exec > >(tee -i ${LOG_S}) 2>&1
+
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
 (eval ns ${SCRIPT_TCL} --  "2ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}--2ms-0%.throughput) | tee -a ${OUT_SIMUL_LOG}
 (eval ns ${SCRIPT_TCL} --  "6ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}--6ms-0%.throughput) | tee -a ${OUT_SIMUL_LOG}
 (eval ns ${SCRIPT_TCL} -- "80ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}-80ms-0%.throughput) | tee -a ${OUT_SIMUL_LOG}
+
+# Stabdau išvesties dubliavimą į logą:
+exec > /dev/tty 2>&1
 
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}        # Braižome pirmą diagramą
 gio open ${OUT_DIAGRAM_1}                                       # Atidarome pirmą diagramą:
