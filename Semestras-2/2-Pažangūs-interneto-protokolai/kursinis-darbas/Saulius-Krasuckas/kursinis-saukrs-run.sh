@@ -20,15 +20,19 @@ echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 # $ftp1 veikia steke su CC-algoritmu HSTCP
 # $ftp2 veikia steke su CC-algoritmu BIC
 
+read -r -d '' RUN_HSTCP_AND_BIC << \
+-------------------------
+    0.1 '\$ftp1 start'
+    0.1 '\$ftp2 start'
+    2.8 '\$ftp1 stop'
+    2.8 '\$ftp2 stop'
+    3.0 'finish'
+-------------------------
+echo $CMD2
+
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
-    ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${TMP_TRACEFILE} \
-        0.1 '$ftp1 start' \
-        0.1 '$ftp2 start' \
-        298 '$ftp1 stop'  \
-        298 '$ftp2 stop'  \
-        300 'finish'      |
-    tee -a ${OUT_SIMUL_LOG}
+    eval ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC} | tee -a ${OUT_SIMUL_LOG}
     cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} \
     2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | \
     tee -a ${OUT_SIMUL_LOG}
