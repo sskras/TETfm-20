@@ -7,6 +7,6 @@ set xlabel "Laikas, s"
 set ylabel "Pralaidumas, bitai/s"
 set format y "%.0f"
 
-plot "kursinis-saukrs-2ms-0%.throughput" using 1:2 with lines, \
+plot "kursinis-saukrs-2ms-0%.throughput"  using 1:2 with lines, \
      "kursinis-saukrs-6ms-0%.throughput"  using 1:2 with lines, \
-     "kursinis-saukrs-80ms-0%.throughput" using 1:2 with p pt 7
+     "kursinis-saukrs-80ms-0%.throughput" using 1:2 with lines

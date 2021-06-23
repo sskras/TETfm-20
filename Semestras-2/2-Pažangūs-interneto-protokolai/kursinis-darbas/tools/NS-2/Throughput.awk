@@ -48,7 +48,7 @@ BEGIN {
 	recv = 0
 	recv_total = 0
 	currTime = prevTime = 0
-	tic = 0.1
+	tic = 1
 }
 
 {
