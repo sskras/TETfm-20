@@ -34,7 +34,7 @@ for DELAY in 2 6 80; do
 done
 
 ls -l ${TMP_TRACEFILE}* ${FILE_PREFIX}*.throughput
-rm -v ${FILE_PREFIX}*.{tr,nam}
+rm -v ${TMP_TRACEFILE}*
 
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}
 gio open ${OUT_DIAGRAM_1}

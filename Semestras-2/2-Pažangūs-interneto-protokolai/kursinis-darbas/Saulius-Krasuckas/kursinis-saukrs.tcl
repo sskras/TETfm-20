@@ -13,7 +13,7 @@ if {$SESSION_NAME == ""} {
     set SESSION_NAME "kursinis-saukrs"
 }
 set TRACE_NAME "$SESSION_NAME.tr"
-set NAM_NAME   "$SESSION_NAME.nam"
+set NAM_NAME   "$SESSION_NAME.tr.nam"
 
 for {set i 4} {$i < $argc} {incr i} {
     lappend STARTAI [lindex $argv $i]
