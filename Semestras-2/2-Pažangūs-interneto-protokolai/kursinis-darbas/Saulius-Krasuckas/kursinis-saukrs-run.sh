@@ -33,9 +33,7 @@ echo $CMD2
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
     eval ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC} | tee -a ${OUT_SIMUL_LOG}
-    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} \
-    2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | \
-    tee -a ${OUT_SIMUL_LOG}
+    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | tee -a ${OUT_SIMUL_LOG}
 done
 
 # Braižome pirmą diagramą:
