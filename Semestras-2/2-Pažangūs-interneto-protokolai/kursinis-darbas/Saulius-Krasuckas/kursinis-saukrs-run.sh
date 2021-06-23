@@ -14,10 +14,11 @@ OUT_DIAGRAM_1="${FILE_PREFIX}-0%.throughput-by-time.png"
 LOSS_P="0" #%
 echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 
+# Išvalome logą:
+> ${OUT_SIMUL_LOG}
+
 # $ftp1 veikia steke su CC-algoritmu HSTCP
 # $ftp2 veikia steke su CC-algoritmu BIC
-
-> ${OUT_SIMUL_LOG}
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
