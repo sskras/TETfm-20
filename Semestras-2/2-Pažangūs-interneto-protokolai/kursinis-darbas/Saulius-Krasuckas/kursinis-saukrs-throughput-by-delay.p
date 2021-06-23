@@ -10,6 +10,6 @@ set grid x y mx my
 set key below right maxcols 1
 set title "Pralaidumo kitimas laike naudojant HSTCP+BIC, kai paketų praradimas = 0%"
 
-plot in1 using 1:($2/1000000) with lines title 'Vėlinimas: 2 ms', \
+plot in1 using 1:($2/1000000) with lines title tt1, \
      in2 using 1:($2/1000000) with lines title "Vėlinimas: 6 ms", \
      in3 using 1:($2/1000000) with lines title "Vėlinimas: 80 ms"
