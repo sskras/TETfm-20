@@ -8,7 +8,7 @@ set mxtics 5
 set grid x y mx my
 
 set key below right maxcols 1
-set title "Pralaidumo kitimas laike naudojant HSTCP+BIC, kai paketų praradimas = 0%"
+set title pav
 
 plot in1 using 1:($2/1000000) with lines title tt1, \
      in2 using 1:($2/1000000) with lines title tt2, \

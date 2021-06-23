@@ -44,7 +44,7 @@ gnuplot -e                                 \
 'in1="'${TH1a}'"; tt1="Vėlinimas:  2 ms"; '\
 'in2="'${TH1b}'"; tt2="Vėlinimas:  6 ms"; '\
 'in3="'${TH1c}'"; tt3="Vėlinimas: 80 ms"; '\
-'out="'${OUT1}'"' \
+'out="'${OUT1}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
        ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
