@@ -27,9 +27,9 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
 ----------------------
     0.1 '\$ftp1 start'
     0.1 '\$ftp2 start'
-    2.8 '\$ftp1 stop'
-    2.8 '\$ftp2 stop'
-    3.0 'finish'
+    298 '\$ftp1 stop'
+    298 '\$ftp2 stop'
+    300 'finish'
 ----------------------
 
 exec > >(tee -i ${LOG_S}) 2>&1                                  # Dubliuoju išvestį į logą
