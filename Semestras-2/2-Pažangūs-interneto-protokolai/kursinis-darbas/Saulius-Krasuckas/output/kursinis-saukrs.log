@@ -1,0 +1,57 @@
+Kanalų sparta: 100Mb
+Parinktuvų buferių gylis: 10
+Linijos vėlinimas: 2ms
+Paketų praradimas: 0.00
+Congestion Window lubos: 256000
+MSS: 1448
+Tvarkaraštis: 0.1, $ftp1 start
+Tvarkaraštis: 0.1, $ftp2 start
+Tvarkaraštis: 298, $ftp1 stop
+Tvarkaraštis: 298, $ftp2 stop
+Tvarkaraštis: 300, finish
+Simuliacijos pradžia...
+Simuliacijos pabaiga.
+cmd select_ca highspeed
+cmd select_ca bic
+Total data transmitted: 1678898576 Bytes
+Transmission duration: 298.203219 seconds
+Average throughput: 45.040388 Mbps
+
+Kanalų sparta: 100Mb
+Parinktuvų buferių gylis: 10
+Linijos vėlinimas: 6ms
+Paketų praradimas: 0.00
+Congestion Window lubos: 256000
+MSS: 1448
+Tvarkaraštis: 0.1, $ftp1 start
+Tvarkaraštis: 0.1, $ftp2 start
+Tvarkaraštis: 298, $ftp1 stop
+Tvarkaraštis: 298, $ftp2 stop
+Tvarkaraštis: 300, finish
+Simuliacijos pradžia...
+Simuliacijos pabaiga.
+cmd select_ca highspeed
+cmd select_ca bic
+Total data transmitted: 2335018784 Bytes
+Transmission duration: 298.389217 seconds
+Average throughput: 62.603302 Mbps
+
+Kanalų sparta: 100Mb
+Parinktuvų buferių gylis: 10
+Linijos vėlinimas: 80ms
+Paketų praradimas: 0.00
+Congestion Window lubos: 256000
+MSS: 1448
+Tvarkaraštis: 0.1, $ftp1 start
+Tvarkaraštis: 0.1, $ftp2 start
+Tvarkaraštis: 298, $ftp1 stop
+Tvarkaraštis: 298, $ftp2 stop
+Tvarkaraštis: 300, finish
+Simuliacijos pradžia...
+Simuliacijos pabaiga.
+cmd select_ca highspeed
+cmd select_ca bic
+Total data transmitted: 1181238464 Bytes
+Transmission duration: 299.407342 seconds
+Average throughput: 31.562044 Mbps
+
