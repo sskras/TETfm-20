@@ -12,4 +12,4 @@ set title "Pralaidumo kitimas laike naudojant HSTCP+BIC, kai paketų praradimas 
 
 plot in1 using 1:($2/1000000) with lines title tt1, \
      in2 using 1:($2/1000000) with lines title tt2, \
-     in3 using 1:($2/1000000) with lines title "Vėlinimas: 80 ms"
+     in3 using 1:($2/1000000) with lines title tt3

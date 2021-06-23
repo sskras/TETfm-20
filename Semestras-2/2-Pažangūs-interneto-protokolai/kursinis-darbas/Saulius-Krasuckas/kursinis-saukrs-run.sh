@@ -43,7 +43,7 @@ exec > /dev/tty 2>&1                                            # Stabdau išves
 gnuplot -e         \
 'in1="'${TH1a}'"; tt1="Vėlinimas:  2 ms"; '\
 'in2="'${TH1b}'"; tt2="Vėlinimas:  6 ms"; '\
-'in3="'${TH1c}'"; '\
+'in3="'${TH1c}'"; tt3="Vėlinimas: 80 ms"; '\
 'out="'${OUT1}'"' ${SCRIPT_PLT}                                 # Braižome pirmą diagramą
 
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
