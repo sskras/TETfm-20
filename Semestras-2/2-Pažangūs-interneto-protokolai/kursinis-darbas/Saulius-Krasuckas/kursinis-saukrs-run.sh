@@ -6,7 +6,7 @@ DIR=$(builtin cd $(dirname $0)"/.."; pwd)
 FILE_PREFIX="kursinis-saukrs"
 SCRIPT_TCL="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
 SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
-SCRIPT_AWK="$DIR/tools/NS-2/Throughput.awk"
+SCRIPT_THR="$DIR/tools/NS-3/Throughput.awk"
 TMP_TRACEFILE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
 OUT1="${FILE_PREFIX}-0%.throughput-by-time.png"
@@ -16,7 +16,7 @@ OUT1="${FILE_PREFIX}-0%.throughput-by-time.png"
 
 xthr () # eXtract THRoughput: funkcija ištraukia pralaidumą tiriamojoje linijoje tarp Node 2 ir Node 3 (parinktuvų)
 {
-    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 1>${1}
+    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_THR} 2>&1 1>${1}
 }
 
 # $ftp1 veikia steke su CC-algoritmu HSTCP
