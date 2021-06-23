@@ -1,4 +1,4 @@
-set terminal png size 1024,768
+set terminal png size 1024,384
 set output "band.png"
 
 set xlabel "Laikas, s"
