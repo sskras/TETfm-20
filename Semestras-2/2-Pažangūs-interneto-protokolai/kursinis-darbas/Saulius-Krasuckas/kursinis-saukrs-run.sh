@@ -26,6 +26,6 @@ done
 ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
 rm -v ${FILE_PREFIX}*.{tr,nam}
 
-DIAGRAM1="${DIR}/Saulius-Krasuckas/output/kursinis-saukrs-0%.throughput-by-time.png"
+DIAGRAM1="kursinis-saukrs-0%.throughput-by-time.png"
 gnuplot -e 'file_out="'${DIAGRAM1}'"' $DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p
 gio open ${DIAGRAM1}
