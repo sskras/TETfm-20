@@ -11,9 +11,6 @@ TMP_TRACEFILE="${FILE_PREFIX}.tr"
 OUT_SIMUL_LOG="${FILE_PREFIX}.log"
 OUT_DIAGRAM_1="${FILE_PREFIX}-0%.throughput-by-time.png"
 
-LOSS_P="0" #%
-echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
-
 # Išvalome logą:
 > ${OUT_SIMUL_LOG}
 
@@ -37,7 +34,7 @@ echo $CMD2
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
-(eval ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput) | tee -a ${OUT_SIMUL_LOG}
+(eval ns ${SCRIPT_TCL} -- "${DELAY}ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}-${DELAY}ms-0%.throughput) | tee -a ${OUT_SIMUL_LOG}
 done
 
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}        # Braižome pirmą diagramą
