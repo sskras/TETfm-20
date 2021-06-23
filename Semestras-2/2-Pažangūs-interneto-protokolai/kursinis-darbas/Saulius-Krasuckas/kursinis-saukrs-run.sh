@@ -34,7 +34,7 @@ echo $CMD2
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
-(eval ns ${SCRIPT_TCL} -- "${DELAY}ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}-${DELAY}ms-0%.throughput) | tee -a ${OUT_SIMUL_LOG}
+(eval ns ${SCRIPT_TCL} --  "2ms" 0.00 ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC}; xthr ${FILE_PREFIX}--2ms-0%.throughput) | tee -a ${OUT_SIMUL_LOG}
 done
 
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}        # Braižome pirmą diagramą
