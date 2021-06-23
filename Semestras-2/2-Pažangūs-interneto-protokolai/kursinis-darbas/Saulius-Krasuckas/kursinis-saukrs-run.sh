@@ -20,6 +20,11 @@ echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 # $ftp1 veikia steke su CC-algoritmu HSTCP
 # $ftp2 veikia steke su CC-algoritmu BIC
 
+xthr () # eXtract THRoughput: funkcija ištraukia pralaidumą tiriamojoje linijoje tarp Node 2 ir Node 3 (parinktuvų)
+{
+    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 1>${1}
+}
+
 read -r -d '' RUN_HSTCP_AND_BIC << \
 -------------------------
     0.1 '\$ftp1 start'
@@ -33,13 +38,10 @@ echo $CMD2
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
     eval ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${TMP_TRACEFILE} ${RUN_HSTCP_AND_BIC} | tee -a ${OUT_SIMUL_LOG}
-    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | tee -a ${OUT_SIMUL_LOG}
+    xthr ${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | tee -a ${OUT_SIMUL_LOG}
 done
 
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}        # Braižome pirmą diagramą
-
 gio open ${OUT_DIAGRAM_1}                                       # Atidarome pirmą diagramą:
-
 rm -v ${TMP_TRACEFILE}*                                         # Ištriname tarpinius (Trace-) failus:
-
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
