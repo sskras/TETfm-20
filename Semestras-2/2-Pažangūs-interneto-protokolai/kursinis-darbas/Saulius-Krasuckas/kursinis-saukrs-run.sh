@@ -28,7 +28,7 @@ for DELAY in 2 6 80; do
         2.8 '$ftp2 stop'  \
         3.0 'finish'      |
     tee -a ${OUT_SIMUL_LOG}
-    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 \
+    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} \
     2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | \
     tee -a ${OUT_SIMUL_LOG}
 done
