@@ -4,6 +4,7 @@ shopt -s lastpipe
 
 DIR=$(builtin cd $(dirname $0)"/.."; pwd)
 FILE_PREFIX="kursinis-saukrs"
+DIAGRAM1="kursinis-saukrs-0%.throughput-by-time.png"
 
 LOSS_P="0" #%
 echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
@@ -26,6 +27,5 @@ done
 ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
 rm -v ${FILE_PREFIX}*.{tr,nam}
 
-DIAGRAM1="kursinis-saukrs-0%.throughput-by-time.png"
 gnuplot -e 'file_out="'${DIAGRAM1}'"' $DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p
 gio open ${DIAGRAM1}
