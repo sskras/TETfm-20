@@ -1,5 +1,5 @@
 set terminal png size 1024,384
-set output "band.png"
+set output file_out
 
 set xlabel "Laikas, s"
 set ylabel "Pralaidumas, Mbps"
