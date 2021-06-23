@@ -7,13 +7,12 @@ set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
 
 # Pavadinimai:
-set SESSION_NAME [lindex $argv 3]   ; # iš komandinės eilutės (trečias argumentas, nebūtinas)
+set TRACE_NAME [lindex $argv 3]     ; # iš komandinės eilutės (trečias argumentas, nebūtinas)
 
-if {$SESSION_NAME == ""} {
-    set SESSION_NAME "kursinis-saukrs"
+if {$TRACE_NAME == ""} {
+    set TRACE_NAME "out.tr"
 }
-set TRACE_NAME "$SESSION_NAME.tr"
-set NAM_NAME   "$SESSION_NAME.tr.nam"
+set NAM_NAME   "$TRACE_NAME.nam"
 
 for {set i 4} {$i < $argc} {incr i} {
     lappend STARTAI [lindex $argv $i]

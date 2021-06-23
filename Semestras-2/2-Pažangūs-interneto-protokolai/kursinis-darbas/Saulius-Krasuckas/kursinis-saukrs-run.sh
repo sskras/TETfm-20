@@ -21,7 +21,7 @@ echo "$LOSS_P / 100" | bc -l | xargs printf "%.2f" | read LOSS
 
 # Vėlinimas pagal kursinio darbo užduotį, ms:
 for DELAY in 2 6 80; do
-    ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${FILE_PREFIX} \
+    ns ${SCRIPT_TCL} -- "${DELAY}ms" ${LOSS} ${TMP_TRACEFILE} \
         0.1 '$ftp1 start' \
         0.1 '$ftp2 start' \
         2.8 '$ftp1 stop'  \
