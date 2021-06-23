@@ -26,5 +26,6 @@ done
 ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
 rm -v ${FILE_PREFIX}*.{tr,nam}
 
-gnuplot -e 'file_out="kursinis-saukrs-0%.throughput-by-time.png"' $DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p
+DIAGRAM="kursinis-saukrs-0%.throughput-by-time.png"
+gnuplot -e 'file_out="'$DIAGRAM'"' $DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p
 gio open band.png
