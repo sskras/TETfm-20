@@ -43,6 +43,6 @@ TH1c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_TCL} -- "80ms" 0.00 ${TMP_TRAC
 exec > /dev/tty 2>&1
 
 gnuplot -e 'out1="'${OUT1}'"' ${SCRIPT_PLT}                     # Braižome pirmą diagramą
-gio open ${OUT_DIAGRAM_1}                                       # Atidarome pirmą diagramą:
+gio open ${OUT1}                                                # Atidarome pirmą diagramą
 rm -v ${TMP_TRACEFILE}*                                         # Ištriname tarpinius (Trace-) failus:
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
