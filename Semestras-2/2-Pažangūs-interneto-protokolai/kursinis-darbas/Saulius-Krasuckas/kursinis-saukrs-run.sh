@@ -33,8 +33,14 @@ for DELAY in 2 6 80; do
     tee -a ${OUT_SIMUL_LOG}
 done
 
+# Braižome pirmą diagramą:
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}
+
+# Atidarome pirmą diagramą:
 gio open ${OUT_DIAGRAM_1}
 
+# Parodome sukurtus failus:
 ls -l ${TMP_TRACEFILE}* ${FILE_PREFIX}*.throughput
+
+# Ištriname tarpinius (Trace-) failus:
 rm -v ${TMP_TRACEFILE}*
