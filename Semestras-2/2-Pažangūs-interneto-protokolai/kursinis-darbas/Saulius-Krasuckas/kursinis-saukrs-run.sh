@@ -7,6 +7,7 @@ FILE_PREFIX="kursinis-saukrs"
 SCRIPT_TCL="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
 SCRIPT_GPL="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_AWK="$DIR/tools/NS-2/Throughput.awk"
+TMP_TRACEFILE="${FILE_PREFIX}.tr"
 OUT_SIMUL_LOG="${FILE_PREFIX}.log"
 OUT_DIAGRAM_1="${FILE_PREFIX}-0%.throughput-by-time.png"
 
@@ -27,12 +28,12 @@ for DELAY in 2 6 80; do
         2.8 '$ftp2 stop'  \
         3.0 'finish'      |
     tee -a ${OUT_SIMUL_LOG}
-    cat ${FILE_PREFIX}.tr | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 \
+    cat ${TMP_TRACEFILE} | grep '^r .* 2 3' | awk -f ${SCRIPT_AWK} 2>&1 \
     2>&1 1>${FILE_PREFIX}-${DELAY}ms-${LOSS_P}%.throughput | \
     tee -a ${OUT_SIMUL_LOG}
 done
 
-ls -l ${FILE_PREFIX}*.{tr,nam,throughput}
+ls -l ${TMP_TRACEFILE}* ${FILE_PREFIX}*.throughput
 rm -v ${FILE_PREFIX}*.{tr,nam}
 
 gnuplot -e 'file_out="'${OUT_DIAGRAM_1}'"' ${SCRIPT_GPL}
