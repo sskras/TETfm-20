@@ -11,5 +11,5 @@ set key below right maxcols 1
 set title "Pralaidumo kitimas laike naudojant HSTCP+BIC, kai paketų praradimas = 0%"
 
 plot in1 using 1:($2/1000000) with lines title tt1, \
-     in2 using 1:($2/1000000) with lines title "Vėlinimas: 6 ms", \
+     in2 using 1:($2/1000000) with lines title tt2, \
      in3 using 1:($2/1000000) with lines title "Vėlinimas: 80 ms"
