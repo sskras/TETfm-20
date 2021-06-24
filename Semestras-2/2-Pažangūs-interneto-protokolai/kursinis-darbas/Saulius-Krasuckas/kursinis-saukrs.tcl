@@ -3,7 +3,7 @@ set SPARTA 100Mb
 set QDEPTH 10                       ; # Queue Size paketais (pagal simple.tcl pvz.)
 set VELINIMAS [lindex $argv 1]      ; # iš komandinės eilutės (pirmas argumentas)
 set PRARADIMAS [lindex $argv 2]     ; # iš komandinės eilutės (antras argumentas)
-set WND_SIZE 256000                 ; # maksimalus Congestion Window dydis
+set WND_SIZE 20                     ; # maksimalus Congestion Window dydis
 set MSS 1448                        ; # Maximum Segment Size
 
 # Pavadinimai:
