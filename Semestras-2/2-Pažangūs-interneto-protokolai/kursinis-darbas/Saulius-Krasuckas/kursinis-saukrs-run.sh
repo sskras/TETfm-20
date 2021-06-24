@@ -69,21 +69,21 @@ gnuplot -e                                    \
 'in1="'${TH2a}'"; tt1="Highspeed-TCP + BIC"; '\
 'in2="'${TH1a}'"; tt2="Tik Highspeed-TCP";   '\
 'in3="'${TH1b}'"; tt3="Tik BIC";             '\
-'out="'${OUT1}'"; pav="Pralaidumas panaudojus tik HSTCP, tik BIC ir abu Cg-valdymo algoritmus"' \
+'out="'${OUT1}'"; pav="Pralaidumas panaudojus tik HSTCP, tik BIC ir abu Cg-valdymo algoritmus kartu, kai vėlinimas = 2 ms, praradimas = 0%"' \
        ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
 gnuplot -e                                 \
 'in1="'${TH2a}'"; tt1="Vėlinimas:  2 ms"; '\
 'in2="'${TH2b}'"; tt2="Vėlinimas:  6 ms"; '\
 'in3="'${TH2c}'"; tt3="Vėlinimas: 80 ms"; '\
-'out="'${OUT2}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
+'out="'${OUT2}'"; pav="Pralaidumas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
        ${SCRIPT_PLT}                                            # Braižome antrą diagramą
 
 gnuplot -e                                       \
 'in1="'${TH3a}'"; tt1="Paketų praradimas:  1%"; '\
 'in2="'${TH3b}'"; tt2="Paketų praradimas:  4%"; '\
 'in3="'${TH3c}'"; tt3="Paketų praradimas:  6%"; '\
-'out="'${OUT3}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
+'out="'${OUT3}'"; pav="Pralaidumas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
        ${SCRIPT_PLT}                                            # Braižome trečią diagramą
 
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
