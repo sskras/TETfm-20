@@ -63,7 +63,7 @@ TH3a=${FILE_PREFIX}-3a-ABU---2ms-1%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.01 ${TR
 TH3b=${FILE_PREFIX}-3b-ABU---2ms-4%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.04 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3b}
 TH3c=${FILE_PREFIX}-3c-ABU---2ms-6%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.06 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3c}
 
-exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą į logą
+exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą
 
 gnuplot -e                                    \
 'in1="'${TH2a}'"; tt1="Highspeed-TCP + BIC"; '\
@@ -92,3 +92,35 @@ gio open ${OUT3}                                                # Atidarome antr
 
 rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus
+
+# XXX: Jeigu įjungiu STDOUT redirektinimą, NS-2 komanda "select_ca highspeed" pranešimus
+#      į STDOUT išveda su geroku vėlinimu, pačioje simuliacijos pabaigoje, jau po "finish {}":
+#   ...
+# Linijos vėlinimas: 2ms
+# Paketų praradimas: 0.00
+# Congestion Window lubos: 256000
+# MSS: 1448
+# Tvarkaraštis: 0.1, $ftp1 start
+# Tvarkaraštis: 2.8, $ftp1 stop
+# Tvarkaraštis: 3.0, finish
+# Simuliacijos pradžia...
+# Simuliacijos pabaiga.
+# cmd select_ca highspeed         <
+# cmd select_ca bic               <
+#
+#      Jei STDOUT lieka be redirekto, šie pranešimai išvedami daug anksčiau, prieš simuliaciją:
+#  ...
+# Linijos vėlinimas: 2ms
+# Paketų praradimas: 0.00
+# Congestion Window lubos: 256000
+# MSS: 1448
+# cmd select_ca highspeed         <
+# cmd select_ca bic               <
+# Tvarkaraštis: 0.1, $ftp1 start
+# Tvarkaraštis: 2.8, $ftp1 stop
+# Tvarkaraštis: 3.0, finish
+# Simuliacijos pradžia...
+# Simuliacijos pabaiga.
+#
+# Turbūt smulkus NS-2 bugas.
+# TODO: patikrinti su NS-3 (jei sintaksė ta pati)
