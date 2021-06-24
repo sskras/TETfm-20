@@ -9,6 +9,7 @@ SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
+OUT1="${FILE_PREFIX}-01-pralaidumas-skirtingiems-vėlinimo-algoritmams.2ms+0%.png"
 OUT2="${FILE_PREFIX}-0%.pralaidumas-skirtingiems-vėlinimams.png"
 OUT3="${FILE_PREFIX}-2ms.pralaidumas-skirtingiems-praradimams.png"
 
@@ -23,6 +24,20 @@ xthr () # eXtract THRoughput: funkcija ištraukia pralaidumą tiriamojoje linijo
 # $ftp1 veikia steke su CC-algoritmu HSTCP
 # $ftp2 veikia steke su CC-algoritmu BIC
 
+read -r -d '' RUN_HSTCP_ONLY << \
+----------------------
+    0.1 '\$ftp1 start'
+    298 '\$ftp1 stop'
+    300 'finish'
+----------------------
+
+read -r -d '' RUN_BIC_ONLY << \
+----------------------
+    0.1 '\$ftp2 start'
+    298 '\$ftp2 stop'
+    300 'finish'
+----------------------
+
 read -r -d '' RUN_HSTCP_AND_BIC << \
 ----------------------
     0.1 '\$ftp1 start'
@@ -33,6 +48,10 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
 ----------------------
 
 exec > >(tee -i ${LOG_S}) 2>&1                                  # Dubliuoju išvestį į logą
+
+# Naudoju skirtingus Cg-valdymus kai vėlinimas ir paketų praradimai yra minimalūs:
+TH1a=${FILE_PREFIX}-HSTCP-2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_HSTCP_ONLY};    xthr ${TRACE} ${TH1a}
+TH1b=${FILE_PREFIX}-BIC---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_BIC_ONLY};      xthr ${TRACE} ${TH1b}
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
 TH2a=${FILE_PREFIX}--2ms-0%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2a}
@@ -45,6 +64,13 @@ TH3b=${FILE_PREFIX}--2ms-4%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.04 ${TRACE} $
 TH3c=${FILE_PREFIX}--2ms-6%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.06 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3c}
 
 exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą į logą
+
+gnuplot -e                                    \
+'in1="'${TH2a}'"; tt1="Highspeed-TCP + BIC"; '\
+'in2="'${TH1a}'"; tt2="Tik Highspeed-TCP";   '\
+'in3="'${TH1b}'"; tt3="Tik BIC";             '\
+'out="'${OUT1}'"; pav="Pralaidumas panaudojus tik HSTCP, tik BIC ir abu Cg-valdymo algoritmus"' \
+       ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
 gnuplot -e                                 \
 'in1="'${TH2a}'"; tt1="Vėlinimas:  2 ms"; '\
@@ -60,6 +86,7 @@ gnuplot -e                                       \
 'out="'${OUT3}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
        ${SCRIPT_PLT}                                            # Braižome antrą diagramą
 
+gio open ${OUT1}                                                # Atidarome pirmą diagramą
 gio open ${OUT2}                                                # Atidarome pirmą diagramą
 gio open ${OUT3}                                                # Atidarome antrą diagramą
 
