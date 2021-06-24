@@ -9,7 +9,7 @@ SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
-OUT1="${FILE_PREFIX}-01-pralaidumas-skirtingiems-vėlinimo-algoritmams.2ms+0%.png"
+OUT1="${FILE_PREFIX}-01-pralaidumas-skirtingiems-Cg-algoritmams.2ms+0%.png"
 OUT2="${FILE_PREFIX}-02-pralaidumas-skirtingiems-vėlinimams.0%.png"
 OUT3="${FILE_PREFIX}-03-pralaidumas-skirtingiems-praradimams.2ms.png"
 
