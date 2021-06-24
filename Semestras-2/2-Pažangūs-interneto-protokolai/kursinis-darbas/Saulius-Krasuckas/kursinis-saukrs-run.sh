@@ -9,7 +9,7 @@ SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
-OUT1="${FILE_PREFIX}-0%.pralaidumas-skirtingiems-vėlinimams.png"
+OUT2="${FILE_PREFIX}-0%.pralaidumas-skirtingiems-vėlinimams.png"
 OUT3="${FILE_PREFIX}-2ms.pralaidumas-skirtingiems-praradimams.png"
 
 # Išvalome logą:
@@ -50,7 +50,7 @@ gnuplot -e                                 \
 'in1="'${TH1a}'"; tt1="Vėlinimas:  2 ms"; '\
 'in2="'${TH1b}'"; tt2="Vėlinimas:  6 ms"; '\
 'in3="'${TH1c}'"; tt3="Vėlinimas: 80 ms"; '\
-'out="'${OUT1}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
+'out="'${OUT2}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
        ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
 gnuplot -e                                       \
@@ -60,7 +60,7 @@ gnuplot -e                                       \
 'out="'${OUT3}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
        ${SCRIPT_PLT}                                            # Braižome antrą diagramą
 
-gio open ${OUT1}                                                # Atidarome pirmą diagramą
+gio open ${OUT2}                                                # Atidarome pirmą diagramą
 gio open ${OUT3}                                                # Atidarome antrą diagramą
 
 rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
