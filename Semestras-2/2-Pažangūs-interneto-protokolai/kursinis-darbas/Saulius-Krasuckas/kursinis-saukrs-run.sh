@@ -58,10 +58,10 @@ gnuplot -e                                       \
 'in2="'${TH2b}'"; tt2="Paketų praradimas:  4%"; '\
 'in3="'${TH2c}'"; tt3="Paketų praradimas:  6%"; '\
 'out="'${OUT2}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
-       ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
+       ${SCRIPT_PLT}                                            # Braižome antrą diagramą
 
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
 gio open ${OUT2}                                                # Atidarome antrą diagramą
 
 rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
-ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
+ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus
