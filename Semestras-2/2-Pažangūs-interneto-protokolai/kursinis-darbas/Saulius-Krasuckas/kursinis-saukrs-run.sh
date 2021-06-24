@@ -9,8 +9,8 @@ SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
-OUT1="${FILE_PREFIX}-0%.throughput-by-time.png"
-OUT2="${FILE_PREFIX}-2ms.throughput-by-time.png"
+OUT1="${FILE_PREFIX}-0%.pralaidumas-skirtingiems-vėlinimams.png"
+OUT2="${FILE_PREFIX}-2ms.pralaidumas-skirtingiems-praradimams.png"
 
 # Išvalome logą:
 > ${LOG_S}
