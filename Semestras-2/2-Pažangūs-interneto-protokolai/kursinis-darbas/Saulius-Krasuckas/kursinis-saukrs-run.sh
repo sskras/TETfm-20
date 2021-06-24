@@ -10,7 +10,7 @@ SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
 LOG_S="${FILE_PREFIX}.log"
 OUT1="${FILE_PREFIX}-0%.pralaidumas-skirtingiems-vėlinimams.png"
-OUT2="${FILE_PREFIX}-2ms.pralaidumas-skirtingiems-praradimams.png"
+OUT3="${FILE_PREFIX}-2ms.pralaidumas-skirtingiems-praradimams.png"
 
 # Išvalome logą:
 > ${LOG_S}
@@ -57,11 +57,11 @@ gnuplot -e                                       \
 'in1="'${TH2a}'"; tt1="Paketų praradimas:  1%"; '\
 'in2="'${TH2b}'"; tt2="Paketų praradimas:  4%"; '\
 'in3="'${TH2c}'"; tt3="Paketų praradimas:  6%"; '\
-'out="'${OUT2}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
+'out="'${OUT3}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
        ${SCRIPT_PLT}                                            # Braižome antrą diagramą
 
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
-gio open ${OUT2}                                                # Atidarome antrą diagramą
+gio open ${OUT3}                                                # Atidarome antrą diagramą
 
 rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus
