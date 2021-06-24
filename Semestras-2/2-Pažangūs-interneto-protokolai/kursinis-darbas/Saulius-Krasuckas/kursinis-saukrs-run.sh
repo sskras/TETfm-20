@@ -53,7 +53,7 @@ gnuplot -e                                 \
 'out="'${OUT1}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
        ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
-gnuplot -e                                      \
+gnuplot -e                                       \
 'in1="'${TH2a}'"; tt1="Paketų praradimas:  1%"; '\
 'in2="'${TH2b}'"; tt2="Paketų praradimas:  4%"; '\
 'in3="'${TH2c}'"; tt3="Paketų praradimas:  6%"; '\
@@ -61,6 +61,7 @@ gnuplot -e                                      \
        ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
 gio open ${OUT1}                                                # Atidarome pirmą diagramą
-gio open ${OUT2}                                                # Atidarome pirmą diagramą
+gio open ${OUT2}                                                # Atidarome antrą diagramą
+
 rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
 ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus:
