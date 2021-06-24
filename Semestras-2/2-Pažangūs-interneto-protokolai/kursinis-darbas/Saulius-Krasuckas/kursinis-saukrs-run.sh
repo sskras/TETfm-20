@@ -54,9 +54,9 @@ TH1a=${FILE_PREFIX}-1a-HSTCP-2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TR
 TH1b=${FILE_PREFIX}-1b-BIC---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_BIC_ONLY};      xthr ${TRACE} ${TH1b}
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
-TH2a=${FILE_PREFIX}--2ms-0%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2a}
-TH2b=${FILE_PREFIX}--6ms-0%.thr; eval ns ${SCRIPT_NS2} --  "6ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2b}
-TH2c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_NS2} -- "80ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2c}
+TH2a=${FILE_PREFIX}-2a-ABU---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2a}
+TH2b=${FILE_PREFIX}-2b-ABU---6ms-0%.thr; eval ns ${SCRIPT_NS2} --  6ms 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2b}
+TH2c=${FILE_PREFIX}-2c-ABU--80ms-0%.thr; eval ns ${SCRIPT_NS2} -- 80ms 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2c}
 
 # Keičiu paketų praradimą pagal kursinio darbo užduotį:
 TH3a=${FILE_PREFIX}--2ms-1%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.01 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3a}
