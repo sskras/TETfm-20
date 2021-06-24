@@ -5,6 +5,40 @@ Paketų praradimas: 0.00
 Congestion Window lubos: 256000
 MSS: 1448
 Tvarkaraštis: 0.1, $ftp1 start
+Tvarkaraštis: 298, $ftp1 stop
+Tvarkaraštis: 300, finish
+Simuliacijos pradžia...
+Simuliacijos pabaiga.
+cmd select_ca highspeed
+cmd select_ca bic
+Total data transmitted: 1978226104 Bytes
+Transmission duration: 297.901349 seconds
+Average throughput: 53.124328 Mbps
+
+Kanalų sparta: 100Mb
+Parinktuvų buferių gylis: 10
+Linijos vėlinimas: 2ms
+Paketų praradimas: 0.00
+Congestion Window lubos: 256000
+MSS: 1448
+Tvarkaraštis: 0.1, $ftp2 start
+Tvarkaraštis: 298, $ftp2 stop
+Tvarkaraštis: 300, finish
+Simuliacijos pradžia...
+Simuliacijos pabaiga.
+cmd select_ca highspeed
+cmd select_ca bic
+Total data transmitted: 580498600 Bytes
+Transmission duration: 298.128115 seconds
+Average throughput: 15.577158 Mbps
+
+Kanalų sparta: 100Mb
+Parinktuvų buferių gylis: 10
+Linijos vėlinimas: 2ms
+Paketų praradimas: 0.00
+Congestion Window lubos: 256000
+MSS: 1448
+Tvarkaraštis: 0.1, $ftp1 start
 Tvarkaraštis: 0.1, $ftp2 start
 Tvarkaraštis: 298, $ftp1 stop
 Tvarkaraštis: 298, $ftp2 stop
