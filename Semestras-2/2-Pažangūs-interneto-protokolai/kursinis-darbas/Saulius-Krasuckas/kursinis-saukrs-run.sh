@@ -35,9 +35,9 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
 exec > >(tee -i ${LOG_S}) 2>&1                                  # Dubliuoju išvestį į logą
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
-TH1a=${FILE_PREFIX}--2ms-0%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH1a}
-TH1b=${FILE_PREFIX}--6ms-0%.thr; eval ns ${SCRIPT_NS2} --  "6ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH1b}
-TH1c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_NS2} -- "80ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH1c}
+TH2a=${FILE_PREFIX}--2ms-0%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2a}
+TH2b=${FILE_PREFIX}--6ms-0%.thr; eval ns ${SCRIPT_NS2} --  "6ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2b}
+TH2c=${FILE_PREFIX}-80ms-0%.thr; eval ns ${SCRIPT_NS2} -- "80ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2c}
 
 # Keičiu paketų praradimą pagal kursinio darbo užduotį:
 TH3a=${FILE_PREFIX}--2ms-1%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.01 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3a}
@@ -47,9 +47,9 @@ TH3c=${FILE_PREFIX}--2ms-6%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.06 ${TRACE} $
 exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą į logą
 
 gnuplot -e                                 \
-'in1="'${TH1a}'"; tt1="Vėlinimas:  2 ms"; '\
-'in2="'${TH1b}'"; tt2="Vėlinimas:  6 ms"; '\
-'in3="'${TH1c}'"; tt3="Vėlinimas: 80 ms"; '\
+'in1="'${TH2a}'"; tt1="Vėlinimas:  2 ms"; '\
+'in2="'${TH2b}'"; tt2="Vėlinimas:  6 ms"; '\
+'in3="'${TH2c}'"; tt3="Vėlinimas: 80 ms"; '\
 'out="'${OUT2}'"; pav="Pralaidumas, sukuriamas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
        ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
 
