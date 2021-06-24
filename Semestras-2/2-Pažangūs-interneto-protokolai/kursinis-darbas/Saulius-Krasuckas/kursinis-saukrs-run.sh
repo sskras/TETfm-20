@@ -26,6 +26,8 @@ xthr () # eXtract THRoughput: funkcija ištraukia pralaidumą tiriamojoje linijo
 
 # $ftp1 veikia steke su CC-algoritmu HSTCP
 # $ftp2 veikia steke su CC-algoritmu BIC
+#
+# Pagal tai ir sudaromi NS-2 tvarkaraščiai:
 
 read -r -d '' RUN_HSTCP_ONLY << \
 ----------------------
