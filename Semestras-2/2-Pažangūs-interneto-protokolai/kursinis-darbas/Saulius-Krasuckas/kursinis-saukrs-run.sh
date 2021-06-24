@@ -66,35 +66,35 @@ TH3a=${FILE_PREFIX}-3a-ABU---2ms-1%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.01 ${TR
 TH3b=${FILE_PREFIX}-3b-ABU---2ms-4%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.04 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3b}
 TH3c=${FILE_PREFIX}-3c-ABU---2ms-6%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.06 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3c}
 
-exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą
+exec > /dev/tty 2>&1                    # Stabdau išvesties dubliavimą
 
 gnuplot -e                                    \
 'in1="'${TH2a}'"; tt1="Highspeed-TCP + BIC"; '\
 'in2="'${TH1a}'"; tt2="Tik Highspeed-TCP";   '\
 'in3="'${TH1b}'"; tt3="Tik BIC";             '\
 'out="'${OUT4}'"; pav="Pralaidumas panaudojus tik HSTCP, tik BIC ir abu Cg-valdymo algoritmus kartu, kai vėlinimas = 2 ms, praradimas = 0%"' \
-       ${SCRIPT_PLT}                                            # Braižome pirmą diagramą
+       ${SCRIPT_PLT}                    # Braižome pirmą diagramą
 
 gnuplot -e                                 \
 'in1="'${TH2a}'"; tt1="Vėlinimas:  2 ms"; '\
 'in2="'${TH2b}'"; tt2="Vėlinimas:  6 ms"; '\
 'in3="'${TH2c}'"; tt3="Vėlinimas: 80 ms"; '\
 'out="'${OUT5}'"; pav="Pralaidumas panaudojus HSTCP+BIC, kai paketų praradimas = 0%"' \
-       ${SCRIPT_PLT}                                            # Braižome antrą diagramą
+       ${SCRIPT_PLT}                    # Braižome antrą diagramą
 
 gnuplot -e                                       \
 'in1="'${TH3a}'"; tt1="Paketų praradimas:  1%"; '\
 'in2="'${TH3b}'"; tt2="Paketų praradimas:  4%"; '\
 'in3="'${TH3c}'"; tt3="Paketų praradimas:  6%"; '\
 'out="'${OUT6}'"; pav="Pralaidumas panaudojus HSTCP+BIC, kai paketų vėlinimas = 2 ms"' \
-       ${SCRIPT_PLT}                                            # Braižome trečią diagramą
+       ${SCRIPT_PLT}                    # Braižome trečią diagramą
 
-gio open ${OUT4}                                                # Atidarome pirmą diagramą
-gio open ${OUT5}                                                # Atidarome antrą diagramą
-gio open ${OUT6}                                                # Atidarome trečią diagramą
+gio open ${OUT4}                        # Atidarome pirmą diagramą
+gio open ${OUT5}                        # Atidarome antrą diagramą
+gio open ${OUT6}                        # Atidarome trečią diagramą
 
-rm -v ${TRACE}*                                                 # Ištriname tarpinius Trace-failus
-ls -l ${FILE_PREFIX}*                                           # Parodome sukurtus failus
+rm -v ${TRACE}*                         # Ištriname tarpinius Trace-failus
+ls -l ${FILE_PREFIX}*                   # Parodome sukurtus failus
 
 # XXX: Jeigu įjungiu STDOUT redirektinimą, NS-2 komanda "select_ca highspeed" pranešimus
 #      į STDOUT išveda su geroku vėlinimu, pačioje simuliacijos pabaigoje, jau po "finish {}":
