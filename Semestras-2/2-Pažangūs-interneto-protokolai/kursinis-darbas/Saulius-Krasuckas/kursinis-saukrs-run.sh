@@ -59,9 +59,9 @@ TH2b=${FILE_PREFIX}-2b-ABU---6ms-0%.thr; eval ns ${SCRIPT_NS2} --  6ms 0.00 ${TR
 TH2c=${FILE_PREFIX}-2c-ABU--80ms-0%.thr; eval ns ${SCRIPT_NS2} -- 80ms 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2c}
 
 # Keičiu paketų praradimą pagal kursinio darbo užduotį:
-TH3a=${FILE_PREFIX}--2ms-1%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.01 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3a}
-TH3b=${FILE_PREFIX}--2ms-4%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.04 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3b}
-TH3c=${FILE_PREFIX}--2ms-6%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.06 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3c}
+TH3a=${FILE_PREFIX}-3a-ABU---2ms-1%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.01 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3a}
+TH3b=${FILE_PREFIX}-3b-ABU---2ms-4%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.04 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3b}
+TH3c=${FILE_PREFIX}-3c-ABU---2ms-6%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.06 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH3c}
 
 exec > /dev/tty 2>&1                                            # Stabdau išvesties dubliavimą į logą
 
