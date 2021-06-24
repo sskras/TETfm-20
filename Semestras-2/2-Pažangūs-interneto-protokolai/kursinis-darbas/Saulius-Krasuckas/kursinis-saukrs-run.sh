@@ -8,7 +8,7 @@ SCRIPT_NS2="$DIR/Saulius-Krasuckas/kursinis-saukrs.tcl"
 SCRIPT_PLT="$DIR/Saulius-Krasuckas/kursinis-saukrs-throughput-by-delay.p"
 SCRIPT_THR="$DIR/tools/NS-2/Throughput.awk"
 TRACE="${FILE_PREFIX}.tr"
-LOG_S="${FILE_PREFIX}.log"
+LOGF="${FILE_PREFIX}.log"
 OUT1="${FILE_PREFIX}-01-pralaidumas-CWND_MAX=256000-skirtingiems-Cg-algoritmams.2ms+0%.png"
 OUT2="${FILE_PREFIX}-02-pralaidumas-CWND_MAX=256000-skirtingiems-vėlinimams.0%.png"
 OUT3="${FILE_PREFIX}-03-pralaidumas-CWND_MAX=256000-skirtingiems-praradimams.2ms.png"
@@ -17,7 +17,7 @@ OUT5="${FILE_PREFIX}-05-pralaidumas-CWND_MAX=20-skirtingiems-vėlinimams.0%.png"
 OUT6="${FILE_PREFIX}-06-pralaidumas-CWND_MAX=20-skirtingiems-praradimams.2ms.png"
 
 # Išvalome logą:
-> ${LOG_S}
+> ${LOGF}
 
 xthr () # eXtract THRoughput: funkcija ištraukia pralaidumą tiriamojoje linijoje tarp Node 2 ir Node 3 (parinktuvų)
 {
@@ -50,7 +50,7 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
     300 'finish'
 ----------------------
 
-exec > >(tee -i ${LOG_S}) 2>&1                                  # Dubliuoju išvestį į logą
+exec > >(tee -i ${LOGF}) 2>&1           # Dubliuoju išvestį į logą
 
 # Naudoju skirtingus Cg-valdymus kai vėlinimas ir paketų praradimai yra minimalūs:
 TH1a=${FILE_PREFIX}-1a-HSTCP-2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_HSTCP_ONLY};    xthr ${TRACE} ${TH1a}
