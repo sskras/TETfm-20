@@ -50,8 +50,8 @@ read -r -d '' RUN_HSTCP_AND_BIC << \
 exec > >(tee -i ${LOG_S}) 2>&1                                  # Dubliuoju išvestį į logą
 
 # Naudoju skirtingus Cg-valdymus kai vėlinimas ir paketų praradimai yra minimalūs:
-TH1a=${FILE_PREFIX}-HSTCP-2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_HSTCP_ONLY};    xthr ${TRACE} ${TH1a}
-TH1b=${FILE_PREFIX}-BIC---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_BIC_ONLY};      xthr ${TRACE} ${TH1b}
+TH1a=${FILE_PREFIX}-1a-HSTCP-2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_HSTCP_ONLY};    xthr ${TRACE} ${TH1a}
+TH1b=${FILE_PREFIX}-1b-BIC---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRACE} ${RUN_BIC_ONLY};      xthr ${TRACE} ${TH1b}
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
 TH2a=${FILE_PREFIX}--2ms-0%.thr; eval ns ${SCRIPT_NS2} --  "2ms" 0.00 ${TRACE} ${RUN_HSTCP_AND_BIC}; xthr ${TRACE} ${TH2a}
