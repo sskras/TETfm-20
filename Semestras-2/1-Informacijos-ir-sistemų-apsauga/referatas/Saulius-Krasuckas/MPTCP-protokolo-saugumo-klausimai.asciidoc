@@ -24,4 +24,11 @@ information regarding the ongoing connections by acting within the core of the I
 this might be seen as a potential benefit for clients aiming at achieving full anonymization in
 the network, many current intrusion mechanisms and similar technologies might fail under these
 new circumstances, perhaps causing even more security threats overall.
+
+Overall, MPTCP can drastically change how privacy is handled within the Internet, while the
+security aspects should remain unchanged, if not improved, with respect to current TCP. Moreover,
+MPTCP would bring a positive impact for the environment due to a better resources exploitation,
+if deployed at large scale. Finally, the new protocol would allow to achieve a series of benefits that
+could drastically improve user experience for data transferring in the Internet as well as within
+data centers, i.e. wherever TCP is currently adopted
 ____
