@@ -10,3 +10,6 @@ ____
 ____
 So does that make Firewalls useless?  No, of course not. Perimeter and inline security solutions, like Firewalls and Intrusion Detection Systems, are not dead.  They have and always will perform important duties for protecting perimeters.  Perimeters are more numerous and now include an organization's cloud infrastructure. But, security approaches like Zero Trust and the Cloud Security Alliance's https://cloudsecurityalliance.org/research/working-groups/software-defined-perimeter-and-zero-trust/[Software Defined Perimeter (SDP)] provide a new approach that applies to the world where end-user devices are everywhere and not restricted to office only use and applications that are also everywhere, ranging from on-premise to private cloud and public cloud.
 ____
+
+* **Security Evaluation of Multipath TCP** +
+  https://www.diva-portal.org/smash/get/diva2:934158/FULLTEXT01.pdf
