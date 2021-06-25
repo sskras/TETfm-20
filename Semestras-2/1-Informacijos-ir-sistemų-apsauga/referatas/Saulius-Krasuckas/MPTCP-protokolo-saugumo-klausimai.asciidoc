@@ -13,3 +13,15 @@ ____
 
 * **Security Evaluation of Multipath TCP** +
   https://www.diva-portal.org/smash/get/diva2:934158/FULLTEXT01.pdf
+____
+The new protocol has been carefully crafted to meet the required security goals, but due to its
+very nature, it inevitably changes how data is transferred across the networks, drastically affecting
+the way information can be accessed and inspected. From this perspective, working on the security
+evaluation of MPTCP has important implications regarding ethical concerns. By splitting a logical
+flow of data into different subflows with no predictable scheduling pattern, perhaps involving
+different ISPs for different subflows, would make it so much harder to inspect and eavesdrop useful
+information regarding the ongoing connections by acting within the core of the Internet. Despite
+this might be seen as a potential benefit for clients aiming at achieving full anonymization in
+the network, many current intrusion mechanisms and similar technologies might fail under these
+new circumstances, perhaps causing even more security threats overall.
+____
