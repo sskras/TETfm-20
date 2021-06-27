@@ -1,53 +1,28 @@
-
-7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
-p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,4 CPUs Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz (206A7),ASM,AES-NI)
-
-Scanning the drive for archives:
-1 file, 2183946920 bytes (2083 MiB)
-
-Extracting archive: 64bit.7z
---
-Path = 64bit.7z
-Type = 7z
-Physical Size = 2183946920
-Headers Size = 195
-Method = LZMA2:96m
-Solid = -
-Blocks = 1
-
-Everything is Ok
-
-Folders: 1
-Files: 1
-Size:       8120172544
-Compressed: 2183946920
-
-real	2m43.539s
-user	1m47.630s
-sys	0m5.791s
-/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas
-total 7877115
+total 7934490
 -rw-rw-r--. 1 p p 8120172544 Apr 25 00:15 Ubuntu 21.04 (64bit).vdi
+VBoxManage: error: Cannot register the hard disk '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/2021-VGTU-IiSA-LDVM1/2021-VGTU-IiSA-LDVM1.vdi' {1c4fb197-350c-4202-9588-587f79276d90} because a hard disk '/rpool/VGTU-studijos/VMs/2021-VGTU-IiSA-LDVM1/2021-VGTU-IiSA-LDVM1.vdi' with UUID {1c4fb197-350c-4202-9588-587f79276d90} already exists
+VBoxManage: error: Details: code NS_ERROR_INVALID_ARG (0x80070057), component VirtualBoxWrap, interface IVirtualBox, callee nsISupports
+VBoxManage: error: Context: "OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevType, enmAccessMode, fForceNewUuidOnOpen, pMedium.asOutParam())" at line 191 of file VBoxManageDisk.cpp
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: 72495d36-ab92-45ba-a6a4-a72bd73cb7d1
+UUID: f4db2a10-8718-4b8b-8d9d-8ed93986f2d4
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
-{72495d36-ab92-45ba-a6a4-a72bd73cb7d1} "VGTU-2021-IiSA-saukrs-LDVM1"
+{f4db2a10-8718-4b8b-8d9d-8ed93986f2d4} "VGTU-2021-IiSA-saukrs-LDVM1"
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        72495d36-ab92-45ba-a6a4-a72bd73cb7d1
+UUID:                        f4db2a10-8718-4b8b-8d9d-8ed93986f2d4
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               72495d36-ab92-45ba-a6a4-a72bd73cb7d1
+Hardware UUID:               f4db2a10-8718-4b8b-8d9d-8ed93986f2d4
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -82,7 +57,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-27T22:12:00.129000000)
+State:                       powered off (since 2021-06-27T22:32:26.444000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -98,7 +73,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 08002776D89F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027A0EA99, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -151,15 +126,15 @@ Configured memory balloon size: 0MB
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
-{72495d36-ab92-45ba-a6a4-a72bd73cb7d1} "VGTU-2021-IiSA-saukrs-LDVM1"
+{f4db2a10-8718-4b8b-8d9d-8ed93986f2d4} "VGTU-2021-IiSA-saukrs-LDVM1"
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          3 Apr 25 00:15 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
-drwx------. 2 p p          3 Jun 28 01:12 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 2 p p          3 Jun 28 01:32 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 1
--rw-------. 1 p p 1196 Jun 28 01:12 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 1196 Jun 28 01:32 VGTU-2021-IiSA-saukrs-LDVM1.vbox
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
