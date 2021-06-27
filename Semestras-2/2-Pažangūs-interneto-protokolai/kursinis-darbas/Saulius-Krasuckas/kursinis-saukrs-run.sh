@@ -56,15 +56,20 @@ exec > >(tee -i ${LOGF}) 2>&1           # Dubliuoju išvestį į logą
 
 # Naudoju skirtingus Cg-valdymus kai vėlinimas ir paketų praradimai yra minimalūs:
 TH1a=${FILE_PREFIX}-1a-HSTCP-2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRCE} ${RUN_HSTCP_ONLY};    xthr ${TRCE} ${TH1a}
+mv -v ${TRCE}.nam ${TRCE}-HS-2ms-0%.nam
 TH1b=${FILE_PREFIX}-1b-BIC---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRCE} ${RUN_BIC_ONLY};      xthr ${TRCE} ${TH1b}
+mv -v ${TRCE}.nam ${TRCE}-BI-2ms-0%.nam
 
 # Keičiu vėlinimą pagal kursinio darbo užduotį:
 TH2a=${FILE_PREFIX}-2a-ABU---2ms-0%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.00 ${TRCE} ${RUN_HSTCP_AND_BIC}; xthr ${TRCE} ${TH2a}
+mv -v ${TRCE}.nam ${TRCE}----2ms-0%.nam
 TH2b=${FILE_PREFIX}-2b-ABU---6ms-0%.thr; eval ns ${SCRIPT_NS2} --  6ms 0.00 ${TRCE} ${RUN_HSTCP_AND_BIC}; xthr ${TRCE} ${TH2b}
+mv -v ${TRCE}.nam ${TRCE}----6ms-0%.nam
 TH2c=${FILE_PREFIX}-2c-ABU--80ms-0%.thr; eval ns ${SCRIPT_NS2} -- 80ms 0.00 ${TRCE} ${RUN_HSTCP_AND_BIC}; xthr ${TRCE} ${TH2c}
 
 # Keičiu paketų praradimą pagal kursinio darbo užduotį:
 TH3a=${FILE_PREFIX}-3a-ABU---2ms-1%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.01 ${TRCE} ${RUN_HSTCP_AND_BIC}; xthr ${TRCE} ${TH3a}
+mv -v ${TRCE}.nam ${TRCE}----2ms-1%.nam
 TH3b=${FILE_PREFIX}-3b-ABU---2ms-4%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.04 ${TRCE} ${RUN_HSTCP_AND_BIC}; xthr ${TRCE} ${TH3b}
 TH3c=${FILE_PREFIX}-3c-ABU---2ms-6%.thr; eval ns ${SCRIPT_NS2} --  2ms 0.06 ${TRCE} ${RUN_HSTCP_AND_BIC}; xthr ${TRCE} ${TH3c}
 
@@ -95,7 +100,7 @@ gio open ${OUT4}                        # Atidarome pirmą diagramą
 gio open ${OUT5}                        # Atidarome antrą diagramą
 gio open ${OUT6}                        # Atidarome trečią diagramą
 
-rm -v ${TRCE}*                          # Ištriname tarpinius Trace-failus
+rm -v ${TRCE}                           # Ištriname tarpinius Trace-failus
 ls -l ${FILE_PREFIX}*                   # Parodome sukurtus failus
 
 # XXX: Jeigu įjungiu STDOUT redirektinimą, NS-2 komanda "select_ca highspeed" pranešimus
