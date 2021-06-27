@@ -5,7 +5,7 @@ p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,4 CPUs Int
 Scanning the drive for archives:
 
 ERROR: No more files
-64bit.6z
+64bit.7z
 
 
 
@@ -18,21 +18,21 @@ total 0
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: c6f8ed60-73bf-499c-835c-7598879b5888
+UUID: cbda276c-b691-4331-94f0-8fe8f29fd2fa
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
-{c6f8ed60-73bf-499c-835c-7598879b5888} "VGTU-2021-IiSA-saukrs-LDVM1"
+{cbda276c-b691-4331-94f0-8fe8f29fd2fa} "VGTU-2021-IiSA-saukrs-LDVM1"
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        c6f8ed60-73bf-499c-835c-7598879b5888
+UUID:                        cbda276c-b691-4331-94f0-8fe8f29fd2fa
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               c6f8ed60-73bf-499c-835c-7598879b5888
+Hardware UUID:               cbda276c-b691-4331-94f0-8fe8f29fd2fa
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -67,7 +67,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-27T22:00:30.676000000)
+State:                       powered off (since 2021-06-27T22:01:11.908000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -83,7 +83,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 080027B13F2D, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002766CBDB, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -136,15 +136,15 @@ Configured memory balloon size: 0MB
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
-{c6f8ed60-73bf-499c-835c-7598879b5888} "VGTU-2021-IiSA-saukrs-LDVM1"
+{cbda276c-b691-4331-94f0-8fe8f29fd2fa} "VGTU-2021-IiSA-saukrs-LDVM1"
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          2 May 17 21:48 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
-drwx------. 2 p p          3 Jun 28 01:00 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 2 p p          3 Jun 28 01:01 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 1
--rw-------. 1 p p 1196 Jun 28 01:00 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 1196 Jun 28 01:01 VGTU-2021-IiSA-saukrs-LDVM1.vbox
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
