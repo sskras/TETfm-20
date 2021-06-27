@@ -6,11 +6,11 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvest�
 # VM sąrašas:
 VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
 
+# Kuriu 1LD mašiną:
+VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder VMs/ --register
+
 # direktorija VM atvaizdams saugoti:
 pwd
 ls -Al VMs/
-
-# Kuriu 1LD mašiną:
-VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder VMs/ --register
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
