@@ -7,6 +7,7 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvest�
 VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
 
 # direktorija VM atvaizdams saugoti:
+pwd
 ls -Al VMs/
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
