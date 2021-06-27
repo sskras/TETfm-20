@@ -11,7 +11,7 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju iÅ¡vestÄ
 # Ubuntu 21.04 Linux OS .vdi atvaizdas:
 cd $BASE_DIR/VMs
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/21.04/64bit.7z/download
-7za x 64bit.7z
+time 7za x 64bit.7z
 cd -
 
 ls -Al $BASE_DIR/VMs/64bit
