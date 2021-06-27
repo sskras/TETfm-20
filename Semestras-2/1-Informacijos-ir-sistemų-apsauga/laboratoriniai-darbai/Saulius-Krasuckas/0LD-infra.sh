@@ -13,6 +13,7 @@ vm_list
 
 # Kuriu 1LD mašiną:
 VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
+VBoxManage unregistervm --delete VGTU-2021-IiSA-saukrs-LDVM1
 
 # direktorija VM atvaizdams saugoti:
 vm_list
