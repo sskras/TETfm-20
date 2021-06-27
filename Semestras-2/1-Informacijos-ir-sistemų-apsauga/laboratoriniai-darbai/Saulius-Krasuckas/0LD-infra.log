@@ -7,3 +7,6 @@ total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          2 May 17 21:48 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
+Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
+UUID: 1d4b834e-3934-4a9f-8162-66cd9b0e8bfd
+Settings file: '/home/p/.config/VirtualBox/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
