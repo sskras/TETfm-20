@@ -9,7 +9,7 @@ echo $BASE_DIR
 VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
 
 # Kuriu 1LD mašiną:
-VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder ./VMs/ --register
+VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
 VBoxManage unregistervm --delete VGTU-2021-IiSA-saukrs-LDVM1
 
 # direktorija VM atvaizdams saugoti:
