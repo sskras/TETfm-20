@@ -13,11 +13,11 @@ vm_list
 
 # Kuriu 1LD mašiną:
 VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
-VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep "Config file"
+vm_list
 VBoxManage unregistervm --delete VGTU-2021-IiSA-saukrs-LDVM1
 
 # direktorija VM atvaizdams saugoti:
-pwd
+vm_list
 ls -Al VMs/
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
