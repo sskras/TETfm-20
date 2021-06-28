@@ -36,7 +36,7 @@ ls -Al VMs/
 echo
 ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
-VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep -i storage
+VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
 VBoxManage unregistervm --delete VGTU-2021-IiSA-saukrs-LDVM1
 VBoxManage_vm_list
 ls -Al VMs/
