@@ -7,6 +7,6 @@
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
-#### Pavyzdys
+##### Pavyzdys
 
 ### Viso darbo išvados
