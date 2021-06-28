@@ -54,7 +54,8 @@ VBoxManage startvm ${VM1}
 VBoxManage controlvm ${VM1} pause
 echo
 echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc> klavišą."
-echo "Kartokite <Esc> paspaudimą be perstojo, kol pasirodys GRUB kelties meniu"
+echo "Kartokite <Esc> paspaudimus be perstojo, kol pasirodys GRUB meniu."
+read
 
 
 # direktorija VM atvaizdams saugoti:
