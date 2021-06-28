@@ -9,10 +9,10 @@ vm_list () {
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
 # Ubuntu 21.04 Linux OS .vdi atvaizdas:
-cd $BASE_DIR/VMs
+# cd $BASE_DIR/VMs
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/21.04/64bit.7z/download
-time 7za x 64bit.7z
-cd -
+# time 7za x 64bit.7z
+# cd -
 
 ls -Al $BASE_DIR/VMs/64bit
 
