@@ -21,21 +21,21 @@ Property:       AllocationBlockSize=1048576
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: 06331251-f95a-426d-9c0f-0c1284f8e35c
+UUID: caef389b-4200-4bd8-b970-531f8c307eab
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{06331251-f95a-426d-9c0f-0c1284f8e35c} "VGTU-2021-IiSA-saukrs-LDVM1"
+{caef389b-4200-4bd8-b970-531f8c307eab} "VGTU-2021-IiSA-saukrs-LDVM1"
 
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        06331251-f95a-426d-9c0f-0c1284f8e35c
+UUID:                        caef389b-4200-4bd8-b970-531f8c307eab
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               06331251-f95a-426d-9c0f-0c1284f8e35c
+Hardware UUID:               caef389b-4200-4bd8-b970-531f8c307eab
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -70,7 +70,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T22:05:35.259000000)
+State:                       powered off (since 2021-06-28T22:07:38.320000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -86,7 +86,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 080027113AC8, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002761E262, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -153,25 +153,190 @@ Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
 
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-Interface 'vboxnet0' was successfully created
+Interface 'vboxnet1' was successfully created
 Naujas Host-only NIC:
-Name:            vboxnet0
-GUID:            786f6276-656e-4074-8000-0a0027000000
+Name:            vboxnet1
+GUID:            786f6276-656e-4174-8000-0a0027000001
 DHCP:            Disabled
-IPAddress:       192.168.56.1
+IPAddress:       192.168.57.1
 NetworkMask:     255.255.255.0
 IPV6Address:     
 IPV6NetworkMaskPrefixLength: 0
-HardwareAddress: 0a:00:27:00:00:00
+HardwareAddress: 0a:00:27:00:00:01
 MediumType:      Ethernet
 Wireless:        No
 Status:          Down
-VBoxNetworkName: HostInterfaceNetworking-vboxnet0
+VBoxNetworkName: HostInterfaceNetworking-vboxnet1
 
+Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
+(C) 2005-2021 Oracle Corporation
+All rights reserved.
+
+Usage:
+
+VBoxManage modifyvm         <uuid|vmname>
+                            [--name <name>]
+                            [--groups <group>, ...]
+                            [--description <desc>]
+                            [--ostype <ostype>]
+                            [--iconfile <filename>]
+                            [--memory <memorysize in MB>]
+                            [--pagefusion on|off]
+                            [--vram <vramsize in MB>]
+                            [--acpi on|off]
+                            [--ioapic on|off]
+                            [--hpet on|off]
+                            [--triplefaultreset on|off]
+                            [--apic on|off]
+                            [--x2apic on|off]
+                            [--paravirtprovider none|default|legacy|minimal|
+                                                hyperv|kvm]
+                            [--paravirtdebug <key=value> [,<key=value> ...]]
+                            [--hwvirtex on|off]
+                            [--nestedpaging on|off]
+                            [--largepages on|off]
+                            [--vtxvpid on|off]
+                            [--vtxux on|off]
+                            [--pae on|off]
+                            [--longmode on|off]
+                            [--ibpb-on-vm-exit on|off]
+                            [--ibpb-on-vm-entry on|off]
+                            [--spec-ctrl on|off]
+                            [--l1d-flush-on-sched on|off]
+                            [--l1d-flush-on-vm-entry on|off]
+                            [--mds-clear-on-sched on|off]
+                            [--mds-clear-on-vm-entry on|off]
+                            [--nested-hw-virt on|off]
+                            [--cpu-profile "host|Intel 80[86|286|386]"]
+                            [--cpuid-portability-level <0..3>]
+                            [--cpuid-set <leaf[:subleaf]> <eax> <ebx> <ecx> <edx>]
+                            [--cpuid-remove <leaf[:subleaf]>]
+                            [--cpuidremoveall]
+                            [--hardwareuuid <uuid>]
+                            [--cpus <number>]
+                            [--cpuhotplug on|off]
+                            [--plugcpu <id>]
+                            [--unplugcpu <id>]
+                            [--cpuexecutioncap <1-100>]
+                            [--rtcuseutc on|off]
+                            [--graphicscontroller none|vboxvga|vmsvga|vboxsvga]
+                            [--monitorcount <number>]
+                            [--accelerate3d on|off]
+                            [--accelerate2dvideo on|off]
+                            [--firmware bios|efi|efi32|efi64]
+                            [--chipset ich9|piix3]
+                            [--bioslogofadein on|off]
+                            [--bioslogofadeout on|off]
+                            [--bioslogodisplaytime <msec>]
+                            [--bioslogoimagepath <imagepath>]
+                            [--biosbootmenu disabled|menuonly|messageandmenu]
+                            [--biosapic disabled|apic|x2apic]
+                            [--biossystemtimeoffset <msec>]
+                            [--biospxedebug on|off]
+                            [--system-uuid-le on|off]
+                            [--boot<1-4> none|floppy|dvd|disk|net>]
+                            [--nic<1-N> none|null|nat|bridged|intnet|hostonly|
+                                        generic|natnetwork]
+                            [--nictype<1-N> Am79C970A|Am79C973|Am79C960|
+                                            82540EM|82543GC|82545EM|
+                                            virtio]
+                            [--cableconnected<1-N> on|off]
+                            [--nictrace<1-N> on|off]
+                            [--nictracefile<1-N> <filename>]
+                            [--nicproperty<1-N> name=[value]]
+                            [--nicspeed<1-N> <kbps>]
+                            [--nicbootprio<1-N> <priority>]
+                            [--nicpromisc<1-N> deny|allow-vms|allow-all]
+                            [--nicbandwidthgroup<1-N> none|<name>]
+                            [--bridgeadapter<1-N> none|<devicename>]
+                            [--hostonlyadapter<1-N> none|<devicename>]
+                            [--intnet<1-N> <network name>]
+                            [--nat-network<1-N> <network name>]
+                            [--nicgenericdrv<1-N> <driver>]
+                            [--natnet<1-N> <network>|default]
+                            [--natsettings<1-N> [<mtu>],[<socksnd>],
+                                                [<sockrcv>],[<tcpsnd>],
+                                                [<tcprcv>]]
+                            [--natpf<1-N> [<rulename>],tcp|udp,[<hostip>],
+                                          <hostport>,[<guestip>],<guestport>]
+                            [--natpf<1-N> delete <rulename>]
+                            [--nattftpprefix<1-N> <prefix>]
+                            [--nattftpfile<1-N> <file>]
+                            [--nattftpserver<1-N> <ip>]
+                            [--natbindip<1-N> <ip>]
+                            [--natdnspassdomain<1-N> on|off]
+                            [--natdnsproxy<1-N> on|off]
+                            [--natdnshostresolver<1-N> on|off]
+                            [--nataliasmode<1-N> default|[log],[proxyonly],
+                                                         [sameports]]
+                            [--macaddress<1-N> auto|<mac>]
+                            [--mouse ps2|usb|usbtablet|usbmultitouch]
+                            [--keyboard ps2|usb]
+                            [--uart<1-N> off|<I/O base> <IRQ>]
+                            [--uartmode<1-N> disconnected|
+                                             server <pipe>|
+                                             client <pipe>|
+                                             tcpserver <port>|
+                                             tcpclient <hostname:port>|
+                                             file <file>|
+                                             <devicename>]
+                            [--uarttype<1-N> 16450|16550A|16750]
+                            [--lpt<1-N> off|<I/O base> <IRQ>]
+                            [--lptmode<1-N> <devicename>]
+                            [--guestmemoryballoon <balloonsize in MB>]
+                            [--vm-process-priority default|flat|low|normal|high]
+                            [--audio none|null|oss|alsa|pulse]
+                            [--audioin on|off]
+                            [--audioout on|off]
+                            [--audiocontroller ac97|hda|sb16]
+                            [--audiocodec stac9700|ad1980|stac9221|sb16]
+                            [--clipboard-mode disabled|hosttoguest|guesttohost|
+                                              bidirectional]
+                            [--draganddrop disabled|hosttoguest|guesttohost|
+                                           bidirectional]
+                            [--vrde on|off]
+                            [--vrdeextpack default|<name>]
+                            [--vrdeproperty <name=[value]>]
+                            [--vrdeport <hostport>]
+                            [--vrdeaddress <hostip>]
+                            [--vrdeauthtype null|external|guest]
+                            [--vrdeauthlibrary default|<name>]
+                            [--vrdemulticon on|off]
+                            [--vrdereusecon on|off]
+                            [--vrdevideochannel on|off]
+                            [--vrdevideochannelquality <percent>]
+                            [--usbohci on|off]
+                            [--usbehci on|off]
+                            [--usbxhci on|off]
+                            [--usbrename <oldname> <newname>]
+                            [--snapshotfolder default|<path>]
+                            [--teleporter on|off]
+                            [--teleporterport <port>]
+                            [--teleporteraddress <address|empty>]
+                            [--teleporterpassword <password>]
+                            [--teleporterpasswordfile <file>|stdin]
+                            [--tracing-enabled on|off]
+                            [--tracing-config <config-string>]
+                            [--tracing-allow-vm-access on|off]
+                            [--usbcardreader on|off]
+                            [--autostart-enabled on|off]
+                            [--autostart-delay <seconds>]
+                            [--recording on|off]
+                            [--recordingscreens all|<screen ID> [<screen ID> ...]]
+                            [--recordingfile <filename>]
+                            [--recordingvideores <width> <height>]
+                            [--recordingvideorate <rate>]
+                            [--recordingvideofps <fps>]
+                            [--recordingmaxtime <s>]
+                            [--recordingmaxsize <MB>]
+                            [--recordingopts <key=value> [,<key=value> ...]]
+                            [--defaultfrontend default|<name>]
+
+VBoxManage: error: --hostonlyadapter: RTGetOpt: Command line option needs an index.
 Nauja NIC konfigūracija:
-NIC 1:                       MAC: 080027113AC8, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002761E262, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 0800275F922C, Attachment: Host-only Interface '', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       disabled
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -186,12 +351,8 @@ UART 3:                      disabled
 UART 4:                      disabled
 
 Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
-VBoxManage: error: Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component ConsoleWrap, interface IConsole
 Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
-VBoxManage: error: Invalid machine state: PoweredOff
-VBoxManage: error: Details: code VBOX_E_INVALID_VM_STATE (0x80bb0002), component ConsoleWrap, interface IConsole, callee nsISupports
-VBoxManage: error: Context: "Pause()" at line 406 of file VBoxManageControlVM.cpp
+VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
 
 VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
 Kartokite <Esc> paspaudimus be perstojo.
@@ -215,20 +376,20 @@ lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semes
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 01:05 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 29 01:09 VGTU-2021-IiSA-saukrs-LDVM1
 
-total 7
-drwx------. 2 p p    3 Jun 29 01:05 Logs
--rw-------. 1 p p 2709 Jun 29 01:05 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 2421 Jun 29 01:05 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+total 2
+drwx------. 2 p p    3 Jun 29 01:07 Logs
+-rw-------. 1 p p 2501 Jun 29 01:09 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 2429 Jun 29 01:09 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        06331251-f95a-426d-9c0f-0c1284f8e35c
+UUID:                        caef389b-4200-4bd8-b970-531f8c307eab
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               06331251-f95a-426d-9c0f-0c1284f8e35c
+Hardware UUID:               caef389b-4200-4bd8-b970-531f8c307eab
 Memory size:                 2048MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -263,7 +424,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T22:05:38.929000000)
+State:                       powered off (since 2021-06-28T22:09:01.006000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -286,9 +447,9 @@ Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
 SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit/Ubuntu 20.04.2 (64bit).vdi (UUID: 0e653235-d186-46fd-8796-556389f3b94b)
-NIC 1:                       MAC: 080027113AC8, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002761E262, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 0800275F922C, Attachment: Host-only Interface '', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       disabled
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -338,8 +499,8 @@ Configured memory balloon size: 0MB
 Trinam VGTU-2021-IiSA-saukrs-LDVM1 ?
 removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs/VBox.log’
 removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs’
-removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev’
 removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox’
+removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev’
 removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1’
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"

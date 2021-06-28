@@ -83,7 +83,7 @@ VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" 
 echo
 
 # Prijungiu prie NIC 2: (OAM valdymui per tinklą)
-VBoxManage modifyvm ${VM1} --nic2 hostonly
+VBoxManage modifyvm ${VM1} --nic2 hostonly --hostonlyadapter ${HOSTONLY_IF}
 echo "Nauja NIC konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep NIC
 echo
