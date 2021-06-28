@@ -75,6 +75,7 @@ VBoxManage showvminfo ${VM1} | grep -i storage
 echo
 
 # Prijungiu NIC 2: (OAM valdymui per tinklą)
+VBoxManage hostonlyif create
 VBoxManage modifyvm ${VM1} --nic2 hostonly
 echo "Nauja NIC konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep NIC
