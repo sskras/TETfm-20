@@ -42,14 +42,17 @@ VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
 
 # Prijungiu disko valdiklį:
 VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
-VBoxManage showvminfo ${VM1} | grep -i storage
 
 # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
 # TODO išsitraukti UUID iš naujai išspausto .VDI ir perduoti per CLI:
+echo "Nauja SATA konfigūracija:"
 VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
+echo "Nauja diskų valdiklio konfigūracija:"
+VBoxManage showvminfo ${VM1} | grep -i storage
 
 # Prijungiu Serial UART: (valdymui be tinklo)
 VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
+echo "Nauja UART konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep UART
 echo
 
