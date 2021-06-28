@@ -8,21 +8,21 @@ VBoxManage: error: Context: "OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevTyp
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: 3c0a6b99-e566-4531-9cd4-d3c712adc3f6
+UUID: 7bd8975b-cc6f-4f12-bcb5-7a5efe84c7cf
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
-{3c0a6b99-e566-4531-9cd4-d3c712adc3f6} "VGTU-2021-IiSA-saukrs-LDVM1"
+{7bd8975b-cc6f-4f12-bcb5-7a5efe84c7cf} "VGTU-2021-IiSA-saukrs-LDVM1"
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        3c0a6b99-e566-4531-9cd4-d3c712adc3f6
+UUID:                        7bd8975b-cc6f-4f12-bcb5-7a5efe84c7cf
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               3c0a6b99-e566-4531-9cd4-d3c712adc3f6
+Hardware UUID:               7bd8975b-cc6f-4f12-bcb5-7a5efe84c7cf
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -57,7 +57,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T06:25:58.640000000)
+State:                       powered off (since 2021-06-28T06:33:57.672000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -73,7 +73,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 0800273E8D23, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027968E7C, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -126,15 +126,15 @@ Configured memory balloon size: 0MB
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 {9cbbb7b3-8b3d-4b57-bf27-9b89a15d4e77} "2021-VGTU-IiSA-LDVM1"
-{3c0a6b99-e566-4531-9cd4-d3c712adc3f6} "VGTU-2021-IiSA-saukrs-LDVM1"
+{7bd8975b-cc6f-4f12-bcb5-7a5efe84c7cf} "VGTU-2021-IiSA-saukrs-LDVM1"
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          3 Jun 28 09:25 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
-drwx------. 2 p p          3 Jun 28 09:25 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 2 p p          3 Jun 28 09:33 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 1
--rw-------. 1 p p 1196 Jun 28 09:25 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 1196 Jun 28 09:33 VGTU-2021-IiSA-saukrs-LDVM1.vbox
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
