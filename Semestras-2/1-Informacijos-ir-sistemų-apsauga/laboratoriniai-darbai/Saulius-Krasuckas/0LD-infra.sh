@@ -1,8 +1,11 @@
 #!/bin/bash
+
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
+
+shopt -s lastpipe
 
 VBoxManage_vm_list () {
     VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
@@ -25,6 +28,8 @@ ls -Al $BASE_DIR/VMs/64bit
 # Patikrinkim disko informaciją:
 # (ši užklausa automatiškai užregistruoja .vdi failą VBox registre, jei jo ten dar nebuvo:
 VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi"
+VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi" | awk '/^UUID/ {print $2}' | read VDI_UUID
+echo "Ištrauktasis VDI disko UUID: ${VDI_UUID}"
 echo
 
 # VM sąrašas:
@@ -55,7 +60,7 @@ VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
 # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
 # TODO išsitraukti UUID iš naujai išspausto .VDI ir perduoti per CLI:
 echo "Nauja SATA konfigūracija:"
-VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
+VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
 echo "Nauja diskų valdiklio konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -i storage
 echo
