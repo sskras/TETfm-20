@@ -27,21 +27,30 @@ VBoxManage_vm_list
 # Kuriu 1LD mašiną:
 VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
 VBoxManage_vm_list
+
 # VM konfigūracija:
 VBoxManage showvminfo ${VM1}
 echo "Sena procesoriaus ir RAM konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+
 # Padidinu CPU skaičių ir RAM apimtį, tik neturiu 4ių GiB šioje fizinėje mašinoje:
 # https://help.ubuntu.com/community/Installation/SystemRequirements
 VBoxManage modifyvm ${VM1} --cpus 2 --memory 2048
 echo "Nauja procesoriaus ir RAM konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+
 # Prijungiu disko valdiklį:
 VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
 VBoxManage showvminfo ${VM1} | grep -i storage
+
 # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
 # TODO išsitraukti UUID iš naujai išspausto .VDI ir perduoti per CLI:
 VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
+
+# Įjungiu 1LD mašiną:
+echo "Įjungiu ${VM1}:"
+VBoxManage startvm ${VM1}
+
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
@@ -49,6 +58,8 @@ echo
 ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
 VBoxManage showvminfo ${VM1}
+
+echo "Trinam ${VM1} ?"
 VBoxManage unregistervm ${VM1}
 # Išvalau individualius VM likučius:
 rm -rv ${BASE_DIR}/VMs/${VM1}
