@@ -15,20 +15,20 @@ Property:       AllocationBlockSize=1048576
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: d1f33d14-1faa-4e1e-a1b9-15f371eecb51
+UUID: 8d5d8269-f1c1-4123-bb84-28e492c73127
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{d1f33d14-1faa-4e1e-a1b9-15f371eecb51} "VGTU-2021-IiSA-saukrs-LDVM1"
+{8d5d8269-f1c1-4123-bb84-28e492c73127} "VGTU-2021-IiSA-saukrs-LDVM1"
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        d1f33d14-1faa-4e1e-a1b9-15f371eecb51
+UUID:                        8d5d8269-f1c1-4123-bb84-28e492c73127
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               d1f33d14-1faa-4e1e-a1b9-15f371eecb51
+Hardware UUID:               8d5d8269-f1c1-4123-bb84-28e492c73127
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -63,7 +63,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T07:39:57.353000000)
+State:                       powered off (since 2021-06-28T07:46:37.644000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -79,7 +79,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 080027CE99E5, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027542A30, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -138,11 +138,17 @@ total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          3 Apr 25 00:15 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
-drwx------. 2 p p          4 Jun 28 10:39 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 2 p p          4 Jun 28 10:46 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 1
--rw-------. 1 p p 1472 Jun 28 10:39 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 1196 Jun 28 10:39 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+-rw-------. 1 p p 1472 Jun 28 10:46 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 1196 Jun 28 10:46 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+Storage Controller Name (0):            SATA valdiklis
+Storage Controller Type (0):            IntelAhci
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  30
+Storage Controller Port Count (0):      30
+Storage Controller Bootable (0):        on
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
