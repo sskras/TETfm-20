@@ -78,7 +78,7 @@ echo
 # Sukuriu Host-only interfeisą Host pusėje:
     VBoxManage hostonlyif create
 VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
-VBoxManage dhcpserver --interface=${HOSTONLY_IF} --disable
+VBoxManage dhcpserver modify --interface=${HOSTONLY_IF} --disable
 echo "Naujas Host-only NIC:"
 VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'
 echo
