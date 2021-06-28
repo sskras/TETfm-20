@@ -1,1 +1,38 @@
+Informacijos ir sistemų apsauga
 
+# Laboratorinis darbas #2 +++<br />+++ https://moodle.garsva.lt/mod/assign/view.php?id=295&forceview=1[Ubuntu tinklo komandos]
+
+
+### Užduotis
+Išmokite nustatyti tinklo nustatymus: 
+
+* IP adresaciją, 
+* vardų serverius, 
+* maršrutus, 
+* suinstaliuokite SSH serverį.
+
+https://www.tecmint.com/configure-network-static-ip-address-in-ubuntu/  +
+https://askubuntu.com/questions/1031709/ubuntu-18-04-switch-back-to-etc-network-interfaces
+
+Ataskaitoje pateikite Duotos tinkklo komandos aprašymą, jei komandos neturite - praneškite.
+
+Jei laboratorinio metu susidūrėte su problemomis, aprašykite jas ir jų sprendimą.
+
+(https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/2lab_linuxnetworking7.docx?forcedownload=1[2lab_linuxnetworking7.docx] konspektas, praganiau pradinį URL)
+
+
+### Tikslas
+
+Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
+Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
+
+
+### Darbo eiga
+
+
+### Ataskaitos turinys
+
+. Darbo tikslas
+. Trumpas atlikto darbo aprašymas ir atsakymai į klausimus
+. Duotosios Linux komandos aprašymas
+. Viso darbo išvados
