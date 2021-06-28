@@ -76,12 +76,9 @@ VBoxManage showvminfo ${VM1} | grep -i storage
 echo
 
 # Sukuriu Host-only interfeisą Host pusėje:
-VBoxManage list hostonlyifs | wc -l | read HOSTONLYIF_COUNT
-if [[ ${HOSTONLYIF_COUNT} == "0" ]]; then
-    echo "Nerandu Host-only interfeisų Host pusėje. Bandau sukurti:"
     VBoxManage hostonlyif create
-fi
 VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+VBoxManage dhcpserver --interface=${HOSTONLY_IF} --disable
 echo "Naujas Host-only NIC:"
 VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'
 echo
@@ -143,6 +140,7 @@ echo "Trinam ${VM1} ?"
 read
 
 VBoxManage unregistervm ${VM1}
+VBoxManage hostonlyif remove ${HOSTONLY_IF}
 # Išvalau individualius VM likučius:
 rm -rv ${BASE_DIR}/VMs/${VM1}
 VBoxManage_vm_list

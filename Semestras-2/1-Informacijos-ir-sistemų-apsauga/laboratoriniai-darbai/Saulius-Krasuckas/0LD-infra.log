@@ -1,7 +1,7 @@
 Ištrauktojo VDI disko pavadinimas: 64bit/Ubuntu 20.04.2 (64bit).vdi
 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas
 total 19609700
--rw-rw-r--. 1 p p 8010072064 Jun 29 01:51 Ubuntu 20.04.2 (64bit).vdi
+-rw-rw-r--. 1 p p 8010072064 Jun 29 01:52 Ubuntu 20.04.2 (64bit).vdi
 -rw-rw-r--. 1 p p 8732540928 Jun 28 16:02 Ubuntu 21.04 (64bit).vdi
 -rw-rw-r--. 1 p p 3326083072 Jun 28 16:15 Ubuntu Server 20.04.2 (64bit).vdi
 UUID:           0e653235-d186-46fd-8796-556389f3b94b
@@ -21,21 +21,21 @@ Property:       AllocationBlockSize=1048576
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: 6f38d6ff-5d51-4e8f-83f8-e395e12ee0b5
+UUID: e870c99e-f457-4d11-8e93-0910af32fb18
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{6f38d6ff-5d51-4e8f-83f8-e395e12ee0b5} "VGTU-2021-IiSA-saukrs-LDVM1"
+{e870c99e-f457-4d11-8e93-0910af32fb18} "VGTU-2021-IiSA-saukrs-LDVM1"
 
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        6f38d6ff-5d51-4e8f-83f8-e395e12ee0b5
+UUID:                        e870c99e-f457-4d11-8e93-0910af32fb18
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               6f38d6ff-5d51-4e8f-83f8-e395e12ee0b5
+Hardware UUID:               e870c99e-f457-4d11-8e93-0910af32fb18
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -70,7 +70,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T22:52:41.283000000)
+State:                       powered off (since 2021-06-28T23:22:56.208000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -86,7 +86,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 080027EB204C, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800278C281E, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -152,24 +152,79 @@ Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
 
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+Interface 'vboxnet1' was successfully created
+Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
+(C) 2005-2021 Oracle Corporation
+All rights reserved.
+
+VBoxManage: error: Unknown option: --disable
+Usage - DHCP server management:
+
+  VBoxManage dhcpserver add <--network=netname | --interface=ifname> <--server-ip=address> <--netmask=mask> <--lower-ip=address>
+      <--upper-ip=address> <--enable | --disable>
+       [[--global]  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no hexstring...]  [--force-opt=dhcp-opt-no...] 
+           [--supress-opt=dhcp-opt-no...]  [--min-lease-time=seconds]  [--default-lease-time=seconds]  [--max-lease-time=seconds] ...]
+       [<--group=name>  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no hexstring...]  [--force-opt=dhcp-opt-no...] 
+           [--supress-opt=dhcp-opt-no...]  [--incl-mac=address...]  [--excl-mac=address...]  [--incl-mac-wild=pattern...] 
+           [--excl-mac-wild=pattern...]  [--incl-vendor=string...]  [--excl-vendor=string...]  [--incl-vendor-wild=pattern...] 
+           [--excl-vendor-wild=pattern...]  [--incl-user=string...]  [--excl-user=string...]  [--incl-user-wild=pattern...] 
+           [--excl-user-wild=pattern...]  [--min-lease-time=seconds]  [--default-lease-time=seconds]  [--max-lease-time=seconds] ...]
+       [<--vm=name|uuid>  [--nic=1-N]  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no hexstring...] 
+           [--force-opt=dhcp-opt-no...]  [--supress-opt=dhcp-opt-no...]  [--min-lease-time=seconds]  [--default-lease-time=seconds] 
+           [--max-lease-time=seconds]  [--fixed-address=address] ...]
+       [<--mac-address=address>  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no hexstring...] 
+           [--force-opt=dhcp-opt-no...]  [--supress-opt=dhcp-opt-no...]  [--min-lease-time=seconds]  [--default-lease-time=seconds] 
+           [--max-lease-time=seconds]  [--fixed-address=address] ...]
+
+  VBoxManage dhcpserver modify <--network=netname | --interface=ifname> [--server-ip=address] [--lower-ip=address]
+      [--upper-ip=address] [--netmask=mask] [--enable | --disable]
+       [[--global]  [--del-opt=dhcp-opt-no...]  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no hexstring...] 
+           [--force-opt=dhcp-opt-no...]  [--unforce-opt=dhcp-opt-no...]  [--supress-opt=dhcp-opt-no...] 
+           [--unsupress-opt=dhcp-opt-no...]  [--min-lease-time=seconds]  [--default-lease-time=seconds]  [--max-lease-time=seconds] 
+           [--remove-config] ...]
+       [<--group=name>  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no hexstring...]  [--force-opt=dhcp-opt-no...] 
+           [--unforce-opt=dhcp-opt-no...]  [--supress-opt=dhcp-opt-no...]  [--unsupress-opt=dhcp-opt-no...]  [--del-mac=address...] 
+           [--incl-mac=address...]  [--excl-mac=address...]  [--del-mac-wild=pattern...]  [--incl-mac-wild=pattern...] 
+           [--excl-mac-wild=pattern...]  [--del-vendor=string...]  [--incl-vendor=string...]  [--excl-vendor=string...] 
+           [--del-vendor-wild=pattern...]  [--incl-vendor-wild=pattern...]  [--excl-vendor-wild=pattern...]  [--del-user=string...] 
+           [--incl-user=string...]  [--excl-user=string...]  [--del-user-wild=pattern...]  [--incl-user-wild=pattern...] 
+           [--excl-user-wild=pattern...]  [--zap-conditions]  [--min-lease-time=seconds]  [--default-lease-time=seconds] 
+           [--max-lease-time=seconds]  [--remove-config] ...]
+       [<--vm=name|uuid>  [--nic=1-N]  [--del-opt=dhcp-opt-no...]  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no
+           hexstring...]  [--force-opt=dhcp-opt-no...]  [--unforce-opt=dhcp-opt-no...]  [--supress-opt=dhcp-opt-no...] 
+           [--unsupress-opt=dhcp-opt-no...]  [--min-lease-time=seconds]  [--default-lease-time=seconds]  [--max-lease-time=seconds] 
+           [--fixed-address=address]  [--remove-config] ...]
+       [<--mac-address=address>  [--del-opt=dhcp-opt-no...]  [--set-opt=dhcp-opt-no value...]  [--set-opt-hex=dhcp-opt-no
+           hexstring...]  [--force-opt=dhcp-opt-no...]  [--unforce-opt=dhcp-opt-no...]  [--supress-opt=dhcp-opt-no...] 
+           [--unsupress-opt=dhcp-opt-no...]  [--min-lease-time=seconds]  [--default-lease-time=seconds]  [--max-lease-time=seconds] 
+           [--fixed-address=address]  [--remove-config] ...]
+
+  VBoxManage dhcpserver remove <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver restart <--network=netname | --interface=ifname>
+
+  VBoxManage dhcpserver findlease <--network=netname | --interface=ifname> <--mac-address=mac>
+
+VBoxManage: error: Unknown option: --disable
 Naujas Host-only NIC:
-Name:            vboxnet0
-GUID:            786f6276-656e-4074-8000-0a0027000000
+Name:            vboxnet1
+GUID:            786f6276-656e-4174-8000-0a0027000001
 DHCP:            Disabled
-IPAddress:       192.168.56.1
+IPAddress:       192.168.57.1
 NetworkMask:     255.255.255.0
-IPV6Address:     fe80::800:27ff:fe00:0
-IPV6NetworkMaskPrefixLength: 64
-HardwareAddress: 0a:00:27:00:00:00
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:01
 MediumType:      Ethernet
 Wireless:        No
-Status:          Up
-VBoxNetworkName: HostInterfaceNetworking-vboxnet0
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet1
 
 Nauja NIC konfigūracija:
-NIC 1:                       MAC: 080027EB204C, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800278C281E, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 0800275E606E, Attachment: Host-only Interface 'vboxnet1', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -209,20 +264,20 @@ lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semes
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 01:52 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 29 02:23 VGTU-2021-IiSA-saukrs-LDVM1
 
-total 8
-drwx------. 2 p p    3 Jun 29 01:52 Logs
--rw-------. 1 p p 2792 Jun 29 01:52 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 2720 Jun 29 01:52 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+total 2
+drwx------. 2 p p    3 Jun 29 02:22 Logs
+-rw-------. 1 p p 2792 Jun 29 02:23 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 2720 Jun 29 02:23 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        6f38d6ff-5d51-4e8f-83f8-e395e12ee0b5
+UUID:                        e870c99e-f457-4d11-8e93-0910af32fb18
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               6f38d6ff-5d51-4e8f-83f8-e395e12ee0b5
+Hardware UUID:               e870c99e-f457-4d11-8e93-0910af32fb18
 Memory size:                 2048MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -257,7 +312,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T22:52:58.284000000)
+State:                       powered off (since 2021-06-28T23:23:31.678000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -280,9 +335,9 @@ Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
 SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit/Ubuntu 20.04.2 (64bit).vdi (UUID: 0e653235-d186-46fd-8796-556389f3b94b)
-NIC 1:                       MAC: 080027EB204C, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800278C281E, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 0800275E606E, Attachment: Host-only Interface 'vboxnet1', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -330,10 +385,11 @@ Configured memory balloon size: 0MB
 
 
 Trinam VGTU-2021-IiSA-saukrs-LDVM1 ?
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev’
-removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox’
 removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs/VBox.log’
 removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs’
+removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox’
 removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1’
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
