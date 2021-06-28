@@ -11,24 +11,27 @@ Capacity:       512000 MBytes
 Size on disk:   8357 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
+VBoxManage: error: Could not find file for the medium '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/Ubuntu 21.04 (64bit).vdi' (VERR_FILE_NOT_FOUND)
+VBoxManage: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MediumWrap, interface IMedium, callee nsISupports
+VBoxManage: error: Context: "OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevType, enmAccessMode, fForceNewUuidOnOpen, pMedium.asOutParam())" at line 191 of file VBoxManageDisk.cpp
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: daeade00-aa26-44ea-ae9c-a5bc12a1fcc3
+UUID: dce2ca52-83fb-4802-b10b-25adff3e2fab
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{daeade00-aa26-44ea-ae9c-a5bc12a1fcc3} "VGTU-2021-IiSA-saukrs-LDVM1"
+{dce2ca52-83fb-4802-b10b-25adff3e2fab} "VGTU-2021-IiSA-saukrs-LDVM1"
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        daeade00-aa26-44ea-ae9c-a5bc12a1fcc3
+UUID:                        dce2ca52-83fb-4802-b10b-25adff3e2fab
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               daeade00-aa26-44ea-ae9c-a5bc12a1fcc3
+Hardware UUID:               dce2ca52-83fb-4802-b10b-25adff3e2fab
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -63,7 +66,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T06:45:42.237000000)
+State:                       powered off (since 2021-06-28T06:47:45.794000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -79,7 +82,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 0800279B7908, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027C9713A, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -131,15 +134,15 @@ Configured memory balloon size: 0MB
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{daeade00-aa26-44ea-ae9c-a5bc12a1fcc3} "VGTU-2021-IiSA-saukrs-LDVM1"
+{dce2ca52-83fb-4802-b10b-25adff3e2fab} "VGTU-2021-IiSA-saukrs-LDVM1"
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          3 Jun 28 09:25 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
-drwx------. 2 p p          3 Jun 28 09:45 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 2 p p          3 Jun 28 09:47 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 1
--rw-------. 1 p p 1196 Jun 28 09:45 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 1196 Jun 28 09:47 VGTU-2021-IiSA-saukrs-LDVM1.vbox
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1

@@ -18,6 +18,7 @@ ls -Al $BASE_DIR/VMs/64bit
 
 # Patikrinkim disko informaciją:
 VBoxManage showmediuminfo disk VMs/2021-VGTU-IiSA-LDVM1/2021-VGTU-IiSA-LDVM1.vdi
+VBoxManage showmediuminfo disk "VMs/Ubuntu 21.04 (64bit).vdi"
 
 # VM sąrašas:
 vm_list
