@@ -28,8 +28,11 @@ VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --base
 VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
+# Prijungiu disko valdiklį:
 VBoxManage storagectl VGTU-2021-IiSA-saukrs-LDVM1 --name "SATA valdiklis" --add sata --bootable on
 VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep -i storage
+# Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
+VBoxManage storageattach VGTU-2021-IiSA-saukrs-LDVM1 --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
