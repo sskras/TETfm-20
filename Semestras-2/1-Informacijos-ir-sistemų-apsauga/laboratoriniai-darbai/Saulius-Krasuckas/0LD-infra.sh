@@ -28,7 +28,6 @@ VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --base
 VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
-VBoxManage_vm_list
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
@@ -36,5 +35,6 @@ echo
 ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
 VBoxManage unregistervm --delete VGTU-2021-IiSA-saukrs-LDVM1
+VBoxManage_vm_list
 ls -Al VMs/
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
