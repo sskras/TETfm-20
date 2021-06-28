@@ -53,8 +53,9 @@ VBoxManage startvm ${VM1}
 # ... ir ją pristabdau Boot Loader nustatymams:
 VBoxManage controlvm ${VM1} pause
 echo
-echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc> klavišą."
-echo "Kartokite <Esc> paspaudimus be perstojo, kol pasirodys GRUB meniu."
+echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>"
+echo "Kartokite <Esc> paspaudimus be perstojo."
+echo "Kai pasirodys GRUB meniu, spauskite <e>"
 read
 
 
