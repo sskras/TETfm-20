@@ -29,11 +29,13 @@ VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/
 VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo ${VM1}
-echo "Nauja procesoriaus ir RAM konfigūracija:"
+echo "Sena procesoriaus ir RAM konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
 # Padidinu CPU skaičių ir RAM apimtį, tik neturiu 4ių GiB šioje fizinėje mašinoje:
 # https://help.ubuntu.com/community/Installation/SystemRequirements
 VBoxManage modifyvm ${VM1} --cpus 2 --memory 2048
+echo "Nauja procesoriaus ir RAM konfigūracija:"
+VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
 # Prijungiu disko valdiklį:
 VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
 VBoxManage showvminfo ${VM1} | grep -i storage
