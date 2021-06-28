@@ -5,8 +5,22 @@
 
 ### Trumpas atlikto darbo aprašymas ir atsakymai į klausimus
 
+#### 1. NAT + NIC
+
+Panašu, kad su įprasta Virtualbox konfigūracija iš _Host OS_ aš _Guest OS_ nepasieksiu paprastai ir saugiai.  +
+Pagal nutyėjimą čia VM sukuriamas `NAT` tipo virtualus tinklo interfeisas:  +
+`NIC 1:  ... Attachment: NAT ...`
+
+> https://www.virtualbox.org/manual/ch06.html#networkingmodes
+> 
+> image::https://user-images.githubusercontent.com/74717106/123702651-11b3dd80-d86c-11eb-8254-c297b90459c3.png[]
+
+Bandau VM pridėti papildomą tinklo interfeisą, bet jau `Host-only` tipo.
+`TODO`
+
 ### Duotosios Linux komandos aprašymas: `TODO`
 
 ##### Pavyzdys
 
 ### Viso darbo išvados
+
