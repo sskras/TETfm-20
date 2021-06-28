@@ -56,6 +56,14 @@ echo
 echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>"
 echo "Kartokite <Esc> paspaudimus be perstojo."
 echo "Kai pasirodys GRUB meniu, spauskite <e>"
+echo "Eikite žemyn iki eilutės:"
+echo "        linux        /boot/vmlinuz-..."
+echo
+echo "Spauskite <End> ir gale prirašykite:"
+echo
+echo "... console=tty0 console=ttyS0,115200n8"
+echo
+echo "Ir spauskite <Ctrl-X>"
 read
 
 
