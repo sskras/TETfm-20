@@ -1,4 +1,109 @@
-‘download’ -> ‘64bit.7z’ (backup: ‘64bit.7z~’)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* About to connect() to sourceforge.net port 443 (#0)
+*   Trying 204.68.111.105...
+* Connected to sourceforge.net (204.68.111.105) port 443 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* SSL connection using TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+* Server certificate:
+* 	subject: CN=sourceforge.net
+* 	start date: Apr 27 03:09:57 2021 GMT
+* 	expire date: Jul 26 03:09:57 2021 GMT
+* 	common name: sourceforge.net
+* 	issuer: CN=R3,O=Let's Encrypt,C=US
+> GET /projects/osboxes/files/v/vb/55-U-u/20.04/20.04.2/64bit.7z/download HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: sourceforge.net
+> Accept: */*
+> 
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0< HTTP/1.1 302 Found
+< Server: nginx
+< Date: Mon, 28 Jun 2021 13:29:04 GMT
+< Content-Type: text/html; charset=UTF-8
+< Content-Length: 635
+< Connection: keep-alive
+< Location: https://downloads.sourceforge.net/project/osboxes/v/vb/55-U-u/20.04/20.04.2/64bit.7z?ts=gAAAAABg2c6e7y-2UcYuUxxyw9lH4AGV6mBHtRNmZhccBta5WkS-_2DPFmKSt7TH0TIJNmWbskpkzvtLJEJ2XmhoxxwJGcphsQ%3D%3D&use_mirror=kumisystems&r=
+< Cache-Control: no-cache
+< Pragma: no-cache
+< X-UA-Compatible: IE=edge,chrome=1
+< X-Frame-Options: SAMEORIGIN
+< Content-Security-Policy: frame-ancestors 'self', upgrade-insecure-requests
+< Set-Cookie: VISITOR=83374613-e4d0-41a3-8e2d-f06f8b67a700; Max-Age=315360000; Path=/; expires=Thu, 26-Jun-2031 13:29:02 GMT; secure; HttpOnly
+< X-Content-Type-Options: nosniff
+< Strict-Transport-Security: max-age=31536000
+< 
+* Ignoring the response-body
+{ [data not shown]
+100   635  100   635    0     0    345      0  0:00:01  0:00:01 --:--:--   345
+* Connection #0 to host sourceforge.net left intact
+* Issue another request to this URL: 'https://downloads.sourceforge.net/project/osboxes/v/vb/55-U-u/20.04/20.04.2/64bit.7z?ts=gAAAAABg2c6e7y-2UcYuUxxyw9lH4AGV6mBHtRNmZhccBta5WkS-_2DPFmKSt7TH0TIJNmWbskpkzvtLJEJ2XmhoxxwJGcphsQ%3D%3D&use_mirror=kumisystems&r='
+* About to connect() to downloads.sourceforge.net port 443 (#1)
+*   Trying 204.68.111.105...
+* Connected to downloads.sourceforge.net (204.68.111.105) port 443 (#1)
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+* Server certificate:
+* 	subject: CN=sourceforge.net
+* 	start date: Apr 27 03:09:57 2021 GMT
+* 	expire date: Jul 26 03:09:57 2021 GMT
+* 	common name: sourceforge.net
+* 	issuer: CN=R3,O=Let's Encrypt,C=US
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0> GET /project/osboxes/v/vb/55-U-u/20.04/20.04.2/64bit.7z?ts=gAAAAABg2c6e7y-2UcYuUxxyw9lH4AGV6mBHtRNmZhccBta5WkS-_2DPFmKSt7TH0TIJNmWbskpkzvtLJEJ2XmhoxxwJGcphsQ%3D%3D&use_mirror=kumisystems&r= HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: downloads.sourceforge.net
+> Accept: */*
+> 
+< HTTP/1.1 302 Found
+< Server: nginx
+< Date: Mon, 28 Jun 2021 13:29:05 GMT
+< Content-Type: text/html; charset=UTF-8
+< Content-Length: 361
+< Connection: keep-alive
+< Location: https://kumisystems.dl.sourceforge.net/project/osboxes/v/vb/55-U-u/20.04/20.04.2/64bit.7z
+< Content-Disposition: attachment; filename="64bit.7z"
+< Set-Cookie: sf_mirror_attempt=osboxes:kumisystems:v/vb/55-U-u/20.04/20.04.2/64bit.7z; Max-Age=120; Path=/; expires=Mon, 28-Jun-2021 13:31:05 GMT
+< 
+* Ignoring the response-body
+{ [data not shown]
+100   361  100   361    0     0    123      0  0:00:02  0:00:02 --:--:--  1497
+* Connection #1 to host downloads.sourceforge.net left intact
+* Issue another request to this URL: 'https://kumisystems.dl.sourceforge.net/project/osboxes/v/vb/55-U-u/20.04/20.04.2/64bit.7z'
+* About to connect() to kumisystems.dl.sourceforge.net port 443 (#2)
+*   Trying 148.251.120.111...
+* Connected to kumisystems.dl.sourceforge.net (148.251.120.111) port 443 (#2)
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* Server certificate:
+* 	subject: CN=kumisystems.dl.sourceforge.net
+* 	start date: May 16 03:03:16 2021 GMT
+* 	expire date: Aug 14 03:03:16 2021 GMT
+* 	common name: kumisystems.dl.sourceforge.net
+* 	issuer: CN=R3,O=Let's Encrypt,C=US
+> GET /project/osboxes/v/vb/55-U-u/20.04/20.04.2/64bit.7z HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: kumisystems.dl.sourceforge.net
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Server: nginx
+< Date: Mon, 28 Jun 2021 13:29:06 GMT
+< Content-Type: application/x-7z-compressed
+< Content-Length: 2010068133
+< Last-Modified: Sun, 07 Mar 2021 00:04:19 GMT
+< Connection: close
+< ETag: "60441883-77cf34a5"
+< Accept-Ranges: bytes
+< 
+{ [data not shown]
+Warning: Refusing to overwrite 64bit.7z: File exists
+* Failed writing body (0 != 16128)
+  0 1916M    0 16128    0     0   4581      0   5d 01h  0:00:03   5d 01h  4581
+* Closing connection 2
+curl: (23) Failed writing body (0 != 16128)
 Ištrauktojo VDI disko pavadinimas: 64bit/Ubuntu Server 20.04.2 (64bit).vdi
 
 7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
@@ -17,20 +122,23 @@ Method = LZMA2:96m
 Solid = -
 Blocks = 1
 
-Everything is Ok
 
-Folders: 1
-Files: 1
-Size:       3152019456
-Compressed: 676472359
-
-real	0m58.292s
-user	0m34.243s
-sys	0m2.336s
+Would you like to replace the existing file:
+  Path:     ./64bit/Ubuntu Server 20.04.2 (64bit).vdi
+  Size:     3326083072 bytes (3172 MiB)
+  Modified: 2021-06-28 16:15:25
+with the file from archive:
+  Path:     64bit/Ubuntu Server 20.04.2 (64bit).vdi
+  Size:     3152019456 bytes (3006 MiB)
+  Modified: 2021-03-07 00:53:52
+? (Y)es / (N)o / (A)lways / (S)kip all / A(u)to rename all / (Q)uit? 
+real	0m31.835s
+user	0m0.011s
+sys	0m0.010s
 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas
-total 11557353
+total 11782782
 -rw-rw-r--. 1 p p 8732540928 Jun 28 16:02 Ubuntu 21.04 (64bit).vdi
--rw-rw-r--. 1 p p 3152019456 Mar  6 23:53 Ubuntu Server 20.04.2 (64bit).vdi
+-rw-rw-r--. 1 p p 3326083072 Jun 28 16:15 Ubuntu Server 20.04.2 (64bit).vdi
 UUID:           250ec391-d7c5-43fc-a020-623e1e9fd714
 Parent UUID:    base
 State:          created
@@ -39,267 +147,7 @@ Location:       /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsa
 Storage format: VDI
 Format variant: dynamic default
 Capacity:       512000 MBytes
-Size on disk:   3006 MBytes
+Size on disk:   3172 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
 
-{981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
-{0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
-{6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-
-Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: aa05f554-781a-4cdf-89ef-30d5b9ccf0c7
-Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
-{981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
-{0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
-{6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{aa05f554-781a-4cdf-89ef-30d5b9ccf0c7} "VGTU-2021-IiSA-saukrs-LDVM1"
-
-Name:                        VGTU-2021-IiSA-saukrs-LDVM1
-Groups:                      /
-Guest OS:                    Ubuntu (64-bit)
-UUID:                        aa05f554-781a-4cdf-89ef-30d5b9ccf0c7
-Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
-Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
-Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               aa05f554-781a-4cdf-89ef-30d5b9ccf0c7
-Memory size:                 128MB
-Page Fusion:                 disabled
-VRAM size:                   8MB
-CPU exec cap:                100%
-HPET:                        disabled
-CPUProfile:                  host
-Chipset:                     piix3
-Firmware:                    BIOS
-Number of CPUs:              1
-PAE:                         enabled
-Long Mode:                   enabled
-Triple Fault Reset:          disabled
-APIC:                        enabled
-X2APIC:                      enabled
-Nested VT-x/AMD-V:           disabled
-CPUID Portability Level:     0
-CPUID overrides:             None
-Boot menu mode:              message and menu
-Boot Device 1:               Floppy
-Boot Device 2:               DVD
-Boot Device 3:               HardDisk
-Boot Device 4:               Not Assigned
-ACPI:                        enabled
-IOAPIC:                      enabled
-BIOS APIC mode:              APIC
-Time offset:                 0ms
-RTC:                         local time
-Hardware Virtualization:     enabled
-Nested Paging:               enabled
-Large Pages:                 disabled
-VT-x VPID:                   enabled
-VT-x Unrestricted Exec.:     enabled
-Paravirt. Provider:          Default
-Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T13:11:42.300000000)
-Graphics Controller:         VBoxVGA
-Monitor count:               1
-3D Acceleration:             disabled
-2D Video Acceleration:       disabled
-Teleporter Enabled:          disabled
-Teleporter Port:             0
-Teleporter Address:          
-Teleporter Password:         
-Tracing Enabled:             disabled
-Allow Tracing to Access VM:  disabled
-Tracing Configuration:       
-Autostart Enabled:           disabled
-Autostart Delay:             0
-Default Frontend:            
-VM process priority:         default
-NIC 1:                       MAC: 0800274DB181, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
-NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       disabled
-NIC 3:                       disabled
-NIC 4:                       disabled
-NIC 5:                       disabled
-NIC 6:                       disabled
-NIC 7:                       disabled
-NIC 8:                       disabled
-Pointing Device:             PS/2 Mouse
-Keyboard Device:             PS/2 Keyboard
-UART 1:                      disabled
-UART 2:                      disabled
-UART 3:                      disabled
-UART 4:                      disabled
-LPT 1:                       disabled
-LPT 2:                       disabled
-Audio:                       enabled (Driver: PulseAudio, Controller: AC97, Codec: STAC9700)
-Audio playback:              disabled
-Audio capture:               disabled
-Clipboard Mode:              disabled
-Drag and drop Mode:          disabled
-VRDE:                        disabled
-OHCI USB:                    disabled
-EHCI USB:                    disabled
-xHCI USB:                    disabled
-
-USB Device Filters:
-
-<none>
-
-Bandwidth groups:  <none>
-
-Shared folders:<none>
-
-Capturing:                   not active
-Capture audio:               not active
-Capture screens:             
-Capture file:                /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.webm
-Capture dimensions:          1024x768
-Capture rate:                512kbps
-Capture FPS:                 25kbps
-Capture options:             
-
-Guest:
-
-Configured memory balloon size: 0MB
-
-
-Sena procesoriaus ir RAM konfigūracija:
-Memory size:                 128MB
-Number of CPUs:              1
-
-Nauja procesoriaus ir RAM konfigūracija:
-Memory size:                 2048MB
-Number of CPUs:              2
-
-Nauja SATA konfigūracija:
-Nauja diskų valdiklio konfigūracija:
-Storage Controller Name (0):            SATA valdiklis
-Storage Controller Type (0):            IntelAhci
-Storage Controller Instance Number (0): 0
-Storage Controller Max Port Count (0):  30
-Storage Controller Port Count (0):      30
-Storage Controller Bootable (0):        on
-
-Nauja UART konfigūracija:
-UART 1:                      I/O base: 0x03f8, IRQ: 4, attached to tcp (server) '23001', 16550A
-UART 2:                      disabled
-UART 3:                      disabled
-UART 4:                      disabled
-
-Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
-Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
-VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
-
-VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
-Kartokite <Esc> paspaudimus be perstojo.
-Kai pasirodys GRUB meniu, spauskite <e>
-Eikite žemyn iki eilutės:
-        linux        /boot/vmlinuz-...
-
-Spauskite <End> ir gale prirašykite:
-
-... console=tty0 console=ttyS0,115200n8
-
-VM paspauskite <Ctrl-X>
-
-Iškart persijunkite čia (atgal į CLI)
-... ir spauskite <Enter>
-
-Prisijungsite prie Serial konsolės:
-total 2795351
-drwx------. 2 p p          4 Mar  7 00:22 64bit
--rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z
--rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z~
-drwx------. 3 p p          5 Jun 28 16:15 VGTU-2021-IiSA-saukrs-LDVM1
-
-total 2
-drwx------. 2 p p    3 Jun 28 16:11 Logs
--rw-------. 1 p p 2508 Jun 28 16:15 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 2437 Jun 28 16:15 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
-VBoxManage: error: The object is not ready
-VBoxManage: error: Details: code E_ACCESSDENIED (0x80070005), component SessionMachine, interface IMachine, callee nsISupports
-VBoxManage: error: Context: "COMGETTER(ChipsetType)(&aChipset)" at line 75 of file VBoxManageControlVM.cpp
-VBoxManage: error: The object is not ready
-VBoxManage: error: Details: code E_ACCESSDENIED (0x80070005), component SessionMachine, interface IMachine, callee nsISupports
-VBoxManage: error: Context: "COMGETTER(BandwidthControl)(bwCtrl.asOutParam())" at line 2339 of file VBoxManageInfo.cpp
-Name:                        VGTU-2021-IiSA-saukrs-LDVM1
-Groups:                      /
-Guest OS:                    Ubuntu (64-bit)
-UUID:                        aa05f554-781a-4cdf-89ef-30d5b9ccf0c7
-Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
-Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
-Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               aa05f554-781a-4cdf-89ef-30d5b9ccf0c7
-Memory size:                 2048MB
-Page Fusion:                 disabled
-VRAM size:                   8MB
-CPU exec cap:                100%
-HPET:                        disabled
-CPUProfile:                  host
-Chipset:                     piix3
-Firmware:                    BIOS
-Number of CPUs:              2
-PAE:                         enabled
-Long Mode:                   enabled
-Triple Fault Reset:          disabled
-APIC:                        enabled
-X2APIC:                      enabled
-Nested VT-x/AMD-V:           disabled
-CPUID Portability Level:     0
-CPUID overrides:             None
-Boot menu mode:              message and menu
-Boot Device 1:               Floppy
-Boot Device 2:               DVD
-Boot Device 3:               HardDisk
-Boot Device 4:               Not Assigned
-ACPI:                        enabled
-IOAPIC:                      enabled
-BIOS APIC mode:              APIC
-Time offset:                 0ms
-RTC:                         local time
-Hardware Virtualization:     enabled
-Nested Paging:               enabled
-Large Pages:                 disabled
-VT-x VPID:                   enabled
-VT-x Unrestricted Exec.:     enabled
-Paravirt. Provider:          Default
-Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-28T13:15:26.070000000)
-Graphics Controller:         VBoxVGA
-Monitor count:               1
-3D Acceleration:             disabled
-2D Video Acceleration:       disabled
-Teleporter Enabled:          disabled
-Teleporter Port:             0
-Teleporter Address:          
-Teleporter Password:         
-Tracing Enabled:             disabled
-Allow Tracing to Access VM:  disabled
-Tracing Configuration:       
-Autostart Enabled:           disabled
-Autostart Delay:             0
-Default Frontend:            
-VM process priority:         default
-Storage Controller Name (0):            SATA valdiklis
-Storage Controller Type (0):            IntelAhci
-Storage Controller Instance Number (0): 0
-Storage Controller Max Port Count (0):  30
-Storage Controller Port Count (0):      30
-Storage Controller Bootable (0):        on
-SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit/Ubuntu Server 20.04.2 (64bit).vdi (UUID: 250ec391-d7c5-43fc-a020-623e1e9fd714)
-Pointing Device:             Unknown
-Keyboard Device:             Unknown
-Clipboard Mode:              disabled
-Drag and drop Mode:          disabled
-Bandwidth groups:  Trinam VGTU-2021-IiSA-saukrs-LDVM1 ?
-removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox’
-removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs/VBox.log’
-removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs’
-removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev’
-removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1’
-{981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
-{0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
-{6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-total 2795350
-drwx------. 2 p p          4 Mar  7 00:22 64bit
--rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z
--rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z~
