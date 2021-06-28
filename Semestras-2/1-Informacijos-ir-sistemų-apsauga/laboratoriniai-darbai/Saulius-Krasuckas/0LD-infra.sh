@@ -13,23 +13,24 @@ VBoxManage_vm_list () {
 
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
-# cd $BASE_DIR/VMs
+cd $BASE_DIR/VMs
 
 # Ubuntu Desktop 21.04 Linux OS .vdi atvaizdas:
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/21.04/64bit.7z/download
 # Ubuntu Server 20.04.2 LTS .vdi atvaizdas:
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/20.04/20.04.2/64bit.7z/download
 
+7za l 64bit.7z | awk '/vdi$/ {$1=$2=$3=$4=$5=""; print}' | read VDI_FILE
+echo "Ištrauktojo VDI disko pavadinimas: ${VDI_FILE}"
 # time 7za x 64bit.7z
-# cd -
+cd -
 
 ls -Al $BASE_DIR/VMs/64bit
 
 # Patikrinkim disko informaciją:
 # (ši užklausa automatiškai užregistruoja .vdi failą VBox registre, jei jo ten dar nebuvo:
-VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi"
-VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi" | awk '/^UUID/ {print $2}' | read VDI_UUID
-echo "Ištrauktasis VDI disko UUID: ${VDI_UUID}"
+VBoxManage showmediuminfo disk "VMs/${VDI_FILE}"
+VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^UUID/ {print $2}' | read VDI_UUID
 echo
 
 # VM sąrašas:
