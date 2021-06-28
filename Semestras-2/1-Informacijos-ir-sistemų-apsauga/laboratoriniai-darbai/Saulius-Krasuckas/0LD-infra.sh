@@ -17,7 +17,7 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvest�
 ls -Al $BASE_DIR/VMs/64bit
 
 # Patikrinkim disko informaciją:
-VBoxManage showmediuminfo disk VMs/2021-VGTU-IiSA-LDVM1/2021-VGTU-IiSA-LDVM1.vdi
+VBoxManage showmediuminfo disk "VMs/2021-VGTU-IiSA-LDVM1/2021-VGTU-IiSA-LDVM1.vdi"
 VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi"
 
 # VM sąrašas:
