@@ -29,6 +29,173 @@ Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
 
 ### Darbo eiga
 
+`{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`
+
+[cols=3]
+|===
+
+
+3+| +++<center>+++ *1. Tinklo sąsajos* +++</center>+++
+
+  | Patikrinkite, kokios tinklo sąsajos yra virtualiame kompiuteryje?  +
+    Kokie tinklo sąsajų pavadinimai:
+  |`ifconfig -a`
+  |
+
+  | Kokie pasirenkami tinklo sąsajos parametrai?
+  |`ifconfig --help`
+  |
+
+  | Nustatykite tinklo adresą:
+  |`ifconfig eth0 192.168.10.1x netmask 255.255.255.0`
+  | Komandos parametrai:  +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _down_ – išjungia sąsają,  +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _netmask <addr>_ – tinklo kaukė,  +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _broadcast [addr]_ – tinklo plačiajuostės užklausos adressas,  +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _hw <type> <addr>_ – aparatinių adresų nustatymas, pvz. MAC.
+
+  | Patikrinkite, ar pavyko sukonfigūruoti tinklo sąsają.
+  |
+  |
+
+
+3+| 
+3+| +++<center>+++ *2. Tinklo vartai* +++</center>+++
+
+  | Nustatykite tinklo vartus (arba maršrutą pagal nutylėjimą): 
+  |`route add default gw 192.168.10.254`
+  | `gw` raktas sako, kad po jo einantis IP adresas yra tarptinkliniai vartai, į kuriuos turi būti siunčiami visi ne tam tinklui skirti paketai (t.y. tolimesnei maršrutizacijai).
+
+  | Patikrinkite, ar vartai nustatyti:
+  |`route -a`
+  |
+
+
+3+| 
+3+| +++<center>+++ *3. Statinės konfigūracijos įrašymas* +++</center>+++
+
+  | Pirmame punkte aprašytu būdu nustačius tinklo adresą, jis po kompiuterio perkrovimo neišliks.
+  |    Pekraukite virtualų kompiuterį ir patikrinkite šį teiginį.
+  |
+
+  | Pagrindinius tinklo nustatymus reiktų nurodyti faile:
+  |`/etc/network/interfaces` 
+ a| Čia galima nurodyti: 
+ 
+    * IP adresą,
+    * maršrutizavimo informaciją
+    * ir kt.  +
+    
+Apie šias galimybes informacija pateikiama `man interfaces`.
+
+  | Naudosime statinę IP adresaciją, todėl su `nano /etc/network/interfaces` nustatykite taip:
+ a| 
+```
+iface eth0 inet static
+address 192.168.10.1x
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+  | Tinklo sąsaja bus aktyvuota perkrovus kompiuterį arba įvykdžius komandą `ifup eth0`.
+
+
+3+| +++<center>+++ *4. Kompiuterio vardas* +++</center>+++
+
+  | Nustatykite kompiuterio vardą komanda:
+  |`hostname <kompiuterio_vardas>`
+  |
+
+  | Toks nustatymas pekrovus kompiuterį neišliks, todėl kompiuterio vardą įrašykite į failą `/etc/hostname`:
+ a|
+```
+nameserver 193.219.146.19
+nameserver 193.219.146.2
+```
+   | Naudokite tekstų redaktorių `vi`, `nano` ar kt.
+
+3+a| Yra du būdai nustatyti vardų išsprendimo tarnybines stotis:
+
+* rankiniu būdu redaguojant `/etc/resolv.conf` (`man resolv.conf`)
+* arba naudojant `resolvconf` komandą.
+
+Jei naudojama `resolvconf` komanda, galinti dinamiškai redagoti vardų išsprendimo informaciją, `/etc/resolv.conf` pakeičiamas simboline nuoroda į `/etc/resolvconf/run/resolv.conf`.
+
+Jei naudojamas `resolvconf`, rankiniu būdu redaguoti `resolv.conf` failo nereiktų, nes šis bus perrašytas.  +
+
+Jei reikia įtraukti statinį įrašą, reiktų tai padaryti `/etc/network/interfaces` faile, pvz.:  +
+`dns-nameservers  12.34.56.78  12.34.56.79`
+
+
+3+| +++<center>+++ *5. Statiniai maršrutai* +++</center>+++
+
+  | Nustatykite maršrutą į hipotetinį tinklą per kaimyninį kompiuterį:
+  |`route add -net 172.18.x.0 netmask 255.255.255.0 gw 192.168.10.(1x-1)`
+  | Raktas `-net` reiškia, kad tai maršrutas į visą tinklą.
+
+    O raktas `-host` reikštų, kad maršrutas skirtas konkrečiam tinklo mazgui.
+
+  | Išbandykite jį:
+  |`traceroute 172.18.x.1`
+  |
+
+
+3+| 
+3+| +++<center>+++ *6. Vidaus vardų sąsajos* +++</center>+++
+
+  | Aprašykite reikalingas vidaus vardų sąsajas su IP adresais faile:
+  |`/etc/hosts` 
+  | Čia galima statiškai užduoti tinklo mazgų vardus.
+
+  | Papildykite šį failą kaimyninio kompiuterio IP adresu su vardu `kaimynas`:
+ a|
+```
+192.168.10.(1x-1)  kaimynas
+```
+  | 
+
+  | Išbandykite, ar išsprendžia nustatytą vardą:
+  |`ping kaimynas`
+  |
+
+
+3+| +++<center>+++ *7. Keli tinklo adresai vienai plokštei* +++</center>+++
+
+  | Tinklo plokštė gali turėti kelis pilnaverčius tinklo adresus (_alias_). Nustatykite antrąjį adresą tinklo plokštei:
+  |`ifconfig eth0:1 10.10.10.x/24`
+  |
+
+  | Patikrinkite, ar adresas nusistatė:
+  |`ifconfig -a`
+  |
+
+  | Išbandykite, ar šis funkcionuoja siųsdami `ping` užklausas kaimyno kompiuterio antrajam IP adresui.
+  |
+  |
+
+3+| +++<center>+++ *8. TODO* +++</center>+++
+
+  | Ubuntu Linux turi patogią ir efektyvią programinės įrangos valdymo priemonę `apt-get`. Peržiūrėkite šaltinių sąrašą:
+  |`cat /etc/apt/sources.list`
+  |
+
+  | Susipažinkite su `apt-get` raktais:
+  |`apt-get --help`
+  |
+  
+  | Perskaitykite šio įrankio aprašymą:
+  | https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39[http://ubuntu.lt/render/Articles;aid,39]
+  |
+  
+  | Atnaujinkite programų sąrašus:
+  |`apt-get update`
+  |
+  
+  | Instaliuokite tinklo skenerį `nmap`:
+  |`apt-get install nmap`
+  | Instaliavimo metu gali tekti atnaujinti kelias bibliotekas.
+
+|===
+
 
 ### Ataskaitos turinys
 
