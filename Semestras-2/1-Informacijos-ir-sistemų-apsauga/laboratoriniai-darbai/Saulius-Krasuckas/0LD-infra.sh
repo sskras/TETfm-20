@@ -60,6 +60,8 @@ ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 VBoxManage showvminfo ${VM1}
 
 echo "Trinam ${VM1} ?"
+read
+
 VBoxManage unregistervm ${VM1}
 # Išvalau individualius VM likučius:
 rm -rv ${BASE_DIR}/VMs/${VM1}
