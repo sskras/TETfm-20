@@ -1,71 +1,71 @@
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
-/dev/sda1: clean, 166051/14458880 files, 2805066/57829632 blocks
+/dev/sda1: clean, 166054/14458880 files, 2809228/57829632 blocks
 [  OK  ] Started Show Plymouth Boot Screen.
+plymouth-start.service
 [  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
 [  OK  ] Reached target Local Encrypted Volumes.
-plymouth-start.service
 [  OK  ] Found device /dev/ttyS0.
 [  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
-[   14.138351] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[   19.645727] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[   20.037960] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[  OK  ] Found device VBOX_HARDDISK 3.
+         Activating swap /dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4...
 [  OK  ] Found device VBOX_HARDDISK 5.
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB1c4fb197\x2d906d2779\x2dpart3.swap
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart3.swap
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1.0\x2dpart3.swap
+[  OK  ] Activated swap /dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4.
+dev-disk-by\x2dpartuuid-75c53184\x2d56f9\x2d4f7f\x2d9997\x2dfe326fb6de30.swap
+dev-sda3.swap
+dev-disk-by\x2duuid-7d0c5fd5\x2dd490\x2d4a8f\x2d9bfe\x2deefa78d5b5b4.swap
 [  OK  ] Found device VBOX_HARDDISK 4.
+[  OK  ] Reached target Swap.
          Starting File System Check…/dev/disk/by-uuid/1953-3FF3...
          Starting File System Check…c804-49d6-b108-ce009b656da5...
-[  OK  ] Found device VBOX_HARDDISK 3.
-         Activating swap /dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4...[   14.514862] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-
 [  OK  ] Started File System Check Daemon to report status.
 systemd-fsckd.service
 Checking in progress on 1 disk (0.0% complete)fsckd-cancel-msg:Press Ctrl+C to cancel all filesystem checks in progress
 fsckd:1:0.0:Checking in progress on 1 disk (0.0% complete)
-dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart3.swap
-dev-disk-by\x2dpartuuid-75c53184\x2d56f9\x2d4f7f\x2d9997\x2dfe326fb6de30.swap
-dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB1c4fb197\x2d906d2779\x2dpart3.swap
-dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1.0\x2dpart3.swap
-dev-sda3.swap
-dev-disk-by\x2duuid-7d0c5fd5\x2dd490\x2d4a8f\x2d9bfe\x2deefa78d5b5b4.swap
-[  OK  ] Activated swap /dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4.
-[  OK  ] Finished File System Check…n /dev/disk/by-uuid/1953-3FF3.
-systemd-fsck@dev-disk-by\x2duuid-1953\x2d3FF3.service
-[  OK  ] Reached target Swap.
-         Mounting /boot/efi...
-Checking in progress on 0 disks (100.0% complete)
-fsckd:0:100.0:Checking in progress on 0 disks (100.0% complete)
-systemd-fsck@dev-disk-by\x2duuid-83d73f7e\x2dc804\x2d49d6\x2db108\x2dce009b656da5.service
 [  OK  ] Finished File System Check…e-c804-49d6-b108-ce009b656da5.
+systemd-fsck@dev-disk-by\x2duuid-83d73f7e\x2dc804\x2d49d6\x2db108\x2dce009b656da5.service
          Mounting /home...
-[  OK  ] Mounted /boot/efi.
-boot-efi.mount
 [  OK  ] Mounted /home.
-[  OK  ] Reached target Local File Systems.
 home.mount
+
+fsckd:0:100.0:Checking in progress on 0 disks (100.0% complete)
+Checking in progress on 0 disks (100.0% complete)[  OK  ] Finished File System Check…n /dev/disk/by-uuid/1953-3FF3.
+systemd-fsck@dev-disk-by\x2duuid-1953\x2d3FF3.service
+         Mounting /boot/efi...
+[  OK  ] Mounted /boot/efi.
+[  OK  ] Reached target Local File Systems.
          Starting Load AppArmor profiles...
+boot-efi.mount
          Starting Set console font and keymap...
          Starting Tell Plymouth To Write Out Runtime Data...
          Starting Create Volatile Files and Directories...
 [  OK  ] Finished Set console font and keymap.
-console-setup.service
 [  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
+console-setup.service
 plymouth-read-write.service
-[  OK  ] Finished Create Volatile Files and Directories.
+[   20.421861] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
 systemd-tmpfiles-setup.service
+[  OK  ] Finished Create Volatile Files and Directories.
          Starting Network Name Resolution...
          Starting Network Time Synchronization...
          Starting Update UTMP about System Boot/Shutdown...
-[  OK  ] Finished Update UTMP about System Boot/Shutdown.[   14.898481] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
 systemd-update-utmp.service
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Reached target System Time Synchronized.
+systemd-timesyncd.service
 [  OK  ] Started Network Name Resolution.
 [  OK  ] Reached target Host and Network Name Lookups.
 systemd-resolved.service
 [  OK  ] Finished Load AppArmor profiles.
-[  OK  ] Started Network Time Synchronization.
-[  OK  ] Reached target System Time Set.
-[  OK  ] Reached target System Time Synchronized.
 apparmor.service
-systemd-timesyncd.service
          Starting Load AppArmor pro…managed internally by snapd...
 [  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
 [  OK  ] Reached target System Initialization.
@@ -94,19 +94,19 @@ snapd.apparmor.service
 [  OK  ] Listening on D-Bus System Message Bus Socket.
          Starting Accounts Service...
 [  OK  ] Started ACPI event daemon.
-acpid.service
 [  OK  ] Started Run anacron jobs.
-anacron.service
          Starting LSB: automatic crash report generation...
          Starting Avahi mDNS/DNS-SD Stack...
+acpid.service
+anacron.service
 [  OK  ] Started Regular background program processing daemon.
-cron.service
 [  OK  ] Started D-Bus System Message Bus.
+cron.service
 dbus.service
          Starting Network Manager...
 [  OK  ] Started Save initial kernel messages after boot.
-dmesg.service
          Starting Remove Stale Onli…t4 Metadata Check Snapshots...
+dmesg.service
          Starting Detect the availa…eal with any system changes...
          Starting Record successful boot for GRUB...
 [  OK  ] Started irqbalance daemon.
@@ -126,67 +126,70 @@ irqbalance.service
 [  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
 [  OK  ] Started Record successful boot for GRUB.
 grub-common.service
+[  OK  ] Started System Logging Service.
 rsyslog.service
          Starting GRUB failed boot detection...
-[  OK  ] Started System Logging Service.
 apport.service
 [  OK  ] Started LSB: automatic crash report generation.
 [  OK  ] Finished GRUB failed boot detection.
 systemd-logind.service
 [  OK  ] Started User Login Management.
-[  OK  ] Started WPA supplicant.
 [  OK  ] Started Avahi mDNS/DNS-SD Stack.
-[  OK  ] Started Network Manager.
-[  OK  ] Reached target Network.
-         Starting Network Manager Wait Online...
-         Starting CUPS Scheduler...
-wpa_supplicant.service
 avahi-daemon.service
+[  OK  ] Started WPA supplicant.
+wpa_supplicant.service
+[  OK  ] Started Switcheroo Control Proxy service.
+switcheroo-control.service
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started Power Profiles daemon.
+power-profiles-daemon.service
+[  OK  ] Started Network Manager.
+[  OK  ] Started Authorization Manager.
+[  OK  ] Reached target Network.
+         Starting Modem Manager...
+         Starting Network Manager Wait Online...
 NetworkManager.service
+         Starting CUPS Scheduler...
          Starting OpenVPN service...
+polkit.service
+         Starting Hostname Service...
          Starting Permit User Sessions...
 [  OK  ] Started Unattended Upgrades Shutdown.
 unattended-upgrades.service
+[  OK  ] Finished Save/Restore Sound Card State.
+alsa-restore.service
 [  OK  ] Finished OpenVPN service.
-[  OK  ] Finished Permit User Sessions.
-[  OK  ] Started Power Profiles daemon.
-[  OK  ] Started Switcheroo Control Proxy service.
-[  OK  ] Started Authorization Manager.
 openvpn.service
-         Starting Modem Manager...
+[  OK  ] Finished Permit User Sessions.
+[  OK  ] Started Accounts Service.
+[  OK  ] Reached target Sound Card.
 systemd-user-sessions.service
-         Starting Save/Restore Sound Card State...
-power-profiles-daemon.service
-switcheroo-control.service
-polkit.service
+accounts-daemon.service
          Starting GNOME Display Manager...
          Starting Hold until boot process finishes up...
-         Starting Hostname Service...
+[  OK  ] Started Hostname Service.
+systemd-hostnamed.service
 [  OK  ] Started CUPS Scheduler.
-[  OK  ] Started Accounts Service.
-[  OK  ] Started Make remote CUPS printers available locally.
-[  OK  ] Finished Save/Restore Sound Card State.
-[  OK  ] Reached target Sound Card.
 cups.service
-accounts-daemon.service
+[  OK  ] Started Make remote CUPS printers available locally.
 cups-browsed.service
-alsa-restore.service
 [  OK  ] Started GNOME Display Manager.
 gdm.service
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started Modem Manager.
 ModemManager.service
-systemd-hostnamed.service
-networkd-dispatcher.service
-udisks2.service
 NetworkManager-dispatcher.service
+udisks2.service
 NetworkManager-wait-online.service
 whoopsie.service
+networkd-dispatcher.service
 kerneloops.service
 run-user-126.mount
 user-runtime-dir@126.service
 user@126.service
+tmp-sanity\x2dmountpoint\x2d458430014.mount
 rtkit-daemon.service
 run-user-126-gvfs.mount
-tmp-sanity\x2dmountpoint\x2d246289549.mount
 snapd.service
 snapd.seeded.service
 upower.service
@@ -194,26 +197,27 @@ systemd-localed.service
 geoclue.service
 packagekit.service
 fprintd.service
+colord.service
 [  OK  ] Started Show Plymouth Boot Screen.
 [  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
 [  OK  ] Reached target Local Encrypted Volumes.
 [  OK  ] Found device /dev/ttyS0.
 [  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
-[  OK  ] Found device VBOX_HARDDISK 5.
-[  OK  ] Found device VBOX_HARDDISK 4.
-         Starting File System Check…/dev/disk/by-uuid/1953-3FF3...
-         Starting File System Check…c804-49d6-b108-ce009b656da5...
 [  OK  ] Found device VBOX_HARDDISK 3.
          Activating swap /dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4...
-[  OK  ] Started File System Check Daemon to report status.
-Checking in progress on 1 disk (0.0% complete)[  OK  ] Activated swap /dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4.
-[  OK  ] Finished File System Check…n /dev/disk/by-uuid/1953-3FF3.
+[  OK  ] Found device VBOX_HARDDISK 5.
+[  OK  ] Activated swap /dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4.
+[  OK  ] Found device VBOX_HARDDISK 4.
 [  OK  ] Reached target Swap.
-         Mounting /boot/efi...
-Checking in progress on 0 disks (100.0% complete)[  OK  ] Finished File System Check…e-c804-49d6-b108-ce009b656da5.
+         Starting File System Check…/dev/disk/by-uuid/1953-3FF3...
+         Starting File System Check…c804-49d6-b108-ce009b656da5...
+[  OK  ] Started File System Check Daemon to report status.
+Checking in progress on 1 disk (0.0% complete)[  OK  ] Finished File System Check…e-c804-49d6-b108-ce009b656da5.
          Mounting /home...
-[  OK  ] Mounted /boot/efi.
 [  OK  ] Mounted /home.
+Checking in progress on 0 disks (100.0% complete)[  OK  ] Finished File System Check…n /dev/disk/by-uuid/1953-3FF3.
+         Mounting /boot/efi...
+[  OK  ] Mounted /boot/efi.
 [  OK  ] Reached target Local File Systems.
          Starting Load AppArmor profiles...
          Starting Set console font and keymap...
@@ -226,12 +230,12 @@ Checking in progress on 0 disks (100.0% complete)[  OK  ] Finished File System C
          Starting Network Time Synchronization...
          Starting Update UTMP about System Boot/Shutdown...
 [  OK  ] Finished Update UTMP about System Boot/Shutdown.
-[  OK  ] Started Network Name Resolution.
-[  OK  ] Reached target Host and Network Name Lookups.
-[  OK  ] Finished Load AppArmor profiles.
 [  OK  ] Started Network Time Synchronization.
 [  OK  ] Reached target System Time Set.
 [  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Finished Load AppArmor profiles.
          Starting Load AppArmor pro…managed internally by snapd...
 [  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
 [  OK  ] Reached target System Initialization.
@@ -284,36 +288,39 @@ Checking in progress on 0 disks (100.0% complete)[  OK  ] Finished File System C
 [  OK  ] Finished Detect the availa… deal with any system changes.
 [  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
 [  OK  ] Started Record successful boot for GRUB.
-         Starting GRUB failed boot detection...
 [  OK  ] Started System Logging Service.
+         Starting GRUB failed boot detection...
 [  OK  ] Started LSB: automatic crash report generation.
 [  OK  ] Finished GRUB failed boot detection.
 [  OK  ] Started User Login Management.
-[  OK  ] Started WPA supplicant.
 [  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started Switcheroo Control Proxy service.
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started Power Profiles daemon.
 [  OK  ] Started Network Manager.
+[  OK  ] Started Authorization Manager.
 [  OK  ] Reached target Network.
+         Starting Modem Manager...
          Starting Network Manager Wait Online...
          Starting CUPS Scheduler...
          Starting OpenVPN service...
+         Starting Hostname Service...
          Starting Permit User Sessions...
 [  OK  ] Started Unattended Upgrades Shutdown.
+[  OK  ] Finished Save/Restore Sound Card State.
 [  OK  ] Finished OpenVPN service.
 [  OK  ] Finished Permit User Sessions.
-[  OK  ] Started Power Profiles daemon.
-[  OK  ] Started Switcheroo Control Proxy service.
-[  OK  ] Started Authorization Manager.
-         Starting Modem Manager...
-         Starting Save/Restore Sound Card State...
+[  OK  ] Started Accounts Service.
+[  OK  ] Reached target Sound Card.
          Starting GNOME Display Manager...
          Starting Hold until boot process finishes up...
-         Starting Hostname Service...
+[  OK  ] Started Hostname Service.
 [  OK  ] Started CUPS Scheduler.
-[  OK  ] Started Accounts Service.
 [  OK  ] Started Make remote CUPS printers available locally.
-[  OK  ] Finished Save/Restore Sound Card State.
-[  OK  ] Reached target Sound Card.
 [  OK  ] Started GNOME Display Manager.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started Modem Manager.
 
 Ubuntu 21.04 osboxes ttyS0
 
@@ -331,77 +338,14 @@ Welcome to Ubuntu 21.04 (GNU/Linux 5.11.0-16-generic x86_64)
 0 of these updates are security updates.
 To see these additional updates run: apt list --upgradable
 
-Last login: Mon Jun 28 07:54:47 EDT 2021 on tty2
+Last login: Mon Jun 28 08:23:07 EDT 2021 on ttyS0
+osboxes@osboxes:~$ 
+e
+uptime
+in,  1 user,  load average: 3.58, 1.10, 0.38
 osboxes@osboxes:~$ 
 osboxes@osboxes:~$ 
 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ w
-w
-in,  1 user,  load average: 3.79, 1.20, 0.42
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-osboxes  ttyS0    -                08:23    4.00s  0.06s  0.00s w
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ id
-id
-),24(cdrom),27(sudo),30(dip),46(plugdev),121(lpadmin),132(lxd),133(sambashare)
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ pwd
-pwd
-e/osboxes
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ df -Th
-df -Th
-     Type   Size  Used Avail Use% Mounted on
-tmpfs          tmpfs  198M  1.3M  197M   1% /run
-/dev/sda1      ext4   217G  6.3G  199G   4% /
-tmpfs          tmpfs  990M     0  990M   0% /dev/shm
-tmpfs          tmpfs  5.0M  4.0K  5.0M   1% /run/lock
-tmpfs          tmpfs  4.0M     0  4.0M   0% /sys/fs/cgroup
-/dev/sda5      vfat   477M  5.3M  471M   2% /boot/efi
-/dev/sda4      ext4   265G   70M  252G   1% /home
-tmpfs          tmpfs  198M   92K  198M   1% /run/user/126
-tmpfs          tmpfs  198M   80K  198M   1% /run/user/1000
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ip a
-ip a
-tu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
-       valid_lft forever preferred_lft forever
-2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:a4:d2:98 brd ff:ff:ff:ff:ff:ff
-    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
-       valid_lft 86344sec preferred_lft 86344sec
-    inet6 fe80::e876:ac99:e264:4a31/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ping -c į 5 1.1.1.1
-ping -c 5 1.1.1.1
-[?2004lPING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
-64 bytes from 1.1.1.1: icmp_seq=1 ttl=63 time=203 ms
-64 bytes from 1.1.1.1: icmp_seq=2 ttl=63 time=58.1 ms
-64 bytes from 1.1.1.1: icmp_seq=3 ttl=63 time=69.2 ms
-64 bytes from 1.1.1.1: icmp_seq=4 ttl=63 time=120 ms
-64 bytes from 1.1.1.1: icmp_seq=5 ttl=63 time=76.0 ms
-
---- 1.1.1.1 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 4017ms
-rtt min/avg/max/mdev = 58.127/105.142/202.749/53.087 ms
 osboxes@osboxes:~$ 
 osboxes@osboxes:~$ poweroff
 poweroff
@@ -410,38 +354,32 @@ Failed to power off system via logind: Interactive authentication required.
 Failed to open initctl fifo: Permission denied
 Failed to talk to init daemon.
 osboxes@osboxes:~$ 
-osboxes@osboxes:~$ sudo poweroff
+osboxes@osboxes:~$ sud po   o poweroff
 sudo poweroff
 [?2004l[sudo] password for osboxes: 
-oSorry, try again.
-[sudo] password for osboxes:  osboxes.org
+Sorry, try again.
+[sudo] password for osboxes: osboxes.                                                   org
 
-[  OK  ] Stopped Unattended Upgrades Shutdown.
-         Stopping Avahi mDNS/DNS-SD Stack...
-         Stopping CUPS Scheduler...
-         Stopping Authorization Manager...
-[  OK  ] Stopped Avahi mDNS/DNS-SD Stack.
-[  OK  ] Stopped Authorization Manager.
+  OK  ] Unmounted /run/user/1000/gvfs.
+[  OK  ] Stopped LSB: automatic crash report generation.
+[  OK  ] Stopped Load/Save Random Seed.
 [  OK  ] Started Show Plymouth Power Off Screen.
 plymouth-poweroff.service
 [  OK  ] Stopped Session c2 of user gdm.
          Stopping User Login Management...
          Stopping User Manager for UID 126...
-[  OK  ] Unmounted /run/user/1000/gvfs.
 [  OK  ] Unmounted /run/user/126/gvfs.
 [  OK  ] Stopped User Login Management.
-[  OK  ] Stopped LSB: automatic crash report generation.
-[  OK  ] Stopped Load/Save Random Seed.
+[  OK  ] Stopped CUPS Scheduler.
 [  OK  ] Stopped User Manager for UID 1000.
          Stopping User Runtime Directory /run/user/1000...
-[  OK  ] Stopped CUPS Scheduler.
+[  OK  ] Unmounted /run/user/1000.
+[  OK  ] Stopped User Runtime Directory /run/user/1000.
+[  OK  ] Removed slice User Slice of UID 1000.
 [  OK  ] Stopped User Manager for UID 126.
          Stopping User Runtime Directory /run/user/126...
-[  OK  ] Unmounted /run/user/1000.
 [  OK  ] Unmounted /run/user/126.
-[  OK  ] Stopped User Runtime Directory /run/user/1000.
 [  OK  ] Stopped User Runtime Directory /run/user/126.
-[  OK  ] Removed slice User Slice of UID 1000.
 [  OK  ] Removed slice User Slice of UID 126.
          Stopping Permit User Sessions...
 [  OK  ] Stopped Permit User Sessions.
@@ -478,13 +416,13 @@ plymouth-poweroff.service
          Stopping Network Time Synchronization...
          Stopping Update UTMP about System Boot/Shutdown...
 [  OK  ] Stopped Network Time Synchronization.
-[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
-[  OK  ] Deactivated swap /dev/disk…/pci-0000:00:0d.0-ata-1-part3.
-[  OK  ] Deactivated swap /dev/disk…4-56f9-4f7f-9997-fe326fb6de30.
 [  OK  ] Deactivated swap /dev/disk…ISK_VB1c4fb197-906d2779-part3.
+[  OK  ] Deactivated swap /dev/disk…/pci-0000:00:0d.0-ata-1-part3.
 [  OK  ] Deactivated swap /dev/disk…ci-0000:00:0d.0-ata-1.0-part3.
+[  OK  ] Deactivated swap /dev/disk…4-56f9-4f7f-9997-fe326fb6de30.
 [  OK  ] Deactivated swap /dev/sda3.
 [  OK  ] Deactivated swap /dev/disk…5-d490-4a8f-9bfe-eefa78d5b5b4.
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
 [  OK  ] Stopped Create Volatile Files and Directories.
 [  OK  ] Stopped target Local File Systems.
          Unmounting /boot/efi...
@@ -500,16 +438,16 @@ plymouth-poweroff.service
          Unmounting Mount unit for snapd, revision 11588...
          Unmounting Mount unit for snapd, revision 12159...
 [  OK  ] Unmounted /boot/efi.
+[  OK  ] Unmounted Mount unit for core18, revision 1997.
 [  OK  ] Unmounted Mount unit for core18, revision 2074.
 [  OK  ] Stopped File System Check on /dev/disk/by-uuid/1953-3FF3.
-[  OK  ] Unmounted Mount unit for core18, revision 1997.
 [  OK  ] Unmounted /home.
 [  OK  ] Stopped File System Check …e-c804-49d6-b108-ce009b656da5.
 [  OK  ] Removed slice system-systemd\x2dfsck.slice.
 [  OK  ] Unmounted Mount unit for gnome-3-34-1804, revision 66.
+[  OK  ] Unmounted Mount unit for gnome-3-34-1804, revision 72.
 [  OK  ] Unmounted Mount unit for g…-common-themes, revision 1514.
 [  OK  ] Unmounted Mount unit for g…-common-themes, revision 1515.
-[  OK  ] Unmounted Mount unit for gnome-3-34-1804, revision 72.
 [  OK  ] Unmounted Mount unit for snap-store, revision 518.
 [  OK  ] Unmounted Mount unit for snap-store, revision 547.
 [  OK  ] Unmounted Mount unit for snapd, revision 11588.
@@ -523,5 +461,5 @@ plymouth-poweroff.service
 [  OK  ] Reached target Final Step.
 [  OK  ] Finished Power-Off.
 [  OK  ] Reached target Power-Off.
-[  139.943256] reboot: Power down
+[   70.366836] reboot: Power down
 Connection closed by foreign host.

@@ -96,6 +96,9 @@ echo "Prisijungsite prie Serial konsolės:"
 
 read
 
+# Išvalau būsimą Serial logą:
+> screenlog.0
+
 # Jungiamės prie virtualios Serial konsolės per TCP:
 screen -L telnet 127.0.0.1 23001
 
