@@ -50,6 +50,8 @@ VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 
 # Įjungiu 1LD mašiną:
 echo "Įjungiu ${VM1}:"
 VBoxManage startvm ${VM1}
+# ... ir ją pristabdau Boot Loader nustatymams:
+VBoxManage controlvm ${VM1} pause
 
 
 # direktorija VM atvaizdams saugoti:
