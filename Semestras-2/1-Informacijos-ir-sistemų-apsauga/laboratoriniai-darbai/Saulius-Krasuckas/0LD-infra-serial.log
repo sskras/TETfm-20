@@ -1,0 +1,419 @@
+telnet> Connection closed.
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+/dev/sda1: clean, 166048/14458880 files, 2800901/57829632 blocks
+plymouth-start.service
+[  OK  ] Started Show Plymouth Boot Screen.
+[  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
+[   14.041507] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[  OK  ] Found device VBOX_HARDDISK 5.
+         Starting File System Check…/dev/disk/by-uuid/1953-3FF3...
+[  OK  ] Started File System Check Daemon to report status.
+systemd-fsckd.service
+[  OK  ] Found device VBOX_HARDDISK 3.
+         Activating swap /dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4...
+[  OK  ] Found device VBOX_HARDDISK 4.
+         Starting File System Check…c804-49d6-b108-ce009b656da5...
+[  OK  ] Finished File System Check…n /dev/disk/by-uuid/1953-3FF3.
+systemd-fsck@dev-disk-by\x2duuid-1953\x2d3FF3.service
+dev-disk-by\x2dpartuuid-75c53184\x2d56f9\x2d4f7f\x2d9997\x2dfe326fb6de30.swap
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1.0\x2dpart3.swap
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB1c4fb197\x2d906d2779\x2dpart3.swap
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart3.swap
+dev-sda3.swap
+[  OK  ] Activated swap /dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4.
+dev-disk-by\x2duuid-7d0c5fd5\x2dd490\x2d4a8f\x2d9bfe\x2deefa78d5b5b4.swap
+[  OK  ] Reached target Swap.
+         Mounting /boot/efi...
+[   14.445529] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[  OK  ] Finished File System Check…e-c804-49d6-b108-ce009b656da5.
+[  OK  ] Mounted /boot/efi.
+systemd-fsck@dev-disk-by\x2duuid-83d73f7e\x2dc804\x2d49d6\x2db108\x2dce009b656da5.service
+boot-efi.mount
+         Mounting /home...
+[  OK  ] Mounted /home.
+[  OK  ] Reached target Local File Systems.
+home.mount
+         Starting Load AppArmor profiles...
+         Starting Set console font and keymap...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Set console font and keymap.
+console-setup.service
+[  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
+plymouth-read-write.service
+systemd-tmpfiles-setup.service
+[  OK  ] Finished Create Volatile Files and Directories.
+         Starting Network Name Resolution...
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
+systemd-update-utmp.service
+[   14.853615] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Reached target System Time Synchronized.
+systemd-timesyncd.service
+[  OK  ] Finished Load AppArmor profiles.
+systemd-resolved.service
+         Starting Load AppArmor pro…managed internally by snapd...
+apparmor.service
+snapd.apparmor.service
+[  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started ACPI Events Check.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Trigger anacron every hour.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Periodic ext4 Onli…ata Check for All Filesystems.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Refresh fwupd metadata regularly.
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Started Daily man-db regeneration.
+[  OK  ] Started Message of the Day.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on ACPID Listen Socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+         Starting Socket activation for snappy daemon.
+[  OK  ] Listening on UUID daemon activation socket.
+[  OK  ] Listening on Socket activation for snappy daemon.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+         Starting Accounts Service...
+[  OK  ] Started ACPI event daemon.
+[  OK  ] Started Run anacron jobs.
+         Starting LSB: automatic crash report generation...
+         Starting Avahi mDNS/DNS-SD Stack...acpid.service
+
+[  OK  ] Started Regular background program processing daemon.
+anacron.service
+cron.service
+[  OK  ] Started D-Bus System Message Bus.
+dbus.service
+         Starting Network Manager...
+[  OK  ] Started Save initial kernel messages after boot.
+dmesg.service
+         Starting Remove Stale Onli…t4 Metadata Check Snapshots...
+         Starting Detect the availa…eal with any system changes...
+         Starting Record successful boot for GRUB...
+[  OK  ] Started irqbalance daemon.
+irqbalance.service
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Authorization Manager...
+         Starting Power Profiles daemon...
+         Starting Restore /etc/reso… the ppp link was shut down...
+         Starting System Logging Service...
+         Starting Snap Daemon...
+         Starting Switcheroo Control Proxy service...
+         Starting User Login Management...
+         Starting Disk Manager...
+         Starting WPA supplicant...
+[  OK  ] Finished Remove Stale Onli…ext4 Metadata Check Snapshots.
+[  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
+[  OK  ] Started Record successful boot for GRUB.
+grub-common.service
+[  OK  ] Started System Logging Service.
+rsyslog.service
+[  OK  ] Finished Detect the availa… deal with any system changes.
+         Starting GRUB failed boot detection...
+[  OK  ] Started LSB: automatic crash report generation.
+apport.service
+[  OK  ] Finished GRUB failed boot detection.
+systemd-logind.service
+[  OK  ] Started User Login Management.
+wpa_supplicant.service
+[  OK  ] Started WPA supplicant.
+avahi-daemon.service
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+NetworkManager.service
+         Starting Network Manager Wait Online...
+         Starting CUPS Scheduler...
+         Starting OpenVPN service...
+         Starting Permit User Sessions...
+[  OK  ] Started Unattended Upgrades Shutdown.
+unattended-upgrades.service
+[  OK  ] Finished OpenVPN service.
+openvpn.service
+[  OK  ] Finished Permit User Sessions.
+systemd-user-sessions.service
+[  OK  ] Started Switcheroo Control Proxy service.
+switcheroo-control.service
+[  OK  ] Started Power Profiles daemon.
+power-profiles-daemon.service
+polkit.service
+[  OK  ] Started Authorization Manager.
+         Starting Modem Manager...
+         Starting Save/Restore Sound Card State...
+         Starting GNOME Display Manager...
+         Starting Hold until boot process finishes up...
+         Starting Hostname Service...
+[  OK  ] Started CUPS Scheduler.
+cups.service
+[  OK  ] Started Accounts Service.
+accounts-daemon.service
+cups-browsed.service
+[  OK  ] Started Make remote CUPS printers available locally.
+[  OK  ] Finished Save/Restore Sound Card State.
+[  OK  ] Reached target Sound Card.
+alsa-restore.service
+[  OK  ] Started Hostname Service.
+systemd-hostnamed.service
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started GNOME Display Manager.
+gdm.service
+[  OK  ] Started Network Manager Script Dispatcher Service.
+NetworkManager-dispatcher.service
+ModemManager.service
+networkd-dispatcher.service
+udisks2.service
+NetworkManager-wait-online.service
+whoopsie.service
+kerneloops.service
+run-user-126.mount
+user-runtime-dir@126.service
+user@126.service
+tmp-sanity\x2dmountpoint\x2d167247992.mount
+rtkit-daemon.service
+snapd.service
+run-user-126-gvfs.mount
+snapd.seeded.service
+upower.service
+systemd-localed.service
+geoclue.service
+packagekit.service
+fprintd.service
+[  OK  ] Started Show Plymouth Boot Screen.
+[  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
+[  OK  ] Found device VBOX_HARDDISK 5.
+         Starting File System Check…/dev/disk/by-uuid/1953-3FF3...
+[  OK  ] Started File System Check Daemon to report status.
+[  OK  ] Found device VBOX_HARDDISK 3.
+         Activating swap /dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4...
+[  OK  ] Found device VBOX_HARDDISK 4.
+         Starting File System Check…c804-49d6-b108-ce009b656da5...
+[  OK  ] Finished File System Check…n /dev/disk/by-uuid/1953-3FF3.
+[  OK  ] Activated swap /dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4.
+[  OK  ] Reached target Swap.
+         Mounting /boot/efi...
+[  OK  ] Finished File System Check…e-c804-49d6-b108-ce009b656da5.
+[  OK  ] Mounted /boot/efi.
+         Mounting /home...
+[  OK  ] Mounted /home.
+[  OK  ] Reached target Local File Systems.
+         Starting Load AppArmor profiles...
+         Starting Set console font and keymap...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Set console font and keymap.
+[  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
+[  OK  ] Finished Create Volatile Files and Directories.
+         Starting Network Name Resolution...
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Finished Load AppArmor profiles.
+         Starting Load AppArmor pro…managed internally by snapd...
+[  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started ACPI Events Check.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Trigger anacron every hour.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Periodic ext4 Onli…ata Check for All Filesystems.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Refresh fwupd metadata regularly.
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Started Daily man-db regeneration.
+[  OK  ] Started Message of the Day.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on ACPID Listen Socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+         Starting Socket activation for snappy daemon.
+[  OK  ] Listening on UUID daemon activation socket.
+[  OK  ] Listening on Socket activation for snappy daemon.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+         Starting Accounts Service...
+[  OK  ] Started ACPI event daemon.
+[  OK  ] Started Run anacron jobs.
+         Starting LSB: automatic crash report generation...
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started Regular background program processing daemon.
+[  OK  ] Started D-Bus System Message Bus.
+         Starting Network Manager...
+[  OK  ] Started Save initial kernel messages after boot.
+         Starting Remove Stale Onli…t4 Metadata Check Snapshots...
+         Starting Detect the availa…eal with any system changes...
+         Starting Record successful boot for GRUB...
+[  OK  ] Started irqbalance daemon.
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Authorization Manager...
+         Starting Power Profiles daemon...
+         Starting Restore /etc/reso… the ppp link was shut down...
+         Starting System Logging Service...
+         Starting Snap Daemon...
+         Starting Switcheroo Control Proxy service...
+         Starting User Login Management...
+         Starting Disk Manager...
+         Starting WPA supplicant...
+[  OK  ] Finished Remove Stale Onli…ext4 Metadata Check Snapshots.
+[  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
+[  OK  ] Started Record successful boot for GRUB.
+[  OK  ] Started System Logging Service.
+[  OK  ] Finished Detect the availa… deal with any system changes.
+         Starting GRUB failed boot detection...
+[  OK  ] Started LSB: automatic crash report generation.
+[  OK  ] Finished GRUB failed boot detection.
+[  OK  ] Started User Login Management.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+         Starting Network Manager Wait Online...
+         Starting CUPS Scheduler...
+         Starting OpenVPN service...
+         Starting Permit User Sessions...
+[  OK  ] Started Unattended Upgrades Shutdown.
+[  OK  ] Finished OpenVPN service.
+[  OK  ] Finished Permit User Sessions.
+[  OK  ] Started Switcheroo Control Proxy service.
+[  OK  ] Started Power Profiles daemon.
+[  OK  ] Started Authorization Manager.
+         Starting Modem Manager...
+         Starting Save/Restore Sound Card State...
+         Starting GNOME Display Manager...
+         Starting Hold until boot process finishes up...
+         Starting Hostname Service...
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Accounts Service.
+[  OK  ] Started Make remote CUPS printers available locally.
+[  OK  ] Finished Save/Restore Sound Card State.
+[  OK  ] Reached target Sound Card.
+[  OK  ] Started Hostname Service.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started GNOME Display Manager.
+[  OK  ] Started Network Manager Script Dispatcher Service.
+
+Ubuntu 21.04 osboxes ttyS0
+
+osboxes login: osboxes
+osboxes
+Password: osboxes.org
+
+Welcome to Ubuntu 21.04 (GNU/Linux 5.11.0-16-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+4 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Last login: Mon Jun 28 07:36:10 EDT 2021 on ttyS0
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ 
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ w
+w
+in,  1 user,  load average: 3.79, 1.02, 0.35
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+osboxes  ttyS0    -                10:52    1.00s  0.09s  0.02s w
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ 
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ id
+id
+),24(cdrom),27(sudo),30(dip),46(plugdev),121(lpadmin),132(lxd),133(sambashare)
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ pwd
+pwd
+e/osboxes
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ df -Th
+df -Th
+     Type   Size  Used Avail Use% Mounted on
+tmpfs          tmpfs  198M  1.3M  197M   1% /run
+/dev/sda1      ext4   217G  6.3G  199G   4% /
+tmpfs          tmpfs  990M     0  990M   0% /dev/shm
+tmpfs          tmpfs  5.0M  4.0K  5.0M   1% /run/lock
+tmpfs          tmpfs  4.0M     0  4.0M   0% /sys/fs/cgroup
+/dev/sda5      vfat   477M  5.3M  471M   2% /boot/efi
+/dev/sda4      ext4   265G   70M  252G   1% /home
+tmpfs          tmpfs  198M   92K  198M   1% /run/user/126
+tmpfs          tmpfs  198M   80K  198M   1% /run/user/1000
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ 
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ ip a
+ip a
+tu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:ea:25:1a brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86351sec preferred_lft 86351sec
+    inet6 fe80::8fcb:8f01:b62b:8fc8/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ 
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ ping ą.^H    1.1.1.1
+ping 1.1.1.1
+[?2004lPING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=63 time=256 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=63 time=60.4 ms
+64 bytes from 1.1.1.1: icmp_seq=3 ttl=63 time=61.4 ms
+64 bytes from 1.1.1.1: icmp_seq=4 ttl=63 time=60.7 ms
+^C
+
+id
+^C
+^\
+^]
+
+telnet> cont
+?Invalid command
+telnet> 
+
+
+^Z
+^]
+
+telnet> quit    fg
+?Invalid command
+telnet> 
+
+^[[1;7H       Connection closed by foreign host.

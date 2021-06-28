@@ -21,24 +21,29 @@ ls -Al $BASE_DIR/VMs/64bit
 # Patikrinkim disko informaciją:
 # (ši užklausa automatiškai užregistruoja .vdi failą VBox registre, jei jo ten dar nebuvo:
 VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi"
+echo
 
 # VM sąrašas:
 VBoxManage_vm_list
+echo
 
 # Kuriu 1LD mašiną:
 VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
 VBoxManage_vm_list
+echo
 
 # VM konfigūracija:
 VBoxManage showvminfo ${VM1}
 echo "Sena procesoriaus ir RAM konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+echo
 
 # Padidinu CPU skaičių ir RAM apimtį, tik neturiu 4ių GiB šioje fizinėje mašinoje:
 # https://help.ubuntu.com/community/Installation/SystemRequirements
 VBoxManage modifyvm ${VM1} --cpus 2 --memory 2048
 echo "Nauja procesoriaus ir RAM konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+echo
 
 # Prijungiu disko valdiklį:
 VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
@@ -49,6 +54,7 @@ echo "Nauja SATA konfigūracija:"
 VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
 echo "Nauja diskų valdiklio konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -i storage
+echo
 
 # Prijungiu Serial UART: (valdymui be tinklo)
 VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
@@ -72,12 +78,17 @@ echo "Spauskite <End> ir gale prirašykite:"
 echo
 echo "... console=tty0 console=ttyS0,115200n8"
 echo
-echo "Ir spauskite <Ctrl-X>"
+echo "VM paspauskite <Ctrl-X>"
+echo
+echo "Iškart persijunkite čia (atgal į CLI)"
+echo "... ir spauskite <Enter>"
+echo
+echo "Prisijungsite prie Serial konsolės:"
 read
 
 # Jungiamės prie virtualios Serial konsolės per TCP:
 screen -L telnet 127.0.0.1 23001
-cat screenlog-shutdown.0 | ansifilter > ${LOG_UART}
+cat screenlog.0 | ansifilter > ${LOG_UART}
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
