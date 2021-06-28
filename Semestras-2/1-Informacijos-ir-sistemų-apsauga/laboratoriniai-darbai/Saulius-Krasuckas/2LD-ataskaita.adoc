@@ -1,1 +1,12 @@
+### Darbo Tikslas
 
+* [ ] Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
+* [ ] Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
+
+### Trumpas atlikto darbo aprašymas ir atsakymai į klausimus
+
+### Duotosios Linux komandos aprašymas: `TODO`
+
+#### Pavyzdys
+
+### Viso darbo išvados
