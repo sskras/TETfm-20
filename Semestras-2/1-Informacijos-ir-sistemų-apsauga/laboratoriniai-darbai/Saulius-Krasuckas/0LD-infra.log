@@ -15,18 +15,27 @@ Method = LZMA2:96m
 Solid = -
 Blocks = 1
 
-Everything is Ok
 
-Folders: 1
-Files: 1
-Size:       8120172544
-Compressed: 2183946920
+Would you like to replace the existing file:
+  Path:     ./64bit/Ubuntu 21.04 (64bit).vdi
+  Size:     8120172544 bytes (7744 MiB)
+  Modified: 2021-04-25 00:15:06
+with the file from archive:
+  Path:     64bit/Ubuntu 21.04 (64bit).vdi
+  Size:     8120172544 bytes (7744 MiB)
+  Modified: 2021-04-25 00:15:06
+? (Y)es / (N)o / (A)lways / (S)kip all / A(u)to rename all / (Q)uit? 
+Archives with Errors: 1
 
-real	2m59.077s
-user	1m52.935s
-sys	0m6.388s
+
+
+Break signaled
+
+real	0m6.139s
+user	0m0.024s
+sys	0m0.011s
 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas
-total 7709083
+total 7934489
 -rw-rw-r--. 1 p p 8120172544 Apr 25 00:15 Ubuntu 21.04 (64bit).vdi
 UUID:           1c4fb197-350c-4202-9588-587f79276d90
 Parent UUID:    base
@@ -75,6 +84,9 @@ VBoxManage: error: Context: "FindMachine(Bstr(VMNameOrUuid).raw(), machine.asOut
 VBoxManage: error: Could not find a registered machine named 'VGTU-2021-IiSA-saukrs-LDVM1'
 VBoxManage: error: Details: code VBOX_E_OBJECT_NOT_FOUND (0x80bb0001), component VirtualBoxWrap, interface IVirtualBox, callee nsISupports
 VBoxManage: error: Context: "FindMachine(Bstr(VMName).raw(), machine.asOutParam())" at line 150 of file VBoxManageMisc.cpp
+removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox’
+removed ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev’
+removed directory: ‘/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1’
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
@@ -82,4 +94,3 @@ total 2134198
 drwx------. 3 p p          6 May 18 00:55 2021-VGTU-IiSA-LDVM1
 drwx------. 2 p p          3 Apr 25 00:15 64bit
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z
-drwx------. 2 p p          4 Jun 28 10:59 VGTU-2021-IiSA-saukrs-LDVM1
