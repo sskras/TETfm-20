@@ -14,8 +14,7 @@ Išmokite nustatyti tinklo nustatymus:
 https://www.tecmint.com/configure-network-static-ip-address-in-ubuntu/  +
 https://askubuntu.com/questions/1031709/ubuntu-18-04-switch-back-to-etc-network-interfaces
 
-Ataskaitoje pateikite Duotos tinkklo komandos aprašymą, jei komandos neturite - praneškite.
-
+Ataskaitoje pateikite pasirinktos tinklo komandos aprašymą.  +
 Jei laboratorinio metu susidūrėte su problemomis, aprašykite jas ir jų sprendimą.
 
 (https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/2lab_linuxnetworking7.docx?forcedownload=1[2lab_linuxnetworking7.docx] konspektas, praganiau pradinį URL)
