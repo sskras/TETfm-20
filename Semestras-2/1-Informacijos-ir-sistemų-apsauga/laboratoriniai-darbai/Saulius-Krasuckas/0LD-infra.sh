@@ -2,7 +2,7 @@
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 
-vm_list () {
+VBoxManage_vm_list () {
     VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
 }
 
@@ -21,14 +21,14 @@ ls -Al $BASE_DIR/VMs/64bit
 VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi"
 
 # VM sąrašas:
-vm_list
+VBoxManage_vm_list
 
 # Kuriu 1LD mašiną:
 VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
-vm_list
+VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
-vm_list
+VBoxManage_vm_list
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
