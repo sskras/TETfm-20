@@ -22,15 +22,15 @@ cd $BASE_DIR/VMs
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/21.04/64bit.7z/download
 #
 # Ubuntu Server 20.04.2 LTS .vdi atvaizdas:
-#curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/20.04/20.04.2/64bit.7z/download
+# curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/20.04/20.04.2/64bit.7z/download
 #
 # Ubuntu Desktop 20.04.2 Focal Fossa (LTS) .vdi atvaizdas:
-curl -OLJv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.2/64bit.7z/download
+# curl -OLJv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.2/64bit.7z/download
 #
 
 7za l 64bit.7z | awk '/vdi$/ {$1=$2=$3=$4=$5=""; print}' | read VDI_FILE
 echo "Ištrauktojo VDI disko pavadinimas: ${VDI_FILE}"
-time 7za x 64bit.7z
+# time 7za x 64bit.7z
 cd -
 
 ls -Al $BASE_DIR/VMs/64bit
@@ -72,6 +72,12 @@ echo "Nauja SATA konfigūracija:"
 VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
 echo "Nauja diskų valdiklio konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -i storage
+echo
+
+# Prijungiu NIC 2: (OAM valdymui per tinklą)
+VBoxManage modifyvm ${VM1} --nic1 hostonly
+echo "Nauja NIC konfigūracija:"
+VBoxManage showvminfo ${VM1} | grep NIC
 echo
 
 # Prijungiu Serial UART: (valdymui be tinklo)
