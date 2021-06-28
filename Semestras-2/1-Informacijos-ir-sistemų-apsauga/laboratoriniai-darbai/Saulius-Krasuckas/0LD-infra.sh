@@ -18,11 +18,15 @@ cd $BASE_DIR/VMs
 # Ubuntu Desktop 21.04 Linux OS .vdi atvaizdas:
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/21.04/64bit.7z/download
 # Ubuntu Server 20.04.2 LTS .vdi atvaizdas:
-curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/20.04/20.04.2/64bit.7z/download
+#curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/20.04/20.04.2/64bit.7z/download
+#
+# TODO kad curl pats išsaugotų failą teisingų vardu:
+# < Content-Disposition: attachment; filename="64bit.7z"
+mv -bv download 64bit.7z
 
 7za l 64bit.7z | awk '/vdi$/ {$1=$2=$3=$4=$5=""; print}' | read VDI_FILE
 echo "Ištrauktojo VDI disko pavadinimas: ${VDI_FILE}"
-# time 7za x 64bit.7z
+time 7za x 64bit.7z
 cd -
 
 ls -Al $BASE_DIR/VMs/64bit
