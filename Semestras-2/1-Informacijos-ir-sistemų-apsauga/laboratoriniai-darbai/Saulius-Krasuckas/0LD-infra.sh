@@ -29,10 +29,12 @@ VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/
 VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo ${VM1}
+VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
 # Prijungiu disko valdiklį:
 VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
 VBoxManage showvminfo ${VM1} | grep -i storage
 # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
+# TODO išsitraukti UUID iš naujai išspausto .VDI ir perduoti per CLI:
 VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
 
 # direktorija VM atvaizdams saugoti:
