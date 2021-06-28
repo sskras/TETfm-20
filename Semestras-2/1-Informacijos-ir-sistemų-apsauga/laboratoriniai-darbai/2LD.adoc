@@ -29,8 +29,6 @@ Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
 
 ### Darbo eiga
 
-`{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}`
-
 [cols=3]
 |===
 
@@ -172,6 +170,7 @@ Jei reikia įtraukti statinį įrašą, reiktų tai padaryti `/etc/network/inter
   |
   |
 
+
 3+| +++<center>+++ *8. Programinės įrangos valdymas* +++</center>+++
 
   | Ubuntu Linux turi patogią ir efektyvią programinės įrangos valdymo priemonę `apt-get`. Peržiūrėkite šaltinių sąrašą:
@@ -194,6 +193,7 @@ Jei reikia įtraukti statinį įrašą, reiktų tai padaryti `/etc/network/inter
   |`apt-get install nmap`
   | Instaliavimo metu gali tekti atnaujinti kelias bibliotekas.
 
+
 3+| +++<center>+++ *9. Įrankis `nmap`* +++</center>+++
 
   | Susipažinkite su `nmap` galimybėmis:
@@ -207,6 +207,7 @@ Jei reikia įtraukti statinį įrašą, reiktų tai padaryti `/etc/network/inter
   | Išsiaiškinkite, ką reiškia gautas atsakymas.
   |
   |
+
 
 3+| +++<center>+++ *10. Žiniatinklio paslauga ir klientas* +++</center>+++
 
@@ -228,6 +229,7 @@ php4-cli libtool libssl-dev gcc-4.1 g++`
   |
   |
 
+
 3+| +++<center>+++ *11. Žiniatinklio konfigūravimas* +++</center>+++
 
   | Peržiūrėkite konfigūracinį failą:
@@ -246,7 +248,8 @@ php4-cli libtool libssl-dev gcc-4.1 g++`
   | Išbandykite, ar atidaromas jūsų žiniatinklio puslapis naudoodamiesi kompiuterio naršykle.
   |
   | Atkreipkite dėmesį, kad naudojamas saugus žiniatinklio protokolas `https`
-  
+
+
 3+| +++<center>+++ *12. Vykdomi procesai* +++</center>+++
 
   | Peržiūrėkite kompiuteryje vykdomus procesus:
