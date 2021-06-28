@@ -1,239 +1,75 @@
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
-/dev/sda1: clean, 166057/14458880 files, 2813394/57829632 blocks
+/dev/sda1: clean, 166060/14458880 files, 2817559/57829632 blocks
 [[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
 [[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
 plymouth-start.service
 [[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
-[   14.113559] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 5[0m.
-         Starting [0;1;39mFile System Check…/dev/disk/by-uuid/1953-3FF3[0m...
-systemd-fsckd.service
-[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…n /dev/disk/by-uuid/1953-3FF3[0m.
-systemd-fsck@dev-disk-by\x2duuid-1953\x2d3FF3.service
-         Mounting [0;1;39m/boot/efi[0m...
-[[0;32m  OK  [0m] Mounted [0;1;39m/boot/efi[0m.
-boot-efi.mount
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 4[0m.
+[   15.199444] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 4[0m.
          Starting [0;1;39mFile System Check…c804-49d6-b108-ce009b656da5[0m...
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+systemd-fsckd.service
+[   15.591921] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
 [[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
-         Activating swap [0;1;39m/dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4[0m...
-dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB1c4fb197\x2d906d2779\x2dpart3.swap
-dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1.0\x2dpart3.swap
-dev-disk-by\x2dpartuuid-75c53184\x2d56f9\x2d4f7f\x2d9997\x2dfe326fb6de30.swap
-dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart3.swap
-[[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
-dev-sda3.swap
-dev-disk-by\x2duuid-7d0c5fd5\x2dd490\x2d4a8f\x2d9bfe\x2deefa78d5b5b4.swap
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…e-c804-49d6-b108-ce009b656da5[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 5[0m.
+         Activating swap [0;1;39m/dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4[0m...
+         Starting [0;1;39mFile System Check…/dev/disk/by-uuid/1953-3FF3[0m...
+Checking in progress on 1 disk (0.0% complete)fsckd-cancel-msg:Press Ctrl+C to cancel all filesystem checks in progress
+fsckd:1:0.0:Checking in progress on 1 disk (0.0% complete)
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…e-c804-49d6-b108-ce009b656da5[0m.
 systemd-fsck@dev-disk-by\x2duuid-83d73f7e\x2dc804\x2d49d6\x2db108\x2dce009b656da5.service
          Mounting [0;1;39m/home[0m...
-[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.home.mount
-
-         Starting [0;1;39mLoad AppArmor profiles[0m...
-         Starting [0;1;39mSet console font and keymap[0m...
-         Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
-         Starting [0;1;39mCreate Volatile Files and Directories[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
-console-setup.service
-plymouth-read-write.service
-[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
-systemd-tmpfiles-setup.service
-         Starting [0;1;39mNetwork Name Resolution[0m...
-         Starting [0;1;39mNetwork Time Synchronization[0m...[   14.509665] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-
-         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
-systemd-update-utmp.service
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
-         Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
-apparmor.service
-systemd-timesyncd.service
-systemd-resolved.service
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
-[   14.885499] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
-snapd.apparmor.service
-[[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
-[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
-[[0;32m  OK  [0m] Started [0;1;39mMessage of the Day[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
-         Starting [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
-         Starting [0;1;39mAccounts Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
-         Starting [0;1;39mLSB: automatic crash report generation[0m...
-         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
-[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
-acpid.service
-[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
-anacron.service
-cron.service
-dbus.service
-         Starting [0;1;39mNetwork Manager[0m...
-[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
-         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
-         Starting [0;1;39mDetect the availa…eal with any system changes[0m...
-dmesg.service
-         Starting [0;1;39mRecord successful boot for GRUB[0m...
-[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
-irqbalance.service
-         Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
-         Starting [0;1;39mAuthorization Manager[0m...
-         Starting [0;1;39mPower Profiles daemon[0m...
-         Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
-         Starting [0;1;39mSystem Logging Service[0m...
-         Starting [0;1;39mSnap Daemon[0m...
-         Starting [0;1;39mSwitcheroo Control Proxy service[0m...
-         Starting [0;1;39mUser Login Management[0m...
-         Starting [0;1;39mDisk Manager[0m...
-         Starting [0;1;39mWPA supplicant[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRecord successful boot for GRUB[0m.
-grub-common.service
-rsyslog.service
-[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
-         Starting [0;1;39mGRUB failed boot detection[0m...
-[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
-apport.service
-[[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
-[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
-systemd-logind.service
-[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
-switcheroo-control.service
-         Starting [0;1;39mSave/Restore Sound Card State[0m...
-[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
-wpa_supplicant.service
-[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
-avahi-daemon.service
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
-[[0;32m  OK  [0m] Started [0;1;39mPower Profiles daemon[0m.
-NetworkManager.service
-power-profiles-daemon.service
-[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
-alsa-restore.service
-[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
-         Starting [0;1;39mNetwork Manager Wait Online[0m...
-         Starting [0;1;39mCUPS Scheduler[0m...
-         Starting [0;1;39mOpenVPN service[0m...
-         Starting [0;1;39mPermit User Sessions[0m...
-[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
-unattended-upgrades.service
-[[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
-openvpn.service
-[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
-systemd-user-sessions.service
-[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
-polkit.service
-         Starting [0;1;39mModem Manager[0m...
-         Starting [0;1;39mGNOME Display Manager[0m...
-         Starting [0;1;39mHold until boot process finishes up[0m...
-         Starting [0;1;39mHostname Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
-accounts-daemon.service
-cups.service
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
-cups-browsed.service
-[[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
-systemd-hostnamed.service
-[[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
-gdm.service
-         Starting [0;1;39mNetwork Manager Script Dispatcher Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mDispatcher daemon for systemd-networkd[0m.
-networkd-dispatcher.service
-NetworkManager-dispatcher.service
-ModemManager.service
-udisks2.service
-NetworkManager-wait-online.service
-whoopsie.service
-kerneloops.service
-run-user-126.mount
-user-runtime-dir@126.service
-user@126.service
-rtkit-daemon.service
-tmp-sanity\x2dmountpoint\x2d918681287.mount
-run-user-126-gvfs.mount
-snapd.service
-snapd.seeded.service
-upower.service
-systemd-localed.service
-geoclue.service
-packagekit.service
-fprintd.service
-[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
-[[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
-[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 5[0m.
-         Starting [0;1;39mFile System Check…/dev/disk/by-uuid/1953-3FF3[0m...
-[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…n /dev/disk/by-uuid/1953-3FF3[0m.
-         Mounting [0;1;39m/boot/efi[0m...
-[[0;32m  OK  [0m] Mounted [0;1;39m/boot/efi[0m.
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 4[0m.
-         Starting [0;1;39mFile System Check…c804-49d6-b108-ce009b656da5[0m...
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
-         Activating swap [0;1;39m/dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4[0m...
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1.0\x2dpart3.swap
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart3.swap
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB1c4fb197\x2d906d2779\x2dpart3.swap
+dev-disk-by\x2dpartuuid-75c53184\x2d56f9\x2d4f7f\x2d9997\x2dfe326fb6de30.swap
+dev-sda3.swap
+dev-disk-by\x2duuid-7d0c5fd5\x2dd490\x2d4a8f\x2d9bfe\x2deefa78d5b5b4.swap
 [[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
+home.mount
 [[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…e-c804-49d6-b108-ce009b656da5[0m.
-         Mounting [0;1;39m/home[0m...
-[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…n /dev/disk/by-uuid/1953-3FF3[0m.
+Checking in progress on 0 disks (100.0% complete)systemd-fsck@dev-disk-by\x2duuid-1953\x2d3FF3.service
+
+         Mounting [0;1;39m/boot/efi[0m...
+fsckd:0:100.0:Checking in progress on 0 disks (100.0% complete)
+[[0;32m  OK  [0m] Mounted [0;1;39m/boot/efi[0m.
+boot-efi.mount
 [[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
          Starting [0;1;39mLoad AppArmor profiles[0m...
          Starting [0;1;39mSet console font and keymap[0m...
          Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
-         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+plymouth-read-write.service
 [[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
-         Starting [0;1;39mNetwork Name Resolution[0m...
-         Starting [0;1;39mNetwork Time Synchronization[0m...
-         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+console-setup.service
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+systemd-tmpfiles-setup.service
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
 [[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
+systemd-update-utmp.service
+[   15.975495] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+systemd-resolved.service
 [[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+systemd-timesyncd.service
+[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
+apparmor.service
          Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
 [[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+snapd.apparmor.service
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
 [[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
 [[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
 [[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
@@ -250,78 +86,250 @@ fprintd.service
 [[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
-         Starting [0;1;39mSocket activation for snappy daemon[0m.
+         Starting [0;1;39mSocket activation for snappy daemon[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
-         Starting [0;1;39mAccounts Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
+         Starting [0;1;39mAccounts Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
+acpid.service
 [[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
+anacron.service
          Starting [0;1;39mLSB: automatic crash report generation[0m...
          Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
 [[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+cron.service
 [[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+dbus.service
          Starting [0;1;39mNetwork Manager[0m...
-[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
-         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
+dmesg.service
+         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
          Starting [0;1;39mDetect the availa…eal with any system changes[0m...
          Starting [0;1;39mRecord successful boot for GRUB[0m...
-[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+irqbalance.service
          Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
          Starting [0;1;39mAuthorization Manager[0m...
          Starting [0;1;39mPower Profiles daemon[0m...
          Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
          Starting [0;1;39mSystem Logging Service[0m...
+         Starting [0;1;39mSnap Daemon[0m...
+         Starting [0;1;39mSwitcheroo Control Proxy service[0m...
+         Starting [0;1;39mUser Login Management[0m...
+         Starting [0;1;39mDisk Manager[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+rsyslog.service
+[[0;32m  OK  [0m] Started [0;1;39mRecord successful boot for GRUB[0m.
+grub-common.service
+[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
+         Starting [0;1;39mGRUB failed boot detection[0m...
+[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
+apport.service
+[[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+systemd-logind.service
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+wpa_supplicant.service
+[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+avahi-daemon.service
+[[0;32m  OK  [0m] Started [0;1;39mPower Profiles daemon[0m.
+power-profiles-daemon.service
+switcheroo-control.service
+NetworkManager.service
+[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39mNetwork Manager Wait Online[0m...
+         Starting [0;1;39mSave/Restore Sound Card State[0m...
+         Starting [0;1;39mCUPS Scheduler[0m...
+         Starting [0;1;39mOpenVPN service[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+unattended-upgrades.service
+[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
+openvpn.service
+systemd-user-sessions.service
+polkit.service
+         Starting [0;1;39mModem Manager[0m...
+         Starting [0;1;39mGNOME Display Manager[0m...
+         Starting [0;1;39mHold until boot process finishes up[0m...
+         Starting [0;1;39mHostname Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+cups.service
+[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
+alsa-restore.service
+[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
+[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
+accounts-daemon.service
+cups-browsed.service
+systemd-hostnamed.service
+[[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
+gdm.service
+         Starting [0;1;39mNetwork Manager Script Dispatcher Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager Script Dispatcher Service[0m.
+NetworkManager-dispatcher.service
+networkd-dispatcher.service
+udisks2.service
+ModemManager.service
+NetworkManager-wait-online.service
+whoopsie.service
+kerneloops.service
+run-user-126.mount
+user-runtime-dir@126.service
+user@126.service
+rtkit-daemon.service
+run-user-126-gvfs.mount
+tmp-sanity\x2dmountpoint\x2d922267164.mount
+snapd.service
+snapd.seeded.service
+upower.service
+systemd-localed.service
+geoclue.service
+packagekit.service
+fprintd.service
+colord.service
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 4[0m.
+         Starting [0;1;39mFile System Check…c804-49d6-b108-ce009b656da5[0m...
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 5[0m.
+         Activating swap [0;1;39m/dev/disk/…d490-4a8f-9bfe-eefa78d5b5b4[0m...
+         Starting [0;1;39mFile System Check…/dev/disk/by-uuid/1953-3FF3[0m...
+Checking in progress on 1 disk (0.0% complete)[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…e-c804-49d6-b108-ce009b656da5[0m.
+         Mounting [0;1;39m/home[0m...
+[[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…5-d490-4a8f-9bfe-eefa78d5b5b4[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…n /dev/disk/by-uuid/1953-3FF3[0m.
+Checking in progress on 0 disks (100.0% complete)         Mounting [0;1;39m/boot/efi[0m...
+[[0;32m  OK  [0m] Mounted [0;1;39m/boot/efi[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mLoad AppArmor profiles[0m...
+         Starting [0;1;39mSet console font and keymap[0m...
+         Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
+         Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Started [0;1;39mMessage of the Day[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
+         Starting [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+         Starting [0;1;39mAccounts Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
+         Starting [0;1;39mLSB: automatic crash report generation[0m...
+         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+         Starting [0;1;39mNetwork Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
+         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
+         Starting [0;1;39mDetect the availa…eal with any system changes[0m...
+         Starting [0;1;39mRecord successful boot for GRUB[0m...
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+         Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
+         Starting [0;1;39mAuthorization Manager[0m...
+         Starting [0;1;39mPower Profiles daemon[0m...
+         Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
+         Starting [0;1;39mSystem Logging Service[0m...
          Starting [0;1;39mSnap Daemon[0m...
          Starting [0;1;39mSwitcheroo Control Proxy service[0m...
          Starting [0;1;39mUser Login Management[0m...
          Starting [0;1;39mDisk Manager[0m...
          Starting [0;1;39mWPA supplicant[0m...
 [[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRecord successful boot for GRUB[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
 [[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
-         Starting [0;1;39mGRUB failed boot detection[0m...
-[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRecord successful boot for GRUB[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
+         Starting [0;1;39mGRUB failed boot detection[0m...
+[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
 [[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
-[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
-[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
-         Starting [0;1;39mSave/Restore Sound Card State[0m...
-[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
-[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
-[[0;32m  OK  [0m] Started [0;1;39mPower Profiles daemon[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPower Profiles daemon[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
-         Starting [0;1;39mNetwork Manager Wait Online[0m...
-         Starting [0;1;39mCUPS Scheduler[0m...
-         Starting [0;1;39mOpenVPN service[0m...
+         Starting [0;1;39mNetwork Manager Wait Online[0m...
+         Starting [0;1;39mSave/Restore Sound Card State[0m...
+         Starting [0;1;39mCUPS Scheduler[0m...
+         Starting [0;1;39mOpenVPN service[0m...
          Starting [0;1;39mPermit User Sessions[0m...
-[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
 [[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
 [[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
-         Starting [0;1;39mModem Manager[0m...
-         Starting [0;1;39mGNOME Display Manager[0m...
-         Starting [0;1;39mHold until boot process finishes up[0m...
-         Starting [0;1;39mHostname Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
+         Starting [0;1;39mModem Manager[0m...
+         Starting [0;1;39mGNOME Display Manager[0m...
+         Starting [0;1;39mHold until boot process finishes up[0m...
+         Starting [0;1;39mHostname Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
+[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
 [[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
          Starting [0;1;39mNetwork Manager Script Dispatcher Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mDispatcher daemon for systemd-networkd[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager Script Dispatcher Service[0m.
 
-Ubuntu 21.04 osboxes ttyS0
-
-osboxes login: osboxes
+Ubuntu 21.04 osboxes ttyS0
+
+osboxes login: r^H
+r 
+osboxes login: 
+osboxes login: osv boxes
 osboxes
-Password: osboxes.org
+Password: osbx oxes.org
 
 Welcome to Ubuntu 21.04 (GNU/Linux 5.11.0-16-generic x86_64)
 
@@ -330,101 +338,47 @@ Welcome to Ubuntu 21.04 (GNU/Linux 5.11.0-16-generic x86_64)
  * Support:        https://ubuntu.com/advantage
 
 4 updates can be installed immediately.
-0 of these updates are security updates.
+0 of these updates are security updates.
 To see these additional updates run: apt list --upgradable
 
-Last login: Mon Jun 28 11:30:58 EDT 2021 on ttyS0
+Last login: Mon Jun 28 08:48:09 EDT 2021 on ttyS0
 [?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ 
-
-[?2004l[?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ w
-w
-[?2004l 08:48:11 up 1 min,  1 user,  load average: 1.88, 0.73, 0.27
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-osboxes  ttyS0    -                08:48    3.00s  0.07s  0.01s w
-[?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ 
-
-[?2004l[?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ 
-
-[?2004l[?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ last 
-last 
-[?2004losboxes  ttyS0                         Mon Jun 28 08:48   still logged in
-reboot   system boot  5.11.0-16-generi Mon Jun 28 11:46   still running
+[?2004l[?2004hosboxes@osboxes:~$ last | head
+last | head
+[?2004losboxes  ttyS0                         Mon Jun 28 09:01   still logged in
+reboot   system boot  5.11.0-16-generi Mon Jun 28 11:58   still running
+osboxes  ttyS0                         Mon Jun 28 08:48 - down   (00:00)
+reboot   system boot  5.11.0-16-generi Mon Jun 28 11:46 - 08:49  (-2:57)
 osboxes  ttyS0                         Mon Jun 28 11:30 - down   (-2:59)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 11:30 - 08:31  (-2:58)
-osboxes  ttyS0                         Mon Jun 28 08:23 - down   (00:01)
+reboot   system boot  5.11.0-16-generi Mon Jun 28 11:30 - 08:31  (-2:58)
+osboxes  ttyS0                         Mon Jun 28 08:23 - down   (00:01)
 reboot   system boot  5.11.0-16-generi Mon Jun 28 11:21 - 08:24  (-2:56)
-osboxes  tty2                          Mon Jun 28 07:54 - down   (00:00)
-osboxes  ttyS0                         Mon Jun 28 10:52 - down   (-2:57)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 10:51 - 07:54  (-2:56)
-osboxes  ttyS0                         Mon Jun 28 07:36 - down   (00:01)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 10:35 - 07:38  (-2:57)
-osboxes  tty2                          Mon Jun 28 07:31 - down   (00:00)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 10:28 - 07:31  (-2:57)
-osboxes  ttyS0                         Mon Jun 28 07:11 - down   (00:01)
-osboxes  ttyS0                         Mon Jun 28 06:55 - 07:10  (00:14)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 09:47 - 07:12  (-2:34)
-osboxes  tty2                          Mon Jun 28 06:16 - down   (00:01)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 09:15 - 06:17  (-2:57)
-osboxes  tty2                          Mon Jun 28 06:04 - down   (00:08)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 08:55 - 06:12  (-2:43)
-osboxes  tty2                          Mon Jun 28 05:42 - down   (00:00)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 08:41 - 05:42  (-2:58)
-osboxes  tty2                          Mon Jun 28 05:09 - down   (00:00)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 05:08 - 05:09  (00:01)
-osboxes  tty2                          Mon Jun 28 05:03 - down   (00:04)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 05:00 - 05:08  (00:07)
-osboxes  tty2                          Mon Jun 28 05:00 - down   (00:00)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 07:54 - 05:00  (-2:53)
-osboxes  tty2                          Mon Jun 28 04:50 - down   (00:01)
-reboot   system boot  5.11.0-16-generi Mon Jun 28 07:46 - 04:52  (-2:54)
-osboxes  tty2         tty2             Sat Apr 24 17:14 - down   (00:00)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 17:09 - 17:15  (00:05)
-osboxes  tty2         tty2             Sat Apr 24 17:07 - down   (00:02)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 17:06 - 17:09  (00:02)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 17:03 - 17:09  (00:05)
-osboxes  tty2         tty2             Sat Apr 24 17:01 - down   (00:01)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 16:59 - 17:03  (00:03)
-osboxes  tty2         tty2             Sat Apr 24 16:56 - down   (00:02)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 16:55 - 16:59  (00:04)
-osboxes  tty2         tty2             Sat Apr 24 16:54 - down   (00:00)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 16:53 - 16:55  (00:01)
-osboxes  tty2         tty2             Sat Apr 24 16:47 - down   (00:05)
-reboot   system boot  5.11.0-16-generi Sat Apr 24 16:45 - 16:53  (00:07)
-
-wtmp begins Sat Apr 24 16:45:57 2021
+osboxes  tty2                          Mon Jun 28 07:54 - down   (00:00)
+osboxes  ttyS0                         Mon Jun 28 10:52 - down   (-2:57)
 [?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ ^[[5;2~       ^[[5;2~       
+[?2004l[?2004hosboxes@osboxes:~$ sudo ioe                                                     
+sudo i
+[?2004l[sudo] password for osboxes: 
 
-[?2004l[?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ i a^H     
 
-[?2004l[?2004hosboxes@osboxes:~$ 
-[?2004l[?2004hosboxes@osboxes:~$ ifconfig 
-ifconfig 
-[?2004lenp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
-        inet6 fe80::e80e:2896:2114:731  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:d4:32:04  txqueuelen 1000  (Ethernet)
-        RX packets 33  bytes 5178 (5.1 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 81  bytes 9791 (9.7 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 140  bytes 11680 (11.6 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 140  bytes 11680 (11.6 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
+Sorry, try again.
+[sudo] password for osboxes: 
+
+
+
+Sorry, try again.
+[sudo] password for osboxes: 
+t
+t
+
+sudo: 3 incorrect password attempts
+[?2004hosboxes@osboxes:~$ t
+[?2004lt: command not found
 [?2004hosboxes@osboxes:~$ 
+[?2004l[?2004hosboxes@osboxes:~$ # vis dar senas ata vaizdas
+# vis dar senas atvaizdas
+[?2004l[?2004hosboxes@osboxes:~$ 
 [?2004l[?2004hosboxes@osboxes:~$ sudo poweroff
 sudo poweroff
 [?2004l[sudo] password for osboxes: 
@@ -432,109 +386,109 @@ Sorry, try again.
 [sudo] password for osboxes: osboxes.org
 
          Stopping [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
-         Stopping [0;1;39mCUPS Scheduler[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mAuthorization Manager[0m.
-[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Power Off Screen[0m.
-plymouth-poweroff.service
+         Stopping [0;1;39mCUPS Scheduler[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: automatic crash report generation[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mAuthorization Manager[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000/gvfs[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mLSB: automatic crash report generation[0m.
+plymouth-poweroff.service
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Power Off Screen[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000/gvfs[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mSession c2 of user gdm[0m.
          Stopping [0;1;39mUser Login Management[0m...
          Stopping [0;1;39mUser Manager for UID 126[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/126/gvfs[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/126/gvfs[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
-         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
+         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
 [[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
 [[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 126[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 126[0m.
          Stopping [0;1;39mUser Runtime Directory /run/user/126[0m...
-[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/126[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/126[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/126[0m.
 [[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 126[0m.
-         Stopping [0;1;39mPermit User Sessions[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
-         Stopping [0;1;39mNetwork Manager[0m...
-         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
          Stopping [0;1;39mWPA supplicant[0m...
 [[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mACPI Events Check[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
-[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mACPID Listen Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mACPID Listen Socket[0m.
 [[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
 [[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSocket activation for snappy daemon[0m.
 [[0;32m  OK  [0m] Closed [0;1;39mSyslog Socket[0m.
 [[0;32m  OK  [0m] Closed [0;1;39mUUID daemon activation socket[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
-         Deactivating swap [0;1;39m/dev/dis…K_VB1c4fb197-906d2779-part3[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+         Deactivating swap [0;1;39m/dev/dis…K_VB1c4fb197-906d2779-part3[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
          Stopping [0;1;39mNetwork Time Synchronization[0m...
          Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
 [[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ISK_VB1c4fb197-906d2779-part3[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ci-0000:00:0d.0-ata-1.0-part3[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…4-56f9-4f7f-9997-fe326fb6de30[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ci-0000:00:0d.0-ata-1.0-part3[0m.
 [[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…/pci-0000:00:0d.0-ata-1-part3[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/sda3[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…5-d490-4a8f-9bfe-eefa78d5b5b4[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ISK_VB1c4fb197-906d2779-part3[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…4-56f9-4f7f-9997-fe326fb6de30[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/sda3[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…5-d490-4a8f-9bfe-eefa78d5b5b4[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
          Unmounting [0;1;39m/boot/efi[0m...
          Unmounting [0;1;39m/home[0m...
          Unmounting [0;1;39mMount unit for core18, revision 1997[0m...
-         Unmounting [0;1;39mMount unit for core18, revision 2074[0m...
-         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 66[0m...
+         Unmounting [0;1;39mMount unit for core18, revision 2074[0m...
+         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 66[0m...
          Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m...
-         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1514[0m...
-         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1515[0m...
+         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1514[0m...
+         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1515[0m...
          Unmounting [0;1;39mMount unit for snap-store, revision 518[0m...
          Unmounting [0;1;39mMount unit for snap-store, revision 547[0m...
-         Unmounting [0;1;39mMount unit for snapd, revision 11588[0m...
-         Unmounting [0;1;39mMount unit for snapd, revision 12159[0m...
+         Unmounting [0;1;39mMount unit for snapd, revision 11588[0m...
+         Unmounting [0;1;39mMount unit for snapd, revision 12159[0m...
 [[0;32m  OK  [0m] Unmounted [0;1;39m/boot/efi[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2074[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 1997[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mFile System Check on /dev/disk/by-uuid/1953-3FF3[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39m/home[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 1997[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 66[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 66[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/home[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …e-c804-49d6-b108-ce009b656da5[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2074[0m.
 [[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m.
 [[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1514[0m.
 [[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1515[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 518[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 547[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 11588[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 12159[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …e-c804-49d6-b108-ce009b656da5[0m.
-[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 518[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 547[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 11588[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 12159[0m.
 [[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
 [[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mPower-Off[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPower-Off[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mPower-Off[0m.
-[  121.558354] reboot: Power down
+[   97.484499] reboot: Power down
 Connection closed by foreign host.
