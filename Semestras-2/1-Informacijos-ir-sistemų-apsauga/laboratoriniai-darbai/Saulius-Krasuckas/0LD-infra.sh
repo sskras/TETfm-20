@@ -1,6 +1,7 @@
 #!/bin/bash
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
+LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
 
 VBoxManage_vm_list () {
@@ -49,6 +50,8 @@ VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 
 
 # Prijungiu Serial UART: (valdymui be tinklo)
 VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
+VBoxManage showvminfo ${VM1} | grep UART
+echo
 
 # Įjungiu 1LD mašiną:
 echo "Įjungiu ${VM1}:"
@@ -69,6 +72,9 @@ echo
 echo "Ir spauskite <Ctrl-X>"
 read
 
+# Jungiamės prie virtualios Serial konsolės per TCP:
+screen -L telnet 127.0.0.1 23001
+cat screenlog-shutdown.0 | ansifilter > ${LOG_UART}
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
