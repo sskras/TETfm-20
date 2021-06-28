@@ -28,6 +28,8 @@ VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --base
 VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
+VBoxManage storagectl VGTU-2021-IiSA-saukrs-LDVM1 --name "SATA valdiklis" --add sata --bootable on
+VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep -i storage
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
