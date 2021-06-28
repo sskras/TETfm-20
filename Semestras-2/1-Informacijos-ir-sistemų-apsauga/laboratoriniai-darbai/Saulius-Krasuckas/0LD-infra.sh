@@ -29,6 +29,7 @@ VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/
 VBoxManage_vm_list
 # VM konfigūracija:
 VBoxManage showvminfo ${VM1}
+echo "Nauja procesoriaus ir RAM konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
 # Padidinu CPU skaičių ir RAM apimtį, tik neturiu 4ių GiB šioje fizinėje mašinoje:
 # https://help.ubuntu.com/community/Installation/SystemRequirements
