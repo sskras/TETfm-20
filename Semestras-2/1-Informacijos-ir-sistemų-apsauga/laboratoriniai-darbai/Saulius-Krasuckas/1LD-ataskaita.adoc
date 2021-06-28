@@ -29,6 +29,6 @@ Jį siūlau pavadinti „Lab. infrastruktūros ir įrankių pasiruošimas“. +
 Į jį siūlau įtraukti ir susipažinimą su neuniversitetiniais įrankiais 
 https://moodle.garsva.lt/[Moodle] bei http://www.tinklusaugumas.lt/[tinklusaugumas.lt] _wiki_.
 
-. Šiais Web-aplikacijų laikais yra nepatogu skaityti laboratorinio darbo aprašą Online. +
-Dėl to didžiąją jo dalį perkėliau į `TETfm-20` grupės GitHub repozitoriją:
+. Šiais Web-aplikacijų laikais yra nepatogu skaityti laboratorinio darbo aprašą Offline formatu. +
+Dėl to didžiąją aprašo dalį sukonspektavau ir įkėliau į `TETfm-20` grupės GitHub repozitoriją:
 https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/1LD.adoc[1LD.adoc]
