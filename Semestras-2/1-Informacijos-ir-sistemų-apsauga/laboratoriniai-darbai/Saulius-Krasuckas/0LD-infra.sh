@@ -76,7 +76,13 @@ VBoxManage showvminfo ${VM1} | grep -i storage
 echo
 
 # Prijungiu NIC 2: (OAM valdymui per tinklą)
+# Sukuriu Host-only interfeisą Host pusėje:
 VBoxManage hostonlyif create
+VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+echo "Naujas Host-only NIC:"
+VBoxManage list hostonlyifs ${HOSTONLY_IF}
+echo
+
 VBoxManage modifyvm ${VM1} --nic2 hostonly
 echo "Nauja NIC konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep NIC
