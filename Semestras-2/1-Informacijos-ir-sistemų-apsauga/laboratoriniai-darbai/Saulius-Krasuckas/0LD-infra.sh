@@ -10,9 +10,13 @@ VBoxManage_vm_list () {
 
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
-# Ubuntu 21.04 Linux OS .vdi atvaizdas:
 # cd $BASE_DIR/VMs
+
+# Ubuntu Desktop 21.04 Linux OS .vdi atvaizdas:
 # curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/21.04/64bit.7z/download
+# Ubuntu Server 20.04.2 LTS .vdi atvaizdas:
+# curl -OLv https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/20.04/20.04.2/64bit.7z/download
+
 # time 7za x 64bit.7z
 # cd -
 
@@ -84,10 +88,13 @@ echo "Iškart persijunkite čia (atgal į CLI)"
 echo "... ir spauskite <Enter>"
 echo
 echo "Prisijungsite prie Serial konsolės:"
+
 read
 
 # Jungiamės prie virtualios Serial konsolės per TCP:
 screen -L telnet 127.0.0.1 23001
+
+# Išsaugome Serial konsolės logą Plain-text formatu:
 cat screenlog.0 | ansifilter > ${LOG_UART}
 
 # direktorija VM atvaizdams saugoti:
