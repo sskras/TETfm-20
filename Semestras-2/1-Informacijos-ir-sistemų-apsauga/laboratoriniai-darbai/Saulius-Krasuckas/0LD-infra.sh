@@ -41,7 +41,7 @@ echo
 ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
 VBoxManage showvminfo ${VM1}
-VBoxManage unregistervm --delete ${VM1}
+VBoxManage unregistervm ${VM1}
 VBoxManage_vm_list
 ls -Al VMs/
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
