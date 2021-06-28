@@ -48,7 +48,7 @@ VBoxManage showvminfo ${VM1} | grep -i storage
 VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
 
 # Prijungiu Serial UART: (valdymui be tinklo)
-VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode tcpserver 23001
+VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
 
 # Įjungiu 1LD mašiną:
 echo "Įjungiu ${VM1}:"
