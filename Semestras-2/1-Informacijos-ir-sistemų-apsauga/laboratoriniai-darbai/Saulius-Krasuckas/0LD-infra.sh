@@ -26,8 +26,9 @@ cd $BASE_DIR/VMs
 #
 # Ubuntu Desktop 20.04.2 Focal Fossa (LTS) .vdi atvaizdas:
 # curl -OLJv https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.2/64bit.7z/download
-#
 
+# TODO rasti būdą kaip išsirinkti, kurį Image naudosime:
+# TODO (kol kas atstatau 64bit.7z kaip Symbolic Link)
 7za l 64bit.7z | awk '/vdi$/ {$1=$2=$3=$4=$5=""; print}' | read VDI_FILE
 echo "Ištrauktojo VDI disko pavadinimas: ${VDI_FILE}"
 # time 7za x 64bit.7z
