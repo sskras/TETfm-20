@@ -1,6 +1,7 @@
 #!/bin/bash
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
+VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
 
 VBoxManage_vm_list () {
     VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
@@ -24,23 +25,23 @@ VBoxManage showmediuminfo disk "VMs/64bit/Ubuntu 21.04 (64bit).vdi"
 VBoxManage_vm_list
 
 # Kuriu 1LD mašiną:
-VBoxManage createvm --name VGTU-2021-IiSA-saukrs-LDVM1 --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
+VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
 VBoxManage_vm_list
 # VM konfigūracija:
-VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
+VBoxManage showvminfo ${VM1}
 # Prijungiu disko valdiklį:
-VBoxManage storagectl VGTU-2021-IiSA-saukrs-LDVM1 --name "SATA valdiklis" --add sata --bootable on
-VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep -i storage
+VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
+VBoxManage showvminfo ${VM1} | grep -i storage
 # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
-VBoxManage storageattach VGTU-2021-IiSA-saukrs-LDVM1 --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
+VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium 1c4fb197-350c-4202-9588-587f79276d90
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
 echo
 ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
-VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1
-VBoxManage unregistervm --delete VGTU-2021-IiSA-saukrs-LDVM1
+VBoxManage showvminfo ${VM1}
+VBoxManage unregistervm --delete ${VM1}
 VBoxManage_vm_list
 ls -Al VMs/
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
