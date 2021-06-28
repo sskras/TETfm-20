@@ -21,6 +21,13 @@ VBoxManage hostonlyif create
 VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
 VBoxManage modifyvm ${VM1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
 ```
+VM gauna du interfeisus:
+```
+$ VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep NIC.[12]
+NIC 1:                       MAC: 0800278886FF, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 2:                       MAC: 080027E9EFCB, Attachment: Host-only Interface 'vboxnet1', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
