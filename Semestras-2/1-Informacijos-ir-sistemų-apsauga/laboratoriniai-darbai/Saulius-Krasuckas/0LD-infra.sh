@@ -76,7 +76,12 @@ VBoxManage showvminfo ${VM1} | grep -i storage
 echo
 
 # Sukuriu Host-only interfeisą Host pusėje:
-VBoxManage hostonlyif create
+VBoxManage list hostonlyifs | wc -l | read HOSTONLYIF_COUNT
+if [[ ${HOSTONLYIF_COUNT} == "0" ; do
+    echo "Nerandu Host-only interfeisų Host pusėje. Bandau sukurti:"
+    VBoxManage hostonlyif create
+    echo
+fi
 VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
 echo "Naujas Host-only NIC:"
 VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'
