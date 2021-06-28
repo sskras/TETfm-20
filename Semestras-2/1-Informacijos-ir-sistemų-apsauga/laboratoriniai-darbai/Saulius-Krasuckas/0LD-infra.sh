@@ -82,7 +82,7 @@ echo "Naujas Host-only NIC:"
 VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'
 echo
 
-# Prijungiu prie NIC 2: (OAM valdymui per tinklą)
+# Prijungiu jį prie NIC 2: (OAM valdymui per tinklą)
 VBoxManage modifyvm ${VM1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
 echo "Nauja NIC konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep NIC
