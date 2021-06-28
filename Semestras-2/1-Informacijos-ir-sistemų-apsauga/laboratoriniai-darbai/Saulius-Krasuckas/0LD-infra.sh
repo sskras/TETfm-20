@@ -52,6 +52,7 @@ echo "Įjungiu ${VM1}:"
 VBoxManage startvm ${VM1}
 # ... ir ją pristabdau Boot Loader nustatymams:
 VBoxManage controlvm ${VM1} pause
+echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc> klavišą ir kartokite jį"
 
 
 # direktorija VM atvaizdams saugoti:
