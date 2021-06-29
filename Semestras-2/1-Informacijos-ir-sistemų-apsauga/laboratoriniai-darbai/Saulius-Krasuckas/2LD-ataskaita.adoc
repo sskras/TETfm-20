@@ -117,6 +117,17 @@ Usage:
   [[-]dynamic]
   [up|down] ...
 ```
+```
+osboxes@osboxes:~$ ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+SIOCSIFADDR: Operation not permitted
+SIOCSIFFLAGS: Operation not permitted
+SIOCSIFNETMASK: Operation not permitted
+
+osboxes@osboxes:~$ sudo ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+sudo ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+[sudo] password for osboxes: 
+```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
