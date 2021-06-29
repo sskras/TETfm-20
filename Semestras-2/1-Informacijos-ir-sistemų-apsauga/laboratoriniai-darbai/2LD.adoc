@@ -41,15 +41,15 @@ Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
 
   | Kokie pasirenkami tinklo sąsajos parametrai?
   |`ifconfig --help`
-  |
-
-  | Nustatykite tinklo adresą:
-  |`ifconfig eth0 192.168.10.1x netmask 255.255.255.0`
   | Komandos parametrai:  +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _down_ – išjungia sąsają,  +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _netmask <addr>_ – tinklo kaukė,  +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _broadcast [addr]_ – tinklo plačiajuostės užklausos adressas,  +
 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _hw <type> <addr>_ – aparatinių adresų nustatymas, pvz. MAC.
+
+  | Nustatykite tinklo adresą:
+  |`ifconfig eth0 192.168.10.1x netmask 255.255.255.0`
+  |
 
   | Patikrinkite, ar pavyko sukonfigūruoti tinklo sąsają.
   |
