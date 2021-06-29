@@ -162,8 +162,8 @@ VBoxManage_start () {
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1 () {
-   #VDI_UUID="1c4fb197-350c-4202-9588-587f79276d90"
     VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | awk 'BEGIN {FS="[ )]"} /vdi/ {print $(NF-1)}' | read VDI_UUID
+    echo ${VDI_UUID}
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
@@ -172,7 +172,9 @@ VBoxManage_detach_golden_VDI_from_LDVM1 () {
     VBoxManage showvminfo ${VM1} | grep -i -e Storage -e SATA
     echo
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
+}
 
+VBoxManage_attach_golden_VDI_from_LDVM1 () {
     VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
 
     echo "SATA konfigūracija po sugrąžinimo:"
@@ -181,7 +183,7 @@ VBoxManage_detach_golden_VDI_from_LDVM1 () {
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 }
 
-VBoxManage_detach_golden_VDI_from_LDVM1
+VBoxManage_detach_golden_VDI_from_LDVM1 | read GOLDEN_VDI_UUID
 VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
