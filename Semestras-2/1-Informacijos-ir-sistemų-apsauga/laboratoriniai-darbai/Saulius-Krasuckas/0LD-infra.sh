@@ -164,7 +164,7 @@ VBoxManage startvm ${VM1}
 
 VBoxManage_detach_golden_VDI_from_LDVM1 () {
     VDI_UUID="1c4fb197-350c-4202-9588-587f79276d90"
-    VBoxManage showmediuminfo disk ${VDI_UUID} | grep "In use by VMs"
+    VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID -e "In use by VMs"
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
     VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
