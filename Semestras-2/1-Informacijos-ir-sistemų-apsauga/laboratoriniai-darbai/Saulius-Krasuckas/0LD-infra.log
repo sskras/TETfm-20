@@ -1,45 +1,37 @@
-Rastas .vdi failas: Ištrauktojo VDI disko pavadinimas: 64bit/Ubuntu 20.04.2 (64bit).vdi
-Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
-(C) 2005-2021 Oracle Corporation
-All rights reserved.
+Ištrauktojo VDI disko pavadinimas: 64bit/Ubuntu 20.04.2 (64bit).vdi
+/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas
+total 20031835
+-rw-rw-r--. 1 p p 8442085376 Jun 29 15:26 Ubuntu 20.04.2 (64bit).vdi
+-rw-rw-r--. 1 p p 8732540928 Jun 29 16:49 Ubuntu 21.04 (64bit).vdi
+-rw-rw-r--. 1 p p 3326083072 Jun 28 16:15 Ubuntu Server 20.04.2 (64bit).vdi
+UUID:           0e653235-d186-46fd-8796-556389f3b94b
+Parent UUID:    base
+State:          created
+Type:           multiattach
+Location:       /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit/Ubuntu 20.04.2 (64bit).vdi
+Storage format: VDI
+Format variant: dynamic default
+Capacity:       512000 MBytes
+Size on disk:   8051 MBytes
+Encryption:     disabled
+Property:       AllocationBlockSize=1048576
+Child UUIDs:    da4da4f4-8a0d-4c0d-92cf-ee1b6bd0c875
 
-Usage:
+Rastas .vdi failas: 0e653235-d186-46fd-8796-556389f3b94b
+UUID:           0e653235-d186-46fd-8796-556389f3b94b
+Parent UUID:    base
+Child UUIDs:    da4da4f4-8a0d-4c0d-92cf-ee1b6bd0c875
+SATA konfigūracija po atjungimo:
+Storage Controller Name (0):            SATA valdiklis
+Storage Controller Type (0):            IntelAhci
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  30
+Storage Controller Port Count (0):      30
+Storage Controller Bootable (0):        on
 
-VBoxManage showmediuminfo   [disk|dvd|floppy] <uuid|filename>
-
-
-Syntax error: Invalid parameter 'VDI'
-Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
-(C) 2005-2021 Oracle Corporation
-All rights reserved.
-
-Usage:
-
-VBoxManage showmediuminfo   [disk|dvd|floppy] <uuid|filename>
-
-
-Syntax error: Medium name or UUID required
-VBoxManage: error: No storage device attached to device slot 0 on port 0 of controller 'SATA valdiklis'
-VBoxManage: error: Details: code VBOX_E_OBJECT_NOT_FOUND (0x80bb0001), component SessionMachine, interface IMachine, callee nsISupports
-VBoxManage: error: Context: "DetachDevice(Bstr(pszCtl).raw(), port, device)" at line 403 of file VBoxManageStorageController.cpp
-Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
-(C) 2005-2021 Oracle Corporation
-All rights reserved.
-
-Usage:
-
-VBoxManage modifymedium     [disk|dvd|floppy] <uuid|filename>
-                            [--type normal|writethrough|immutable|shareable|
-                                    readonly|multiattach]
-                            [--autoreset on|off]
-                            [--property <name=[value]>]
-                            [--compact]
-                            [--resize <megabytes>|--resizebyte <bytes>]
-                            [--move <path>]
-                            [--setlocation <path>]
-                            [--description <description string>]
-
-Syntax error: Medium name or UUID required
+UUID:           0e653235-d186-46fd-8796-556389f3b94b
+Parent UUID:    base
+Child UUIDs:    da4da4f4-8a0d-4c0d-92cf-ee1b6bd0c875
 Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
 Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
 VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
@@ -50,12 +42,13 @@ lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semes
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 17:14 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 4 p p          6 Jun 29 19:14 VGTU-2021-IiSA-saukrs-LDVM1
 
-total 6
-drwx------. 2 p p    6 Jun 29 17:13 Logs
--rw-------. 1 p p 3695 Jun 29 17:14 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 3695 Jun 29 17:10 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+total 10
+drwx------. 2 p p    6 Jun 29 19:14 Logs
+drwx------. 2 p p    3 Jun 29 19:14 Snapshots
+-rw-------. 1 p p 3864 Jun 29 19:14 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 3864 Jun 29 19:14 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
@@ -98,7 +91,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-29T14:14:08.566000000)
+State:                       powered off (since 2021-06-29T16:14:53.974000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled

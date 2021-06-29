@@ -42,7 +42,7 @@ VBoxManage_get_VDI_image () {                               # Kuriu VDI atvaizd�
     # Patikrinkim disko informaciją:
     # (ši užklausa automatiškai užregistruoja .vdi failą VBox registre, jei jo ten dar nebuvo:
     VBoxManage showmediuminfo disk "VMs/${VDI_FILE}"
-    VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^UUID/ {print $2}'
+    VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^UUID/ {print $2}' | read VDI_UUID
     echo
 }
 
@@ -165,8 +165,6 @@ VBoxManage_start () {
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1 () {
-    VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | awk 'BEGIN {FS="[ )]"} /vdi/ {print $(NF-1)}' | read VDI_UUID
-    echo ${VDI_UUID}
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
@@ -186,10 +184,10 @@ VBoxManage_attach_golden_VDI_from_LDVM1 () {
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 }
 
-VBoxManage_get_VDI_image | read VDI_UUID
+VBoxManage_get_VDI_image
 echo "Rastas .vdi failas: ${VDI_UUID}"
-VBoxManage_detach_golden_VDI_from_LDVM1 | read GOLDEN_VDI_UUID
-VBoxManage modifyhd ${GOLDEN_VDI_UUID} --type multiattach
+VBoxManage_detach_golden_VDI_from_LDVM1
+VBoxManage modifyhd ${VDI_UUID} --type multiattach
 VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
