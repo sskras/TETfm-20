@@ -73,7 +73,6 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     VBoxManage storagectl ${1} --name "SATA valdiklis" --add sata --bootable on
 
     # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
-    # TODO išsitraukti UUID iš naujai išspausto .VDI ir perduoti per CLI:
     echo "Nauja SATA konfigūracija:"
     VBoxManage storageattach ${1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
     echo "Nauja diskų valdiklio konfigūracija:"
@@ -81,8 +80,11 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     echo
 
     # Sukuriu Host-only interfeisą Host pusėje:
-    VBoxManage hostonlyif create
     VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+    if [ -z "$HOSTONLY_OF" ]; then
+        VBoxManage hostonlyif create
+        VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+    fi
     # Pasirenku bet kurį iš LD2 nurodytų IP adresų: 192.168.10.x:
     VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip 192.168.10.8
     echo "Naujas Host-only NIC:"
@@ -184,14 +186,14 @@ VBoxManage_attach_VDI_to_VM () {
     VBoxManage showmediuminfo disk ${2} | grep -e UUID
 }
 
-#VBoxManage_createvm ${VM0}
+VBoxManage_createvm ${VM0}
 #VBoxManage_setup_serial_console ${VM0}
 #VBoxManage_deletevm ${VM0}
+#VBoxManage modifyvm ${VM1} --name ${VM0}
 
 VBoxManage_get_VDI_image
 VBoxManage_detach_VDI_from_VM ${VM0} ${VDI_UUID}
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
-VBoxManage modifyvm ${VM1} --name ${VM0}
 VBoxManage_createvm ${VM1}
 VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
 VBoxManage_start ${VM1}
