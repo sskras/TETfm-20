@@ -36,7 +36,7 @@ Panašu, kad su įprasta Virtualbox konfigūracija iš _Host OS_ aš _Guest OS_ 
 Pagal nutylėjimą čia VM sukuriamas `NAT` tipo virtualus tinklo interfeisas:  +
 `NIC 1:  ... Attachment: NAT ...`
 
-https://www.virtualbox.org/manual/ch06.html#networkingmodes
+https://www.virtualbox.org/manual/ch06.html#networkingmodes[VirtualBox dokumentacija]:
 
 > image::https://user-images.githubusercontent.com/74717106/123702651-11b3dd80-d86c-11eb-8254-c297b90459c3.png[]
 
