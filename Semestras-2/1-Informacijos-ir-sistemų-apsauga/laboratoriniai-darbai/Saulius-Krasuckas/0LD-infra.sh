@@ -78,6 +78,7 @@ echo
 # Sukuriu Host-only interfeisą Host pusėje:
 VBoxManage hostonlyif create
 VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+# Pasirenku bet kurį iš LD2 nurodytų IP adresų: 192.168.10.x:
 VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip 192.168.10.8
 echo "Naujas Host-only NIC:"
 VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'

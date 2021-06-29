@@ -19,6 +19,7 @@ VM konfigūracijoje https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1
 ```
 VBoxManage hostonlyif create
 VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip 192.168.10.8
 VBoxManage modifyvm ${VM1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
 ```
 VM gauna du interfeisus:
