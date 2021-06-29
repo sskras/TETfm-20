@@ -187,6 +187,7 @@ VBoxManage_attach_golden_VDI_from_LDVM1 () {
 }
 
 VBoxManage_get_VDI_image | read VDI_UUID
+echo "Rastas .vdi failas: ${VDI_UUID}"
 VBoxManage_detach_golden_VDI_from_LDVM1 | read GOLDEN_VDI_UUID
 VBoxManage modifyhd ${GOLDEN_VDI_UUID} --type multiattach
 VBoxManage_start ${VM1}
