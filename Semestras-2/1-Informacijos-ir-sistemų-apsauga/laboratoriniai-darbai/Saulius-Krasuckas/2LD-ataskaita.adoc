@@ -240,6 +240,28 @@ gateway 192.168.10.254
 Po perkrovimo tinklas jau susikonfigūruoja automatiškai.
 
 
+#### 4. Kompiuterio vardas
+
+Nustatau kompiuterio vardą:
+```
+osboxes@osboxes:~$ sudo hostname ldvm1
+[sudo] password for osboxes: 
+```
+
+Įrašau kompiuterio vardą į konfigūracinį failą:
+```
+osboxes@osboxes:~$ sudo nano /etc/hostname
+osboxes@osboxes:~$ cat /etc/hostname 
+ldvm1
+```
+
+Patikrinu -- vardas pasikeitė:
+```
+osboxes@osboxes:~$ hostname
+ldvm1
+```
+
+
 #### X. SSH serverio instaliavimas
 
 
@@ -470,6 +492,15 @@ gateway 192.168.10.254
 auto enp0s8
 ~
 ~
+```
+
+* Komandinio apvalkalo eilutėje rodomas kompiuterio vardas nepasikeičia savaime.
+Tam reikia persijungti iš naujo:
+
+```
+osboxes@osboxes:~$ su - osboxes
+Password: 
+osboxes@ldvm1:~$ 
 ```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
