@@ -173,6 +173,23 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
 ```
 
+#### 3. Statinės konfigūracijos įrašymas
+
+Prieš perkrovimą:
+```
+osboxes@osboxes:~$ ifconfig -a | grep -e ": " -e inet
+ifconfig -a | grep -e ": " -e inet
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::3790:7de6:b710:c982  prefixlen 64  scopeid 0x20<link>
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+```
+
+
 #### X. SSH serverio instaliavimas
 
 
