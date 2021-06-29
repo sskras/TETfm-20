@@ -157,13 +157,13 @@ VBoxManage_deletevm () {                                    # Naikinu VM irgi at
 }
 
 VBoxManage_start () {
-# Įjungiu 1LD mašiną:
     echo "Įjungiu ${1}:"
     VBoxManage startvm ${1}
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1 () {
     VDI_UUID="1c4fb197-350c-4202-9588-587f79276d90"
+    VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | awk 'BEGIN {FS="[ )]"} /vdi/ {print $(NF-1)}' | read VDI_UUID
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
