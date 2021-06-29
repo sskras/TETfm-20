@@ -165,14 +165,14 @@ VBoxManage_start () {
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1 () {
-    VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
+    VBoxManage showmediuminfo disk ${2} | grep -e UUID
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
-    VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
+    VBoxManage storageattach ${1} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
     echo "SATA konfigūracija po atjungimo:"
-    VBoxManage showvminfo ${VM1} | grep -i -e Storage -e SATA
+    VBoxManage showvminfo ${1} | grep -i -e Storage -e SATA
     echo
-    VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
+    VBoxManage showmediuminfo disk ${2} | grep -e UUID
 }
 
 VBoxManage_attach_VDI_to_VM () {
@@ -188,7 +188,7 @@ VBoxManage_get_VDI_image
 echo "Rastas .vdi failas: ${VDI_UUID}"
 VBoxManage_detach_golden_VDI_from_LDVM1
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
-VBoxManage_attach_VDI_to_VM
+VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
 VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
