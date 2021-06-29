@@ -166,7 +166,7 @@ VBoxManage_start_LDVM1
 VBoxManage_show_vm_details
 
     VDI_UUID="1c4fb197-350c-4202-9588-587f79276d90"
-   #VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
+    VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep "In use by VMs"
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
