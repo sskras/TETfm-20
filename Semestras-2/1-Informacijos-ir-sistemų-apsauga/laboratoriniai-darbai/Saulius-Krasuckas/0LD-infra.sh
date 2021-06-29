@@ -8,6 +8,7 @@ OAM_IP="192.168.10.8"                                       # VM Operation, Admi
 VDI_UUID=""                                                 # Laikys pagrindinio visų VMų multi-attach disko UUID
 VM0="VGTU-2021-IiSA-saukrs-LDVM0"                           # Bendros VM vardas
 VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
+VM2="VGTU-2021-IiSA-saukrs-LDVM2"                           # Antros VM vardas
 
 shopt -s lastpipe
 
@@ -195,9 +196,14 @@ VBoxManage_createvm ${VM0}
 VBoxManage_get_VDI_image
 VBoxManage_detach_VDI_from_VM ${VM0} ${VDI_UUID}
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
+
 VBoxManage_createvm ${VM1}
 VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
 VBoxManage_start ${VM1}
+
+VBoxManage_createvm ${VM2}
+VBoxManage_attach_VDI_to_VM ${VM2} ${VDI_UUID}
+
 echo "Palaukime VM išsijungimo?"
 read
 VBoxManage_show_vm_details ${VM1}
