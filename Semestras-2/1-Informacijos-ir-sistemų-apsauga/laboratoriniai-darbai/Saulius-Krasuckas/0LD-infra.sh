@@ -175,7 +175,7 @@ VBoxManage_detach_golden_VDI_from_LDVM1 () {
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 }
 
-VBoxManage_attach_golden_VDI_from_LDVM1 () {
+VBoxManage_attach_VDI_to_VM () {
     VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
 
     echo "SATA konfigūracija po sugrąžinimo:"
@@ -188,6 +188,7 @@ VBoxManage_get_VDI_image
 echo "Rastas .vdi failas: ${VDI_UUID}"
 VBoxManage_detach_golden_VDI_from_LDVM1
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
+VBoxManage_attach_VDI_to_VM
 VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
