@@ -176,18 +176,19 @@ VBoxManage_detach_VDI_from_VM () {
 }
 
 VBoxManage_attach_VDI_to_VM () {
-    VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
+    VBoxManage storageattach ${1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${2}
 
     echo "SATA konfigūracija po sugrąžinimo:"
-    VBoxManage showvminfo ${VM1} | grep -i -e Storage -e SATA
+    VBoxManage showvminfo ${1} | grep -i -e Storage -e SATA
     echo
-    VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
+    VBoxManage showmediuminfo disk ${2} | grep -e UUID
 }
 
 VBoxManage_get_VDI_image
 echo "Rastas .vdi failas: ${VDI_UUID}"
 VBoxManage_detach_VDI_from_VM ${VM1} ${VDI_UUID}
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
+#VBoxManage modifyvm ${VM1} --name ${VM0}
 VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
 VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
