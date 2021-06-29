@@ -140,9 +140,9 @@ VBoxManage_show_vm_details () {                             # VM detales rodau i
     # direktorija VM atvaizdams saugoti:
     ls -Al VMs/
     echo
-    ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
+    ls -Al VMs/${1}*
 
-    VBoxManage showvminfo ${VM1}
+    VBoxManage showvminfo ${1}
 }
 
 VBoxManage_deletevm () {                                    # Naikinu VM irgi atskiroje funkcijoje
@@ -189,10 +189,10 @@ echo "Rastas .vdi failas: ${VDI_UUID}"
 VBoxManage_detach_VDI_from_VM ${VM1} ${VDI_UUID}
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
 VBoxManage modifyvm ${VM1} --name ${VM0}
-VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
+VBoxManage_attach_VDI_to_VM ${VM0} ${VDI_UUID}
 VBoxManage_start ${VM0}
 echo "Palaukime VM išsijungimo?"
 read
-VBoxManage_show_vm_details
+VBoxManage_show_vm_details ${VM0}
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
