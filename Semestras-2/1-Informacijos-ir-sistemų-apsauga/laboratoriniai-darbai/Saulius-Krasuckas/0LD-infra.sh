@@ -3,6 +3,8 @@
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
+
+OAM_IP="192.168.10.8"                                       # VM Operation, Administration & Management IP pagal LD2
 VDI_UUID=""                                                 # Laikys pagrindinio visų VMų multi-attach disko UUID
 VM0="VGTU-2021-IiSA-saukrs-LDVM0"                           # Bendros VM vardas
 VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
@@ -85,8 +87,7 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
         VBoxManage hostonlyif create
         VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
     fi
-    # Pasirenku bet kurį iš LD2 nurodytų IP adresų: 192.168.10.x:
-    VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip 192.168.10.8
+    VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip ${OAM_IP}
     echo "Naujas Host-only NIC:"
     VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'
     echo
