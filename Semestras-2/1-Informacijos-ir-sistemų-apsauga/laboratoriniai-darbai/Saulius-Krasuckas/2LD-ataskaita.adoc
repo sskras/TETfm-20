@@ -100,7 +100,23 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX packets 240  bytes 19632 (19.6 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-
+```
+osboxes@osboxes:~$ ifconfig --help
+Usage:
+  ifconfig [-a] [-v] [-s] <interface> [[<AF>] <address>]
+  [add <address>[/<prefixlen>]]
+  [del <address>[/<prefixlen>]]
+  [[-]broadcast [<address>]]  [[-]pointopoint [<address>]]
+  [netmask <address>]  [dstaddr <address>]  [tunnel <address>]
+  [outfill <NN>] [keepalive <NN>]
+  [hw <HW> <address>]  [mtu <NN>]
+  [[-]trailers]  [[-]arp]  [[-]allmulti]
+  [multicast]  [[-]promisc]
+  [mem_start <NN>]  [io_addr <NN>]  [irq <NN>]  [media <type>]
+  [txqueuelen <NN>]
+  [[-]dynamic]
+  [up|down] ...
+```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
