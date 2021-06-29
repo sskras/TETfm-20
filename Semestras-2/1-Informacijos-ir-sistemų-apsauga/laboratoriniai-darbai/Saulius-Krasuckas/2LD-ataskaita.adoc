@@ -186,6 +186,21 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         inet6 ::1  prefixlen 128  scopeid 0x10<host>
 ```
 
+Surašau statinę konfigūraciją:
+```
+osboxes@osboxes:~$ sudo -i
+root@osboxes:~# 
+root@osboxes:~# echo 'iface enp0s8 inet static' >> /etc/network/interfaces
+root@osboxes:~# echo 'address 192.168.10.14' >> /etc/network/interfaces
+root@osboxes:~# echo 'netmask 255.255.255.0' >> /etc/network/interfaces
+root@osboxes:~# echo 'gateway 192.168.10.254' >> /etc/network/interfaces
+root@osboxes:~# cat /etc/network/interfaces
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+
 
 #### X. SSH serverio instaliavimas
 
@@ -325,6 +340,17 @@ The following NEW packages will be installed:
   ...
 Progress: [ 80%] [##############################################............]
 ```
+
+* Tekstų redaktorius `nano` nesivaldo per VirtualBox _Serial-over-Telnet_ terminalinį prisijungimą:
+
+```
+osboxes@osboxes:~$ nano /etc/network/interfaces
+(B[ Directory '/etc/network' is not writable ](B  GNU nano 4.8                /etc/network/interfaces                           
+(B^G(B^O(B^W(B^K(B^J(B^C(B^X(B^R(B^\(B^U(B^T(B^_(B Go To Line[2A[20A: ^X  ^C^X^Z`^[^[^]^C^C^C
+```
+
+Teko vietoj `nano` naudoti `echo ... >> ...`.
+
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
