@@ -134,12 +134,12 @@ VBoxManage_setup_serial_console () {
 }
 
 VBoxManage_show_vm_details () {                             # VM detales rodau irgi atskiroje funkcijoje
-# direktorija VM atvaizdams saugoti:
-ls -Al VMs/
-echo
-ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
+    # direktorija VM atvaizdams saugoti:
+    ls -Al VMs/
+    echo
+    ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
-VBoxManage showvminfo ${VM1}
+    VBoxManage showvminfo ${VM1}
 }
 
 VBoxManage_deletevm () {                                    # Naikinu VM irgi atskiroje funkcijoje
