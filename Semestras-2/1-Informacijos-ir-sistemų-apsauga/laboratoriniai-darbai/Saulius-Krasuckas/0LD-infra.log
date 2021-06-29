@@ -1,35 +1,18 @@
 Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
 Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
 VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
-
-VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
-Kartokite <Esc> paspaudimus be perstojo.
-Kai pasirodys GRUB meniu, spauskite <e>
-Eikite žemyn iki eilutės:
-        linux        /boot/vmlinuz-...
-
-Spauskite <End> ir gale prirašykite:
-
-... console=ttyS0,115200n8
-
-VM paspauskite <Ctrl-X>
-
-Iškart persijunkite čia (atgal į CLI)
-... ir spauskite <Enter>
-
-Prisijungsite prie Serial konsolės:
 total 4759592
 drwx------. 2 p p          5 Mar  7 01:29 64bit
 lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 11:56 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 29 13:29 VGTU-2021-IiSA-saukrs-LDVM1
 
-total 8
-drwx------. 2 p p    4 Jun 29 12:19 Logs
--rw-------. 1 p p 3570 Jun 29 11:56 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 2721 Jun 29 11:56 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+total 9
+drwx------. 2 p p    5 Jun 29 13:57 Logs
+-rw-------. 1 p p 3570 Jun 29 13:29 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 3570 Jun 29 11:56 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
@@ -72,7 +55,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       running (since 2021-06-29T09:19:12.799000000)
+State:                       running (since 2021-06-29T10:57:35.159000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -118,7 +101,7 @@ Audio capture:               disabled
 Clipboard Mode:              disabled
 Drag and drop Mode:          disabled
 Session name:                GUI/Qt
-Video mode:                  800x600x32 at 0,0 enabled
+Video mode:                  720x400x0 at 0,0 enabled
 VRDE:                        disabled
 OHCI USB:                    disabled
 EHCI USB:                    disabled
@@ -155,15 +138,11 @@ Capture options:
 Guest:
 
 Configured memory balloon size: 0MB
-OS type:                     Linux26_64
-Additions run level:         2
-Additions version:           6.0.0 r127566
+OS type:                     Ubuntu_64
+Additions run level:         0
 
 Guest Facilities:
 
-Facility "VirtualBox Base Driver": active/running (last update: 2021/06/29 09:20:03 UTC)
-Facility "VirtualBox System Service": active/running (last update: 2021/06/29 09:20:15 UTC)
-Facility "Seamless Mode": not active (last update: 2021/06/29 09:20:03 UTC)
-Facility "Graphics Mode": active/running (last update: 2021/06/29 09:20:51 UTC)
+No active facilities.
 
 

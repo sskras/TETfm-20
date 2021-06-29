@@ -156,10 +156,13 @@ VBoxManage_deletevm () {                                    # Naikinu VM irgi at
     # Paliekame bendrą disko .vdi atvaizdą (kitoje direktorijoje) kaip etaloninį
 }
 
+VBoxManage_start_LDVM1 () {
 # Įjungiu 1LD mašiną:
 echo "Įjungiu ${VM1}:"
 VBoxManage startvm ${VM1}
+}
 
+VBoxManage_start_LDVM1
 VBoxManage_show_vm_details
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
