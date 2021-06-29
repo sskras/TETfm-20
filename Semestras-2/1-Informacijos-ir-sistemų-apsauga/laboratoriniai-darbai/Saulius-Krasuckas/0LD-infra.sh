@@ -188,22 +188,22 @@ VBoxManage_attach_VDI_to_VM () {
     VBoxManage showmediuminfo disk ${2} | grep -e UUID
 }
 
-VBoxManage_createvm ${VM0}
+#VBoxManage_createvm ${VM0}
 #VBoxManage_setup_serial_console ${VM0}
 #VBoxManage_deletevm ${VM0}
 #VBoxManage modifyvm ${VM1} --name ${VM0}
 
 VBoxManage_get_VDI_image
-VBoxManage_detach_VDI_from_VM ${VM0} ${VDI_UUID}
-VBoxManage modifyhd ${VDI_UUID} --type multiattach
+#VBoxManage_detach_VDI_from_VM ${VM0} ${VDI_UUID}
+#VBoxManage modifyhd ${VDI_UUID} --type multiattach
 
 VBoxManage_createvm ${VM1}
 VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
-VBoxManage_start ${VM1}
 
 VBoxManage_createvm ${VM2}
 VBoxManage_attach_VDI_to_VM ${VM2} ${VDI_UUID}
 
+VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
 VBoxManage_show_vm_details ${VM1}
