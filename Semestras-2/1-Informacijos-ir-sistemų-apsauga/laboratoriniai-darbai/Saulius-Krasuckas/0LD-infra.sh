@@ -79,20 +79,17 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     VBoxManage showvminfo ${1} | grep -i storage
     echo
 
-    set -x
     # Sukuriu Host-only interfeisą Host pusėje:
     VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
-    if [ -z "$HOSTONLY_OF" ]; then
+    if [ -z "$HOSTONLY_IF" ]; then
         VBoxManage hostonlyif create
         VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
-        set +x
     fi
     # Pasirenku bet kurį iš LD2 nurodytų IP adresų: 192.168.10.x:
     VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip 192.168.10.8
     echo "Naujas Host-only NIC:"
     VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START && $0=="" {START=0} START {print}'
     echo
-    set +x
 
     # Prijungiu jį prie NIC 2: (OAM valdymui per tinklą)
     VBoxManage modifyvm ${1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
