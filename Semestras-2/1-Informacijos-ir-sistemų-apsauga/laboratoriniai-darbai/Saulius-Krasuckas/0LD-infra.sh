@@ -103,6 +103,8 @@ echo
 # Įjungiu 1LD mašiną:
 echo "Įjungiu ${VM1}:"
 VBoxManage startvm ${VM1}
+
+VBoxManage_setup_serial_console () {
 # ... ir ją pristabdau Boot Loader nustatymams:
 VBoxManage controlvm ${VM1} pause
 echo
@@ -133,6 +135,7 @@ screen -L telnet 127.0.0.1 23001
 
 # Išsaugome Serial konsolės logą Plain-text formatu:
 cat screenlog.0 | ansifilter > ${LOG_UART}
+}
 
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
