@@ -207,7 +207,6 @@ root@osboxes:~# ifup enp0s8
 root@osboxes:~# logout
 
 osboxes@osboxes:~$ ifconfig enp0s8
-ifconfig enp0s8
 enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
         ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
@@ -216,6 +215,18 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX packets 343  bytes 48317 (48.3 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
+
+Po perkrovimo vis tiek nesusikonfigūruoja:
+```
+osboxes@osboxes:~$ ifconfig enp0s8
+enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
 
 
 #### X. SSH serverio instaliavimas
@@ -421,6 +432,34 @@ osboxes@osboxes:~$ nano /etc/network/interfaces
 
 ** Teko vietoj `nano` naudoti `echo ... >> ...`.
 
+* `vi` pagal nutylėjimą man veikia nekorektiškai:
+
+** Jei atsidarau failą, rodo tvarkingai:
+
+```
+root@osboxes:~# vi /etc/network/interfaces
+face enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+auto enp0s8
+~
+~
+~
+```
+
+** Bet jei paspaudžiu <Shift-O> (_Open new line_), tekstas susigadina:
+
+```
+[>4;menp0s8 inet static
+
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+auto enp0s8
+~
+~
+```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
