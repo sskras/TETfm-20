@@ -7,12 +7,13 @@ VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
 
 shopt -s lastpipe
 
+exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
+
 VBoxManage_vm_list () {
     VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
 }
 
-exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
-
+VBoxManage_createvm () {                                    # Kuriu VM atskiroje funkcijoje
 cd $BASE_DIR/VMs
 
 # Šį failą reikėtų automatiškai pervadinti, kad netrukdytų curl raktui -J:
@@ -95,6 +96,9 @@ VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
 echo "Nauja UART konfigūracija:"
 VBoxManage showvminfo ${VM1} | grep UART
 echo
+}
+
+# Ir jos dabar nebekviečiu, nes VM jau puikiai sudėliota
 
 # Įjungiu 1LD mašiną:
 echo "Įjungiu ${VM1}:"
@@ -137,6 +141,7 @@ ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
 VBoxManage showvminfo ${VM1}
 
+VBoxManage_deletevm () {                                    # Naikinu VM irgi atskiroje funkcijoje
 echo "Trinam ${VM1} ?"
 read
 
@@ -146,4 +151,5 @@ VBoxManage hostonlyif remove ${HOSTONLY_IF}
 rm -rv ${BASE_DIR}/VMs/${VM1}
 VBoxManage_vm_list
 ls -Al VMs/
+}
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
