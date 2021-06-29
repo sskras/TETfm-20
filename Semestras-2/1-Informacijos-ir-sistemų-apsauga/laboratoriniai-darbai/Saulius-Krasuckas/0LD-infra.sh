@@ -98,12 +98,7 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     VBoxManage showvminfo ${VM1} | grep UART
     echo
 }
-
 # Ir jos dabar nebekviečiu, nes VM jau puikiai sudėliota
-
-# Įjungiu 1LD mašiną:
-echo "Įjungiu ${VM1}:"
-VBoxManage startvm ${VM1}
 
 VBoxManage_setup_serial_console () {
     # ... ir ją pristabdau Boot Loader nustatymams:
@@ -138,12 +133,14 @@ VBoxManage_setup_serial_console () {
     cat screenlog.0 | ansifilter > ${LOG_UART}
 }
 
+VBoxManage_show_vm_details () {                             # VM detales rodau irgi atskiroje funkcijoje
 # direktorija VM atvaizdams saugoti:
 ls -Al VMs/
 echo
 ls -Al VMs/VGTU-2021-IiSA-saukrs-LDVM*
 
 VBoxManage showvminfo ${VM1}
+}
 
 VBoxManage_deletevm () {                                    # Naikinu VM irgi atskiroje funkcijoje
     echo "Trinam ${VM1} ?"
@@ -156,4 +153,11 @@ VBoxManage_deletevm () {                                    # Naikinu VM irgi at
     VBoxManage_vm_list
     ls -Al VMs/
 }
+
+# Įjungiu 1LD mašiną:
+echo "Įjungiu ${VM1}:"
+VBoxManage startvm ${VM1}
+
+VBoxManage_show_vm_details
+
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
