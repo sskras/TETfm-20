@@ -216,7 +216,7 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-Po perkrovimo vis tiek nesusikonfigūruoja:
+Po perkrovimo tinklas vis tiek nesusikonfigūruoja:
 ```
 osboxes@osboxes:~$ ifconfig enp0s8
 enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
@@ -227,6 +227,17 @@ enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
+Papildau konfigūraciją:
+```
+root@osboxes:~# cat /etc/network/interfaces
+auto enp0s8
+
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+Po perkrovimo tinklas jau susikonfigūruoja automatiškai.
 
 
 #### X. SSH serverio instaliavimas
