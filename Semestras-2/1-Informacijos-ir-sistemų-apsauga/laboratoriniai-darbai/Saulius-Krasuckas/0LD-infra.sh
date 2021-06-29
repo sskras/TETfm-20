@@ -166,7 +166,7 @@ VBoxManage startvm ${VM1}
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep "In use by VMs"
 
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
-   #VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
+    VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
     echo "SATA konfigūracija:"
     VBoxManage showvminfo ${VM1} | grep -i -e Storage -e SATA
     echo
