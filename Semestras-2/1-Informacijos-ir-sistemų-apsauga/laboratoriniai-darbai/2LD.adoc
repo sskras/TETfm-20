@@ -102,7 +102,15 @@ gateway 192.168.10.254
   |`hostname <kompiuterio_vardas>`
   |
 
-  | Toks nustatymas pekrovus kompiuterį neišliks, todėl kompiuterio vardą įrašykite į failą `/etc/hostname`:
+  | Toks nustatymas pekrovus kompiuterį neišliks, todėl kompiuterio vardą įrašykite į failą:
+  |`/etc/hostname`
+  |
+  
+  | Patikrinkite, ar vardas pasikeitė:
+  |`hostname`
+  |
+  
+  | Nustatykite vardų išsprendimo tarnybines stotis redaguodami `/etc/resolv.conf`:
  a|
 ```
 nameserver 193.219.146.19
