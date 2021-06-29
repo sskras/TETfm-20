@@ -165,9 +165,11 @@ VBoxManage startvm ${VM1}
 VBoxManage_start_LDVM1
 VBoxManage_show_vm_details
 
+    VBoxManage showmediuminfo disk ${VDI_UUID} | grep "In use by VMs"
+
     # Nuo valdiklio atjungiu .VDI atvaizdą/diską:
     VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
     echo "SATA konfigūracija:"
-    VBoxManage showvminfo ${VM1} | grep -i storage
+    VBoxManage showvminfo ${VM1} | grep -i -e Storage -e SATA
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
