@@ -185,7 +185,6 @@ VBoxManage_attach_VDI_to_VM () {
 }
 
 VBoxManage_get_VDI_image
-echo "Rastas .vdi failas: ${VDI_UUID}"
 VBoxManage_detach_VDI_from_VM ${VM1} ${VDI_UUID}
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
 VBoxManage modifyvm ${VM1} --name ${VM0}
