@@ -52,7 +52,7 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     echo
 
     # Kuriu 1LD mašiną:
-    VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
+    VBoxManage createvm --name ${1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
     VBoxManage_vm_list
     echo
 
@@ -189,13 +189,14 @@ VBoxManage_attach_VDI_to_VM () {
 #VBoxManage_deletevm ${VM0}
 
 VBoxManage_get_VDI_image
-VBoxManage_detach_VDI_from_VM ${VM1} ${VDI_UUID}
+VBoxManage_detach_VDI_from_VM ${VM0} ${VDI_UUID}
 VBoxManage modifyhd ${VDI_UUID} --type multiattach
 VBoxManage modifyvm ${VM1} --name ${VM0}
-VBoxManage_attach_VDI_to_VM ${VM0} ${VDI_UUID}
-VBoxManage_start ${VM0}
+VBoxManage_createvm ${VM1}
+VBoxManage_attach_VDI_to_VM ${VM1} ${VDI_UUID}
+VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
-VBoxManage_show_vm_details ${VM0}
+VBoxManage_show_vm_details ${VM1}
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
