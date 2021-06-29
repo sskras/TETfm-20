@@ -7,7 +7,7 @@
 
 #### 0. Infrastruktūros paruošimas
 
-##### Bendra eiga
+##### 1. Bendra eiga
 
 Laboratorinei infrastruktūrai paruošti pasirinkau VirtualBox virtualizavimo įrankį (hipervizorių).
 Host kompiuteris bus senokas `HP EliteBook 8460p` laptopas:
@@ -30,7 +30,7 @@ Ir galiausiai jungiuosi į _Guest_ konsolę iš _Host_ kompiuterio per `telnet`:
 telnet 127.0.0.1 23001
 ```
 
-#### NIC konfigūravimas Host pusėje (NAT + Hostonly)
+##### 2. NIC konfigūravimas Host pusėje (NAT + Hostonly)
 
 Panašu, kad su įprasta Virtualbox konfigūracija iš _Host OS_ aš _Guest OS_ nepasieksiu paprastai ir saugiai.  +
 Pagal nutylėjimą čia VM sukuriamas `NAT` tipo virtualus tinklo interfeisas:  +
