@@ -29,44 +29,13 @@ VBoxManage showmediuminfo   [disk|dvd|floppy] <uuid|filename>
 
 
 Syntax error: Medium name or UUID required
-Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
-(C) 2005-2021 Oracle Corporation
-All rights reserved.
-
-Usage:
-
-VBoxManage storageattach    <uuid|vmname>
-                            --storagectl <name>
-                            [--port <number>]
-                            [--device <number>]
-                            [--type dvddrive|hdd|fdd]
-                            [--medium none|emptydrive|additions|
-                                      <uuid|filename>|host:<drive>|iscsi]
-                            [--mtype normal|writethrough|immutable|shareable|
-                                     readonly|multiattach]
-                            [--comment <text>]
-                            [--setuuid <uuid>]
-                            [--setparentuuid <uuid>]
-                            [--passthrough on|off]
-                            [--tempeject on|off]
-                            [--nonrotational on|off]
-                            [--discard on|off]
-                            [--hotpluggable on|off]
-                            [--bandwidthgroup <name>]
-                            [--forceunmount]
-                            [--server <name>|<ip>]
-                            [--target <target>]
-                            [--tport <port>]
-                            [--lun <lun>]
-                            [--encodedlun <lun>]
-                            [--username <username>]
-                            [--password <password>]
-                            [--passwordfile <file>]
-                            [--initiator <initiator>]
-                            [--intnet]
-
-VBoxManage: error: Invalid parameter 'SATA valdiklis'
+VBoxManage: error: Could not find a registered machine with UUID {0e653235-d186-46fd-8796-556389f3b94b}
+VBoxManage: error: Details: code VBOX_E_OBJECT_NOT_FOUND (0x80bb0001), component VirtualBoxWrap, interface IVirtualBox, callee nsISupports
+VBoxManage: error: Context: "FindMachine(Bstr(a->argv[0]).raw(), machine.asOutParam())" at line 335 of file VBoxManageStorageController.cpp
 SATA konfigūracija po atjungimo:
+VBoxManage: error: Could not find a registered machine with UUID {0e653235-d186-46fd-8796-556389f3b94b}
+VBoxManage: error: Details: code VBOX_E_OBJECT_NOT_FOUND (0x80bb0001), component VirtualBoxWrap, interface IVirtualBox, callee nsISupports
+VBoxManage: error: Context: "FindMachine(Bstr(VMNameOrUuid).raw(), machine.asOutParam())" at line 2727 of file VBoxManageInfo.cpp
 
 Oracle VM VirtualBox Command Line Management Interface Version 6.1.22_RPMFusion
 (C) 2005-2021 Oracle Corporation
@@ -100,13 +69,13 @@ lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semes
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 4 p p          6 Jun 29 19:32 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 4 p p          6 Jun 29 19:38 VGTU-2021-IiSA-saukrs-LDVM1
 
-total 3
-drwx------. 2 p p    6 Jun 29 19:31 Logs
+total 8
+drwx------. 2 p p    6 Jun 29 19:38 Logs
 drwx------. 2 p p    4 Jun 29 19:19 Snapshots
--rw-------. 1 p p 4208 Jun 29 19:32 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 4208 Jun 29 19:32 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+-rw-------. 1 p p 4208 Jun 29 19:38 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 4208 Jun 29 19:38 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
@@ -149,7 +118,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-29T16:32:07.013000000)
+State:                       powered off (since 2021-06-29T16:38:19.583000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
