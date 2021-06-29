@@ -184,6 +184,7 @@ VBoxManage_attach_golden_VDI_from_LDVM1 () {
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1 | read GOLDEN_VDI_UUID
+VBoxManage modifyhd ${GOLDEN_VDI_UUID} --type multiattach
 VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
