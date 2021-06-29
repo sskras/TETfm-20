@@ -7,12 +7,12 @@ lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semes
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 15:48 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 29 15:56 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 9
-drwx------. 2 p p    6 Jun 29 15:54 Logs
--rw-------. 1 p p 3438 Jun 29 15:48 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 3449 Jun 29 15:48 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+drwx------. 2 p p    6 Jun 29 15:57 Logs
+-rw-------. 1 p p 3438 Jun 29 15:56 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 3438 Jun 29 15:48 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
@@ -55,7 +55,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       running (since 2021-06-29T12:54:33.101000000)
+State:                       running (since 2021-06-29T12:57:16.231000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
