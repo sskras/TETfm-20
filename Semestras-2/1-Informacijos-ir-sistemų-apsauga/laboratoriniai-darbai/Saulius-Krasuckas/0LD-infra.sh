@@ -3,6 +3,7 @@
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
+VDI_UUID=""                                                 # Laikys pagrindinio visų VMų multi-attach disko UUID
 VM0="VGTU-2021-IiSA-saukrs-LDVM0"                           # Bendros VM vardas
 VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
 
@@ -14,7 +15,7 @@ VBoxManage_vm_list () {
     VBoxManage list vms | awk '{GUID=$NF; $NF=""; sub(/ $/, ""); print GUID" "$0}'
 }
 
-VBoxManage_createvm () {                                    # Kuriu VM atskiroje funkcijoje
+VBoxManage_get_VDI_image () {                               # Kuriu VDI atvaizdą atskiroje funkcijoje
     cd $BASE_DIR/VMs
 
     # Šį failą reikėtų automatiškai pervadinti, kad netrukdytų curl raktui -J:
@@ -41,9 +42,11 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     # Patikrinkim disko informaciją:
     # (ši užklausa automatiškai užregistruoja .vdi failą VBox registre, jei jo ten dar nebuvo:
     VBoxManage showmediuminfo disk "VMs/${VDI_FILE}"
-    VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^UUID/ {print $2}' | read VDI_UUID
+    VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^UUID/ {print $2}'
     echo
+}
 
+VBoxManage_createvm () {                                    # Kuriu VM atskiroje funkcijoje
     # VM sąrašas:
     VBoxManage_vm_list
     echo
@@ -183,6 +186,7 @@ VBoxManage_attach_golden_VDI_from_LDVM1 () {
     VBoxManage showmediuminfo disk ${VDI_UUID} | grep -e UUID
 }
 
+VBoxManage_get_VDI_image | read VDI_UUID
 VBoxManage_detach_golden_VDI_from_LDVM1 | read GOLDEN_VDI_UUID
 VBoxManage modifyhd ${GOLDEN_VDI_UUID} --type multiattach
 VBoxManage_start ${VM1}
