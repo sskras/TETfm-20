@@ -110,7 +110,7 @@ echo "        linux        /boot/vmlinuz-..."
 echo
 echo "Spauskite <End> ir gale prirašykite:"
 echo
-echo "... console=tty0 console=ttyS0,115200n8"
+echo "... console=ttyS0,115200n8"
 echo
 echo "VM paspauskite <Ctrl-X>"
 echo
