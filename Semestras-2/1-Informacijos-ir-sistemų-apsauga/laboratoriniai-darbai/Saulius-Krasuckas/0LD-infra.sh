@@ -204,8 +204,6 @@ VBoxManage_createvm ${VM2}
 VBoxManage_attach_VDI_to_VM ${VM2} ${VDI_UUID}
 
 VBoxManage_start ${VM1}
-echo "Palaukime VM išsijungimo?"
-read
 VBoxManage_show_vm_details ${VM1}
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą

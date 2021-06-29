@@ -22,21 +22,21 @@ Property:       AllocationBlockSize=1048576
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
 
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM1' is created and registered.
-UUID: 5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b
+UUID: 5a807696-4e51-4257-8a08-053f27edcd57
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b} "VGTU-2021-IiSA-saukrs-LDVM1"
+{5a807696-4e51-4257-8a08-053f27edcd57} "VGTU-2021-IiSA-saukrs-LDVM1"
 
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b
+UUID:                        5a807696-4e51-4257-8a08-053f27edcd57
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b
+Hardware UUID:               5a807696-4e51-4257-8a08-053f27edcd57
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -71,7 +71,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-29T20:03:39.431000000)
+State:                       powered off (since 2021-06-29T22:11:07.302000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -87,7 +87,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 080027F7161F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027170EBC, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -167,9 +167,9 @@ Status:          Up
 VBoxNetworkName: HostInterfaceNetworking-vboxnet0
 
 Nauja NIC konfigūracija:
-NIC 1:                       MAC: 080027F7161F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027170EBC, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 08002728DEC2, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 080027A43EB8, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -190,33 +190,33 @@ Storage Controller Instance Number (0): 0
 Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
-SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots/{bf4cc8b5-7f19-4cd1-b292-2be05c807781}.vdi (UUID: bf4cc8b5-7f19-4cd1-b292-2be05c807781)
+SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots/{b7b7aaba-4f5e-48aa-95cf-9679265d4423}.vdi (UUID: b7b7aaba-4f5e-48aa-95cf-9679265d4423)
 
 UUID:           0e653235-d186-46fd-8796-556389f3b94b
 Parent UUID:    base
-Child UUIDs:    bf4cc8b5-7f19-4cd1-b292-2be05c807781
+Child UUIDs:    b7b7aaba-4f5e-48aa-95cf-9679265d4423
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b} "VGTU-2021-IiSA-saukrs-LDVM1"
+{5a807696-4e51-4257-8a08-053f27edcd57} "VGTU-2021-IiSA-saukrs-LDVM1"
 
 Virtual machine 'VGTU-2021-IiSA-saukrs-LDVM2' is created and registered.
-UUID: a6599cb4-4210-4643-bf61-6060473fbb84
+UUID: 915e4f83-4416-4345-b7ca-8e0dd31ce77c
 Settings file: '/home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM2/VGTU-2021-IiSA-saukrs-LDVM2.vbox'
 {981e5981-7416-437e-ad44-382f0b28f3d2} "ReOS CORE-11440 test"
 {0953c108-02fa-434f-b550-79d3af0c9a91} "<inaccessible>"
 {6d7ca61d-6bc0-46ff-a119-8eea7a7d517e} "ping"
-{5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b} "VGTU-2021-IiSA-saukrs-LDVM1"
-{a6599cb4-4210-4643-bf61-6060473fbb84} "VGTU-2021-IiSA-saukrs-LDVM2"
+{5a807696-4e51-4257-8a08-053f27edcd57} "VGTU-2021-IiSA-saukrs-LDVM1"
+{915e4f83-4416-4345-b7ca-8e0dd31ce77c} "VGTU-2021-IiSA-saukrs-LDVM2"
 
 Name:                        VGTU-2021-IiSA-saukrs-LDVM2
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        a6599cb4-4210-4643-bf61-6060473fbb84
+UUID:                        915e4f83-4416-4345-b7ca-8e0dd31ce77c
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM2/VGTU-2021-IiSA-saukrs-LDVM2.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM2/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM2/Logs
-Hardware UUID:               a6599cb4-4210-4643-bf61-6060473fbb84
+Hardware UUID:               915e4f83-4416-4345-b7ca-8e0dd31ce77c
 Memory size:                 128MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -251,7 +251,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-29T20:03:41.661000000)
+State:                       powered off (since 2021-06-29T22:11:09.681000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -267,7 +267,7 @@ Autostart Enabled:           disabled
 Autostart Delay:             0
 Default Frontend:            
 VM process priority:         default
-NIC 1:                       MAC: 080027CBD0F5, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027E0AC62, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -347,9 +347,9 @@ Status:          Up
 VBoxNetworkName: HostInterfaceNetworking-vboxnet0
 
 Nauja NIC konfigūracija:
-NIC 1:                       MAC: 080027CBD0F5, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027E0AC62, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 080027045483, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 08002717425D, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -370,37 +370,36 @@ Storage Controller Instance Number (0): 0
 Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
-SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM2/Snapshots/{1673bc83-41c9-43c7-94c1-de153e145b43}.vdi (UUID: 1673bc83-41c9-43c7-94c1-de153e145b43)
+SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM2/Snapshots/{4caec8cd-005f-4b95-b82b-68707b4ab1bb}.vdi (UUID: 4caec8cd-005f-4b95-b82b-68707b4ab1bb)
 
 UUID:           0e653235-d186-46fd-8796-556389f3b94b
 Parent UUID:    base
-Child UUIDs:    bf4cc8b5-7f19-4cd1-b292-2be05c807781
+Child UUIDs:    b7b7aaba-4f5e-48aa-95cf-9679265d4423
 Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
 Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
 VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
-Palaukime VM išsijungimo?
-total 4759595
+total 4759594
 drwx------. 2 p p          6 Jun 29 21:49 64bit
 lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 4 p p          6 Jun 29 23:15 VGTU-2021-IiSA-saukrs-LDVM1
-drwx------. 3 p p          5 Jun 29 23:03 VGTU-2021-IiSA-saukrs-LDVM2
+drwx------. 4 p p          6 Jun 30 01:11 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 30 01:11 VGTU-2021-IiSA-saukrs-LDVM2
 
 total 2
-drwx------. 2 p p    3 Jun 29 23:03 Logs
-drwx------. 2 p p    3 Jun 29 23:03 Snapshots
--rw-------. 1 p p 4029 Jun 29 23:15 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 3180 Jun 29 23:15 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+drwx------. 2 p p    3 Jun 30 01:11 Logs
+drwx------. 2 p p    3 Jun 30 01:11 Snapshots
+-rw-------. 1 p p 2896 Jun 30 01:11 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 2606 Jun 30 01:11 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
-UUID:                        5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b
+UUID:                        5a807696-4e51-4257-8a08-053f27edcd57
 Config file:                 /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/VGTU-2021-IiSA-saukrs-LDVM1.vbox
 Snapshot folder:             /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots
 Log folder:                  /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Logs
-Hardware UUID:               5b6b84b8-182f-4344-a0a0-3c5bd34d4c7b
+Hardware UUID:               5a807696-4e51-4257-8a08-053f27edcd57
 Memory size:                 2048MB
 Page Fusion:                 disabled
 VRAM size:                   8MB
@@ -435,7 +434,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       powered off (since 2021-06-29T20:15:01.911000000)
+State:                       running (since 2021-06-29T22:11:13.278000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -457,10 +456,10 @@ Storage Controller Instance Number (0): 0
 Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
-SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots/{bf4cc8b5-7f19-4cd1-b292-2be05c807781}.vdi (UUID: bf4cc8b5-7f19-4cd1-b292-2be05c807781)
-NIC 1:                       MAC: 080027F7161F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+SATA valdiklis (0, 0): /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/VGTU-2021-IiSA-saukrs-LDVM1/Snapshots/{b7b7aaba-4f5e-48aa-95cf-9679265d4423}.vdi (UUID: b7b7aaba-4f5e-48aa-95cf-9679265d4423)
+NIC 1:                       MAC: 080027170EBC, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 08002728DEC2, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 080027A43EB8, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 3:                       disabled
 NIC 4:                       disabled
 NIC 5:                       disabled
@@ -480,6 +479,8 @@ Audio playback:              disabled
 Audio capture:               disabled
 Clipboard Mode:              disabled
 Drag and drop Mode:          disabled
+Session name:                GUI/Qt
+Video mode:                  720x400x0 at 0,0 enabled
 VRDE:                        disabled
 OHCI USB:                    disabled
 EHCI USB:                    disabled
@@ -489,9 +490,20 @@ USB Device Filters:
 
 <none>
 
+Available remote USB devices:
+
+<none>
+
+Currently Attached USB Devices:
+
+<none>
+
 Bandwidth groups:  <none>
 
 Shared folders:<none>
+
+VRDE Connection:             not active
+Clients so far:              0
 
 Capturing:                   not active
 Capture audio:               not active
@@ -505,5 +517,11 @@ Capture options:
 Guest:
 
 Configured memory balloon size: 0MB
+OS type:                     Ubuntu_64
+Additions run level:         0
+
+Guest Facilities:
+
+No active facilities.
 
 
