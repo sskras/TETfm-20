@@ -52,32 +52,32 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     echo
 
     # Kuriu 1LD mašiną:
-    VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
+    VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder $BASE_DIR/VMs/ --register
     VBoxManage_vm_list
     echo
 
     # VM konfigūracija:
-    VBoxManage showvminfo ${VM1}
+    VBoxManage showvminfo ${1}
     echo "Sena procesoriaus ir RAM konfigūracija:"
-    VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+    VBoxManage showvminfo ${1} | grep -e CPUs -e Memory
     echo
 
     # Padidinu CPU skaičių ir RAM apimtį, tik neturiu 4ių GiB šioje fizinėje mašinoje:
     # https://help.ubuntu.com/community/Installation/SystemRequirements
-    VBoxManage modifyvm ${VM1} --cpus 2 --memory 2048
+    VBoxManage modifyvm ${1} --cpus 2 --memory 2048
     echo "Nauja procesoriaus ir RAM konfigūracija:"
-    VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+    VBoxManage showvminfo ${1} | grep -e CPUs -e Memory
     echo
 
     # Prijungiu disko valdiklį:
-    VBoxManage storagectl ${VM1} --name "SATA valdiklis" --add sata --bootable on
+    VBoxManage storagectl ${1} --name "SATA valdiklis" --add sata --bootable on
 
     # Prie valdiklio prijungiu išspaustą .VDI kaip naują diską:
     # TODO išsitraukti UUID iš naujai išspausto .VDI ir perduoti per CLI:
     echo "Nauja SATA konfigūracija:"
-    VBoxManage storageattach ${VM1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
+    VBoxManage storageattach ${1} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
     echo "Nauja diskų valdiklio konfigūracija:"
-    VBoxManage showvminfo ${VM1} | grep -i storage
+    VBoxManage showvminfo ${1} | grep -i storage
     echo
 
     # Sukuriu Host-only interfeisą Host pusėje:
@@ -90,22 +90,22 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
     echo
 
     # Prijungiu jį prie NIC 2: (OAM valdymui per tinklą)
-    VBoxManage modifyvm ${VM1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
+    VBoxManage modifyvm ${1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
     echo "Nauja NIC konfigūracija:"
-    VBoxManage showvminfo ${VM1} | grep NIC
+    VBoxManage showvminfo ${1} | grep NIC
     echo
 
     # Prijungiu Serial UART: (valdymui be tinklo)
-    VBoxManage modifyvm ${VM1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
+    VBoxManage modifyvm ${1} --uart1 "0x3f8" 4 --uartmode1 tcpserver 23001
     echo "Nauja UART konfigūracija:"
-    VBoxManage showvminfo ${VM1} | grep UART
+    VBoxManage showvminfo ${1} | grep UART
     echo
 }
 # Ir jos dabar nebekviečiu, nes VM jau puikiai sudėliota
 
 VBoxManage_setup_serial_console () {
     # ... ir ją pristabdau Boot Loader nustatymams:
-    VBoxManage controlvm ${VM1} pause
+    VBoxManage controlvm ${1} pause
     echo
     echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>"
     echo "Kartokite <Esc> paspaudimus be perstojo."
@@ -146,13 +146,13 @@ VBoxManage_show_vm_details () {                             # VM detales rodau i
 }
 
 VBoxManage_deletevm () {                                    # Naikinu VM irgi atskiroje funkcijoje
-    echo "Trinam ${VM1} ?"
+    echo "Trinam ${1} ?"
     read
 
-    VBoxManage unregistervm ${VM1}
+    VBoxManage unregistervm ${1}
     VBoxManage hostonlyif remove ${HOSTONLY_IF}
     # Išvalau individualius VM likučius:
-    rm -rv ${BASE_DIR}/VMs/${VM1}
+    rm -rv ${BASE_DIR}/VMs/${1}
 
     VBoxManage_vm_list
     ls -Al VMs/
@@ -183,6 +183,10 @@ VBoxManage_attach_VDI_to_VM () {
     echo
     VBoxManage showmediuminfo disk ${2} | grep -e UUID
 }
+
+#VBoxManage_createvm ${VM0}
+#VBoxManage_setup_serial_console ${VM0}
+#VBoxManage_deletevm ${VM0}
 
 VBoxManage_get_VDI_image
 VBoxManage_detach_VDI_from_VM ${VM1} ${VDI_UUID}
