@@ -57,6 +57,7 @@ NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 
 
 #### 1. Tinklo sąsajos
 
+Tikrinu:
 ```
 osboxes@osboxes:~$ ifconfig -a
 
@@ -100,6 +101,10 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX packets 240  bytes 19632 (19.6 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
+Tinklo sąsajų (interfeisų) pavadinimai yra `enp0s3`, `enp0s8`, `lo`.  +
+Trūko `ifconfig` komandos, teko susiinstaliuoti.
+
+Pasirenkami sąsajų parametrai:
 ```
 osboxes@osboxes:~$ ifconfig --help
 Usage:
@@ -117,6 +122,8 @@ Usage:
   [[-]dynamic]
   [up|down] ...
 ```
+
+Nustatau tinklo adresą:
 ```
 osboxes@osboxes:~$ ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
 ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
@@ -127,6 +134,19 @@ SIOCSIFNETMASK: Operation not permitted
 osboxes@osboxes:~$ sudo ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
 sudo ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
 [sudo] password for osboxes: 
+```
+
+Patikrinu -- adresas tikrai nustatytas:
+```
+osboxes@osboxes:~$ ifconfig enp0s8
+ifconfig enp0s8
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 308  bytes 47526 (47.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
