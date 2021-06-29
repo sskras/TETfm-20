@@ -150,8 +150,10 @@ VBoxManage_deletevm () {                                    # Naikinu VM irgi at
     VBoxManage hostonlyif remove ${HOSTONLY_IF}
     # Išvalau individualius VM likučius:
     rm -rv ${BASE_DIR}/VMs/${VM1}
+
     VBoxManage_vm_list
     ls -Al VMs/
+    # Paliekame bendrą disko .vdi atvaizdą (kitoje direktorijoje) kaip etaloninį
 }
 
 # Įjungiu 1LD mašiną:
