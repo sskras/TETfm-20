@@ -1,19 +1,18 @@
 Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
-VBoxManage: error: The machine 'VGTU-2021-IiSA-saukrs-LDVM1' is already locked by a session (or being locked or unlocked)
-VBoxManage: error: Details: code VBOX_E_INVALID_OBJECT_STATE (0x80bb0007), component MachineWrap, interface IMachine, callee nsISupports
-VBoxManage: error: Context: "LaunchVMProcess(a->session, sessionType.raw(), ComSafeArrayAsInParam(aBstrEnv), progress.asOutParam())" at line 727 of file VBoxManageMisc.cpp
+Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
+VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
 total 4759592
 drwx------. 2 p p          5 Mar  7 01:29 64bit
 lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 15:59 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 29 16:00 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 10
-drwx------. 2 p p    6 Jun 29 15:59 Logs
--rw-------. 1 p p 4467 Jun 29 15:59 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 3438 Jun 29 15:57 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+drwx------. 2 p p    6 Jun 29 16:00 Logs
+-rw-------. 1 p p 3899 Jun 29 16:00 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 4467 Jun 29 16:00 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
@@ -56,7 +55,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       running (since 2021-06-29T12:59:14.657000000)
+State:                       running (since 2021-06-29T13:00:52.987000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
