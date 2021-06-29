@@ -6,6 +6,8 @@ LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Se
 
 OAM_IP="192.168.10.8"                                       # VM Operation, Administration & Management IP pagal LD2
 VDI_UUID=""                                                 # Laikys pagrindinio visų VMų multi-attach disko UUID
+VM_CPUS=2                                                   # VM CPU skaičius
+VM_RAM=2048                                                 # VM RAM apimtis
 VM0="VGTU-2021-IiSA-saukrs-LDVM0"                           # Bendros VM vardas
 VM1="VGTU-2021-IiSA-saukrs-LDVM1"                           # Pirmos VM vardas
 VM2="VGTU-2021-IiSA-saukrs-LDVM2"                           # Antros VM vardas
@@ -67,7 +69,7 @@ VBoxManage_createvm () {                                    # Kuriu VM atskiroje
 
     # Padidinu CPU skaičių ir RAM apimtį, tik neturiu 4ių GiB šioje fizinėje mašinoje:
     # https://help.ubuntu.com/community/Installation/SystemRequirements
-    VBoxManage modifyvm ${1} --cpus 2 --memory 2048
+    VBoxManage modifyvm ${1} --cpus ${VM_CPUS} --memory ${VM_RAM}
     echo "Nauja procesoriaus ir RAM konfigūracija:"
     VBoxManage showvminfo ${1} | grep -e CPUs -e Memory
     echo
@@ -153,8 +155,7 @@ VBoxManage_deletevm () {                                    # Naikinu VM irgi at
     echo "Trinam ${1} ?"
     read
 
-    VBoxManage unregistervm ${1}
-    VBoxManage hostonlyif remove ${HOSTONLY_IF}
+    VBoxManage unregistervm ${1} --delete
     # Išvalau individualius VM likučius:
     rm -rv ${BASE_DIR}/VMs/${1}
 
@@ -192,6 +193,9 @@ VBoxManage_attach_VDI_to_VM () {
 #VBoxManage_setup_serial_console ${VM0}
 #VBoxManage_deletevm ${VM0}
 #VBoxManage modifyvm ${VM1} --name ${VM0}
+
+VBoxManage_deletevm ${VM1}
+VBoxManage_deletevm ${VM2}
 
 VBoxManage_get_VDI_image
 #VBoxManage_detach_VDI_from_VM ${VM0} ${VDI_UUID}
