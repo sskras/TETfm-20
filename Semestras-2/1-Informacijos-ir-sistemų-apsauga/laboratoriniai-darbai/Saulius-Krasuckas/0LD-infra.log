@@ -1,18 +1,15 @@
-Įjungiu VGTU-2021-IiSA-saukrs-LDVM1:
-Waiting for VM "VGTU-2021-IiSA-saukrs-LDVM1" to power on...
-VM "VGTU-2021-IiSA-saukrs-LDVM1" has been successfully started.
 total 4759592
 drwx------. 2 p p          5 Mar  7 01:29 64bit
 lrwxrwxrwx. 1 p p        143 Jun 29 00:32 64bit.7z -> /home/p/src/TETfm-20/Semestras-2/1-Informacijos-ir-sistemų-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/VMs/64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2010068133 Jun 28 16:55 64bit.7z.Ubuntu-Desktop-20.04.2
 -rw-rw-r--. 1 p p 2183946920 May 17 17:09 64bit.7z.Ubuntu-Desktop-21.04
 -rw-rw-r--. 1 p p  676472359 Jun 28 15:57 64bit.7z.Ubuntu-Server-20.04.2
-drwx------. 3 p p          5 Jun 29 13:29 VGTU-2021-IiSA-saukrs-LDVM1
+drwx------. 3 p p          5 Jun 29 15:26 VGTU-2021-IiSA-saukrs-LDVM1
 
 total 9
 drwx------. 2 p p    5 Jun 29 13:57 Logs
--rw-------. 1 p p 3570 Jun 29 13:29 VGTU-2021-IiSA-saukrs-LDVM1.vbox
--rw-------. 1 p p 3570 Jun 29 11:56 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
+-rw-------. 1 p p 3570 Jun 29 15:26 VGTU-2021-IiSA-saukrs-LDVM1.vbox
+-rw-------. 1 p p 3570 Jun 29 15:26 VGTU-2021-IiSA-saukrs-LDVM1.vbox-prev
 Name:                        VGTU-2021-IiSA-saukrs-LDVM1
 Groups:                      /
 Guest OS:                    Ubuntu (64-bit)
@@ -55,7 +52,7 @@ VT-x VPID:                   enabled
 VT-x Unrestricted Exec.:     enabled
 Paravirt. Provider:          Default
 Effective Paravirt. Prov.:   KVM
-State:                       running (since 2021-06-29T10:57:35.159000000)
+State:                       powered off (since 2021-06-29T12:26:04.142000000)
 Graphics Controller:         VBoxVGA
 Monitor count:               1
 3D Acceleration:             disabled
@@ -100,8 +97,6 @@ Audio playback:              disabled
 Audio capture:               disabled
 Clipboard Mode:              disabled
 Drag and drop Mode:          disabled
-Session name:                GUI/Qt
-Video mode:                  720x400x0 at 0,0 enabled
 VRDE:                        disabled
 OHCI USB:                    disabled
 EHCI USB:                    disabled
@@ -111,20 +106,9 @@ USB Device Filters:
 
 <none>
 
-Available remote USB devices:
-
-<none>
-
-Currently Attached USB Devices:
-
-<none>
-
 Bandwidth groups:  <none>
 
 Shared folders:<none>
-
-VRDE Connection:             not active
-Clients so far:              0
 
 Capturing:                   not active
 Capture audio:               not active
@@ -138,11 +122,13 @@ Capture options:
 Guest:
 
 Configured memory balloon size: 0MB
-OS type:                     Ubuntu_64
-Additions run level:         0
 
-Guest Facilities:
 
-No active facilities.
-
+SATA konfigūracija:
+Storage Controller Name (0):            SATA valdiklis
+Storage Controller Type (0):            IntelAhci
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  30
+Storage Controller Port Count (0):      30
+Storage Controller Bootable (0):        on
 
