@@ -156,10 +156,10 @@ VBoxManage_deletevm () {                                    # Naikinu VM irgi at
     # Paliekame bendrą disko .vdi atvaizdą (kitoje direktorijoje) kaip etaloninį
 }
 
-VBoxManage_start_LDVM1 () {
+VBoxManage_start () {
 # Įjungiu 1LD mašiną:
-echo "Įjungiu ${VM1}:"
-VBoxManage startvm ${VM1}
+    echo "Įjungiu ${1}:"
+    VBoxManage startvm ${1}
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1 () {
@@ -182,7 +182,7 @@ VBoxManage_detach_golden_VDI_from_LDVM1 () {
 }
 
 VBoxManage_detach_golden_VDI_from_LDVM1
-VBoxManage_start_LDVM1
+VBoxManage_start ${VM1}
 echo "Palaukime VM išsijungimo?"
 read
 VBoxManage_show_vm_details
