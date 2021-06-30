@@ -1704,11 +1704,18 @@ IncludeOptional sites-enabled/*.conf
 ** vienos `<FilesMatch ...>` dalies, aprašančios `.ht` failus:
 *** `<FilesMatch "^\.ht">`
 ** daugelio `.conf` failų, įtraukiamų direktyva `Include` arba `IncludeOptional`:
-*** `IncludeOptional mods-enabled/*.load`
-*** `IncludeOptional mods-enabled/*.conf`
-*** `Include ports.conf`
-*** `IncludeOptional conf-enabled/*.conf`
-*** `IncludeOptional sites-enabled/*.conf`
+```
+ /etc/apache2/
+ |-- apache2.conf
+ |       `--  ports.conf
+ |-- mods-enabled
+ |       |-- *.load
+ |       `-- *.conf
+ |-- conf-enabled
+ |       `-- *.conf
+ |-- sites-enabled
+ |       `-- *.conf
+```
 
 * Deja, puslapis per `https` dar neatsidaro:
 
