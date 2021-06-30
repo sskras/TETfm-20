@@ -1406,7 +1406,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.69 seconds
 Situacija nepasikeitė, nes jame nieko neinstaliavau.
 
 
-#### Sunkumai ir atsakymai į klausimus
+### Sunkumai ir atsakymai į klausimus
 
 #### 0. Infrastruktūros paruošimas
 
