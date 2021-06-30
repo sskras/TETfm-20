@@ -549,6 +549,7 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 ```
 
+
 #### 9. Įrankis `nmap`
 
 Susipažįstu su galimybėmis:
@@ -576,12 +577,6 @@ MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 0.30 seconds
 ```
 
-Gautas atsakymas reiškia:
-
-* buvo nuskenuoti 999 TCP transportinio protokolo prievadai;
-* kaimyniniame kompiuteryje rastas tik vienas atviras prievadas;
-* ten veikia tinklo paslauga SSH;
-* kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.
 
 #### 10. Žiniatinklio paslauga ir klientas
 
@@ -1899,6 +1894,16 @@ Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
 
 ** Teko susirasti kopiją Web-archyve: 
    https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39
+
+
+#### 9. Įrankis `nmap`
+
+* Gautas atsakymas reiškia:
+
+** buvo nuskenuoti 999 TCP transportinio protokolo prievadai;
+** kaimyniniame kompiuteryje rastas tik vienas atviras prievadas;
+** ten veikia tinklo paslauga SSH;
+** kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.
 
 
 #### 10. Žiniatinklio paslauga ir klientas
