@@ -271,6 +271,16 @@ nameserver 193.219.146.19
 nameserver 193.219.146.2
 ```
 
+Perkonfigūruoju jas į veikiančias:
+```
+osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes: 
+
+osboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.80.11
+nameserver 193.219.80.2
+```
 
 #### X. SSH serverio instaliavimas
 
@@ -550,6 +560,54 @@ osboxes@ldvm1:~$ sudo route delete default gw 192.168.10.254
 sudo: unable to resolve host ldvm1: Temporary failure in name resolution
 [sudo] password for osboxes: 
 ```
+
+** Tačiau duotos VU vardų išpsrendimo tarnybinės stotys nepasiekiamios
+(ir nebeveikia jau keletą metų):
+
+```
+osboxes@ldvm1:~$ ping 193.219.146.19
+sboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.146.19
+nameserver 193.219.146.2
+
+PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
+From 193.219.94.140 icmp_seq=1 Destination Host Unreachable
+^C
+
+osboxes@ldvm1:~$ ping 193.219.146.2
+PING 193.219.146.2 (193.219.146.2) 56(84) bytes of data.
+From 193.219.94.140 icmp_seq=1 Destination Host Unreachable
+From 193.219.94.140 icmp_seq=3 Destination Host Unreachable
+^C
+```
+
+** https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf[Susiradau]
+atnaujintas VU vardų išsprendimo tarnybines stotis:
+
+```
+$ PDF=https://t.co/anBJLWY7f6
+$ curl -L $PDF | pdftotext - - | grep -i DNS
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  135k  100  135k    0     0   243k      0 --:--:-- --:--:-- --:--:--  243k
+dns1=193.219.80.11
+dns2=193.219.80.2
+## DNS adresai
+
+osboxes@ldvm1:~$ ping 193.219.80.11
+PING 193.219.80.11 (193.219.80.11) 56(84) bytes of data.
+64 bytes from 193.219.80.11: icmp_seq=2 ttl=63 time=94.8 ms
+64 bytes from 193.219.80.11: icmp_seq=3 ttl=63 time=38.8 ms
+^C
+
+osboxes@ldvm1:~$ ping 193.219.80.2
+PING 193.219.80.2 (193.219.80.2) 56(84) bytes of data.
+64 bytes from 193.219.80.2: icmp_seq=1 ttl=63 time=38.8 ms
+64 bytes from 193.219.80.2: icmp_seq=2 ttl=63 time=35.5 ms
+^C
+```
+
+** Pagaliau gyvieji.
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
