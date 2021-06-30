@@ -328,6 +328,21 @@ traceroute to 172.18.14.1 (172.18.14.1), 30 hops max, 60 byte packets
  6  *^C
 ```
 
+#### 6. Vidaus vardai:
+
+Aprašau kaimyninį VM:
+
+```
+osboxes@ldvm1:~$ sudo nano /etc/hosts
+osboxes@ldvm1:~$ cat /etc/hosts
+127.0.0.1   localhost
+127.0.1.1   osboxes
+192.168.10.14   ldvm1
+192.168.10.13   kaimynas
+  ...
+```
+
+
 #### X. SSH serverio instaliavimas
 
 
