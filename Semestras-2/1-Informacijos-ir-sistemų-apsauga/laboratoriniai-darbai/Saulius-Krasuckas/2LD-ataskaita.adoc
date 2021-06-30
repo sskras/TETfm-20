@@ -1193,6 +1193,22 @@ IncludeOptional conf-enabled/*.conf
 IncludeOptional sites-enabled/*.conf
 ```
 
+Sukuriu žiniatinklio failą:
+
+```
+osboxes@ldvm1:~$ cd /var/www
+
+osboxes@ldvm1:/var/www$ echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php
+-bash: index.php: Permission denied
+
+osboxes@ldvm1:/var/www$ sudo bash -c 'echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php'
+
+osboxes@ldvm1:/var/www$ ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
+-rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
+```
+
 
 #### X. SSH serverio instaliavimas
 
