@@ -1149,145 +1149,6 @@ Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
 
 #### 12. Vykdomi procesai
 
-```
-osboxes@ldvm1:/var/www$ ps -aux | wc -l
-195
-```
-Tikrinimo metu veikė 195 procesai.
-
-Peržvelgiu komandos `ps` galimybes:
-
-```
-osboxes@ldvm1:/var/www$ man ps | wc -l
-942
-
-osboxes@ldvm1:/var/www$ man ps 
-(1)                                                      User Commands                                                      PS(1)
-
-NAME
-       ps - report a snapshot of the current processes.
-
-SYNOPSIS
-       ps [options]
-
-DESCRIPTION
-       ps displays information about a selection of the active processes.  If you want a repetitive update of the selection and the
-       displayed information, use top(1) instead.
-
-  ...
-```
-
-#### 11. Žiniatinklio konfigūravimas
-
-Peržiūriu konfigūracinį failą:
-
-```
-osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -v -e ^# -e ^$
-DefaultRuntimeDir ${APACHE_RUN_DIR}
-PidFile ${APACHE_PID_FILE}
-Timeout 300
-KeepAlive On
-MaxKeepAliveRequests 100
-KeepAliveTimeout 5
-User ${APACHE_RUN_USER}
-Group ${APACHE_RUN_GROUP}
-HostnameLookups Off
-ErrorLog ${APACHE_LOG_DIR}/error.log
-LogLevel warn
-IncludeOptional mods-enabled/*.load
-IncludeOptional mods-enabled/*.conf
-Include ports.conf
-<Directory />
-    Options FollowSymLinks
-    AllowOverride None
-    Require all denied
-</Directory>
-<Directory /usr/share>
-    AllowOverride None
-    Require all granted
-</Directory>
-<Directory /var/www/>
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-</Directory>
-AccessFileName .htaccess
-<FilesMatch "^\.ht">
-    Require all denied
-</FilesMatch>
-LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
-LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
-LogFormat "%h %l %u %t \"%r\" %>s %O" common
-LogFormat "%{Referer}i -> %U" referer
-LogFormat "%{User-agent}i" agent
-IncludeOptional conf-enabled/*.conf
-IncludeOptional sites-enabled/*.conf
-```
-
-Sukuriu žiniatinklio failą:
-
-```
-osboxes@ldvm1:~$ cd /var/www
-
-osboxes@ldvm1:/var/www$ echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php
--bash: index.php: Permission denied
-
-osboxes@ldvm1:/var/www$ sudo bash -c 'echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php'
-
-osboxes@ldvm1:/var/www$ ls -l
-total 8
-drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
--rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
-```
-
-Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
-
-image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
-
-
-#### 12. Vykdomi procesai
-
-* Komandos `ps` galimybės:
-
-** Komanda parodo OS procesų „fotografiją“.
-** Pagal nutylėjimą rodomi tik esamo naudotojo procesai.
-** Komanda geba rodymui atrinkti:
-*** visus procesus;
-*** tik aktyvius (nemiegančius) procesus;
-*** tik su esamu terminalu susietus procesus;
-*** procesus pagal nurodytų PID sąrašą;
-*** procesus pagal nurodytą komandinę eilutę;
-*** pagal proceso savininko grupę (RGID);
-*** pagal proceso sesijos ID;
-*** pagal procesų terminalo vardus;
-*** pagal proceso savininko ID.
-** Komanda geba išvesti tokius proceso duomenis:
-*** PID, PGID, SID, TTY;
-*** proceso būseną;
-*** proceso žymes (_Flags_);
-*** starto laiką;
-*** vykdymo laiką;
-*** komandinius argumentus;
-*** SELinux _Security context_;
-*** LWP gijų (_Threads_) skaičių;
-*** LWP gijų ID;
-*** signalų būsenas;
-*** virtualios atminties būsenas;
-*** CPU registrų būsenas;
-*** aplinkos kintamuosius (_Environment variables_);
-*** ir dar dalį kitų.
-** Komanda geba išvesti duomenis skirtingais pavidalais:
-*** kombinuojant skirtingus laukus;
-*** tam yra keli skirtingi iš anksto nustatyti formatai (Long, Extra long, Jobs ir kt.);
-*** keičiant išvedamų eilučių plotį;
-*** keičiant išvedamų eilučių skaičių;
-*** rodant tik naudotojo nurodytus laukus;
-*** rūšiuojant išvestį pagal nurodytą lauką;
-*** apjungiant procesus į hierarchiją (medį) pagal PPID;
-*** įterpiant gijas tarp procesų;
-*** įjungiant/išjungiant laukų antraštes;
-*** ir dar keliais kitais.
-
 Peržiūriu kompiuteryje vykdomus procesus:
 
 ```
@@ -1486,7 +1347,147 @@ www-data   17564  0.0  1.6 209540 16396 ?        S    06:55   0:00 /usr/sbin/apa
 www-data   17565  0.0  1.4 209540 14936 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
 www-data   17568  0.0  1.1 209492 11884 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
 osboxes    17615  0.0  0.3  20324  3576 pts/0    R+   07:16   0:00 ps -aux
+
+osboxes@ldvm1:/var/www$ ps -aux | wc -l
+195
 ```
+Tikrinimo metu veikė 195 procesai.
+
+Peržvelgiu komandos `ps` galimybes:
+
+```
+osboxes@ldvm1:/var/www$ man ps | wc -l
+942
+
+osboxes@ldvm1:/var/www$ man ps 
+(1)                                                      User Commands                                                      PS(1)
+
+NAME
+       ps - report a snapshot of the current processes.
+
+SYNOPSIS
+       ps [options]
+
+DESCRIPTION
+       ps displays information about a selection of the active processes.  If you want a repetitive update of the selection and the
+       displayed information, use top(1) instead.
+
+  ...
+```
+Daug skaitymo, apibendrinu iškeliu rezultatuose.
+
+
+#### 11. Žiniatinklio konfigūravimas
+
+Peržiūriu konfigūracinį failą:
+
+```
+osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -v -e ^# -e ^$
+DefaultRuntimeDir ${APACHE_RUN_DIR}
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+HostnameLookups Off
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+Include ports.conf
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Require all denied
+</Directory>
+<Directory /usr/share>
+    AllowOverride None
+    Require all granted
+</Directory>
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+AccessFileName .htaccess
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+IncludeOptional conf-enabled/*.conf
+IncludeOptional sites-enabled/*.conf
+```
+
+Sukuriu žiniatinklio failą:
+
+```
+osboxes@ldvm1:~$ cd /var/www
+
+osboxes@ldvm1:/var/www$ echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php
+-bash: index.php: Permission denied
+
+osboxes@ldvm1:/var/www$ sudo bash -c 'echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php'
+
+osboxes@ldvm1:/var/www$ ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
+-rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
+```
+
+Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
+
+image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
+
+
+#### 12. Vykdomi procesai
+
+* Komandos `ps` galimybės:
+
+** Komanda parodo OS procesų „fotografiją“.
+** Pagal nutylėjimą rodomi tik esamo naudotojo procesai.
+** Komanda geba rodymui atrinkti:
+*** visus procesus;
+*** tik aktyvius (nemiegančius) procesus;
+*** tik su esamu terminalu susietus procesus;
+*** procesus pagal nurodytų PID sąrašą;
+*** procesus pagal nurodytą komandinę eilutę;
+*** pagal proceso savininko grupę (RGID);
+*** pagal proceso sesijos ID;
+*** pagal procesų terminalo vardus;
+*** pagal proceso savininko ID.
+** Komanda geba išvesti tokius proceso duomenis:
+*** PID, PGID, SID, TTY;
+*** proceso būseną;
+*** proceso žymes (_Flags_);
+*** starto laiką;
+*** vykdymo laiką;
+*** komandinius argumentus;
+*** SELinux _Security context_;
+*** LWP gijų (_Threads_) skaičių;
+*** LWP gijų ID;
+*** signalų būsenas;
+*** virtualios atminties būsenas;
+*** CPU registrų būsenas;
+*** aplinkos kintamuosius (_Environment variables_);
+*** ir dar dalį kitų.
+** Komanda geba išvesti duomenis skirtingais pavidalais:
+*** kombinuojant skirtingus laukus;
+*** tam yra keli skirtingi iš anksto nustatyti formatai (Long, Extra long, Jobs ir kt.);
+*** keičiant išvedamų eilučių plotį;
+*** keičiant išvedamų eilučių skaičių;
+*** rodant tik naudotojo nurodytus laukus;
+*** rūšiuojant išvestį pagal nurodytą lauką;
+*** apjungiant procesus į hierarchiją (medį) pagal PPID;
+*** įterpiant gijas tarp procesų;
+*** įjungiant/išjungiant laukų antraštes;
+*** ir dar keliais kitais.
+
 
 #### X. SSH serverio instaliavimas
 
