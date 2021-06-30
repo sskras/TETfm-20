@@ -261,6 +261,16 @@ osboxes@osboxes:~$ hostname
 ldvm1
 ```
 
+Konfigūruoju vardų išsprendimo tarnybines stotis:
+```
+osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
+[sudo] password for osboxes: 
+
+osboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.146.19
+nameserver 193.219.146.2
+```
+
 
 #### X. SSH serverio instaliavimas
 
@@ -501,6 +511,44 @@ Tam reikia persijungti iš naujo:
 osboxes@osboxes:~$ su - osboxes
 Password: 
 osboxes@ldvm1:~$ 
+```
+
+* Sukonfigūravus vardų išsprendimą, jis nustojo veikti:
+
+```
+osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
+^Z^H^Hsudo: unable to resolve host ldvm1: Temporary failure in name resolution
+
+osboxes@ldvm1:~$ ping 193.219.80.11
+PING 193.219.80.11 (193.219.80.11) 56(84) bytes of data.
+From 192.168.10.14 icmp_seq=1 Destination Host Unreachable
+From 192.168.10.14 icmp_seq=2 Destination Host Unreachable
+^C
+--- 193.219.80.11 ping statistics ---
+5 packets transmitted, 0 received, +2 errors, 100% packet loss, time 4045ms
+
+```
+
+** Tai įvyko dėl neveikiančiai sukonfigūruotų papildomų tinklo vartų --
+jie perima išorei skirto tinklo srauto nukreipimą ir toliau niekur nenukreipia:
+
+```
+osboxes@ldvm1:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+0.0.0.0         10.0.2.2        0.0.0.0         UG    20100  0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+
+** Veikimui atstatyti iš konfigūracijos pašalinau niekur nevedančius tinklo vartus:
+
+```
+osboxes@ldvm1:~$ sudo route delete default gw 192.168.10.254
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes: 
 ```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
