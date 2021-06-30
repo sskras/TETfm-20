@@ -1209,6 +1209,10 @@ drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
 -rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
 ```
 
+Mano žiniatinklio puslapis atidaromas ir tikro kompiuterio naršyklėje:
+
+image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
+
 
 #### X. SSH serverio instaliavimas
 
