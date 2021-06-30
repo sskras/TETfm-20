@@ -1882,6 +1882,7 @@ To connect to ldvm1 insecurely, use `--no-check-certificate'.
 ** Tikrinu su `links`:
 
 ```
+osboxes@ldvm1:/var/www$ links https://ldvm1
                                                                                                                                        
                                                                                                                                        
                      +----------------------------------- Invalid certificate -----------------------------------+                     
@@ -1916,6 +1917,95 @@ osboxes@ldvm1:~$ links https://ldvm1
   ...
 ```
 
+* Panašu, kad rodomas ne mūsų sukurtas žiniatinklio failas, o Apache puslapis pagal nutylėjimą.
+
+** Tikrinu konfigūracijos failą:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[:space:]]*#'
+<IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+        SSLEngine on
+
+        SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem
+        SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+
+
+
+
+        <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+                SSLOptions +StdEnvVars
+        </Directory>
+
+
+    </VirtualHost>
+</IfModule>
+```
+
+** Dar vienas aprašo netikslumas:
+*** failą kūriau `/var/www` direktorijoje,
+*** o su šia Apache versija reikia kurti `/var/www/html` direktorijoje.
+
+** Perkeliu konfigūracinį failą:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ cd /var/www
+
+osboxes@ldvm1:/var/www$ ll
+total 16
+drwxr-xr-x  3 root root 4096 Jun 30 05:57 ./
+drwxr-xr-x 15 root root 4096 Jun 30 05:05 ../
+drwxr-xr-x  2 root root 4096 Jun 30 05:08 html/
+-rw-r--r--  1 root root   42 Jun 30 05:57 index.php
+
+osboxes@ldvm1:/var/www$ ls -Al html
+total 12
+-rw-r--r-- 1 root root 10918 Jun 30 05:08 index.html
+
+osboxes@ldvm1:/var/www$ sudo mv -v index.php html/
+renamed 'index.php' -> 'html/index.php'
+
+osboxes@ldvm1:/var/www$ ls -Al
+total 4
+drwxr-xr-x 2 root root 4096 Jun 30 06:51 html
+
+osboxes@ldvm1:/var/www$ ls -Al html
+total 16
+-rw-r--r-- 1 root root 10918 Jun 30 05:08 index.html
+-rw-r--r-- 1 root root    42 Jun 30 05:57 index.php
+```
+
+** Bet to irgi nepakanka, turinys nepasikeitė.
+
+** Galbūt `.html` failas turi prioritetą `.php` atžvilgiu. Pašalinu:
+
+```
+osboxes@ldvm1:/var/www$ sudo rm -v html/index.html 
+removed 'html/index.html'
+```
+
+** Patikrinu su `links`, pagaliau veikia!
+
+```
+osboxes@ldvm1:/var/www$ links https://ldvm1
+
+                                                                                                                                       
+   ldvm1 (kompiuterio vardas)                                                                                                          
+                                                                                                                                       
+```
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
