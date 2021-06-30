@@ -33,15 +33,16 @@ Ir galiausiai jungiuosi į _Guest_ konsolę iš _Host_ kompiuterio per `telnet`:
 telnet 127.0.0.1 23001
 ```
 
-##### 2. NIC konfigūravimas Host pusėje (NAT + Hostonly)
+##### 2. NIC konfigūravimas Host pusėje (NAT + Host-only)
 
-Panašu, kad su įprasta Virtualbox konfigūracija iš _Host OS_ aš _Guest OS_ nepasieksiu paprastai ir saugiai.  +
-Pagal nutylėjimą čia VM sukuriamas `NAT` tipo virtualus tinklo interfeisas:  +
+Pagal nutylėjimą Virtualbox VM sukuriamas `NAT` tipo virtualus tinklo interfeisas:
 `NIC 1:  ... Attachment: NAT ...`
 
-https://www.virtualbox.org/manual/ch06.html#networkingmodes[VirtualBox dokumentacija]:
+https://www.virtualbox.org/manual/ch06.html#networkingmodes[VirtualBox dokumentacija] teigia:
 
 > image::https://user-images.githubusercontent.com/74717106/123702651-11b3dd80-d86c-11eb-8254-c297b90459c3.png[]
+
+Panašu, kad su šią konfigūracija iš _Host OS_ aš _Guest OS_ nepasieksiu paprastai ir saugiai.
 
 Todėl VM konfigūracijoje https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L78[pridedu papildomą tinklo interfeisą], bet jau `Host-only` tipo:
 ```
