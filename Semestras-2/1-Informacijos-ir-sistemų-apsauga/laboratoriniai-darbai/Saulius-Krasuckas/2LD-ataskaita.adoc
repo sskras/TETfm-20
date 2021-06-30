@@ -684,6 +684,467 @@ Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
+Instaliuoju žiniatinklio paslaugą, duomenų bazę ir kitus įrankius:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libaio1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libc-dev-bin libc6-dev
+  libcgi-fast-perl libcgi-pm-perl libcrypt-dev libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-perl libhtml-template-perl
+  liblua5.2-0 libmecab2 libmysqlclient-dev libmysqlclient21 libssl-dev libssl1.1 linux-libc-dev manpages-dev mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0 php-common php-xml
+  php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline php7.4-xml zlib1g-dev
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom glibc-doc libipc-sharedcache-perl libssl-doc mailx tinyca
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils default-libmysqlclient-dev libaio1 libapache2-mod-php7.4 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libc-dev-bin libc6-dev libcgi-fast-perl libcgi-pm-perl libcrypt-dev libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-perl libhtml-template-perl liblua5.2-0 libmecab2 libmysqlclient-dev libssl-dev linux-libc-dev
+  manpages-dev mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-server mysql-server-8.0
+  mysql-server-core-8.0 php-cli php-common php-pear php-xml php7.4-cli php7.4-common php7.4-gd php7.4-json php7.4-mysql
+  php7.4-opcache php7.4-readline php7.4-xml zlib1g-dev
+The following packages will be upgraded:
+  libmysqlclient21 libssl1.1
+2 upgraded, 47 newly installed, 0 to remove and 259 not upgraded.
+Need to get 49.2 MB of archives.
+After this operation, 336 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libapr1 amd64 1.6.5-1ubuntu1 [91.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.4 [1,319 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1 amd64 1.6.1-4ubuntu2 [84.7 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-4ubuntu2 [10.5 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1-ldap amd64 1.6.1-4ubuntu2 [8,736 B]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liblua5.2-0 amd64 5.2.4-1.1build3 [106 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-bin amd64 2.4.41-4ubuntu3.3 [1,179 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-data all 2.4.41-4ubuntu3.3 [159 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-utils amd64 2.4.41-4ubuntu3.3 [84.0 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2 amd64 2.4.41-4ubuntu3.3 [95.5 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-client-core-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [4,216 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-client-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [22.0 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaio1 amd64 0.3.112-5 [7,184 B]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libevent-core-2.1-7 amd64 2.1.11-stable-1 [89.1 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libevent-pthreads-2.1-7 amd64 2.1.11-stable-1 [7,372 B]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libmecab2 amd64 0.996-10build1 [233 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-core-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [18.1 MB]
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [1,282 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient21 amd64 8.0.25-0ubuntu0.20.04.1 [1,226 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl-dev amd64 1.1.1f-1ubuntu2.4 [1,583 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.2 [71.8 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-77.86 [1,130 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.2 [2,520 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.2 [155 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient-dev amd64 8.0.25-0ubuntu0.20.04.1 [1,537 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu focal/main amd64 default-libmysqlclient-dev amd64 1.0.5ubuntu2 [3,932 B]
+Get:28 http://us.archive.ubuntu.com/ubuntu focal/main amd64 php-common all 2:75 [11.9 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-common amd64 7.4.3-4ubuntu2.4 [979 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-json amd64 7.4.3-4ubuntu2.4 [19.2 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-opcache amd64 7.4.3-4ubuntu2.4 [198 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-readline amd64 7.4.3-4ubuntu2.4 [12.6 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-cli amd64 7.4.3-4ubuntu2.4 [1,422 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libapache2-mod-php7.4 amd64 7.4.3-4ubuntu2.4 [1,364 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-pm-perl all 4.46-1 [186 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libfcgi-perl amd64 0.79-1 [33.1 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-fast-perl all 1:2.15-1 [10.5 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-template-perl all 2.97-1 [59.0 kB]
+Get:39 http://us.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2,266 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu focal/main amd64 mecab-utils amd64 0.996-10build1 [4,912 B]
+Get:41 http://us.archive.ubuntu.com/ubuntu focal/main amd64 mecab-ipadic all 2.7.0-20070801+main-2.1 [6,714 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu focal/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-2.1 [4,380 B]
+Get:43 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server all 8.0.25-0ubuntu0.20.04.1 [9,540 B]
+Get:44 http://us.archive.ubuntu.com/ubuntu focal/main amd64 php-cli all 2:7.4+75 [2,792 B]
+Get:45 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-xml amd64 7.4.3-4ubuntu2.4 [97.6 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu focal/main amd64 php-xml all 2:7.4+75 [2,028 B]
+Get:47 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php-pear all 1:1.10.9+submodules+notgz-1ubuntu0.20.04.2 [286 kB]
+Get:48 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-gd amd64 7.4.3-4ubuntu2.4 [28.0 kB]
+Get:49 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-mysql amd64 7.4.3-4ubuntu2.4 [121 kB]
+Fetched 49.2 MB in 1min 57s (420 kB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 148876 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.6.5-1ubuntu1_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.5-1ubuntu1) ...
+Preparing to unpack .../01-libssl1.1_1.1.1f-1ubuntu2.4_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.4) over (1.1.1f-1ubuntu2.1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../02-libaprutil1_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../03-libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../04-libaprutil1-ldap_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../05-liblua5.2-0_5.2.4-1.1build3_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../06-apache2-bin_2.4.41-4ubuntu3.3_amd64.deb ...
+Unpacking apache2-bin (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../07-apache2-data_2.4.41-4ubuntu3.3_all.deb ...
+Unpacking apache2-data (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../08-apache2-utils_2.4.41-4ubuntu3.3_amd64.deb ...
+Unpacking apache2-utils (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../09-apache2_2.4.41-4ubuntu3.3_amd64.deb ...
+Unpacking apache2 (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package mysql-client-core-8.0.
+Preparing to unpack .../10-mysql-client-core-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../11-mysql-client-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-client-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libaio1:amd64.
+Preparing to unpack .../12-libaio1_0.3.112-5_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.112-5) ...
+Selecting previously unselected package libevent-core-2.1-7:amd64.
+Preparing to unpack .../13-libevent-core-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-core-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:amd64.
+Preparing to unpack .../14-libevent-pthreads-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package libmecab2:amd64.
+Preparing to unpack .../15-libmecab2_0.996-10build1_amd64.deb ...
+Unpacking libmecab2:amd64 (0.996-10build1) ...
+Selecting previously unselected package mysql-server-core-8.0.
+Preparing to unpack .../16-mysql-server-core-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-server-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package mysql-server-8.0.
+Preparing to unpack .../17-mysql-server-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-server-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Preparing to unpack .../18-libmysqlclient21_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libmysqlclient21:amd64 (8.0.25-0ubuntu0.20.04.1) over (8.0.23-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libssl-dev:amd64.
+Preparing to unpack .../19-libssl-dev_1.1.1f-1ubuntu2.4_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.1.1f-1ubuntu2.4) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../20-libc-dev-bin_2.31-0ubuntu9.2_amd64.deb ...
+Unpacking libc-dev-bin (2.31-0ubuntu9.2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../21-linux-libc-dev_5.4.0-77.86_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-77.86) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../22-libcrypt-dev_1%3a4.4.10-10ubuntu4_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../23-libc6-dev_2.31-0ubuntu9.2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.31-0ubuntu9.2) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../24-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.2_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.2) ...
+Selecting previously unselected package libmysqlclient-dev.
+Preparing to unpack .../25-libmysqlclient-dev_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libmysqlclient-dev (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package default-libmysqlclient-dev:amd64.
+Preparing to unpack .../26-default-libmysqlclient-dev_1.0.5ubuntu2_amd64.deb ...
+Unpacking default-libmysqlclient-dev:amd64 (1.0.5ubuntu2) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../27-php-common_2%3a75_all.deb ...
+Unpacking php-common (2:75) ...
+Selecting previously unselected package php7.4-common.
+Preparing to unpack .../28-php7.4-common_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-common (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-json.
+Preparing to unpack .../29-php7.4-json_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-json (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-opcache.
+Preparing to unpack .../30-php7.4-opcache_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-opcache (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-readline.
+Preparing to unpack .../31-php7.4-readline_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-readline (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-cli.
+Preparing to unpack .../32-php7.4-cli_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-cli (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package libapache2-mod-php7.4.
+Preparing to unpack .../33-libapache2-mod-php7.4_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../34-libcgi-pm-perl_4.46-1_all.deb ...
+Unpacking libcgi-pm-perl (4.46-1) ...
+Selecting previously unselected package libfcgi-perl.
+Preparing to unpack .../35-libfcgi-perl_0.79-1_amd64.deb ...
+Unpacking libfcgi-perl (0.79-1) ...
+Selecting previously unselected package libcgi-fast-perl.
+Preparing to unpack .../36-libcgi-fast-perl_1%3a2.15-1_all.deb ...
+Unpacking libcgi-fast-perl (1:2.15-1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../37-libhtml-template-perl_2.97-1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../38-manpages-dev_5.05-1_all.deb ...
+Unpacking manpages-dev (5.05-1) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../39-mecab-utils_0.996-10build1_amd64.deb ...
+Unpacking mecab-utils (0.996-10build1) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../40-mecab-ipadic_2.7.0-20070801+main-2.1_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-2.1) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../41-mecab-ipadic-utf8_2.7.0-20070801+main-2.1_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-2.1) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../42-mysql-server_8.0.25-0ubuntu0.20.04.1_all.deb ...
+Unpacking mysql-server (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package php-cli.
+Preparing to unpack .../43-php-cli_2%3a7.4+75_all.deb ...
+Unpacking php-cli (2:7.4+75) ...
+Selecting previously unselected package php7.4-xml.
+Preparing to unpack .../44-php7.4-xml_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-xml (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php-xml.
+Preparing to unpack .../45-php-xml_2%3a7.4+75_all.deb ...
+Unpacking php-xml (2:7.4+75) ...
+Selecting previously unselected package php-pear.
+Preparing to unpack .../46-php-pear_1%3a1.10.9+submodules+notgz-1ubuntu0.20.04.2_all.deb ...
+Unpacking php-pear (1:1.10.9+submodules+notgz-1ubuntu0.20.04.2) ...
+Selecting previously unselected package php7.4-gd.
+Preparing to unpack .../47-php7.4-gd_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-gd (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-mysql.
+Preparing to unpack .../48-php7.4-mysql_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-mysql (7.4.3-4ubuntu2.4) ...
+Setting up php-common (2:75) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+Setting up manpages-dev (5.05-1) ...
+Setting up libmecab2:amd64 (0.996-10build1) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.4) ...
+Setting up libcgi-pm-perl (4.46-1) ...
+Setting up libapr1:amd64 (1.6.5-1ubuntu1) ...
+Setting up linux-libc-dev:amd64 (5.4.0-77.86) ...
+Setting up libhtml-template-perl (2.97-1) ...
+Setting up mecab-utils (0.996-10build1) ...
+Setting up libssl-dev:amd64 (1.1.1f-1ubuntu2.4) ...
+Setting up libevent-core-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Setting up libfcgi-perl (0.79-1) ...
+Setting up apache2-data (2.4.41-4ubuntu3.3) ...
+Setting up libaio1:amd64 (0.3.112-5) ...
+Setting up libc-dev-bin (2.31-0ubuntu9.2) ...
+Setting up libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up libaprutil1:amd64 (1.6.1-4ubuntu2) ...
+Setting up mysql-client-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up libmysqlclient21:amd64 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-2.1) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up php7.4-common (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/tokenizer.ini with new version
+Setting up php7.4-mysql (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo_mysql.ini with new version
+Setting up libcgi-fast-perl (1:2.15-1) ...
+Setting up php7.4-readline (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/readline.ini with new version
+Setting up libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...
+Setting up mysql-server-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-2.1) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-client-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up libc6-dev:amd64 (2.31-0ubuntu9.2) ...
+Setting up php7.4-opcache (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/opcache.ini with new version
+Setting up php7.4-gd (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/gd.ini with new version
+Setting up apache2-utils (2.4.41-4ubuntu3.3) ...
+Setting up mysql-server-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 7317
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Setting up php7.4-json (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/json.ini with new version
+Setting up php7.4-xml (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/dom.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xml.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xsl.ini with new version
+Setting up php7.4-cli (7.4.3-4ubuntu2.4) ...
+update-alternatives: using /usr/bin/php7.4 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.4 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.4 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/7.4/cli/php.ini with new version
+Setting up apache2-bin (2.4.41-4ubuntu3.3) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.2) ...
+Setting up php-cli (2:7.4+75) ...
+Setting up libmysqlclient-dev (8.0.25-0ubuntu0.20.04.1) ...
+Setting up default-libmysqlclient-dev:amd64 (1.0.5ubuntu2) ...
+Setting up mysql-server (8.0.25-0ubuntu0.20.04.1) ...
+Setting up libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+Package apache2 is not configured yet. Will defer actions by package libapache2-mod-php7.4.
+
+Creating config file /etc/php/7.4/apache2/php.ini with new version
+No module matches 
+Setting up php-xml (2:7.4+75) ...
+Setting up php-pear (1:1.10.9+submodules+notgz-1ubuntu0.20.04.2) ...
+Setting up apache2 (2.4.41-4ubuntu3.3) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+info: Switch to mpm prefork for package libapache2-mod-php7.4
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+info: Executing deferred 'a2enmod php7.4' for package libapache2-mod-php7.4
+Enabling module php7.4.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for php7.4-cli (7.4.3-4ubuntu2.4) ...
+Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+```
 
 #### X. SSH serverio instaliavimas
 
@@ -780,7 +1241,7 @@ Err:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-
 Err:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.1
   404  Not Found [IP: 91.189.91.39 80]
 Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]
-Fetched 259 kB in 1s (204 kB/s)           
+Fetched 259 kB in 1s (204 kB/s)
 E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-sftp-server_8.2p1-4ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.39 80]
 E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-server_8.2p1-4ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.39 80]
 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
@@ -1040,6 +1501,60 @@ Processing triggers for man-db (2.9.1-1) ...
 * Deja, nuoroda http://ubuntu.lt/render/Articles;aid,39 neveikia.
 
 ** Teko susirasti kopiją Web-archyve: https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39
+
+#### 10. Žiniatinklio paslauga ir klientas
+
+* Deja, apraše duota diegimo komanda neveikia:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install apache-ssl apache-common libapache-mod-php4 \
+>   mysql-server mysql-common mysql-client php4-mysql \
+>   libnet1 libnet1-dev libpcre3 libpcre3-dev autoconf automake1.9 \
+>   libpcap0.8 libpcap0.8-dev libmysqlclient15-dev \
+>   php4-gd php4-pear libphp-adodb vim gcc make \
+>   php4-cli libtool libssl-dev gcc-4.1 g++
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package apache-ssl is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'apache-ssl' has no installation candidate
+E: Unable to locate package apache-common
+E: Unable to locate package libapache-mod-php4
+E: Unable to locate package php4-mysql
+E: Unable to locate package automake1.9
+E: Couldn't find any package by glob 'automake1.9'
+E: Couldn't find any package by regex 'automake1.9'
+E: Unable to locate package libmysqlclient15-dev
+E: Unable to locate package php4-gd
+E: Unable to locate package php4-pear
+E: Unable to locate package php4-cli
+E: Unable to locate package gcc-4.1
+E: Couldn't find any package by glob 'gcc-4.1'
+E: Couldn't find any package by regex 'gcc-4.1'
+```
+
+** Kadangi nežinia, kokios tiksliai naujos development įrankių versijos tiks, juos išimu iš sąrašo:
+
+*** automake
+*** gcc
+
+** O likusių įrankių pavadinimus parenku su `apt search ...`:
+
+*** apache2
+*** libapache2-mod-php7.4
+*** mysql-server
+*** php7.4-mysql
+*** default-libmysqlclient-dev
+*** php7.4-gd
+*** php-pear
+*** php-cli
+
+```
+osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli 
+```
 
 
 ### Duotosios Linux komandos aprašymas: `TODO`
