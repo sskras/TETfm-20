@@ -1458,121 +1458,6 @@ drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
 -rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
 ```
 
-Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
-
-image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
-
-
-#### 12. Vykdomi procesai
-
-* Komandos `ps` galimybės:
-
-** Komanda parodo OS procesų „fotografiją“.
-** Pagal nutylėjimą rodomi tik esamo naudotojo procesai.
-** Komanda geba rodymui atrinkti:
-*** visus procesus;
-*** tik aktyvius (nemiegančius) procesus;
-*** tik su esamu terminalu susietus procesus;
-*** procesus pagal nurodytų PID sąrašą;
-*** procesus pagal nurodytą komandinę eilutę;
-*** pagal proceso savininko grupę (RGID);
-*** pagal proceso sesijos ID;
-*** pagal procesų terminalo vardus;
-*** pagal proceso savininko ID.
-** Komanda geba išvesti tokius proceso duomenis:
-*** PID, PGID, SID, TTY;
-*** proceso būseną;
-*** proceso žymes (_Flags_);
-*** starto laiką;
-*** vykdymo laiką;
-*** komandinius argumentus;
-*** SELinux _Security context_;
-*** LWP gijų (_Threads_) skaičių;
-*** LWP gijų ID;
-*** signalų būsenas;
-*** virtualios atminties būsenas;
-*** CPU registrų būsenas;
-*** aplinkos kintamuosius (_Environment variables_);
-*** ir dar dalį kitų.
-** Komanda geba išvesti duomenis skirtingais pavidalais:
-*** kombinuojant skirtingus laukus;
-*** tam yra keli skirtingi iš anksto nustatyti formatai (Long, Extra long, Jobs ir kt.);
-*** keičiant išvedamų eilučių plotį;
-*** keičiant išvedamų eilučių skaičių;
-*** rodant tik naudotojo nurodytus laukus;
-*** rūšiuojant išvestį pagal nurodytą lauką;
-*** apjungiant procesus į hierarchiją (medį) pagal PPID;
-*** įterpiant gijas tarp procesų;
-*** įjungiant/išjungiant laukų antraštes;
-*** ir dar keliais kitais.
-
-* Procesai, kurie naudoja daugiausiai kompiuterio resursų:
-
-** pagal CPU:
-
-```
-    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
-    241 root       0 -20       0      0      0 I   0.3   0.0   0:02.60 kworker/1:1H-kblockd
-   1052 osboxes   20   0   14116   2540   1840 S   0.3   0.3   0:02.47 sshd
-   7528 mysql     20   0 1741604 237416   6120 S   0.3  23.6   1:01.97 mysqld
-  17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
-  17865 root      20   0       0      0      0 I   0.3   0.0   0:00.66 kworker/u4:0-events_power_efficient
-  19713 osboxes   20   0   20516   4032   3252 R   0.3   0.4   0:00.17 top
-      1 root      20   0  171048   7952   4088 S   0.0   0.8   0:08.11 systemd
-```
-
-** pagal Memory:
-
-```
-    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
-   7528 mysql     20   0 1741604 229984   6104 S   0.3  22.9   1:02.20 mysqld
-  17852 root      20   0  344220  96800  56224 D  20.3   9.6   1:29.37 unattended-upgr
-  28602 osboxes   20   0  369752  22468  14712 S   0.0   2.2   0:00.10 tracker-store
-  26582 root      20   0  293720  16292  14336 S   0.0   1.6   0:00.07 packagekitd
-    662 root      20   0  775596  12832   3356 S   0.0   1.3   0:02.57 snapd
-    878 osboxes   39  19  520180  12196   6704 S   0.0   1.2   0:00.31 tracker-miner-f
-    303 root      19  -1   68212  11048  10172 S   0.0   1.1   0:01.00 systemd-journal
-  26973 root      20   0  313752  10652   9012 S   0.0   1.1   0:00.13 ModemManager
-```
-
-* Programa `top`:
-
-** Pateikia dinaminį sistemos (OS) vaizdą.
-** Pateikia sistemos informacijos reziume:
-*** sistemos laikrodį;
-*** _Uptime_;
-*** prisijungsių naudotojų sk.;
-*** tris vidutines sistemines apkrovas (_System load_);
-*** procesų skaičių:
-**** kiek iš viso;
-**** kiek veikia;
-**** kiek „miega“;
-**** kiek sustabdytų;
-**** kiek „zombių“.
-*** CPU laikus, skirtus:
-**** _User_ procesams;
-**** branduolio užduotims;
-**** prioritetų keitimui (_Niceness_);
-**** ramybės būsenai (_Idle_);
-**** aparatūros pertrauktims (_Hardware interrupts_);
-**** programinėms pertrauktims (_Software interrupts_);
-**** hiperizoriaus veiklai (_Host_ + kitų _Guest_ OS aptarnavimui).
-** Pateikia procesų ir branduolio gijų sąrašą stulpeliais:
-*** proceso identifikatorių PID;
-*** proceso savininką (naudotoją);
-*** proceso sisteminį prioritetą;
-*** proceso prioriteto pataisymą (_Niceness_);
-*** proceso Virt
-*** proceso Resident
-*** proceso Shared
-*** proceso būseną;
-*** proceso sunaudojamą CPU laiką %;
-*** proceso sunaudojamą atminties apimtį %;
-*** proceso vykdymo laiką;
-*** proceso komandos pavadinimą.
-** Rūšiuoja pagal pasirinktus stulpelius;
-
-
 #### X. SSH serverio instaliavimas
 
 Ieškau programinės įrangos paketo:
@@ -2369,6 +2254,121 @@ osboxes@ldvm1:/var/www$ links https://ldvm1
    ldvm1 (kompiuterio vardas)                                                                                                          
                                                                                                                                        
 ```
+
+Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
+
+image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
+
+
+#### 12. Vykdomi procesai
+
+* Komandos `ps` galimybės:
+
+** Komanda parodo OS procesų „fotografiją“.
+** Pagal nutylėjimą rodomi tik esamo naudotojo procesai.
+** Komanda geba rodymui atrinkti:
+*** visus procesus;
+*** tik aktyvius (nemiegančius) procesus;
+*** tik su esamu terminalu susietus procesus;
+*** procesus pagal nurodytų PID sąrašą;
+*** procesus pagal nurodytą komandinę eilutę;
+*** pagal proceso savininko grupę (RGID);
+*** pagal proceso sesijos ID;
+*** pagal procesų terminalo vardus;
+*** pagal proceso savininko ID.
+** Komanda geba išvesti tokius proceso duomenis:
+*** PID, PGID, SID, TTY;
+*** proceso būseną;
+*** proceso žymes (_Flags_);
+*** starto laiką;
+*** vykdymo laiką;
+*** komandinius argumentus;
+*** SELinux _Security context_;
+*** LWP gijų (_Threads_) skaičių;
+*** LWP gijų ID;
+*** signalų būsenas;
+*** virtualios atminties būsenas;
+*** CPU registrų būsenas;
+*** aplinkos kintamuosius (_Environment variables_);
+*** ir dar dalį kitų.
+** Komanda geba išvesti duomenis skirtingais pavidalais:
+*** kombinuojant skirtingus laukus;
+*** tam yra keli skirtingi iš anksto nustatyti formatai (Long, Extra long, Jobs ir kt.);
+*** keičiant išvedamų eilučių plotį;
+*** keičiant išvedamų eilučių skaičių;
+*** rodant tik naudotojo nurodytus laukus;
+*** rūšiuojant išvestį pagal nurodytą lauką;
+*** apjungiant procesus į hierarchiją (medį) pagal PPID;
+*** įterpiant gijas tarp procesų;
+*** įjungiant/išjungiant laukų antraštes;
+*** ir dar keliais kitais.
+
+* Procesai, kurie naudoja daugiausiai kompiuterio resursų:
+
+** pagal CPU:
+
+```
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    241 root       0 -20       0      0      0 I   0.3   0.0   0:02.60 kworker/1:1H-kblockd
+   1052 osboxes   20   0   14116   2540   1840 S   0.3   0.3   0:02.47 sshd
+   7528 mysql     20   0 1741604 237416   6120 S   0.3  23.6   1:01.97 mysqld
+  17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
+  17865 root      20   0       0      0      0 I   0.3   0.0   0:00.66 kworker/u4:0-events_power_efficient
+  19713 osboxes   20   0   20516   4032   3252 R   0.3   0.4   0:00.17 top
+      1 root      20   0  171048   7952   4088 S   0.0   0.8   0:08.11 systemd
+```
+
+** pagal Memory:
+
+```
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   7528 mysql     20   0 1741604 229984   6104 S   0.3  22.9   1:02.20 mysqld
+  17852 root      20   0  344220  96800  56224 D  20.3   9.6   1:29.37 unattended-upgr
+  28602 osboxes   20   0  369752  22468  14712 S   0.0   2.2   0:00.10 tracker-store
+  26582 root      20   0  293720  16292  14336 S   0.0   1.6   0:00.07 packagekitd
+    662 root      20   0  775596  12832   3356 S   0.0   1.3   0:02.57 snapd
+    878 osboxes   39  19  520180  12196   6704 S   0.0   1.2   0:00.31 tracker-miner-f
+    303 root      19  -1   68212  11048  10172 S   0.0   1.1   0:01.00 systemd-journal
+  26973 root      20   0  313752  10652   9012 S   0.0   1.1   0:00.13 ModemManager
+```
+
+* Programa `top`:
+
+** Pateikia dinaminį sistemos (OS) vaizdą.
+** Pateikia sistemos informacijos reziume:
+*** sistemos laikrodį;
+*** _Uptime_;
+*** prisijungsių naudotojų sk.;
+*** tris vidutines sistemines apkrovas (_System load_);
+*** procesų skaičių:
+**** kiek iš viso;
+**** kiek veikia;
+**** kiek „miega“;
+**** kiek sustabdytų;
+**** kiek „zombių“.
+*** CPU laikus, skirtus:
+**** _User_ procesams;
+**** branduolio užduotims;
+**** prioritetų keitimui (_Niceness_);
+**** ramybės būsenai (_Idle_);
+**** aparatūros pertrauktims (_Hardware interrupts_);
+**** programinėms pertrauktims (_Software interrupts_);
+**** hiperizoriaus veiklai (_Host_ + kitų _Guest_ OS aptarnavimui).
+** Pateikia procesų ir branduolio gijų sąrašą stulpeliais:
+*** proceso identifikatorių PID;
+*** proceso savininką (naudotoją);
+*** proceso sisteminį prioritetą;
+*** proceso prioriteto pataisymą (_Niceness_);
+*** proceso Virt
+*** proceso Resident
+*** proceso Shared
+*** proceso būseną;
+*** proceso sunaudojamą CPU laiką %;
+*** proceso sunaudojamą atminties apimtį %;
+*** proceso vykdymo laiką;
+*** proceso komandos pavadinimą.
+** Rūšiuoja pagal pasirinktus stulpelius;
+
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
