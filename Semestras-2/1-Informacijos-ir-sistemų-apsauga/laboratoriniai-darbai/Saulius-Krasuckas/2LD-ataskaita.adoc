@@ -1146,6 +1146,37 @@ Processing triggers for php7.4-cli (7.4.3-4ubuntu2.4) ...
 Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
 ```
 
+
+#### 12. Vykdomi procesai
+
+```
+osboxes@ldvm1:/var/www$ ps -aux | wc -l
+195
+```
+Tikrinimo metu veikė 195 procesai.
+
+Peržvelgiu komandos `ps` galimybes:
+
+```
+osboxes@ldvm1:/var/www$ man ps | wc -l
+942
+
+osboxes@ldvm1:/var/www$ man ps 
+(1)                                                      User Commands                                                      PS(1)
+
+NAME
+       ps - report a snapshot of the current processes.
+
+SYNOPSIS
+       ps [options]
+
+DESCRIPTION
+       ps displays information about a selection of the active processes.  If you want a repetitive update of the selection and the
+       displayed information, use top(1) instead.
+
+  ...
+```
+
 #### 11. Žiniatinklio konfigūravimas
 
 Peržiūriu konfigūracinį failą:
@@ -1214,7 +1245,48 @@ Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
 image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
 
 
-### 12. Vykdomi procesai
+#### 12. Vykdomi procesai
+
+* Komandos `ps` galimybės:
+
+** Komanda parodo OS procesų „fotografiją“.
+** Pagal nutylėjimą rodomi tik esamo naudotojo procesai.
+** Komanda geba rodymui atrinkti:
+*** visus procesus;
+*** tik aktyvius (nemiegančius) procesus;
+*** tik su esamu terminalu susietus procesus;
+*** procesus pagal nurodytų PID sąrašą;
+*** procesus pagal nurodytą komandinę eilutę;
+*** pagal proceso savininko grupę (RGID);
+*** pagal proceso sesijos ID;
+*** pagal procesų terminalo vardus;
+*** pagal proceso savininko ID.
+** Komanda geba išvesti tokius proceso duomenis:
+*** PID, PGID, SID, TTY;
+*** proceso būseną;
+*** proceso žymes (_Flags_);
+*** starto laiką;
+*** vykdymo laiką;
+*** komandinius argumentus;
+*** SELinux _Security context_;
+*** LWP gijų (_Threads_) skaičių;
+*** LWP gijų ID;
+*** signalų būsenas;
+*** virtualios atminties būsenas;
+*** CPU registrų būsenas;
+*** aplinkos kintamuosius (_Environment variables_);
+*** ir dar dalį kitų.
+** Komanda geba išvesti duomenis skirtingais pavidalais:
+*** kombinuojant skirtingus laukus;
+*** tam yra keli skirtingi iš anksto nustatyti formatai (Long, Extra long, Jobs ir kt.);
+*** keičiant išvedamų eilučių plotį;
+*** keičiant išvedamų eilučių skaičių;
+*** rodant tik naudotojo nurodytus laukus;
+*** rūšiuojant išvestį pagal nurodytą lauką;
+*** apjungiant procesus į hierarchiją (medį) pagal PPID;
+*** įterpiant gijas tarp procesų;
+*** įjungiant/išjungiant laukų antraštes;
+*** ir dar keliais kitais.
 
 Peržiūriu kompiuteryje vykdomus procesus:
 
