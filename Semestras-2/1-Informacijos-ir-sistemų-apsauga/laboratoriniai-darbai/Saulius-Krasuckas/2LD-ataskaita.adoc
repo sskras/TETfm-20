@@ -1062,7 +1062,6 @@ osboxes@ldvm1:/var/www$ links https://ldvm1
 ** Jau veikia:
 +
 ```
-osboxes@ldvm1:~$ links https://ldvm1
 
                                                                                        Apache2 Ubuntu Default Page: It works (p1 of 2) 
    Ubuntu Logo Apache2 Ubuntu Default Page                                                                                             
@@ -1081,12 +1080,13 @@ osboxes@ldvm1:~$ links https://ldvm1
   ...
 ```
 
-* Panašu, kad rodomas ne mūsų sukurtas žiniatinklio failas, o Apache puslapis pagal nutylėjimą.
+* Bet panašu, kad rodomas ne mūsų sukurtas žiniatinklio failas, o Apache puslapis pagal nutylėjimą.
 
 ** Tikrinu konfigūracijos failą:
 +
 ```
 osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[:space:]]*#'
+
 <IfModule mod_ssl.c>
     <VirtualHost _default_:443>
         ServerAdmin webmaster@localhost
@@ -1119,7 +1119,7 @@ osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[
 </IfModule>
 ```
 
-** Dar vienas aprašo netikslumas:
+** Dar vienas LD aprašo netikslumas:
 *** failą kūriau `/var/www` direktorijoje,
 *** o su šia Apache versija reikia kurti `/var/www/html` direktorijoje.
 
@@ -1171,7 +1171,7 @@ osboxes@ldvm1:/var/www$ links https://ldvm1
                                                                                                                                        
 ```
 
-Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
+Mano žiniatinklio puslapis atidaromas ir tikro kompiuterio naršyklėje:
 
 image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
 
