@@ -1686,7 +1686,7 @@ IncludeOptional sites-enabled/*.conf
 *** `<Directory /var/www/>`
 ** vienos `<FilesMatch ...>` dalies, aprašančios `.ht` failus:
 *** `<FilesMatch "^\.ht">`
-** daugelio `.conf` failų, įtraukiamų direktyva `Include` arba `IncludeOptional`.
+** daugelio `.conf` failų, įtraukiamų direktyva `Include` arba `IncludeOptional`:
 *** `IncludeOptional mods-enabled/*.load`
 *** `IncludeOptional mods-enabled/*.conf`
 *** `Include ports.conf`
