@@ -250,7 +250,7 @@ apt-get install apache-ssl apache-common libapache-mod-php4 \
   |
   
   | Šakninėje serverio dokumentų direktorijoje sukurkite žiniatinklio failą:
-  |`cd /var/www  +
+ a|`cd /var/www  +
 echo "<html> kompiuterio vardas <html>" > index.php`
   |
   
