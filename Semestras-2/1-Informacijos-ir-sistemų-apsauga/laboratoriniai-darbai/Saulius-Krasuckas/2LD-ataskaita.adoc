@@ -1457,6 +1457,24 @@ MiB Swap:   8582.0 total,   8410.5 free,    171.5 used.    368.8 avail Mem
   17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
 ```
 
+#### 13. Prievadų skenavimas
+
+Nuskenuoju kaimyno prievadus:
+
+```
+osboxes@ldvm1:~$ sudo nmap -sS 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 08:56 EDT
+Nmap scan report for kaimynas (192.168.10.13)
+Host is up (0.00043s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.69 seconds
+```
+Situacija nepasikeitė, nes jame nieko neinstaliavau.
+
 
 #### X. SSH serverio instaliavimas
 
@@ -2368,6 +2386,34 @@ image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9a
 *** proceso vykdymo laiką;
 *** proceso komandos pavadinimą.
 ** Rūšiuoja pagal pasirinktus stulpelius;
+
+
+#### 13. Prievadų skenavimas
+
+* Kaimyno prievadų situacija nepasikeitė, nes jame nieko neinstaliavau.
+
+** Nelabai tiksli instrukcija LD apraše.
+
+* Tačiau jei skenuoju iš kaimyno pirmąjį kompiuterį, situacija jau gerokai kita:
+
+** (Abu kompiuteriai sukurti iš bendro `.vdi` atvaizdo, todėl pradžioje jų tarnybos buvo identiškos)
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 09:09 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.00081s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
+```
+
+** Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba): `http` ir `https`
 
 
 ### Duotosios Linux komandos aprašymas: `TODO`
