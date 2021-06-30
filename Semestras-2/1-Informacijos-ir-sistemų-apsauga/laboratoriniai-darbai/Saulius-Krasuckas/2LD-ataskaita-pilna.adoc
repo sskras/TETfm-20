@@ -1,0 +1,2684 @@
+### Darbo Tikslas
+
+* [x] Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
+* [x] Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
+
+### Trumpas atlikto darbo aprašymas
+
+#### 0. Infrastruktūros paruošimas
+
+##### 1. Ruošimo eiga
+
+Laboratorinei infrastruktūrai paruošti pasirinkau VirtualBox virtualizavimo įrankį (hipervizorių).
+Host kompiuteris bus senokas `HP EliteBook 8460p` laptopas:
+
+* CPU: i5-2520M @ 2.50GHz
+* RAM: 3692 MiB (prieinami OS)
+
+* Host OS bus `CentOS 7.9.2009`
+* Guest OS bus `Ubuntu 20.04.2 LTS`
+
+Pradinę VM konfigūraciją sukuriu savo https://github.com/VGTU-ELF/TETfm-20/blob/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L54[_Bash_ skripto] pagalba.
+
+Jis parsisiunčia oficialių `.vdi` failą iš https://sourceforge.net/projects/osboxes/files, sukuria naują VM ir prijungia nurodytą diską.
+
+Tuomet per Bootloader menu įrašau Linux branduolio argumentų eilutėje, kad jis atidarytų konsolę per `ttyS0`, virtualų _Serial/UART_ įrenginį:
+
+```
+        linux        <...> console=ttyS0,115200n8
+```
+
+Ir galiausiai jungiuosi į _Guest_ konsolę iš _Host_ kompiuterio per `telnet`:
+```
+telnet 127.0.0.1 23001
+```
+
+##### 2. NIC konfigūravimas Host pusėje (NAT + Hostonly)
+
+Panašu, kad su įprasta Virtualbox konfigūracija iš _Host OS_ aš _Guest OS_ nepasieksiu paprastai ir saugiai.  +
+Pagal nutylėjimą čia VM sukuriamas `NAT` tipo virtualus tinklo interfeisas:  +
+`NIC 1:  ... Attachment: NAT ...`
+
+https://www.virtualbox.org/manual/ch06.html#networkingmodes[VirtualBox dokumentacija]:
+
+> image::https://user-images.githubusercontent.com/74717106/123702651-11b3dd80-d86c-11eb-8254-c297b90459c3.png[]
+
+Todėl VM konfigūracijoje https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L78[pridedu papildomą tinklo interfeisą], bet jau `Host-only` tipo:
+```
+VBoxManage hostonlyif create
+VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip 192.168.10.8
+VBoxManage modifyvm ${VM1} --nic2 hostonly --hostonlyadapter2 ${HOSTONLY_IF}
+```
+Po šito VM gauna du interfeisus:
+```
+$ VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep NIC.[12]
+NIC 1:                       MAC: 080027EB204C, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+```
+
+#### 1. Tinklo sąsajos
+
+Tikrinu:
+
+```
+osboxes@osboxes:~$ ifconfig -a
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::3790:7de6:b710:c982  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:c7:5c:f1  txqueuelen 1000  (Ethernet)
+        RX packets 263  bytes 241467 (241.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 271  bytes 28415 (28.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::1c17:744f:d35c:bdf6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 71  bytes 10912 (10.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 240  bytes 19632 (19.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 240  bytes 19632 (19.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+Peržiūriu pasirenkamis sąsajų parametrus.
+
+Peržiūriu sąsajų parametrus:
+
+```
+osboxes@osboxes:~$ ifconfig --help
+```
+
+Nustatau tinklo adresą:
+
+```
+osboxes@osboxes:~$ ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+SIOCSIFADDR: Operation not permitted
+SIOCSIFFLAGS: Operation not permitted
+SIOCSIFNETMASK: Operation not permitted
+
+osboxes@osboxes:~$ sudo ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+sudo ifconfig enp0s8 192.168.10.14 netmask 255.255.255.0
+[sudo] password for osboxes: 
+```
+
+
+#### 2. Tinklo vartai
+
+Nustatau vartus:
+
+```
+osboxes@osboxes:~$ route add default gw 192.168.10.254
+SIOCADDRT: Operation not permitted
+
+osboxes@osboxes:~$ sudo route add default gw 192.168.10.254
+```
+
+Patikrinu; vartai nustatyti:
+
+```
+osboxes@osboxes:~$ route -n
+route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+0.0.0.0         10.0.2.2        0.0.0.0         UG    100    0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s3
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+
+
+#### 3. Statinės tinklo konfigūracijos įrašymas
+
+Prieš perkrovimą:
+
+```
+osboxes@osboxes:~$ ifconfig -a | grep -e ": " -e inet
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::3790:7de6:b710:c982  prefixlen 64  scopeid 0x20<link>
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+```
+
+Po pekrovimo:
+
+```
+osboxes@osboxes:~$ ifconfig -a | grep -e ": " -e inet
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::3790:7de6:b710:c982  prefixlen 64  scopeid 0x20<link>
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::1c17:744f:d35c:bdf6  prefixlen 64  scopeid 0x20<link>
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+```
+
+Surašau statinę konfigūraciją kitu būdu:
+
+```
+root@osboxes:~# cat /etc/network/interfaces
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+
+Aktyvuoju tinklo konfigūraciją iš failo:
+
+```
+root@osboxes:~# ifup enp0s8
+root@osboxes:~# logout
+
+osboxes@osboxes:~$ ifconfig enp0s8
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 343  bytes 48317 (48.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+
+#### 4. Kompiuterio vardas
+
+Nustatau kompiuterio vardą:
+
+```
+osboxes@osboxes:~$ sudo hostname ldvm1
+[sudo] password for osboxes: 
+```
+
+Įrašau kompiuterio vardą į konfigūracinį failą:
+
+```
+osboxes@osboxes:~$ sudo nano /etc/hostname
+osboxes@osboxes:~$ cat /etc/hostname 
+ldvm1
+```
+
+Patikrinu -- vardas pasikeitė:
+
+```
+osboxes@osboxes:~$ hostname
+ldvm1
+```
+
+Konfigūruoju vardų išsprendimo tarnybines stotis:
+
+```
+osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
+[sudo] password for osboxes: 
+
+osboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.146.19
+nameserver 193.219.146.2
+```
+
+
+#### 5. Standartiniai maršrutai
+
+Nustatau maršrutą per kaimyną:
+
+```
+osboxes@ldvm1:~$ sudo route add -net 172.18.14.0 netmask 255.255.255.0 gw 192.168.10.13
+osboxes@ldvm1:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.0.2.2        0.0.0.0         UG    100    0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+172.18.14.0     192.168.10.13   255.255.255.0   UG    0      0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+
+Išbandau jį:
+
+```
+osboxes@ldvm1:~$ traceroute 172.18.14.1
+traceroute to 172.18.14.1 (172.18.14.1), 30 hops max, 60 byte packets
+ 1  * * *
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  *^C
+```
+
+
+#### 6. Vidaus vardai:
+
+Aprašau kaimyninį VM:
+
+```
+osboxes@ldvm1:~$ sudo nano /etc/hosts
+osboxes@ldvm1:~$ cat /etc/hosts
+127.0.0.1   localhost
+127.0.1.1   osboxes
+192.168.10.14   ldvm1
+192.168.10.13   kaimynas
+  ...
+```
+
+Vardo išsprendimas:
+
+```
+osboxes@ldvm1:~$ ping kaimynas
+PING kaimynas (192.168.10.13) 56(84) bytes of data.
+64 bytes from kaimynas (192.168.10.13): icmp_seq=1 ttl=64 time=0.820 ms
+64 bytes from kaimynas (192.168.10.13): icmp_seq=2 ttl=64 time=0.823 ms
+^C
+--- kaimynas ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+```
+
+
+#### 7. Keli tinklo adresai
+
+Nustatau antrąjį tinklo adresą:
+
+```
+osboxes@ldvm1:~$ ifconfig enp0s8:2 10.10.10.14/24
+SIOCSIFADDR: Operation not permitted
+SIOCSIFFLAGS: Operation not permitted
+SIOCSIFNETMASK: Operation not permitted
+
+osboxes@ldvm1:~$ sudo ifconfig enp0s8:2 10.10.10.14/24
+```
+```
+osboxes@ldvm2:~$ sudo ifconfig enp0s8:2 10.10.10.13/24
+```
+
+Patikrinu, nusistatė abiejuose kompiuteriuose:
+
+```
+osboxes@ldvm1:~$ ifconfig -a
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::6c28:ce7d:bcd2:2048  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
+        RX packets 864  bytes 753541 (753.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 899  bytes 76163 (76.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+        RX packets 34363  bytes 7170684 (7.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 35009  bytes 10949048 (10.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.14  netmask 255.255.255.0  broadcast 10.10.10.255
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 698  bytes 61712 (61.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 698  bytes 61712 (61.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+```
+osboxes@ldvm2:~$ ifconfig -a
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::188e:e3e8:fd2f:9d8b  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:32:52:a1  txqueuelen 1000  (Ethernet)
+        RX packets 874  bytes 735129 (735.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1529  bytes 140649 (140.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.13  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe7a:d0b7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:7a:d0:b7  txqueuelen 1000  (Ethernet)
+        RX packets 10683  bytes 1199028 (1.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19407  bytes 6113864 (6.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.13  netmask 255.255.255.0  broadcast 10.10.10.255
+        ether 08:00:27:7a:d0:b7  txqueuelen 1000  (Ethernet)
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 890  bytes 75981 (75.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 890  bytes 75981 (75.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+
+Išbandau antrus IP adresus, veikia:
+
+```
+osboxes@ldvm1:~$ ping 10.10.10.13
+PING 10.10.10.13 (10.10.10.13) 56(84) bytes of data.
+64 bytes from 10.10.10.13: icmp_seq=1 ttl=64 time=1.20 ms
+64 bytes from 10.10.10.13: icmp_seq=2 ttl=64 time=0.823 ms
+64 bytes from 10.10.10.13: icmp_seq=3 ttl=64 time=0.687 ms
+^C
+--- 10.10.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 0.687/0.902/1.196/0.215 ms
+```
+
+#### 8. Programinės įrangos valdymas
+
+Šaltinių sąrašas:
+
+```
+osboxes@ldvm1:~$ cat /etc/apt/sources.list
+  ...
+osboxes@ldvm1:~$ cat /etc/apt/sources.list | grep -v -e ^#
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal main restricted
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal-updates main restricted
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal universe
+deb http://us.archive.ubuntu.com/ubuntu/ focal-updates universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ focal-updates multiverse
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+
+
+deb http://security.ubuntu.com/ubuntu focal-security main restricted
+deb http://security.ubuntu.com/ubuntu focal-security universe
+deb http://security.ubuntu.com/ubuntu focal-security multiverse
+```
+
+`apt-get` raktai:
+
+```
+osboxes@ldvm1:~$ apt-get --help
+apt 2.0.4 (amd64)
+Usage: apt-get [options] command
+       apt-get [options] install|remove pkg1 [pkg2 ...]
+       apt-get [options] source pkg1 [pkg2 ...]
+
+apt-get is a command line interface for retrieval of packages
+and information about them from authenticated sources and
+for installation, upgrade and removal of packages together
+with their dependencies.
+
+Most used commands:
+  update - Retrieve new lists of packages
+  upgrade - Perform an upgrade
+  install - Install new packages (pkg is libc6 not libc6.deb)
+  reinstall - Reinstall packages (pkg is libc6 not libc6.deb)
+  remove - Remove packages
+  purge - Remove packages and config files
+  autoremove - Remove automatically all unused packages
+  dist-upgrade - Distribution upgrade, see apt-get(8)
+  dselect-upgrade - Follow dselect selections
+  build-dep - Configure build-dependencies for source packages
+  satisfy - Satisfy dependency strings
+  clean - Erase downloaded archive files
+  autoclean - Erase old downloaded archive files
+  check - Verify that there are no broken dependencies
+  source - Download source archives
+  download - Download the binary package into the current directory
+  changelog - Download and display the changelog for the given package
+
+See apt-get(8) for more information about the available commands.
+Configuration options and syntax is detailed in apt.conf(5).
+Information about how to configure sources can be found in sources.list(5).
+Package and version choices can be expressed via apt_preferences(5).
+Security details are available in apt-secure(8).
+                                        This APT has Super Cow Powers.
+```
+
+Skaitau `apt-get` aprašymą.
+https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39[Puslapis] aprašo šias sub-komandas:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install ...
+sudo apt-get remove ...
+sudo apt-get remove --purge ...
+```
+
+Atnaujinu programų sąrašus:
+
+```
+osboxes@ldvm1:~$ sudo apt-get update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24.5 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [58.1 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [500 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,081 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [238 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [283 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13.6 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [318 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [46.1 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [617 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [827 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [173 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [329 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [364 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [17.9 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6,472 B]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,780 B]
+Fetched 5,231 kB in 12s (435 kB/s)
+Reading package lists... Done
+```
+
+Instaliuoju `nmap`:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install nmap
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libblas3 liblinear4 lua-lpeg nmap-common
+Suggested packages:
+  liblinear-tools liblinear-dev ncat ndiff zenmap
+The following NEW packages will be installed:
+  libblas3 liblinear4 lua-lpeg nmap nmap-common
+0 upgraded, 5 newly installed, 0 to remove and 261 not upgraded.
+Need to get 5,553 kB of archives.
+After this operation, 26.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libblas3 amd64 3.9.0-1build1 [142 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 liblinear4 amd64 2.3.0+dfsg-3build1 [41.7 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 lua-lpeg amd64 1.0.2-1 [31.4 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 nmap-common all 7.80+dfsg1-2build1 [3,676 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 nmap amd64 7.80+dfsg1-2build1 [1,662 kB]
+Fetched 5,553 kB in 13s (419 kB/s)
+Selecting previously unselected package libblas3:amd64.
+(Reading database ... 147980 files and directories currently installed.)
+Preparing to unpack .../libblas3_3.9.0-1build1_amd64.deb ...
+Unpacking libblas3:amd64 (3.9.0-1build1) ...
+Selecting previously unselected package liblinear4:amd64.
+Preparing to unpack .../liblinear4_2.3.0+dfsg-3build1_amd64.deb ...
+Unpacking liblinear4:amd64 (2.3.0+dfsg-3build1) ...
+Selecting previously unselected package lua-lpeg:amd64.
+Preparing to unpack .../lua-lpeg_1.0.2-1_amd64.deb ...
+Unpacking lua-lpeg:amd64 (1.0.2-1) ...
+Selecting previously unselected package nmap-common.
+Preparing to unpack .../nmap-common_7.80+dfsg1-2build1_all.deb ...
+Unpacking nmap-common (7.80+dfsg1-2build1) ...
+Selecting previously unselected package nmap.
+Preparing to unpack .../nmap_7.80+dfsg1-2build1_amd64.deb ...
+Unpacking nmap (7.80+dfsg1-2build1) ...
+Setting up lua-lpeg:amd64 (1.0.2-1) ...
+Setting up libblas3:amd64 (3.9.0-1build1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+Setting up nmap-common (7.80+dfsg1-2build1) ...
+Setting up liblinear4:amd64 (2.3.0+dfsg-3build1) ...
+Setting up nmap (7.80+dfsg1-2build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
+
+#### 9. Įrankis `nmap`
+
+Susipažįstu su galimybėmis:
+
+```
+osboxes@ldvm1:~$ man nmap
+osboxes@ldvm1:~$ man nmap | wc -l
+troff: <standard input>:2798: warning [p 33, 5.3i]: can't break line
+2178
+```
+(Labai plačios, virš 2000 eilučių aprašymo!)
+
+Skenuoju kaimyną:
+
+```
+osboxes@ldvm1:~$ sudo nmap -sS 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 03:53 EDT
+Nmap scan report for kaimynas (192.168.10.13)
+Host is up (0.00062s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.30 seconds
+```
+
+
+#### 10. Žiniatinklio paslauga ir klientas
+
+Instaliuoju `links`:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install links
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  liblz1
+The following NEW packages will be installed:
+  liblz1 links
+0 upgraded, 2 newly installed, 0 to remove and 261 not upgraded.
+Need to get 662 kB of archives.
+After this operation, 2,333 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 liblz1 amd64 1.11-7 [36.9 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 links amd64 2.20.2-1 [625 kB]
+Fetched 662 kB in 2s (351 kB/s)
+Selecting previously unselected package liblz1:amd64.
+(Reading database ... 148861 files and directories currently installed.)
+Preparing to unpack .../liblz1_1.11-7_amd64.deb ...
+Unpacking liblz1:amd64 (1.11-7) ...
+Selecting previously unselected package links.
+Preparing to unpack .../links_2.20.2-1_amd64.deb ...
+Unpacking links (2.20.2-1) ...
+Setting up liblz1:amd64 (1.11-7) ...
+Setting up links (2.20.2-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+```
+
+Instaliuoju žiniatinklio paslaugą, duomenų bazę ir kitus įrankius:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libaio1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libc-dev-bin libc6-dev
+  libcgi-fast-perl libcgi-pm-perl libcrypt-dev libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-perl libhtml-template-perl
+  liblua5.2-0 libmecab2 libmysqlclient-dev libmysqlclient21 libssl-dev libssl1.1 linux-libc-dev manpages-dev mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0 php-common php-xml
+  php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline php7.4-xml zlib1g-dev
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom glibc-doc libipc-sharedcache-perl libssl-doc mailx tinyca
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils default-libmysqlclient-dev libaio1 libapache2-mod-php7.4 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libc-dev-bin libc6-dev libcgi-fast-perl libcgi-pm-perl libcrypt-dev libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-perl libhtml-template-perl liblua5.2-0 libmecab2 libmysqlclient-dev libssl-dev linux-libc-dev
+  manpages-dev mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-server mysql-server-8.0
+  mysql-server-core-8.0 php-cli php-common php-pear php-xml php7.4-cli php7.4-common php7.4-gd php7.4-json php7.4-mysql
+  php7.4-opcache php7.4-readline php7.4-xml zlib1g-dev
+The following packages will be upgraded:
+  libmysqlclient21 libssl1.1
+2 upgraded, 47 newly installed, 0 to remove and 259 not upgraded.
+Need to get 49.2 MB of archives.
+After this operation, 336 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libapr1 amd64 1.6.5-1ubuntu1 [91.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.4 [1,319 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1 amd64 1.6.1-4ubuntu2 [84.7 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-4ubuntu2 [10.5 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1-ldap amd64 1.6.1-4ubuntu2 [8,736 B]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liblua5.2-0 amd64 5.2.4-1.1build3 [106 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-bin amd64 2.4.41-4ubuntu3.3 [1,179 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-data all 2.4.41-4ubuntu3.3 [159 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-utils amd64 2.4.41-4ubuntu3.3 [84.0 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2 amd64 2.4.41-4ubuntu3.3 [95.5 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-client-core-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [4,216 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-client-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [22.0 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libaio1 amd64 0.3.112-5 [7,184 B]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libevent-core-2.1-7 amd64 2.1.11-stable-1 [89.1 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libevent-pthreads-2.1-7 amd64 2.1.11-stable-1 [7,372 B]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libmecab2 amd64 0.996-10build1 [233 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-core-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [18.1 MB]
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-8.0 amd64 8.0.25-0ubuntu0.20.04.1 [1,282 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient21 amd64 8.0.25-0ubuntu0.20.04.1 [1,226 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl-dev amd64 1.1.1f-1ubuntu2.4 [1,583 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.2 [71.8 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-77.86 [1,130 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.2 [2,520 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.2 [155 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient-dev amd64 8.0.25-0ubuntu0.20.04.1 [1,537 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu focal/main amd64 default-libmysqlclient-dev amd64 1.0.5ubuntu2 [3,932 B]
+Get:28 http://us.archive.ubuntu.com/ubuntu focal/main amd64 php-common all 2:75 [11.9 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-common amd64 7.4.3-4ubuntu2.4 [979 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-json amd64 7.4.3-4ubuntu2.4 [19.2 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-opcache amd64 7.4.3-4ubuntu2.4 [198 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-readline amd64 7.4.3-4ubuntu2.4 [12.6 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-cli amd64 7.4.3-4ubuntu2.4 [1,422 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libapache2-mod-php7.4 amd64 7.4.3-4ubuntu2.4 [1,364 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-pm-perl all 4.46-1 [186 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libfcgi-perl amd64 0.79-1 [33.1 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-fast-perl all 1:2.15-1 [10.5 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-template-perl all 2.97-1 [59.0 kB]
+Get:39 http://us.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2,266 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu focal/main amd64 mecab-utils amd64 0.996-10build1 [4,912 B]
+Get:41 http://us.archive.ubuntu.com/ubuntu focal/main amd64 mecab-ipadic all 2.7.0-20070801+main-2.1 [6,714 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu focal/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-2.1 [4,380 B]
+Get:43 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server all 8.0.25-0ubuntu0.20.04.1 [9,540 B]
+Get:44 http://us.archive.ubuntu.com/ubuntu focal/main amd64 php-cli all 2:7.4+75 [2,792 B]
+Get:45 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-xml amd64 7.4.3-4ubuntu2.4 [97.6 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu focal/main amd64 php-xml all 2:7.4+75 [2,028 B]
+Get:47 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php-pear all 1:1.10.9+submodules+notgz-1ubuntu0.20.04.2 [286 kB]
+Get:48 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-gd amd64 7.4.3-4ubuntu2.4 [28.0 kB]
+Get:49 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-mysql amd64 7.4.3-4ubuntu2.4 [121 kB]
+Fetched 49.2 MB in 1min 57s (420 kB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 148876 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.6.5-1ubuntu1_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.5-1ubuntu1) ...
+Preparing to unpack .../01-libssl1.1_1.1.1f-1ubuntu2.4_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.4) over (1.1.1f-1ubuntu2.1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../02-libaprutil1_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../03-libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../04-libaprutil1-ldap_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../05-liblua5.2-0_5.2.4-1.1build3_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../06-apache2-bin_2.4.41-4ubuntu3.3_amd64.deb ...
+Unpacking apache2-bin (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../07-apache2-data_2.4.41-4ubuntu3.3_all.deb ...
+Unpacking apache2-data (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../08-apache2-utils_2.4.41-4ubuntu3.3_amd64.deb ...
+Unpacking apache2-utils (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../09-apache2_2.4.41-4ubuntu3.3_amd64.deb ...
+Unpacking apache2 (2.4.41-4ubuntu3.3) ...
+Selecting previously unselected package mysql-client-core-8.0.
+Preparing to unpack .../10-mysql-client-core-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../11-mysql-client-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-client-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libaio1:amd64.
+Preparing to unpack .../12-libaio1_0.3.112-5_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.112-5) ...
+Selecting previously unselected package libevent-core-2.1-7:amd64.
+Preparing to unpack .../13-libevent-core-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-core-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:amd64.
+Preparing to unpack .../14-libevent-pthreads-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package libmecab2:amd64.
+Preparing to unpack .../15-libmecab2_0.996-10build1_amd64.deb ...
+Unpacking libmecab2:amd64 (0.996-10build1) ...
+Selecting previously unselected package mysql-server-core-8.0.
+Preparing to unpack .../16-mysql-server-core-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-server-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package mysql-server-8.0.
+Preparing to unpack .../17-mysql-server-8.0_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mysql-server-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Preparing to unpack .../18-libmysqlclient21_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libmysqlclient21:amd64 (8.0.25-0ubuntu0.20.04.1) over (8.0.23-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libssl-dev:amd64.
+Preparing to unpack .../19-libssl-dev_1.1.1f-1ubuntu2.4_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.1.1f-1ubuntu2.4) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../20-libc-dev-bin_2.31-0ubuntu9.2_amd64.deb ...
+Unpacking libc-dev-bin (2.31-0ubuntu9.2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../21-linux-libc-dev_5.4.0-77.86_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-77.86) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../22-libcrypt-dev_1%3a4.4.10-10ubuntu4_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../23-libc6-dev_2.31-0ubuntu9.2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.31-0ubuntu9.2) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../24-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.2_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.2) ...
+Selecting previously unselected package libmysqlclient-dev.
+Preparing to unpack .../25-libmysqlclient-dev_8.0.25-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libmysqlclient-dev (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package default-libmysqlclient-dev:amd64.
+Preparing to unpack .../26-default-libmysqlclient-dev_1.0.5ubuntu2_amd64.deb ...
+Unpacking default-libmysqlclient-dev:amd64 (1.0.5ubuntu2) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../27-php-common_2%3a75_all.deb ...
+Unpacking php-common (2:75) ...
+Selecting previously unselected package php7.4-common.
+Preparing to unpack .../28-php7.4-common_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-common (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-json.
+Preparing to unpack .../29-php7.4-json_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-json (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-opcache.
+Preparing to unpack .../30-php7.4-opcache_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-opcache (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-readline.
+Preparing to unpack .../31-php7.4-readline_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-readline (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-cli.
+Preparing to unpack .../32-php7.4-cli_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-cli (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package libapache2-mod-php7.4.
+Preparing to unpack .../33-libapache2-mod-php7.4_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../34-libcgi-pm-perl_4.46-1_all.deb ...
+Unpacking libcgi-pm-perl (4.46-1) ...
+Selecting previously unselected package libfcgi-perl.
+Preparing to unpack .../35-libfcgi-perl_0.79-1_amd64.deb ...
+Unpacking libfcgi-perl (0.79-1) ...
+Selecting previously unselected package libcgi-fast-perl.
+Preparing to unpack .../36-libcgi-fast-perl_1%3a2.15-1_all.deb ...
+Unpacking libcgi-fast-perl (1:2.15-1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../37-libhtml-template-perl_2.97-1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../38-manpages-dev_5.05-1_all.deb ...
+Unpacking manpages-dev (5.05-1) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../39-mecab-utils_0.996-10build1_amd64.deb ...
+Unpacking mecab-utils (0.996-10build1) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../40-mecab-ipadic_2.7.0-20070801+main-2.1_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-2.1) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../41-mecab-ipadic-utf8_2.7.0-20070801+main-2.1_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-2.1) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../42-mysql-server_8.0.25-0ubuntu0.20.04.1_all.deb ...
+Unpacking mysql-server (8.0.25-0ubuntu0.20.04.1) ...
+Selecting previously unselected package php-cli.
+Preparing to unpack .../43-php-cli_2%3a7.4+75_all.deb ...
+Unpacking php-cli (2:7.4+75) ...
+Selecting previously unselected package php7.4-xml.
+Preparing to unpack .../44-php7.4-xml_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-xml (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php-xml.
+Preparing to unpack .../45-php-xml_2%3a7.4+75_all.deb ...
+Unpacking php-xml (2:7.4+75) ...
+Selecting previously unselected package php-pear.
+Preparing to unpack .../46-php-pear_1%3a1.10.9+submodules+notgz-1ubuntu0.20.04.2_all.deb ...
+Unpacking php-pear (1:1.10.9+submodules+notgz-1ubuntu0.20.04.2) ...
+Selecting previously unselected package php7.4-gd.
+Preparing to unpack .../47-php7.4-gd_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-gd (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-mysql.
+Preparing to unpack .../48-php7.4-mysql_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-mysql (7.4.3-4ubuntu2.4) ...
+Setting up php-common (2:75) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+Setting up manpages-dev (5.05-1) ...
+Setting up libmecab2:amd64 (0.996-10build1) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.4) ...
+Setting up libcgi-pm-perl (4.46-1) ...
+Setting up libapr1:amd64 (1.6.5-1ubuntu1) ...
+Setting up linux-libc-dev:amd64 (5.4.0-77.86) ...
+Setting up libhtml-template-perl (2.97-1) ...
+Setting up mecab-utils (0.996-10build1) ...
+Setting up libssl-dev:amd64 (1.1.1f-1ubuntu2.4) ...
+Setting up libevent-core-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Setting up libfcgi-perl (0.79-1) ...
+Setting up apache2-data (2.4.41-4ubuntu3.3) ...
+Setting up libaio1:amd64 (0.3.112-5) ...
+Setting up libc-dev-bin (2.31-0ubuntu9.2) ...
+Setting up libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up libaprutil1:amd64 (1.6.1-4ubuntu2) ...
+Setting up mysql-client-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up libmysqlclient21:amd64 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-2.1) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up php7.4-common (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/tokenizer.ini with new version
+Setting up php7.4-mysql (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo_mysql.ini with new version
+Setting up libcgi-fast-perl (1:2.15-1) ...
+Setting up php7.4-readline (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/readline.ini with new version
+Setting up libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...
+Setting up mysql-server-core-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-2.1) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-client-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+Setting up libc6-dev:amd64 (2.31-0ubuntu9.2) ...
+Setting up php7.4-opcache (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/opcache.ini with new version
+Setting up php7.4-gd (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/gd.ini with new version
+Setting up apache2-utils (2.4.41-4ubuntu3.3) ...
+Setting up mysql-server-8.0 (8.0.25-0ubuntu0.20.04.1) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 7317
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Setting up php7.4-json (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/json.ini with new version
+Setting up php7.4-xml (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/dom.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xml.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xsl.ini with new version
+Setting up php7.4-cli (7.4.3-4ubuntu2.4) ...
+update-alternatives: using /usr/bin/php7.4 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.4 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.4 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/7.4/cli/php.ini with new version
+Setting up apache2-bin (2.4.41-4ubuntu3.3) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.2) ...
+Setting up php-cli (2:7.4+75) ...
+Setting up libmysqlclient-dev (8.0.25-0ubuntu0.20.04.1) ...
+Setting up default-libmysqlclient-dev:amd64 (1.0.5ubuntu2) ...
+Setting up mysql-server (8.0.25-0ubuntu0.20.04.1) ...
+Setting up libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+Package apache2 is not configured yet. Will defer actions by package libapache2-mod-php7.4.
+
+Creating config file /etc/php/7.4/apache2/php.ini with new version
+No module matches 
+Setting up php-xml (2:7.4+75) ...
+Setting up php-pear (1:1.10.9+submodules+notgz-1ubuntu0.20.04.2) ...
+Setting up apache2 (2.4.41-4ubuntu3.3) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+info: Switch to mpm prefork for package libapache2-mod-php7.4
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+info: Executing deferred 'a2enmod php7.4' for package libapache2-mod-php7.4
+Enabling module php7.4.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for php7.4-cli (7.4.3-4ubuntu2.4) ...
+Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+```
+
+#### 11. Žiniatinklio konfigūravimas
+
+Peržiūriu konfigūracinį failą:
+
+```
+osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -v -e ^# -e ^$
+DefaultRuntimeDir ${APACHE_RUN_DIR}
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+HostnameLookups Off
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+Include ports.conf
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Require all denied
+</Directory>
+<Directory /usr/share>
+    AllowOverride None
+    Require all granted
+</Directory>
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+AccessFileName .htaccess
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+IncludeOptional conf-enabled/*.conf
+IncludeOptional sites-enabled/*.conf
+```
+
+Sukuriu žiniatinklio failą:
+
+```
+osboxes@ldvm1:~$ cd /var/www
+
+osboxes@ldvm1:/var/www$ echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php
+-bash: index.php: Permission denied
+
+osboxes@ldvm1:/var/www$ sudo bash -c 'echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php'
+
+osboxes@ldvm1:/var/www$ ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
+-rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
+```
+
+
+#### 12. Vykdomi procesai
+
+Peržiūriu kompiuteryje vykdomus procesus:
+
+```
+osboxes@ldvm1:/var/www$ ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.1 171048 11292 ?        Ss   04:59   0:07 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    04:59   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   04:59   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   04:59   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   04:59   0:00 [kworker/0:0H-kblockd]
+root           8  0.0  0.0      0     0 ?        I<   04:59   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    04:59   0:00 [ksoftirqd/0]
+root          10  0.0  0.0      0     0 ?        I    04:59   0:00 [rcu_sched]
+root          11  0.0  0.0      0     0 ?        S    04:59   0:00 [migration/0]
+root          12  0.0  0.0      0     0 ?        S    04:59   0:00 [idle_inject/0]
+root          14  0.0  0.0      0     0 ?        S    04:59   0:00 [cpuhp/0]
+root          15  0.0  0.0      0     0 ?        S    04:59   0:00 [cpuhp/1]
+root          16  0.0  0.0      0     0 ?        S    04:59   0:00 [idle_inject/1]
+root          17  0.0  0.0      0     0 ?        S    04:59   0:00 [migration/1]
+root          18  0.0  0.0      0     0 ?        S    04:59   0:00 [ksoftirqd/1]
+root          20  0.0  0.0      0     0 ?        I<   04:59   0:00 [kworker/1:0H-kblockd]
+root          21  0.0  0.0      0     0 ?        S    04:59   0:00 [kdevtmpfs]
+root          22  0.0  0.0      0     0 ?        I<   04:59   0:00 [netns]
+root          23  0.0  0.0      0     0 ?        S    04:59   0:00 [rcu_tasks_kthre]
+root          24  0.0  0.0      0     0 ?        S    04:59   0:00 [rcu_tasks_rude_]
+root          25  0.0  0.0      0     0 ?        S    04:59   0:00 [rcu_tasks_trace]
+root          26  0.0  0.0      0     0 ?        S    04:59   0:00 [kauditd]
+root          27  0.0  0.0      0     0 ?        S    04:59   0:00 [khungtaskd]
+root          28  0.0  0.0      0     0 ?        S    04:59   0:00 [oom_reaper]
+root          29  0.0  0.0      0     0 ?        I<   04:59   0:00 [writeback]
+root          30  0.0  0.0      0     0 ?        S    04:59   0:00 [kcompactd0]
+root          31  0.0  0.0      0     0 ?        SN   04:59   0:00 [ksmd]
+root          32  0.0  0.0      0     0 ?        SN   04:59   0:00 [khugepaged]
+root          79  0.0  0.0      0     0 ?        I<   04:59   0:00 [kintegrityd]
+root          80  0.0  0.0      0     0 ?        I<   04:59   0:00 [kblockd]
+root          81  0.0  0.0      0     0 ?        I<   04:59   0:00 [blkcg_punt_bio]
+root          82  0.0  0.0      0     0 ?        I<   04:59   0:00 [tpm_dev_wq]
+root          83  0.0  0.0      0     0 ?        I<   04:59   0:00 [ata_sff]
+root          84  0.0  0.0      0     0 ?        I<   04:59   0:00 [md]
+root          85  0.0  0.0      0     0 ?        I<   04:59   0:00 [edac-poller]
+root          86  0.0  0.0      0     0 ?        I<   04:59   0:00 [devfreq_wq]
+root          87  0.0  0.0      0     0 ?        S    04:59   0:00 [watchdogd]
+root          89  0.0  0.0      0     0 ?        I<   04:59   0:00 [pm_wq]
+root          91  0.0  0.0      0     0 ?        S    04:59   0:00 [kswapd0]
+root          92  0.0  0.0      0     0 ?        S    04:59   0:00 [ecryptfs-kthrea]
+root          94  0.0  0.0      0     0 ?        I<   04:59   0:00 [kthrotld]
+root          95  0.0  0.0      0     0 ?        I<   04:59   0:00 [acpi_thermal_pm]
+root          97  0.0  0.0      0     0 ?        I<   04:59   0:00 [vfio-irqfd-clea]
+root          98  0.0  0.0      0     0 ?        I<   04:59   0:00 [ipv6_addrconf]
+root         107  0.0  0.0      0     0 ?        I<   04:59   0:00 [kstrp]
+root         110  0.0  0.0      0     0 ?        I<   04:59   0:00 [zswap-shrink]
+root         111  0.0  0.0      0     0 ?        I<   04:59   0:00 [kworker/u5:0]
+root         116  0.0  0.0      0     0 ?        I<   04:59   0:00 [charger_manager]
+root         152  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_0]
+root         153  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_0]
+root         154  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_1]
+root         155  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_1]
+root         156  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_2]
+root         157  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_2]
+root         158  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_3]
+root         159  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_3]
+root         160  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_4]
+root         161  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_4]
+root         162  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_5]
+root         163  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_5]
+root         164  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_6]
+root         165  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_6]
+root         166  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_7]
+root         167  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_7]
+root         168  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_8]
+root         169  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_8]
+root         170  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_9]
+root         171  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_9]
+root         172  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_10]
+root         173  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_10]
+root         174  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_11]
+root         175  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_11]
+root         176  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_12]
+root         177  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_12]
+root         178  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_13]
+root         179  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_13]
+root         180  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_14]
+root         181  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_14]
+root         182  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_15]
+root         183  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_15]
+root         184  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_16]
+root         185  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_16]
+root         186  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_17]
+root         187  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_17]
+root         188  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_18]
+root         189  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_18]
+root         190  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_19]
+root         191  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_19]
+root         192  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_20]
+root         193  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_20]
+root         194  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_21]
+root         195  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_21]
+root         196  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_22]
+root         197  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_22]
+root         198  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_23]
+root         199  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_23]
+root         200  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_24]
+root         201  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_24]
+root         202  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_25]
+root         203  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_25]
+root         204  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_26]
+root         205  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_26]
+root         206  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_27]
+root         207  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_27]
+root         208  0.0  0.0      0     0 ?        S    04:59   0:00 [scsi_eh_28]
+root         209  0.0  0.0      0     0 ?        I<   04:59   0:00 [scsi_tmf_28]
+root         210  0.0  0.0      0     0 ?        S    05:00   0:00 [scsi_eh_29]
+root         211  0.0  0.0      0     0 ?        I<   05:00   0:00 [scsi_tmf_29]
+root         241  0.0  0.0      0     0 ?        I<   05:00   0:00 [kworker/1:1H-kblockd]
+root         260  0.0  0.0      0     0 ?        I<   05:00   0:00 [kworker/0:1H-kblockd]
+root         262  0.0  0.0      0     0 ?        S    05:00   0:00 [jbd2/sda1-8]
+root         263  0.0  0.0      0     0 ?        I<   05:00   0:00 [ext4-rsv-conver]
+root         303  0.0  1.4  68212 14848 ?        S<s  05:00   0:00 /lib/systemd/systemd-journald
+root         336  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop0]
+root         337  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop1]
+root         339  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop2]
+root         341  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop3]
+root         343  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop4]
+root         345  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop5]
+root         347  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop6]
+root         349  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop7]
+root         351  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop8]
+root         353  0.0  0.5  24476  5240 ?        Ss   05:00   0:01 /lib/systemd/systemd-udevd
+root         354  0.0  0.0      0     0 ?        S<   05:00   0:00 [loop9]
+root         401  0.0  0.0      0     0 ?        I<   05:00   0:00 [cryptd]
+root         416  0.0  0.0      0     0 ?        I<   05:00   0:00 [ttm_swap]
+root         526  0.0  0.0      0     0 ?        S    05:00   0:00 [jbd2/sda4-8]
+root         527  0.0  0.0      0     0 ?        I<   05:00   0:00 [ext4-rsv-conver]
+root         529  0.0  0.0      0     0 ?        S    05:00   0:00 [jbd2/sda2-8]
+root         530  0.0  0.0      0     0 ?        I<   05:00   0:00 [ext4-rsv-conver]
+systemd+     543  0.0  1.0  24628 10932 ?        Ss   05:00   0:00 /lib/systemd/systemd-resolved
+systemd+     544  0.0  0.5  90456  5264 ?        Ssl  05:00   0:00 /lib/systemd/systemd-timesyncd
+root         639  0.0  0.0   2548   764 ?        Ss   05:00   0:00 /usr/sbin/acpid
+avahi        643  0.0  0.3   8616  3080 ?        Ss   05:00   0:00 avahi-daemon: running [ldvm1.local]
+root         644  0.0  0.2  18052  2912 ?        Ss   05:00   0:00 /usr/sbin/cron -f
+root         645  0.0  0.6  37076  6612 ?        Ss   05:00   0:00 /usr/sbin/cupsd -l
+message+     646  0.0  0.4   8448  4532 ?        Ss   05:00   0:03 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfil
+root         647  0.1  1.3 691504 14028 ?        Ssl  05:00   0:09 /usr/sbin/NetworkManager --no-daemon
+root         655  0.0  0.3  81836  3676 ?        Ssl  05:00   0:00 /usr/sbin/irqbalance --foreground
+root         656  0.0  1.5  47960 15608 ?        Ss   05:00   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         659  0.0  0.9 253224  9936 ?        Ssl  05:00   0:00 /usr/lib/policykit-1/polkitd --no-debug
+syslog       661  0.0  0.3 224356  3964 ?        Ssl  05:00   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         662  0.0  2.1 775596 21364 ?        Ssl  05:00   0:02 /usr/lib/snapd/snapd
+root         664  0.0  0.6  16864  6848 ?        Ss   05:00   0:00 /lib/systemd/systemd-logind
+root         667  0.0  0.2  13688  2952 ?        Ss   05:00   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        691  0.0  0.0   8352   276 ?        S    05:00   0:00 avahi-daemon: chroot helper
+root         727  0.0  0.2 369876  2700 ?        Sl   05:00   0:02 /usr/sbin/VBoxService
+root         747  0.0  0.9 180448  9472 ?        Ssl  05:00   0:00 /usr/sbin/cups-browsed
+lp           753  0.0  0.5  15340  5480 ?        S    05:00   0:00 /usr/lib/cups/notifier/dbus dbus://
+lp           755  0.0  0.5  15340  5396 ?        S    05:00   0:00 /usr/lib/cups/notifier/dbus dbus://
+root         759  0.0  0.7 240024  7908 ?        Ssl  05:00   0:00 /usr/sbin/ModemManager --filter-policy=strict
+root         769  0.0  1.6 126484 16964 ?        Ssl  05:00   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-s
+root         774  0.0  0.1  17068  1756 tty1     Ss+  05:00   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         785  0.0  0.4  12184  4688 ?        Ss   05:00   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         795  0.0  0.6  13984  6776 ?        Ss   05:00   0:00 sshd: osboxes [priv]
+whoopsie     800  0.0  1.1 327344 11052 ?        Ssl  05:00   0:00 /usr/bin/whoopsie -f
+kernoops     813  0.0  0.0  11264   288 ?        Ss   05:00   0:00 /usr/sbin/kerneloops --test
+kernoops     815  0.0  0.0  11264   448 ?        Ss   05:00   0:00 /usr/sbin/kerneloops
+osboxes      870  0.0  0.7  18816  7884 ?        Ss   05:00   0:00 /lib/systemd/systemd --user
+osboxes      871  0.0  0.1 169084  1460 ?        S    05:00   0:00 (sd-pam)
+osboxes      876  0.0  0.7 289056  7776 ?        Ssl  05:00   0:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+osboxes      878  0.0  1.8 520180 18360 ?        SNsl 05:00   0:00 /usr/libexec/tracker-miner-fs
+rtkit        897  0.0  0.2 152940  2880 ?        SNsl 05:00   0:00 /usr/libexec/rtkit-daemon
+osboxes      906  0.0  0.3   7396  3684 ?        Ss   05:00   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfi
+osboxes      914  0.0  0.6 248328  6156 ?        Ssl  05:00   0:00 /usr/libexec/gvfsd
+osboxes      932  0.0  0.5 316524  5376 ?        Sl   05:00   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+osboxes      941  0.0  0.8 326072  8448 ?        Ssl  05:00   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+root         944  0.0  0.9 395580  9948 ?        Ssl  05:00   0:00 /usr/lib/udisks2/udisksd
+osboxes     1048  0.0  0.6 246576  6308 ?        Ssl  05:00   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+osboxes     1052  0.0  0.4  14116  4492 ?        S    05:00   0:01 sshd: osboxes@pts/0
+osboxes     1056  0.0  0.5 244508  5544 ?        Ssl  05:00   0:00 /usr/libexec/gvfs-goa-volume-monitor
+osboxes     1057  0.0  0.4  19532  4852 pts/0    Ss   05:00   0:01 -bash
+osboxes     1061  0.0  2.1 554892 21704 ?        Sl   05:00   0:00 /usr/libexec/goa-daemon
+osboxes     1075  0.0  0.8 327284  8460 ?        Sl   05:00   0:00 /usr/libexec/goa-identity-service
+osboxes     1077  0.0  0.5 244300  5116 ?        Ssl  05:00   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+osboxes     1084  0.0  0.7 325360  7692 ?        Ssl  05:00   0:00 /usr/libexec/gvfs-afc-volume-monitor
+root        1091  0.0  0.8 252560  8288 ?        Ssl  05:00   0:01 /usr/lib/upower/upowerd
+mysql       7528  0.5 34.6 1741604 347880 ?      Ssl  05:11   0:41 /usr/sbin/mysqld
+root       16712  0.0  0.0      0     0 ?        I    05:17   0:05 [kworker/0:1-events]
+root       16815  0.0  0.0      0     0 ?        I    05:31   0:01 [kworker/u4:1-events_power_efficient]
+osboxes    17288  0.0  0.6 170884  6424 ?        Ssl  06:28   0:00 /usr/libexec/gvfsd-metadata
+root       17329  0.0  0.0      0     0 ?        I    06:29   0:01 [kworker/1:3-events]
+root       17481  0.0  0.0      0     0 ?        I    06:52   0:00 [kworker/u4:2-events_unbound]
+root       17500  0.1  0.0      0     0 ?        I    06:53   0:01 [kworker/1:0-mm_percpu_wq]
+root       17559  0.0  0.0      0     0 ?        I    06:55   0:00 [kworker/0:0-memcg_kmem_cache]
+root       17560  0.0  2.1 209008 21680 ?        Ss   06:55   0:00 /usr/sbin/apache2 -k start
+www-data   17561  0.0  1.3 209524 13908 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
+www-data   17562  0.0  1.1 209492 11884 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
+www-data   17563  0.0  1.6 209540 16400 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
+www-data   17564  0.0  1.6 209540 16396 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
+www-data   17565  0.0  1.4 209540 14936 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
+www-data   17568  0.0  1.1 209492 11884 ?        S    06:55   0:00 /usr/sbin/apache2 -k start
+osboxes    17615  0.0  0.3  20324  3576 pts/0    R+   07:16   0:00 ps -aux
+
+osboxes@ldvm1:/var/www$ ps -aux | wc -l
+195
+```
+Tikrinimo metu veikė 195 procesai.
+
+Peržvelgiu komandos `ps` galimybes:
+
+```
+osboxes@ldvm1:/var/www$ man ps | wc -l
+942
+
+osboxes@ldvm1:/var/www$ man ps 
+(1)                                                      User Commands                                                      PS(1)
+
+NAME
+       ps - report a snapshot of the current processes.
+
+SYNOPSIS
+       ps [options]
+
+DESCRIPTION
+       ps displays information about a selection of the active processes.  If you want a repetitive update of the selection and the
+       displayed information, use top(1) instead.
+
+  ...
+```
+Daug skaitymo, apibendrinu iškeliu rezultatuose.
+
+Procesų peržiūra su `top`:
+
+```
+osboxes@ldvm1:/var/www$ top
+
+top - 08:25:10 up  3:23,  1 user,  load average: 1.26, 1.02, 0.57
+Tasks: 218 total,   1 running, 217 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  7.9 us, 20.5 sy,  0.0 ni, 46.1 id, 24.5 wa,  0.0 hi,  1.0 si,  0.0 st
+MiB Mem :    980.6 total,    215.7 free,    458.5 used,    306.5 buff/cache
+MiB Swap:   8582.0 total,   8410.5 free,    171.5 used.    368.8 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    241 root       0 -20       0      0      0 I   0.3   0.0   0:02.60 kworker/1:1H-kblockd
+   1052 osboxes   20   0   14116   2540   1840 S   0.3   0.3   0:02.47 sshd
+   7528 mysql     20   0 1741604 237416   6120 S   0.3  23.6   1:01.97 mysqld
+  17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
+```
+
+#### 13. Prievadų skenavimas
+
+Nuskenuoju kaimyno prievadus:
+
+```
+osboxes@ldvm1:~$ sudo nmap -sS 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 08:56 EDT
+Nmap scan report for kaimynas (192.168.10.13)
+Host is up (0.00043s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.69 seconds
+```
+Situacija nepasikeitė, nes jame nieko neinstaliavau.
+
+
+### Sunkumai ir atsakymai į klausimus
+
+#### 0. Infrastruktūros paruošimas
+
+* Programinės įrangos diegimui reikėjo atnaujinti jos duomenų bazę:
+
+`$ sudo apt update`
+
+** Kitaip neįsidiegė bent jau `openssh-server`:
+
+```
+osboxes@osboxes:~$ sudo apt install openssh-server
+sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  ncurses-term openssh-sftp-server ssh-import-id
+Suggested packages:
+  molly-guard monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+0 upgraded, 4 newly installed, 0 to remove and 58 not upgraded.
+Need to get 688 kB of archives.
+After this operation, 6,010 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
+Err:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.1
+  404  Not Found [IP: 91.189.91.39 80]
+Err:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.1
+  404  Not Found [IP: 91.189.91.39 80]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]
+Fetched 259 kB in 1s (204 kB/s)
+E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-sftp-server_8.2p1-4ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.39 80]
+E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-server_8.2p1-4ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.39 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+```
+
+** Ataujinu programinės įrangos duomenų bazę:
+
+```
+osboxes@osboxes:~$ sudo apt update
+sudo apt update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [254 kB]
+  ...
+Get:53 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4,032 B]
+Get:54 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,780 B]
+Get:55 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Fetched 8,419 kB in 14s (588 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+262 packages can be upgraded. Run 'apt list --upgradable' to see them.
+```
+
+* SSH serverio instaliavimas
+
+** Ieškau programinės įrangos paketo:
+
+```
+osboxes@osboxes:~$ apt search ssh
+Sorting...
+Full Text Search...
+4pane/focal 6.0-1build1 amd64
+  four-pane detailed-list file manager
+
+agent-transfer/focal 0.41-1ubuntu1 amd64
+  copy a secret key from GnuPG's gpg-agent to OpenSSH's ssh-agent
+  ...
+zsnapd-rcmd/focal,focal 0.8.11h-1ubuntu2 all
+  Remote sshd command checker for ZFS Snapshot Daemon
+
+zssh/focal 1.5c.debian.1-7build2 amd64
+  interactive file transfers over ssh
+
+```
+
+** Diegiu `OpenSSH` serverį:
+
+```
+osboxes@osboxes:~$ sudo apt install openssh-server
+sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  ncurses-term openssh-client openssh-sftp-server ssh-import-id
+Suggested packages:
+  keychain libpam-ssh monkeysphere ssh-askpass molly-guard
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+The following packages will be upgraded:
+  openssh-client
+1 upgraded, 4 newly installed, 0 to remove and 261 not upgraded.
+Need to get 1,100 kB/1,359 kB of archives.
+After this operation, 6,010 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-client amd64 1:8.2p1-4ubuntu0.2 [671 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.2 [51.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.2 [377 kB]
+Fetched 1,100 kB in 3s (350 kB/s)       
+Preconfiguring packages ...
+(Reading database ... 145074 files and directories currently installed.)
+  ...
+Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.2) ...
+Setting up openssh-server (1:8.2p1-4ubuntu0.2) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:q7is6Llfa0sm7vxlzTgNUUInZNOuRZ5EoRe1VPNEzNg root@osboxes (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:YG+pWX5PORlrH0zmBOcPAxGQOw5cpiE8HMISFrQ6xxA root@osboxes (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:SSYtj9I+qp5yLhXGL3AdbncN3lOnSbJ1C4cqQ2UzTkI root@osboxes (ED25519)
+
+Progress: [ 90%] [####################################################......]
+Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
+rescue-ssh.target is a disabled or a static unit, not starting it.
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ufw (0.36-6) ...
+```
+
+** Galbūt šitą žingsnį (aprašytą Moodle) verta apjungti su `2lab*.docx` aprašytais žingsniais į bendrą tekstą?
+
+
+#### 1. Tinklo sąsajos
+
+* Trūko `ifconfig` komandos, teko susiinstaliuoti paketą `net-tools`:
+
+```
+osboxes@osboxes:~$ ifconfig -a
+
+Command 'ifconfig' not found, but can be installed with:
+
+sudo apt install net-tools
+
+osboxes@osboxes:~$ sudo apt install net-tools
+[sudo] password for osboxes:
+  ...
+The following NEW packages will be installed:
+  net-tools
+  0 upgraded, 1 newly installed, 0 to remove and 58 not upgraded.
+  ...
+Progress: [ 80%] [##############################################............]
+```
+
+
+* LD apraše nenurodyta, su kuriuo naudotoju (neprivilegijuotu ar `root`) reiktų leisti komandas.
+  Dėl to leidau iš neprivilegijuoto, ir man gana daug sykių pritrūkavo teisių, prieš komandą tekdavo rašyti `sudo`.
+
+* Tinklo sąsajų (interfeisų) pavadinimai yra `enp0s3`, `enp0s8`, `lo`.
+
+* Pasirenkami sąsajų parametrai yra:
+
+```
+Usage:
+  ifconfig [-a] [-v] [-s] <interface> [[<AF>] <address>]
+  [add <address>[/<prefixlen>]]
+  [del <address>[/<prefixlen>]]
+  [[-]broadcast [<address>]]  [[-]pointopoint [<address>]]
+  [netmask <address>]  [dstaddr <address>]  [tunnel <address>]
+  [outfill <NN>] [keepalive <NN>]
+  [hw <HW> <address>]  [mtu <NN>]
+  [[-]trailers]  [[-]arp]  [[-]allmulti]
+  [multicast]  [[-]promisc]
+  [mem_start <NN>]  [io_addr <NN>]  [irq <NN>]  [media <type>]
+  [txqueuelen <NN>]
+  [[-]dynamic]
+  [up|down] ...
+```
+
+Patikrinu -- tinklo adresas tikrai nustatytas:
+
+```
+osboxes@osboxes:~$ ifconfig enp0s8
+ifconfig enp0s8
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 308  bytes 47526 (47.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+
+** `$ sudo apt install ifupdown`
+
+```
+root@osboxes:~# ifup enp0s8
+
+Command 'ifup' not found, but can be installed with:
+
+apt install ifupdown       # version 0.8.35ubuntu1, or
+apt install netscript-2.4  # version 5.5.3
+
+root@osboxes:~# apt install ifupdown
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  rdnssd
+The following NEW packages will be installed:
+  ifupdown
+0 upgraded, 1 newly installed, 0 to remove and 261 not upgraded.
+Need to get 60.5 kB of archives.
+After this operation, 234 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 ifupdown amd64 0.8.35ubuntu1 [60.5 kB]
+Progress: [ 80%] [##############################################............] 
+Fetched 60.5 kB in 1s (84.4 kB/s)   
+Selecting previously unselected package ifupdown.
+Processing triggers for man-db (2.9.1-1) ...online.target.wants/networking.service → /lib/systemd/system/networking.service.
+```
+
+
+#### 2. Tinklo vartai
+
+* Komanda `route -a` aprašyme netiksli. Reikėjo `route -n`:
+
+```
+osboxes@osboxes:~$ route -a
+route -a
+route: invalid option -- 'a'
+Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
+       route [-v] [-FC] {add|del|flush} ...  Modify routing table for AF.
+
+       route {-h|--help} [<AF>]              Detailed usage syntax for specified AF.
+       route {-V|--version}                  Display version/author and exit.
+
+        -v, --verbose            be verbose
+        -n, --numeric            don't resolve names
+        -e, --extend             display other/more information
+        -F, --fib                display Forwarding Information Base (default)
+        -C, --cache              display routing cache instead of FIB
+
+    ...
+```
+
+
+#### 3. Statinės tinklo konfigūracijos įrašymas
+
+
+* Tekstų redaktorius `nano` nesivaldo per VirtualBox _Serial-over-Telnet_ terminalinį prisijungimą:
+
+```
+osboxes@osboxes:~$ nano /etc/network/interfaces
+(B[ Directory '/etc/network' is not writable ](B  GNU nano 4.8                /etc/network/interfaces                           
+(B^G(B^O(B^W(B^K(B^J(B^C(B^X(B^R(B^\(B^U(B^T(B^_(B Go To Line[2A[20A: ^X  ^C^X^Z`^[^[^]^C^C^C
+```
+
+** Teko vietoj `nano` naudoti `echo ... >> ...`.
+
+* Tekstų redaktorius `vi` pagal nutylėjimą man veikia nekorektiškai:
+
+** Jei atsidarau failą, rodo tvarkingai:
+
+```
+root@osboxes:~# vi /etc/network/interfaces
+face enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+auto enp0s8
+~
+~
+~
+```
+
+** Bet jei paspaudžiu <Shift-O> (_Open new line_), tekstas susigadina:
+
+```
+[>4;menp0s8 inet static
+
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+auto enp0s8
+~
+~
+```
+
+* Teko surašyti statinę konfigūraciją iš CLI:
+
+```
+osboxes@osboxes:~$ sudo -i
+root@osboxes:~# 
+root@osboxes:~# echo 'iface enp0s8 inet static' >> /etc/network/interfaces
+root@osboxes:~# echo 'address 192.168.10.14' >> /etc/network/interfaces
+root@osboxes:~# echo 'netmask 255.255.255.0' >> /etc/network/interfaces
+root@osboxes:~# echo 'gateway 192.168.10.254' >> /etc/network/interfaces
+root@osboxes:~# 
+root@osboxes:~# cat /etc/network/interfaces
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+
+* Po perkrovimo tinklas vis tiek nesusikonfigūruoja:
+
+```
+osboxes@osboxes:~$ ifconfig enp0s8
+enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+** Papildau konfigūraciją `auto` eilute:
+
+```
+root@osboxes:~# cat /etc/network/interfaces
+auto enp0s8
+
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+
+** Po perkrovimo tinklas jau susikonfigūruoja automatiškai.
+** Galbūt reikėtų šitą patikslinti LD apraše?
+
+
+#### 4. Kompiuterio vardas
+
+* Komandinio apvalkalo eilutėje rodomas kompiuterio vardas nepasikeičia savaime.
+Tam naudotojui reikia persijungti iš naujo:
+
+```
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ su - osboxes
+Password: 
+osboxes@ldvm1:~$ 
+```
+
+* Pagal aprašą sukonfigūravus vardų išsprendimą, jis nustojo veikti:
+
+```
+osboxes@ldvm1:~$ ping www.google.lt
+ping: www.google.lt: Temporary failure in name resolution
+```
+
+** Pastebėjau, kad srautas nenukeliauja nei vienu žingsniu iš mašinos:
+
+```
+osboxes@ldvm1:~$ ping 193.219.146.19
+PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
+From 192.168.10.14 icmp_seq=1 Destination Host Unreachable
+From 192.168.10.14 icmp_seq=2 Destination Host Unreachable
+From 192.168.10.14 icmp_seq=3 Destination Host Unreachable
+^C
+--- 193.219.146.19 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4095ms
+```
+
+** Įtariau, kad tai įvyko dėl neveikiančiai sukonfigūruotų papildomų tinklo vartų --
+jie perima išorei skirto tinklo srauto nukreipimą ir toliau niekur nenukreipia:
+
+```
+osboxes@ldvm1:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+0.0.0.0         10.0.2.2        0.0.0.0         UG    20100  0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+
+** Veikimui atstatyti iš konfigūracijos pašalinau niekur nevedančius tinklo vartus:
+
+```
+osboxes@ldvm1:~$ sudo route delete default gw 192.168.10.254
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes: 
+osboxes@ldvm1:~$ 
+```
+
+** Tačiau duotos VU vardų išsprendimo tarnybinės stotys vis tiek lieka nepasiekiamios
+
+```
+osboxes@ldvm1:~$ ping 193.219.146.19
+sboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.146.19
+nameserver 193.219.146.2
+
+PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
+From 193.219.94.140 icmp_seq=1 Destination Host Unreachable
+^C
+
+osboxes@ldvm1:~$ ping 193.219.146.2
+PING 193.219.146.2 (193.219.146.2) 56(84) bytes of data.
+From 193.219.94.140 icmp_seq=1 Destination Host Unreachable
+From 193.219.94.140 icmp_seq=3 Destination Host Unreachable
+^C
+```
+
+** Prisiminiau, kad jos nebeveikia jau keletą metų.
+
+** Google https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf[susiradau]
+atnaujintas VU vardų išsprendimo tarnybines stotis:
+
+```
+$ PDF=https://t.co/anBJLWY7f6
+$ curl -L $PDF | pdftotext - - | grep -i DNS
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  135k  100  135k    0     0   243k      0 --:--:-- --:--:-- --:--:--  243k
+dns1=193.219.80.11
+dns2=193.219.80.2
+## DNS adresai
+
+osboxes@ldvm1:~$ ping 193.219.80.11
+PING 193.219.80.11 (193.219.80.11) 56(84) bytes of data.
+64 bytes from 193.219.80.11: icmp_seq=2 ttl=63 time=94.8 ms
+64 bytes from 193.219.80.11: icmp_seq=3 ttl=63 time=38.8 ms
+^C
+
+osboxes@ldvm1:~$ ping 193.219.80.2
+PING 193.219.80.2 (193.219.80.2) 56(84) bytes of data.
+64 bytes from 193.219.80.2: icmp_seq=1 ttl=63 time=38.8 ms
+64 bytes from 193.219.80.2: icmp_seq=2 ttl=63 time=35.5 ms
+^C
+```
+
+** Pagaliau gyvieji.
+
+** Perkonfigūruoju jas į veikiančias:
+
+```
+osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes: 
+
+osboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.80.11
+nameserver 193.219.80.2
+```
+
+* Nėra komandos `traceroute`:
+
+```
+osboxes@ldvm1:~$ traceroute 
+
+Command 'traceroute' not found, but can be installed with:
+
+sudo apt install inetutils-traceroute  # version 2:1.9.4-11, or
+sudo apt install traceroute            # version 1:2.1.0-2
+```
+
+** Teko įsidiegti:
+
+```
+osboxes@ldvm1:~$ sudo apt install traceroute
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  traceroute
+0 upgraded, 1 newly installed, 0 to remove and 261 not upgraded.
+  ...
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
+Processing triggers for man-db (2.9.1-1) ...
+```
+
+
+#### 5. Standartiniai maršrutai
+
+Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
+
+
+#### 6. Vidaus vardai:
+
+Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
+
+
+#### 7. Keli tinklo adresai
+
+Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
+
+
+#### 8. Programinės įrangos valdymas
+
+* Deja, nuoroda http://ubuntu.lt/render/Articles;aid,39 neveikia.
+
+** Teko susirasti kopiją Web-archyve: 
+   https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39
+
+
+#### 9. Įrankis `nmap`
+
+* Gautas atsakymas reiškia:
+
+** buvo nuskenuoti 999 TCP transportinio protokolo prievadai;
+** kaimyniniame kompiuteryje rastas tik vienas atviras prievadas;
+** ten veikia tinklo paslauga SSH;
+** kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.
+
+
+#### 10. Žiniatinklio paslauga ir klientas
+
+* Deja, apraše duota diegimo komanda neveikia:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install apache-ssl apache-common libapache-mod-php4 \
+>   mysql-server mysql-common mysql-client php4-mysql \
+>   libnet1 libnet1-dev libpcre3 libpcre3-dev autoconf automake1.9 \
+>   libpcap0.8 libpcap0.8-dev libmysqlclient15-dev \
+>   php4-gd php4-pear libphp-adodb vim gcc make \
+>   php4-cli libtool libssl-dev gcc-4.1 g++
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package apache-ssl is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'apache-ssl' has no installation candidate
+E: Unable to locate package apache-common
+E: Unable to locate package libapache-mod-php4
+E: Unable to locate package php4-mysql
+E: Unable to locate package automake1.9
+E: Couldn't find any package by glob 'automake1.9'
+E: Couldn't find any package by regex 'automake1.9'
+E: Unable to locate package libmysqlclient15-dev
+E: Unable to locate package php4-gd
+E: Unable to locate package php4-pear
+E: Unable to locate package php4-cli
+E: Unable to locate package gcc-4.1
+E: Couldn't find any package by glob 'gcc-4.1'
+E: Couldn't find any package by regex 'gcc-4.1'
+```
+
+** Kadangi nežinia, kokios tiksliai naujos development įrankių versijos tiks, juos išimu iš sąrašo:
+
+*** automake
+*** gcc
+
+** Juos įdiegsiu tada, kai jų prireiks.
+** O likusių įrankių pavadinimus parenku su `apt search ...`:
+
+*** apache2
+*** libapache2-mod-php7.4
+*** mysql-server
+*** php7.4-mysql
+*** default-libmysqlclient-dev
+*** php7.4-gd
+*** php-pear
+*** php-cli
+
+```
+osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
+  mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli
+```
+
+* Instaliavimo komandoje naudojamas `\` simbolis reiškia, kad tolimesnis komandos tekstas nukeliamas į kitą eilutę.
+
+
+#### 11. Žiniatinklio konfigūravimas
+
+* Peržiūrėti konfigūracinio failo nepavyksta dėl stipriai naujesnės Apache versijos:
+
+```
+osboxes@ldvm1:~$ cat /etc/apache-ssl/httpd.conf
+cat: /etc/apache-ssl/httpd.conf: No such file or directory
+```
+
+** Sprendimas -- paieškoti panašių failų naujuose paketuose:
+
+```
+osboxes@ldvm1:~$ dpkg --search /etc/apache2
+apache2, libapache2-mod-php7.4: /etc/apache2
+
+osboxes@ldvm1:~$ dpkg --listfiles apache2 | grep \\.conf
+/etc/apache2/apache2.conf
+/etc/apache2/conf-available/charset.conf
+/etc/apache2/conf-available/localized-error-pages.conf
+/etc/apache2/conf-available/other-vhosts-access-log.conf
+/etc/apache2/conf-available/security.conf
+/etc/apache2/conf-available/serve-cgi-bin.conf
+/etc/apache2/mods-available/actions.conf
+/etc/apache2/mods-available/alias.conf
+/etc/apache2/mods-available/autoindex.conf
+/etc/apache2/mods-available/cache_disk.conf
+/etc/apache2/mods-available/cgid.conf
+/etc/apache2/mods-available/dav_fs.conf
+/etc/apache2/mods-available/deflate.conf
+/etc/apache2/mods-available/dir.conf
+/etc/apache2/mods-available/http2.conf
+/etc/apache2/mods-available/info.conf
+/etc/apache2/mods-available/ldap.conf
+/etc/apache2/mods-available/mime.conf
+/etc/apache2/mods-available/mime_magic.conf
+/etc/apache2/mods-available/mpm_event.conf
+/etc/apache2/mods-available/mpm_prefork.conf
+/etc/apache2/mods-available/mpm_worker.conf
+/etc/apache2/mods-available/negotiation.conf
+/etc/apache2/mods-available/proxy.conf
+/etc/apache2/mods-available/proxy_balancer.conf
+/etc/apache2/mods-available/proxy_ftp.conf
+/etc/apache2/mods-available/proxy_html.conf
+/etc/apache2/mods-available/reqtimeout.conf
+/etc/apache2/mods-available/setenvif.conf
+/etc/apache2/mods-available/ssl.conf
+/etc/apache2/mods-available/status.conf
+/etc/apache2/mods-available/userdir.conf
+/etc/apache2/ports.conf
+/etc/apache2/sites-available/000-default.conf
+/etc/apache2/sites-available/default-ssl.conf
+```
+
+** Pasirenku `/etc/apache2/apache2.conf` ir filtruoju jį taip:
+
+```
+osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -C1 ^Include
+# Include module configuration:
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+
+# Include list of ports to listen on
+Include ports.conf
+
+--
+# Include generic snippets of statements
+IncludeOptional conf-enabled/*.conf
+
+# Include the virtual host configurations:
+IncludeOptional sites-enabled/*.conf
+```
+
+* Konfigūracija susideda iš:
+
+** trijų `<Directory ...>` dalių:
+*** `<Directory />`
+*** `<Directory /usr/share>`
+*** `<Directory /var/www/>`
+** vienos `<FilesMatch ...>` dalies, aprašančios `.ht` failus:
+*** `<FilesMatch "^\.ht">`
+** daugelio `.conf` failų, įtraukiamų direktyva `Include` arba `IncludeOptional`:
+```
+ /etc/apache2/
+ |-- apache2.conf
+ |       `--  ports.conf
+ |-- mods-enabled
+ |       |-- *.load
+ |       `-- *.conf
+ |-- conf-enabled
+ |       `-- *.conf
+ |-- sites-enabled
+ |       `-- *.conf
+```
+
+* Deja, puslapis per `https` dar neatsidaro:
+
+```
+osboxes@ldvm1:/var/www$ links https://ldvm1
+                                                                                                                                       
+                                                                                                                                       
+                                                  +------------- Error -------------+                                                  
+                                                  |                                 |                                                  
+                                                  |  Error loading https://ldvm1/:  |                                                  
+                                                  |                                 |                                                  
+                                                  |       Connection refused        |                                                  
+                                                  |                                 |                                                  
+                                                  |           [ Cancel ]            |                                                  
+                                                  +---------------------------------+                                                  
+                                                                                                                                       
+                                                                                                                                       
+```
+
+** Patikrinu Apache prievadus, trūksta `443/TCP` (https):
+
+```
+osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
+tcp6       0      0 :::80                   :::*                    LISTEN      11795/apache2
+```
+
+** Įjungiu pagal suguglintą dokumentaciją:
+
+```
+osboxes@ldvm1:/var/www$ sudo a2enmod ssl
+Considering dependency setenvif for ssl:
+Module setenvif already enabled
+Considering dependency mime for ssl:
+Module mime already enabled
+Considering dependency socache_shmcb for ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+
+osboxes@ldvm1:/var/www$ systemctl restart apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'apache2.service'.
+Authenticating as: osboxes.org,,, (osboxes)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+```
+
+** Patikrinu Apache prievadus dar sykį, `443/TCP` jau veikia:
+
+```
+osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
+tcp6       0      0 :::80                   :::*                    LISTEN      17145/apache2
+tcp6       0      0 :::443                  :::*                    LISTEN      17145/apache2
+```
+
+** Patikrinu su vietine naršykle, `https` dar neveikia:
+
+```
+                                                                                                                                       
+                                                                                                                                       
+                                                  +------------- Error -------------+                                                  
+                                                  |                                 |                                                  
+                                                  |  Error loading https://ldvm1/:  |                                                  
+                                                  |                                 |                                                  
+                                                  |            SSL error            |                                                  
+                                                  |                                 |                                                  
+                                                  |           [ Cancel ]            |                                                  
+                                                  +---------------------------------+                                                  
+                                                                                                                                       
+                                                                                                                                       
+```
+
+** Patikrinu su CLI įrankiu `wget`:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ wget -S https://ldvm1
+--2021-06-30 06:26:28--  https://ldvm1/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+OpenSSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+Unable to establish SSL connection.
+```
+
+** Pagal klaidą suguglinu patarimą tikrinti `443/TCP` prievadą be SSL.  Be SSL veikia:
+
+```
+osboxes@ldvm1:~$ wget -S http://ldvm1:443
+--2021-06-30 06:27:13--  http://ldvm1:443/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Date: Wed, 30 Jun 2021 10:27:13 GMT
+  Server: Apache/2.4.41 (Ubuntu)
+  Last-Modified: Wed, 30 Jun 2021 09:08:33 GMT
+  ETag: "2aa6-5c5f811269876"
+  Accept-Ranges: bytes
+  Content-Length: 10918
+  Vary: Accept-Encoding
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+  Content-Type: text/html
+Length: 10918 (11K) [text/html]
+Saving to: ‘index.html’
+
+index.html                        100%[============================================================>]  10.66K  --.-KB/s    in 0s      
+
+2021-06-30 06:27:13 (24.0 MB/s) - ‘index.html’ saved [10918/10918]
+```
+
+** Panašu, kad trūksta SSL-konfigūracinio failo. Tikrinu:
+
+```
+osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-available/
+total 20
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+-rw-r--r-- 1 root root 1332 Apr 13  2020 000-default.conf
+-rw-r--r-- 1 root root 6338 Apr 13  2020 default-ssl.conf
+
+osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-enabled/
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -> ../sites-available/000-default.conf
+```
+
+** Trūksta, įtraukiu konfigūracinį failą rankomis:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ sudo ln -s ../sites-available/default-ssl.conf
+
+osboxes@ldvm1:/etc/apache2/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 06:21 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -> ../sites-available/000-default.conf
+lrwxrwxrwx 1 root root   35 Jun 30 06:21 default-ssl.conf -> ../sites-available/default-ssl.conf
+
+osboxes@ldvm1:~$ systemctl restart apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'apache2.service'.
+Authenticating as: osboxes.org,,, (osboxes)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+```
+
+** Patikrinu; SSL lyg veikia, bet pyksta dėl SSL sertifikato:
+
+```
+osboxes@ldvm1:~$ wget -S https://ldvm1
+--2021-06-30 06:31:39--  https://ldvm1/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+ERROR: cannot verify ldvm1's certificate, issued by ‘CN=ubuntu’:
+  Self-signed certificate encountered.
+ERROR: no certificate subject alternative name matches
+    requested host name ‘ldvm1’.
+To connect to ldvm1 insecurely, use `--no-check-certificate'.
+```
+
+** Tikrinu su `links`:
+
+```
+osboxes@ldvm1:/var/www$ links https://ldvm1
+                                                                                                                                       
+                                                                                                                                       
+                     +----------------------------------- Invalid certificate -----------------------------------+                     
+                     |                                                                                           |                     
+                     |  The server ldvm1 doesn't have a valid certificate. Do you want to connect to it anyway?  |                     
+                     |                                                                                           |                     
+                     |                                [ No ]  [ Yes ]  [ Never ]                                 |                     
+                     +-------------------------------------------------------------------------------------------+                     
+                                                                                                                                       
+                                                                                                                                       
+```
+
+** Jau veikia:
+
+```
+osboxes@ldvm1:~$ links https://ldvm1
+
+                                                                                       Apache2 Ubuntu Default Page: It works (p1 of 2) 
+   Ubuntu Logo Apache2 Ubuntu Default Page                                                                                             
+   It works!                                                                                                                           
+                                                                                                                                       
+   This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems.     
+   It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it      
+   means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at              
+   /var/www/html/index.html) before continuing to operate your HTTP server.                                                            
+                                                                                                                                       
+   If you are a normal user of this web site and don't know what this page is about, this probably means that the site is currently    
+   unavailable due to maintenance. If the problem persists, please contact the site's administrator.                                   
+                                                                                                                                       
+   Configuration Overview                                                                                                              
+                                                                                                                                       
+  ...
+```
+
+* Panašu, kad rodomas ne mūsų sukurtas žiniatinklio failas, o Apache puslapis pagal nutylėjimą.
+
+** Tikrinu konfigūracijos failą:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[:space:]]*#'
+<IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+        SSLEngine on
+
+        SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem
+        SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+
+
+
+
+        <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+                SSLOptions +StdEnvVars
+        </Directory>
+
+
+    </VirtualHost>
+</IfModule>
+```
+
+** Dar vienas aprašo netikslumas:
+*** failą kūriau `/var/www` direktorijoje,
+*** o su šia Apache versija reikia kurti `/var/www/html` direktorijoje.
+
+** Perkeliu konfigūracinį failą:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ cd /var/www
+
+osboxes@ldvm1:/var/www$ ll
+total 16
+drwxr-xr-x  3 root root 4096 Jun 30 05:57 ./
+drwxr-xr-x 15 root root 4096 Jun 30 05:05 ../
+drwxr-xr-x  2 root root 4096 Jun 30 05:08 html/
+-rw-r--r--  1 root root   42 Jun 30 05:57 index.php
+
+osboxes@ldvm1:/var/www$ ls -Al html
+total 12
+-rw-r--r-- 1 root root 10918 Jun 30 05:08 index.html
+
+osboxes@ldvm1:/var/www$ sudo mv -v index.php html/
+renamed 'index.php' -> 'html/index.php'
+
+osboxes@ldvm1:/var/www$ ls -Al
+total 4
+drwxr-xr-x 2 root root 4096 Jun 30 06:51 html
+
+osboxes@ldvm1:/var/www$ ls -Al html
+total 16
+-rw-r--r-- 1 root root 10918 Jun 30 05:08 index.html
+-rw-r--r-- 1 root root    42 Jun 30 05:57 index.php
+```
+
+** Bet to irgi nepakanka, turinys nepasikeitė.
+
+** Galbūt `.html` failas turi prioritetą `.php` atžvilgiu. Pašalinu:
+
+```
+osboxes@ldvm1:/var/www$ sudo rm -v html/index.html 
+removed 'html/index.html'
+```
+
+** Patikrinu su `links`, pagaliau veikia!
+
+```
+osboxes@ldvm1:/var/www$ links https://ldvm1
+
+                                                                                                                                       
+   ldvm1 (kompiuterio vardas)                                                                                                          
+                                                                                                                                       
+```
+
+Mano žiniatinklio puslapis atidaromas tikro kompiuterio naršyklėje:
+
+image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png[]
+
+
+#### 12. Vykdomi procesai
+
+* Komandos `ps` galimybės:
+
+** Komanda parodo OS procesų „fotografiją“.
+** Pagal nutylėjimą rodomi tik esamo naudotojo procesai.
+** Komanda geba rodymui atrinkti:
+*** visus procesus;
+*** tik aktyvius (nemiegančius) procesus;
+*** tik su esamu terminalu susietus procesus;
+*** procesus pagal nurodytų PID sąrašą;
+*** procesus pagal nurodytą komandinę eilutę;
+*** pagal proceso savininko grupę (RGID);
+*** pagal proceso sesijos ID;
+*** pagal procesų terminalo vardus;
+*** pagal proceso savininko ID.
+** Komanda geba išvesti tokius proceso duomenis:
+*** PID, PGID, SID, TTY;
+*** proceso būseną;
+*** proceso žymes (_Flags_);
+*** starto laiką;
+*** vykdymo laiką;
+*** komandinius argumentus;
+*** SELinux _Security context_;
+*** LWP gijų (_Threads_) skaičių;
+*** LWP gijų ID;
+*** signalų būsenas;
+*** virtualios atminties būsenas;
+*** CPU registrų būsenas;
+*** aplinkos kintamuosius (_Environment variables_);
+*** ir dar dalį kitų.
+** Komanda geba išvesti duomenis skirtingais pavidalais:
+*** kombinuojant skirtingus laukus;
+*** tam yra keli skirtingi iš anksto nustatyti formatai (Long, Extra long, Jobs ir kt.);
+*** keičiant išvedamų eilučių plotį;
+*** keičiant išvedamų eilučių skaičių;
+*** rodant tik naudotojo nurodytus laukus;
+*** rūšiuojant išvestį pagal nurodytą lauką;
+*** apjungiant procesus į hierarchiją (medį) pagal PPID;
+*** įterpiant gijas tarp procesų;
+*** įjungiant/išjungiant laukų antraštes;
+*** ir dar keliais kitais.
+
+* Procesai, kurie naudoja daugiausiai kompiuterio resursų:
+
+** pagal CPU:
+
+```
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    241 root       0 -20       0      0      0 I   0.3   0.0   0:02.60 kworker/1:1H-kblockd
+   1052 osboxes   20   0   14116   2540   1840 S   0.3   0.3   0:02.47 sshd
+   7528 mysql     20   0 1741604 237416   6120 S   0.3  23.6   1:01.97 mysqld
+  17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
+  17865 root      20   0       0      0      0 I   0.3   0.0   0:00.66 kworker/u4:0-events_power_efficient
+  19713 osboxes   20   0   20516   4032   3252 R   0.3   0.4   0:00.17 top
+      1 root      20   0  171048   7952   4088 S   0.0   0.8   0:08.11 systemd
+```
+
+** pagal Memory:
+
+```
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   7528 mysql     20   0 1741604 229984   6104 S   0.3  22.9   1:02.20 mysqld
+  17852 root      20   0  344220  96800  56224 D  20.3   9.6   1:29.37 unattended-upgr
+  28602 osboxes   20   0  369752  22468  14712 S   0.0   2.2   0:00.10 tracker-store
+  26582 root      20   0  293720  16292  14336 S   0.0   1.6   0:00.07 packagekitd
+    662 root      20   0  775596  12832   3356 S   0.0   1.3   0:02.57 snapd
+    878 osboxes   39  19  520180  12196   6704 S   0.0   1.2   0:00.31 tracker-miner-f
+    303 root      19  -1   68212  11048  10172 S   0.0   1.1   0:01.00 systemd-journal
+  26973 root      20   0  313752  10652   9012 S   0.0   1.1   0:00.13 ModemManager
+```
+
+* Programa `top`:
+
+** Pateikia dinaminį sistemos (OS) vaizdą.
+** Pateikia sistemos informacijos reziume:
+*** sistemos laikrodį;
+*** _Uptime_;
+*** prisijungsių naudotojų sk.;
+*** tris vidutines sistemines apkrovas (_System load_);
+*** procesų skaičių:
+**** kiek iš viso;
+**** kiek veikia;
+**** kiek „miega“;
+**** kiek sustabdytų;
+**** kiek „zombių“.
+*** CPU laikus, skirtus:
+**** _User_ procesams;
+**** branduolio užduotims;
+**** prioritetų keitimui (_Niceness_);
+**** ramybės būsenai (_Idle_);
+**** aparatūros pertrauktims (_Hardware interrupts_);
+**** programinėms pertrauktims (_Software interrupts_);
+**** hiperizoriaus veiklai (_Host_ + kitų _Guest_ OS aptarnavimui).
+** Pateikia procesų ir branduolio gijų sąrašą stulpeliais:
+*** proceso identifikatorių PID;
+*** proceso savininką (naudotoją);
+*** proceso sisteminį prioritetą;
+*** proceso prioriteto pataisymą (_Niceness_);
+*** proceso Virt
+*** proceso Resident
+*** proceso Shared
+*** proceso būseną;
+*** proceso sunaudojamą CPU laiką %;
+*** proceso sunaudojamą atminties apimtį %;
+*** proceso vykdymo laiką;
+*** proceso komandos pavadinimą.
+** Rūšiuoja pagal pasirinktus stulpelius;
+
+
+#### 13. Prievadų skenavimas
+
+* Kaimyno prievadų situacija nepasikeitė, nes jame nieko neinstaliavau.
+
+** Nelabai tiksli instrukcija LD apraše.
+
+* Tačiau jei skenuoju iš kaimyno pirmąjį kompiuterį, situacija jau gerokai kita:
+
+** (Abu kompiuteriai sukurti iš bendro `.vdi` atvaizdo, todėl pradžioje jų tarnybos buvo identiškos)
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 09:09 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.00081s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
+```
+
+** Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba): `http` ir `https`
+
+
+### Duotosios Linux tinklo komandos aprašymas: `tcpdump`
+
+Tai tinklo srauto sniferis (paketų gaudyklė).
+
+. Įrankis skaito duomenų paketus (įprastai iš tinklo sąsajos) ir išveda jų dekoduotą aprašymą.
+. Tai jis daro paketams, atitinkantiems užduotą filtrą.
+. Jei filtro nėra, nuskaitomi visi paketai iš eilės.
+. Jei filtras yra, jis konstruojamas kaip loginė išraiška (angl. _Boolean expression_)
+. Ir atitinka `pcap-filter` sintaksę.
+. Įprastai išvestyje paketo aprašymas talpinamas į vieną, atskirą eilutę.
+. Įprastai jis pradedamas paketo laiko žyma.
+. Jei nurodyta parinktis `-w`, paketų turinys įrašomas į atskirą failą (vėlesnei analizei).
+. Jei nurodyta parinktis `-r`, paketai ne iš tinklo sąsajos, bet iš failo, sukurto naudojant `-w`.
+. Jei nurodyta parinktis `-V`, paketai nuskaitomi iš tų failų, kurių vardai yra surašyti šiai parinkčiai priskirtame faile.
+. Jei nurodytos abi parinktys: tiek skaitymo iš failo, tiek rašymo į failą,
+  atsiranda galimybė iš didžiulio _Capture_ failo išsipjauti tik reikiamas srauto dalis.
+. Įrankis geba išvardinti:
+.. gaudymui tinkamas sistemos tinklo sąsajas, `-D`;
+.. sąsajos palaikomus _Data-link_ tipus, `-L`;
+. Įrankis turi nuskaitymo valdymą pagal:
+.. tinklo sąsajos vardą, `-i`;
+.. tinklo sąsajos būseną (angl. _Promiscous_ arba ne), `-p`;
+.. pagautų paketų skaičių, `-c`;
+.. paketų keliavimo kryptį, `-Q`;
+.. fiksuotą paketo pradžios fragmentą, `-s`;
+.. išraišką, pateiktą atskirame faile, `-F` (praverčia, kai išraiškos apimtys labai išauga).
+. Įrankis turi išvesties valdymą:
+.. išjungti laiko žymas arba pakeisti jų tipą, `-t`;
+.. išjungti mazgų vardų išsprendimą, `-n`;
+.. įjungti Layer2 antraštes, `-e`;
+.. įjungti Layer2 _Payload_ išvestį ASCII formatu, `-A` (antraščių nutrynimą);
+.. įjungti buferizavimą kas eilutę, `-l`;
+.. įjungti paketo numerio rodymą, `-#`;
+.. įjungti tik trumpus paketų aprašymus, `-q`;
+.. įjungti išplėstinius paketų aprašymus, `-v`;
+.. įjungti absoliučius TCP sekų numerius, `-S` (vietoj santykinių);
+.. įjungti priverstinį tipą visų pagautų paketų dekodavime, `-T`;
+.. įjungti šešioliktainį paketo rodymą, `-x`;
+.. įjungti šešioliktainį ir ASCII rodymą, patalpintus greta, `-X`;
+.. pradėti naują failą pagal pagautų duomenų apimtį (MB), `-C`;
+.. pradėti naują failą pagal gaudymo trukmę (s), `-F`.
+. Ir dar kelios funkcijos.
+
+
+##### Pavyzdys
+
+Gaudymui tinkamos tinklinės sąsajos:
+
+```
+osboxes@ldvm1:~$ tcpdump -D
+1.enp0s3 [Up, Running]
+2.enp0s8 [Up, Running]
+3.lo [Up, Running, Loopback]
+4.any (Pseudo-device that captures on all interfaces) [Up, Running]
+5.bluetooth-monitor (Bluetooth Linux Monitor) [none]
+6.nflog (Linux netfilter log (NFLOG) interface) [none]
+7.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
+```
+
+Viso srauto gaudymas per Ethernet sąsają `enp0s3`:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s3
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+13:11:35.318610 IP ldvm1.57894 > pugot.canonical.com.ntp: NTPv4, Client, length 48
+13:11:35.320401 IP ldvm1.42866 > one.one.one.one.domain: Flags [S], seq 548142022, win 64240, options [mss 1460,sackOK,TS val 2727199959 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+13:11:35.503655 IP one.one.one.one.domain > ldvm1.42866: Flags [S.], seq 433792001, ack 548142023, win 65535, options [mss 1460], length 0
+13:11:35.504691 IP ldvm1.42866 > one.one.one.one.domain: Flags [.], ack 1, win 64240, length 0
+13:11:35.504781 IP ldvm1.42866 > one.one.one.one.domain: Flags [P.], seq 1:45, ack 1, win 64240, length 44 37324+ PTR? 4.94.189.91.in-addr.arpa. (42)
+13:11:35.505093 IP one.one.one.one.domain > ldvm1.42866: Flags [.], ack 45, win 65535, length 0
+13:11:35.539035 IP pugot.canonical.com.ntp > ldvm1.57894: NTPv4, Server, length 48
+  ...
+13:11:36.540981 IP ldvm1.42866 > one.one.one.one.domain: Flags [.], ack 189, win 64052, length 0
+^C
+17 packets captured
+```
+
+Tik vieno tinklo mazgo srauto gaudymas per kitą Ethernet sąsają:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 host kaimynas
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+13:13:14.220174 IP kaimynas > ldvm1: ICMP echo request, id 6, seq 1, length 64
+13:13:14.220232 IP ldvm1 > kaimynas: ICMP echo reply, id 6, seq 1, length 64
+13:13:16.035415 IP kaimynas > ldvm1: ICMP echo request, id 6, seq 2, length 64
+13:13:16.035500 IP ldvm1 > kaimynas: ICMP echo reply, id 6, seq 2, length 64
+13:13:17.419338 IP kaimynas > ldvm1: ICMP echo request, id 6, seq 3, length 64
+13:13:17.419440 IP ldvm1 > kaimynas: ICMP echo reply, id 6, seq 3, length 64
+13:13:20.046245 ARP, Request who-has kaimynas tell ldvm1, length 28
+13:13:20.047002 ARP, Reply kaimynas is-at 08:00:27:7a:d0:b7 (oui Unknown), length 46
+13:13:20.108060 ARP, Request who-has ldvm1 tell kaimynas, length 46
+13:13:20.108097 ARP, Reply ldvm1 is-at 08:00:27:40:2c:f6 (oui Unknown), length 28
+^C
+10 packets captured
+10 packets received by filter
+0 packets dropped by kernel
+
+```
+
+Viso potinklio srauto gaudymas išjungus vardų išsprendimą ir paketų laiko žymas:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 -n -t net 192.168.10.0/24 and not tcp port 22
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [S], seq 2018303758, win 64240, options [mss 1460,sackOK,TS val 3668928396 ecr 0,nop,wscale 7], length 0
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [S.], seq 3166645553, ack 2018303759, win 65160, options [mss 1460,sackOK,TS val 1348531861 ecr 3668928396,nop,wscale 7], length 0
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [.], ack 1, win 502, options [nop,nop,TS val 3668928397 ecr 1348531861], length 0
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [P.], seq 1:372, ack 1, win 502, options [nop,nop,TS val 3668928398 ecr 1348531861], length 371
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [.], ack 372, win 507, options [nop,nop,TS val 1348531862 ecr 3668928398], length 0
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [P.], seq 1:1281, ack 372, win 507, options [nop,nop,TS val 1348531869 ecr 3668928398], length 1280
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [.], ack 1281, win 501, options [nop,nop,TS val 3668928405 ecr 1348531869], length 0
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [P.], seq 372:452, ack 1281, win 501, options [nop,nop,TS val 3668928407 ecr 1348531869], length 80
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [FP.], seq 452:476, ack 1281, win 501, options [nop,nop,TS val 3668928407 ecr 1348531869], length 24
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [.], ack 452, win 507, options [nop,nop,TS val 1348531873 ecr 3668928407], length 0
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [P.], seq 1281:1552, ack 477, win 507, options [nop,nop,TS val 1348531876 ecr 3668928407], length 271
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [R], seq 2018304235, win 0, length 0
+^C
+12 packets captured
+12 packets received by filter
+0 packets dropped by kernel
+```
+
+Tik TCP paketų gaudymas per OAM tinklo sąsają:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+tcpdump: listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+^Z
+[1]+  Stopped                 sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+
+osboxes@ldvm1:~$ fg
+sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+^C
+142 packets captured
+143 packets received by filter
+0 packets dropped by kernel
+
+osboxes@ldvm1:~$ ls -l ldvm-tcp-srautas.pcap
+-rw-r--r-- 1 tcpdump tcpdump 21572 Jun 30 13:24 ldvm-tcp-srautas.pcap
+
+```
+
+Įrašytų į failą paketų skaičiaus patikrinimas
+
+```
+osboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap | wc -l
+reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
+142
+```
+
+Minimalus pirmųjų keturių paketų dekodavimas:
+
+```
+sboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap -t -n -q -c 4
+reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
+IP 192.168.10.14.22 > 192.168.10.8.40606: tcp 124
+IP 192.168.10.8.40606 > 192.168.10.14.22: tcp 0
+IP 192.168.10.8.40606 > 192.168.10.14.22: tcp 36
+IP 192.168.10.14.22 > 192.168.10.8.40606: tcp 124
+```
+
+
+### Viso darbo išvados
+
+. Laboratorinį darbą #2 (LD2) atlikti pavyko pilnai, tačiau kilo gana daug kliūčių.
+. Ko gero pagrindinė to priežastis: noras viską daryti be GUI, naudojant tik CLI įrankius.
+.. Dėl šio mano reikalavimo teko LD atlikimą pradėti nuo LD2, o LD1 dar laukia eilėje.
+. Tam reikėjo pramokti _VirtualBox_ įrankį ir suskriptinti automatinį VM kūrimą su tinkama konfigūracija:
+.. Antra tinklo sąsaja pageidautina `Host-only` tipo (skirta OAM: Operation, Administration, Management).
+.. Bendras `.vdi` disko atvaizdas, iš kurio galiu pakelt norimai daug VM neužimant Host talpyklos dubliuotomis `.vdi` kopijomis.
+.. Kiekvienai VM parinkau po 2 virtualius CPU ir po `1024` MiB RAM (mano Host teturi prieinamus 3.7 GiB RAM).
+.. Tam pasirinkau mano naudoją `CentOS` Linux ir man žinomą _Bash_ kalbą.
+.. Tai užtruko kelias paras: 150 _Commits_,
+   https://github.com/VGTU-ELF/TETfm-20/commits/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh[0LD-infra.sh]
+. Antra kliūčių priežastis: LD aprašas skirtas senesnei Ubuntu versijai (turbūt `18.04`):
+.. Dėl OS versijų skirtumo dalis programinių įrankių buvo sudiegti naujesnės versijos (pvz. PHP7 vietoj PHP4).
+.. O dalies (_Development_) įrankių diegimą atidėjau iki tyrimų, kuomet įrankių prireiks tiesiogiai.
+
