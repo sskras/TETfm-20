@@ -355,6 +355,24 @@ PING kaimynas (192.168.10.13) 56(84) bytes of data.
 ```
 
 
+#### 7. Keli tinklo adresai
+
+Nustatau antrąjį tinklo adresą:
+
+```
+osboxes@ldvm1:~$ ifconfig enp0s8:2 10.10.10.14/24
+SIOCSIFADDR: Operation not permitted
+SIOCSIFFLAGS: Operation not permitted
+SIOCSIFNETMASK: Operation not permitted
+
+osboxes@ldvm1:~$ sudo ifconfig enp0s8:2 10.10.10.14/24
+```
+```
+osboxes@ldvm2:~$ sudo ifconfig enp0s8:2 10.10.10.13/24
+```
+
+
+
 #### X. SSH serverio instaliavimas
 
 
