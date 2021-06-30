@@ -213,6 +213,7 @@ ldvm1
 ```
 
 Patikrinu -- vardas pasikeitė:
+
 ```
 osboxes@osboxes:~$ hostname
 ldvm1
@@ -229,17 +230,6 @@ nameserver 193.219.146.19
 nameserver 193.219.146.2
 ```
 
-Perkonfigūruoju jas į veikiančias:
-
-```
-osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
-sudo: unable to resolve host ldvm1: Temporary failure in name resolution
-[sudo] password for osboxes: 
-
-osboxes@ldvm1:~$ cat /etc/resolv.conf 
-nameserver 193.219.80.11
-nameserver 193.219.80.2
-```
 
 #### 5. Standartiniai maršrutai
 
@@ -1728,7 +1718,7 @@ enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-** Papildau konfigūraciją:
+** Papildau konfigūraciją `auto` eilute:
 
 ```
 root@osboxes:~# cat /etc/network/interfaces
@@ -1743,32 +1733,40 @@ gateway 192.168.10.254
 ** Po perkrovimo tinklas jau susikonfigūruoja automatiškai.
 ** Galbūt reikėtų šitą patikslinti LD apraše?
 
+
+#### 4. Kompiuterio vardas
+
 * Komandinio apvalkalo eilutėje rodomas kompiuterio vardas nepasikeičia savaime.
-Tam reikia persijungti iš naujo:
+Tam naudotojui reikia persijungti iš naujo:
 
 ```
+osboxes@osboxes:~$ 
 osboxes@osboxes:~$ su - osboxes
 Password: 
 osboxes@ldvm1:~$ 
 ```
 
-* Sukonfigūravus vardų išsprendimą, jis nustojo veikti:
+* Pagal aprašą sukonfigūravus vardų išsprendimą, jis nustojo veikti:
 
 ```
-osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
-^Z^H^Hsudo: unable to resolve host ldvm1: Temporary failure in name resolution
+osboxes@ldvm1:~$ ping www.google.lt
+ping: www.google.lt: Temporary failure in name resolution
+```
 
-osboxes@ldvm1:~$ ping 193.219.80.11
-PING 193.219.80.11 (193.219.80.11) 56(84) bytes of data.
+** Pastebėjau, kad srautas nenukeliauja nei vienu žingsniu iš mašinos:
+
+```
+osboxes@ldvm1:~$ ping 193.219.146.19
+PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
 From 192.168.10.14 icmp_seq=1 Destination Host Unreachable
 From 192.168.10.14 icmp_seq=2 Destination Host Unreachable
+From 192.168.10.14 icmp_seq=3 Destination Host Unreachable
 ^C
---- 193.219.80.11 ping statistics ---
-5 packets transmitted, 0 received, +2 errors, 100% packet loss, time 4045ms
-
+--- 193.219.146.19 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4095ms
 ```
 
-** Tai įvyko dėl neveikiančiai sukonfigūruotų papildomų tinklo vartų --
+** Įtariau, kad tai įvyko dėl neveikiančiai sukonfigūruotų papildomų tinklo vartų --
 jie perima išorei skirto tinklo srauto nukreipimą ir toliau niekur nenukreipia:
 
 ```
@@ -1788,10 +1786,10 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 osboxes@ldvm1:~$ sudo route delete default gw 192.168.10.254
 sudo: unable to resolve host ldvm1: Temporary failure in name resolution
 [sudo] password for osboxes: 
+osboxes@ldvm1:~$ 
 ```
 
-** Tačiau duotos VU vardų išpsrendimo tarnybinės stotys nepasiekiamios
-(ir nebeveikia jau keletą metų):
+** Tačiau duotos VU vardų išsprendimo tarnybinės stotys vis tiek lieka nepasiekiamios
 
 ```
 osboxes@ldvm1:~$ ping 193.219.146.19
@@ -1810,7 +1808,9 @@ From 193.219.94.140 icmp_seq=3 Destination Host Unreachable
 ^C
 ```
 
-** https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf[Susiradau]
+** Prisiminiau, kad jos nebeveikia jau keletą metų.
+
+** Google https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf[susiradau]
 atnaujintas VU vardų išsprendimo tarnybines stotis:
 
 ```
@@ -1837,6 +1837,18 @@ PING 193.219.80.2 (193.219.80.2) 56(84) bytes of data.
 ```
 
 ** Pagaliau gyvieji.
+
+** Perkonfigūruoju jas į veikiančias:
+
+```
+osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes: 
+
+osboxes@ldvm1:~$ cat /etc/resolv.conf 
+nameserver 193.219.80.11
+nameserver 193.219.80.2
+```
 
 * Nėra komandos `traceroute`:
 
