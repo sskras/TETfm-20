@@ -359,7 +359,7 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 ```
 
 
-** `$ sudo apt install ifupdown`
+* Trūko dar vieno paketo: `ifupdown`
 +
 ```
 root@osboxes:~# ifup enp0s8
@@ -423,9 +423,7 @@ osboxes@osboxes:~$ nano /etc/network/interfaces
 (B^G(B^O(B^W(B^K(B^J(B^C(B^X(B^R(B^\(B^U(B^T(B^_(B Go To Line[2A[20A: ^X  ^C^X^Z`^[^[^]^C^C^C
 ```
 
-** Teko vietoj `nano` naudoti `echo ... >> ...`.
-
-* Tekstų redaktorius `vi` pagal nutylėjimą man veikia nekorektiškai:
+* Tekstų redaktorius `vi` pagal nutylėjimą net per SSH man veikia nekorektiškai:
 
 ** Jei atsidarau failą, rodo tvarkingai:
 +
@@ -574,10 +572,10 @@ From 193.219.94.140 icmp_seq=3 Destination Host Unreachable
 ```
 
 ** Prisiminiau, kad jos nebeveikia jau keletą metų.
-+
+
 ** Google https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf[susiradau]
 atnaujintas VU vardų išsprendimo tarnybines stotis:
-
++
 ```
 $ PDF=https://t.co/anBJLWY7f6
 $ curl -L $PDF | pdftotext - - | grep -i DNS
@@ -601,7 +599,7 @@ PING 193.219.80.2 (193.219.80.2) 56(84) bytes of data.
 ^C
 ```
 
-** Pagaliau gyvieji.
+** Pagaliau radom pasiekiamas tarnybines stotis.
 
 ** Perkonfigūruoju jas į veikiančias:
 +
@@ -725,10 +723,12 @@ E: Couldn't find any package by regex 'gcc-4.1'
 *** php7.4-gd
 *** php-pear
 *** php-cli
+** Ir įdiegiu:
 +
 ```
 osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
-  mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli
+  mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd \
+  php-pear php-cli
 ```
 
 * Instaliavimo komandoje naudojamas `\` simbolis reiškia, kad tolimesnis komandos tekstas nukeliamas į kitą eilutę.
@@ -958,7 +958,7 @@ lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -> ../sites-available/
 ```
 
 ** Trūksta, įtraukiu konfigūracinį failą rankomis:
-
++
 ```
 osboxes@ldvm1:/etc/apache2/sites-enabled$ sudo ln -s ../sites-available/default-ssl.conf
 
@@ -1306,10 +1306,10 @@ Tai tinklo srauto sniferis (paketų gaudyklė).
 . Ir dar kelios funkcijos.
 
 
-##### Pavyzdys
+#### Pavyzdys
 
 Gaudymui tinkamos tinklinės sąsajos:
-+
+
 ```
 osboxes@ldvm1:~$ tcpdump -D
 1.enp0s3 [Up, Running]
@@ -1322,7 +1322,7 @@ osboxes@ldvm1:~$ tcpdump -D
 ```
 
 Viso srauto gaudymas per Ethernet sąsają `enp0s3`:
-+
+
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s3
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
@@ -1342,7 +1342,7 @@ listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 bytes
 ```
 
 Tik vieno tinklo mazgo srauto gaudymas per kitą Ethernet sąsają:
-+
+
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 host kaimynas
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
@@ -1391,7 +1391,7 @@ IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [R], seq 2018304235, win 0, le
 ```
 
 Tik TCP paketų gaudymas per OAM tinklo sąsają:
-+
+
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
 tcpdump: listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
@@ -1411,7 +1411,7 @@ osboxes@ldvm1:~$ ls -l ldvm-tcp-srautas.pcap
 ```
 
 Įrašytų į failą paketų skaičiaus patikrinimas
-+
+
 ```
 osboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap | wc -l
 reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
@@ -1419,7 +1419,7 @@ reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
 ```
 
 Minimalus pirmųjų keturių paketų dekodavimas:
-+
+
 ```
 sboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap -t -n -q -c 4
 reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
