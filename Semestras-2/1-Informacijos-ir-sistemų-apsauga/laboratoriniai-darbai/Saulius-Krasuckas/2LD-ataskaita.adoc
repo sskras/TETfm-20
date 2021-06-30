@@ -1728,6 +1728,187 @@ osboxes@ldvm1:/var/www$ links https://ldvm1
                                                                                                                                        
 ```
 
+** Patikrinu Apache prievadus, trūksta `443/TCP` (https):
+
+```
+osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
+tcp6       0      0 :::80                   :::*                    LISTEN      11795/apache2
+```
+
+** Įjungiu pagal suguglintą dokumentaciją:
+
+```
+osboxes@ldvm1:/var/www$ sudo a2enmod ssl
+Considering dependency setenvif for ssl:
+Module setenvif already enabled
+Considering dependency mime for ssl:
+Module mime already enabled
+Considering dependency socache_shmcb for ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+
+osboxes@ldvm1:/var/www$ systemctl restart apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'apache2.service'.
+Authenticating as: osboxes.org,,, (osboxes)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+```
+
+** Patikrinu Apache prievadus dar sykį, `443/TCP` jau veikia:
+
+```
+osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
+tcp6       0      0 :::80                   :::*                    LISTEN      17145/apache2
+tcp6       0      0 :::443                  :::*                    LISTEN      17145/apache2
+```
+
+** Patikrinu su vietine naršykle, `https` dar neveikia:
+
+```
+                                                                                                                                       
+                                                                                                                                       
+                                                  +------------- Error -------------+                                                  
+                                                  |                                 |                                                  
+                                                  |  Error loading https://ldvm1/:  |                                                  
+                                                  |                                 |                                                  
+                                                  |            SSL error            |                                                  
+                                                  |                                 |                                                  
+                                                  |           [ Cancel ]            |                                                  
+                                                  +---------------------------------+                                                  
+                                                                                                                                       
+                                                                                                                                       
+```
+
+** Patikrinu su CLI įrankiu `wget`:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ wget -S https://ldvm1
+--2021-06-30 06:26:28--  https://ldvm1/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+OpenSSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+Unable to establish SSL connection.
+```
+
+** Pagal klaidą suguglinu patarimą tikrinti `443/TCP` prievadą be SSL.  Be SSL veikia:
+
+```
+osboxes@ldvm1:~$ wget -S http://ldvm1:443
+--2021-06-30 06:27:13--  http://ldvm1:443/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Date: Wed, 30 Jun 2021 10:27:13 GMT
+  Server: Apache/2.4.41 (Ubuntu)
+  Last-Modified: Wed, 30 Jun 2021 09:08:33 GMT
+  ETag: "2aa6-5c5f811269876"
+  Accept-Ranges: bytes
+  Content-Length: 10918
+  Vary: Accept-Encoding
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+  Content-Type: text/html
+Length: 10918 (11K) [text/html]
+Saving to: ‘index.html’
+
+index.html                        100%[============================================================>]  10.66K  --.-KB/s    in 0s      
+
+2021-06-30 06:27:13 (24.0 MB/s) - ‘index.html’ saved [10918/10918]
+```
+
+** Panašu, kad trūksta SSL-konfigūracinio failo. Tikrinu:
+
+```
+osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-available/
+total 20
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+-rw-r--r-- 1 root root 1332 Apr 13  2020 000-default.conf
+-rw-r--r-- 1 root root 6338 Apr 13  2020 default-ssl.conf
+
+osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-enabled/
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -> ../sites-available/000-default.conf
+```
+
+** Trūksta, įtraukiu konfigūracinį failą rankomis:
+
+```
+osboxes@ldvm1:/etc/apache2/sites-enabled$ sudo ln -s ../sites-available/default-ssl.conf
+
+osboxes@ldvm1:/etc/apache2/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 06:21 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -> ../sites-available/000-default.conf
+lrwxrwxrwx 1 root root   35 Jun 30 06:21 default-ssl.conf -> ../sites-available/default-ssl.conf
+
+osboxes@ldvm1:~$ systemctl restart apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'apache2.service'.
+Authenticating as: osboxes.org,,, (osboxes)
+Password: 
+==== AUTHENTICATION COMPLETE ===
+```
+
+** Patikrinu; SSL lyg veikia, bet pyksta dėl SSL sertifikato:
+
+```
+osboxes@ldvm1:~$ wget -S https://ldvm1
+--2021-06-30 06:31:39--  https://ldvm1/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+ERROR: cannot verify ldvm1's certificate, issued by ‘CN=ubuntu’:
+  Self-signed certificate encountered.
+ERROR: no certificate subject alternative name matches
+    requested host name ‘ldvm1’.
+To connect to ldvm1 insecurely, use `--no-check-certificate'.
+```
+
+** Tikrinu su `links`:
+
+```
+                                                                                                                                       
+                                                                                                                                       
+                     +----------------------------------- Invalid certificate -----------------------------------+                     
+                     |                                                                                           |                     
+                     |  The server ldvm1 doesn't have a valid certificate. Do you want to connect to it anyway?  |                     
+                     |                                                                                           |                     
+                     |                                [ No ]  [ Yes ]  [ Never ]                                 |                     
+                     +-------------------------------------------------------------------------------------------+                     
+                                                                                                                                       
+                                                                                                                                       
+```
+
+** Jau veikia:
+
+```
+osboxes@ldvm1:~$ links https://ldvm1
+
+                                                                                       Apache2 Ubuntu Default Page: It works (p1 of 2) 
+   Ubuntu Logo Apache2 Ubuntu Default Page                                                                                             
+   It works!                                                                                                                           
+                                                                                                                                       
+   This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems.     
+   It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it      
+   means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at              
+   /var/www/html/index.html) before continuing to operate your HTTP server.                                                            
+                                                                                                                                       
+   If you are a normal user of this web site and don't know what this page is about, this probably means that the site is currently    
+   unavailable due to maintenance. If the problem persists, please contact the site's administrator.                                   
+                                                                                                                                       
+   Configuration Overview                                                                                                              
+                                                                                                                                       
+  ...
+```
+
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
