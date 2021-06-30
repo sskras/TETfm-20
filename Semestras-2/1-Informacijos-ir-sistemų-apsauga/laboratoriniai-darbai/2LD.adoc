@@ -223,13 +223,15 @@ Jei reikia įtraukti statinį įrašą, reiktų tai padaryti `/etc/network/inter
   |
   
   | ... ir žiniatinklio paslaugą su duomenų baze ir kitais įrankiais, kurie bus reikalingi tolimesniuose darbuose
-  | 
-`apt-get install apache-ssl apache-common libapache-mod-php4 \  +
-mysql-server mysql-common mysql-client php4-mysql \  +
-libnet1 libnet1-dev libpcre3 libpcre3-dev autoconf automake1.9 \  +
-libpcap0.8 libpcap0.8-dev libmysqlclient15-dev \  +
-php4-gd php4-pear libphp-adodb vim gcc make \  +
-php4-cli libtool libssl-dev gcc-4.1 g++`
+ a| 
+```
+apt-get install apache-ssl apache-common libapache-mod-php4 \
+  mysql-server mysql-common mysql-client php4-mysql \
+  libnet1 libnet1-dev libpcre3 libpcre3-dev autoconf automake1.9 \
+  libpcap0.8 libpcap0.8-dev libmysqlclient15-dev \
+  php4-gd php4-pear libphp-adodb vim gcc make \
+  php4-cli libtool libssl-dev gcc-4.1 g++
+```
   |
   
   | Ką reiškia naudojamas `\` simbolis ?
