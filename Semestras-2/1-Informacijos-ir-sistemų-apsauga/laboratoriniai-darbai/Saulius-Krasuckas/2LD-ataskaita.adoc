@@ -2542,8 +2542,127 @@ Tai tinklo srauto sniferis (paketų gaudyklė).
 
 ##### Pavyzdys
 
+Gaudymui tinkamos tinklinės sąsajos:
+
 ```
+osboxes@ldvm1:~$ tcpdump -D
+1.enp0s3 [Up, Running]
+2.enp0s8 [Up, Running]
+3.lo [Up, Running, Loopback]
+4.any (Pseudo-device that captures on all interfaces) [Up, Running]
+5.bluetooth-monitor (Bluetooth Linux Monitor) [none]
+6.nflog (Linux netfilter log (NFLOG) interface) [none]
+7.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
 ```
+
+Viso srauto gaudymas per Ethernet sąsają `enp0s3`:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s3
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+13:11:35.318610 IP ldvm1.57894 > pugot.canonical.com.ntp: NTPv4, Client, length 48
+13:11:35.320401 IP ldvm1.42866 > one.one.one.one.domain: Flags [S], seq 548142022, win 64240, options [mss 1460,sackOK,TS val 2727199959 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+13:11:35.503655 IP one.one.one.one.domain > ldvm1.42866: Flags [S.], seq 433792001, ack 548142023, win 65535, options [mss 1460], length 0
+13:11:35.504691 IP ldvm1.42866 > one.one.one.one.domain: Flags [.], ack 1, win 64240, length 0
+13:11:35.504781 IP ldvm1.42866 > one.one.one.one.domain: Flags [P.], seq 1:45, ack 1, win 64240, length 44 37324+ PTR? 4.94.189.91.in-addr.arpa. (42)
+13:11:35.505093 IP one.one.one.one.domain > ldvm1.42866: Flags [.], ack 45, win 65535, length 0
+13:11:35.539035 IP pugot.canonical.com.ntp > ldvm1.57894: NTPv4, Server, length 48
+  ...
+13:11:36.540981 IP ldvm1.42866 > one.one.one.one.domain: Flags [.], ack 189, win 64052, length 0
+^C
+17 packets captured
+```
+
+Tik vieno tinklo mazgo srauto gaudymas per kitą Ethernet sąsają:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 host kaimynas
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+13:13:14.220174 IP kaimynas > ldvm1: ICMP echo request, id 6, seq 1, length 64
+13:13:14.220232 IP ldvm1 > kaimynas: ICMP echo reply, id 6, seq 1, length 64
+13:13:16.035415 IP kaimynas > ldvm1: ICMP echo request, id 6, seq 2, length 64
+13:13:16.035500 IP ldvm1 > kaimynas: ICMP echo reply, id 6, seq 2, length 64
+13:13:17.419338 IP kaimynas > ldvm1: ICMP echo request, id 6, seq 3, length 64
+13:13:17.419440 IP ldvm1 > kaimynas: ICMP echo reply, id 6, seq 3, length 64
+13:13:20.046245 ARP, Request who-has kaimynas tell ldvm1, length 28
+13:13:20.047002 ARP, Reply kaimynas is-at 08:00:27:7a:d0:b7 (oui Unknown), length 46
+13:13:20.108060 ARP, Request who-has ldvm1 tell kaimynas, length 46
+13:13:20.108097 ARP, Reply ldvm1 is-at 08:00:27:40:2c:f6 (oui Unknown), length 28
+^C
+10 packets captured
+10 packets received by filter
+0 packets dropped by kernel
+
+```
+
+Viso potinklio srauto gaudymas išjungus vardų išsprendimą ir paketų laiko žymas:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 -n -t net 192.168.10.0/24 and not tcp port 22
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [S], seq 2018303758, win 64240, options [mss 1460,sackOK,TS val 3668928396 ecr 0,nop,wscale 7], length 0
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [S.], seq 3166645553, ack 2018303759, win 65160, options [mss 1460,sackOK,TS val 1348531861 ecr 3668928396,nop,wscale 7], length 0
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [.], ack 1, win 502, options [nop,nop,TS val 3668928397 ecr 1348531861], length 0
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [P.], seq 1:372, ack 1, win 502, options [nop,nop,TS val 3668928398 ecr 1348531861], length 371
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [.], ack 372, win 507, options [nop,nop,TS val 1348531862 ecr 3668928398], length 0
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [P.], seq 1:1281, ack 372, win 507, options [nop,nop,TS val 1348531869 ecr 3668928398], length 1280
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [.], ack 1281, win 501, options [nop,nop,TS val 3668928405 ecr 1348531869], length 0
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [P.], seq 372:452, ack 1281, win 501, options [nop,nop,TS val 3668928407 ecr 1348531869], length 80
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [FP.], seq 452:476, ack 1281, win 501, options [nop,nop,TS val 3668928407 ecr 1348531869], length 24
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [.], ack 452, win 507, options [nop,nop,TS val 1348531873 ecr 3668928407], length 0
+IP 192.168.10.14.443 > 192.168.10.13.56204: Flags [P.], seq 1281:1552, ack 477, win 507, options [nop,nop,TS val 1348531876 ecr 3668928407], length 271
+IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [R], seq 2018304235, win 0, length 0
+^C
+12 packets captured
+12 packets received by filter
+0 packets dropped by kernel
+```
+
+Tik TCP paketų gaudymas per OAM tinklo sąsają:
+
+```
+osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+tcpdump: listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+^Z
+[1]+  Stopped                 sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+
+osboxes@ldvm1:~$ fg
+sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+^C
+142 packets captured
+143 packets received by filter
+0 packets dropped by kernel
+
+osboxes@ldvm1:~$ ls -l ldvm-tcp-srautas.pcap
+-rw-r--r-- 1 tcpdump tcpdump 21572 Jun 30 13:24 ldvm-tcp-srautas.pcap
+
+```
+
+Įrašytų į failą paketų skaičiaus patikrinimas
+
+```
+osboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap | wc -l
+reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
+142
+```
+
+Minimalus pirmųjų keturių paketų dekodavimas:
+
+```
+sboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap -t -n -q -c 4
+reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
+IP 192.168.10.14.22 > 192.168.10.8.40606: tcp 124
+IP 192.168.10.8.40606 > 192.168.10.14.22: tcp 0
+IP 192.168.10.8.40606 > 192.168.10.14.22: tcp 36
+IP 192.168.10.14.22 > 192.168.10.8.40606: tcp 124
+```
+
 
 ### Viso darbo išvados
 
