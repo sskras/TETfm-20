@@ -456,6 +456,33 @@ PING 10.10.10.13 (10.10.10.13) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.687/0.902/1.196/0.215 ms
 ```
 
+#### 8. Programinės įrangos valdymas
+
+Šaltinių sąrašas:
+
+```
+osboxes@ldvm1:~$ cat /etc/apt/sources.list
+  ...
+osboxes@ldvm1:~$ cat /etc/apt/sources.list | grep -v -e ^#
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal main restricted
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal-updates main restricted
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal universe
+deb http://us.archive.ubuntu.com/ubuntu/ focal-updates universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ focal-updates multiverse
+
+deb http://us.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+
+
+deb http://security.ubuntu.com/ubuntu focal-security main restricted
+deb http://security.ubuntu.com/ubuntu focal-security universe
+deb http://security.ubuntu.com/ubuntu focal-security multiverse
+```
+
 
 #### X. SSH serverio instaliavimas
 
