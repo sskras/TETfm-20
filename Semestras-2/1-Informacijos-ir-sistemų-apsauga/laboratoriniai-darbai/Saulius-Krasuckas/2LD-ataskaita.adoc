@@ -13,10 +13,10 @@
 
 {nbsp}
 
-=== Magistro tiriamasis darbas 2
-Modulis ELKRM17203
+=== Informacijos ir sistemų apsauga
+Modulis ELKRM17209
 
-{nbsp}
+==== Laboratorinio darbo nr 2. ataskaita
 
 {nbsp}
 
