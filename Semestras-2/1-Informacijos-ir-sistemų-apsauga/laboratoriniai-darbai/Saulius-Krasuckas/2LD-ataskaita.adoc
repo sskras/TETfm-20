@@ -1146,6 +1146,69 @@ Processing triggers for php7.4-cli (7.4.3-4ubuntu2.4) ...
 Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
 ```
 
+#### 11. Žiniatinklio konfigūravimas
+
+Peržiūriu konfigūracinį failą:
+
+```
+osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -v -e ^# -e ^$
+DefaultRuntimeDir ${APACHE_RUN_DIR}
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+HostnameLookups Off
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+Include ports.conf
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Require all denied
+</Directory>
+<Directory /usr/share>
+    AllowOverride None
+    Require all granted
+</Directory>
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+AccessFileName .htaccess
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+IncludeOptional conf-enabled/*.conf
+IncludeOptional sites-enabled/*.conf
+```
+
+Sukuriu žiniatinklio failą:
+
+```
+osboxes@ldvm1:~$ cd /var/www
+
+osboxes@ldvm1:/var/www$ echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php
+-bash: index.php: Permission denied
+
+osboxes@ldvm1:/var/www$ sudo bash -c 'echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php'
+
+osboxes@ldvm1:/var/www$ ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
+-rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
+```
+
 
 #### 12. Vykdomi procesai
 
@@ -1394,69 +1457,6 @@ MiB Swap:   8582.0 total,   8410.5 free,    171.5 used.    368.8 avail Mem
   17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
 ```
 
-
-#### 11. Žiniatinklio konfigūravimas
-
-Peržiūriu konfigūracinį failą:
-
-```
-osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -v -e ^# -e ^$
-DefaultRuntimeDir ${APACHE_RUN_DIR}
-PidFile ${APACHE_PID_FILE}
-Timeout 300
-KeepAlive On
-MaxKeepAliveRequests 100
-KeepAliveTimeout 5
-User ${APACHE_RUN_USER}
-Group ${APACHE_RUN_GROUP}
-HostnameLookups Off
-ErrorLog ${APACHE_LOG_DIR}/error.log
-LogLevel warn
-IncludeOptional mods-enabled/*.load
-IncludeOptional mods-enabled/*.conf
-Include ports.conf
-<Directory />
-    Options FollowSymLinks
-    AllowOverride None
-    Require all denied
-</Directory>
-<Directory /usr/share>
-    AllowOverride None
-    Require all granted
-</Directory>
-<Directory /var/www/>
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-</Directory>
-AccessFileName .htaccess
-<FilesMatch "^\.ht">
-    Require all denied
-</FilesMatch>
-LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
-LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
-LogFormat "%h %l %u %t \"%r\" %>s %O" common
-LogFormat "%{Referer}i -> %U" referer
-LogFormat "%{User-agent}i" agent
-IncludeOptional conf-enabled/*.conf
-IncludeOptional sites-enabled/*.conf
-```
-
-Sukuriu žiniatinklio failą:
-
-```
-osboxes@ldvm1:~$ cd /var/www
-
-osboxes@ldvm1:/var/www$ echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php
--bash: index.php: Permission denied
-
-osboxes@ldvm1:/var/www$ sudo bash -c 'echo "<html> ldvm1 (kompiuterio vardas) </html>" > index.php'
-
-osboxes@ldvm1:/var/www$ ls -l
-total 8
-drwxr-xr-x 2 root root 4096 Jun 30 05:08 html
--rw-r--r-- 1 root root   42 Jun 30 05:57 index.php
-```
 
 #### X. SSH serverio instaliavimas
 
