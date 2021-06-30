@@ -15,7 +15,9 @@ Host kompiuteris bus senokas `HP EliteBook 8460p` laptopas:
 * CPU: i5-2520M @ 2.50GHz
 * RAM: 3692 MiB (prieinami OS)
 
-Host OS bus `CentOS 7.9.2009`.
+* Host OS bus `CentOS 7.9.2009`
+* Guest OS bus `Ubuntu 20.04.2 LTS`
+
 Pradinę VM konfigūraciją sukuriu savo https://github.com/VGTU-ELF/TETfm-20/blob/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L54[_Bash_ skripto] pagalba.
 
 Jis parsisiunčia oficialių `.vdi` failą iš https://sourceforge.net/projects/osboxes/files, sukuria naują VM ir prijungia nurodytą diską.
@@ -2514,7 +2516,7 @@ Tai tinklo srauto sniferis (paketų gaudyklė).
   atsiranda galimybė iš didžiulio _Capture_ failo išsipjauti tik reikiamas srauto dalis.
 . Įrankis geba išvardinti:
 .. gaudymui tinkamas sistemos tinklo sąsajas, `-D`;
-.. sąsajos palaikomus _Data-link_ tipus;
+.. sąsajos palaikomus _Data-link_ tipus, `-L`;
 . Įrankis turi nuskaitymo valdymą pagal:
 .. tinklo sąsajos vardą, `-i`;
 .. tinklo sąsajos būseną (angl. _Promiscous_ arba ne), `-p`;
