@@ -442,6 +442,20 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 ```
 
+Išbandau antrus IP adresus, veikia:
+
+```
+osboxes@ldvm1:~$ ping 10.10.10.13
+PING 10.10.10.13 (10.10.10.13) 56(84) bytes of data.
+64 bytes from 10.10.10.13: icmp_seq=1 ttl=64 time=1.20 ms
+64 bytes from 10.10.10.13: icmp_seq=2 ttl=64 time=0.823 ms
+64 bytes from 10.10.10.13: icmp_seq=3 ttl=64 time=0.687 ms
+^C
+--- 10.10.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 0.687/0.902/1.196/0.215 ms
+```
+
 
 #### X. SSH serverio instaliavimas
 
