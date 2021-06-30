@@ -1908,7 +1908,6 @@ Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
 
 #### 10. Žiniatinklio paslauga ir klientas
 
-
 * Deja, apraše duota diegimo komanda neveikia:
 
 ```
@@ -1946,6 +1945,7 @@ E: Couldn't find any package by regex 'gcc-4.1'
 *** automake
 *** gcc
 
+** Juos įdiegsiu tada, kai jų prireiks.
 ** O likusių įrankių pavadinimus parenku su `apt search ...`:
 
 *** apache2
@@ -1963,6 +1963,7 @@ osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
 ```
 
 * Instaliavimo komandoje naudojamas `\` simbolis reiškia, kad tolimesnis komandos tekstas nukeliamas į kitą eilutę.
+
 
 #### 11. Žiniatinklio konfigūravimas
 
