@@ -1575,7 +1575,25 @@ Reading state information... Done
 
 #### 1. Tinklo sąsajos
 
-* Trūko `ifconfig` komandos, teko susiinstaliuoti.
+* Trūko `ifconfig` komandos, teko susiinstaliuoti paketą `net-tools`:
+
+```
+osboxes@osboxes:~$ ifconfig -a
+
+Command 'ifconfig' not found, but can be installed with:
+
+sudo apt install net-tools
+
+osboxes@osboxes:~$ sudo apt install net-tools
+[sudo] password for osboxes:
+  ...
+The following NEW packages will be installed:
+  net-tools
+  0 upgraded, 1 newly installed, 0 to remove and 58 not upgraded.
+  ...
+Progress: [ 80%] [##############################################............]
+```
+
 
 * LD apraše nenurodyta, su kuriuo naudotoju (neprivilegijuotu ar `root`) reiktų leisti komandas.
   Dėl to leidau iš neprivilegijuoto, ir man gana daug sykių pritrūkavo teisių, prieš komandą tekdavo rašyti `sudo`.
@@ -1615,27 +1633,6 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-
-* Trūko paketų:
-
-** `$ sudo apt install net-tools`
-
-```
-osboxes@osboxes:~$ ifconfig -a
-
-Command 'ifconfig' not found, but can be installed with:
-
-sudo apt install net-tools
-
-osboxes@osboxes:~$ sudo apt install net-tools
-[sudo] password for osboxes:
-  ...
-The following NEW packages will be installed:
-  net-tools
-  0 upgraded, 1 newly installed, 0 to remove and 58 not upgraded.
-  ...
-Progress: [ 80%] [##############################################............]
-```
 
 ** `$ sudo apt install ifupdown`
 
