@@ -524,6 +524,18 @@ Security details are available in apt-secure(8).
                                         This APT has Super Cow Powers.
 ```
 
+Skaitau `apt-get` aprašymą.
+https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39[Puslapis] aprašo šias sub-komandas:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install ...
+sudo apt-get remove ...
+sudo apt-get remove --purge ...
+```
+
 
 #### X. SSH serverio instaliavimas
 
@@ -876,6 +888,11 @@ The following NEW packages will be installed:
 update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
 Processing triggers for man-db (2.9.1-1) ...
 ```
+
+* Deja, nuoroda http://ubuntu.lt/render/Articles;aid,39 neveikia.
+
+** Teko susirasti kopiją Web-archyve: https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39
+
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
