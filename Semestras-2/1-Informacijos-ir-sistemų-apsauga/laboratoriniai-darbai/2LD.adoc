@@ -253,7 +253,7 @@ apt-get install apache-ssl apache-common libapache-mod-php4 \
  a|
 ```
 cd /var/www
-echo "<html> kompiuterio vardas <html>" > index.php
+echo "<html> kompiuterio vardas </html>" > index.php
 ```
   |
   
