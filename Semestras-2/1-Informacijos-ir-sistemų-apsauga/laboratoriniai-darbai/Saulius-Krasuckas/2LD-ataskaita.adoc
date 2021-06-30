@@ -16,7 +16,7 @@ Host kompiuteris bus senokas `HP EliteBook 8460p` laptopas:
 * RAM: 3692 MiB (prieinami OS)
 
 Host OS bus `CentOS 7.9.2009`.
-Pradinę VM konfigūraciją sukuriu savo https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L78[_Bash_ skripto] pagalba.
+Pradinę VM konfigūraciją sukuriu savo https://github.com/VGTU-ELF/TETfm-20/blob/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L54[_Bash_ skripto] pagalba.
 
 Jis parsisiunčia oficialių `.vdi` failą iš https://sourceforge.net/projects/osboxes/files, sukuria naują VM ir prijungia nurodytą diską.
 
@@ -2514,7 +2514,9 @@ TODO
 .. Antra tinklo sąsaja pageidautina `Host-only` tipo (skirta OAM: Operation, Administration, Management).
 .. Bendras `.vdi` disko atvaizdas, iš kurio galiu pakelt norimai daug VM neužimant Host talpyklos dubliuotomis `.vdi` kopijomis.
 .. Kiekvienai VM parinkau po 2 virtualius CPU ir po `1024` MiB RAM (mano Host teturi prieinamus 3.7 GiB RAM).
-.. Tai užtruko kelias paras.
+.. Tam pasirinkau mano naudoją `CentOS` Linux ir man žinomą _Bash_ kalbą.
+.. Tai užtruko kelias paras: 150 _Commits_,
+   https://github.com/VGTU-ELF/TETfm-20/commits/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh[0LD-infra.sh]
 . Antra kliūčių priežastis: LD aprašas skirtas senesnei Ubuntu versijai (turbūt `18.04`):
 .. Dėl OS versijų skirtumo dalis programinių įrankių buvo sudiegti naujesnės versijos (pvz. PHP7 vietoj PHP4).
 .. O dalies (_Development_) įrankių diegimą atidėjau iki tyrimų, kuomet įrankių prireiks tiesiogiai.
