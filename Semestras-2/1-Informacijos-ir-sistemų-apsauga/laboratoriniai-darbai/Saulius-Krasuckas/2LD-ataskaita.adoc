@@ -260,6 +260,7 @@ traceroute to 172.18.14.1 (172.18.14.1), 30 hops max, 60 byte packets
  6  *^C
 ```
 
+
 #### 6. Vidaus vardai:
 
 Aprašau kaimyninį VM:
@@ -1876,11 +1877,32 @@ update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptr
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
+
+#### 5. Standartiniai maršrutai
+
+Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
+
+
+#### 6. Vidaus vardai:
+
+Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
+
+
+#### 7. Keli tinklo adresai
+
+Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
+
+
+#### 8. Programinės įrangos valdymas
+
 * Deja, nuoroda http://ubuntu.lt/render/Articles;aid,39 neveikia.
 
-** Teko susirasti kopiją Web-archyve: https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39
+** Teko susirasti kopiją Web-archyve: 
+   https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39
+
 
 #### 10. Žiniatinklio paslauga ir klientas
+
 
 * Deja, apraše duota diegimo komanda neveikia:
 
