@@ -1678,6 +1678,25 @@ IncludeOptional conf-enabled/*.conf
 IncludeOptional sites-enabled/*.conf
 ```
 
+* Konfigūracija susideda iš:
+
+** trijų `<Directory ...>` dalių:
+*** `<Directory />`
+*** `<Directory /usr/share>`
+*** `<Directory /var/www/>`
+** vienos `<FilesMatch ...>` dalies, aprašančios `.ht` failus:
+*** <FilesMatch "^\.ht">
+** daugelio `.conf` failų, įtraukiamų direktyva `Include` arba `IncludeOptional`.
+*** `IncludeOptional mods-enabled/*.load`
+*** `IncludeOptional mods-enabled/*.conf`
+*** `Include ports.conf`
+*** `IncludeOptional conf-enabled/*.conf`
+*** `IncludeOptional sites-enabled/*.conf`
+
+
+```
+```
+
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
