@@ -536,6 +536,37 @@ sudo apt-get remove ...
 sudo apt-get remove --purge ...
 ```
 
+Atnaujinu programų sąrašus:
+
+```
+osboxes@ldvm1:~$ sudo apt-get update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24.5 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [58.1 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [500 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,081 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [238 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [283 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13.6 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [318 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [46.1 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [617 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [827 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [173 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [329 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [364 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [17.9 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6,472 B]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,780 B]
+Fetched 5,231 kB in 12s (435 kB/s)
+Reading package lists... Done
+```
+
 
 #### X. SSH serverio instaliavimas
 
