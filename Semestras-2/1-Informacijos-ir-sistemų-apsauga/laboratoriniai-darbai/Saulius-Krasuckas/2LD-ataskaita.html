@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Asciidoctor 1.5.4">
+  <title>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vilniaus Gedimino technikos
+    universitetas</title>
+  <link rel="stylesheet" href="https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css">
+</head>
+
+<body class="article">
+  <div id="header">
+    <h1>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vilniaus Gedimino technikos
+      universitetas</h1>
+  </div>
+  <div id="content">
+    <div class="sect1 text-center">
+      <h2 id="_elektronikos_fakultetas">Elektronikos fakultetas</h2>
+      <div class="sectionbody">
+        <div class="sect2">
+          <h3 id="_kompiuterijos_ir_ry_i_technologij_katedra">Kompiuterijos ir ryšių technologijų katedra</h3>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="_magistro_tiriamasis_darbas_2">Magistro tiriamasis darbas 2</h3>
+          <div class="paragraph">
+            <p>Modulis ELKRM17203</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph text-right">
+            <p><strong>Atliko:</strong> TETfm-20 grupės magistrantas<br> Saulius Krasuckas<br>
+              <strong>Tikrino:</strong> doc. dr. Darius Guršnys</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>&#160;</p>
+          </div>
+          <div class="paragraph">
+            <p>VILNIUS, 2021</p>
+          </div>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_darbo_tikslas">Darbo Tikslas</h3>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p>&#10003; Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.
+                  <br></p>
+              </li>
+              <li>
+                <p>&#10003; Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_trumpas_atlikto_darbo_apra_ymas">Trumpas atlikto darbo aprašymas</h3>
+          <div class="sect3">
+            <h4 id="_0_infrastrukt_ros_paruo_imas">0. Infrastruktūros paruošimas</h4>
+            <div class="sect4">
+              <h5 id="_1_ruo_imo_eiga">1. Ruošimo eiga</h5>
+              <div class="paragraph">
+                <p>Laboratorinei infrastruktūrai paruošti pasirinkau VirtualBox virtualizavimo
+                  įrankį (hipervizorių). Host kompiuteris bus senokas <code>HP EliteBook 8460p</code>                  laptopas:</p>
+              </div>
+              <div class="ulist">
+                <ul>
+                  <li>
+                    <p>CPU: i5-2520M @ 2.50GHz</p>
+                  </li>
+                  <li>
+                    <p>RAM: 3692 MiB (prieinami OS)</p>
+                  </li>
+                  <li>
+                    <p>Host OS bus <code>CentOS 7.9.2009</code></p>
+                  </li>
+                  <li>
+                    <p>Guest OS bus <code>Ubuntu 20.04.2 LTS</code></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="paragraph">
+                <p>Pradinę VM konfigūraciją sukuriu savo <a href="https://github.com/VGTU-ELF/TETfm-20/blob/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L54"><em>Bash</em> skripto</a>                  pagalba.</p>
+              </div>
+              <div class="paragraph">
+                <p>Jis parsisiunčia oficialių <code>.vdi</code> failą iš <a href="https://sourceforge.net/projects/osboxes/files"
+                    class="bare">https://sourceforge.net/projects/osboxes/files</a>,
+                  sukuria naują VM ir prijungia nurodytą diską.</p>
+              </div>
+              <div class="paragraph">
+                <p>Tuomet per Bootloader menu įrašau Linux branduolio argumentų eilutėje,
+                  kad jis atidarytų konsolę per <code>ttyS0</code>, virtualų <em>Serial/UART</em>                  įrenginį:</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code>        linux        &lt;...&gt; console=ttyS0,115200n8</code></pre>
+                </div>
+              </div>
+              <div class="paragraph">
+                <p>Ir galiausiai jungiuosi į <em>Guest</em> konsolę iš <em>Host</em>                  kompiuterio per <code>telnet</code>:</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code>telnet 127.0.0.1 23001</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="sect4">
+              <h5 id="_2_nic_konfig_ravimas_host_pus_je_nat_host_only">2. NIC konfigūravimas Host pusėje (NAT + Host-only)</h5>
+              <div class="paragraph">
+                <p>Pagal nutylėjimą Virtualbox VM gauna <code>NAT</code> tipo virtualią
+                  tinklo sąsają:
+                  <code>NIC 1:  &#8230;&#8203; Attachment: NAT &#8230;&#8203;</code></p>
+              </div>
+              <div class="paragraph">
+                <p><a href="https://www.virtualbox.org/manual/ch06.html#networkingmodes">VirtualBox dokumentacija</a>                  teigia:</p>
+              </div>
+              <div class="quoteblock">
+                <blockquote>
+                  <div class="imageblock">
+                    <div class="content">
+                      <img src="https://user-images.githubusercontent.com/74717106/123702651-11b3dd80-d86c-11eb-8254-c297b90459c3.png"
+                        alt="123702651 11b3dd80 d86c 11eb 8254 c297b90459c3">
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="paragraph">
+                <p>Panašu, kad su ja iš <em>Host OS</em> aš <em>Guest OS</em> nepasieksiu
+                  paprastai ir saugiai.</p>
+              </div>
+              <div class="paragraph">
+                <p>Todėl VM konfigūracijoje <a href="https://github.com/VGTU-ELF/TETfm-20/blob/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh#L89">pridedu papildomą tinklo interfeisą</a>,
+                  bet jau <code>Host-only</code> tipo:</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code>if [ -z "$HOSTONLY_IF" ]; then
+    VBoxManage hostonlyif create
+    VBoxManage list hostonlyifs | awk '/^Name/ {NEWEST_NIC=$2} END {print NEWEST_NIC}' | read HOSTONLY_IF
+fi
+VBoxManage hostonlyif ipconfig ${HOSTONLY_IF} --ip ${OAM_IP}
+VBoxManage list hostonlyifs | awk '/'${HOSTONLY_IF}'/ {START=1} START &amp;&amp; $0=="" {START=0} START {print}'</code></pre>
+                </div>
+              </div>
+              <div class="paragraph">
+                <p>Po šito VM gauna du interfeisus:</p>
+              </div>
+              <div class="listingblock">
+                <div class="content">
+                  <pre class="highlight"><code>$ VBoxManage showvminfo VGTU-2021-IiSA-saukrs-LDVM1 | grep NIC.[12]
+NIC 1:                       MAC: 080027EB204C, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none</code></pre>
+                </div>
+              </div>
+              <div style="page-break-after: always;"></div>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_1_tinklo_s_sajos">1. Tinklo sąsajos</h4>
+            <div class="paragraph">
+              <p>Tikrinu vardus.</p>
+            </div>
+            <div class="paragraph">
+              <p>Peržiūriu pasirenkamis sąsajų parametrus.</p>
+            </div>
+            <div class="paragraph">
+              <p>Peržiūriu sąsajų parametrus.</p>
+            </div>
+            <div class="paragraph">
+              <p>Nustatau tinklo adresą.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_2_tinklo_vartai">2. Tinklo vartai</h4>
+            <div class="paragraph">
+              <p>Nustatau vartus.</p>
+            </div>
+            <div class="paragraph">
+              <p>Patikrinu; vartai nustatyti.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_3_statin_s_tinklo_konfig_racijos_ra_ymas">3. Statinės tinklo konfigūracijos įrašymas</h4>
+            <div class="paragraph">
+              <p>Tinklo adresai prieš perkrovimą.</p>
+            </div>
+            <div class="paragraph">
+              <p>Po pekrovimo.</p>
+            </div>
+            <div class="paragraph">
+              <p>Surašau statinę konfigūraciją naudodamas <code>echo &#8230;&#8203; &gt;&gt; &#8230;&#8203;</code>.</p>
+            </div>
+            <div class="paragraph">
+              <p>Aktyvuoju tinklo konfigūraciją iš failo.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_4_kompiuterio_vardas">4. Kompiuterio vardas</h4>
+            <div class="paragraph">
+              <p>Nustatau kompiuterio vardą.</p>
+            </div>
+            <div class="paragraph">
+              <p>Įrašau kompiuterio vardą į konfigūracinį failą.</p>
+            </div>
+            <div class="paragraph">
+              <p>Patikrinu&#8201;&#8212;&#8201;vardas pasikeitė.</p>
+            </div>
+            <div class="paragraph">
+              <p>Konfigūruoju vardų išsprendimo tarnybines stotis.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_5_standartiniai_mar_rutai">5. Standartiniai maršrutai</h4>
+            <div class="paragraph">
+              <p>Nustatau maršrutą per kaimyną.</p>
+            </div>
+            <div class="paragraph">
+              <p>Išbandau jį.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_6_vidaus_vardai">6. Vidaus vardai.</h4>
+            <div class="paragraph">
+              <p>Aprašau kaimyninį VM.</p>
+            </div>
+            <div class="paragraph">
+              <p>Vardo išsprendimas.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_7_keli_tinklo_adresai">7. Keli tinklo adresai</h4>
+            <div class="paragraph">
+              <p>Nustatau antrąjį tinklo adresą.</p>
+            </div>
+            <div class="paragraph">
+              <p>Patikrinu, nusistatė abiejuose kompiuteriuose.</p>
+            </div>
+            <div class="paragraph">
+              <p>Išbandau antrus IP adresus, veikia.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_8_programin_s_rangos_valdymas">8. Programinės įrangos valdymas</h4>
+            <div class="paragraph">
+              <p>Šaltinių sąrašas.</p>
+            </div>
+            <div class="paragraph">
+              <p><code>apt-get</code> raktai.</p>
+            </div>
+            <div class="paragraph">
+              <p>Skaitau <code>apt-get</code> aprašymą.
+                <a href="https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39">Puslapis</a>                aprašo šias sub-komandas:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install ...
+sudo apt-get remove ...
+sudo apt-get remove --purge ...</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Atnaujinu programų sąrašus.</p>
+            </div>
+            <div class="paragraph">
+              <p>Instaliuoju <code>nmap</code>.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_9_rankis_code_nmap_code">9. Įrankis <code>nmap</code></h4>
+            <div class="paragraph">
+              <p>Skenuoju kaimyną.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_10_iniatinklio_paslauga_ir_klientas">10. Žiniatinklio paslauga ir klientas</h4>
+            <div class="paragraph">
+              <p>Instaliuoju <code>links</code>.</p>
+            </div>
+            <div class="paragraph">
+              <p>Instaliuoju žiniatinklio paslaugą, duomenų bazę ir kitus įrankius.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_11_iniatinklio_konfig_ravimas">11. Žiniatinklio konfigūravimas</h4>
+            <div class="paragraph">
+              <p>Peržiūriu konfigūracinį failą.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_12_vykdomi_procesai">12. Vykdomi procesai</h4>
+            <div class="paragraph">
+              <p>Peržiūriu kompiuteryje vykdomus procesus.</p>
+            </div>
+            <div class="paragraph">
+              <p>Tikrinimo metu veikė 195 procesai.</p>
+            </div>
+            <div class="paragraph">
+              <p>Peržvelgiu komandos <code>ps</code> galimybes.</p>
+            </div>
+            <div class="paragraph">
+              <p>Daug skaitymo, apibendrinu iškeliu rezultatuose.</p>
+            </div>
+            <div class="paragraph">
+              <p>Procesų peržiūra su <code>top</code>.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_13_prievad_skenavimas">13. Prievadų skenavimas</h4>
+            <div class="paragraph">
+              <p>Nuskenuoju kaimyno prievadus.</p>
+            </div>
+            <div style="page-break-after: always;"></div>
+          </div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_sunkumai_ir_atsakymai_klausimus">Sunkumai ir atsakymai į klausimus</h3>
+          <div class="sect3">
+            <h4 id="_0_em_guest_os_em_paruo_imas">0. <em>Guest OS</em> paruošimas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Programinės įrangos diegimui reikėjo atnaujinti jos duomenų bazę:</p>
+                  <div class="paragraph">
+                    <p><code>$ sudo apt update</code></p>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Kitaip neįsidiegė bent jau <code>openssh-server</code>:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@osboxes:~$ sudo apt install openssh-server
+sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  ncurses-term openssh-sftp-server ssh-import-id
+Suggested packages:
+  molly-guard monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+0 upgraded, 4 newly installed, 0 to remove and 58 not upgraded.
+Need to get 688 kB of archives.
+After this operation, 6,010 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
+Err:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.1
+  404  Not Found [IP: 91.189.91.39 80]
+Err:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.1
+  404  Not Found [IP: 91.189.91.39 80]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]
+Fetched 259 kB in 1s (204 kB/s)
+E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-sftp-server_8.2p1-4ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.39 80]
+E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-server_8.2p1-4ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.39 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Atnaujinu programinės įrangos duomenų bazę:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@osboxes:~$ sudo apt update
+sudo apt update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [254 kB]
+  ...
+Get:53 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4,032 B]
+Get:54 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,780 B]
+Get:55 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Fetched 8,419 kB in 14s (588 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+262 packages can be upgraded. Run 'apt list --upgradable' to see them.</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>SSH serverio instaliavimas</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Ieškau programinės įrangos paketo:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@osboxes:~$ apt search ssh
+Sorting...
+Full Text Search...
+4pane/focal 6.0-1build1 amd64
+  four-pane detailed-list file manager
+
+agent-transfer/focal 0.41-1ubuntu1 amd64
+  copy a secret key from GnuPG's gpg-agent to OpenSSH's ssh-agent
+  ...
+zsnapd-rcmd/focal,focal 0.8.11h-1ubuntu2 all
+  Remote sshd command checker for ZFS Snapshot Daemon
+
+zssh/focal 1.5c.debian.1-7build2 amd64
+  interactive file transfers over ssh</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Diegiu <code>OpenSSH</code> serverį:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@osboxes:~$ sudo apt install openssh-server
+sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  ncurses-term openssh-client openssh-sftp-server ssh-import-id
+Suggested packages:
+  keychain libpam-ssh monkeysphere ssh-askpass molly-guard
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+The following packages will be upgraded:
+  openssh-client
+1 upgraded, 4 newly installed, 0 to remove and 261 not upgraded.
+Need to get 1,100 kB/1,359 kB of archives.
+After this operation, 6,010 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-client amd64 1:8.2p1-4ubuntu0.2 [671 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.2 [51.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.2 [377 kB]
+Fetched 1,100 kB in 3s (350 kB/s)
+Preconfiguring packages ...
+(Reading database ... 145074 files and directories currently installed.)
+  ...
+Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.2) ...
+Setting up openssh-server (1:8.2p1-4ubuntu0.2) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:q7is6Llfa0sm7vxlzTgNUUInZNOuRZ5EoRe1VPNEzNg root@osboxes (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:YG+pWX5PORlrH0zmBOcPAxGQOw5cpiE8HMISFrQ6xxA root@osboxes (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:SSYtj9I+qp5yLhXGL3AdbncN3lOnSbJ1C4cqQ2UzTkI root@osboxes (ED25519)
+
+Progress: [ 90%] [####################################################......]
+Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
+rescue-ssh.target is a disabled or a static unit, not starting it.
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ufw (0.36-6) ...</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Galbūt šitą žingsnį (aprašytą Moodle) verta apjungti su <code>2lab*.docx</code>                          aprašytais žingsniais į bendrą tekstą?</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_1_tinklo_s_sajos_2">1. Tinklo sąsajos</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Trūko <code>ifconfig</code> komandos, teko susiinstaliuoti paketą
+                    <code>net-tools</code>:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$ ifconfig -a
+
+Command 'ifconfig' not found, but can be installed with:
+
+sudo apt install net-tools
+
+osboxes@osboxes:~$ sudo apt install net-tools
+[sudo] password for osboxes:
+  ...
+The following NEW packages will be installed:
+  net-tools
+  0 upgraded, 1 newly installed, 0 to remove and 58 not upgraded.
+  ...
+Progress: [ 80%] [##############################################............]</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>LD apraše nenurodyta, su kuriuo naudotoju (neprivilegijuotu ar
+                    <code>root</code>) reiktų leisti komandas. Dėl to leidau iš neprivilegijuoto,
+                    ir man gana daug sykių pritrūkavo teisių, prieš komandą tekdavo
+                    rašyti <code>sudo</code>.</p>
+                </li>
+                <li>
+                  <p>Tinklo sąsajų (interfeisų) pavadinimai yra <code>enp0s3</code>,
+                    <code>enp0s8</code>, <code>lo</code>.</p>
+                </li>
+                <li>
+                  <p>Pasirenkami sąsajų parametrai yra:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>Usage:
+  ifconfig [-a] [-v] [-s] &lt;interface&gt; [[&lt;AF&gt;] &lt;address&gt;]
+  [add &lt;address&gt;[/&lt;prefixlen&gt;]]
+  [del &lt;address&gt;[/&lt;prefixlen&gt;]]
+  [[-]broadcast [&lt;address&gt;]]  [[-]pointopoint [&lt;address&gt;]]
+  [netmask &lt;address&gt;]  [dstaddr &lt;address&gt;]  [tunnel &lt;address&gt;]
+  [outfill &lt;NN&gt;] [keepalive &lt;NN&gt;]
+  [hw &lt;HW&gt; &lt;address&gt;]  [mtu &lt;NN&gt;]
+  [[-]trailers]  [[-]arp]  [[-]allmulti]
+  [multicast]  [[-]promisc]
+  [mem_start &lt;NN&gt;]  [io_addr &lt;NN&gt;]  [irq &lt;NN&gt;]  [media &lt;type&gt;]
+  [txqueuelen &lt;NN&gt;]
+  [[-]dynamic]
+  [up|down] ...</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Patikrinu&#8201;&#8212;&#8201;tinklo adresas tikrai nustatytas:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$ ifconfig enp0s8
+ifconfig enp0s8
+enp0s8: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 308  bytes 47526 (47.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Trūko dar vieno paketo: <code>ifupdown</code></p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>root@osboxes:~# ifup enp0s8
+
+Command 'ifup' not found, but can be installed with:
+
+apt install ifupdown       # version 0.8.35ubuntu1, or
+apt install netscript-2.4  # version 5.5.3
+
+root@osboxes:~# apt install ifupdown
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  rdnssd
+The following NEW packages will be installed:
+  ifupdown
+0 upgraded, 1 newly installed, 0 to remove and 261 not upgraded.
+Need to get 60.5 kB of archives.
+After this operation, 234 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 ifupdown amd64 0.8.35ubuntu1 [60.5 kB]
+Progress: [ 80%] [##############################################............]
+Fetched 60.5 kB in 1s (84.4 kB/s)
+Selecting previously unselected package ifupdown.
+Processing triggers for man-db (2.9.1-1) ...online.target.wants/networking.service → /lib/systemd/system/networking.service.</code></pre>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_2_tinklo_vartai_2">2. Tinklo vartai</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Komanda <code>route -a</code> aprašyme netiksli. Reikėjo <code>route -n</code>:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$ route -a
+route -a
+route: invalid option -- 'a'
+Usage: route [-nNvee] [-FC] [&lt;AF&gt;]           List kernel routing tables
+       route [-v] [-FC] {add|del|flush} ...  Modify routing table for AF.
+
+       route {-h|--help} [&lt;AF&gt;]              Detailed usage syntax for specified AF.
+       route {-V|--version}                  Display version/author and exit.
+
+        -v, --verbose            be verbose
+        -n, --numeric            don't resolve names
+        -e, --extend             display other/more information
+        -F, --fib                display Forwarding Information Base (default)
+        -C, --cache              display routing cache instead of FIB
+
+    ...</code></pre>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_3_statin_s_tinklo_konfig_racijos_ra_ymas_2">3. Statinės tinklo konfigūracijos įrašymas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Tekstų redaktorius <code>nano</code> nesivaldo per VirtualBox <em>Serial-over-Telnet</em>                    terminalinį prisijungimą:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$ nano /etc/network/interfaces
+(B[ Directory '/etc/network' is not writable ](B  GNU nano 4.8                /etc/network/interfaces
+(B^G(B^O(B^W(B^K(B^J(B^C(B^X(B^R(B^\(B^U(B^T(B^_(B Go To Line[2A[20A: ^X  ^C^X^Z`^[^[^]^C^C^C</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Tekstų redaktorius <code>vi</code> pagal nutylėjimą net per SSH
+                    man veikia nekorektiškai:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Jei atsidarau failą, rodo tvarkingai:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>root@osboxes:~# vi /etc/network/interfaces
+face enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+auto enp0s8
+~
+~
+~</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Bet jei paspaudžiu &lt;Shift-O&gt; (<em>Open new line</em>),
+                          tekstas susigadina:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>[&gt;4;menp0s8 inet static
+
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+auto enp0s8
+~
+~</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Teko surašyti statinę konfigūraciją iš CLI:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$ sudo -i
+root@osboxes:~#
+root@osboxes:~# echo 'iface enp0s8 inet static' &gt;&gt; /etc/network/interfaces
+root@osboxes:~# echo 'address 192.168.10.14' &gt;&gt; /etc/network/interfaces
+root@osboxes:~# echo 'netmask 255.255.255.0' &gt;&gt; /etc/network/interfaces
+root@osboxes:~# echo 'gateway 192.168.10.254' &gt;&gt; /etc/network/interfaces
+root@osboxes:~#
+root@osboxes:~# cat /etc/network/interfaces
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Po perkrovimo tinklas vis tiek nesusikonfigūruoja:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$ ifconfig enp0s8
+enp0s8: flags=4098&lt;BROADCAST,MULTICAST&gt;  mtu 1500
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</code></pre>
+                    </div>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Papildau konfigūraciją <code>auto</code> eilute:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>root@osboxes:~# cat /etc/network/interfaces
+auto enp0s8
+
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Po perkrovimo tinklas jau susikonfigūruoja automatiškai.</p>
+                      </li>
+                      <li>
+                        <p>Galbūt reikėtų šitą patikslinti LD apraše?</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_4_kompiuterio_vardas_2">4. Kompiuterio vardas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Komandinio apvalkalo eilutėje rodomas kompiuterio vardas nepasikeičia
+                    savaime. Tam naudotojui reikia persijungti iš naujo:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@osboxes:~$
+osboxes@osboxes:~$ su - osboxes
+Password:
+osboxes@ldvm1:~$</code></pre>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Pagal aprašą sukonfigūravus vardų išsprendimą, jis nustojo veikti:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@ldvm1:~$ ping www.google.lt
+ping: www.google.lt: Temporary failure in name resolution</code></pre>
+                    </div>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Pastebėjau, kad srautas nenukeliauja nei vienu žingsniu iš
+                          mašinos:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ ping 193.219.146.19
+PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
+From 192.168.10.14 icmp_seq=1 Destination Host Unreachable
+From 192.168.10.14 icmp_seq=2 Destination Host Unreachable
+From 192.168.10.14 icmp_seq=3 Destination Host Unreachable
+^C
+--- 193.219.146.19 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4095ms</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Įtariau, kad tai įvyko dėl neveikiančiai sukonfigūruotų papildomų
+                          tinklo vartų&#8201;&#8212;&#8201;jie perima išorei skirto
+                          tinklo srauto nukreipimą ir toliau niekur nenukreipia:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+0.0.0.0         10.0.2.2        0.0.0.0         UG    20100  0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Veikimui atstatyti iš konfigūracijos pašalinau niekur nevedančius
+                          tinklo vartus:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ sudo route delete default gw 192.168.10.254
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes:
+osboxes@ldvm1:~$</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Tačiau duotos VU vardų išsprendimo tarnybinės stotys vis
+                          tiek lieka nepasiekiamios</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ ping 193.219.146.19
+sboxes@ldvm1:~$ cat /etc/resolv.conf
+nameserver 193.219.146.19
+nameserver 193.219.146.2
+
+PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
+From 193.219.94.140 icmp_seq=1 Destination Host Unreachable
+^C
+
+osboxes@ldvm1:~$ ping 193.219.146.2
+PING 193.219.146.2 (193.219.146.2) 56(84) bytes of data.
+From 193.219.94.140 icmp_seq=1 Destination Host Unreachable
+From 193.219.94.140 icmp_seq=3 Destination Host Unreachable
+^C</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Prisiminiau, kad jos nebeveikia jau keletą metų.</p>
+                      </li>
+                      <li>
+                        <p>Google <a href="https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf">susiradau</a>                          atnaujintas VU vardų išsprendimo tarnybines stotis:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>$ PDF=https://t.co/anBJLWY7f6
+$ curl -L $PDF | pdftotext - - | grep -i DNS
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  135k  100  135k    0     0   243k      0 --:--:-- --:--:-- --:--:--  243k
+dns1=193.219.80.11
+dns2=193.219.80.2
+## DNS adresai
+
+osboxes@ldvm1:~$ ping 193.219.80.11
+PING 193.219.80.11 (193.219.80.11) 56(84) bytes of data.
+64 bytes from 193.219.80.11: icmp_seq=2 ttl=63 time=94.8 ms
+64 bytes from 193.219.80.11: icmp_seq=3 ttl=63 time=38.8 ms
+^C
+
+osboxes@ldvm1:~$ ping 193.219.80.2
+PING 193.219.80.2 (193.219.80.2) 56(84) bytes of data.
+64 bytes from 193.219.80.2: icmp_seq=1 ttl=63 time=38.8 ms
+64 bytes from 193.219.80.2: icmp_seq=2 ttl=63 time=35.5 ms
+^C</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Pagaliau radom pasiekiamas tarnybines stotis.</p>
+                      </li>
+                      <li>
+                        <p>Perkonfigūruoju jas į veikiančias:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ sudo nano /etc/resolv.conf
+sudo: unable to resolve host ldvm1: Temporary failure in name resolution
+[sudo] password for osboxes:
+
+osboxes@ldvm1:~$ cat /etc/resolv.conf
+nameserver 193.219.80.11
+nameserver 193.219.80.2</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Nėra komandos <code>traceroute</code>:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@ldvm1:~$ traceroute
+
+Command 'traceroute' not found, but can be installed with:
+
+sudo apt install inetutils-traceroute  # version 2:1.9.4-11, or
+sudo apt install traceroute            # version 1:2.1.0-2</code></pre>
+                    </div>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Teko įsidiegti:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ sudo apt install traceroute
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  traceroute
+0 upgraded, 1 newly installed, 0 to remove and 261 not upgraded.
+  ...
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
+Processing triggers for man-db (2.9.1-1) ...</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_5_standartiniai_mar_rutai_2">5. Standartiniai maršrutai</h4>
+            <div class="paragraph">
+              <p>Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_6_vidaus_vardai_2">6. Vidaus vardai:</h4>
+            <div class="paragraph">
+              <p>Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_7_keli_tinklo_adresai_2">7. Keli tinklo adresai</h4>
+            <div class="paragraph">
+              <p>Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.</p>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_8_programin_s_rangos_valdymas_2">8. Programinės įrangos valdymas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Deja, nuoroda <a href="http://ubuntu.lt/render/Articles;aid,39"
+                      class="bare">http://ubuntu.lt/render/Articles;aid,39</a> neveikia.</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Teko susirasti kopiją Web-archyve:
+                          <a href="https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39"
+                            class="bare">https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39</a></p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_9_rankis_code_nmap_code_2">9. Įrankis <code>nmap</code></h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Gautas atsakymas reiškia:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>buvo nuskenuoti 999 TCP transportinio protokolo prievadai;</p>
+                      </li>
+                      <li>
+                        <p>kaimyniniame kompiuteryje rastas tik vienas atviras prievadas;</p>
+                      </li>
+                      <li>
+                        <p>ten veikia tinklo paslauga SSH;</p>
+                      </li>
+                      <li>
+                        <p>kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_10_iniatinklio_paslauga_ir_klientas_2">10. Žiniatinklio paslauga ir klientas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Deja, apraše duota diegimo komanda neveikia:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@ldvm1:~$ sudo apt-get install apache-ssl apache-common libapache-mod-php4 \
+&gt;   mysql-server mysql-common mysql-client php4-mysql \
+&gt;   libnet1 libnet1-dev libpcre3 libpcre3-dev autoconf automake1.9 \
+&gt;   libpcap0.8 libpcap0.8-dev libmysqlclient15-dev \
+&gt;   php4-gd php4-pear libphp-adodb vim gcc make \
+&gt;   php4-cli libtool libssl-dev gcc-4.1 g++
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Package apache-ssl is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'apache-ssl' has no installation candidate
+E: Unable to locate package apache-common
+E: Unable to locate package libapache-mod-php4
+E: Unable to locate package php4-mysql
+E: Unable to locate package automake1.9
+E: Couldn't find any package by glob 'automake1.9'
+E: Couldn't find any package by regex 'automake1.9'
+E: Unable to locate package libmysqlclient15-dev
+E: Unable to locate package php4-gd
+E: Unable to locate package php4-pear
+E: Unable to locate package php4-cli
+E: Unable to locate package gcc-4.1
+E: Couldn't find any package by glob 'gcc-4.1'
+E: Couldn't find any package by regex 'gcc-4.1'</code></pre>
+                    </div>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Kadangi nežinia, kokios tiksliai naujos development įrankių
+                          versijos tiks, juos išimu iš sąrašo:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>automake</p>
+                            </li>
+                            <li>
+                              <p>gcc</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Juos įdiegsiu tada, kai jų prireiks.</p>
+                      </li>
+                      <li>
+                        <p>O likusių įrankių pavadinimus parenku su <code>apt search &#8230;&#8203;</code>:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>apache2</p>
+                            </li>
+                            <li>
+                              <p>libapache2-mod-php7.4</p>
+                            </li>
+                            <li>
+                              <p>mysql-server</p>
+                            </li>
+                            <li>
+                              <p>php7.4-mysql</p>
+                            </li>
+                            <li>
+                              <p>default-libmysqlclient-dev</p>
+                            </li>
+                            <li>
+                              <p>php7.4-gd</p>
+                            </li>
+                            <li>
+                              <p>php-pear</p>
+                            </li>
+                            <li>
+                              <p>php-cli</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Ir įdiegiu:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
+  mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd \
+  php-pear php-cli</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Instaliavimo komandoje naudojamas <code>\</code> simbolis reiškia,
+                    kad tolimesnis komandos tekstas nukeliamas į kitą eilutę.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_11_iniatinklio_konfig_ravimas_2">11. Žiniatinklio konfigūravimas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Peržiūrėti konfigūracinio failo nepavyksta dėl stipriai naujesnės
+                    Apache versijos:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@ldvm1:~$ cat /etc/apache-ssl/httpd.conf
+cat: /etc/apache-ssl/httpd.conf: No such file or directory</code></pre>
+                    </div>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Sprendimas&#8201;&#8212;&#8201;paieškoti panašių failų naujuose
+                          paketuose:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ dpkg --search /etc/apache2
+apache2, libapache2-mod-php7.4: /etc/apache2
+
+osboxes@ldvm1:~$ dpkg --listfiles apache2 | grep \\.conf
+/etc/apache2/apache2.conf
+/etc/apache2/conf-available/charset.conf
+/etc/apache2/conf-available/localized-error-pages.conf
+/etc/apache2/conf-available/other-vhosts-access-log.conf
+/etc/apache2/conf-available/security.conf
+/etc/apache2/conf-available/serve-cgi-bin.conf
+/etc/apache2/mods-available/actions.conf
+/etc/apache2/mods-available/alias.conf
+/etc/apache2/mods-available/autoindex.conf
+/etc/apache2/mods-available/cache_disk.conf
+/etc/apache2/mods-available/cgid.conf
+/etc/apache2/mods-available/dav_fs.conf
+/etc/apache2/mods-available/deflate.conf
+/etc/apache2/mods-available/dir.conf
+/etc/apache2/mods-available/http2.conf
+/etc/apache2/mods-available/info.conf
+/etc/apache2/mods-available/ldap.conf
+/etc/apache2/mods-available/mime.conf
+/etc/apache2/mods-available/mime_magic.conf
+/etc/apache2/mods-available/mpm_event.conf
+/etc/apache2/mods-available/mpm_prefork.conf
+/etc/apache2/mods-available/mpm_worker.conf
+/etc/apache2/mods-available/negotiation.conf
+/etc/apache2/mods-available/proxy.conf
+/etc/apache2/mods-available/proxy_balancer.conf
+/etc/apache2/mods-available/proxy_ftp.conf
+/etc/apache2/mods-available/proxy_html.conf
+/etc/apache2/mods-available/reqtimeout.conf
+/etc/apache2/mods-available/setenvif.conf
+/etc/apache2/mods-available/ssl.conf
+/etc/apache2/mods-available/status.conf
+/etc/apache2/mods-available/userdir.conf
+/etc/apache2/ports.conf
+/etc/apache2/sites-available/000-default.conf
+/etc/apache2/sites-available/default-ssl.conf</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Pasirenku <code>/etc/apache2/apache2.conf</code> ir filtruoju
+                          jį taip:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -C1 ^Include
+# Include module configuration:
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+
+# Include list of ports to listen on
+Include ports.conf
+
+--
+# Include generic snippets of statements
+IncludeOptional conf-enabled/*.conf
+
+# Include the virtual host configurations:
+IncludeOptional sites-enabled/*.conf</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Konfigūracija susideda iš:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>trijų <code>&lt;Directory &#8230;&#8203;&gt;</code> dalių:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p><code>&lt;Directory /&gt;</code></p>
+                            </li>
+                            <li>
+                              <p><code>&lt;Directory /usr/share&gt;</code></p>
+                            </li>
+                            <li>
+                              <p><code>&lt;Directory /var/www/&gt;</code></p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>vienos <code>&lt;FilesMatch &#8230;&#8203;&gt;</code> dalies,
+                          aprašančios <code>.ht</code> failus:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p><code>&lt;FilesMatch "^\.ht"&gt;</code></p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>daugelio <code>.conf</code> failų, įtraukiamų direktyva <code>Include</code>                          arba <code>IncludeOptional</code>:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code> /etc/apache2/
+ |-- apache2.conf
+ |       `--  ports.conf
+ |-- mods-enabled
+ |       |-- *.load
+ |       `-- *.conf
+ |-- conf-enabled
+ |       `-- *.conf
+ |-- sites-enabled
+ |       `-- *.conf</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Deja, puslapis per <code>https</code> dar neatsidaro:</p>
+                  <div class="listingblock">
+                    <div class="content">
+                      <pre class="highlight"><code>osboxes@ldvm1:/var/www$ links https://ldvm1
+
+
+                                                  +------------- Error -------------+
+                                                  |                                 |
+                                                  |  Error loading https://ldvm1/:  |
+                                                  |                                 |
+                                                  |       Connection refused        |
+                                                  |                                 |
+                                                  |           [ Cancel ]            |
+                                                  +---------------------------------+</code></pre>
+                    </div>
+                  </div>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Patikrinu Apache prievadus, trūksta <code>443/TCP</code>                          (https):</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
+tcp6       0      0 :::80                   :::*                    LISTEN      11795/apache2</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Įjungiu pagal suguglintą dokumentaciją:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ sudo a2enmod ssl
+Considering dependency setenvif for ssl:
+Module setenvif already enabled
+Considering dependency mime for ssl:
+Module mime already enabled
+Considering dependency socache_shmcb for ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+
+osboxes@ldvm1:/var/www$ systemctl restart apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'apache2.service'.
+Authenticating as: osboxes.org,,, (osboxes)
+Password:
+==== AUTHENTICATION COMPLETE ===</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Patikrinu Apache prievadus dar sykį, <code>443/TCP</code>                          jau veikia:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
+tcp6       0      0 :::80                   :::*                    LISTEN      17145/apache2
+tcp6       0      0 :::443                  :::*                    LISTEN      17145/apache2</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Patikrinu su vietine naršykle, <code>https</code> dar neveikia:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>                                                  +------------- Error -------------+
+                                                  |                                 |
+                                                  |  Error loading https://ldvm1/:  |
+                                                  |                                 |
+                                                  |            SSL error            |
+                                                  |                                 |
+                                                  |           [ Cancel ]            |
+                                                  +---------------------------------+</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Patikrinu su CLI įrankiu <code>wget</code>:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/etc/apache2/sites-enabled$ wget -S https://ldvm1
+--2021-06-30 06:26:28--  https://ldvm1/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+OpenSSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+Unable to establish SSL connection.</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Pagal klaidą suguglinu patarimą tikrinti <code>443/TCP</code>                          prievadą be SSL. Be SSL veikia:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ wget -S http://ldvm1:443
+--2021-06-30 06:27:13--  http://ldvm1:443/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+HTTP request sent, awaiting response...
+  HTTP/1.1 200 OK
+  Date: Wed, 30 Jun 2021 10:27:13 GMT
+  Server: Apache/2.4.41 (Ubuntu)
+  Last-Modified: Wed, 30 Jun 2021 09:08:33 GMT
+  ETag: "2aa6-5c5f811269876"
+  Accept-Ranges: bytes
+  Content-Length: 10918
+  Vary: Accept-Encoding
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+  Content-Type: text/html
+Length: 10918 (11K) [text/html]
+Saving to: ‘index.html’
+
+index.html                        100%[============================================================&gt;]  10.66K  --.-KB/s    in 0s
+
+2021-06-30 06:27:13 (24.0 MB/s) - ‘index.html’ saved [10918/10918]</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Panašu, kad trūksta SSL-konfigūracinio failo. Tikrinu:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-available/
+total 20
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+-rw-r--r-- 1 root root 1332 Apr 13  2020 000-default.conf
+-rw-r--r-- 1 root root 6338 Apr 13  2020 default-ssl.conf
+
+osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-enabled/
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 05:08 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -&gt; ../sites-available/000-default.conf</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Trūksta, įtraukiu konfigūracinį failą rankomis:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/etc/apache2/sites-enabled$ sudo ln -s ../sites-available/default-ssl.conf
+
+osboxes@ldvm1:/etc/apache2/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Jun 30 06:21 ./
+drwxr-xr-x 8 root root 4096 Jun 30 05:08 ../
+lrwxrwxrwx 1 root root   35 Jun 30 05:08 000-default.conf -&gt; ../sites-available/000-default.conf
+lrwxrwxrwx 1 root root   35 Jun 30 06:21 default-ssl.conf -&gt; ../sites-available/default-ssl.conf
+
+osboxes@ldvm1:~$ systemctl restart apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'apache2.service'.
+Authenticating as: osboxes.org,,, (osboxes)
+Password:
+==== AUTHENTICATION COMPLETE ===</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Patikrinu; SSL lyg veikia, bet pyksta dėl SSL sertifikato:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:~$ wget -S https://ldvm1
+--2021-06-30 06:31:39--  https://ldvm1/
+Resolving ldvm1 (ldvm1)... 192.168.10.14
+Connecting to ldvm1 (ldvm1)|192.168.10.14|:443... connected.
+ERROR: cannot verify ldvm1's certificate, issued by ‘CN=ubuntu’:
+  Self-signed certificate encountered.
+ERROR: no certificate subject alternative name matches
+    requested host name ‘ldvm1’.
+To connect to ldvm1 insecurely, use `--no-check-certificate'.</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Tikrinu su <code>links</code>:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ links https://ldvm1
+
+
+                     +----------------------------------- Invalid certificate -----------------------------------+
+                     |                                                                                           |
+                     |  The server ldvm1 doesn't have a valid certificate. Do you want to connect to it anyway?  |
+                     |                                                                                           |
+                     |                                [ No ]  [ Yes ]  [ Never ]                                 |
+                     +-------------------------------------------------------------------------------------------+</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Jau veikia:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>                                                                                       Apache2 Ubuntu Default Page: It works (p1 of 2)
+   Ubuntu Logo Apache2 Ubuntu Default Page
+   It works!
+
+   This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems.
+   It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it
+   means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at
+   /var/www/html/index.html) before continuing to operate your HTTP server.
+
+   If you are a normal user of this web site and don't know what this page is about, this probably means that the site is currently
+   unavailable due to maintenance. If the problem persists, please contact the site's administrator.
+
+   Configuration Overview
+
+  ...</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Bet panašu, kad rodomas ne mūsų sukurtas žiniatinklio failas, o
+                    Apache puslapis pagal nutylėjimą.</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Tikrinu konfigūracijos failą:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[:space:]]*#'
+
+&lt;IfModule mod_ssl.c&gt;
+    &lt;VirtualHost _default_:443&gt;
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+        SSLEngine on
+
+        SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem
+        SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+
+
+
+
+        &lt;FilesMatch "\.(cgi|shtml|phtml|php)$"&gt;
+                SSLOptions +StdEnvVars
+        &lt;/FilesMatch&gt;
+        &lt;Directory /usr/lib/cgi-bin&gt;
+                SSLOptions +StdEnvVars
+        &lt;/Directory&gt;
+
+
+    &lt;/VirtualHost&gt;
+&lt;/IfModule&gt;</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Dar vienas LD aprašo netikslumas:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>failą kūriau <code>/var/www</code> direktorijoje,</p>
+                            </li>
+                            <li>
+                              <p>o su šia Apache versija reikia kurti <code>/var/www/html</code>                                direktorijoje.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Perkeliu konfigūracinį failą:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/etc/apache2/sites-enabled$ cd /var/www
+
+osboxes@ldvm1:/var/www$ ll
+total 16
+drwxr-xr-x  3 root root 4096 Jun 30 05:57 ./
+drwxr-xr-x 15 root root 4096 Jun 30 05:05 ../
+drwxr-xr-x  2 root root 4096 Jun 30 05:08 html/
+-rw-r--r--  1 root root   42 Jun 30 05:57 index.php
+
+osboxes@ldvm1:/var/www$ ls -Al html
+total 12
+-rw-r--r-- 1 root root 10918 Jun 30 05:08 index.html
+
+osboxes@ldvm1:/var/www$ sudo mv -v index.php html/
+renamed 'index.php' -&gt; 'html/index.php'
+
+osboxes@ldvm1:/var/www$ ls -Al
+total 4
+drwxr-xr-x 2 root root 4096 Jun 30 06:51 html
+
+osboxes@ldvm1:/var/www$ ls -Al html
+total 16
+-rw-r--r-- 1 root root 10918 Jun 30 05:08 index.html
+-rw-r--r-- 1 root root    42 Jun 30 05:57 index.php</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Bet to irgi nepakanka, turinys nepasikeitė.</p>
+                      </li>
+                      <li>
+                        <p>Galbūt <code>.html</code> failas turi prioritetą <code>.php</code>                          atžvilgiu. Pašalinu:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ sudo rm -v html/index.html
+removed 'html/index.html'</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Patikrinu su <code>links</code>, pagaliau veikia!</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm1:/var/www$ links https://ldvm1
+
+
+   ldvm1 (kompiuterio vardas)</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="paragraph">
+              <p>Mano žiniatinklio puslapis atidaromas ir tikro kompiuterio naršyklėje:</p>
+            </div>
+            <div class="imageblock">
+              <div class="content">
+                <img src="https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9ac-11eb-8770-569c4eb8f123.png"
+                  alt="123950177 12538d80 d9ac 11eb 8770 569c4eb8f123">
+              </div>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_12_vykdomi_procesai_2">12. Vykdomi procesai</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Komandos <code>ps</code> galimybės:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Komanda parodo OS procesų „fotografiją“.</p>
+                      </li>
+                      <li>
+                        <p>Pagal nutylėjimą rodomi tik esamo naudotojo procesai.</p>
+                      </li>
+                      <li>
+                        <p>Komanda geba rodymui atrinkti:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>visus procesus;</p>
+                            </li>
+                            <li>
+                              <p>tik aktyvius (nemiegančius) procesus;</p>
+                            </li>
+                            <li>
+                              <p>tik su esamu terminalu susietus procesus;</p>
+                            </li>
+                            <li>
+                              <p>procesus pagal nurodytų PID sąrašą;</p>
+                            </li>
+                            <li>
+                              <p>procesus pagal nurodytą komandinę eilutę;</p>
+                            </li>
+                            <li>
+                              <p>pagal proceso savininko grupę (RGID);</p>
+                            </li>
+                            <li>
+                              <p>pagal proceso sesijos ID;</p>
+                            </li>
+                            <li>
+                              <p>pagal procesų terminalo vardus;</p>
+                            </li>
+                            <li>
+                              <p>pagal proceso savininko ID.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Komanda geba išvesti tokius proceso duomenis:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>PID, PGID, SID, TTY;</p>
+                            </li>
+                            <li>
+                              <p>proceso būseną;</p>
+                            </li>
+                            <li>
+                              <p>proceso žymes (<em>Flags</em>);</p>
+                            </li>
+                            <li>
+                              <p>starto laiką;</p>
+                            </li>
+                            <li>
+                              <p>vykdymo laiką;</p>
+                            </li>
+                            <li>
+                              <p>komandinius argumentus;</p>
+                            </li>
+                            <li>
+                              <p>SELinux <em>Security context</em>;</p>
+                            </li>
+                            <li>
+                              <p>LWP gijų (<em>Threads</em>) skaičių;</p>
+                            </li>
+                            <li>
+                              <p>LWP gijų ID;</p>
+                            </li>
+                            <li>
+                              <p>signalų būsenas;</p>
+                            </li>
+                            <li>
+                              <p>virtualios atminties būsenas;</p>
+                            </li>
+                            <li>
+                              <p>CPU registrų būsenas;</p>
+                            </li>
+                            <li>
+                              <p>aplinkos kintamuosius (<em>Environment variables</em>);</p>
+                            </li>
+                            <li>
+                              <p>ir dar dalį kitų.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Komanda geba išvesti duomenis skirtingais pavidalais:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>kombinuojant skirtingus laukus;</p>
+                            </li>
+                            <li>
+                              <p>tam yra keli skirtingi iš anksto nustatyti formatai
+                                (Long, Extra long, Jobs ir kt.);</p>
+                            </li>
+                            <li>
+                              <p>keičiant išvedamų eilučių plotį;</p>
+                            </li>
+                            <li>
+                              <p>keičiant išvedamų eilučių skaičių;</p>
+                            </li>
+                            <li>
+                              <p>rodant tik naudotojo nurodytus laukus;</p>
+                            </li>
+                            <li>
+                              <p>rūšiuojant išvestį pagal nurodytą lauką;</p>
+                            </li>
+                            <li>
+                              <p>apjungiant procesus į hierarchiją (medį) pagal PPID;</p>
+                            </li>
+                            <li>
+                              <p>įterpiant gijas tarp procesų;</p>
+                            </li>
+                            <li>
+                              <p>įjungiant/išjungiant laukų antraštes;</p>
+                            </li>
+                            <li>
+                              <p>ir dar keliais kitais.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Procesai, kurie naudoja daugiausiai kompiuterio resursų:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>pagal CPU:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    241 root       0 -20       0      0      0 I   0.3   0.0   0:02.60 kworker/1:1H-kblockd
+   1052 osboxes   20   0   14116   2540   1840 S   0.3   0.3   0:02.47 sshd
+   7528 mysql     20   0 1741604 237416   6120 S   0.3  23.6   1:01.97 mysqld
+  17852 root      20   0  344220  54440  12364 S   0.3   5.4   1:26.96 unattended-upgr
+  17865 root      20   0       0      0      0 I   0.3   0.0   0:00.66 kworker/u4:0-events_power_efficient
+  19713 osboxes   20   0   20516   4032   3252 R   0.3   0.4   0:00.17 top
+      1 root      20   0  171048   7952   4088 S   0.0   0.8   0:08.11 systemd</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>pagal Memory:</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   7528 mysql     20   0 1741604 229984   6104 S   0.3  22.9   1:02.20 mysqld
+  17852 root      20   0  344220  96800  56224 D  20.3   9.6   1:29.37 unattended-upgr
+  28602 osboxes   20   0  369752  22468  14712 S   0.0   2.2   0:00.10 tracker-store
+  26582 root      20   0  293720  16292  14336 S   0.0   1.6   0:00.07 packagekitd
+    662 root      20   0  775596  12832   3356 S   0.0   1.3   0:02.57 snapd
+    878 osboxes   39  19  520180  12196   6704 S   0.0   1.2   0:00.31 tracker-miner-f
+    303 root      19  -1   68212  11048  10172 S   0.0   1.1   0:01.00 systemd-journal
+  26973 root      20   0  313752  10652   9012 S   0.0   1.1   0:00.13 ModemManager</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Programa <code>top</code>:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Pateikia dinaminį sistemos (OS) vaizdą.</p>
+                      </li>
+                      <li>
+                        <p>Pateikia sistemos informacijos reziume:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>sistemos laikrodį;</p>
+                            </li>
+                            <li>
+                              <p><em>Uptime</em>;</p>
+                            </li>
+                            <li>
+                              <p>prisijungsių naudotojų sk.;</p>
+                            </li>
+                            <li>
+                              <p>tris vidutines sistemines apkrovas (<em>System load</em>);</p>
+                            </li>
+                            <li>
+                              <p>procesų skaičių:</p>
+                              <div class="ulist">
+                                <ul>
+                                  <li>
+                                    <p>kiek iš viso;</p>
+                                  </li>
+                                  <li>
+                                    <p>kiek veikia;</p>
+                                  </li>
+                                  <li>
+                                    <p>kiek „miega“;</p>
+                                  </li>
+                                  <li>
+                                    <p>kiek sustabdytų;</p>
+                                  </li>
+                                  <li>
+                                    <p>kiek „zombių“.</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <p>CPU laikus, skirtus:</p>
+                              <div class="ulist">
+                                <ul>
+                                  <li>
+                                    <p><em>User</em> procesams;</p>
+                                  </li>
+                                  <li>
+                                    <p>branduolio užduotims;</p>
+                                  </li>
+                                  <li>
+                                    <p>prioritetų keitimui (<em>Niceness</em>);</p>
+                                  </li>
+                                  <li>
+                                    <p>ramybės būsenai (<em>Idle</em>);</p>
+                                  </li>
+                                  <li>
+                                    <p>aparatūros pertrauktims (<em>Hardware interrupts</em>);</p>
+                                  </li>
+                                  <li>
+                                    <p>programinėms pertrauktims (<em>Software interrupts</em>);</p>
+                                  </li>
+                                  <li>
+                                    <p>hiperizoriaus veiklai (<em>Host</em> + kitų <em>Guest</em>                                      OS aptarnavimui).</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Pateikia procesų ir branduolio gijų sąrašą stulpeliais:</p>
+                        <div class="ulist">
+                          <ul>
+                            <li>
+                              <p>proceso identifikatorių PID;</p>
+                            </li>
+                            <li>
+                              <p>proceso savininką (naudotoją);</p>
+                            </li>
+                            <li>
+                              <p>proceso sisteminį prioritetą;</p>
+                            </li>
+                            <li>
+                              <p>proceso prioriteto pataisymą (<em>Niceness</em>);</p>
+                            </li>
+                            <li>
+                              <p>proceso Virt</p>
+                            </li>
+                            <li>
+                              <p>proceso Resident</p>
+                            </li>
+                            <li>
+                              <p>proceso Shared</p>
+                            </li>
+                            <li>
+                              <p>proceso būseną;</p>
+                            </li>
+                            <li>
+                              <p>proceso sunaudojamą CPU laiką %;</p>
+                            </li>
+                            <li>
+                              <p>proceso sunaudojamą atminties apimtį %;</p>
+                            </li>
+                            <li>
+                              <p>proceso vykdymo laiką;</p>
+                            </li>
+                            <li>
+                              <p>proceso komandos pavadinimą.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Rūšiuoja pagal pasirinktus stulpelius;</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sect3">
+            <h4 id="_13_prievad_skenavimas_2">13. Prievadų skenavimas</h4>
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>Kaimyno prievadų situacija nepasikeitė, nes jame nieko neinstaliavau.</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Nelabai tiksli instrukcija LD apraše.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p>Tačiau jei skenuoju iš kaimyno pirmąjį kompiuterį, situacija jau
+                    gerokai kita:</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>(Abu kompiuteriai sukurti iš bendro <code>.vdi</code> atvaizdo,
+                          todėl pradžioje jų tarnybos buvo identiškos)</p>
+                        <div class="listingblock">
+                          <div class="content">
+                            <pre class="highlight"><code>osboxes@ldvm2:~$ sudo nmap -sS 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 09:09 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.00081s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba):
+                          <code>http</code> ir <code>https</code></p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div style="page-break-after: always;"></div>
+          </div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_duotosios_linux_tinklo_komandos_apra_ymas_code_tcpdump_code">Duotosios Linux tinklo komandos aprašymas: <code>tcpdump</code></h3>
+          <div class="paragraph">
+            <p>Tai tinklo srauto sniferis (paketų gaudyklė).</p>
+          </div>
+          <div class="olist arabic">
+            <ol class="arabic">
+              <li>
+                <p>Įrankis skaito duomenų paketus (įprastai iš tinklo sąsajos) ir išveda
+                  jų dekoduotą aprašymą.</p>
+              </li>
+              <li>
+                <p>Tai jis daro paketams, atitinkantiems užduotą filtrą.</p>
+              </li>
+              <li>
+                <p>Jei filtro nėra, nuskaitomi visi paketai iš eilės.</p>
+              </li>
+              <li>
+                <p>Jei filtras yra, jis konstruojamas kaip loginė išraiška (angl. <em>Boolean expression</em>)</p>
+              </li>
+              <li>
+                <p>Ir atitinka <code>pcap-filter</code> sintaksę.</p>
+              </li>
+              <li>
+                <p>Įprastai išvestyje paketo aprašymas talpinamas į vieną, atskirą eilutę.</p>
+              </li>
+              <li>
+                <p>Įprastai jis pradedamas paketo laiko žyma.</p>
+              </li>
+              <li>
+                <p>Jei nurodyta parinktis <code>-w</code>, paketų turinys įrašomas į
+                  atskirą failą (vėlesnei analizei).</p>
+              </li>
+              <li>
+                <p>Jei nurodyta parinktis <code>-r</code>, paketai ne iš tinklo sąsajos,
+                  bet iš failo, sukurto naudojant <code>-w</code>.</p>
+              </li>
+              <li>
+                <p>Jei nurodyta parinktis <code>-V</code>, paketai nuskaitomi iš tų
+                  failų, kurių vardai yra surašyti šiai parinkčiai priskirtame faile.</p>
+              </li>
+              <li>
+                <p>Jei nurodytos abi parinktys: tiek skaitymo iš failo, tiek rašymo
+                  į failą, atsiranda galimybė iš didžiulio <em>Capture</em> failo
+                  išsipjauti tik reikiamas srauto dalis.</p>
+              </li>
+              <li>
+                <p>Įrankis geba išvardinti:</p>
+                <div class="olist loweralpha">
+                  <ol class="loweralpha" type="a">
+                    <li>
+                      <p>gaudymui tinkamas sistemos tinklo sąsajas, <code>-D</code>;</p>
+                    </li>
+                    <li>
+                      <p>sąsajos palaikomus <em>Data-link</em> tipus, <code>-L</code>;</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li>
+                <p>Įrankis turi nuskaitymo valdymą pagal:</p>
+                <div class="olist loweralpha">
+                  <ol class="loweralpha" type="a">
+                    <li>
+                      <p>tinklo sąsajos vardą, <code>-i</code>;</p>
+                    </li>
+                    <li>
+                      <p>tinklo sąsajos būseną (angl. <em>Promiscous</em> arba ne),
+                        <code>-p</code>;</p>
+                    </li>
+                    <li>
+                      <p>pagautų paketų skaičių, <code>-c</code>;</p>
+                    </li>
+                    <li>
+                      <p>paketų keliavimo kryptį, <code>-Q</code>;</p>
+                    </li>
+                    <li>
+                      <p>fiksuotą paketo pradžios fragmentą, <code>-s</code>;</p>
+                    </li>
+                    <li>
+                      <p>išraišką, pateiktą atskirame faile, <code>-F</code> (praverčia,
+                        kai išraiškos apimtys labai išauga).</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li>
+                <p>Įrankis turi išvesties valdymą:</p>
+                <div class="olist loweralpha">
+                  <ol class="loweralpha" type="a">
+                    <li>
+                      <p>išjungti laiko žymas arba pakeisti jų tipą, <code>-t</code>;</p>
+                    </li>
+                    <li>
+                      <p>išjungti mazgų vardų išsprendimą, <code>-n</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti Layer2 antraštes, <code>-e</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti Layer2 <em>Payload</em> išvestį ASCII formatu, <code>-A</code>                        (antraščių nutrynimą);</p>
+                    </li>
+                    <li>
+                      <p>įjungti buferizavimą kas eilutę, <code>-l</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti paketo numerio rodymą, <code>-#</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti tik trumpus paketų aprašymus, <code>-q</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti išplėstinius paketų aprašymus, <code>-v</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti absoliučius TCP sekų numerius, <code>-S</code> (vietoj
+                        santykinių);</p>
+                    </li>
+                    <li>
+                      <p>įjungti priverstinį tipą visų pagautų paketų dekodavime, <code>-T</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti šešioliktainį paketo rodymą, <code>-x</code>;</p>
+                    </li>
+                    <li>
+                      <p>įjungti šešioliktainį ir ASCII rodymą, patalpintus greta, <code>-X</code>;</p>
+                    </li>
+                    <li>
+                      <p>pradėti naują failą pagal pagautų duomenų apimtį (MB), <code>-C</code>;</p>
+                    </li>
+                    <li>
+                      <p>pradėti naują failą pagal gaudymo trukmę (s), <code>-F</code>.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li>
+                <p>Ir dar kelios funkcijos.</p>
+              </li>
+            </ol>
+          </div>
+          <div class="sect3">
+            <h4 id="_pavyzdys">Pavyzdys</h4>
+            <div class="paragraph">
+              <p>Gaudymui tinkamos tinklinės sąsajos:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>osboxes@ldvm1:~$ tcpdump -D
+1.enp0s3 [Up, Running]
+2.enp0s8 [Up, Running]
+3.lo [Up, Running, Loopback]
+4.any (Pseudo-device that captures on all interfaces) [Up, Running]
+5.bluetooth-monitor (Bluetooth Linux Monitor) [none]
+6.nflog (Linux netfilter log (NFLOG) interface) [none]
+7.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Viso srauto gaudymas per Ethernet sąsają <code>enp0s3</code>:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>osboxes@ldvm1:~$ sudo tcpdump -i enp0s3
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+13:11:35.318610 IP ldvm1.57894 &gt; pugot.canonical.com.ntp: NTPv4, Client, length 48
+13:11:35.320401 IP ldvm1.42866 &gt; one.one.one.one.domain: Flags [S], seq 548142022, win 64240, options [mss 1460,sackOK,TS val 2727199959 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+13:11:35.503655 IP one.one.one.one.domain &gt; ldvm1.42866: Flags [S.], seq 433792001, ack 548142023, win 65535, options [mss 1460], length 0
+13:11:35.504691 IP ldvm1.42866 &gt; one.one.one.one.domain: Flags [.], ack 1, win 64240, length 0
+13:11:35.504781 IP ldvm1.42866 &gt; one.one.one.one.domain: Flags [P.], seq 1:45, ack 1, win 64240, length 44 37324+ PTR? 4.94.189.91.in-addr.arpa. (42)
+13:11:35.505093 IP one.one.one.one.domain &gt; ldvm1.42866: Flags [.], ack 45, win 65535, length 0
+13:11:35.539035 IP pugot.canonical.com.ntp &gt; ldvm1.57894: NTPv4, Server, length 48
+  ...
+13:11:36.540981 IP ldvm1.42866 &gt; one.one.one.one.domain: Flags [.], ack 189, win 64052, length 0
+^C
+17 packets captured</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Tik vieno tinklo mazgo srauto gaudymas per kitą Ethernet sąsają:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 host kaimynas
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+13:13:14.220174 IP kaimynas &gt; ldvm1: ICMP echo request, id 6, seq 1, length 64
+13:13:14.220232 IP ldvm1 &gt; kaimynas: ICMP echo reply, id 6, seq 1, length 64
+13:13:16.035415 IP kaimynas &gt; ldvm1: ICMP echo request, id 6, seq 2, length 64
+13:13:16.035500 IP ldvm1 &gt; kaimynas: ICMP echo reply, id 6, seq 2, length 64
+13:13:17.419338 IP kaimynas &gt; ldvm1: ICMP echo request, id 6, seq 3, length 64
+13:13:17.419440 IP ldvm1 &gt; kaimynas: ICMP echo reply, id 6, seq 3, length 64
+13:13:20.046245 ARP, Request who-has kaimynas tell ldvm1, length 28
+13:13:20.047002 ARP, Reply kaimynas is-at 08:00:27:7a:d0:b7 (oui Unknown), length 46
+13:13:20.108060 ARP, Request who-has ldvm1 tell kaimynas, length 46
+13:13:20.108097 ARP, Reply ldvm1 is-at 08:00:27:40:2c:f6 (oui Unknown), length 28
+^C
+10 packets captured
+10 packets received by filter
+0 packets dropped by kernel</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Viso potinklio srauto gaudymas išjungus vardų išsprendimą ir paketų
+                laiko žymas:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 -n -t net 192.168.10.0/24 and not tcp port 22
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [S], seq 2018303758, win 64240, options [mss 1460,sackOK,TS val 3668928396 ecr 0,nop,wscale 7], length 0
+IP 192.168.10.14.443 &gt; 192.168.10.13.56204: Flags [S.], seq 3166645553, ack 2018303759, win 65160, options [mss 1460,sackOK,TS val 1348531861 ecr 3668928396,nop,wscale 7], length 0
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [.], ack 1, win 502, options [nop,nop,TS val 3668928397 ecr 1348531861], length 0
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [P.], seq 1:372, ack 1, win 502, options [nop,nop,TS val 3668928398 ecr 1348531861], length 371
+IP 192.168.10.14.443 &gt; 192.168.10.13.56204: Flags [.], ack 372, win 507, options [nop,nop,TS val 1348531862 ecr 3668928398], length 0
+IP 192.168.10.14.443 &gt; 192.168.10.13.56204: Flags [P.], seq 1:1281, ack 372, win 507, options [nop,nop,TS val 1348531869 ecr 3668928398], length 1280
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [.], ack 1281, win 501, options [nop,nop,TS val 3668928405 ecr 1348531869], length 0
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [P.], seq 372:452, ack 1281, win 501, options [nop,nop,TS val 3668928407 ecr 1348531869], length 80
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [FP.], seq 452:476, ack 1281, win 501, options [nop,nop,TS val 3668928407 ecr 1348531869], length 24
+IP 192.168.10.14.443 &gt; 192.168.10.13.56204: Flags [.], ack 452, win 507, options [nop,nop,TS val 1348531873 ecr 3668928407], length 0
+IP 192.168.10.14.443 &gt; 192.168.10.13.56204: Flags [P.], seq 1281:1552, ack 477, win 507, options [nop,nop,TS val 1348531876 ecr 3668928407], length 271
+IP 192.168.10.13.56204 &gt; 192.168.10.14.443: Flags [R], seq 2018304235, win 0, length 0
+^C
+12 packets captured
+12 packets received by filter
+0 packets dropped by kernel</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Tik TCP paketų gaudymas per OAM tinklo sąsają:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+tcpdump: listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+^Z
+[1]+  Stopped                 sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+
+osboxes@ldvm1:~$ fg
+sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
+^C
+142 packets captured
+143 packets received by filter
+0 packets dropped by kernel
+
+osboxes@ldvm1:~$ ls -l ldvm-tcp-srautas.pcap
+-rw-r--r-- 1 tcpdump tcpdump 21572 Jun 30 13:24 ldvm-tcp-srautas.pcap</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Įrašytų į failą paketų skaičiaus patikrinimas</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>osboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap | wc -l
+reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
+142</code></pre>
+              </div>
+            </div>
+            <div class="paragraph">
+              <p>Minimalus pirmųjų keturių paketų dekodavimas:</p>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre class="highlight"><code>sboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap -t -n -q -c 4
+reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
+IP 192.168.10.14.22 &gt; 192.168.10.8.40606: tcp 124
+IP 192.168.10.8.40606 &gt; 192.168.10.14.22: tcp 0
+IP 192.168.10.8.40606 &gt; 192.168.10.14.22: tcp 36
+IP 192.168.10.14.22 &gt; 192.168.10.8.40606: tcp 124</code></pre>
+              </div>
+            </div>
+            <div style="page-break-after: always;"></div>
+          </div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_viso_darbo_i_vados">Viso darbo išvados</h3>
+          <div class="olist arabic">
+            <ol class="arabic">
+              <li>
+                <p>Laboratorinį darbą #2 (LD2) atlikti pavyko pilnai, tačiau kilo gana
+                  daug kliūčių.</p>
+              </li>
+              <li>
+                <p>Ko gero pagrindinė to priežastis: noras viską daryti be GUI, naudojant
+                  tik CLI įrankius.</p>
+                <div class="olist loweralpha">
+                  <ol class="loweralpha" type="a">
+                    <li>
+                      <p>Dėl šio mano reikalavimo teko LD atlikimą pradėti nuo LD2,
+                        o LD1 dar laukia eilėje.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li>
+                <p>Tam reikėjo pramokti <em>VirtualBox</em> įrankį ir suskriptinti automatinį
+                  VM kūrimą su tinkama konfigūracija:</p>
+                <div class="olist loweralpha">
+                  <ol class="loweralpha" type="a">
+                    <li>
+                      <p>Antra tinklo sąsaja pageidautina <code>Host-only</code> tipo
+                        (skirta OAM: Operation, Administration, Management).</p>
+                    </li>
+                    <li>
+                      <p>Bendras <code>.vdi</code> disko atvaizdas, iš kurio galiu pakelt
+                        norimai daug VM neužimant Host talpyklos dubliuotomis <code>.vdi</code>                        kopijomis.</p>
+                    </li>
+                    <li>
+                      <p>Kiekvienai VM parinkau po 2 virtualius CPU ir po <code>1024</code>                        MiB RAM (mano Host teturi prieinamus 3.7 GiB RAM).</p>
+                    </li>
+                    <li>
+                      <p>Tam pasirinkau mano naudoją <code>CentOS</code> Linux ir man
+                        žinomą <em>Bash</em> kalbą.</p>
+                    </li>
+                    <li>
+                      <p>Tai užtruko kelias paras: 150 <em>Commits</em>,
+                        <a href="https://github.com/VGTU-ELF/TETfm-20/commits/48a7e7c30bc23b756cff9a1e53cdb0ce4e4c921f/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh">0LD-infra.sh</a></p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li>
+                <p>Antra kliūčių priežastis: LD aprašas skirtas senesnei Ubuntu versijai
+                  (turbūt <code>18.04</code>):</p>
+                <div class="olist loweralpha">
+                  <ol class="loweralpha" type="a">
+                    <li>
+                      <p>Dėl OS versijų skirtumo dalis programinių įrankių buvo sudiegti
+                        naujesnės versijos (pvz. PHP7 vietoj PHP4).</p>
+                    </li>
+                    <li>
+                      <p>O dalies (<em>Development</em>) įrankių diegimą atidėjau iki
+                        tyrimų, kuomet įrankių prireiks tiesiogiai.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
