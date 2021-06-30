@@ -257,7 +257,7 @@ echo "<html> kompiuterio vardas </html>" > index.php
 ```
   |
   
-  | Išbandykite, ar atidaromas jūsų žiniatinklio puslapis naudoodamiesi kompiuterio naršykle.
+  | Išbandykite, ar atidaromas jūsų žiniatinklio puslapis naudodamiesi kompiuterio naršykle.
   |
   | Atkreipkite dėmesį, kad naudojamas saugus žiniatinklio protokolas `https`
 
