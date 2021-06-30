@@ -208,7 +208,7 @@ Jei reikia įtraukti statinį įrašą, reiktų tai padaryti `/etc/network/inter
   |
   
   | Skenuokite kaimyninį kompiuterį:
-  |`nmap -sS -O 192.168.10.(1x-1)
+  |`nmap -sS -O 192.168.10.(1x-1)`
   |
   
   | Išsiaiškinkite, ką reiškia gautas atsakymas.
