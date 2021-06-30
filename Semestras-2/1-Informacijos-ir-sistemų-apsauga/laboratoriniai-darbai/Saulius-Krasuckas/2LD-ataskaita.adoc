@@ -371,6 +371,76 @@ osboxes@ldvm1:~$ sudo ifconfig enp0s8:2 10.10.10.14/24
 osboxes@ldvm2:~$ sudo ifconfig enp0s8:2 10.10.10.13/24
 ```
 
+Patikrinu, nusistatė abiejuose kompiuteriuose:
+
+```
+osboxes@ldvm1:~$ ifconfig -a
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::6c28:ce7d:bcd2:2048  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
+        RX packets 864  bytes 753541 (753.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 899  bytes 76163 (76.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+        RX packets 34363  bytes 7170684 (7.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 35009  bytes 10949048 (10.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.14  netmask 255.255.255.0  broadcast 10.10.10.255
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 698  bytes 61712 (61.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 698  bytes 61712 (61.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+```
+osboxes@ldvm2:~$ ifconfig -a
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::188e:e3e8:fd2f:9d8b  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:32:52:a1  txqueuelen 1000  (Ethernet)
+        RX packets 874  bytes 735129 (735.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1529  bytes 140649 (140.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.13  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe7a:d0b7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:7a:d0:b7  txqueuelen 1000  (Ethernet)
+        RX packets 10683  bytes 1199028 (1.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19407  bytes 6113864 (6.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.13  netmask 255.255.255.0  broadcast 10.10.10.255
+        ether 08:00:27:7a:d0:b7  txqueuelen 1000  (Ethernet)
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 890  bytes 75981 (75.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 890  bytes 75981 (75.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
 
 
 #### X. SSH serverio instaliavimas
