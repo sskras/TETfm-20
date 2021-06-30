@@ -2496,9 +2496,10 @@ Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
 ** Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba): `http` ir `https`
 
 
-### Duotosios Linux tinklo komandos aprašymas: `tcptraceroute`
+### Duotosios Linux tinklo komandos aprašymas: `tcpdump`
 
-TODO
+Tai tinklo srauto sniferis (paketų gaudyklė).
+
 
 ##### Pavyzdys
 
