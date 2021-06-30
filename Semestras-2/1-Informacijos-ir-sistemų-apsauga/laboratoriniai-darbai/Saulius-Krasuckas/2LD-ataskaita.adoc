@@ -342,6 +342,18 @@ osboxes@ldvm1:~$ cat /etc/hosts
   ...
 ```
 
+Vardo išsprendimas:
+
+```
+osboxes@ldvm1:~$ ping kaimynas
+PING kaimynas (192.168.10.13) 56(84) bytes of data.
+64 bytes from kaimynas (192.168.10.13): icmp_seq=1 ttl=64 time=0.820 ms
+64 bytes from kaimynas (192.168.10.13): icmp_seq=2 ttl=64 time=0.823 ms
+^C
+--- kaimynas ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+```
+
 
 #### X. SSH serverio instaliavimas
 
