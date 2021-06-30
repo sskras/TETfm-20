@@ -65,61 +65,61 @@ Tikrinu vardus.
 
 Peržiūriu pasirenkamis sąsajų parametrus.
 
-Peržiūriu sąsajų parametrus:
+Peržiūriu sąsajų parametrus.
 
-Nustatau tinklo adresą:
+Nustatau tinklo adresą.
 
 #### 2. Tinklo vartai
 
-Nustatau vartus:
+Nustatau vartus.
 
-Patikrinu; vartai nustatyti:
+Patikrinu; vartai nustatyti.
 
 #### 3. Statinės tinklo konfigūracijos įrašymas
 
 Tinklo adresai prieš perkrovimą.
 
-Po pekrovimo:
+Po pekrovimo.
 
-Surašau statinę konfigūraciją kitu būdu:
+Surašau statinę konfigūraciją naudodamas `echo ... >> ...`.
 
-Aktyvuoju tinklo konfigūraciją iš failo:
+Aktyvuoju tinklo konfigūraciją iš failo.
 
 #### 4. Kompiuterio vardas
 
-Nustatau kompiuterio vardą:
+Nustatau kompiuterio vardą.
 
-Įrašau kompiuterio vardą į konfigūracinį failą:
+Įrašau kompiuterio vardą į konfigūracinį failą.
 
-Patikrinu -- vardas pasikeitė:
+Patikrinu -- vardas pasikeitė.
 
-Konfigūruoju vardų išsprendimo tarnybines stotis:
+Konfigūruoju vardų išsprendimo tarnybines stotis.
 
 #### 5. Standartiniai maršrutai
 
-Nustatau maršrutą per kaimyną:
+Nustatau maršrutą per kaimyną.
 
-Išbandau jį:
+Išbandau jį.
 
-#### 6. Vidaus vardai:
+#### 6. Vidaus vardai.
 
-Aprašau kaimyninį VM:
+Aprašau kaimyninį VM.
 
-Vardo išsprendimas:
+Vardo išsprendimas.
 
 #### 7. Keli tinklo adresai
 
-Nustatau antrąjį tinklo adresą:
+Nustatau antrąjį tinklo adresą.
 
-Patikrinu, nusistatė abiejuose kompiuteriuose:
+Patikrinu, nusistatė abiejuose kompiuteriuose.
 
-Išbandau antrus IP adresus, veikia:
+Išbandau antrus IP adresus, veikia.
 
 #### 8. Programinės įrangos valdymas
 
-Šaltinių sąrašas:
+Šaltinių sąrašas.
 
-`apt-get` raktai:
+`apt-get` raktai.
 
 Skaitau `apt-get` aprašymą.
 https://web.archive.org/web/20090321133431/https://ubuntu.lt/render/Articles;aid,39[Puslapis] aprašo šias sub-komandas:
@@ -133,39 +133,39 @@ sudo apt-get remove ...
 sudo apt-get remove --purge ...
 ```
 
-Atnaujinu programų sąrašus:
+Atnaujinu programų sąrašus.
 
-Instaliuoju `nmap`:
+Instaliuoju `nmap`.
 
 #### 9. Įrankis `nmap`
 
-Skenuoju kaimyną:
+Skenuoju kaimyną.
 
 #### 10. Žiniatinklio paslauga ir klientas
 
-Instaliuoju `links`:
+Instaliuoju `links`.
 
-Instaliuoju žiniatinklio paslaugą, duomenų bazę ir kitus įrankius:
+Instaliuoju žiniatinklio paslaugą, duomenų bazę ir kitus įrankius.
 
 #### 11. Žiniatinklio konfigūravimas
 
-Peržiūriu konfigūracinį failą:
+Peržiūriu konfigūracinį failą.
 
 #### 12. Vykdomi procesai
 
-Peržiūriu kompiuteryje vykdomus procesus:
+Peržiūriu kompiuteryje vykdomus procesus.
 
 Tikrinimo metu veikė 195 procesai.
 
-Peržvelgiu komandos `ps` galimybes:
+Peržvelgiu komandos `ps` galimybes.
 
 Daug skaitymo, apibendrinu iškeliu rezultatuose.
 
-Procesų peržiūra su `top`:
+Procesų peržiūra su `top`.
 
 #### 13. Prievadų skenavimas
 
-Nuskenuoju kaimyno prievadus:
+Nuskenuoju kaimyno prievadus.
 
 ---
 
