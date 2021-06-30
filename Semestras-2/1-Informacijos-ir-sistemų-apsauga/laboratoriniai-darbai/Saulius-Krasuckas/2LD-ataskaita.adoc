@@ -3,7 +3,7 @@
 * [x] Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
 * [x] Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
 
-### Trumpas atlikto darbo aprašymas ir atsakymai į klausimus
+### Trumpas atlikto darbo aprašymas
 
 #### 0. Infrastruktūros paruošimas
 
