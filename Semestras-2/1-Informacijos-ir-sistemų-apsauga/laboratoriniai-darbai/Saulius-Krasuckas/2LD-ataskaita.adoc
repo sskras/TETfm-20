@@ -2500,6 +2500,45 @@ Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
 
 Tai tinklo srauto sniferis (paketų gaudyklė).
 
+. Įrankis skaito duomenų paketus (įprastai iš tinklo sąsajos) ir išveda jų dekoduotą aprašymą.
+. Tai jis daro paketams, atitinkantiems užduotą filtrą.
+. Jei filtro nėra, nuskaitomi visi paketai iš eilės.
+. Jei filtras yra, jis konstruojamas kaip loginė išraiška (angl. _Boolean expression_)
+. Ir atitinka `pcap-filter` sintaksę.
+. Įprastai išvestyje paketo aprašymas talpinamas į vieną, atskirą eilutę.
+. Įprastai jis pradedamas paketo laiko žyma.
+. Jei nurodyta parinktis `-w`, paketų turinys įrašomas į atskirą failą (vėlesnei analizei).
+. Jei nurodyta parinktis `-r`, paketai ne iš tinklo sąsajos, bet iš failo, sukurto naudojant `-w`.
+. Jei nurodyta parinktis `-V`, paketai nuskaitomi iš tų failų, kurių vardai yra surašyti šiai parinkčiai priskirtame faile.
+. Jei nurodytos abi parinktys: tiek skaitymo iš failo, tiek rašymo į failą,
+  atsiranda galimybė iš didžiulio _Capture_ failo išsipjauti tik reikiamas srauto dalis.
+. Įrankis geba išvardinti:
+.. gaudymui tinkamas sistemos tinklo sąsajas, `-D`;
+.. sąsajos palaikomus _Data-link_ tipus;
+. Įrankis turi nuskaitymo valdymą pagal:
+.. tinklo sąsajos vardą, `-i`;
+.. tinklo sąsajos būseną (angl. _Promiscous_ arba ne), `-p`;
+.. pagautų paketų skaičių, `-c`;
+.. paketų keliavimo kryptį, `-Q`;
+.. fiksuotą paketo pradžios fragmentą, `-s`;
+.. išraišką, pateiktą atskirame faile, `-F` (praverčia, kai išraiškos apimtys labai išauga).
+. Įrankis turi išvesties valdymą:
+.. išjungti laiko žymas arba pakeisti jų tipą, `-t`;
+.. išjungti mazgų vardų išsprendimą, `-n`;
+.. įjungti Layer2 antraštes, `-e`;
+.. įjungti Layer2 _Payload_ išvestį ASCII formatu, `-A` (antraščių nutrynimą);
+.. įjungti buferizavimą kas eilutę, `-l`;
+.. įjungti paketo numerio rodymą, `-#`;
+.. įjungti tik trumpus paketų aprašymus, `-q`;
+.. įjungti išplėstinius paketų aprašymus, `-v`;
+.. įjungti absoliučius TCP sekų numerius, `-S` (vietoj santykinių);
+.. įjungti priverstinį tipą visų pagautų paketų dekodavime, `-T`;
+.. įjungti šešioliktainį paketo rodymą, `-x`;
+.. įjungti šešioliktainį ir ASCII rodymą, patalpintus greta, `-X`;
+.. pradėti naują failą pagal pagautų duomenų apimtį (MB), `-C`;
+.. pradėti naują failą pagal gaudymo trukmę (s), `-F`.
+. Ir dar kelios funkcijos.
+
 
 ##### Pavyzdys
 
