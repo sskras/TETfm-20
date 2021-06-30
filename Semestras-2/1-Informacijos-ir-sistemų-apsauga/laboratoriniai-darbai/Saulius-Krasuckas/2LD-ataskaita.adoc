@@ -174,11 +174,11 @@ Nuskenuoju kaimyno prievadus.
 #### 0. _Guest OS_ paruošimas
 
 * Programinės įrangos diegimui reikėjo atnaujinti jos duomenų bazę:
-
++
 `$ sudo apt update`
 
 ** Kitaip neįsidiegė bent jau `openssh-server`:
-
++
 ```
 osboxes@osboxes:~$ sudo apt install openssh-server
 sudo apt install openssh-server
@@ -206,8 +206,8 @@ E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/opens
 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
 ```
 
-** Ataujinu programinės įrangos duomenų bazę:
-
+** Atnaujinu programinės įrangos duomenų bazę:
++
 ```
 osboxes@osboxes:~$ sudo apt update
 sudo apt update
@@ -230,7 +230,7 @@ Reading state information... Done
 * SSH serverio instaliavimas
 
 ** Ieškau programinės įrangos paketo:
-
++
 ```
 osboxes@osboxes:~$ apt search ssh
 Sorting...
@@ -250,7 +250,7 @@ zssh/focal 1.5c.debian.1-7build2 amd64
 ```
 
 ** Diegiu `OpenSSH` serverį:
-
++
 ```
 osboxes@osboxes:~$ sudo apt install openssh-server
 sudo apt install openssh-server
@@ -301,7 +301,7 @@ Processing triggers for ufw (0.36-6) ...
 #### 1. Tinklo sąsajos
 
 * Trūko `ifconfig` komandos, teko susiinstaliuoti paketą `net-tools`:
-
++
 ```
 osboxes@osboxes:~$ ifconfig -a
 
@@ -326,7 +326,7 @@ Progress: [ 80%] [##############################################............]
 * Tinklo sąsajų (interfeisų) pavadinimai yra `enp0s3`, `enp0s8`, `lo`.
 
 * Pasirenkami sąsajų parametrai yra:
-
++
 ```
 Usage:
   ifconfig [-a] [-v] [-s] <interface> [[<AF>] <address>]
@@ -344,8 +344,8 @@ Usage:
   [up|down] ...
 ```
 
-Patikrinu -- tinklo adresas tikrai nustatytas:
-
+* Patikrinu -- tinklo adresas tikrai nustatytas:
++
 ```
 osboxes@osboxes:~$ ifconfig enp0s8
 ifconfig enp0s8
@@ -360,7 +360,7 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 
 ** `$ sudo apt install ifupdown`
-
++
 ```
 root@osboxes:~# ifup enp0s8
 
@@ -391,7 +391,7 @@ Processing triggers for man-db (2.9.1-1) ...online.target.wants/networking.servi
 #### 2. Tinklo vartai
 
 * Komanda `route -a` aprašyme netiksli. Reikėjo `route -n`:
-
++
 ```
 osboxes@osboxes:~$ route -a
 route -a
@@ -416,7 +416,7 @@ Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
 
 
 * Tekstų redaktorius `nano` nesivaldo per VirtualBox _Serial-over-Telnet_ terminalinį prisijungimą:
-
++
 ```
 osboxes@osboxes:~$ nano /etc/network/interfaces
 (B[ Directory '/etc/network' is not writable ](B  GNU nano 4.8                /etc/network/interfaces                           
@@ -428,7 +428,7 @@ osboxes@osboxes:~$ nano /etc/network/interfaces
 * Tekstų redaktorius `vi` pagal nutylėjimą man veikia nekorektiškai:
 
 ** Jei atsidarau failą, rodo tvarkingai:
-
++
 ```
 root@osboxes:~# vi /etc/network/interfaces
 face enp0s8 inet static
@@ -442,7 +442,7 @@ auto enp0s8
 ```
 
 ** Bet jei paspaudžiu <Shift-O> (_Open new line_), tekstas susigadina:
-
++
 ```
 [>4;menp0s8 inet static
 
@@ -455,7 +455,7 @@ auto enp0s8
 ```
 
 * Teko surašyti statinę konfigūraciją iš CLI:
-
++
 ```
 osboxes@osboxes:~$ sudo -i
 root@osboxes:~# 
@@ -472,7 +472,7 @@ gateway 192.168.10.254
 ```
 
 * Po perkrovimo tinklas vis tiek nesusikonfigūruoja:
-
++
 ```
 osboxes@osboxes:~$ ifconfig enp0s8
 enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
@@ -484,7 +484,7 @@ enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
 ```
 
 ** Papildau konfigūraciją `auto` eilute:
-
++
 ```
 root@osboxes:~# cat /etc/network/interfaces
 auto enp0s8
@@ -503,7 +503,7 @@ gateway 192.168.10.254
 
 * Komandinio apvalkalo eilutėje rodomas kompiuterio vardas nepasikeičia savaime.
 Tam naudotojui reikia persijungti iš naujo:
-
++
 ```
 osboxes@osboxes:~$ 
 osboxes@osboxes:~$ su - osboxes
@@ -512,14 +512,14 @@ osboxes@ldvm1:~$
 ```
 
 * Pagal aprašą sukonfigūravus vardų išsprendimą, jis nustojo veikti:
-
++
 ```
 osboxes@ldvm1:~$ ping www.google.lt
 ping: www.google.lt: Temporary failure in name resolution
 ```
 
 ** Pastebėjau, kad srautas nenukeliauja nei vienu žingsniu iš mašinos:
-
++
 ```
 osboxes@ldvm1:~$ ping 193.219.146.19
 PING 193.219.146.19 (193.219.146.19) 56(84) bytes of data.
@@ -533,7 +533,7 @@ From 192.168.10.14 icmp_seq=3 Destination Host Unreachable
 
 ** Įtariau, kad tai įvyko dėl neveikiančiai sukonfigūruotų papildomų tinklo vartų --
 jie perima išorei skirto tinklo srauto nukreipimą ir toliau niekur nenukreipia:
-
++
 ```
 osboxes@ldvm1:~$ route -n
 Kernel IP routing table
@@ -546,7 +546,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 ```
 
 ** Veikimui atstatyti iš konfigūracijos pašalinau niekur nevedančius tinklo vartus:
-
++
 ```
 osboxes@ldvm1:~$ sudo route delete default gw 192.168.10.254
 sudo: unable to resolve host ldvm1: Temporary failure in name resolution
@@ -555,7 +555,7 @@ osboxes@ldvm1:~$
 ```
 
 ** Tačiau duotos VU vardų išsprendimo tarnybinės stotys vis tiek lieka nepasiekiamios
-
++
 ```
 osboxes@ldvm1:~$ ping 193.219.146.19
 sboxes@ldvm1:~$ cat /etc/resolv.conf 
@@ -574,7 +574,7 @@ From 193.219.94.140 icmp_seq=3 Destination Host Unreachable
 ```
 
 ** Prisiminiau, kad jos nebeveikia jau keletą metų.
-
++
 ** Google https://www.litnet.lt/images/projektai/Sensorių_pradines_konfiguracijos_instrukcijos.pdf[susiradau]
 atnaujintas VU vardų išsprendimo tarnybines stotis:
 
@@ -604,7 +604,7 @@ PING 193.219.80.2 (193.219.80.2) 56(84) bytes of data.
 ** Pagaliau gyvieji.
 
 ** Perkonfigūruoju jas į veikiančias:
-
++
 ```
 osboxes@ldvm1:~$ sudo nano /etc/resolv.conf 
 sudo: unable to resolve host ldvm1: Temporary failure in name resolution
@@ -616,7 +616,7 @@ nameserver 193.219.80.2
 ```
 
 * Nėra komandos `traceroute`:
-
++
 ```
 osboxes@ldvm1:~$ traceroute 
 
@@ -627,7 +627,7 @@ sudo apt install traceroute            # version 1:2.1.0-2
 ```
 
 ** Teko įsidiegti:
-
++
 ```
 osboxes@ldvm1:~$ sudo apt install traceroute
 Reading package lists... Done
@@ -678,7 +678,7 @@ Veikia pagal aprašą, sunkumų neiškilo. Klausimai neužduoti.
 #### 10. Žiniatinklio paslauga ir klientas
 
 * Deja, apraše duota diegimo komanda neveikia:
-
++
 ```
 osboxes@ldvm1:~$ sudo apt-get install apache-ssl apache-common libapache-mod-php4 \
 >   mysql-server mysql-common mysql-client php4-mysql \
@@ -725,7 +725,7 @@ E: Couldn't find any package by regex 'gcc-4.1'
 *** php7.4-gd
 *** php-pear
 *** php-cli
-
++
 ```
 osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
   mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli
@@ -737,14 +737,14 @@ osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
 #### 11. Žiniatinklio konfigūravimas
 
 * Peržiūrėti konfigūracinio failo nepavyksta dėl stipriai naujesnės Apache versijos:
-
++
 ```
 osboxes@ldvm1:~$ cat /etc/apache-ssl/httpd.conf
 cat: /etc/apache-ssl/httpd.conf: No such file or directory
 ```
 
 ** Sprendimas -- paieškoti panašių failų naujuose paketuose:
-
++
 ```
 osboxes@ldvm1:~$ dpkg --search /etc/apache2
 apache2, libapache2-mod-php7.4: /etc/apache2
@@ -788,7 +788,7 @@ osboxes@ldvm1:~$ dpkg --listfiles apache2 | grep \\.conf
 ```
 
 ** Pasirenku `/etc/apache2/apache2.conf` ir filtruoju jį taip:
-
++
 ```
 osboxes@ldvm1:~$ cat /etc/apache2/apache2.conf | grep -C1 ^Include
 # Include module configuration:
@@ -815,6 +815,7 @@ IncludeOptional sites-enabled/*.conf
 ** vienos `<FilesMatch ...>` dalies, aprašančios `.ht` failus:
 *** `<FilesMatch "^\.ht">`
 ** daugelio `.conf` failų, įtraukiamų direktyva `Include` arba `IncludeOptional`:
++
 ```
  /etc/apache2/
  |-- apache2.conf
@@ -829,7 +830,7 @@ IncludeOptional sites-enabled/*.conf
 ```
 
 * Deja, puslapis per `https` dar neatsidaro:
-
++
 ```
 osboxes@ldvm1:/var/www$ links https://ldvm1
                                                                                                                                        
@@ -847,14 +848,14 @@ osboxes@ldvm1:/var/www$ links https://ldvm1
 ```
 
 ** Patikrinu Apache prievadus, trūksta `443/TCP` (https):
-
++
 ```
 osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
 tcp6       0      0 :::80                   :::*                    LISTEN      11795/apache2
 ```
 
 ** Įjungiu pagal suguglintą dokumentaciją:
-
++
 ```
 osboxes@ldvm1:/var/www$ sudo a2enmod ssl
 Considering dependency setenvif for ssl:
@@ -877,7 +878,7 @@ Password:
 ```
 
 ** Patikrinu Apache prievadus dar sykį, `443/TCP` jau veikia:
-
++
 ```
 osboxes@ldvm1:/var/www$ sudo netstat -46lnp | grep apache
 tcp6       0      0 :::80                   :::*                    LISTEN      17145/apache2
@@ -885,7 +886,7 @@ tcp6       0      0 :::443                  :::*                    LISTEN      
 ```
 
 ** Patikrinu su vietine naršykle, `https` dar neveikia:
-
++
 ```
                                                                                                                                        
                                                                                                                                        
@@ -902,7 +903,7 @@ tcp6       0      0 :::443                  :::*                    LISTEN      
 ```
 
 ** Patikrinu su CLI įrankiu `wget`:
-
++
 ```
 osboxes@ldvm1:/etc/apache2/sites-enabled$ wget -S https://ldvm1
 --2021-06-30 06:26:28--  https://ldvm1/
@@ -913,7 +914,7 @@ Unable to establish SSL connection.
 ```
 
 ** Pagal klaidą suguglinu patarimą tikrinti `443/TCP` prievadą be SSL.  Be SSL veikia:
-
++
 ```
 osboxes@ldvm1:~$ wget -S http://ldvm1:443
 --2021-06-30 06:27:13--  http://ldvm1:443/
@@ -940,7 +941,7 @@ index.html                        100%[=========================================
 ```
 
 ** Panašu, kad trūksta SSL-konfigūracinio failo. Tikrinu:
-
++
 ```
 osboxes@ldvm1:/var/www$ ll /etc/apache2/sites-available/
 total 20
@@ -977,7 +978,7 @@ Password:
 ```
 
 ** Patikrinu; SSL lyg veikia, bet pyksta dėl SSL sertifikato:
-
++
 ```
 osboxes@ldvm1:~$ wget -S https://ldvm1
 --2021-06-30 06:31:39--  https://ldvm1/
@@ -991,7 +992,7 @@ To connect to ldvm1 insecurely, use `--no-check-certificate'.
 ```
 
 ** Tikrinu su `links`:
-
++
 ```
 osboxes@ldvm1:/var/www$ links https://ldvm1
                                                                                                                                        
@@ -1007,7 +1008,7 @@ osboxes@ldvm1:/var/www$ links https://ldvm1
 ```
 
 ** Jau veikia:
-
++
 ```
 osboxes@ldvm1:~$ links https://ldvm1
 
@@ -1031,7 +1032,7 @@ osboxes@ldvm1:~$ links https://ldvm1
 * Panašu, kad rodomas ne mūsų sukurtas žiniatinklio failas, o Apache puslapis pagal nutylėjimą.
 
 ** Tikrinu konfigūracijos failą:
-
++
 ```
 osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[:space:]]*#'
 <IfModule mod_ssl.c>
@@ -1071,7 +1072,7 @@ osboxes@ldvm1:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep -v -e '^[[
 *** o su šia Apache versija reikia kurti `/var/www/html` direktorijoje.
 
 ** Perkeliu konfigūracinį failą:
-
++
 ```
 osboxes@ldvm1:/etc/apache2/sites-enabled$ cd /var/www
 
@@ -1102,14 +1103,14 @@ total 16
 ** Bet to irgi nepakanka, turinys nepasikeitė.
 
 ** Galbūt `.html` failas turi prioritetą `.php` atžvilgiu. Pašalinu:
-
++
 ```
 osboxes@ldvm1:/var/www$ sudo rm -v html/index.html 
 removed 'html/index.html'
 ```
 
 ** Patikrinu su `links`, pagaliau veikia!
-
++
 ```
 osboxes@ldvm1:/var/www$ links https://ldvm1
 
@@ -1169,7 +1170,7 @@ image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9a
 * Procesai, kurie naudoja daugiausiai kompiuterio resursų:
 
 ** pagal CPU:
-
++
 ```
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
     241 root       0 -20       0      0      0 I   0.3   0.0   0:02.60 kworker/1:1H-kblockd
@@ -1182,7 +1183,7 @@ image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9a
 ```
 
 ** pagal Memory:
-
++
 ```
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
    7528 mysql     20   0 1741604 229984   6104 S   0.3  22.9   1:02.20 mysqld
@@ -1242,7 +1243,7 @@ image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9a
 * Tačiau jei skenuoju iš kaimyno pirmąjį kompiuterį, situacija jau gerokai kita:
 
 ** (Abu kompiuteriai sukurti iš bendro `.vdi` atvaizdo, todėl pradžioje jų tarnybos buvo identiškos)
-
++
 ```
 osboxes@ldvm2:~$ sudo nmap -sS 192.168.10.14
 Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 09:09 EDT
@@ -1308,7 +1309,7 @@ Tai tinklo srauto sniferis (paketų gaudyklė).
 ##### Pavyzdys
 
 Gaudymui tinkamos tinklinės sąsajos:
-
++
 ```
 osboxes@ldvm1:~$ tcpdump -D
 1.enp0s3 [Up, Running]
@@ -1321,7 +1322,7 @@ osboxes@ldvm1:~$ tcpdump -D
 ```
 
 Viso srauto gaudymas per Ethernet sąsają `enp0s3`:
-
++
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s3
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
@@ -1341,7 +1342,7 @@ listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 bytes
 ```
 
 Tik vieno tinklo mazgo srauto gaudymas per kitą Ethernet sąsają:
-
++
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 host kaimynas
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
@@ -1365,7 +1366,7 @@ listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
 ```
 
 Viso potinklio srauto gaudymas išjungus vardų išsprendimą ir paketų laiko žymas:
-
++
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 -n -t net 192.168.10.0/24 and not tcp port 22
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
@@ -1390,7 +1391,7 @@ IP 192.168.10.13.56204 > 192.168.10.14.443: Flags [R], seq 2018304235, win 0, le
 ```
 
 Tik TCP paketų gaudymas per OAM tinklo sąsają:
-
++
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 tcp -w ldvm-tcp-srautas.pcap
 tcpdump: listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
@@ -1410,7 +1411,7 @@ osboxes@ldvm1:~$ ls -l ldvm-tcp-srautas.pcap
 ```
 
 Įrašytų į failą paketų skaičiaus patikrinimas
-
++
 ```
 osboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap | wc -l
 reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
@@ -1418,7 +1419,7 @@ reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
 ```
 
 Minimalus pirmųjų keturių paketų dekodavimas:
-
++
 ```
 sboxes@ldvm1:~$ sudo -u tcpdump tcpdump -r ldvm-tcp-srautas.pcap -t -n -q -c 4
 reading from file ldvm-tcp-srautas.pcap, link-type EN10MB (Ethernet)
