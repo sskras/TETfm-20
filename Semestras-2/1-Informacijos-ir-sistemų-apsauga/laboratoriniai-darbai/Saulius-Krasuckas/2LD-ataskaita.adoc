@@ -1535,6 +1535,43 @@ image::https://user-images.githubusercontent.com/74717106/123950177-12538d80-d9a
   26973 root      20   0  313752  10652   9012 S   0.0   1.1   0:00.13 ModemManager
 ```
 
+* Programa `top`:
+
+** Pateikia dinaminį sistemos (OS) vaizdą.
+** Pateikia sistemos informacijos reziume:
+*** sistemos laikrodį;
+*** _Uptime_;
+*** prisijungsių naudotojų sk.;
+*** tris vidutines sistemines apkrovas (_System load_);
+*** procesų skaičių:
+**** kiek iš viso;
+**** kiek veikia;
+**** kiek „miega“;
+**** kiek sustabdytų;
+**** kiek „zombių“.
+*** CPU laikus, skirtus:
+**** _User_ procesams;
+**** branduolio užduotims;
+**** prioritetų keitimui (_Niceness_);
+**** ramybės būsenai (_Idle_);
+**** aparatūros pertrauktims (_Hardware interrupts_);
+**** programinėms pertrauktims (_Software interrupts_);
+**** hiperizoriaus veiklai (_Host_ + kitų _Guest_ OS aptarnavimui).
+** Pateikia procesų ir branduolio gijų sąrašą stulpeliais:
+*** proceso identifikatorių PID;
+*** proceso savininką (naudotoją);
+*** proceso sisteminį prioritetą;
+*** proceso prioriteto pataisymą (_Niceness_);
+*** proceso Virt
+*** proceso Resident
+*** proceso Shared
+*** proceso būseną;
+*** proceso sunaudojamą CPU laiką %;
+*** proceso sunaudojamą atminties apimtį %;
+*** proceso vykdymo laiką;
+*** proceso komandos pavadinimą.
+** Rūšiuoja pagal pasirinktus stulpelius;
+
 
 #### X. SSH serverio instaliavimas
 
