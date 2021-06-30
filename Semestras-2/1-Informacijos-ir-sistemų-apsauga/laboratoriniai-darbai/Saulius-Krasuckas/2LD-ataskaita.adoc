@@ -1710,6 +1710,24 @@ IncludeOptional sites-enabled/*.conf
 *** `IncludeOptional conf-enabled/*.conf`
 *** `IncludeOptional sites-enabled/*.conf`
 
+* Deja, puslapis per `https` dar neatsidaro:
+
+```
+osboxes@ldvm1:/var/www$ links https://ldvm1
+                                                                                                                                       
+                                                                                                                                       
+                                                  +------------- Error -------------+                                                  
+                                                  |                                 |                                                  
+                                                  |  Error loading https://ldvm1/:  |                                                  
+                                                  |                                 |                                                  
+                                                  |       Connection refused        |                                                  
+                                                  |                                 |                                                  
+                                                  |           [ Cancel ]            |                                                  
+                                                  +---------------------------------+                                                  
+                                                                                                                                       
+                                                                                                                                       
+```
+
 
 ### Duotosios Linux komandos aprašymas: `TODO`
 
