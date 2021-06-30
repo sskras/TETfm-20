@@ -616,6 +616,17 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 ```
 
+#### 9. Įrankis `nmap`
+
+Susipažįstu su galimybėmis:
+
+```
+osboxes@ldvm1:~$ man nmap
+osboxes@ldvm1:~$ man nmap | wc -l
+troff: <standard input>:2798: warning [p 33, 5.3i]: can't break line
+2178
+```
+(Labai plačios, virš 2000 eilučių aprašymo!)
 
 #### X. SSH serverio instaliavimas
 
