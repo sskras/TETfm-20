@@ -628,6 +628,30 @@ troff: <standard input>:2798: warning [p 33, 5.3i]: can't break line
 ```
 (Labai plačios, virš 2000 eilučių aprašymo!)
 
+Skenuoju kaimyną:
+
+```
+osboxes@ldvm1:~$ sudo nmap -sS 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-06-30 03:53 EDT
+Nmap scan report for kaimynas (192.168.10.13)
+Host is up (0.00062s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.30 seconds
+```
+
+Gautas atsakymas reiškia:
+
+* buvo nuskenuoti 999 TCP transportinio protokolo prievadai;
+* kaimyniniame kompiuteryje rastas tik vienas atviras prievadas;
+* ten veikia tinklo paslauga SSH;
+* kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.
+```
+
+
 #### X. SSH serverio instaliavimas
 
 Ieškau programinės įrangos paketo:
