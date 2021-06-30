@@ -1,7 +1,7 @@
 ### Darbo Tikslas
 
-* [ ] Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
-* [ ] Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
+* [x] Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
+* [x] Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
 
 ### Trumpas atlikto darbo aprašymas ir atsakymai į klausimus
 
@@ -2496,9 +2496,26 @@ Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
 ** Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba): `http` ir `https`
 
 
-### Duotosios Linux komandos aprašymas: `TODO`
+### Duotosios Linux tinklo komandos aprašymas: `tcptraceroute`
+
+TODO
 
 ##### Pavyzdys
 
+```
+```
+
 ### Viso darbo išvados
+
+. Laboratorinį darbą #2 (LD2) atlikti pavyko pilnai, tačiau kilo gana daug kliūčių.
+. Ko gero pagrindinė to priežastis: noras viską daryti be GUI, naudojant tik CLI įrankius.
+.. Dėl šio mano reikalavimo teko LD atlikimą pradėti nuo LD2, o LD1 dar laukia eilėje.
+. Tam reikėjo pramokti _VirtualBox_ įrankį ir suskriptinti automatinį VM kūrimą su tinkama konfigūracija:
+.. Antra tinklo sąsaja pageidautina `Host-only` tipo (skirta OAM: Operation, Administration, Management).
+.. Bendras `.vdi` disko atvaizdas, iš kurio galiu pakelt norimai daug VM neužimant Host talpyklos dubliuotomis `.vdi` kopijomis.
+.. Kiekvienai VM parinkau po 2 virtualius CPU ir po `1024` MiB RAM (mano Host teturi prieinamus 3.7 GiB RAM).
+.. Tai užtruko kelias paras.
+. Antra kliūčių priežastis: LD aprašas skirtas senesnei Ubuntu versijai (turbūt `18.04`):
+.. Dėl OS versijų skirtumo dalis programinių įrankių buvo sudiegti naujesnės versijos (pvz. PHP7 vietoj PHP4).
+.. O dalies (_Development_) įrankių diegimą atidėjau iki tyrimų, kuomet įrankių prireiks tiesiogiai.
 
