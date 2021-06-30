@@ -1601,7 +1601,8 @@ E: Couldn't find any package by regex 'gcc-4.1'
 *** php-cli
 
 ```
-osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli 
+osboxes@ldvm1:~$ sudo apt-get install apache2 libapache2-mod-php7.4 \
+  mysql-server php7.4-mysql default-libmysqlclient-dev php7.4-gd php-pear php-cli
 ```
 
 * Instaliavimo komandoje naudojamas `\` simbolis reiškia, kad tolimesnis komandos tekstas nukeliamas į kitą eilutę.
