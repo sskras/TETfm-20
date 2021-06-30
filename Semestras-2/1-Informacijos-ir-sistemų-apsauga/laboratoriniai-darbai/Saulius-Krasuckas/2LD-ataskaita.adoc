@@ -137,7 +137,8 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
 ```
 
-#### 3. Statinės konfigūracijos įrašymas
+
+#### 3. Statinės tinklo konfigūracijos įrašymas
 
 Prieš perkrovimą:
 
@@ -167,15 +168,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         inet6 ::1  prefixlen 128  scopeid 0x10<host>
 ```
 
-Surašau statinę konfigūraciją:
+Surašau statinę konfigūraciją kitu būdu:
 
 ```
-osboxes@osboxes:~$ sudo -i
-root@osboxes:~# 
-root@osboxes:~# echo 'iface enp0s8 inet static' >> /etc/network/interfaces
-root@osboxes:~# echo 'address 192.168.10.14' >> /etc/network/interfaces
-root@osboxes:~# echo 'netmask 255.255.255.0' >> /etc/network/interfaces
-root@osboxes:~# echo 'gateway 192.168.10.254' >> /etc/network/interfaces
 root@osboxes:~# cat /etc/network/interfaces
 iface enp0s8 inet static
 address 192.168.10.14
@@ -198,31 +193,6 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX packets 343  bytes 48317 (48.3 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-
-Po perkrovimo tinklas vis tiek nesusikonfigūruoja:
-
-```
-osboxes@osboxes:~$ ifconfig enp0s8
-enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
-        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-```
-
-Papildau konfigūraciją:
-
-```
-root@osboxes:~# cat /etc/network/interfaces
-auto enp0s8
-
-iface enp0s8 inet static
-address 192.168.10.14
-netmask 255.255.255.0
-gateway 192.168.10.254
-```
-Po perkrovimo tinklas jau susikonfigūruoja automatiškai.
 
 
 #### 4. Kompiuterio vardas
@@ -1662,6 +1632,9 @@ Selecting previously unselected package ifupdown.
 Processing triggers for man-db (2.9.1-1) ...online.target.wants/networking.service → /lib/systemd/system/networking.service.
 ```
 
+
+#### 2. Tinklo vartai
+
 * Komanda `route -a` aprašyme netiksli. Reikėjo `route -n`:
 
 ```
@@ -1683,6 +1656,10 @@ Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
     ...
 ```
 
+
+#### 3. Statinės tinklo konfigūracijos įrašymas
+
+
 * Tekstų redaktorius `nano` nesivaldo per VirtualBox _Serial-over-Telnet_ terminalinį prisijungimą:
 
 ```
@@ -1693,7 +1670,7 @@ osboxes@osboxes:~$ nano /etc/network/interfaces
 
 ** Teko vietoj `nano` naudoti `echo ... >> ...`.
 
-* `vi` pagal nutylėjimą man veikia nekorektiškai:
+* Tekstų redaktorius `vi` pagal nutylėjimą man veikia nekorektiškai:
 
 ** Jei atsidarau failą, rodo tvarkingai:
 
@@ -1721,6 +1698,50 @@ auto enp0s8
 ~
 ~
 ```
+
+* Teko surašyti statinę konfigūraciją iš CLI:
+
+```
+osboxes@osboxes:~$ sudo -i
+root@osboxes:~# 
+root@osboxes:~# echo 'iface enp0s8 inet static' >> /etc/network/interfaces
+root@osboxes:~# echo 'address 192.168.10.14' >> /etc/network/interfaces
+root@osboxes:~# echo 'netmask 255.255.255.0' >> /etc/network/interfaces
+root@osboxes:~# echo 'gateway 192.168.10.254' >> /etc/network/interfaces
+root@osboxes:~# 
+root@osboxes:~# cat /etc/network/interfaces
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+
+* Po perkrovimo tinklas vis tiek nesusikonfigūruoja:
+
+```
+osboxes@osboxes:~$ ifconfig enp0s8
+enp0s8: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+** Papildau konfigūraciją:
+
+```
+root@osboxes:~# cat /etc/network/interfaces
+auto enp0s8
+
+iface enp0s8 inet static
+address 192.168.10.14
+netmask 255.255.255.0
+gateway 192.168.10.254
+```
+
+** Po perkrovimo tinklas jau susikonfigūruoja automatiškai.
+** Galbūt reikėtų šitą patikslinti LD apraše?
 
 * Komandinio apvalkalo eilutėje rodomas kompiuterio vardas nepasikeičia savaime.
 Tam reikia persijungti iš naujo:
