@@ -650,6 +650,40 @@ Gautas atsakymas reiškia:
 * ten veikia tinklo paslauga SSH;
 * kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.
 
+#### 10. Žiniatinklio paslauga ir klientas
+
+Instaliuoju `links`:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install links
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  liblz1
+The following NEW packages will be installed:
+  liblz1 links
+0 upgraded, 2 newly installed, 0 to remove and 261 not upgraded.
+Need to get 662 kB of archives.
+After this operation, 2,333 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 liblz1 amd64 1.11-7 [36.9 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 links amd64 2.20.2-1 [625 kB]
+Fetched 662 kB in 2s (351 kB/s)
+Selecting previously unselected package liblz1:amd64.
+(Reading database ... 148861 files and directories currently installed.)
+Preparing to unpack .../liblz1_1.11-7_amd64.deb ...
+Unpacking liblz1:amd64 (1.11-7) ...
+Selecting previously unselected package links.
+Preparing to unpack .../links_2.20.2-1_amd64.deb ...
+Unpacking links (2.20.2-1) ...
+Setting up liblz1:amd64 (1.11-7) ...
+Setting up links (2.20.2-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+```
+
 
 #### X. SSH serverio instaliavimas
 
