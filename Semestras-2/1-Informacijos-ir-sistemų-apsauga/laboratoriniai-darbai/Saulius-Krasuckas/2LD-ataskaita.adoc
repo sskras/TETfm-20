@@ -1,8 +1,56 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+=== Magistro tiriamasis darbas 2
+Modulis ELKRM17203
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** doc. dr. Darius Guršnys
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2021
+
+<<<
+[.text-left]
 ### Darbo Tikslas
 
 * [x] Išbandyti Ubuntu Linux elementariąsias tinklo paslaugas.  +
 * [x] Paruošti tarnybinę stotį tolesniems tinklo saugumo tyrimams.
 
+[.text-left]
 ### Trumpas atlikto darbo aprašymas
 
 #### 0. Infrastruktūros paruošimas
@@ -59,6 +107,7 @@ NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, re
 NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 'vboxnet0', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 ```
 
+<<<
 #### 1. Tinklo sąsajos
 
 Tikrinu vardus.
@@ -167,8 +216,9 @@ Procesų peržiūra su `top`.
 
 Nuskenuoju kaimyno prievadus.
 
----
 
+<<<
+[.text-left]
 ### Sunkumai ir atsakymai į klausimus
 
 #### 0. _Guest OS_ paruošimas
@@ -1261,7 +1311,8 @@ Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
 
 ** Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba): `http` ir `https`
 
-
+<<<
+[.text-left]
 ### Duotosios Linux tinklo komandos aprašymas: `tcpdump`
 
 Tai tinklo srauto sniferis (paketų gaudyklė).
@@ -1366,7 +1417,7 @@ listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
 ```
 
 Viso potinklio srauto gaudymas išjungus vardų išsprendimą ir paketų laiko žymas:
-+
+
 ```
 osboxes@ldvm1:~$ sudo tcpdump -i enp0s8 -n -t net 192.168.10.0/24 and not tcp port 22
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
@@ -1429,7 +1480,8 @@ IP 192.168.10.8.40606 > 192.168.10.14.22: tcp 36
 IP 192.168.10.14.22 > 192.168.10.8.40606: tcp 124
 ```
 
-
+<<<
+[.text-left]
 ### Viso darbo išvados
 
 . Laboratorinį darbą #2 (LD2) atlikti pavyko pilnai, tačiau kilo gana daug kliūčių.
