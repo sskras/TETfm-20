@@ -649,7 +649,6 @@ Gautas atsakymas reiškia:
 * kaimyniniame kompiuteryje rastas tik vienas atviras prievadas;
 * ten veikia tinklo paslauga SSH;
 * kompiuterio MAC adresas priklauso "Oracle VirtualBox" gamintojui.
-```
 
 
 #### X. SSH serverio instaliavimas
