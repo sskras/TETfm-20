@@ -29,7 +29,7 @@ Modulis ELKRM17203
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
-**Tikrino:** doc. dr. Darius Guršnys
+**Tikrino:** doc. dr. Eimantas Garšva
 
 {nbsp}
 
