@@ -200,6 +200,9 @@ W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRele
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
 
+** Deja, pašalinus vartus pagal nutylėjimą `10.0.2.2` nustojo veikti interneto ryšys.  +
+   Jis veikdavo per tinklo sąsają `enp0s3`, kuri VirtualBox sistemoje yra _NAT_ tipo (skirta išėjimui į internetą).  +
+
 
 #### X. SSH serverio instaliavimas
 
