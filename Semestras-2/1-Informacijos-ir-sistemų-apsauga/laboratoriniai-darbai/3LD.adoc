@@ -64,3 +64,17 @@ Nustatyti paprastą tarpsegmentinį ekraną.
   | Įdiekite saugaus nuotolinio pasiekimo paslaugą:
   |`apt-get install ssh`
   |
+  
+3+| +++<center>+++ *3. Tinklo paslaugų tikrinimas* +++</center>+++
+  
+  | Patikrinkite teikiamas tinklos paslaugas:
+  |`netstat -an`
+  |
+  
+  | Pabandykite prisijungti prie kaimyno per SSH:
+  |`ssh 192.168.10.(1x-1)`
+  |
+  
+  | Pastebėkite kaip pasikeitė paslaugų būvis:
+  |`netstat -an`
+  |
