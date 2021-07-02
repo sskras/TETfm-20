@@ -78,3 +78,12 @@ Nustatyti paprastą tarpsegmentinį ekraną.
   | Pastebėkite kaip pasikeitė paslaugų būvis:
   |`netstat -an`
   |
+  
+3+| +++<center>+++ *4. TODO* +++</center>+++
+  
+  | Skenuokite kaimyno virtualų kompiuterį ir užsirašykite gautus rezultatus:
+  |`nmap -sS -P0 -n -F 192.168.10.(1x-1)
+  |`-sS` reiškia, kad skenavimo tipas `SYN Stealth`,  +
+   `-P0` – patikrinti, ar įjungtas į mazgą, nebus siunčiamas _ping_ paketas,
+   `-n`  – nespręsti vardų;
+   `-F`  – greitas skenavimas.
