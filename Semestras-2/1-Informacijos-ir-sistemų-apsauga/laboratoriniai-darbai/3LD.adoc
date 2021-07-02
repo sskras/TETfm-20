@@ -12,3 +12,13 @@ Ataskaitoje aprašykite `iptables` komandą ir jos galimybes.  +
 Pateikite iptables scenarijaus grupinę analizę.
 
 (https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/3lab_iptableslaboras8.docx?forcedownload=1[3lab_iptableslaboras8.docx] konspektas, praganiau pradinį URL)
+
+
+### Tikslas
+
+Patikrinti tinklo nustatymuis.  +
+Susipažinti su `iptables` sintakse.  +
+Nustatyti paprastą tarpsegmentinį ekraną.
+
+
+### Darbo eiga
