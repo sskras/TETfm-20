@@ -81,6 +81,30 @@ IP4.ROUTE[1]:                           dst = 0.0.0.0/0, nh = 10.0.2.2, mt = 100
 DHCP4.OPTION[23]:                       routers = 10.0.2.2
 ```
 
+Pataisau `interfaces` failą ir palyginu su ankstesne versija:
+
+```
+osboxes@ldvm1:~$ sudo cp -av /etc/network/interfaces /etc/network/interfaces.BACKUP
+'/etc/network/interfaces' -> '/etc/network/interfaces.BACKUP'
+
+osboxes@ldvm1:~$ sudo vim.tiny /etc/network/interfaces
+
+osboxes@ldvm1:~$ diff -u /etc/network/interfaces.BACKUP /etc/network/interfaces
+--- /etc/network/interfaces.BACKUP  2021-07-02 15:19:26.453975316 -0400
++++ /etc/network/interfaces 2021-07-02 15:19:30.491993480 -0400
+@@ -1,6 +1,11 @@
+ auto enp0s8
++auto enp0s8:2
+ 
+ iface enp0s8 inet static
+ address 192.168.10.14
+ netmask 255.255.255.0
+ gateway 192.168.10.254
++
++iface enp0s8:2 inet static
++address 10.10.10.4
+```
+
 
 #### X. SSH serverio instaliavimas
 
