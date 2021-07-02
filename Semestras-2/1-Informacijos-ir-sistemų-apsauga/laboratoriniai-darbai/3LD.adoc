@@ -79,7 +79,7 @@ Nustatyti paprastą tarpsegmentinį ekraną.
   |`netstat -an`
   |
   
-3+| +++<center>+++ *4. TODO* +++</center>+++
+3+| +++<center>+++ *4. Kaimyno skenavimas* +++</center>+++
   
   | Skenuokite kaimyno virtualų kompiuterį ir užsirašykite gautus rezultatus:
   |`nmap -sS -P0 -n -F 192.168.10.(1x-1)
