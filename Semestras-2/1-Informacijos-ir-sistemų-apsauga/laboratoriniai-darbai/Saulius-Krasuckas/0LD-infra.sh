@@ -4,7 +4,7 @@ BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktori
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 
-OAM_IP="192.168.10.8"                                       # VM Operation, Administration & Management IP pagal LD2
+OAM_IP="192.168.10.254"                                     # Hosto IP pagal LD2, skirtas VMų OAM (Operation, Administration & Management)
 VDI_UUID=""                                                 # Laikys pagrindinio visų VMų multi-attach disko UUID
 VM_CPUS=2                                                   # VM CPU skaičius
 VM_RAM=1024                                                 # VM RAM apimtis
