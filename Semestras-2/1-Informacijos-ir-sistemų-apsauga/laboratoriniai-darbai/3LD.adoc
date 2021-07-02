@@ -29,7 +29,7 @@ Nustatyti paprastą tarpsegmentinį ekraną.
 
 3+| +++<center>+++ *1. Virtualaus kompiuterio konfigūracija* +++</center>+++
 
-2+| Patikrinkite nustatytą virtalaus kompiuterio konfigūraciją:
+2+| Patikrinkite nustatytą virtualaus kompiuterio konfigūraciją:
   | Turėtų būti:
 
   | * IP adresus:
