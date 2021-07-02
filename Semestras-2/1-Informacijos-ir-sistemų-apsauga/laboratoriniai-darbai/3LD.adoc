@@ -1,1 +1,14 @@
+Informacijos ir sistemų apsauga
 
+# Laboratorinis darbas #3 +++<br />+++ https://moodle.garsva.lt/mod/assign/view.php?id=296[Ugniasienės `iptables` pagrindai]
+
+
+### Užduotis
+
+Perskaitykite `iptables` naudojimo vadovą, pvz.:  +
+https://www.thegeekstuff.com/2011/01/iptables-fundamentals
+
+Ataskaitoje aprašykite `iptables` komandą ir jos galimybes.  +
+Pateikite iptables scenarijaus grupinę analizę.
+
+(https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/3lab_iptableslaboras8.docx?forcedownload=1[3lab_iptableslaboras8.docx] konspektas, praganiau pradinį URL)
