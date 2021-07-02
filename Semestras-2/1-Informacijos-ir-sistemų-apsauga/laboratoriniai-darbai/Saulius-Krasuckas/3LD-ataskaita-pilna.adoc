@@ -214,23 +214,7 @@ osboxes@ldvm1:~$ sudo apt-get update
 Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
 Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
 Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
-Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24.5 kB]
-Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [500 kB]
-Get:7 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [58.1 kB]
-Get:8 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]
-Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,081 kB]
-Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [283 kB]
-Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [831 kB]
-Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [617 kB]
-Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [329 kB]
-Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
-Get:15 http://us.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [2,568 B]
-Get:16 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [2,568 B]
-Get:17 http://us.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [1,120 B]
-Get:18 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [400 B]
-Get:19 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [5,788 B]
-Get:20 http://us.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [4,716 B]
+  ...
 Get:21 http://us.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [2,060 B]
 Get:22 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,780 B]
 Get:23 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [288 B]
@@ -240,6 +224,20 @@ Reading package lists... Done
 
 ** Turbūt vertėtų įtraukti tokį patikslinimą į laboratorinio darbo aprašą.  +
    (apie reikiamą _VirtualBox_ tinklo sąsajos tipą + maršrutizavimą tarp Host ir Guest OS)
+
+** Deja, tokio paketo _Ubuntu 20.04.2_ neturi:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install sysvconfig
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package sysvconfig
+
+osboxes@ldvm1:~$ apt search sysvconfig
+Sorting... Done
+Full Text Search... Done
+```
 
 
 #### X. SSH serverio instaliavimas
