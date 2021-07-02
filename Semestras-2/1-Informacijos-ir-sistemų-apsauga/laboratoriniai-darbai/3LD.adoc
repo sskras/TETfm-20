@@ -9,9 +9,9 @@ Perskaitykite `iptables` naudojimo vadovą, pvz.:  +
 https://www.thegeekstuff.com/2011/01/iptables-fundamentals
 
 Ataskaitoje aprašykite `iptables` komandą ir jos galimybes.  +
-Pateikite iptables scenarijaus grupinę analizę.
+Pateikite `iptables` scenarijaus grupinę analizę.
 
-(Žemiau https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/3lab_iptableslaboras8.docx?forcedownload=1[3lab_iptableslaboras8.docx] konspektas, praganiau pradinį URL)
+(Žemiau – https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/3lab_iptableslaboras8.docx?forcedownload=1[3lab_iptableslaboras8.docx] konspektas, praganiau pradinį URL)
 
 
 ### Tikslas
@@ -49,4 +49,18 @@ Nustatyti paprastą tarpsegmentinį ekraną.
   | Aktyvuokite pakeistus nustatymus:
   |`ifup eth0`  +
    `ifup eth0:1`
+  |
+
+3+| +++<center>+++ *2. Paslaugų įjungimas, išjungimas ir SSH paslauga* +++</center>+++
+  
+  | Įdiekite grafinę paslaugų įjungimo / išjungimo priemonę:
+  |`apt-get install sysvconfig`
+  |
+  
+  | Susipažinkite su jos veikimu:
+  |`sysvconfig`
+  | Naudodami _Enable_/_Disable_ galite įjungti ar išjungti paslaugos automatinį paleidimą, nieko nekeiskite. 
+  
+  | Įdiekite saugaus nuotolinio pasiekimo paslaugą:
+  |`apt-get install ssh`
   |
