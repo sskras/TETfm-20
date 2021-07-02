@@ -238,6 +238,9 @@ Fetched 4,078 kB in 10s (391 kB/s)
 Reading package lists... Done
 ```
 
+** Turbūt vertėtų įtraukti tokį patikslinimą į laboratorinio darbo aprašą.  +
+   (apie reikiamą _VirtualBox_ tinklo sąsajos tipą + maršrutizavimą tarp Host ir Guest OS)
+
 
 #### X. SSH serverio instaliavimas
 
