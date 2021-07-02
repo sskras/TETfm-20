@@ -6,6 +6,41 @@
 
 ### Trumpas atlikto darbo aprašymas
 
+#### 1. Virtualaus kompiuterio konfigūracija
+
+Tikrinu IP adresus:
+
+```
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::440e:4f39:f7ec:bb91  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
+        RX packets 32094  bytes 40220614 (40.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 15495  bytes 1016242 (1.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+        RX packets 51491  bytes 3770623 (3.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 78571  bytes 33188421 (33.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 816  bytes 70179 (70.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 816  bytes 70179 (70.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+
+
 #### X. SSH serverio instaliavimas
 
 Ieškau programinės įrangos paketo:
