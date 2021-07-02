@@ -239,6 +239,9 @@ Sorting... Done
 Full Text Search... Done
 ```
 
+** Deja, tokio įrankio Ubuntu jau nebėra nuo 2015 m.:
+  TODO URL
+
 
 #### X. SSH serverio instaliavimas
 
