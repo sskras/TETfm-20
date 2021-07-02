@@ -1,0 +1,16 @@
+### Darbo Tikslas
+
+* [ ] Patikrinti tinklo nustatymus.  +
+* [ ] Susipažinti su `iptable` sintakse. +
+* [ ] Nustatyti paprastą tarpsegmentinį ekraną.
+
+### Trumpas atlikto darbo aprašymas
+
+### Sunkumai ir atsakymai į klausimus
+
+### Duotosios `iptables` komandos aprašymas: `TODO`
+
+##### Pavyzdys
+
+### `iptables` tarsegmentinio ekrano scenarijaus analizė (darbas grupėje)
+
