@@ -223,6 +223,13 @@ Nuskenuoju kaimyno prievadus.
 
 #### 0. _Guest OS_ paruošimas
 
+* Išjungiu grafinę OS sąsają (GUI):
+
+```
+osboxes@osboxes:~$ sudo systemctl set-default multi-user.target
+Created symlink /etc/systemd/system/default.target → /lib/systemd/system/multi-user.target.
+```
+
 * Programinės įrangos diegimui reikėjo atnaujinti jos duomenų bazę:
 +
 `$ sudo apt update`
