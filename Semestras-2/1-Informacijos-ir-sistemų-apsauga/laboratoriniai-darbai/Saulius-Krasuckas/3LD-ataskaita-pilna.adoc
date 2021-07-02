@@ -143,6 +143,28 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 ```
 Abu IP adresai, prašomi LD3, nurodyti.
 
+* Nereikalingus vartus pagal nutylėjimą bandau išmest būtent per _NetworkManager_
+  kartu su minimu abstrakčiu tinklo prisijungimu:
++
+```
+osboxes@ldvm1:~$ sudo nmcli connection delete "Wired connection 1"
+Connection 'Wired connection 1' (2c671148-b52a-4426-9325-d35a52967e3c) successfully deleted.
+```
+
+** Tikrinu maršrutizacijos lentelę:
++
+```
+osboxes@ldvm1:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+Vieninteliai vartai pagal nutylėjimą yra `192.168.10.254`, kaip ir prašo LD3 aprašas.  +
+Patikrinimo žingsnis atliktas.
+
 
 #### X. SSH serverio instaliavimas
 
