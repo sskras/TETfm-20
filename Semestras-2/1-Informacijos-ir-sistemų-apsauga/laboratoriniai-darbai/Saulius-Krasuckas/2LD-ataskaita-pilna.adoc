@@ -91,9 +91,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-Peržiūriu pasirenkamis sąsajų parametrus.
-
-Peržiūriu sąsajų parametrus:
+Peržiūriu pasirenkamus sąsajų parametrus:
 
 ```
 osboxes@osboxes:~$ ifconfig --help
@@ -1443,7 +1441,7 @@ E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/o/openssh/opens
 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
 ```
 
-** Ataujinu programinės įrangos duomenų bazę:
+** Atnaujinu programinės įrangos duomenų bazę:
 
 ```
 osboxes@osboxes:~$ sudo apt update

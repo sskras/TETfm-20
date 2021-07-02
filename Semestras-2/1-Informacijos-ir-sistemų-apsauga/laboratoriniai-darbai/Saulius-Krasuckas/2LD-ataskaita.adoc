@@ -114,9 +114,7 @@ NIC 2:                       MAC: 080027B6C487, Attachment: Host-only Interface 
 
 Tikrinu vardus.
 
-Peržiūriu pasirenkamis sąsajų parametrus.
-
-Peržiūriu sąsajų parametrus.
+Peržiūriu pasirenkamus sąsajų parametrus.
 
 Nustatau tinklo adresą.
 
