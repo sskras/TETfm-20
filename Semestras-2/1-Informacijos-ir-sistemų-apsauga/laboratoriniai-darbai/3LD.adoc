@@ -11,7 +11,7 @@ https://www.thegeekstuff.com/2011/01/iptables-fundamentals
 Ataskaitoje aprašykite `iptables` komandą ir jos galimybes.  +
 Pateikite iptables scenarijaus grupinę analizę.
 
-(https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/3lab_iptableslaboras8.docx?forcedownload=1[3lab_iptableslaboras8.docx] konspektas, praganiau pradinį URL)
+(Žemiau https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/3lab_iptableslaboras8.docx?forcedownload=1[3lab_iptableslaboras8.docx] konspektas, praganiau pradinį URL)
 
 
 ### Tikslas
@@ -22,3 +22,31 @@ Nustatyti paprastą tarpsegmentinį ekraną.
 
 
 ### Darbo eiga
+
+[cols=3]
+|===
+
+
+3+| +++<center>+++ *1. Virtualaus kompiuterio konfigūracija* +++</center>+++
+
+2+| Patikrinkite nustatytą virtalaus kompiuterio konfigūraciją:
+  | Turėtų būti:
+
+  | * IP adresus:
+  |`ifconfig -a`
+  |`eth0    192.168.1x/24` ir  +
+   `eth0:1  10.10.10.x/24`;
+
+  | * maršrutizacijos lentelę:
+  |`route -n`
+  | Tik vartai pagal nutylėjimą  +
+   `Gateway 192.168.19.254`
+
+  | Jei nustatymai ne tokie, pataisykite juos faile:
+  |`/etc/network/interfaces`
+  | 
+  
+  | Aktyvuokite pakeistus nustatymus:
+  |`ifup eth0`  +
+   `ifup eth0:1`
+  |
