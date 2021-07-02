@@ -34,7 +34,7 @@ Nustatyti paprastą tarpsegmentinį ekraną.
 
   | * IP adresus:
   |`ifconfig -a`
-  |`eth0    192.168.1x/24` ir  +
+  |`eth0    192.168.10.1x/24` ir  +
    `eth0:1  10.10.10.x/24`;
 
   | * maršrutizacijos lentelę:
