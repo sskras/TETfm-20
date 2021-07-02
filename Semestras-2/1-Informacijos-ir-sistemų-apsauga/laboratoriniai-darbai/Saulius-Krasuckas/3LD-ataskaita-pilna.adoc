@@ -53,6 +53,34 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
 192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
 ```
 
+* Nustatymai ne pagal aprašą:
+
+** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
+   (šiame darbe naudojamas branduolys `5.8.0-59-generic`)
+   Palieku kaip yra.
+
+** 2. Trūksta `10.10.10.x` adreso (nes LD2 buvo uždėtas rankomis, o po to OS perkrauta).`
+
+** 3. OS turi du vartus pagal nutylėjimą:
+
+*** vienas pasiekiamas per `enp0s3`, _NAT_ tipo tinklo sąsają (su automatiniu IP adresu);
+*** kitas pasiekiamas per `enp0s8`, _Host-only_ tipo tinklo sąsają.
++
+   Atsekiau, kad pirmuosius vartus sukonfigūruoja _NetworkManager_ įrankis,
+   sukurdamas dedikuotą tinklo prisijungimą
+   (tam atskirą tinklo valdymo abstrakciją):
++
+```
+osboxes@ldvm1:~$ nmcli connection show
+NAME                UUID                                  TYPE      DEVICE
+Wired connection 1  2c671148-b52a-4426-9325-d35a52967e3c  ethernet  enp0s3
+
+osboxes@ldvm1:~$ nmcli connection show id "Wired connection 1" | grep 10.0.2.2
+IP4.GATEWAY:                            10.0.2.2
+IP4.ROUTE[1]:                           dst = 0.0.0.0/0, nh = 10.0.2.2, mt = 100
+DHCP4.OPTION[23]:                       routers = 10.0.2.2
+```
+
 
 #### X. SSH serverio instaliavimas
 
