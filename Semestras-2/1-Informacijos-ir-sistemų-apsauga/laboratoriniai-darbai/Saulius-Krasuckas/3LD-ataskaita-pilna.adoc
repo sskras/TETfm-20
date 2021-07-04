@@ -253,6 +253,23 @@ Full Text Search... Done
 
 ** Galbūt reikėtų pagal tai irgi patikslinti LD3 aprašą?
 
+* Ieškau atitikmenų darbui su SystemD mechanizmu, susiradau įrankį `serman2`:  +
+   https://aur.archlinux.org/packages/serman
+
+** Pasiimu jį iš GitHub:
++
+```
+osboxes@ldvm1:~$ mkdir src
+
+osboxes@ldvm1:~$ cd src/
+
+osboxes@ldvm1:~$ git clone https://github.com/baoboa/serman
+Cloning into 'serman'...
+remote: Enumerating objects: 41, done.
+remote: Total 41 (delta 0), reused 0 (delta 0), pack-reused 41
+Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
+```
+
 
 #### X. SSH serverio instaliavimas
 
