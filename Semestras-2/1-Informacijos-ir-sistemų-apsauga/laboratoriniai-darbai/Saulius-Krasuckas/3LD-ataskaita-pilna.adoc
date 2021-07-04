@@ -285,9 +285,9 @@ osboxes@ldvm1:~/debug$ systemctl list-units --type=service --all
 lines 1-19
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
-   +
++
   Šitaip lengva filtruoti tarnybas pagal vardus (jų šablonus):
-   +
++
 ```
 osboxes@ldvm1:~/debug$ systemctl list-units --type=service --all *Manager* 
   UNIT                               LOAD   ACTIVE   SUB     DESCRIPTION                
