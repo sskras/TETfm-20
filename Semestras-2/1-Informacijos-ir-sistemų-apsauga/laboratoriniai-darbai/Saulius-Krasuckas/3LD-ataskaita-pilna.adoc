@@ -1248,6 +1248,16 @@ osboxes@ldvm1:~$ diff -u debug/{09,11}*.txt
  target     prot opt source               destination         
 ```
 
+Tikrinu ją, veikia:
+
+```
+sboxes@ldvm2:~$ ping -c 3 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+
+--- 192.168.10.14 ping statistics ---
+```
+Kompiuteris į ICMP pingą nebeatsako.
+
 
 ### 6. `iptables` patikrinimas
 
