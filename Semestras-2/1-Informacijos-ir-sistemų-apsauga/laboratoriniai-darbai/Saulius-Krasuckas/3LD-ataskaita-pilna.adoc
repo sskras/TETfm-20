@@ -368,7 +368,7 @@ osboxes@ldvm1:~/src$ sudo chkservice
   [s]  =  kmod-static-nodes.service                       Create list of static device nodes for the current ker  
   [s]     kmod.service                                    /lib/systemd/system/kmod.service                        
   [s]  =  logrotate.service                               Rotate log files                                        
-**[x]  =  ModemManager.service                            Modem Manager                                         **
+> [x]  =  ModemManager.service                            Modem Manager                                          <
   [s]  =  man-db.service                                  Daily man-db regeneration                               
   [s]     modprobe@.service                               /lib/systemd/system/modprobe@.service                   
   [s]  =  modprobe@drm.service                            Load Kernel Module drm                                  
