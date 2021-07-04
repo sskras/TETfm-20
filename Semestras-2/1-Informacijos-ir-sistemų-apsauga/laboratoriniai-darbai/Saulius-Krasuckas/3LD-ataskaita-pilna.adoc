@@ -574,8 +574,8 @@ osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
                                                          91/532                                                   
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
-    +
-   Ties `ModemManager` paspaudus `Space`, tarnyba dabar išsijungia jau iškart.
++
+Ties `ModemManager` paspaudus `Space`, tarnyba dabar išsijungia jau iškart.
 
 ** `chkservice` trūkumai:
 
