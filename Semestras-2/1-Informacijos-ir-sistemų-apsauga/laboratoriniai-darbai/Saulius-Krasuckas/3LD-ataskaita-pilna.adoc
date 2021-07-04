@@ -1194,70 +1194,6 @@ osboxes@ldvm1:~$ diff -u debug/{07,08}*
 ```
 Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
 
-Išvalau `iptables`:
-
-```
-osboxes@ldvm1:~$ sudo iptables -F
-```
-
-Patikrinu ICMP pingą iš kaimyninio kompiuterio:
-
-```
-sboxes@ldvm2:~$ ping -c 3 192.168.10.14
-PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
-64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.776 ms
-64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.968 ms
-64 bytes from 192.168.10.14: icmp_seq=3 ttl=64 time=0.776 ms
-
---- 192.168.10.14 ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2055ms
-rtt min/avg/max/mdev = 0.776/0.840/0.968/0.090 ms
-```
-
-Uždraudžiu ICMP protokolą:
-
-```
-osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
-```
-
-Tikrinu, ar atsirado taisyklė:
-
-```
-osboxes@ldvm1:~$ sudo iptables --list 
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-DROP       icmp --  anywhere             anywhere            
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
-```
-osboxes@ldvm1:~$ sudo iptables --list > debug/11.iptables_po_ICMP_taisyklės.txt
-osboxes@ldvm1:~$ diff -u debug/{09,11}*.txt
---- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
-+++ "debug/11.iptables_po_ICMP_taisykl\304\227s.txt"    2021-07-04 22:45:28.062899693 +0300
-@@ -1,5 +1,6 @@
- Chain INPUT (policy ACCEPT)
- target     prot opt source               destination         
-+DROP       icmp --  anywhere             anywhere            
- 
- Chain FORWARD (policy ACCEPT)
- target     prot opt source               destination         
-```
-
-Tikrinu ją, veikia:
-
-```
-sboxes@ldvm2:~$ ping -c 3 192.168.10.14
-PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
-
---- 192.168.10.14 ping statistics ---
-```
-Kompiuteris į ICMP pingą nebeatsako.
-
 
 ### 6. `iptables` patikrinimas
 
@@ -1322,6 +1258,70 @@ osboxes@ldvm1:~$ diff -u debug/{09,10}*
 ```
 Atsirado viena nauja eilutė:  +
 `DROP       all  --  anywhere             anywhere`
+
+Išvalau `iptables`:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+```
+
+Patikrinu ICMP pingą iš kaimyninio kompiuterio:
+
+```
+sboxes@ldvm2:~$ ping -c 3 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.776 ms
+64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.968 ms
+64 bytes from 192.168.10.14: icmp_seq=3 ttl=64 time=0.776 ms
+
+--- 192.168.10.14 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.776/0.840/0.968/0.090 ms
+```
+
+Uždraudžiu ICMP protokolą:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
+```
+
+Tikrinu, ar atsirado taisyklė:
+
+```
+osboxes@ldvm1:~$ sudo iptables --list 
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       icmp --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+```
+osboxes@ldvm1:~$ sudo iptables --list > debug/11.iptables_po_ICMP_taisyklės.txt
+osboxes@ldvm1:~$ diff -u debug/{09,11}*.txt
+--- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
++++ "debug/11.iptables_po_ICMP_taisykl\304\227s.txt"    2021-07-04 22:45:28.062899693 +0300
+@@ -1,5 +1,6 @@
+ Chain INPUT (policy ACCEPT)
+ target     prot opt source               destination         
++DROP       icmp --  anywhere             anywhere            
+ 
+ Chain FORWARD (policy ACCEPT)
+ target     prot opt source               destination         
+```
+
+Tikrinu ją, veikia:
+
+```
+sboxes@ldvm2:~$ ping -c 3 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+
+--- 192.168.10.14 ping statistics ---
+```
+Kompiuteris į ICMP pingą nebeatsako.
 
 
 ### Sunkumai ir atsakymai į klausimus
