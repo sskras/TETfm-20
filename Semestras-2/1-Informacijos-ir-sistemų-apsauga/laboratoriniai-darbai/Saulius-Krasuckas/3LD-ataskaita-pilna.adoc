@@ -1073,6 +1073,83 @@ osboxes@ldvm1:~$ diff -u /etc/sysctl.conf.BACKUP /etc/sysctl.conf
  #  Enabling this option disables Stateless Address Autoconfiguration
 ```
 
+Peržiūriu įkeltus modulius:
+
+```
+osboxes@ldvm1:~$ lsmod
+Module                  Size  Used by
+vboxsf                 32768  0
+intel_rapl_msr         20480  0
+joydev                 24576  0
+intel_rapl_common      28672  1 intel_rapl_msr
+crct10dif_pclmul       16384  1
+ghash_clmulni_intel    16384  0
+aesni_intel           372736  0
+snd_intel8x0           45056  2
+crypto_simd            16384  1 aesni_intel
+snd_ac97_codec        139264  1 snd_intel8x0
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+ac97_bus               16384  1 snd_ac97_codec
+glue_helper            16384  1 aesni_intel
+snd_pcm               114688  2 snd_intel8x0,snd_ac97_codec
+rapl                   20480  0
+snd_seq_midi           20480  0
+vboxvideo              24576  0
+input_leds             16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+drm_vram_helper        24576  1 vboxvideo
+serio_raw              20480  0
+snd_rawmidi            36864  1 snd_seq_midi
+drm_ttm_helper         16384  1 drm_vram_helper
+ttm                   102400  2 drm_vram_helper,drm_ttm_helper
+snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+drm_kms_helper        217088  4 drm_vram_helper,vboxvideo
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_timer              40960  2 snd_seq,snd_pcm
+cec                    53248  1 drm_kms_helper
+snd                    94208  11 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi
+rc_core                61440  1 cec
+fb_sys_fops            16384  1 drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+soundcore              16384  1 snd
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+vboxguest              45056  2 vboxsf
+mac_hid                16384  0
+sch_fq_codel           20480  3
+parport_pc             45056  0
+ppdev                  24576  0
+lp                     20480  0
+parport                65536  3 parport_pc,lp,ppdev
+drm                   552960  6 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttm
+ip_tables              32768  0
+x_tables               49152  1 ip_tables
+autofs4                45056  2
+crc32_pclmul           16384  0
+ahci                   40960  4
+video                  49152  0
+psmouse               155648  0
+libahci                36864  1 ahci
+i2c_piix4              28672  0
+e1000                 147456  0
+```
+
+Nustatau automatinį poros modulių užkrovimą:
+```
+osboxes@ldvm1:~$ sudo vim.tiny /etc/modules
+
+osboxes@ldvm1:~$ diff -u /etc/modules.BACKUP /etc/modules
+--- /etc/modules.BACKUP 2021-02-09 20:47:47.000000000 +0200
++++ /etc/modules        2021-07-04 21:50:30.436516065 +0300
+@@ -2,4 +2,5 @@
+ #
+ # This file contains the names of kernel modules that should be loaded
+ # at boot time, one per line. Lines beginning with "#" are ignored.
+-
++iptable_nat
++ip_conntrack
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
