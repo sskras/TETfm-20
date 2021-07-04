@@ -88,7 +88,7 @@ Nustatyti paprastą tarpsegmentinį ekraną.
    `-n`  – nespręsti vardų, +
    `-F`  – greitas skenavimas. +
   
-3+| +++<center>+++ *5. TODO* +++</center>+++
+3+| +++<center>+++ *5. Paketų persiuntimo įjungimas* +++</center>+++
   
   | Įjungkite IP paketų persiuntimą faile `/etc/sysctl.conf` padarydami įrašą:
   |`net/ipv4/ip_forward = 1`
