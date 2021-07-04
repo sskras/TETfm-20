@@ -1057,8 +1057,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
 
 ```
 osboxes@ldvm1:~$ sudo vim.tiny /etc/sysctl.conf
-
-[1]+  Stopped                 sudo vim.tiny /etc/sysctl.conf
+  ...
 osboxes@ldvm1:~$ diff -u /etc/sysctl.conf.BACKUP /etc/sysctl.conf
 --- /etc/sysctl.conf.BACKUP     2020-02-14 00:44:31.000000000 +0200
 +++ /etc/sysctl.conf    2021-07-04 21:44:31.551125680 +0300
@@ -1245,10 +1244,6 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 
-```
-
-[source,diff]
-```
 osboxes@ldvm1:~$ sudo iptables --list > debug/10.iptables_po_bandymų.txt
 osboxes@ldvm1:~$ diff -u debug/{09,10}*
 --- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
@@ -1261,6 +1256,8 @@ osboxes@ldvm1:~$ diff -u debug/{09,10}*
  Chain FORWARD (policy ACCEPT)
  target     prot opt source               destination         
 ```
+Atsirado viena nauja eilutė:  +
+`DROP       all  --  anywhere             anywhere`
 
 
 ### Sunkumai ir atsakymai į klausimus
