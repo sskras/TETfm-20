@@ -260,7 +260,7 @@ Full Text Search... Done
   Jeigu pakanka tik patikrinti tarnybų būsenas, tiks komanda `systemctl`:
 +
 ```
-osboxes@ldvm1:~/debug$ systemctl list-unit-files --type=service --all
+osboxes@ldvm1:~$ systemctl list-unit-files --type=service --all
 
 ----8><----------------------------------------------------------------------------------------------------><8----
 UNIT FILE                                  STATE           VENDOR PRESET
