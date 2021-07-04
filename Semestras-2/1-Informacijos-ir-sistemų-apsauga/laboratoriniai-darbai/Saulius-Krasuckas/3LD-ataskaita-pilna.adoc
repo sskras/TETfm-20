@@ -258,7 +258,7 @@ Full Text Search... Done
 * Ieškau atitikmenų darbui su SystemD mechanizmu.  +
    +
   Jeigu pakanka tik patikrinti tarnybų būsenas, tiks komanda `systemctl`:
-   +
++
 ```
 osboxes@ldvm1:~/debug$ systemctl list-units --type=service --all
 
