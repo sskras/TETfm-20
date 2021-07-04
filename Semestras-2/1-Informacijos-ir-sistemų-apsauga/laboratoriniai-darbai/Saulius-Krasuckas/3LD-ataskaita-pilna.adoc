@@ -256,7 +256,7 @@ Full Text Search... Done
 
 
 * Ieškau atitikmenų darbui su SystemD mechanizmu.  +
-+
+   +
   Jeigu pakanka tik patikrinti tarnybų būsenas, tiks komanda `systemctl`:
 +
 ```
