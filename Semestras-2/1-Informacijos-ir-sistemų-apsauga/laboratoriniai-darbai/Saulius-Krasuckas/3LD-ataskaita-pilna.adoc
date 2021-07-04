@@ -260,28 +260,28 @@ Full Text Search... Done
   Jeigu pakanka tik patikrinti tarnybų būsenas, tiks komanda `systemctl`:
 +
 ```
-osboxes@ldvm1:~/debug$ systemctl list-units --type=service --all
+osboxes@ldvm1:~/debug$ systemctl list-unit-files --type=service --all
 
 ----8><----------------------------------------------------------------------------------------------------><8----
-  UNIT                         LOAD      ACTIVE   SUB     DESCRIPTION                                            >
-  accounts-daemon.service      loaded    inactive dead    Accounts Service                                       >
-  acpid.service                loaded    active   running ACPI event daemon                                      >
-  alsa-restore.service         loaded    active   exited  Save/Restore Sound Card State                          >
-  alsa-state.service           loaded    inactive dead    Manage Sound Card State (restore and store)            >
-  anacron.service              loaded    inactive dead    Run anacron jobs                                       >
-  apache2.service              loaded    active   running The Apache HTTP Server                                 >
-  apparmor.service             loaded    active   exited  Load AppArmor profiles                                 >
-  apport-autoreport.service    loaded    inactive dead    Process error reports when automatic reporting is enabl>
-  apport.service               loaded    active   exited  LSB: automatic crash report generation                 >
-  apt-daily-upgrade.service    loaded    inactive dead    Daily apt upgrade and clean activities                 >
-  apt-daily.service            loaded    inactive dead    Daily apt download activities                          >
-● auditd.service               not-found inactive dead    auditd.service                                         >
-  avahi-daemon.service         loaded    active   running Avahi mDNS/DNS-SD Stack                                >
-  bluetooth.service            loaded    active   running Bluetooth service                                      >
-● connman.service              not-found inactive dead    connman.service                                        >
-● console-screen.service       not-found inactive dead    console-screen.service                                 >
-  console-setup.service        loaded    active   exited  Set console font and keymap                            >
-  cron.service                 loaded    active   running Regular background program processing daemon           >
+UNIT FILE                                  STATE           VENDOR PRESET
+accounts-daemon.service                    enabled         enabled      
+acpid.service                              disabled        enabled      
+alsa-restore.service                       static          enabled      
+alsa-state.service                         static          enabled      
+alsa-utils.service                         masked          enabled      
+anacron.service                            enabled         enabled      
+apache-htcacheclean.service                disabled        enabled      
+apache-htcacheclean@.service               disabled        enabled      
+apache2.service                            enabled         enabled      
+apache2@.service                           disabled        enabled      
+apparmor.service                           enabled         enabled      
+apport-autoreport.service                  static          enabled      
+apport-forward@.service                    static          enabled      
+apport.service                             generated       enabled      
+apt-daily-upgrade.service                  static          enabled      
+apt-daily.service                          static          enabled      
+autovt@.service                            enabled         enabled      
+avahi-daemon.service                       enabled         enabled      
 lines 1-19
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
@@ -289,18 +289,15 @@ lines 1-19
   Šitaip lengva filtruoti tarnybas pagal vardus (jų šablonus):
 +
 ```
-osboxes@ldvm1:~/debug$ systemctl list-units --type=service --all *Manager* 
-  UNIT                               LOAD   ACTIVE   SUB     DESCRIPTION                
-  ModemManager.service               loaded inactive dead    Modem Manager              
-  NetworkManager-wait-online.service loaded active   exited  Network Manager Wait Online
-  NetworkManager.service             loaded active   running Network Manager            
+osboxes@ldvm1:~$ systemctl list-unit-files --type=service --all *Manager*
+UNIT FILE                                  STATE   VENDOR PRESET
+dbus-org.freedesktop.ModemManager1.service enabled enabled      
+ModemManager.service                       enabled enabled      
+NetworkManager-dispatcher.service          enabled enabled      
+NetworkManager-wait-online.service         enabled enabled      
+NetworkManager.service                     enabled enabled      
 
-LOAD   = Reflects whether the unit definition was properly loaded.
-ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
-SUB    = The low-level unit activation state, values depend on unit type.
-
-3 loaded units listed.
-To show all installed unit files use 'systemctl list-unit-files'.
+5 unit files listed.
 ```
 
 
