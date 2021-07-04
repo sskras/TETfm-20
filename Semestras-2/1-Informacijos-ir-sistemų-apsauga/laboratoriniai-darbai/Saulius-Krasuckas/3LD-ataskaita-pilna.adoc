@@ -328,6 +328,33 @@ query service status (display output with F2)                                   
 **** `.target`
 **** `.timer`
 
+* Susirandu kitą įrankį, `chkservice`
+
+** Diegiu:
++
+```
+osboxes@ldvm1:~$ apt-cache search chkservice
+chkservice - Tool for managing systemd units
+osboxes@ldvm1:~$ 
+osboxes@ldvm1:~$ sudo apt-get install chkservice
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  chkservice
+0 upgraded, 1 newly installed, 0 to remove and 159 not upgraded.
+Need to get 41.3 kB of archives.
+After this operation, 188 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 chkservice amd64 0.3-1build1 [41.3 kB]
+Fetched 41.3 kB in 1s (58.7 kB/s)
+Selecting previously unselected package chkservice.
+(Reading database ... 192778 files and directories currently installed.)
+Preparing to unpack .../chkservice_0.3-1build1_amd64.deb ...
+Unpacking chkservice (0.3-1build1) ...
+Setting up chkservice (0.3-1build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+```
+
 
 #### X. SSH serverio instaliavimas
 
