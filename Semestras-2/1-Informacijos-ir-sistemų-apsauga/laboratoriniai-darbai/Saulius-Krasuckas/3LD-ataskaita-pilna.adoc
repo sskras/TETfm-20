@@ -1194,6 +1194,26 @@ osboxes@ldvm1:~$ diff -u debug/{07,08}*
 ```
 Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
 
+Išvalau `iptables`:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+```
+
+Patikrinu ICMP pingą iš kaimyninio kompiuterio:
+
+```
+sboxes@ldvm2:~$ ping -c 3 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.776 ms
+64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.968 ms
+64 bytes from 192.168.10.14: icmp_seq=3 ttl=64 time=0.776 ms
+
+--- 192.168.10.14 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.776/0.840/0.968/0.090 ms
+```
+
 
 ### 6. `iptables` patikrinimas
 
