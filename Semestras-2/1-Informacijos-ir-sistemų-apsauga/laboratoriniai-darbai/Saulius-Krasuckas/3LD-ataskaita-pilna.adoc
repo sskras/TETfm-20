@@ -257,6 +257,34 @@ Full Text Search... Done
 
 * Ieškau atitikmenų darbui su SystemD mechanizmu.  +
    +
+  Jeigu pakanka tik patikrinti tarnybų būsenas, tiks komanda `systemctl`:
+```
+osboxes@ldvm1:~/debug$ systemctl list-units --type=service --all
+
+----8><----------------------------------------------------------------------------------------------------><8----
+  UNIT                         LOAD      ACTIVE   SUB     DESCRIPTION                                            >
+  accounts-daemon.service      loaded    inactive dead    Accounts Service                                       >
+  acpid.service                loaded    active   running ACPI event daemon                                      >
+  alsa-restore.service         loaded    active   exited  Save/Restore Sound Card State                          >
+  alsa-state.service           loaded    inactive dead    Manage Sound Card State (restore and store)            >
+  anacron.service              loaded    inactive dead    Run anacron jobs                                       >
+  apache2.service              loaded    active   running The Apache HTTP Server                                 >
+  apparmor.service             loaded    active   exited  Load AppArmor profiles                                 >
+  apport-autoreport.service    loaded    inactive dead    Process error reports when automatic reporting is enabl>
+  apport.service               loaded    active   exited  LSB: automatic crash report generation                 >
+  apt-daily-upgrade.service    loaded    inactive dead    Daily apt upgrade and clean activities                 >
+  apt-daily.service            loaded    inactive dead    Daily apt download activities                          >
+● auditd.service               not-found inactive dead    auditd.service                                         >
+  avahi-daemon.service         loaded    active   running Avahi mDNS/DNS-SD Stack                                >
+  bluetooth.service            loaded    active   running Bluetooth service                                      >
+● connman.service              not-found inactive dead    connman.service                                        >
+● console-screen.service       not-found inactive dead    console-screen.service                                 >
+  console-setup.service        loaded    active   exited  Set console font and keymap                            >
+  cron.service                 loaded    active   running Regular background program processing daemon           >
+lines 1-19
+----8><----------------------------------------------------------------------------------------------------><8----
+```
+
 * Susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
 
 ** Pasiimu jį iš GitHub:
@@ -277,6 +305,7 @@ Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
 +
 ```
 osboxes@ldvm1:~$ sudo serman/serman.py
+
 ----8><----------------------------------------------------------------------------------------------------><8----
 Commands│  Services
 ────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -359,6 +388,7 @@ Processing triggers for man-db (2.9.1-1) ...
 +
 ```
 osboxes@ldvm1:~/src$ sudo chkservice
+
 ----8><----------------------------------------------------------------------------------------------------><8----
  Failed: Connection reset by peer                                                                                 
                                                                                                                   
