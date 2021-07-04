@@ -709,7 +709,7 @@ Tą patį pakartojau ir kaimyniniame kompiuteryje.
 ### 3. Tinklo paslaugų tikrinimas
 
 Teikiamos tinklo paslaugos:
-+
+
 ```
 osboxes@ldvm1:~$ netstat -an
 Active Internet connections (servers and established)
@@ -949,7 +949,7 @@ unix  3      [ ]         STREAM     CONNECTED     21371
 ```
 
 Jungiuosi prie kaimyno per SSH:
-+
+
 ```
 osboxes@ldvm1:~$ ssh 192.168.10.13
 osboxes@192.168.10.13's password: 
@@ -970,7 +970,7 @@ osboxes@ldvm2:~$
 ```
 
 Stebiu paslaugų būvio pasikeitimą:
-+
+
 ```
 osboxes@ldvm1:~$ netstat -an
 Active Internet connections (servers and established)
@@ -1023,7 +1023,7 @@ Palyginimui įrašiau komandos išvesti abu kartus į skirtingus failus.  +
 Tuomet pasinaudojau įrankiu `diff -u`.
 
 Iš tinklinių (ne _Unix-socket_) prisijungimų atsirado du nauji įrašai:
-+
+
 ```
 tcp        0      0 192.168.10.14:51672     192.168.10.13:22        TIME_WAIT  
 tcp        0      0 192.168.10.14:51674     192.168.10.13:22        ESTABLISHED
@@ -1048,6 +1048,29 @@ PORT   STATE SERVICE
 MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
 
 Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
+```
+
+
+### 5. Paketų persiuntimo įjungimas
+
+Įjungiu persiuntimą faile:
+
+```
+osboxes@ldvm1:~$ sudo vim.tiny /etc/sysctl.conf
+
+[1]+  Stopped                 sudo vim.tiny /etc/sysctl.conf
+osboxes@ldvm1:~$ diff -u /etc/sysctl.conf.BACKUP /etc/sysctl.conf
+--- /etc/sysctl.conf.BACKUP     2020-02-14 00:44:31.000000000 +0200
++++ /etc/sysctl.conf    2021-07-04 21:44:31.551125680 +0300
+@@ -25,7 +25,7 @@
+ #net.ipv4.tcp_syncookies=1
+ 
+ # Uncomment the next line to enable packet forwarding for IPv4
+-#net.ipv4.ip_forward=1
++ net.ipv4.ip_forward=1
+ 
+ # Uncomment the next line to enable packet forwarding for IPv6
+ #  Enabling this option disables Stateless Address Autoconfiguration
 ```
 
 
