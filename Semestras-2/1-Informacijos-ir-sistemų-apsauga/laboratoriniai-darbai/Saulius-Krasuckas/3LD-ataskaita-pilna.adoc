@@ -304,7 +304,7 @@ To show all installed unit files use 'systemctl list-unit-files'.
 ```
 
 
-* Susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
+* Tarnybų valdymui susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
 
 ** Pasiimu jį iš GitHub:
 +
@@ -320,7 +320,7 @@ remote: Total 41 (delta 0), reused 0 (delta 0), pack-reused 41
 Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
 ```
 
-** Išsibandau `serman2`:
+** Išsibandau įrankį:
 +
 ```
 osboxes@ldvm1:~$ sudo serman/serman.py
@@ -544,7 +544,7 @@ Scanning dependencies of target CHKSYSTEMD
 [100%] Built target chkservice
 ```
 
-** Patikrinu įrankį:
+** Išbandau pataisymą:
 +
 ```
 osboxes@ldvm1:~/src/chkservice/build$ ll src/chkservice
@@ -575,9 +575,11 @@ osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
 +
-Ties `ModemManager` paspaudus `Space` tarnyba dabar jau iškart išsijungia.
+   Ties `ModemManager` paspaudus `Space`, tarnyba dabar jau iškart išsijungia.
 
-** Įrankis `chkservice` iš dalies atitinka `sysvrconf` ir puikiai veikia su SystemD _Init_-mechanizmu.
+** Išvados:
+*** įrankis `chkservice` gana tiksliai atitinka `sysvrconf`;
+*** puikiai veikia su SystemD _Init_-mechanizmu;
 
 
 #### X. SSH serverio instaliavimas
