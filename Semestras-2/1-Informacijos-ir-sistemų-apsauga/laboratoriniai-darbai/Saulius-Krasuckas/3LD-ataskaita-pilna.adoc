@@ -257,7 +257,7 @@ Full Text Search... Done
 
 * Ieškau atitikmenų darbui su SystemD mechanizmu.  +
    +
-  Susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
+* Susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
 
 ** Pasiimu jį iš GitHub:
 +
