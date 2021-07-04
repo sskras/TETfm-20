@@ -87,3 +87,35 @@ Nustatyti paprastą tarpsegmentinį ekraną.
    `-P0` – patikrinti, ar įjungtas į mazgą, nebus siunčiamas _ping_ paketas, +
    `-n`  – nespręsti vardų, +
    `-F`  – greitas skenavimas. +
+  
+3+| +++<center>+++ *5. TODO* +++</center>+++
+  
+  | Įjungkite IP paketų persiuntimą faile `/etc/sysctl.conf` padarydami įrašą:
+  |`net/ipv4/ip_forward = 1`
+  |
+  
+  | Peržiūrėkite užkrautus modulius:
+  |`lsmod`
+  |
+  
+  | Nustatykite automatinį `iptable_nat` ir `ip_conntrack` užkrovimą įrašydami šių modulių pavadinimus į failą:
+  |`/etc/modules`
+  | Šios vertės atsiras tik perkrovus kompiuterį
+  
+  | Neperkraudami nustatysime šias vertes:
+ a|
+```
+echo "1" > /proc/sys/net/ipv4/ip_forward
+modprobe iptable_nat
+```
+  |
+  
+  | Patikrinkime, ar nustatymas įvyko:
+ a|
+```
+cat /proc/sys/net/ipv4/ip_forward
+lsmod
+```
+  |
+  
+|===
