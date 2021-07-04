@@ -1135,6 +1135,7 @@ e1000                 147456  0
 ```
 
 Nustatau automatinį poros modulių užkrovimą:
+
 ```
 osboxes@ldvm1:~$ sudo vim.tiny /etc/modules
 
@@ -1149,6 +1150,50 @@ osboxes@ldvm1:~$ diff -u /etc/modules.BACKUP /etc/modules
 +iptable_nat
 +ip_conntrack
 ```
+
+Nerperkraudamas kompiuterio nustatau šias vertes tiesioges:
+
+```
+osboxes@ldvm1:~$ cat /proc/sys/net/ipv4/ip_forward
+0
+osboxes@ldvm1:~$ sudo -i
+
+root@ldvm1:~# echo "1" > /proc/sys/net/ipv4/ip_forward
+root@ldvm1:~# modprobe iptable_nat
+root@ldvm1:~# logout
+```
+
+Patikrinu:
+
+```
+osboxes@ldvm1:~$ cat /proc/sys/net/ipv4/ip_forward
+1
+
+osboxes@ldvm1:~$ diff -u debug/{07,08}*
+--- "debug/07.lsmod_iki_konfig\305\253ravimo.txt"       2021-07-04 21:47:37.557323506 +0300
++++ "debug/08.lsmod_po_konfig\305\253ravimo.txt"        2021-07-04 22:02:47.493794416 +0300
+@@ -1,4 +1,10 @@
+ Module                  Size  Used by
++iptable_nat            16384  0
++nf_nat                 45056  1 iptable_nat
++nf_conntrack          147456  1 nf_nat
++nf_defrag_ipv6         24576  1 nf_conntrack
++nf_defrag_ipv4         16384  1 nf_conntrack
++libcrc32c              16384  2 nf_conntrack,nf_nat
+ vboxsf                 32768  0
+ intel_rapl_msr         20480  0
+ joydev                 24576  0
+@@ -43,7 +49,7 @@
+ lp                     20480  0
+ parport                65536  3 parport_pc,lp,ppdev
+ drm                   552960  6 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttm
+-ip_tables              32768  0
++ip_tables              32768  1 iptable_nat
+ x_tables               49152  1 ip_tables
+ autofs4                45056  2
+ crc32_pclmul           16384  0
+```
+Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
 
 
 ### Sunkumai ir atsakymai į klausimus
