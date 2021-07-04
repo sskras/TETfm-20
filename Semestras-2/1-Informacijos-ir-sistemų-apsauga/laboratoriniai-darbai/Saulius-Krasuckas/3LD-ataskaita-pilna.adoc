@@ -53,7 +53,7 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
 192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
 ```
 
-* Nustatymai ne pagal aprašą:
+* Nustatymai nevsai atitinka LD aprašą:
 
 ** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
    (šiame darbe naudojamas branduolys `5.8.0-59-generic`)  +
@@ -177,6 +177,7 @@ Reading state information... Done
 E: Unable to locate package sysvconfig
 ```
 
+
 * Programinės įrangos valdymo įrankis neranda minimos priemonės.
 
 ** Mėginu atnaujinti programų sąrašus:
@@ -253,8 +254,10 @@ Full Text Search... Done
 
 ** Galbūt reikėtų pagal tai irgi patikslinti LD3 aprašą?
 
-* Ieškau atitikmenų darbui su SystemD mechanizmu, susiradau įrankį `serman2`:  +
-   https://aur.archlinux.org/packages/serman
+
+* Ieškau atitikmenų darbui su SystemD mechanizmu.  +
+  Susirandu įrankį `serman2`:  +
+  https://aur.archlinux.org/packages/serman
 
 ** Pasiimu jį iš GitHub:
 +
