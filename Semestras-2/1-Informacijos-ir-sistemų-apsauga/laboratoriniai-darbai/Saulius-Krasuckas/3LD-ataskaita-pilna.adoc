@@ -948,6 +948,27 @@ unix  3      [ ]         STREAM     CONNECTED     25322    /run/systemd/journal/
 unix  3      [ ]         STREAM     CONNECTED     21371    
 ```
 
+Jungiuosi prie kaimyno per SSH:
++
+```
+osboxes@ldvm1:~$ ssh 192.168.10.13
+osboxes@192.168.10.13's password: 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+158 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+Last login: Sat Jul  3 03:12:12 2021 from 192.168.10.14
+osboxes@ldvm2:~$ 
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
