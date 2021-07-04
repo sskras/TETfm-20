@@ -225,7 +225,9 @@ Reading package lists... Done
 ** Turbūt vertėtų įtraukti tokį patikslinimą į laboratorinio darbo aprašą.  +
    (apie reikiamą _VirtualBox_ tinklo sąsajos tipą + maršrutizavimą tarp Host ir Guest OS)
 
-** Deja, tokio paketo _Ubuntu 20.04.2_ neturi:
+
+** Tęsiu `sysvconfig` diegimą.
+   Tokio paketo _Ubuntu 20.04.2_ neturi:
 
 ```
 osboxes@ldvm1:~$ sudo apt-get install sysvconfig
@@ -239,8 +241,18 @@ Sorting... Done
 Full Text Search... Done
 ```
 
-** Deja, tokio įrankio Ubuntu jau nebėra nuo 2015 m.:
-  TODO URL
+** Panašu, kad šis įrankis iš Ubuntu pašalintas 2009-09-11:  +
+   https://superuser.com/questions/96040/did-sysvconfig-disappear-in-ubuntu-9-10
+
+** Taip pat dabar neveikia ir `systemvconfig` atitikmenys, dar veikę po jo pašalinimo:   +
+   `sysv-rc-conf`, `rcconf`:  +
+   https://askubuntu.com/questions/1043248/rcconf-package-alternative-in-bionic-beaver
+
+** Panašu, kad jie nebeveikia nuo 2015 m., kai OS atsirado `systemd` mechanizmas.  +
+   Ir tai kėlė nepatogumų žmonėms, atnaujinantiems Ubuntu jau net nuo versijos `14.04`:  +
+   https://askubuntu.com/questions/1106216/ubuntu-18-04-cant-install-sysv-rc-conf-package-for-managing-startup-services#comment1824791_1106217
+
+** Galbūt reikėtų pagal tai irgi patikslinti LD3 aprašą?
 
 
 #### X. SSH serverio instaliavimas
