@@ -383,6 +383,152 @@ osboxes@ldvm1:~/src$ sudo chkservice
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
 
+** Norint uždrausti tarnybą ir paspaudus `Space`, gaunu klaidą `Failed: Connection reset by peer`.  +
+   Taip yra dėl klaidos programoje: https://github.com/linuxenko/chkservice/issues/12
+
+** Imu pataisytą programos kodą iš GitHub: https://github.com/nufeng1999/chkservice
+
+```
+osboxes@ldvm1:~/src$ git clone https://github.com/nufeng74/chkservice.git
+Cloning into 'chkservice'...
+remote: Enumerating objects: 424, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 424 (delta 1), reused 4 (delta 1), pack-reused 417
+Receiving objects: 100% (424/424), 98.22 KiB | 1.51 MiB/s, done.
+Resolving deltas: 100% (264/264), done.
+
+osboxes@ldvm1:~/src$ cd chkservice
+osboxes@ldvm1:~/src/chkservice$ mkdir build
+osboxes@ldvm1:~/src/chkservice$ cd build
+
+osboxes@ldvm1:~/src/chkservice/build$ cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+
+Command 'cmake' not found, but can be installed with:
+
+sudo snap install cmake  # version 3.20.5, or
+sudo apt  install cmake  # version 3.16.3-1ubuntu1
+
+See 'snap info cmake' for additional versions.
+```
+
+** Diegiu kūrimo priemones:
++
+```
+osboxes@ldvm1:~/src/chkservice/build$ sudo apt-get install cmake g++ libsystemd-dev libncurses-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  cmake-doc ninja-build g++-multilib ncurses-doc
+The following NEW packages will be installed:
+  cmake g++ libncurses-dev libsystemd-dev
+0 upgraded, 4 newly installed, 0 to remove and 153 not upgraded.
+Need to get 0 B/4,256 kB of archives.
+After this operation, 22.6 MB of additional disk space will be used.
+Selecting previously unselected package cmake.
+(Reading database ... 196958 files and directories currently installed.)
+Preparing to unpack .../cmake_3.16.3-1ubuntu1_amd64.deb ...
+Unpacking cmake (3.16.3-1ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking g++ (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libncurses-dev:amd64.
+Preparing to unpack .../libncurses-dev_6.2-0ubuntu2_amd64.deb ...
+Unpacking libncurses-dev:amd64 (6.2-0ubuntu2) ...
+Selecting previously unselected package libsystemd-dev:amd64.
+Preparing to unpack .../libsystemd-dev_245.4-4ubuntu3.7_amd64.deb ...
+Unpacking libsystemd-dev:amd64 (245.4-4ubuntu3.7) ...
+Setting up libncurses-dev:amd64 (6.2-0ubuntu2) ...
+Setting up g++ (4:9.3.0-1ubuntu2) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up cmake (3.16.3-1ubuntu1) ...
+Setting up libsystemd-dev:amd64 (245.4-4ubuntu3.7) ...
+Processing triggers for man-db (2.9.1-1) ...
+```
+
+** Kompiliuoju įrankį:
++
+```
+osboxes@ldvm1:~/src/chkservice/build$ cmake ..
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- DEBUG mode disabled
+-- Local build
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'libsystemd'
+--   Found libsystemd, version 245
+-- Checking for module 'ncurses'
+--   Found ncurses, version 6.2.20200212
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/osboxes/src/chkservice/build
+
+osboxes@ldvm1:~/src/chkservice/build$ make chkservice
+Scanning dependencies of target CHKSYSTEMD
+[ 10%] Building CXX object src/CMakeFiles/CHKSYSTEMD.dir/chk-systemd.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/CHKSYSTEMD.dir/chk-systemd-utils.cpp.o
+[ 30%] Linking CXX static library libCHKSYSTEMD.a
+[ 30%] Built target CHKSYSTEMD
+[ 40%] Building CXX object src/CMakeFiles/CHKCTL.dir/chk-ctl.cpp.o
+[ 50%] Linking CXX static library libCHKCTL.a
+[ 50%] Built target CHKCTL
+[ 60%] Building CXX object src/CMakeFiles/CHKUI.dir/chk-wmain.cpp.o
+  ...
+[ 70%] Building CXX object src/CMakeFiles/CHKUI.dir/chk-wutils.cpp.o
+[ 80%] Linking CXX static library libCHKUI.a
+[ 80%] Built target CHKUI
+[ 90%] Building CXX object src/CMakeFiles/chkservice.dir/chkservice.cpp.o
+[100%] Linking CXX executable chkservice
+[100%] Built target chkservice
+```
+
+** Patikrinu įrankį:
++
+```
+osboxes@ldvm1:~/src/chkservice/build$ ll src/chkservice
+-rwxrwxr-x 1 osboxes osboxes 94344 Jul  4 15:27 src/chkservice*
+
+osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
+----8><----------------------------------------------------------------------------------------------------><8----
+                                                                                                                  
+                                                                                                                  
+  [x]  >  irqbalance.service                              irqbalance daemon                                       
+  -m-     kbd.service                                     kbd.service                                             
+  [x]  >  kerneloops.service                              Tool to automatically collect and submit kernel crash   
+  [x]  =  keyboard-setup.service                          Set the console keyboard layout                         
+  [s]  =  kmod-static-nodes.service                       Create list of static device nodes for the current ker  
+  [s]     kmod.service                                    /lib/systemd/system/kmod.service                        
+  [s]  =  logrotate.service                               Rotate log files                                        
+> [ ]     ModemManager.service                            /lib/systemd/system/ModemManager.service               <
+  [s]  =  man-db.service                                  Daily man-db regeneration                               
+  [s]     modprobe@.service                               /lib/systemd/system/modprobe@.service                   
+  [s]  =  modprobe@drm.service                            Load Kernel Module drm                                  
+  [s]  =  motd-news.service                               Message of the Day                                      
+  [x]  >  mysql.service                                   MySQL Community Server                                  
+  [x]     NetworkManager-dispatcher.service               /lib/systemd/system/NetworkManager-dispatcher.service   
+  [x]  =  NetworkManager-wait-online.service              Network Manager Wait Online                             
+  [x]  >  NetworkManager.service                          Network Manager                                         
+                                                                                                                  
+                                                         91/532                                                   
+----8><----------------------------------------------------------------------------------------------------><8----
+```
++
+Ties `ModemManager` paspaudus `Space` tarnyba dabar jau iškart išsijungia.
+
+
 #### X. SSH serverio instaliavimas
 
 Ieškau programinės įrangos paketo:
