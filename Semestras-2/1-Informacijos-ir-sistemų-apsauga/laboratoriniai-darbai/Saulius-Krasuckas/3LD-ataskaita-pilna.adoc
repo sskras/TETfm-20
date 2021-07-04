@@ -1338,6 +1338,30 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
+
+Paleidžiu tvindantį `ping` srautą į virtualų kompiuterį:
+
+```
+[p@localhost ~]$ sudo ping -f 192.168.10.14
+```
+
+Stebiu, kaip vykdoma komanda:
+
+```
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+.^..
+```
+
+Sustabdau srautą `Ctrl+C` pagalba:
+
+```
+^C
+--- 192.168.10.14 ping statistics ---
+450782 packets transmitted, 450781 received, 0% packet loss, time 53743ms
+rtt min/avg/max/mdev = 0.044/0.078/19.979/0.072 ms, pipe 2, ipg/ewma 0.119/0.082 ms
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
