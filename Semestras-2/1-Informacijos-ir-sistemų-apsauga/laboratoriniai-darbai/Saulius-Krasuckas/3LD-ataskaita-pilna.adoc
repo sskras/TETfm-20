@@ -296,6 +296,35 @@ status  │  graphical.target                                                   
 query service status (display output with F2)                                                  [press F3 for help]
 ```
 
+** Deja, įrankis `serman2` turi trūkumų:
+
+*** Ne visada teisingai nuskaito tarnybų `Enabled` būseną.
+
+*** Taip pat šios būsenos perjungimui (ir kitiems veiksmams) naudoja ne visai intuityvų UI:
+
+**** pagalba kviečiama klavišu `F3`;
+**** veiksmo tipas pasirenkamas kairiame stulpelyje, tarnybos – sąraše dešinėje;
+**** tarp jų persijungiama klavišais `Right`, `Left`;
+**** tarnybas veiksmui įvykdyti reikia pasirinkti klavišu `Space`;
+**** veiksmas įvykdymomas klavišu `Enter`;
+**** rezultatas pasižiūrimas klavišus `F3` atskirame vaizde;
+**** grįžtama į pradinį vaizdą paspaudus `Enter`;
+**** programa uždaroma paspaudus `Ctrl-C`;
+**** užuominos (angl. _Hint_) eilutė pradingsta po pirmojo vaizdo perjungimo ir grįžimo.
+
+*** Taip pat įrankis rodo ne tik tarnybų (`.service`) būsenas, bet ir kitų SystemD vienetų:
+
+**** `.automount`
+**** `.device`
+**** `.mount`
+**** `.path`
+**** `.scope`
+**** `.slice`
+**** `.socket`
+**** `.swap`
+**** `.target`
+**** `.timer`
+
 
 #### X. SSH serverio instaliavimas
 
