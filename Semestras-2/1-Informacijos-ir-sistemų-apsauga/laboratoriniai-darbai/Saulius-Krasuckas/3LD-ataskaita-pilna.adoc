@@ -590,6 +590,7 @@ Ties `ModemManager` paspaudus `Space`, tarnyba dabar išsijungia jau iškart.
 * Susirandu dar vieną įrankį, `systemctl-ui`.
 
 ** Pasiimu jį iš GitHub:
++
 ```
 osboxes@ldvm1:~/src$ git clone https://github.com/mpbcode/systemctl-ui
 Cloning into 'systemctl-ui'...
@@ -599,6 +600,7 @@ Unpacking objects: 100% (7/7), 14.05 KiB | 1.76 MiB/s, done.
 ```
 
 ** Diegiu Lua interpretatorių:
++
 ```
 osboxes@ldvm1:~/src$ sudo apt-get install lua5.3
 Reading package lists... Done
