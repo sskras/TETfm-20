@@ -528,6 +528,8 @@ osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
 +
 Ties `ModemManager` paspaudus `Space` tarnyba dabar jau iškart išsijungia.
 
+** Įrankis `chkservice` iš dalies atitinka `sysvrconf` ir puikiai veikia su SystemD _Init_-mechanizmu.
+
 
 #### X. SSH serverio instaliavimas
 
