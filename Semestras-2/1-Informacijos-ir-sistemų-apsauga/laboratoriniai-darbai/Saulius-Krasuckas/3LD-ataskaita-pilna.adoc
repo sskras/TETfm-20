@@ -286,7 +286,7 @@ lines 1-19
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
 +
-  Šitaip lengva filtruoti tarnybas pagal vardus (jų šablonus):
+Šitaip lengva filtruoti tarnybas pagal vardus (jų šablonus):
 +
 ```
 osboxes@ldvm1:~$ systemctl list-unit-files --type=service --all *Manager*
@@ -299,7 +299,6 @@ NetworkManager.service                     enabled enabled
 
 5 unit files listed.
 ```
-
 
 * Tarnybų valdymui susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
 
