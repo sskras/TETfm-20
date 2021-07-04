@@ -574,7 +574,7 @@ osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
                                                          91/532                                                   
 ----8><----------------------------------------------------------------------------------------------------><8----
 ```
-+
+    +
    Ties `ModemManager` paspaudus `Space`, tarnyba dabar išsijungia jau iškart.
 
 ** `chkservice` trūkumai:
@@ -589,7 +589,7 @@ osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
 
 ** Taisymo išvados:
 
-*** įrankis `chkservice` gana tiksliai atitinka `sysvrconf`;
+*** įrankis `chkservice` gana tiksliai atitinka `sysvconfig`;
 *** puikiai veikia su SystemD _Init_-mechanizmu;
 *** tik nerodo tarnybų priklausomybių nuo _Runlevels_ (arba nuo _targets_, kalbant SystemD terminais).
 
