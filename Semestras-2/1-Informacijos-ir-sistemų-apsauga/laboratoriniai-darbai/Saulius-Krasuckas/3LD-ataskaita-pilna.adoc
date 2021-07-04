@@ -270,6 +270,32 @@ remote: Total 41 (delta 0), reused 0 (delta 0), pack-reused 41
 Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
 ```
 
+** Išsibandau `serman2`:
++
+```
+osboxes@ldvm1:~$ sudo src/serman/serman.py
+
+Commands│  Services
+────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────
+enable  │  getty@tty2.service                                                                          running ● ▲
+restart │  getty@tty6.service                                                                          running ● ▲
+start   │  gpu-manager.service                                                                            dead
+status  │  graphical.target                                                                               dead
+        │  grub-common.service                                                                          exited ●
+        │  grub-initrd-fallback.service                                                                   dead
+        │  halt.target
+        │  hibernate.target
+        │  home.mount                                                                                  mounted ●
+        │  hwclock.service
+        │  hybrid-sleep.target
+        │  ifup@.service
+        │  ifup@enp0s8.service                                                                          exited ● ▲
+        │  ifupdown-pre.service                                                                         exited ●
+        │  ifupdown-wait-online.service
+────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────
+query service status (display output with F2)                                                  [press F3 for help]
+```
+
 
 #### X. SSH serverio instaliavimas
 
