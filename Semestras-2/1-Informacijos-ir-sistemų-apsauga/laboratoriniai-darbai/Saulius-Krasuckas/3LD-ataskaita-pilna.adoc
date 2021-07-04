@@ -1212,6 +1212,24 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+Uždraudžiu įeinančius paketus:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -j DROP
+```
+
+Išbandau draudimą, veikia:
+
+```
+osboxes@ldvm2:~$ time ssh 192.168.10.14
+ssh: connect to host 192.168.10.14 port 22: Connection timed out
+
+real    2m10.382s
+user    0m0.004s
+sys     0m0.011s
+```
+Ryšys iš kaimyninio kompiuterio nebeužsimezga, įvyksta _Timeout_.
+
 
 
 ### Sunkumai ir atsakymai į klausimus
