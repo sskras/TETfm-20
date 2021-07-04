@@ -56,10 +56,10 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
 * Nustatymai ne pagal aprašą:
 
 ** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
-   (šiame darbe naudojamas branduolys `5.8.0-59-generic`)
+   (šiame darbe naudojamas branduolys `5.8.0-59-generic`)  +
    Palieku kaip yra.
 
-** 2. Trūksta `10.10.10.x` adreso (nes LD2 buvo uždėtas rankomis, o po to OS perkrauta).`
+** 2. Trūksta `10.10.10.x` adreso (nes LD2 buvo uždėtas rankomis, o po to OS perkrauta).
 
 ** 3. OS turi du vartus pagal nutylėjimą:
 
@@ -200,12 +200,12 @@ W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRele
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
 
-** Deja, pašalinus vartus pagal nutylėjimą `10.0.2.2` nustojo veikti interneto ryšys.  +
+** Paaiškėja, kad pašalinus vartus pagal nutylėjimą `10.0.2.2`, nustojo veikti interneto ryšys.  +
    Jis veikdavo per tinklo sąsają `enp0s3`, kuri VirtualBox sistemoje yra _NAT_ tipo (skirta išėjimui į internetą).  +
 
-** Kadangi dabar veikia tik vartai per `192.168.10.254` (priklausantys Host OS),
-   teko sukonfigūruoti maršrutizavimą + įjungti _NAT_ mech jau Host OS.  +
-   (Neaprašau, nes tai nebūtinai Linux sistema)
+** Kadangi dabar ėmė veikti tik vartai per `192.168.10.254` (priklausantys Host OS),
+   teko konfigūruoti maršrutizavimą + įjungti _NAT_ mechanizmą jau Host OS pusėje šiai Guest tinklo sąsajai.  +
+   (Neaprašau, nes Host OS nebūtinai Linux sistema)
 
 ** Sąrašų atnaujinimas vėl veikia:
 +
@@ -224,7 +224,6 @@ Reading package lists... Done
 
 ** Turbūt vertėtų įtraukti tokį patikslinimą į laboratorinio darbo aprašą.  +
    (apie reikiamą _VirtualBox_ tinklo sąsajos tipą + maršrutizavimą tarp Host ir Guest OS)
-
 
 ** Tęsiu `sysvconfig` diegimą.
    Tokio paketo _Ubuntu 20.04.2_ neturi:
