@@ -1230,6 +1230,37 @@ sys     0m0.011s
 ```
 Ryšys iš kaimyninio kompiuterio nebeužsimezga, įvyksta _Timeout_.
 
+Žiūriu, kaip pasikeitė nustatymai:
+
+```
+osboxes@ldvm1:~$ sudo iptables --list
+sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       all  --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+```
+
+[source,diff]
+```
+osboxes@ldvm1:~$ sudo iptables --list > debug/10.iptables_po_bandymų.txt
+osboxes@ldvm1:~$ diff -u debug/{09,10}*
+--- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
++++ "debug/10.iptables_po_bandym\305\263.txt"   2021-07-04 22:17:24.473222360 +0300
+@@ -1,5 +1,6 @@
+ Chain INPUT (policy ACCEPT)
+ target     prot opt source               destination         
++DROP       all  --  anywhere             anywhere            
+ 
+ Chain FORWARD (policy ACCEPT)
+ target     prot opt source               destination         
+```
 
 
 ### Sunkumai ir atsakymai į klausimus
