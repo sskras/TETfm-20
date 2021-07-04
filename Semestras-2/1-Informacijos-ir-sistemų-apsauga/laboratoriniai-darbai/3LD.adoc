@@ -118,6 +118,8 @@ lsmod
 ```
   |
   
+3+| +++<center>+++ *6. `iptables` patikrinimas* +++</center>+++
+  
   | Pažiūrėkite `iptables` nustatymus pagal nutylėjimą:
   |`iptables --list` arba `iptables -L`
   |
@@ -135,15 +137,30 @@ lsmod
   |
   
   | Uždrauskite ICMP protokolą:
-  |`iptables -A INPUT -p icmp -j DROP`
+2+|`iptables -A INPUT -p icmp -j DROP`
+
+2+| Patikrinkite, ar atsirado taisyklė ir ar ji veikia.
   |
   
-  | Patikrinkite, ar atsirado taisyklė ir ar ji veikia.
-  |
+  | Išvalykite `iptables`:
+  |`iptables -F`
   |
   
-  | Išvalykite `iptables`
+3+| +++<center>+++ *7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto* +++</center>+++
+  
+2+| Paleiskite `ping` srautą į virtualų kompiuterį.  +
+    Stebėkite, kaip vykdoma komanda.  +
+    Sustabdykite jį `Ctrl+C` pagalba.
   |
+  
+  | Nustatykite ribojimą, kad vienas šaltinis galėtų atsiųsti vieną `ping` paketą per sekundę:
+2+|`iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst 1 -j ACCEPT`
+  
+2+| Vėl paleiskite `ping` srautą ir įvertinkite kaip pasikeitė elgsena.
+  |
+  
+  | Išvalykite `iptables`:
+  |`iptables -F`
   |
 
 |===
