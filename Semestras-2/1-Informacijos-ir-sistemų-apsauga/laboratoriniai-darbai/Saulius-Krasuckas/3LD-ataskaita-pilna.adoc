@@ -387,7 +387,7 @@ osboxes@ldvm1:~/src$ sudo chkservice
    Taip yra dėl klaidos programoje: https://github.com/linuxenko/chkservice/issues/12
 
 ** Imu pataisytą programos kodą iš GitHub: https://github.com/nufeng1999/chkservice
-
++
 ```
 osboxes@ldvm1:~/src$ git clone https://github.com/nufeng74/chkservice.git
 Cloning into 'chkservice'...
