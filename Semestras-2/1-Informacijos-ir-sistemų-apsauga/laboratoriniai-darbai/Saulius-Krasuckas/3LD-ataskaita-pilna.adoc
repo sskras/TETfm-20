@@ -620,14 +620,13 @@ Processing triggers for man-db (2.9.1-1) ...
 ```
 
 ** Tikrinu įrankį:
-```
++
 image::https://user-images.githubusercontent.com/74717106/124387489-9462ef80-dce7-11eb-91be-66d6f26e259d.png[]
-```
 
 ** Deja, jis rodo tik uždraustas (_Disabled_) tarnybas:  +
    https://github.com/mpbcode/systemctl-ui/issues/1
 
-* Taisymo išvados:
+* Įrankio paieškos apibendrinimas:
 
 ** įrankis `chkservice` gana tiksliai atitinka `sysvconfig`;
 ** puikiai veikia su SystemD _Init_-mechanizmu;
