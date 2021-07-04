@@ -205,7 +205,7 @@ W: Some index files failed to download. They have been ignored, or old ones used
 
 ** Kadangi dabar ėmė veikti tik vartai per `192.168.10.254` (priklausantys Host OS),
    teko konfigūruoti maršrutizavimą + įjungti _NAT_ mechanizmą jau Host OS pusėje būtent šiai Guest tinklo sąsajai (o ne įprastinei).  +
-   (Neaprašau, nes Host OS nebūtinai Linux sistema)
+   (Neaprašau Host OS veiksmų, tai nebūtinai Linux sistema)
 
 ** Sąrašų atnaujinimas vėl veikia:
 +
