@@ -277,7 +277,7 @@ Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
 +
 ```
 osboxes@ldvm1:~$ sudo serman/serman.py
-
+----8><----------------------------------------------------------------------------------------------------><8----
 Commands│  Services
 ────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────
 enable  │  getty@tty2.service                                                                          running ● ▲
@@ -355,6 +355,33 @@ Setting up chkservice (0.3-1build1) ...
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
+** Išbandau `chkservice`:
++
+```
+osboxes@ldvm1:~/src$ sudo chkservice
+----8><----------------------------------------------------------------------------------------------------><8----
+ Failed: Connection reset by peer                                                                                 
+                                                                                                                  
+  -m-     kbd.service                                     kbd.service                                             
+  [x]  >  kerneloops.service                              Tool to automatically collect and submit kernel crash   
+  [x]  =  keyboard-setup.service                          Set the console keyboard layout                         
+  [s]  =  kmod-static-nodes.service                       Create list of static device nodes for the current ker  
+  [s]     kmod.service                                    /lib/systemd/system/kmod.service                        
+  [s]  =  logrotate.service                               Rotate log files                                        
+  [x]  =  ModemManager.service                            Modem Manager                                           
+  [s]  =  man-db.service                                  Daily man-db regeneration                               
+  [s]     modprobe@.service                               /lib/systemd/system/modprobe@.service                   
+  [s]  =  modprobe@drm.service                            Load Kernel Module drm                                  
+  [s]  =  motd-news.service                               Message of the Day                                      
+  [x]  >  mysql.service                                   MySQL Community Server                                  
+  [x]     NetworkManager-dispatcher.service               /lib/systemd/system/NetworkManager-dispatcher.service   
+  [x]  =  NetworkManager-wait-online.service              Network Manager Wait Online                             
+  [x]  >  NetworkManager.service                          Network Manager                                         
+  [x]  =  netplan-ovs-cleanup.service                     OpenVSwitch configuration for cleanup                   
+                                                                                                                  
+                                                         92/533                                                   
+----8><----------------------------------------------------------------------------------------------------><8----
+```
 
 #### X. SSH serverio instaliavimas
 
