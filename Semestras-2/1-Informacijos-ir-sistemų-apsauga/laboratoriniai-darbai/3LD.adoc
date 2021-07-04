@@ -118,4 +118,32 @@ lsmod
 ```
   |
   
+  | Pažiūrėkite `iptables` nustatymus pagal nutylėjimą:
+  |`iptables --list` arba `iptables -L`
+  |
+  
+  | Uždrauskite visus įeinančius paketus:
+  |`iptables -A INPUT -j DROP`
+  |
+  
+  | Išbandykite, ar veikia, ir pažiūrėkite kaip pasikeitė `iptables` nustatymai:
+  |`iptables -L`
+  |
+  
+  | Išvalykite `iptables`:
+  |`iptables -F`
+  |
+  
+  | Uždrauskite ICMP protokolą:
+  |`iptables -A INPUT -p icmp -j DROP`
+  |
+  
+  | Patikrinkite, ar atsirado taisyklė ir ar ji veikia.
+  |
+  |
+  
+  | Išvalykite `iptables`
+  |
+  |
+
 |===
