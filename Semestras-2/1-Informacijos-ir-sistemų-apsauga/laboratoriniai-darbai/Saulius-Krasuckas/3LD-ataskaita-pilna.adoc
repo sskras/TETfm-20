@@ -257,8 +257,7 @@ Full Text Search... Done
 
 * Ieškau atitikmenų darbui su SystemD mechanizmu.  +
    +
-  Susirandu įrankį `serman2`:  +
-  https://aur.archlinux.org/packages/serman
+  Susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
 
 ** Pasiimu jį iš GitHub:
 +
@@ -277,7 +276,7 @@ Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
 ** Išsibandau `serman2`:
 +
 ```
-osboxes@ldvm1:~$ sudo src/serman/serman.py
+osboxes@ldvm1:~$ sudo serman/serman.py
 
 Commands│  Services
 ────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -316,7 +315,7 @@ query service status (display output with F2)                                   
 **** programa uždaroma paspaudus `Ctrl-C`;
 **** užuominos (angl. _Hint_) eilutė pradingsta po pirmojo vaizdo perjungimo ir grįžimo.
 
-*** Taip pat įrankis rodo ne tik tarnybų (`.service`) būsenas, bet ir kitų SystemD vienetų:
+*** Taip pat įrankis rodo ne tik tarnybų (`.service`), bet ir kitų SystemD vienetų būsenas:
 
 **** `.automount`
 **** `.device`
