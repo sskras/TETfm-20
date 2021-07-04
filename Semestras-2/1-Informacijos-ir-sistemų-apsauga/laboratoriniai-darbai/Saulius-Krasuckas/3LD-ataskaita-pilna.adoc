@@ -243,7 +243,7 @@ Full Text Search... Done
 ** Panašu, kad šis įrankis iš Ubuntu pašalintas 2009-09-11:  +
    https://superuser.com/questions/96040/did-sysvconfig-disappear-in-ubuntu-9-10
 
-** Taip pat dabar neveikia ir `systemvconfig` atitikmenys, dar veikę po jo pašalinimo:   +
+** Taip pat dabar neveikia ir `sysvconfig` atitikmenys, dar veikę po jo pašalinimo:   +
    `sysv-rc-conf`, `rcconf`:  +
    https://askubuntu.com/questions/1043248/rcconf-package-alternative-in-bionic-beaver
 
