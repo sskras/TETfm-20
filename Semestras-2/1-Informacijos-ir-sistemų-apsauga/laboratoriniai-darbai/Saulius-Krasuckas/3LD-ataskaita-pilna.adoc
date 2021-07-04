@@ -323,7 +323,7 @@ Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
 ** Išsibandau įrankį:
 +
 ```
-osboxes@ldvm1:~$ sudo serman/serman.py
+osboxes@ldvm1:~/src$ sudo serman/serman.py
 
 ----8><----------------------------------------------------------------------------------------------------><8----
 Commands│  Services
@@ -438,6 +438,8 @@ osboxes@ldvm1:~/src$ sudo chkservice
 ** Imu pataisytą programos kodą iš GitHub: https://github.com/nufeng1999/chkservice
 +
 ```
+osboxes@ldvm1:~$ cd src
+
 osboxes@ldvm1:~/src$ git clone https://github.com/nufeng74/chkservice.git
 Cloning into 'chkservice'...
 remote: Enumerating objects: 424, done.
