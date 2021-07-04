@@ -1,776 +1,34 @@
+
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
-/dev/sda1: clean, 164522/14458880 files, 2690392/57829632 blocks
-[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
-plymouth-start.service
-[[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
-[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
-[[0m[0;31m*     [0m] (1 of 3) A start job is running for…-91d2-8a4e83d5f29a (6s / 1min 30s)
-M[K[[0;1;31m*[0m[0;31m*    [0m] (1 of 3) A start job is running for…-91d2-8a4e83d5f29a (6s / 1min 30s)
-M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] (1 of 3) A start job is running for…-91d2-8a4e83d5f29a (7s / 1min 30s)
-[   21.140126] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-[   21.514185] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] (2 of 3) A start job is running for…-81db-f8c2676ad2e0 (7s / 1min 30s)
-[   21.902416] snd_intel8x0 0000:00:05.0: measure - unreliable DMA position..
-M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] (2 of 3) A start job is running for…-81db-f8c2676ad2e0 (8s / 1min 30s)
-M[K[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 2[0m.
-[K         Starting [0;1;39mFile System Check…5566-4bb0-91d2-8a4e83d5f29a[0m...
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 4[0m.
-         Starting [0;1;39mFile System Check…6b49-4ecb-81db-f8c2676ad2e0[0m...
-[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
-systemd-fsckd.service
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
-         Activating swap [0;1;39m/dev/disk/…5d48-4630-aa26-0ffc9bf619d0[0m...
-dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB0e653235\x2d4bb9f389\x2dpart3.swap
-dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart3.swap
-dev-disk-by\x2dpartuuid-88434d82\x2d03.swap
-dev-sda3.swap
-[[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…a-5d48-4630-aa26-0ffc9bf619d0[0m.
-dev-disk-by\x2duuid-ad883a1a\x2d5d48\x2d4630\x2daa26\x2d0ffc9bf619d0.swap
-[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
-Checking in progress on 1 disk (0.0% complete)fsckd-cancel-msg:Press Ctrl+C to cancel all filesystem checks in progress
-fsckd:1:0.0:Checking in progress on 1 disk (0.0% complete)
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…c-6b49-4ecb-81db-f8c2676ad2e0[0m.
-systemd-fsck@dev-disk-by\x2duuid-487a882c\x2d6b49\x2d4ecb\x2d81db\x2df8c2676ad2e0.service
-         Mounting [0;1;39m/home[0m...
 
-Checking in progress on 0 disks (100.0% complete)fsckd:0:100.0:Checking in progress on 0 disks (100.0% complete)
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…b-5566-4bb0-91d2-8a4e83d5f29a[0m.
-systemd-fsck@dev-disk-by\x2duuid-0002deeb\x2d5566\x2d4bb0\x2d91d2\x2d8a4e83d5f29a.service
-         Mounting [0;1;39m/boot[0m...
-[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
-home.mount
-[[0;32m  OK  [0m] Mounted [0;1;39m/boot[0m.
-boot.mount
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
-         Starting [0;1;39mLoad AppArmor profiles[0m...
-         Starting [0;1;39mSet console font and keymap[0m...
-         Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
-         Starting [0;1;39mCreate Volatile Files and Directories[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
-console-setup.service
-systemd-tmpfiles-setup.service
-[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
-         Starting [0;1;39mNetwork Name Resolution[0m...
-         Starting [0;1;39mNetwork Time Synchronization[0m...
-         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
-systemd-update-utmp.service
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
-systemd-timesyncd.service
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
-systemd-resolved.service
-apparmor.service
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
-         Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
-snapd.apparmor.service
-[[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
-[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
-[[0;32m  OK  [0m] Started [0;1;39mMessage of the Day[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
-         Starting [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
-         Starting [0;1;39mAccounts Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
-         Starting [0;1;39mLSB: automatic crash report generation[0m...
-         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
-acpid.service
-anacron.service
-[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-cron.service
-[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
-cups.service
-         Starting [0;1;39mNetwork Manager[0m...
-[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
-dbus.service
-dmesg.service
-         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
-         Starting [0;1;39mDetect the availa…eal with any system changes[0m...
-         Starting [0;1;39mLSB: Record successful boot for GRUB[0m...
-         Starting [0;1;39mGRUB failed boot detection[0m...
-irqbalance.service
-[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
-         Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
-         Starting [0;1;39mAuthorization Manager[0m...
-         Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
-         Starting [0;1;39mSystem Logging Service[0m...
-         Starting [0;1;39mSnap Daemon[0m...
-         Starting [0;1;39mSwitcheroo Control Proxy service[0m...
-         Starting [0;1;39mLogin Service[0m...
-         Starting [0;1;39mThermal Daemon Service[0m...
-         Starting [0;1;39mDisk Manager[0m...
-         Starting [0;1;39mVirtualbox guest utils[0m...
-         Starting [0;1;39mWPA supplicant[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
-[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
-rsyslog.service
-[[0;32m  OK  [0m] Started [0;1;39mLSB: Record successful boot for GRUB[0m.
-grub-common.service
-[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
-apport.service
-[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
-systemd-logind.service
-[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
-avahi-daemon.service
-[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
-cups-browsed.service
-wpa_supplicant.service
-thermald.service
-switcheroo-control.service
-[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
-[[0;32m  OK  [0m] Started [0;1;39mThermal Daemon Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
-         Starting [0;1;39mSave/Restore Sound Card State[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
-alsa-restore.service
-[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
-polkit.service
-[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
-         Starting [0;1;39mModem Manager[0m...
-[[0;32m  OK  [0m] Started [0;1;39mVirtualbox guest utils[0m.
-virtualbox-guest-utils.service
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
-[NetworkManager.service
-[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
-         Starting [0;1;39mNetwork Manager Wait Online[0m...
-         Starting [0;1;39mOpenVPN service[0m...
-         Starting [0;1;39mOpenBSD Secure Shell server[0m...
-         Starting [0;1;39mPermit User Sessions[0m...
-[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
-unattended-upgrades.service
-[[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
-openvpn.service
-[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
-systemd-user-sessions.service
-         Starting [0;1;39mGNOME Display Manager[0m...
-         Starting [0;1;39mHold until boot process finishes up[0m...
-         Starting [0;1;39mHostname Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
-systemd-hostnamed.service
-[[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
-gdm.service
-ssh.service
-accounts-daemon.service
-NetworkManager-dispatcher.service
-ModemManager.service
-udisks2.service
-networkd-dispatcher.service
-run-user-125.mount
-user-runtime-dir@125.service
-user@125.service
-rtkit-daemon.service
-run-user-125-gvfs.mount
-snapd.service
-snapd.seeded.service
-upower.service
-systemd-localed.service
-geoclue.service
-packagekit.service
-fprintd.service
-colord.service
-[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
-[[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
-[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
-[[0m[0;31m*     [0m] (1 of 3) A start job is running for…-91d2-8a4e83d5f29a (6s / 1min 30s)
-M[K[[0;1;31m*[0m[0;31m*    [0m] (1 of 3) A start job is running for…-91d2-8a4e83d5f29a (6s / 1min 30s)
-M[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] (1 of 3) A start job is running for…-91d2-8a4e83d5f29a (7s / 1min 30s)
-M[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] (2 of 3) A start job is running for…-81db-f8c2676ad2e0 (7s / 1min 30s)
-M[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] (2 of 3) A start job is running for…-81db-f8c2676ad2e0 (8s / 1min 30s)
-M[K[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 2[0m.
-[K         Starting [0;1;39mFile System Check…5566-4bb0-91d2-8a4e83d5f29a[0m...
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 4[0m.
-         Starting [0;1;39mFile System Check…6b49-4ecb-81db-f8c2676ad2e0[0m...
-[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
-         Activating swap [0;1;39m/dev/disk/…5d48-4630-aa26-0ffc9bf619d0[0m...
-[[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…a-5d48-4630-aa26-0ffc9bf619d0[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
-Checking in progress on 1 disk (0.0% complete)[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…c-6b49-4ecb-81db-f8c2676ad2e0[0m.
-         Mounting [0;1;39m/home[0m...
-Checking in progress on 0 disks (100.0% complete)[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…b-5566-4bb0-91d2-8a4e83d5f29a[0m.
-         Mounting [0;1;39m/boot[0m...
-[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
-[[0;32m  OK  [0m] Mounted [0;1;39m/boot[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
-         Starting [0;1;39mLoad AppArmor profiles[0m...
-         Starting [0;1;39mSet console font and keymap[0m...
-         Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
-         Starting [0;1;39mCreate Volatile Files and Directories[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
-         Starting [0;1;39mNetwork Name Resolution[0m...
-         Starting [0;1;39mNetwork Time Synchronization[0m...
-         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
-         Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
-[[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
-[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
-[[0;32m  OK  [0m] Started [0;1;39mMessage of the Day[0m.
-[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
-         Starting [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
-         Starting [0;1;39mAccounts Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
-[[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
-         Starting [0;1;39mLSB: automatic crash report generation[0m...
-         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
-[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
-         Starting [0;1;39mNetwork Manager[0m...
-[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
-         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
-         Starting [0;1;39mDetect the availa…eal with any system changes[0m...
-         Starting [0;1;39mLSB: Record successful boot for GRUB[0m...
-         Starting [0;1;39mGRUB failed boot detection[0m...
-[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
-         Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
-         Starting [0;1;39mAuthorization Manager[0m...
-         Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
-         Starting [0;1;39mSystem Logging Service[0m...
-         Starting [0;1;39mSnap Daemon[0m...
-         Starting [0;1;39mSwitcheroo Control Proxy service[0m...
-         Starting [0;1;39mLogin Service[0m...
-         Starting [0;1;39mThermal Daemon Service[0m...
-         Starting [0;1;39mDisk Manager[0m...
-         Starting [0;1;39mVirtualbox guest utils[0m...
-         Starting [0;1;39mWPA supplicant[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
-[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mLSB: Record successful boot for GRUB[0m.
-[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
-[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
-[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
-[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
-[[0;32m  OK  [0m] Started [0;1;39mThermal Daemon Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
-         Starting [0;1;39mSave/Restore Sound Card State[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
-[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
-         Starting [0;1;39mModem Manager[0m...
-[[0;32m  OK  [0m] Started [0;1;39mVirtualbox guest utils[0m.
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
-         Starting [0;1;39mNetwork Manager Wait Online[0m...
-         Starting [0;1;39mOpenVPN service[0m...
-         Starting [0;1;39mOpenBSD Secure Shell server[0m...
-         Starting [0;1;39mPermit User Sessions[0m...
-[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
-         Starting [0;1;39mGNOME Display Manager[0m...
-         Starting [0;1;39mHold until boot process finishes up[0m...
-         Starting [0;1;39mHostname Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
-[[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
-
-Ubuntu 20.04.2 LTS osboxes ttyS0
-
-osboxes login:                                                    
-
-osboxes login: 
-osboxes login: osboxes
-osboxes
-Password: osboxes.org
 
-Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-43-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-267 updates can be installed immediately.
-118 of these updates are security updates.
-To see these additional updates run: apt list --upgradable
-
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Tue Jun 29 04:06:21 EDT 2021 on ttyS0
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ lat st
-last
-osboxes  ttyS0                         Tue Jun 29 05:21   still logged in
-reboot   system boot  5.8.0-43-generic Tue Jun 29 08:19   still running
-osboxes  ttyS0                         Tue Jun 29 04:06 - down   (00:49)
-reboot   system boot  5.8.0-43-generic Tue Jun 29 07:05 - 04:56  (-2:09)
-osboxes  ttyS0                         Mon Jun 28 19:39 - down   (00:00)
-reboot   system boot  5.8.0-43-generic Mon Jun 28 22:35 - 19:40  (-2:55)
-osboxes  ttyS0                         Mon Jun 28 18:15 - down   (00:00)
-reboot   system boot  5.8.0-43-generic Mon Jun 28 21:13 - 18:16  (-2:57)
-osboxes  ttyS0                         Mon Jun 28 10:01 - down   (00:00)
-reboot   system boot  5.8.0-43-generic Mon Jun 28 12:59 - 10:02  (-2:56)
-osboxes  :0           :0               Sat Mar  6 17:17 - down   (00:01)
-reboot   system boot  5.8.0-43-generic Sat Mar  6 17:16 - 17:18  (00:02)
-osboxes  :0           :0               Sat Mar  6 17:12 - down   (00:04)
-reboot   system boot  5.8.0-43-generic Sat Mar  6 17:10 - 17:16  (00:05)
-
-wtmp begins Sat Mar  6 17:10:19 2021
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ifconfig -a | grep -e ": " -e inet
-ifconfig -a | grep -e ": " -e inet
-enp0s3[01;31m[K: [m[Kflags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        [01;31m[Kinet[m[K 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
-        [01;31m[Kinet[m[K6 fe80::3790:7de6:b710:c982  prefixlen 64  scopeid 0x20<link>
-enp0s8[01;31m[K: [m[Kflags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        [01;31m[Kinet[m[K6 fe80::1c17:744f:d35c:bdf6  prefixlen 64  scopeid 0x20<link>
-lo[01;31m[K: [m[Kflags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        [01;31m[Kinet[m[K 127.0.0.1  netmask 255.0.0.0
-        [01;31m[Kinet[m[K6 ::1  prefixlen 128  scopeid 0x10<host>
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ fg  a 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ cat /etc/network/interfaces
-cat /etc/network/interfaces
-cat: /etc/network/interfaces: No such file or directory
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ man interfaces
-man interfaces
-No manual entry for interfaces
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ls -Al /etc/network
-ls -Al /etc/network
-total 16
-drwxr-xr-x 2 root root 4096 Feb  9 13:51 if-down.d
-drwxr-xr-x 2 root root 4096 Feb  9 13:51 if-post-down.d
-drwxr-xr-x 2 root root 4096 Feb  9 13:51 if-pre-up.d
-drwxr-xr-x 2 root root 4096 Feb  9 13:51 if-up.d
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ nano /etc/network/interfaces
-nano /etc/network/interfaces
-[?2004h)0[1;24r[m(B[4l[?7h[H[J[22;19H[0;7m(B[ Directory '/etc/network' is not writable ][m(B[H[0;7m(B  GNU nano 4.8                /etc/network/interfaces                           [1;79H[m(B[22B[0;7m(B^G[m(B Get Help  [0;7m(B^O[m(B Write Out [0;7m(B^W[m(B Where Is  [0;7m(B^K[m(B Cut Text  [0;7m(B^J[m(B Justify   [0;7m(B^C[m(B Cur Pos[1B[0;7m(B^X[m(B Exit[6C[0;7m(B^R[m(B Read File [0;7m(B^\[m(B Replace   [0;7m(B^U[m(B Paste Text[0;7m(B^T[m(B To Spell  [0;7m(B^_[m(B Go To Line[2A[20A: ^X  ^C^X^Z`^[^[^]^C^C^C
-
-as  ^O^C^C^C^C^O^A^B^]Trying 127.0.0.1...
-Connected to 127.0.0.1.
-Escape character is '^]'.
-
-[1B^Z
 ^C
-^^C
+^\
 ^]
 
 telnet> Connection closed.
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
-[24;1H[?2004lReceived SIGHUP or SIGTERM
-Out of curses -- please report a bug
-
-Buffer not written to /etc/network/interfaces.save: Permission denied
-osboxes@osboxes:~$ ^[[A    n echo ''  -e 'iface enp0s8 inet static'
-echo -e 'iface enp0s8 inet static'
-iface enp0s8 inet static
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ echo -e 'iface enp0s8 inet static'^[[D     \n  
-echo -e 'iface enp0s8 inet static
-> 
-> address'
-address'
-iface enp0s8 inet static
-
-address
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ echo -e 'iface enp0s8 inet static\n
-echo -e 'iface enp0s8 inet static\n
-> 
-> address ą„č   192.168.10.14\n'
-address 192.168.10.14\n'
-iface enp0s8 inet static
 
 
-address 192.168.10.14
 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ echo -e 'iface enp0s8 inet static\n   / \
-echo -e 'iface enp0s8 inet static \
-> 
-> address 192.168.10.14\n  '
-address 192.168.10.14'
-iface enp0s8 inet static \
 
-address 192.168.10.14
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ sudo echo pi  bandom
-sudo echo bandom
-[sudo] password for osboxes: 
-osboxSorry, try again.
-[sudo] password for osboxes: es.org
 
-bandom
-osboxes@osboxes:~$ sudo echo 'iface enp0s8 inet static' >> /etc/network/interfaces
-sudo echo 'iface enp0s8 inet static' >> /etc/network/interfaces
--bash: /etc/network/interfaces: Permission denied
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ echo 'iface enp0s8 inet static' | cat - >         sudo cat - >> /etc/network/interfaces
-echo 'iface enp0s8 inet static' | sudo cat - >> /etc/network/interfaces
--bash: /etc/network/interfaces: Permission denied
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ sudo -i
-sudo -i
-root@osboxes:~# 
-root@osboxes:~# 
 
-root@osboxes:~# 
-root@osboxes:~# echo 'iface enp0s8 inet static' >> /etc/network/interfaces
-echo 'iface enp0s8 inet static' >> /etc/network/interfaces
-root@osboxes:~# 
-root@osboxes:~# echo 'address 192.168.10.14' >> /etc/network/interfaces
-echo 'address 192.168.10.14' >> /etc/network/interfaces
-root@osboxes:~# 
-root@osboxes:~# echo 'netmask 255.255.255.0` ' >> /etc/network/interfaces
-echo 'netmask 255.255.255.0' >> /etc/network/interfaces
-root@osboxes:~# 
-root@osboxes:~# echo 'gateway 192.168.10.26 54' >> /etc/network/interfaces
-echo 'gateway 192.168.10.254' >> /etc/network/interfaces
-root@osboxes:~# 
-root@osboxes:~# cat /etc/network/interfaces
-cat /etc/network/interfaces
-iface enp0s8 inet static
-address 192.168.10.14
-netmask 255.255.255.0
-gateway 192.168.10.254
-root@osboxes:~# 
-root@osboxes:~# ifup enp0s8
-ifup enp0s8
 
-Command 'ifup' not found, but can be installed with:
 
-apt install ifupdown       # version 0.8.35ubuntu1, or
-apt install netscript-2.4  # version 5.5.3
-
-root@osboxes:~# 
-root@osboxes:~# apt install ifupdown
-apt install ifupdown
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-Suggested packages:
-  rdnssd
-The following NEW packages will be installed:
-  ifupdown
-0 upgraded, 1 newly installed, 0 to remove and 261 not upgraded.
-Need to get 60.5 kB of archives.
-After this operation, 234 kB of additional disk space will be used.
-[33m0% [Working][0m            Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 ifupdown amd64 0.8.35ubuntu1 [60.5 kB]
-[33m12% [1 ifupdown 8,819 B/60.5 kB 15%][0m[33m                                    100% [Working][0m              Fetched 60.5 kB in 1s (84.4 kB/s)
 
-7[0;23r8[1ASelecting previously unselected package ifupdown.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 147921 files and directories currently installed.)
-Preparing to unpack .../ifupdown_0.8.35ubuntu1_amd64.deb ...
-7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [ 20%][49m[39m [###########...............................................] 8Unpacking ifupdown (0.8.35ubuntu1) ...
-7[24;0f[42m[30mProgress: [ 40%][49m[39m [#######################...................................] 8Setting up ifupdown (0.8.35ubuntu1) ...
-7[24;0f[42m[30mProgress: [ 60%][49m[39m [##################################........................] 8Created symlink /etc/systemd/system/multi-user.target.wants/networking.service → /lib/systemd/system/networking.service.
-Created symlink /etc/systemd/system/network-online.target.wants/networking.service → /lib/systemd/system/networking.service.
-7[24;0f[42m[30mProgress: [ 80%][49m[39m [##############################################............] 8Processing triggers for man-db (2.9.1-1) ...
-Processing triggers for systemd (245.4-4ubuntu3.4) ...
 
-7[0;24r8[1A[Jroot@osboxes:~# ifup enp0s8
-ifup enp0s8
-root@osboxes:~# 
-root@osboxes:~# logout
-osboxes@osboxes:~$ 
 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ reset
-reset
-[?3l[?7h[>[?1l F[?4l
-[3g
-H        H        H        H        H        H        H        H        H        H        H        H        H        H        H        H
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ifconfig -a | grep -e ": " -e inet
-ifconfig -a | grep -e ": " -e inet
-enp0s3[01;31m[K: [m[Kflags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        [01;31m[Kinet[m[K 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
-        [01;31m[Kinet[m[K6 fe80::3790:7de6:b710:c982  prefixlen 64  scopeid 0x20<link>
-enp0s8[01;31m[K: [m[Kflags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        [01;31m[Kinet[m[K 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
-lo[01;31m[K: [m[Kflags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        [01;31m[Kinet[m[K 127.0.0.1  netmask 255.0.0.0
-        [01;31m[Kinet[m[K6 ::1  prefixlen 128  scopeid 0x10<host>
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ifconfig enp0s8
-ifconfig enp0s8
-enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
-        ether 08:00:27:b2:e7:9d  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 343  bytes 48317 (48.3 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ man interfaces
-man interfaces
-INTERFACES(5)                    File formats                    INTERFACES(5)[m
-[m
-[1mNAME[0m[m
-       /etc/network/interfaces  - network interface configuration for ifup and[m
-       ifdown[m
-[m
-[1mDESCRIPTION[0m[m
-       /etc/network/interfaces contains network interface configuration infor‐[m
-       mation  for the [1mifup[0m(8) and [1mifdown[0m(8) commands.  This is where you con‐[m
-       figure how your system is connected to the network.[m
-[m
-[1mEXAMPLE[0m[m
-       The following  example  configures  two  network  interfaces:  eth0  is[m
-       brought  up at boot, and uses DHCP for IPv4 and SLAAC for IPv6, whereas[m
-       eth1 is brought up whenever the network hardware is  detected,  and  is[m
-       configured with static IPv4 and IPv6 addresses.[m
-[m
-       auto eth0[m
-       allow-hotplug eth1[m
-[m
-       iface eth0 inet dhcp[m
-[m
-       iface eth0 inet6 auto[m
-[7m Manual page interfaces(5) line 1 (press h for help or q to quit)[27m[K[K[m
-[7m Manual page interfaces(5) line 2 (press h for help or q to quit)[27m[Kq
-[Kosboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ fg  tail va  /var/log/sec	ure
-tail /var/log/secure
-tail: cannot open '/var/log/secure' for reading: No such file or directory
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ls -lt /var/log
-ls -lt /var/log
-total 4792
--rw-r--r--  1 root              root               1175 Jun 29  2021 gpu-manager.log
--rw-r-----  1 syslog            adm             1963306 Jun 29  2021 syslog.1
-drwxr-xr-x  2 root              root               4096 Jun 29  2021 cups
--rw-------  1 root              root              53967 Jun 29  2021 boot.log.1
--rw-r-----  1 syslog            adm               64699 Jun 29 06:06 auth.log
--rw-rw----  1 root              utmp               1152 Jun 29 06:06 btmp
--rw-r-----  1 syslog            adm              907939 Jun 29 06:05 syslog
--rw-r--r--  1 root              root             989236 Jun 29 05:37 dpkg.log
-drwxr-xr-x  2 root              root               4096 Jun 29 05:36 apt
--rw-rw-r--  1 root              utmp             292292 Jun 29 05:29 lastlog
--rw-rw-r--  1 root              utmp              15360 Jun 29 05:29 wtmp
--rw-r-----  1 syslog            adm              434965 Jun 29 05:20 kern.log
--rw-r-----  1 root              adm               10701 Jun 29 05:20 apport.log
--rw-r--r--  1 root              adm               47124 Jun 29 05:20 dmesg
--rw-------  1 root              root              10972 Jun 29 05:20 boot.log
--rw-r--r--  1 root              root              32032 Jun 29 04:37 faillog
--rw-r--r--  1 root              root              24108 Jun 29 04:37 alternatives.log
--rw-r--r--  1 root              adm               47211 Jun 29 04:05 dmesg.0
--rw-r-----  1 root              adm               15869 Jun 28 19:37 apport.log.1
--rw-r--r--  1 root              adm               13528 Jun 28 19:36 dmesg.1.gz
--rw-r--r--  1 root              adm               13499 Jun 28 18:14 dmesg.2.gz
--rw-r--r--  1 root              adm               13044 Jun 28 12:59 dmesg.3.gz
--rw-r--r--  1 root              adm               13687 Mar  6 17:16 dmesg.4.gz
-drwxr-x---  2 root              adm                4096 Mar  6 17:11 unattended-upgrades
-drwxr-sr-x+ 3 root              systemd-journal    4096 Mar  6 17:10 journal
-drwxrwxr-x  2 root              root               4096 Mar  6 17:09 installer
--rw-r--r--  1 root              root              10884 Mar  6 17:09 fontconfig.log
-drwxr-xr-x  3 root              root               4096 Feb  9 13:49 hp
--rw-r--r--  1 root              root             104003 Feb  9 13:47 bootstrap.log
--rw-------  1 root              root                  0 Feb  9 13:47 ubuntu-advantage.log
-drwx------  2 root              root               4096 Feb  9 13:47 private
-drwxr-xr-x  2 root              root               4096 Jan 19 16:47 dist-upgrade
-drwx--x--x  2 root              gdm                4096 Nov 10  2020 gdm3
-drwx------  2 speech-dispatcher root               4096 Jan 19  2020 speech-dispatcher
-drwxr-xr-x  2 root              root               4096 Sep  5  2019 openvpn
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ^[[5~     tail /var/log/auth.log
-tail /var/log/auth.log
-Jun 29 05:32:51 osboxes sudo: pam_unix(sudo:session): session closed for user root
-Jun 29 05:33:51 osboxes sudo:  osboxes : TTY=ttyS0 ; PWD=/home/osboxes ; USER=root ; COMMAND=/bin/bash
-Jun 29 05:33:51 osboxes sudo: pam_unix(sudo:session): session opened for user root by osboxes(uid=0)
-Jun 29 05:41:02 osboxes sudo: pam_unix(sudo:session): session closed for user root
-Jun 29 06:05:58 osboxes sshd[4100]: Invalid user openboxes from 192.168.10.8 port 37876
-Jun 29 06:06:02 osboxes sshd[4100]: pam_unix(sshd:auth): check pass; user unknown
-Jun 29 06:06:02 osboxes sshd[4100]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.10.8 
-Jun 29 06:06:04 osboxes sshd[4100]: Failed password for invalid user openboxes from 192.168.10.8 port 37876 ssh2
-Jun 29 06:06:11 osboxes sshd[4100]: pam_unix(sshd:auth): check pass; user unknown
-Jun 29 06:06:13 osboxes sshd[4100]: Failed password for invalid user openboxes from 192.168.10.8 port 37876 ssh2
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ route -a
-route -a
-route: invalid option -- 'a'
-Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
-       route [-v] [-FC] {add|del|flush} ...  Modify routing table for AF.
 
-       route {-h|--help} [<AF>]              Detailed usage syntax for specified AF.
-       route {-V|--version}                  Display version/author and exit.
 
-        -v, --verbose            be verbose
-        -n, --numeric            don't resolve names
-        -e, --extend             display other/more information
-        -F, --fib                display Forwarding Information Base (default)
-        -C, --cache              display routing cache instead of FIB
-
-  <AF>=Use -4, -6, '-A <af>' or '--<af>'; default: inet
-  List of possible address families (which support routing):
-    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25) 
-    netrom (AMPR NET/ROM) ipx (Novell IPX) ddp (Appletalk DDP) 
-    x25 (CCITT X.25) 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ # Viskas, OpenSSH veikia, IP veikia: prisijungsiu jau nebe per Serial, o SSH
-# Viskas, OpenSSH veikia, IP veikia: prisijungsiu jau nebe per Serial, o SSH
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ sudo poweroff
-sudo poweroff
-[sudo] password for osboxes: 
-Sorry, try again.
-[sudo] password for osboxes: osboxes.org
 
-[[0;32m  OK  [0m] Stopped [0;1;39mAuthorization Manager[0m.
-[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Power Off Screen[0m.
-plymouth-poweroff.service
-[[0;32m  OK  [0m] Stopped [0;1;39mVirtualbox guest utils[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
-         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
-[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mLogin Service[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
-[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
-         Stopping [0;1;39mPermit User Sessions[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
-         Stopping [0;1;39mNetwork Manager[0m...
-         Stopping [0;1;39mNetwork Name Resolution[0m...
-         Stopping [0;1;39mWPA supplicant[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
-         Stopping [0;1;39mD-Bus System Message Bus[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mACPI Events Check[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
-[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mACPID Listen Socket[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mSyslog Socket[0m.
-[[0;32m  OK  [0m] Closed [0;1;39mUUID daemon activation socket[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
-         Deactivating swap [0;1;39m/dev/dis…K_VB0e653235-4bb9f389-part3[0m...
-[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
-         Stopping [0;1;39mNetwork Time Synchronization[0m...
-         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ISK_VB0e653235-4bb9f389-part3[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…/pci-0000:00:0d.0-ata-1-part3[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk/by-partuuid/88434d82-03[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/sda3[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
-[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…a-5d48-4630-aa26-0ffc9bf619d0[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
-         Unmounting [0;1;39m/boot[0m...
-         Unmounting [0;1;39m/home[0m...
-         Unmounting [0;1;39mMount unit for core18, revision 1988[0m...
-         Unmounting [0;1;39mMount unit for core18, revision 2074[0m...
-         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 66[0m...
-         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m...
-         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1514[0m...
-         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1515[0m...
-         Unmounting [0;1;39mMount unit for snap-store, revision 518[0m...
-         Unmounting [0;1;39mMount unit for snap-store, revision 547[0m...
-         Unmounting [0;1;39mMount unit for snapd, revision 11036[0m...
-         Unmounting [0;1;39mMount unit for snapd, revision 12159[0m...
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2074[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39m/boot[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …b-5566-4bb0-91d2-8a4e83d5f29a[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 1988[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 66[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1514[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1515[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 518[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 547[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 11036[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 12159[0m.
-[[0;32m  OK  [0m] Unmounted [0;1;39m/home[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …c-6b49-4ecb-81db-f8c2676ad2e0[0m.
-[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
-[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
-[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
-[[0;32m  OK  [0m] Finished [0;1;39mPower-Off[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mPower-Off[0m.
-[ 4055.203618] reboot: Power down
-Connection closed by foreign host.
+
+
+^]
+
+telnet> Connection closed.
