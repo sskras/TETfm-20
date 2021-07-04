@@ -227,7 +227,7 @@ Reading package lists... Done
 
 ** Tęsiu `sysvconfig` diegimą.
    Tokio paketo _Ubuntu 20.04.2_ neturi:
-
++
 ```
 osboxes@ldvm1:~$ sudo apt-get install sysvconfig
 Reading package lists... Done
