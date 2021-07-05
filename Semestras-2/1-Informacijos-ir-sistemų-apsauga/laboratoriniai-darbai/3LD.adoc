@@ -267,7 +267,7 @@ exit 0
 
 #### Darbo Tikslas
 #### Trumpas atlikto darbo aprašymas
-#### Aprašykite duotąją `iptables` komandą ir jos tikslą:
+#### Aprašykite duotąją `iptables` komandą ir jos tikslą.
 #### `iptables` tarpsegmentinio ekrano scenarijaus analizė (darbas grupėje):
 
  . https://web.archive.org/web/20210122100737/http://networking.ringofsaturn.com/Unix/iptables.php
