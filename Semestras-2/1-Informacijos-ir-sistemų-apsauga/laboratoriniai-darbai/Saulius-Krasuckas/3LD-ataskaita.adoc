@@ -107,145 +107,15 @@ Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
 
 Įjungiu persiuntimą faile:
 
-```
-osboxes@ldvm1:~$ sudo vim.tiny /etc/sysctl.conf
-  ...
-osboxes@ldvm1:~$ diff -u /etc/sysctl.conf.BACKUP /etc/sysctl.conf
---- /etc/sysctl.conf.BACKUP     2020-02-14 00:44:31.000000000 +0200
-+++ /etc/sysctl.conf    2021-07-04 21:44:31.551125680 +0300
-@@ -25,7 +25,7 @@
- #net.ipv4.tcp_syncookies=1
- 
- # Uncomment the next line to enable packet forwarding for IPv4
--#net.ipv4.ip_forward=1
-+ net.ipv4.ip_forward=1
- 
- # Uncomment the next line to enable packet forwarding for IPv6
- #  Enabling this option disables Stateless Address Autoconfiguration
-```
-
 Peržiūriu įkeltus modulius:
-
-```
-osboxes@ldvm1:~$ lsmod
-Module                  Size  Used by
-vboxsf                 32768  0
-intel_rapl_msr         20480  0
-joydev                 24576  0
-intel_rapl_common      28672  1 intel_rapl_msr
-crct10dif_pclmul       16384  1
-ghash_clmulni_intel    16384  0
-aesni_intel           372736  0
-snd_intel8x0           45056  2
-crypto_simd            16384  1 aesni_intel
-snd_ac97_codec        139264  1 snd_intel8x0
-cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
-ac97_bus               16384  1 snd_ac97_codec
-glue_helper            16384  1 aesni_intel
-snd_pcm               114688  2 snd_intel8x0,snd_ac97_codec
-rapl                   20480  0
-snd_seq_midi           20480  0
-vboxvideo              24576  0
-input_leds             16384  0
-snd_seq_midi_event     16384  1 snd_seq_midi
-drm_vram_helper        24576  1 vboxvideo
-serio_raw              20480  0
-snd_rawmidi            36864  1 snd_seq_midi
-drm_ttm_helper         16384  1 drm_vram_helper
-ttm                   102400  2 drm_vram_helper,drm_ttm_helper
-snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
-drm_kms_helper        217088  4 drm_vram_helper,vboxvideo
-snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
-snd_timer              40960  2 snd_seq,snd_pcm
-cec                    53248  1 drm_kms_helper
-snd                    94208  11 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi
-rc_core                61440  1 cec
-fb_sys_fops            16384  1 drm_kms_helper
-syscopyarea            16384  1 drm_kms_helper
-soundcore              16384  1 snd
-sysfillrect            16384  1 drm_kms_helper
-sysimgblt              16384  1 drm_kms_helper
-vboxguest              45056  2 vboxsf
-mac_hid                16384  0
-sch_fq_codel           20480  3
-parport_pc             45056  0
-ppdev                  24576  0
-lp                     20480  0
-parport                65536  3 parport_pc,lp,ppdev
-drm                   552960  6 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttm
-ip_tables              32768  0
-x_tables               49152  1 ip_tables
-autofs4                45056  2
-crc32_pclmul           16384  0
-ahci                   40960  4
-video                  49152  0
-psmouse               155648  0
-libahci                36864  1 ahci
-i2c_piix4              28672  0
-e1000                 147456  0
-```
 
 Nustatau automatinį poros modulių užkrovimą:
 
-```
-osboxes@ldvm1:~$ sudo vim.tiny /etc/modules
-
-osboxes@ldvm1:~$ diff -u /etc/modules.BACKUP /etc/modules
---- /etc/modules.BACKUP 2021-02-09 20:47:47.000000000 +0200
-+++ /etc/modules        2021-07-04 21:50:30.436516065 +0300
-@@ -2,4 +2,5 @@
- #
- # This file contains the names of kernel modules that should be loaded
- # at boot time, one per line. Lines beginning with "#" are ignored.
--
-+iptable_nat
-+ip_conntrack
-```
-
 Nerperkraudamas kompiuterio nustatau šias vertes tiesioges:
-
-```
-osboxes@ldvm1:~$ cat /proc/sys/net/ipv4/ip_forward
-0
-osboxes@ldvm1:~$ sudo -i
-
-root@ldvm1:~# echo "1" > /proc/sys/net/ipv4/ip_forward
-root@ldvm1:~# modprobe iptable_nat
-root@ldvm1:~# logout
-```
 
 Patikrinu:
 
-```
-osboxes@ldvm1:~$ cat /proc/sys/net/ipv4/ip_forward
-1
-
-osboxes@ldvm1:~$ diff -u debug/{07,08}*
---- "debug/07.lsmod_iki_konfig\305\253ravimo.txt"       2021-07-04 21:47:37.557323506 +0300
-+++ "debug/08.lsmod_po_konfig\305\253ravimo.txt"        2021-07-04 22:02:47.493794416 +0300
-@@ -1,4 +1,10 @@
- Module                  Size  Used by
-+iptable_nat            16384  0
-+nf_nat                 45056  1 iptable_nat
-+nf_conntrack          147456  1 nf_nat
-+nf_defrag_ipv6         24576  1 nf_conntrack
-+nf_defrag_ipv4         16384  1 nf_conntrack
-+libcrc32c              16384  2 nf_conntrack,nf_nat
- vboxsf                 32768  0
- intel_rapl_msr         20480  0
- joydev                 24576  0
-@@ -43,7 +49,7 @@
- lp                     20480  0
- parport                65536  3 parport_pc,lp,ppdev
- drm                   552960  6 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttm
--ip_tables              32768  0
-+ip_tables              32768  1 iptable_nat
- x_tables               49152  1 ip_tables
- autofs4                45056  2
- crc32_pclmul           16384  0
-```
 Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
-
 
 ### 6. `iptables` patikrinimas
 
@@ -1509,6 +1379,18 @@ image::https://user-images.githubusercontent.com/74717106/124387489-9462ef80-dce
 
 
 ### 3. Tinklo paslaugų tikrinimas
+
+Sunkumų neaptikta.
+
+
+### 4. Kaimyno skenavimas
+
+Sunkumų neaptikta.
+
+Gal tik toks neaiškumas iš 2LD, kuriuose tiksliai kompiuteriuose reikėjo diegti žiniatinklio ir DB paslaugas.
+
+
+### 5. Paketų persiuntimo įjungimas
 
 Sunkumų neaptikta.
 
