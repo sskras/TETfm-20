@@ -1837,6 +1837,24 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+Patikrinu taisyklių veikimą:
+
+- HTTPS užklausa praleidžiama:
+
+```
+[p@localhost ~]$ curl -k https://192.168.10.14
+<html> ldvm1 (kompiuterio vardas) </html>
+```
+
+- HTTP užklausa atmetama:
+
+```
+[p@localhost ~]$ curl -m 10 http://192.168.10.14
+curl: (28) Connection timed out after 10001 milliseconds
+```
+
+- `iptables` taisyklės veikia.
+
 
 ### Sunkumai ir atsakymai į klausimus
 
