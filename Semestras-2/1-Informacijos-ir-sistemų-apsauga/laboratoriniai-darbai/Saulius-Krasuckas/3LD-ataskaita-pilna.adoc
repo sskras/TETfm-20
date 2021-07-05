@@ -1965,6 +1965,55 @@ Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo 
 
 ### Duotosios `iptables` komandos aprašymas: `TODO`
 
+Komandą pasirinkau iš šių pavyzdžių:  +
+https://www.thegeekstuff.com/2011/06/iptables-rules-examples/#:~:text=11.%20Load%20Balance%20Incoming%20Web%20Traffic
+
+```
+iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 0 -j DNAT --to-destination 192.168.1.101:443
+iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 1 -j DNAT --to-destination 192.168.1.102:443
+iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 2 -j DNAT --to-destination 192.168.1.103:443
+```
+
+* Originaliose komandose yra klaida:  +
+   +
+  tūksta nurodytos lentelės `nat`, nes kitaip komanda bando rašyti į `filter` lentelę, ir joje neranda grandinės `PREROUTING`.  +
+
+* Taigi, komandas pataisau:
++
+```
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 0 -j DNAT --to-destination 192.168.1.101:443
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 1 -j DNAT --to-destination 192.168.1.102:443
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 2 -j DNAT --to-destination 192.168.1.103:443
+```
+
+* Ši komanda naudoja nestandartinį `iptables` modulį `state` (angl. _Extension module_).  +
+  Jis aprašytas čia:
+https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#ss3.9
+
+* Šios komandos papildo `nat` lentelę.
+* Lentelė naudojama maršrutizavimo sprendimų priėmimui (taisymui).
+* Kiekviena ši komanda:
+** tikrina, ar paketas ateina per tinklo sąsają `eth0`;
+** tikrina, ar jo transportinis protokolas yra TCP;
+** tikrina, ar ar paskirties prievadas yra HTTPS (443/TCP);
+** įjungia modulį `state` (angl. _Extension module_);
+** tikrina, ar tai nauja TCP sesija;
+** įjungia modulį `nth`;
+** pasirenka skaitiklį #0;
+** nustato skaitiklio #0 talpą = 3;
+** tikrina, ar paketo numeris skaitiklyje yra vienas iš trijų:
+*** = 0
+*** = 1
+*** = 2
+** ir jei šios sąlygos patenkintos, komanda nurodo tokiam pritaikyti `Destination NAT` transliavimą į vieną iš trijų IP adresų atitinkamai pagal paketo numerį nurodytame skaitiklyje:
+*** 192.168.1.101
+*** 192.168.1.102
+*** 192.168.1.103
+** ... išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
+
+* Kiekvienos komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu) išskirstyti į tris HTTPS gavėjus  +
+  (žiniatinklio serverius, Proxy serverius, L7 ugniasienes ar kitus su HTTPS apdorojančius tinklo įrenginius).
+
 
 ##### Pavyzdys
 
