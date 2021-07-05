@@ -1051,7 +1051,8 @@ Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
 ```
 
 - Kaimyno kompiuteryje matau prieinamą tik vieną paslaugą / tarnybą:
--- SSH
+
+** SSH
 
 Taip pat nuskenavau ir savo kompiuterį iš kaimyninio kompiuterio:  +
 (kadangi žiniatinklis paruoštas tik savajame)
@@ -1072,9 +1073,10 @@ Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
 ```
 
 - Savajame kompiuteryje matau prieinamas jau tris paslaugas / tarnybas:
--- SSH
--- HTTP
--- HTTPS
+
+** SSH
+** HTTP
+** HTTPS
 
 
 ### 5. Paketų persiuntimo įjungimas
