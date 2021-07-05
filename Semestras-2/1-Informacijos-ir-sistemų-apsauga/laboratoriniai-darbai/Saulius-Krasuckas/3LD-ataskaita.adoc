@@ -1250,7 +1250,7 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 *** = 0
 *** = 1
 *** = 2
-** ir jei šios sąlygos patenkintos, komanda nurodo tokį paketą nukreipti į vieną iš trijų IP adresų  +
+** ir jei šios sąlygos patenkintos, komanda nurodo tokį paketą nukreipti į vieną iš trijų IP adresų
    (pagal paketo numerį nurodytame skaitiklyje):
 *** 192.168.1.101
 *** 192.168.1.102
@@ -1258,8 +1258,8 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 ** ... pritaikant paketui atitinkamą `Destination NAT` transliaciją.
 ** ... ir išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
 
-Kiekvienos šios komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu, angl. _Round-robin_) išskirstyti į tris HTTPS gavėjus.
-Pvz.:
+Kiekvienos šios komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu, angl. _Round-robin_)
+išskirstyti į tris HTTPS gavėjus.  Pvz.:
 
 * žiniatinklio serverius,
 * Proxy serverius,
