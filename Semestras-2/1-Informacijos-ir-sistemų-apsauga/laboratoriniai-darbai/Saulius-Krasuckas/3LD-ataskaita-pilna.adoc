@@ -1,8 +1,8 @@
 ### Darbo Tikslas
 
-* [ ] Patikrinti tinklo nustatymus.  +
-* [ ] Susipažinti su `iptable` sintakse. +
-* [ ] Nustatyti paprastą tarpsegmentinį ekraną.
+* [x] Patikrinti tinklo nustatymus.  +
+* [x] Susipažinti su `iptable` sintakse. +
+* [x] Nustatyti paprastą tarpsegmentinį ekraną.
 
 ### Trumpas atlikto darbo aprašymas
 
@@ -1963,7 +1963,7 @@ Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo 
 ### Sunkumai ir atsakymai į klausimus
 
 
-### Duotosios `iptables` komandos aprašymas: `TODO`
+### Pasirinktosios `iptables` komandos aprašymas
 
 Komandą pasirinkau iš šių pavyzdžių:  +
 https://www.thegeekstuff.com/2011/06/iptables-rules-examples/#:~:text=11.%20Load%20Balance%20Incoming%20Web%20Traffic
@@ -2013,10 +2013,3 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 
 * Kiekvienos komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu) išskirstyti į tris HTTPS gavėjus  +
   (žiniatinklio serverius, Proxy serverius, L7 ugniasienes ar kitus su HTTPS apdorojančius tinklo įrenginius).
-
-
-##### Pavyzdys
-
-
-### `iptables` tarsegmentinio ekrano scenarijaus analizė (darbas grupėje)
-
