@@ -1536,6 +1536,15 @@ Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc
 * Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
 
 
+### 9. Automatinė taisyklių keltis
+
+Sukuriu direktoriją taisyklėms saugoti:
+
+```
+osboxes@ldvm1:~$ sudo mkdir /etc/iptables
+```
+
+
 ### Sunkumai ir atsakymai į klausimus
 
 
