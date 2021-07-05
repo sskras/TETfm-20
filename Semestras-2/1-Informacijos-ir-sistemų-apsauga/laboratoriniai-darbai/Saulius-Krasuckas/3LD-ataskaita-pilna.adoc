@@ -1457,6 +1457,20 @@ osboxes@ldvm1:~$ tail -0f /var/log/syslog
 Jul  5 10:00:26 ldvm1 kernel: [ 7539.021434] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=46720 DF PROTO=TCP SPT=52720 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
 ```
 
+Kreipiuosi iš kaimyno į savo virtualų kompiuterį _Telnet_ protokolu:
+
+```
+osboxes@ldvm2:~$ telnet 192.168.10.14
+Trying 192.168.10.14...
+telnet: Unable to connect to remote host: Connection refused
+```
+
+Virtualiojo žurnalas pasipildė:
+
+```
+Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:08:00:27:7a:d0:b7:08:00 SRC=192.168.10.13 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=1374 DF PROTO=TCP SPT=39398 DPT=23 WINDOW=64240 RES=0x00 SYN URGP=0 
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
