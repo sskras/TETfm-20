@@ -1920,6 +1920,25 @@ MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 1.43 seconds
 ```
 
+* Rezultatas identiškas.  +
+  Taip dėl to, kad tiek žiniatinklį, tiek tarpsegmentinį ekraną konfigūravau savame kompiuteryje, o ne kaimyininiame.
+
+* Dėl to skenuoju savo kompiuterį iš kaimyninio:
++
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 07:46 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.00070s latency).
+Not shown: 98 filtered ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 2.17 seconds
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
