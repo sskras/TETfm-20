@@ -163,4 +163,18 @@ lsmod
   |`iptables -F`
   |
 
+  
+3+| +++<center>+++ *8. _Telnet_ uždraudimas* +++</center>+++
+
+  | Registruokite žurnale _telnet_ užklausas ir jų neleiskite:
+2+|`iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j LOG --log-prefix 'TELNET ATTEMPT: '`
+
+  | Kreipkitės iš realaus ir kaimyno kompiuterių į savo virtualų kompiuterį _telnet_ protokolu:
+  |`telnet 192.168.10.1x`
+  |
+  
+  | Peržiūrėkite įrašus žurnale:
+  |`less /var/log/messages`
+  |
+
 |===
