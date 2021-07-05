@@ -1244,6 +1244,8 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 
+```
+```
 osboxes@ldvm1:~$ sudo iptables --list > debug/10.iptables_po_bandymų.txt
 osboxes@ldvm1:~$ diff -u debug/{09,10}*
 --- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
@@ -1256,8 +1258,8 @@ osboxes@ldvm1:~$ diff -u debug/{09,10}*
  Chain FORWARD (policy ACCEPT)
  target     prot opt source               destination         
 ```
-Atsirado viena nauja eilutė:  +
-`DROP       all  --  anywhere             anywhere`
+
+Atsirado viena nauja eilutė: `DROP       all  --  anywhere             anywhere`
 
 Išvalau `iptables`:
 
@@ -1320,7 +1322,10 @@ sboxes@ldvm2:~$ ping -c 3 192.168.10.14
 PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
 
 --- 192.168.10.14 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 3054ms
+
 ```
+
 Kompiuteris į ICMP pingą nebeatsako.
 
 Išvalau `iptables`:
@@ -1390,7 +1395,7 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 ```
 
-* Vėl paleidžiu ping srautą:
+* Vėl paleidžiu _ping_ srautą:
 
 ```
 [p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
