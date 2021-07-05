@@ -1035,7 +1035,7 @@ tcp        0      0 192.168.10.14:51674     192.168.10.13:22        ESTABLISHED
 
 ### 4. Kaimyno skenavimas
 
-* Rezultatai:
+Rezultatai:
 
 ```
 osboxes@ldvm1:~$ sudo nmap -sS -P0 -n -F 192.168.10.13
@@ -1049,6 +1049,33 @@ MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
 
 Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
 ```
+
+- Kaimyno kompiuteryje matau prieinamą tik vieną paslaugą / tarnybą:
+-- SSH
+
+- Taip pat nuskenavau ir savo kompiuterį iš kaimyninio kompiuterio:  +
+   (kadangi žiniatinklis paruoštas tik savajame)
++
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 07:23 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.0013s latency).
+Not shown: 97 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
+```
+
+- Savajame kompiuteryje matau prieinamas jau tris paslaugas / tarnybas:
+
+-- SSH
+-- HTTP
+-- HTTPS
 
 
 ### 5. Paketų persiuntimo įjungimas
