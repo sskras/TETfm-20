@@ -1578,6 +1578,34 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+Sukuriu failą `myfirewall`:
+
+```
+osboxes@ldvm1:~$ cat > myfirewall << \
+--------------------------------------------------------------
+#!/bin/sh
+case "\$1" in
+  start)
+      echo "Starting firewall (iptables)"
+      /sbin/iptables-restore < /etc/iptables/iptables.conf
+  stop)
+      echo "Stopping firewall (flushing rules)"
+      /sbin/iptables -F
+      /sbin/modprobe -r iptable_filter
+          ;;
+  show)
+      echo "Current firewall rules:"
+      /sbin/iptables-save
+          ;;
+  *)
+      echo "Usage: /etc/init.d/myfirewall {start|stop|show}"
+      exit 1
+          ;;
+esac
+exit 0
+--------------------------------------------------------------
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
