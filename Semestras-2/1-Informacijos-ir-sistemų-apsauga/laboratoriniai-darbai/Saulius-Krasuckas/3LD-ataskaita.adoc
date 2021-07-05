@@ -36,7 +36,7 @@ SSH serverio instaliavimas.
 
 Tą patį pakartojau ir kaimyniniame kompiuteryje.
 
-### 3. Tinklo paslaugų tikrinimas
+#### 3. Tinklo paslaugų tikrinimas
 
 Teikiamos tinklo paslaugos.
 
@@ -57,7 +57,7 @@ tcp        0      0 192.168.10.14:51674     192.168.10.13:22        ESTABLISHED
 * Pirmasis iš jų yra rodo mano pirmą bandymą prisijungti (nepavykusi autentikacija ir nutrūkęs ryšys).
 * Antrasis iš jų yra rodo antrą, sėkmingą bandymą prisijungti.
 
-### 4. Kaimyno skenavimas
+#### 4. Kaimyno skenavimas
 
 Rezultatai:
 
@@ -102,7 +102,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
 ** HTTP
 ** HTTPS
 
-### 5. Paketų persiuntimo įjungimas
+#### 5. Paketų persiuntimo įjungimas
 
 Įjungiu persiuntimą faile.
 
@@ -116,7 +116,7 @@ Patikrinu.
 
 Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
 
-### 6. `iptables` patikrinimas
+#### 6. `iptables` patikrinimas
 
 Peržiūriu nustatymus pagal nutylėjimą.
 
@@ -157,7 +157,7 @@ Kompiuteris į ICMP pingą nebeatsako.
 
 Išvalau `iptables`.
 
-### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
+#### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
 
 Paleidžiu `ping` srautą į virtualų kompiuterį.
 
@@ -207,7 +207,7 @@ rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
 
 Išvalau `iptables`.
 
-### 8. _Telnet_ uždraudimas
+#### 8. _Telnet_ uždraudimas
 
 Registruoju _Telnet_ užklausas žurnale ir jų neleidžiu.
 
@@ -240,7 +240,7 @@ O žurnalas vėl pasipildė:
 Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:08:00:27:7a:d0:b7:08:00 SRC=192.168.10.13 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=1374 DF PROTO=TCP SPT=39398 DPT=23 WINDOW=64240 RES=0x00 SYN URGP=0 
 ```
 
-### 9. Automatinė taisyklių keltis
+#### 9. Automatinė taisyklių keltis
 
 Sukuriu direktoriją taisyklėms saugoti.
 
@@ -379,7 +379,7 @@ curl: (28) Connection timed out after 10001 milliseconds
 
 - `iptables` taisyklės veikia.
 
-### 10. Apsaugoto kompiuterio skenavimas
+#### 10. Apsaugoto kompiuterio skenavimas
 
 Skenuoju kaimyną pagal ketvirtą žingsnį:
 
@@ -408,7 +408,9 @@ osboxes@ldvm2:~$ diff -u debug/{01,02}*
 
 Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo nebeprieinamas išorėje.
 
-### Sunkumai ir atsakymai į klausimus
+#### Laboratorinis darbas atliktas
+
+### Iškilę sunkumai ir pastebėti netikslumai
 
 #### 1. Virtualaus kompiuterio konfigūracija
 
@@ -932,29 +934,29 @@ image::https://user-images.githubusercontent.com/74717106/124387489-9462ef80-dce
    https://github.com/mpbcode/systemctl-ui/issues/1
 
 
-### 3. Tinklo paslaugų tikrinimas
+#### 3. Tinklo paslaugų tikrinimas
 
 Sunkumų neaptikta.
 
 
-### 4. Kaimyno skenavimas
+#### 4. Kaimyno skenavimas
 
 Sunkumų neaptikta.
 
 Gal tik toks neaiškumas iš 2LD, kuriuose tiksliai kompiuteriuose reikėjo diegti žiniatinklio ir DB paslaugas.
 
 
-### 5. Paketų persiuntimo įjungimas
+#### 5. Paketų persiuntimo įjungimas
 
 Sunkumų neaptikta.
 
 
-### 6. `iptables` patikrinimas
+#### 6. `iptables` patikrinimas
 
 Sunkumų neaptikta.
 
 
-### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
+#### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
 
 Nustatau apribojimą 1 šalt./s
 
@@ -992,7 +994,7 @@ PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
 ```
 
-### 8. _Telnet_ uždraudimas
+#### 8. _Telnet_ uždraudimas
 
 * Tačiau tai yra užklausų ne uždraudimas, o tik jų registravimas.  +
   Uždraudimui reikėtų papildomos taisyklės su `-j DROP`.
@@ -1047,7 +1049,7 @@ Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc
 
 * Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
 
-### 9. Automatinė taisyklių keltis
+#### 9. Automatinė taisyklių keltis
 
 * Patikrinu iptables taisykles – deja, jos neužsikrovė:
 
@@ -1127,7 +1129,7 @@ Connection to 192.168.10.14 closed by remote host.
 Connection to 192.168.10.14 closed.
 ```
 
-### 10. Apsaugoto kompiuterio skenavimas
+#### 10. Apsaugoto kompiuterio skenavimas
 
 * Skenuoju kaimyną, bet gaunu klaidą:
 
@@ -1147,7 +1149,6 @@ Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcr
 Compiled without:
 Available nsock engines: epoll poll select
 ```
-
 
 
 ### Pasirinktosios `iptables` komandos aprašymas
