@@ -1442,6 +1442,21 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+Kreipiuosi iš realaus į savo virtualų kompiuterį _Telnet_ protokolu:
+
+```
+[p@localhost Saulius-Krasuckas]$ telnet 192.168.10.14
+Trying 192.168.10.14...
+telnet: connect to address 192.168.10.14: Connection refused
+```
+
+Virtualiojo žurnale matyti:
+
+```
+osboxes@ldvm1:~$ tail -0f /var/log/syslog
+Jul  5 10:00:26 ldvm1 kernel: [ 7539.021434] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=46720 DF PROTO=TCP SPT=52720 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
