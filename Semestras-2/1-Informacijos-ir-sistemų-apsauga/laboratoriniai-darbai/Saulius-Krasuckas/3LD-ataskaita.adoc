@@ -1240,7 +1240,7 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 * Kiekviena ši komanda:
 ** tikrina, ar paketas ateina per tinklo sąsają `eth0`;
 ** tikrina, ar jo transportinis protokolas yra TCP;
-** tikrina, ar ar paskirties prievadas yra HTTPS (443/TCP);
+** tikrina, ar paskirties prievadas yra HTTPS (443/TCP);
 ** įjungia modulį `state` (angl. _Extension module_);
 ** tikrina, ar tai nauja TCP sesija;
 ** įjungia modulį `nth`;
