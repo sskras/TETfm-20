@@ -1365,6 +1365,15 @@ Sustabdau srautą `Ctrl+C` pagalba:
 rtt min/avg/max/mdev = 0.439/0.579/0.745/0.112 ms
 ```
 
+Nustatau apribojimą 1 šalt./s:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst 1 -j ACCEPT
+```
+
+* Deja, virtualaus kompiuterio reakcija į _ping_ srautą nepasikeitė.  +
+  Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
+
 
 ### Sunkumai ir atsakymai į klausimus
 
