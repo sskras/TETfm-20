@@ -1705,6 +1705,17 @@ sys     0m0.019s
 +
 Klientinė programa `curl` po 2 min. sulaukia _Timeout_.
 
+- o HTTPS paslauga vis dar prieinama išorei:
+
+```
+[p@localhost Saulius-Krasuckas]$ time curl -k https://192.168.10.14
+<html> ldvm1 (kompiuterio vardas) </html>
+
+real    0m0.186s
+user    0m0.108s
+sys     0m0.066s
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
