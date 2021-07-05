@@ -1581,6 +1581,8 @@ target     prot opt source               destination
 Įrašau konfigūraciją į failą:
 
 ```
+osboxes@ldvm1:~$ sudo -i
+root@ldvm1:~# 
 root@ldvm1:~# /sbin/iptables-save > /etc/iptables/iptables.conf
 root@ldvm1:~# logout
 
