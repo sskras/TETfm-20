@@ -267,8 +267,8 @@ exit 0
 
 #### Darbo Tikslas
 #### Trumpas atlikto darbo aprašymas
-#### Pasirinktosios `iptables` komandos aprašymas
+#### Aprašykite duotąją `iptables` komandą ir jos tikslą:
 #### `iptables` tarpsegmentinio ekrano scenarijaus analizė (darbas grupėje):  +
-     . https://web.archive.org/web/20210122100737/http://networking.ringofsaturn.com/Unix/iptables.php
-     . https://web.archive.org/web/20090201150229/https://danieldegraaf.afraid.org/info/iptables/complex
-     . https://web.archive.org/web/20150302012617/http://www.liniac.upenn.edu/sysadmin/security/iptables.html
+ . https://web.archive.org/web/20210122100737/http://networking.ringofsaturn.com/Unix/iptables.php
+ . https://web.archive.org/web/20090201150229/https://danieldegraaf.afraid.org/info/iptables/complex
+ . https://web.archive.org/web/20150302012617/http://www.liniac.upenn.edu/sysadmin/security/iptables.html
