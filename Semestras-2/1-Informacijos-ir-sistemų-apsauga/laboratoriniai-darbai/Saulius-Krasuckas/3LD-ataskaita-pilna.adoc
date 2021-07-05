@@ -2011,7 +2011,7 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 *** 192.168.1.102
 *** 192.168.1.103
 ** ... pritaikant paketui atitinkamą `Destination NAT` transliaciją.
-** ... išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
+** ... ir išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
 
 * Kiekvienos komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu) išskirstyti į tris HTTPS gavėjus  +
   (žiniatinklio serverius, Proxy serverius, L7 ugniasienes ar kitus su HTTPS apdorojančius tinklo įrenginius).
