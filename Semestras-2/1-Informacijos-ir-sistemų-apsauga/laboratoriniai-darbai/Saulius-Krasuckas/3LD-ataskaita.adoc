@@ -16,7 +16,7 @@
 === Informacijos ir sistemų apsauga
 Modulis ELKRM17209
 
-==== Laboratorinio darbo nr <TODO>. ataskaita
+==== Laboratorinio darbo nr. 3 ataskaita
 
 {nbsp}
 
@@ -45,12 +45,14 @@ VILNIUS, 2021
 
 <<<
 
+[.text-left]
 ### Darbo Tikslas
 
 * [x] Patikrinti tinklo nustatymus.  +
 * [x] Susipažinti su `iptable` sintakse. +
 * [x] Nustatyti paprastą tarpsegmentinį ekraną.
 
+[.text-left]
 ### Trumpas atlikto darbo aprašymas
 
 #### 1. Virtualaus kompiuterio konfigūracija
@@ -457,6 +459,7 @@ Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo 
 
 #### Laboratorinis darbas atliktas
 
+[.text-left]
 ### Iškilę sunkumai ir pastebėti netikslumai
 
 #### 1. Virtualaus kompiuterio konfigūracija
@@ -1198,6 +1201,7 @@ Available nsock engines: epoll poll select
 ```
 
 
+[.text-left]
 ### Pasirinktosios `iptables` komandos aprašymas
 
 Komandą pasirinkau iš šių pavyzdžių:  +
