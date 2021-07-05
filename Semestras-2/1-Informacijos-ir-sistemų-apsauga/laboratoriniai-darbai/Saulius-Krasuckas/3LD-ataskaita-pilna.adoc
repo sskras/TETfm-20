@@ -1544,6 +1544,24 @@ Sukuriu direktoriją taisyklėms saugoti:
 osboxes@ldvm1:~$ sudo mkdir /etc/iptables
 ```
 
+Sukonfigūruoju `iptables`:
+
+- išvalau buvusius nustatymus:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+```
+
+- nustatau taisykles pagal nutylėjimą:
+
+```
+osboxes@ldvm1:~$ sudo iptables -P INPUT DROP
+osboxes@ldvm1:~$ sudo iptables -P FORWARD DROP
+osboxes@ldvm1:~$ sudo iptables -P OUTPUT ACCEPT
+osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 22 -j ACCEPT
+osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 443 -j ACCEPT
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
