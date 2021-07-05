@@ -245,102 +245,21 @@ Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=
 
 Sukuriu direktoriją taisyklėms saugoti:
 
-```
-osboxes@ldvm1:~$ sudo mkdir /etc/iptables
-```
-
 Sukonfigūruoju `iptables`:
 
 - išvalau buvusius nustatymus:
 
-```
-osboxes@ldvm1:~$ sudo iptables -F
-```
-
 - nustatau taisykles pagal nutylėjimą:
-
-```
-osboxes@ldvm1:~$ sudo iptables -P INPUT DROP
-osboxes@ldvm1:~$ sudo iptables -P FORWARD DROP
-osboxes@ldvm1:~$ sudo iptables -P OUTPUT ACCEPT
-osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 22 -j ACCEPT
-osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 443 -j ACCEPT
-```
 
 Patikrinu konfigūraciją:
 
-```
-osboxes@ldvm1:~$ sudo iptables -L
-Chain INPUT (policy DROP)
-target     prot opt source               destination         
-ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:ssh
-ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:https
-
-Chain FORWARD (policy DROP)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
-
 Įrašau konfigūraciją į failą:
-
-```
-osboxes@ldvm1:~$ sudo -i
-root@ldvm1:~# 
-root@ldvm1:~# /sbin/iptables-save > /etc/iptables/iptables.conf
-root@ldvm1:~# logout
-
-osboxes@ldvm1:~$ ll /etc/iptables/iptables.conf
--rw-r--r-- 1 root root 531 Jul  5 13:13 /etc/iptables/iptables.conf
-
-osboxes@ldvm1:~$ wc -l /etc/iptables/iptables.conf
-17 /etc/iptables/iptables.conf
-```
 
 Sukuriu failą `myfirewall`:
 
-```
-osboxes@ldvm1:~$ cat > myfirewall << \
---------------------------------------------------------------
-#!/bin/sh
-case "\$1" in
-  start)
-      echo "Starting firewall (iptables)"
-      /sbin/iptables-restore < /etc/iptables/iptables.conf
-          ;;
-  stop)
-      echo "Stopping firewall (flushing rules)"
-      /sbin/iptables -F
-      /sbin/modprobe -r iptable_filter
-          ;;
-  show)
-      echo "Current firewall rules:"
-      /sbin/iptables-save
-          ;;
-  *)
-      echo "Usage: /etc/init.d/myfirewall {start|stop|show}"
-      exit 1
-          ;;
-esac
-exit 0
---------------------------------------------------------------
-```
-
 Kopijuoju į paleidimo sritį:
 
-```
-osboxes@ldvm1:~$ sudo cp -v myfirewall /etc/init.d/
-'myfirewall' -> '/etc/init.d/myfirewall'
-```
-
 Suteikiu paleidimo teises:
-
-```
-osboxes@ldvm1:~$ sudo chmod 755 /etc/init.d/myfirewall
-osboxes@ldvm1:~$ ls -l /etc/init.d/myfirewall
--rwxr-xr-x 1 root root 453 Jul  5 12:48 /etc/init.d/myfirewall
-```
 
 Scenarijaus veikimas:
 
@@ -425,106 +344,7 @@ sys     0m0.066s
 
 Perkaunu virtualų kompiuterį:
 
-```
-osboxes@ldvm1:~$ sudo reboot
-Connection to 192.168.10.14 closed by remote host.
-Connection to 192.168.10.14 closed.
-[p@localhost ~]$ 
-[p@localhost ~]$ 
-[p@localhost ~]$ ssh osboxes@192.168.10.14
-osboxes@192.168.10.14's password: 
-Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-154 updates can be installed immediately.
-0 of these updates are security updates.
-To see these additional updates run: apt list --upgradable
-
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Mon Jul  5 14:04:49 2021 from 192.168.10.254
-osboxes@ldvm1:~$ 
-```
-
-* Patikrinu iptables taisykles – deja, jos neužsikrovė:
-
-```
-osboxes@ldvm1:~$ sudo iptables -L
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
-
-* Iš patirties žinau, kad automatiniam scenarijaus startui reikalinga papildoma simbolinė nuoroda.  +
-  Ji turi būti `/etc/init.d/rc?.d` direktorijoje, kur `?` atitinka pageidaujamą _Runlevel_.
-
-* Nustatau dabartinį _Runlevel_:
-+
-```
-osboxes@ldvm1:~$ runlevel 
-N 3
-```
-
-* Patikrinu reikiamą direktoriją:
-+
-```
-osboxes@ldvm1:~$ ll /etc/rc3.d/
-total 16
-drwxr-xr-x   2 root root  4096 Jul  3 01:07 ./
-drwxr-xr-x 132 root root 12288 Jul  5 12:20 ../
-lrwxrwxrwx   1 root root    29 Jun 30 12:08 K01apache-htcacheclean -> ../init.d/apache-htcacheclean*
-lrwxrwxrwx   1 root root    27 Mar  7 00:02 K01speech-dispatcher -> ../init.d/speech-dispatcher*
-lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01acpid -> ../init.d/acpid*
-lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01anacron -> ../init.d/anacron*
-lrwxrwxrwx   1 root root    17 Jun 30 12:08 S01apache2 -> ../init.d/apache2*
-lrwxrwxrwx   1 root root    16 Mar  7 00:02 S01apport -> ../init.d/apport*
-lrwxrwxrwx   1 root root    22 Mar  7 00:02 S01avahi-daemon -> ../init.d/avahi-daemon*
-lrwxrwxrwx   1 root root    19 Mar  7 00:02 S01bluetooth -> ../init.d/bluetooth*
-lrwxrwxrwx   1 root root    26 Mar  7 00:02 S01console-setup.sh -> ../init.d/console-setup.sh*
-lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01cron -> ../init.d/cron*
-lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01cups -> ../init.d/cups*
-lrwxrwxrwx   1 root root    22 Mar  7 00:02 S01cups-browsed -> ../init.d/cups-browsed*
-lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01dbus -> ../init.d/dbus*
-lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01gdm3 -> ../init.d/gdm3*
-lrwxrwxrwx   1 root root    21 Mar  7 00:02 S01grub-common -> ../init.d/grub-common*
-lrwxrwxrwx   1 root root    20 Mar  7 00:02 S01irqbalance -> ../init.d/irqbalance*
-lrwxrwxrwx   1 root root    20 Mar  7 00:02 S01kerneloops -> ../init.d/kerneloops*
-lrwxrwxrwx   1 root root    15 Jun 30 12:08 S01mysql -> ../init.d/mysql*
-lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01openvpn -> ../init.d/openvpn*
-lrwxrwxrwx   1 root root    18 Mar  7 00:02 S01plymouth -> ../init.d/plymouth*
-lrwxrwxrwx   1 root root    37 Mar  7 00:02 S01pulseaudio-enable-autospawn -> ../init.d/pulseaudio-enable-autospawn*
-lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01rsync -> ../init.d/rsync*
-lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01rsyslog -> ../init.d/rsyslog*
-lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01saned -> ../init.d/saned*
-lrwxrwxrwx   1 root root    23 Mar  7 00:02 S01spice-vdagent -> ../init.d/spice-vdagent*
-lrwxrwxrwx   1 root root    13 Jun 29 11:37 S01ssh -> ../init.d/ssh*
-lrwxrwxrwx   1 root root    29 Mar  7 00:02 S01unattended-upgrades -> ../init.d/unattended-upgrades*
-lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01uuidd -> ../init.d/uuidd*
-lrwxrwxrwx   1 root root    32 Mar  7 00:15 S01virtualbox-guest-utils -> ../init.d/virtualbox-guest-utils*
-lrwxrwxrwx   1 root root    18 Mar  7 00:02 S01whoopsie -> ../init.d/whoopsie*
-```
-
-* Čia kuriu simbolinę nuorodą:
-+
-```
-osboxes@ldvm1:~$ sudo ln -sv /etc/init.d/myfirewall /etc/rc3.d/S99myfirewall
-'/etc/rc3.d/S99myfirewall' -> '/etc/init.d/myfirewall'
-```
-
-** Dar sykį perkraunu virtualų kompiuterį:
-+
-```
-osboxes@ldvm1:~$ sudo reboot
-Connection to 192.168.10.14 closed by remote host.
-Connection to 192.168.10.14 closed.
-```
+Pataisau scenarijaus automatinį start (žr. prie sunkumų).
 
 Patikrinu iptables taisykles – dabar jau užsikrovė:
 
@@ -559,7 +379,6 @@ curl: (28) Connection timed out after 10001 milliseconds
 ```
 
 - `iptables` taisyklės veikia.
-
 
 ### 10. Apsaugoto kompiuterio skenavimas
 
@@ -1275,6 +1094,86 @@ Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc
 ```
 
 * Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
+
+### 9. Automatinė taisyklių keltis
+
+* Patikrinu iptables taisykles – deja, jos neužsikrovė:
+
+```
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+* Iš patirties žinau, kad automatiniam scenarijaus startui reikalinga papildoma simbolinė nuoroda.  +
+  Ji turi būti `/etc/init.d/rc?.d` direktorijoje, kur `?` atitinka pageidaujamą _Runlevel_.
+
+* Nustatau dabartinį _Runlevel_:
++
+```
+osboxes@ldvm1:~$ runlevel 
+N 3
+```
+
+* Patikrinu reikiamą direktoriją:
++
+```
+osboxes@ldvm1:~$ ll /etc/rc3.d/
+total 16
+drwxr-xr-x   2 root root  4096 Jul  3 01:07 ./
+drwxr-xr-x 132 root root 12288 Jul  5 12:20 ../
+lrwxrwxrwx   1 root root    29 Jun 30 12:08 K01apache-htcacheclean -> ../init.d/apache-htcacheclean*
+lrwxrwxrwx   1 root root    27 Mar  7 00:02 K01speech-dispatcher -> ../init.d/speech-dispatcher*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01acpid -> ../init.d/acpid*
+lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01anacron -> ../init.d/anacron*
+lrwxrwxrwx   1 root root    17 Jun 30 12:08 S01apache2 -> ../init.d/apache2*
+lrwxrwxrwx   1 root root    16 Mar  7 00:02 S01apport -> ../init.d/apport*
+lrwxrwxrwx   1 root root    22 Mar  7 00:02 S01avahi-daemon -> ../init.d/avahi-daemon*
+lrwxrwxrwx   1 root root    19 Mar  7 00:02 S01bluetooth -> ../init.d/bluetooth*
+lrwxrwxrwx   1 root root    26 Mar  7 00:02 S01console-setup.sh -> ../init.d/console-setup.sh*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01cron -> ../init.d/cron*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01cups -> ../init.d/cups*
+lrwxrwxrwx   1 root root    22 Mar  7 00:02 S01cups-browsed -> ../init.d/cups-browsed*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01dbus -> ../init.d/dbus*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01gdm3 -> ../init.d/gdm3*
+lrwxrwxrwx   1 root root    21 Mar  7 00:02 S01grub-common -> ../init.d/grub-common*
+lrwxrwxrwx   1 root root    20 Mar  7 00:02 S01irqbalance -> ../init.d/irqbalance*
+lrwxrwxrwx   1 root root    20 Mar  7 00:02 S01kerneloops -> ../init.d/kerneloops*
+lrwxrwxrwx   1 root root    15 Jun 30 12:08 S01mysql -> ../init.d/mysql*
+lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01openvpn -> ../init.d/openvpn*
+lrwxrwxrwx   1 root root    18 Mar  7 00:02 S01plymouth -> ../init.d/plymouth*
+lrwxrwxrwx   1 root root    37 Mar  7 00:02 S01pulseaudio-enable-autospawn -> ../init.d/pulseaudio-enable-autospawn*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01rsync -> ../init.d/rsync*
+lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01rsyslog -> ../init.d/rsyslog*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01saned -> ../init.d/saned*
+lrwxrwxrwx   1 root root    23 Mar  7 00:02 S01spice-vdagent -> ../init.d/spice-vdagent*
+lrwxrwxrwx   1 root root    13 Jun 29 11:37 S01ssh -> ../init.d/ssh*
+lrwxrwxrwx   1 root root    29 Mar  7 00:02 S01unattended-upgrades -> ../init.d/unattended-upgrades*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01uuidd -> ../init.d/uuidd*
+lrwxrwxrwx   1 root root    32 Mar  7 00:15 S01virtualbox-guest-utils -> ../init.d/virtualbox-guest-utils*
+lrwxrwxrwx   1 root root    18 Mar  7 00:02 S01whoopsie -> ../init.d/whoopsie*
+```
+
+* Čia kuriu simbolinę nuorodą:
++
+```
+osboxes@ldvm1:~$ sudo ln -sv /etc/init.d/myfirewall /etc/rc3.d/S99myfirewall
+'/etc/rc3.d/S99myfirewall' -> '/etc/init.d/myfirewall'
+```
+
+** Dar sykį perkraunu virtualų kompiuterį:
++
+```
+osboxes@ldvm1:~$ sudo reboot
+Connection to 192.168.10.14 closed by remote host.
+Connection to 192.168.10.14 closed.
+```
 
 
 ### Pasirinktosios `iptables` komandos aprašymas
