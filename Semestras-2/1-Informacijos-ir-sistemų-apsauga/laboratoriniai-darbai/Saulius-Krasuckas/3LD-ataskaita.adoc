@@ -474,7 +474,7 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
 192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
 ```
 
-* Nustatymai nevisai atitinka LD aprašą:
+* Nustatymai ne visai atitinka LD aprašą:
 
 ** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
    (šiame darbe naudojamas branduolys `5.8.0-59-generic`)  +
