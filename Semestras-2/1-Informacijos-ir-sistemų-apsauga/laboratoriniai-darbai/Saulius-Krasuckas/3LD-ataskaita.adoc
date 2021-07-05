@@ -212,27 +212,7 @@ Išvalau `iptables`:
 
 Registruoju _Telnet_ užklausas žurnale ir jų neleidžiu:
 
-```
-osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j LOG --log-prefix 'TELNET ATTEMPT: '
-osboxes@ldvm1:~$ sudo iptables --list
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
-
 Kreipiuosi iš realaus į savo virtualų kompiuterį _Telnet_ protokolu:
-
-```
-[p@localhost Saulius-Krasuckas]$ telnet 192.168.10.14
-Trying 192.168.10.14...
-telnet: connect to address 192.168.10.14: Connection refused
-```
 
 Peržiūriu įrašus jo žurnale:
 
@@ -260,60 +240,6 @@ O žurnalas vėl pasipildė:
 ```
 Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:08:00:27:7a:d0:b7:08:00 SRC=192.168.10.13 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=1374 DF PROTO=TCP SPT=39398 DPT=23 WINDOW=64240 RES=0x00 SYN URGP=0 
 ```
-
-* Tačiau tai yra užklausų ne uždraudimas, o tik jų registravimas.  +
-  Uždraudimui reikėtų papildomos taisyklės su `-j DROP`.
-
-* Uždraudžiu _Telnet_ užklausas iš tikrųjų:
-+
-```
-osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j DROP
-osboxes@ldvm1:~$ sudo iptables --list
-[sudo] password for osboxes: 
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
-DROP       tcp  --  anywhere             ldvm1                tcp dpt:telnet
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
-
-* Kreipiuosi iš kaimyninio kompiuterio į savo virtualųjį:
-+
-```
-osboxes@ldvm2:~$ time telnet 192.168.10.14
-Trying 192.168.10.14...
-telnet: Unable to connect to remote host: Connection timed out
-
-real    2m9.458s
-user    0m0.003s
-sys     0m0.008s
-```
-
-* Šįkart užklausa trunka ilgai, ir irgi nesėkminga.
-
-* Dabar virtualiojo kompiuterio žurnalas pasipildė net septyniais įrašais apie užklausą:
-+
-```
-osboxes@ldvm1:~$ tail -0f /var/log/syslog
-Jul  5 10:13:59 ldvm1 tracker-store[1682]: OK
-Jul  5 10:13:59 ldvm1 systemd[997]: tracker-store.service: Succeeded.
-Jul  5 10:14:06 ldvm1 kernel: [ 8339.632492] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9577 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:14:07 ldvm1 kernel: [ 8340.609642] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9578 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:14:09 ldvm1 kernel: [ 8342.562629] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9579 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:14:13 ldvm1 kernel: [ 8346.473122] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9580 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:14:21 ldvm1 kernel: [ 8354.294072] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9581 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:14:38 ldvm1 kernel: [ 8369.935750] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9582 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:15:10 ldvm1 kernel: [ 8401.219388] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9583 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
-Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-```
-
-* Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
-
 
 ### 9. Automatinė taisyklių keltis
 
@@ -1294,6 +1220,61 @@ PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
 8 packets transmitted, 4 received, 50% packet loss, time 7000ms
 rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
 ```
+
+### 8. _Telnet_ uždraudimas
+
+* Tačiau tai yra užklausų ne uždraudimas, o tik jų registravimas.  +
+  Uždraudimui reikėtų papildomos taisyklės su `-j DROP`.
+
+* Uždraudžiu _Telnet_ užklausas iš tikrųjų:
++
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j DROP
+osboxes@ldvm1:~$ sudo iptables --list
+[sudo] password for osboxes: 
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
+DROP       tcp  --  anywhere             ldvm1                tcp dpt:telnet
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+* Kreipiuosi iš kaimyninio kompiuterio į savo virtualųjį:
++
+```
+osboxes@ldvm2:~$ time telnet 192.168.10.14
+Trying 192.168.10.14...
+telnet: Unable to connect to remote host: Connection timed out
+
+real    2m9.458s
+user    0m0.003s
+sys     0m0.008s
+```
+
+* Šįkart užklausa trunka ilgai, ir irgi nesėkminga.
+
+* Dabar virtualiojo kompiuterio žurnalas pasipildė net septyniais įrašais apie užklausą:
++
+```
+osboxes@ldvm1:~$ tail -0f /var/log/syslog
+Jul  5 10:13:59 ldvm1 tracker-store[1682]: OK
+Jul  5 10:13:59 ldvm1 systemd[997]: tracker-store.service: Succeeded.
+Jul  5 10:14:06 ldvm1 kernel: [ 8339.632492] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9577 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:07 ldvm1 kernel: [ 8340.609642] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9578 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:09 ldvm1 kernel: [ 8342.562629] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9579 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:13 ldvm1 kernel: [ 8346.473122] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9580 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:21 ldvm1 kernel: [ 8354.294072] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9581 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:38 ldvm1 kernel: [ 8369.935750] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9582 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:15:10 ldvm1 kernel: [ 8401.219388] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9583 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+```
+
+* Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
 
 
 ### Pasirinktosios `iptables` komandos aprašymas
