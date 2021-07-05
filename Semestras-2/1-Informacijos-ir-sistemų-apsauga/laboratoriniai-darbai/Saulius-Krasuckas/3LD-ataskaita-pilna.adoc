@@ -2013,5 +2013,5 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 ** ... pritaikant paketui atitinkamą `Destination NAT` transliaciją.
 ** ... ir išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
 
-* Kiekvienos komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu) išskirstyti į tris HTTPS gavėjus  +
+Kiekvienos šios komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu, angl. _Round-robin_) išskirstyti į tris HTTPS gavėjus  +
   (žiniatinklio serverius, Proxy serverius, L7 ugniasienes ar kitus su HTTPS apdorojančius tinklo įrenginius).
