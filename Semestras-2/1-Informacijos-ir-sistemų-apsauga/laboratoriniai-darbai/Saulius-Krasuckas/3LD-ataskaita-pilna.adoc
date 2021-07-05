@@ -1683,6 +1683,13 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+Įkeliu reikiamas `iptables` taisykles:
+
+```
+osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall start
+Starting firewall (iptables)
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
