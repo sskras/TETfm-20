@@ -235,7 +235,7 @@ Nustatau apribojimą 1 šalt./s:
 
 * Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės.
 
-* Vėl paleidžiu _ping_ srautą.
+Vėl paleidžiu _ping_ srautą.
 
 ```
 [p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
@@ -250,9 +250,9 @@ PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
 ```
 
-* Dabar iš aštuonių paketų per 7s atkeliavo tik 4 (50%).  +
-  Kompiuteris atmeta kas antrą ICMP paketą.  +
-  Panašu, kad įeinančio ICMP srauto ribojimas dabar veikia.
+Dabar iš aštuonių paketų per 7s atkeliavo tik 4 (50%).  +
+Kompiuteris atmeta kas antrą ICMP paketą.  +
+Panašu, kad įeinančio ICMP srauto ribojimas dabar veikia.
 
 Išvalau `iptables`.
 
@@ -380,7 +380,7 @@ sys     0m0.019s
 Klientinė programa `curl` po 2 min. sulaukia _Timeout_.
 
 - o HTTPS paslauga vis dar prieinama išorei:
-
++
 ```
 [p@localhost Saulius-Krasuckas]$ time curl -k https://192.168.10.14
 <html> ldvm1 (kompiuterio vardas) </html>
@@ -392,7 +392,7 @@ sys     0m0.066s
 
 Perkaunu virtualų kompiuterį.
 
-Pataisau scenarijaus automatinį start (žr. prie sunkumų).
+Pataisau scenarijaus automatinį startą (žr. prie sunkumų).
 
 Patikrinu iptables taisykles – dabar jau užsikrovė:
 
@@ -513,7 +513,7 @@ osboxes@ldvm1:~$ sudo nmcli connection delete "Wired connection 1"
 Connection 'Wired connection 1' (2c671148-b52a-4426-9325-d35a52967e3c) successfully deleted.
 ```
 
-** Tikrinu maršrutizacijos lentelę:
+* Tikrinu maršrutizacijos lentelę:
 +
 ```
 osboxes@ldvm1:~$ route
@@ -526,6 +526,8 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
 ```
 
 #### 2. Tinklo paslaugų tikrinimas
+
+Diegiu grafinę priemonę `sysvconfig`.
 
 ```
 osboxes@ldvm1:~$ sudo apt-get install sysvconfig
@@ -1014,7 +1016,7 @@ Nustatau apribojimą 1 šalt./s
   Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
 
 * Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės:
-
++
 ```
 osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
 osboxes@ldvm1:~$ sudo iptables --list
@@ -1030,7 +1032,7 @@ Chain OUTPUT (policy ACCEPT)
 ```
 
 * Vėl paleidžiu _ping_ srautą:
-
++
 ```
 [p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
 PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
@@ -1171,7 +1173,7 @@ osboxes@ldvm1:~$ sudo ln -sv /etc/init.d/myfirewall /etc/rc3.d/S99myfirewall
 '/etc/rc3.d/S99myfirewall' -> '/etc/init.d/myfirewall'
 ```
 
-** Dar sykį perkraunu virtualų kompiuterį:
+* Dar sykį perkraunu virtualų kompiuterį:
 +
 ```
 osboxes@ldvm1:~$ sudo reboot
@@ -1182,7 +1184,7 @@ Connection to 192.168.10.14 closed.
 #### 10. Apsaugoto kompiuterio skenavimas
 
 * Skenuoju kaimyną, bet gaunu klaidą:
-
++
 ```
 osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F --max_rtt_timeout 6 192.168.10.14
 nmap: unrecognized option '--max_rtt_timeout'
@@ -1204,7 +1206,8 @@ Available nsock engines: epoll poll select
 [.text-left]
 ### Pasirinktosios `iptables` komandos aprašymas
 
-Komandą pasirinkau iš šių pavyzdžių:  +
+Komandą (o tiksliau tris beveik identiškas) pasirinkau iš šių pavyzdžių:  +
++
 https://www.thegeekstuff.com/2011/06/iptables-rules-examples/#:~:text=11.%20Load%20Balance%20Incoming%20Web%20Traffic
 
 ```
@@ -1213,20 +1216,20 @@ iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --
 iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 2 -j DNAT --to-destination 192.168.1.103:443
 ```
 
-* Originaliose komandose yra klaida:  +
-   +
-  tūksta nurodytos lentelės `nat`, nes kitaip komanda bando rašyti į `filter` lentelę, ir joje neranda grandinės `PREROUTING`.  +
+Originaliose komandose yra klaida:  +
+ +
+tūksta nurodytos lentelės `nat`, nes kitaip komanda bando rašyti į `filter` lentelę, ir joje neranda grandinės `PREROUTING`.  +
 
-* Taigi, komandas pataisau:
-+
+Taigi, komandas pataisau:
+
 ```
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 0 -j DNAT --to-destination 192.168.1.101:443
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 1 -j DNAT --to-destination 192.168.1.102:443
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 2 -j DNAT --to-destination 192.168.1.103:443
 ```
 
-* Ši komanda naudoja nestandartinį `iptables` modulį `state` (angl. _Extension module_).  +
-  Jis aprašytas čia:
+Ši komanda naudoja nestandartinį `iptables` modulį `state` (angl. _Extension module_).  +
+Jis aprašytas čia:
 https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#ss3.9
 
 * Šios komandos papildo `nat` lentelę.
