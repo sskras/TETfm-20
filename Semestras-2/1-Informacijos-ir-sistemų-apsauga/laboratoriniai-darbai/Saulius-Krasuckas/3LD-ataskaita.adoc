@@ -8,22 +8,21 @@
 
 #### 1. Virtualaus kompiuterio konfigūracija
 
-Tikrinu IP adresus:
+Tikrinu IP adresus.
 
-Tikrinu maršrutizacijos lentelę:
+Tikrinu maršrutizacijos lentelę.
 
-Pataisau `interfaces` failą ir palyginu su ankstesne versija:
+Pataisau `interfaces` failą ir palyginu su ankstesne versija.
 
-Aktyvuoju pakeistus nustatymus:
+Aktyvuoju pakeistus nustatymus.
 
 Abu IP adresai, prašomi LD3, nurodyti.
 
-Vieninteliai vartai pagal nutylėjimą yra `192.168.10.254`, kaip ir prašo LD3 aprašas.  +
-Patikrinimo žingsnis atliktas.
+Vieninteliai vartai pagal nutylėjimą yra `192.168.10.254`, kaip ir prašo LD3 aprašas.
 
 #### 2. Tinklo paslaugų tikrinimas
 
-Diegiu grafinę priemonę `sysvconfig`:
+Diegiu grafinę priemonę `sysvconfig`.
 
 * Programinės įrangos valdymo įrankis neranda minimos priemonės.
 
@@ -33,17 +32,17 @@ Diegiu grafinę priemonę `sysvconfig`:
 ** puikiai veikia su SystemD _Init_-mechanizmu;
 ** tik nerodo tarnybų priklausomybių nuo _Runlevels_ (arba nuo _targets_, kalbant SystemD terminais).
 
-SSH serverio instaliavimas
+SSH serverio instaliavimas.
 
 Tą patį pakartojau ir kaimyniniame kompiuteryje.
 
 ### 3. Tinklo paslaugų tikrinimas
 
-Teikiamos tinklo paslaugos:
+Teikiamos tinklo paslaugos.
 
-Jungiuosi prie kaimyno per SSH:
+Jungiuosi prie kaimyno per SSH.
 
-Stebiu paslaugų būvio pasikeitimą:
+Stebiu paslaugų būvio pasikeitimą.
 
 Palyginimui įrašiau komandos išvesti abu kartus į skirtingus failus.  +
 Tuomet pasinaudojau įrankiu `diff -u`.
@@ -105,37 +104,37 @@ Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
 
 ### 5. Paketų persiuntimo įjungimas
 
-Įjungiu persiuntimą faile:
+Įjungiu persiuntimą faile.
 
-Peržiūriu įkeltus modulius:
+Peržiūriu įkeltus modulius.
 
-Nustatau automatinį poros modulių užkrovimą:
+Nustatau automatinį poros modulių užkrovimą.
 
-Nerperkraudamas kompiuterio nustatau šias vertes tiesioges:
+Nerperkraudamas kompiuterio nustatau šias vertes tiesioges.
 
-Patikrinu:
+Patikrinu.
 
 Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
 
 ### 6. `iptables` patikrinimas
 
-Peržiūriu nustatymus pagal nutylėjimą:
+Peržiūriu nustatymus pagal nutylėjimą.
 
-Uždraudžiu įeinančius paketus:
+Uždraudžiu įeinančius paketus.
 
-Išbandau draudimą, veikia:
+Išbandau draudimą, veikia.
 
 Ryšys iš kaimyninio kompiuterio nebeužsimezga, įvyksta _Timeout_.
 
-Žiūriu, kaip pasikeitė nustatymai:
+Žiūriu, kaip pasikeitė nustatymai.
 
 Atsirado viena nauja eilutė: `DROP       all  --  anywhere             anywhere`
 
-Išvalau `iptables`:
+Išvalau `iptables`.
 
-Patikrinu ICMP pingą iš kaimyninio kompiuterio:
+Patikrinu ICMP pingą iš kaimyninio kompiuterio.
 
-Uždraudžiu ICMP protokolą:
+Uždraudžiu ICMP protokolą.
 
 Tikrinu, ar atsirado taisyklė:
 
@@ -152,15 +151,15 @@ osboxes@ldvm1:~$ diff -u debug/{09,11}*.txt
  target     prot opt source               destination         
 ```
 
-Tikrinu ją, veikia:
+Tikrinu ją, veikia.
 
 Kompiuteris į ICMP pingą nebeatsako.
 
-Išvalau `iptables`:
+Išvalau `iptables`.
 
 ### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
 
-Paleidžiu `ping` srautą į virtualų kompiuterį:
+Paleidžiu `ping` srautą į virtualų kompiuterį.
 
 Stebiu, kaip vykdoma komanda:
 
@@ -185,9 +184,9 @@ Nustatau apribojimą 1 šalt./s:
 * Deja, virtualaus kompiuterio reakcija į _ping_ srautą nepasikeitė.  +
   Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
 
-* Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės:
+* Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės.
 
-* Vėl paleidžiu _ping_ srautą:
+* Vėl paleidžiu _ping_ srautą.
 
 ```
 [p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
@@ -206,22 +205,22 @@ rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
   Kompiuteris atmeta kas antrą ICMP paketą.  +
   Panašu, kad įeinančio ICMP srauto ribojimas dabar veikia.
 
-Išvalau `iptables`:
+Išvalau `iptables`.
 
 ### 8. _Telnet_ uždraudimas
 
-Registruoju _Telnet_ užklausas žurnale ir jų neleidžiu:
+Registruoju _Telnet_ užklausas žurnale ir jų neleidžiu.
 
-Kreipiuosi iš realaus į savo virtualų kompiuterį _Telnet_ protokolu:
+Kreipiuosi iš realaus į savo virtualų kompiuterį _Telnet_ protokolu.
 
-Peržiūriu įrašus jo žurnale:
+Peržiūriu įrašus jo žurnale.
 
 ```
 osboxes@ldvm1:~$ tail -0f /var/log/syslog
 Jul  5 10:00:26 ldvm1 kernel: [ 7539.021434] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=46720 DF PROTO=TCP SPT=52720 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
 ```
 
-Kreipiuosi iš kaimyno į savo virtualų kompiuterį _Telnet_ protokolu:
+Kreipiuosi iš kaimyno į savo virtualų kompiuterį _Telnet_ protokolu.
 
 ```
 osboxes@ldvm2:~$ time telnet 192.168.10.14
@@ -243,25 +242,25 @@ Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=
 
 ### 9. Automatinė taisyklių keltis
 
-Sukuriu direktoriją taisyklėms saugoti:
+Sukuriu direktoriją taisyklėms saugoti.
 
 Sukonfigūruoju `iptables`:
 
-- išvalau buvusius nustatymus:
+- išvalau buvusius nustatymus.
 
-- nustatau taisykles pagal nutylėjimą:
+- nustatau taisykles pagal nutylėjimą.
 
-Patikrinu konfigūraciją:
+Patikrinu konfigūraciją.
 
-Įrašau konfigūraciją į failą:
+Įrašau konfigūraciją į failą.
 
-Sukuriu failą `myfirewall`:
+Sukuriu failą `myfirewall`.
 
-Kopijuoju į paleidimo sritį:
+Kopijuoju į paleidimo sritį.
 
-Suteikiu paleidimo teises:
+Suteikiu paleidimo teises.
 
-Scenarijaus veikimas:
+Scenarijaus veikimas.
 
 ```
 osboxes@ldvm1:~$ /etc/init.d/myfirewall
@@ -316,7 +315,7 @@ osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall start
 Starting firewall (iptables)
 ```
 
-Tikrinu jų veikimą:
+Tikrinu jų veikimą.
 
 - HTTP paslauga nebeprieinama:
 +
@@ -342,7 +341,7 @@ user    0m0.108s
 sys     0m0.066s
 ```
 
-Perkaunu virtualų kompiuterį:
+Perkaunu virtualų kompiuterį.
 
 Pataisau scenarijaus automatinį start (žr. prie sunkumų).
 
@@ -362,7 +361,7 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
-Patikrinu taisyklių veikimą:
+Patikrinu taisyklių veikimą.
 
 - HTTPS užklausa praleidžiama:
 
@@ -382,12 +381,12 @@ curl: (28) Connection timed out after 10001 milliseconds
 
 ### 10. Apsaugoto kompiuterio skenavimas
 
-* Skenuoju kaimyną pagal ketvirtą žingsnį:
+Skenuoju kaimyną pagal ketvirtą žingsnį:
 
 * Rezultatas identiškas.  +
   Taip dėl to, kad tiek žiniatinklį, tiek tarpsegmentinį ekraną konfigūravau savame kompiuteryje, o ne kaimyininiame.
 
-* Dėl to skenuoju savo kompiuterį iš kaimyninio:
+* Dėl to skenuoju savo kompiuterį iš kaimyninio.
 
 Palyginu matomas paslaugas savame kompiuteryje:
 
