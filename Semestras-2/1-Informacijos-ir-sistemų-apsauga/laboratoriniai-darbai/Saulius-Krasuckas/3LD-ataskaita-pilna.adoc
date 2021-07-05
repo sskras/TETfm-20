@@ -1939,6 +1939,26 @@ MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 2.17 seconds
 ```
 
+Palyginu matomas paslaugas savame kompiuteryje:
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14 > debug/02.ldvm1-paslaugos-įjungus-tarpsegmentinį-ekraną.txt
+osboxes@ldvm2:~$ diff -u debug/{01,02}*
+  ...
+ Nmap scan report for 192.168.10.14
+-Host is up (0.00068s latency).
+-Not shown: 97 closed ports
++Host is up (0.00064s latency).
++Not shown: 98 filtered ports
+ PORT    STATE SERVICE
+ 22/tcp  open  ssh
+-80/tcp  open  http
+ 443/tcp open  https
+ MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+```
+
+Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo nebeprieinamas išorėje.
+
 
 ### Sunkumai ir atsakymai į klausimus
 
