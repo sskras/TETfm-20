@@ -2005,10 +2005,12 @@ https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#
 *** = 0
 *** = 1
 *** = 2
-** ir jei šios sąlygos patenkintos, komanda nurodo tokiam pritaikyti `Destination NAT` transliavimą į vieną iš trijų IP adresų atitinkamai pagal paketo numerį nurodytame skaitiklyje:
+** ir jei šios sąlygos patenkintos, komanda nurodo tokį paketą nukreipti į vieną iš trijų IP adresų (pagal paketo numerį nurodytame skaitiklyje):
 *** 192.168.1.101
 *** 192.168.1.102
 *** 192.168.1.103
+     +
+    pritaikant `Destination NAT` transliaciją.
 ** ... išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
 
 * Kiekvienos komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu) išskirstyti į tris HTTPS gavėjus  +
