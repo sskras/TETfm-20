@@ -1905,6 +1905,21 @@ Compiled without:
 Available nsock engines: epoll poll select
 ```
 
+* Skenuoju kaimyną pagal ketvirtą žingsnį:
++
+```
+osboxes@ldvm1:~$ sudo nmap -sS -P0 -n -F 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 14:54 EEST
+Nmap scan report for 192.168.10.13
+Host is up (0.00085s latency).
+Not shown: 99 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.43 seconds
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
