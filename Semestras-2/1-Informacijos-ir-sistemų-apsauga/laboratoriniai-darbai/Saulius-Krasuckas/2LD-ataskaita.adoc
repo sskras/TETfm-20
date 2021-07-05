@@ -44,6 +44,7 @@ Modulis ELKRM17209
 VILNIUS, 2021
 
 <<<
+
 [.text-left]
 ### Darbo Tikslas
 
@@ -218,6 +219,7 @@ Nuskenuoju kaimyno prievadus.
 
 
 <<<
+
 [.text-left]
 ### Sunkumai ir atsakymai į klausimus
 
@@ -1319,6 +1321,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
 ** Matyti, kad atsirado du atviri prievadai (veikia nauja tarnyba): `http` ir `https`
 
 <<<
+
 [.text-left]
 ### Duotosios Linux tinklo komandos aprašymas: `tcpdump`
 
@@ -1488,6 +1491,7 @@ IP 192.168.10.14.22 > 192.168.10.8.40606: tcp 124
 ```
 
 <<<
+
 [.text-left]
 ### Viso darbo išvados
 
