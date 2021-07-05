@@ -1690,6 +1690,21 @@ osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall start
 Starting firewall (iptables)
 ```
 
+Tikrinu jų veikimą:
+
+- HTTP paslauga nebeprieinama:
++
+```
+[p@localhost Saulius-Krasuckas]$ time curl -k http://192.168.10.14
+curl: (7) Failed connect to 192.168.10.14:80; Connection timed out
+
+real    2m7.277s
+user    0m0.005s
+sys     0m0.019s
+```
++
+Klientinė programa `curl` po 2 min. sulaukia _Timeout_.
+
 
 ### Sunkumai ir atsakymai į klausimus
 
