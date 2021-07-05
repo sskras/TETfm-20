@@ -1578,6 +1578,15 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+Įrašau konfigūraciją į failą:
+
+* Komandai iš aprašo gaunu klaidą:
+
+```
+root@ldvm1:~# /bin/iptables-save > /etc/iptables/iptables.conf
+-bash: /bin/iptables-save: No such file or directory
+```
+
 Sukuriu failą `myfirewall`:
 
 ```
