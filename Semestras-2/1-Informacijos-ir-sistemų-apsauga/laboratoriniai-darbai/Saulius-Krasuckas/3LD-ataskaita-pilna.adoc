@@ -1450,7 +1450,7 @@ Trying 192.168.10.14...
 telnet: connect to address 192.168.10.14: Connection refused
 ```
 
-Virtualiojo žurnale matyti:
+Peržiūriu įrašus jo žurnale:
 
 ```
 osboxes@ldvm1:~$ tail -0f /var/log/syslog
@@ -1471,19 +1471,31 @@ sys     0m0.005s
 
 Užklausa atmetama iškart.
 
-Savo virtualiojo kompiuterio žurnalas vėl pasipildė:
+O žurnalas vėl pasipildė:
 
 ```
 Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:08:00:27:7a:d0:b7:08:00 SRC=192.168.10.13 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=1374 DF PROTO=TCP SPT=39398 DPT=23 WINDOW=64240 RES=0x00 SYN URGP=0 
 ```
 
-* Tačiau tai yra ne užklausų uždraudimas, o tik jų registravimas.  +
+* Tačiau tai yra užklausų ne uždraudimas, o tik jų registravimas.  +
   Uždraudimui reikėtų papildomos taisyklės su `-j DROP`.
 
 * Uždraudžiu _Telnet_ užklausas iš tikrųjų:
 +
 ```
 osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j DROP
+osboxes@ldvm1:~$ sudo iptables --list
+[sudo] password for osboxes: 
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
+DROP       tcp  --  anywhere             ldvm1                tcp dpt:telnet
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
 ```
 
 * Kreipiuosi iš kaimyninio kompiuterio į savo virtualųjį:
@@ -1503,6 +1515,7 @@ sys     0m0.008s
 * Dabar virtualiojo kompiuterio žurnalas pasipildė net septyniais įrašais apie užklausą:
 +
 ```
+osboxes@ldvm1:~$ tail -0f /var/log/syslog
 Jul  5 10:13:59 ldvm1 tracker-store[1682]: OK
 Jul  5 10:13:59 ldvm1 systemd[997]: tracker-store.service: Succeeded.
 Jul  5 10:14:06 ldvm1 kernel: [ 8339.632492] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9577 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
@@ -1514,6 +1527,8 @@ Jul  5 10:14:38 ldvm1 kernel: [ 8369.935750] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=
 Jul  5 10:15:10 ldvm1 kernel: [ 8401.219388] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9583 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
 Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
 ```
+
+* Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
 
 
 ### Sunkumai ir atsakymai į klausimus
