@@ -1562,6 +1562,22 @@ osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 2
 osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 443 -j ACCEPT
 ```
 
+Patikrinu konfigūraciją:
+
+```
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:ssh
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:https
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
