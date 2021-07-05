@@ -1,0 +1,2024 @@
+### Darbo Tikslas
+
+* [x] Patikrinti tinklo nustatymus.  +
+* [x] Susipažinti su `iptable` sintakse. +
+* [x] Nustatyti paprastą tarpsegmentinį ekraną.
+
+### Trumpas atlikto darbo aprašymas
+
+#### 1. Virtualaus kompiuterio konfigūracija
+
+Tikrinu IP adresus:
+
+```
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::440e:4f39:f7ec:bb91  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
+        RX packets 32094  bytes 40220614 (40.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 15495  bytes 1016242 (1.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+        RX packets 51491  bytes 3770623 (3.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 78571  bytes 33188421 (33.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 816  bytes 70179 (70.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 816  bytes 70179 (70.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+
+Tikrinu maršrutizacijos lentelę:
+
+```
+osboxes@ldvm1:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+default         10.0.2.2        0.0.0.0         UG    100    0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+
+* Nustatymai nevsai atitinka LD aprašą:
+
+** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
+   (šiame darbe naudojamas branduolys `5.8.0-59-generic`)  +
+   Palieku kaip yra.
+
+** 2. Trūksta `10.10.10.x` adreso (nes LD2 buvo uždėtas rankomis, o po to OS perkrauta).
+
+** 3. OS turi du vartus pagal nutylėjimą:
+
+*** vienas pasiekiamas per `enp0s3`, _NAT_ tipo tinklo sąsają (su automatiniu IP adresu);
+*** kitas pasiekiamas per `enp0s8`, _Host-only_ tipo tinklo sąsają.
++
+   Atsekiau, kad pirmuosius vartus sukonfigūruoja _NetworkManager_ įrankis,
+   sukurdamas dedikuotą tinklo prisijungimą
+   (tam atskirą tinklo valdymo abstrakciją):
++
+```
+osboxes@ldvm1:~$ nmcli connection show
+NAME                UUID                                  TYPE      DEVICE
+Wired connection 1  2c671148-b52a-4426-9325-d35a52967e3c  ethernet  enp0s3
+
+osboxes@ldvm1:~$ nmcli connection show id "Wired connection 1" | grep 10.0.2.2
+IP4.GATEWAY:                            10.0.2.2
+IP4.ROUTE[1]:                           dst = 0.0.0.0/0, nh = 10.0.2.2, mt = 100
+DHCP4.OPTION[23]:                       routers = 10.0.2.2
+```
+
+Pataisau `interfaces` failą ir palyginu su ankstesne versija:
+
+```
+osboxes@ldvm1:~$ sudo cp -av /etc/network/interfaces /etc/network/interfaces.BACKUP
+'/etc/network/interfaces' -> '/etc/network/interfaces.BACKUP'
+
+osboxes@ldvm1:~$ sudo vim.tiny /etc/network/interfaces
+
+osboxes@ldvm1:~$ diff -u /etc/network/interfaces.BACKUP /etc/network/interfaces
+--- /etc/network/interfaces.BACKUP  2021-07-02 15:19:26.453975316 -0400
++++ /etc/network/interfaces 2021-07-02 15:19:30.491993480 -0400
+@@ -1,6 +1,11 @@
+ auto enp0s8
++auto enp0s8:2
+ 
+ iface enp0s8 inet static
+ address 192.168.10.14
+ netmask 255.255.255.0
+ gateway 192.168.10.254
++
++iface enp0s8:2 inet static
++address 10.10.10.4
+```
+
+Aktyvuoju pakeistus nustatymus:
+
+```
+osboxes@ldvm1:~$ sudo ifup enp0s8:2
+
+osboxes@ldvm1:~$ ifconfig -a
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
+        RX packets 32114  bytes 40222382 (40.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 15527  bytes 1018963 (1.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+        RX packets 53197  bytes 3911386 (3.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 79746  bytes 33383444 (33.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.4  netmask 255.255.255.0  broadcast 10.10.10.255
+        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 817  bytes 70252 (70.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 817  bytes 70252 (70.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+Abu IP adresai, prašomi LD3, nurodyti.
+
+* Nereikalingus vartus pagal nutylėjimą bandau išmest būtent per _NetworkManager_
+  kartu su minimu abstrakčiu tinklo prisijungimu:
++
+```
+osboxes@ldvm1:~$ sudo nmcli connection delete "Wired connection 1"
+Connection 'Wired connection 1' (2c671148-b52a-4426-9325-d35a52967e3c) successfully deleted.
+```
+
+** Tikrinu maršrutizacijos lentelę:
++
+```
+osboxes@ldvm1:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+Vieninteliai vartai pagal nutylėjimą yra `192.168.10.254`, kaip ir prašo LD3 aprašas.  +
+Patikrinimo žingsnis atliktas.
+
+#### 2. Tinklo paslaugų tikrinimas
+
+Diegiu grafinę priemonę `sysvconfig`:
+
+```
+osboxes@ldvm1:~$ sudo apt-get install sysvconfig
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package sysvconfig
+```
+
+
+* Programinės įrangos valdymo įrankis neranda minimos priemonės.
+
+** Mėginu atnaujinti programų sąrašus:
++
+```
+osboxes@ldvm1:~$ sudo apt-get update
+0% [Working]
+Err:1 http://security.ubuntu.com/ubuntu focal-security InRelease            
+  Temporary failure resolving 'security.ubuntu.com'
+Err:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                   
+  Temporary failure resolving 'us.archive.ubuntu.com'
+Err:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+  Temporary failure resolving 'us.archive.ubuntu.com'
+Err:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+  Temporary failure resolving 'us.archive.ubuntu.com'
+Reading package lists... Done           
+W: Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'us.archive.ubuntu.com'
+W: Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Temporary failure resolving 'us.archive.ubuntu.com'
+W: Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Temporary failure resolving 'us.archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+```
+
+** Paaiškėja, kad pašalinus vartus pagal nutylėjimą `10.0.2.2`, nustojo veikti interneto ryšys.  +
+   Jis veikdavo per tinklo sąsają `enp0s3`, kuri VirtualBox sistemoje yra _NAT_ tipo (skirta išėjimui į internetą).  +
+
+** Kadangi dabar ėmė veikti tik vartai per `192.168.10.254` (priklausantys Host OS),
+   teko konfigūruoti maršrutizavimą + įjungti _NAT_ mechanizmą jau Host OS pusėje būtent šiai Guest tinklo sąsajai (o ne įprastinei).  +
+   (Neaprašau Host OS veiksmų, tai nebūtinai Linux sistema)
+
+** Sąrašų atnaujinimas vėl veikia:
++
+```
+osboxes@ldvm1:~$ sudo apt-get update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+  ...
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [2,060 B]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,780 B]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [288 B]
+Fetched 4,078 kB in 10s (391 kB/s)
+Reading package lists... Done
+```
+
+** Turbūt vertėtų įtraukti tokį patikslinimą į laboratorinio darbo aprašą.  +
+   (apie reikiamą _VirtualBox_ tinklo sąsajos tipą + maršrutizavimą tarp Host ir Guest OS)
+
+** Tęsiu `sysvconfig` diegimą.
+   Tokio paketo _Ubuntu 20.04.2_ neturi:
++
+```
+osboxes@ldvm1:~$ sudo apt-get install sysvconfig
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package sysvconfig
+
+osboxes@ldvm1:~$ apt search sysvconfig
+Sorting... Done
+Full Text Search... Done
+```
+
+** Panašu, kad šis įrankis iš Ubuntu pašalintas 2009-09-11:  +
+   https://superuser.com/questions/96040/did-sysvconfig-disappear-in-ubuntu-9-10
+
+** Taip pat dabar neveikia ir `sysvconfig` atitikmenys, dar veikę po jo pašalinimo:   +
+   `sysv-rc-conf`, `rcconf`:  +
+   https://askubuntu.com/questions/1043248/rcconf-package-alternative-in-bionic-beaver
+
+** Panašu, kad jie nebeveikia nuo 2015 m., kai OS atsirado `systemd` mechanizmas.  +
+   Ir tai kėlė nepatogumų žmonėms, atnaujinantiems Ubuntu jau net nuo versijos `14.04`:  +
+   https://askubuntu.com/questions/1106216/ubuntu-18-04-cant-install-sysv-rc-conf-package-for-managing-startup-services#comment1824791_1106217
+
+** Galbūt reikėtų pagal tai irgi patikslinti LD3 aprašą?
+
+
+* Ieškau atitikmenų darbui su SystemD mechanizmu.  +
+   +
+  Jeigu pakanka tik patikrinti tarnybų būsenas, tiks komanda `systemctl`:
++
+```
+osboxes@ldvm1:~$ systemctl list-unit-files --type=service --all
+
+----8><----------------------------------------------------------------------------------------------------><8----
+UNIT FILE                                  STATE           VENDOR PRESET
+accounts-daemon.service                    enabled         enabled      
+acpid.service                              disabled        enabled      
+alsa-restore.service                       static          enabled      
+alsa-state.service                         static          enabled      
+alsa-utils.service                         masked          enabled      
+anacron.service                            enabled         enabled      
+apache-htcacheclean.service                disabled        enabled      
+apache-htcacheclean@.service               disabled        enabled      
+apache2.service                            enabled         enabled      
+apache2@.service                           disabled        enabled      
+apparmor.service                           enabled         enabled      
+apport-autoreport.service                  static          enabled      
+apport-forward@.service                    static          enabled      
+apport.service                             generated       enabled      
+apt-daily-upgrade.service                  static          enabled      
+apt-daily.service                          static          enabled      
+autovt@.service                            enabled         enabled      
+avahi-daemon.service                       enabled         enabled      
+lines 1-19
+----8><----------------------------------------------------------------------------------------------------><8----
+```
++
+Šitaip lengva filtruoti tarnybas pagal vardus (jų šablonus):
++
+```
+osboxes@ldvm1:~$ systemctl list-unit-files --type=service --all *Manager*
+UNIT FILE                                  STATE   VENDOR PRESET
+dbus-org.freedesktop.ModemManager1.service enabled enabled      
+ModemManager.service                       enabled enabled      
+NetworkManager-dispatcher.service          enabled enabled      
+NetworkManager-wait-online.service         enabled enabled      
+NetworkManager.service                     enabled enabled      
+
+5 unit files listed.
+```
+
+* Tarnybų valdymui susirandu įrankį `serman2`: https://aur.archlinux.org/packages/serman
+
+** Pasiimu jį iš GitHub:
++
+```
+osboxes@ldvm1:~$ mkdir src
+
+osboxes@ldvm1:~$ cd src/
+
+osboxes@ldvm1:~$ git clone https://github.com/baoboa/serman
+Cloning into 'serman'...
+remote: Enumerating objects: 41, done.
+remote: Total 41 (delta 0), reused 0 (delta 0), pack-reused 41
+Unpacking objects: 100% (41/41), 32.70 KiB | 985.00 KiB/s, done.
+```
+
+** Išsibandau įrankį:
++
+```
+osboxes@ldvm1:~/src$ sudo serman/serman.py
+
+----8><----------------------------------------------------------------------------------------------------><8----
+Commands│  Services
+────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────
+enable  │  getty@tty2.service                                                                          running ● ▲
+restart │  getty@tty6.service                                                                          running ● ▲
+start   │  gpu-manager.service                                                                            dead
+status  │  graphical.target                                                                               dead
+        │  grub-common.service                                                                          exited ●
+        │  grub-initrd-fallback.service                                                                   dead
+        │  halt.target
+        │  hibernate.target
+        │  home.mount                                                                                  mounted ●
+        │  hwclock.service
+        │  hybrid-sleep.target
+        │  ifup@.service
+        │  ifup@enp0s8.service                                                                          exited ● ▲
+        │  ifupdown-pre.service                                                                         exited ●
+        │  ifupdown-wait-online.service
+────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────
+query service status (display output with F2)                                                  [press F3 for help]
+```
+
+** Deja, įrankis `serman2` turi trūkumų:
+
+*** Ne visada teisingai nuskaito tarnybų `Enabled` būseną.
+
+*** Taip pat šios būsenos perjungimui (ir kitiems veiksmams) naudoja ne visai intuityvų UI:
+
+**** pagalba kviečiama klavišu `F3`;
+**** veiksmo tipas pasirenkamas kairiame stulpelyje, tarnybos – sąraše dešinėje;
+**** tarp jų persijungiama klavišais `Right`, `Left`;
+**** tarnybas veiksmui įvykdyti reikia pasirinkti klavišu `Space`;
+**** veiksmas įvykdomas klavišu `Enter`;
+**** rezultatas pasižiūrimas klavišus `F3` atskirame vaizde;
+**** grįžtama į pradinį vaizdą paspaudus `Enter`;
+**** programa uždaroma paspaudus `Ctrl-C`;
+**** užuominos (angl. _Hint_) eilutė pradingsta po pirmojo vaizdo perjungimo ir grįžimo.
+
+*** Taip pat įrankis rodo ne tik tarnybų (`.service`), bet ir kitų SystemD vienetų būsenas:
+
+**** `.automount`
+**** `.device`
+**** `.mount`
+**** `.path`
+**** `.scope`
+**** `.slice`
+**** `.socket`
+**** `.swap`
+**** `.target`
+**** `.timer`
+
+* Susirandu kitą įrankį, `chkservice`
+
+** Diegiu:
++
+```
+osboxes@ldvm1:~$ apt-cache search chkservice
+chkservice - Tool for managing systemd units
+osboxes@ldvm1:~$ 
+osboxes@ldvm1:~$ sudo apt-get install chkservice
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  chkservice
+0 upgraded, 1 newly installed, 0 to remove and 159 not upgraded.
+Need to get 41.3 kB of archives.
+After this operation, 188 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 chkservice amd64 0.3-1build1 [41.3 kB]
+Fetched 41.3 kB in 1s (58.7 kB/s)
+Selecting previously unselected package chkservice.
+(Reading database ... 192778 files and directories currently installed.)
+Preparing to unpack .../chkservice_0.3-1build1_amd64.deb ...
+Unpacking chkservice (0.3-1build1) ...
+Setting up chkservice (0.3-1build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+```
+
+** Išbandau `chkservice`:
++
+```
+osboxes@ldvm1:~/src$ sudo chkservice
+
+----8><----------------------------------------------------------------------------------------------------><8----
+ Failed: Connection reset by peer                                                                                 
+                                                                                                                  
+  -m-     kbd.service                                     kbd.service                                             
+  [x]  >  kerneloops.service                              Tool to automatically collect and submit kernel crash   
+  [x]  =  keyboard-setup.service                          Set the console keyboard layout                         
+  [s]  =  kmod-static-nodes.service                       Create list of static device nodes for the current ker  
+  [s]     kmod.service                                    /lib/systemd/system/kmod.service                        
+  [s]  =  logrotate.service                               Rotate log files                                        
+> [x]  =  ModemManager.service                            Modem Manager                                          <
+  [s]  =  man-db.service                                  Daily man-db regeneration                               
+  [s]     modprobe@.service                               /lib/systemd/system/modprobe@.service                   
+  [s]  =  modprobe@drm.service                            Load Kernel Module drm                                  
+  [s]  =  motd-news.service                               Message of the Day                                      
+  [x]  >  mysql.service                                   MySQL Community Server                                  
+  [x]     NetworkManager-dispatcher.service               /lib/systemd/system/NetworkManager-dispatcher.service   
+  [x]  =  NetworkManager-wait-online.service              Network Manager Wait Online                             
+  [x]  >  NetworkManager.service                          Network Manager                                         
+  [x]  =  netplan-ovs-cleanup.service                     OpenVSwitch configuration for cleanup                   
+                                                                                                                  
+                                                         92/533                                                   
+----8><----------------------------------------------------------------------------------------------------><8----
+```
+
+** Norint uždrausti tarnybą ir paspaudus `Space`, gaunu klaidą `Failed: Connection reset by peer`.  +
+   Taip yra dėl klaidos programoje: https://github.com/linuxenko/chkservice/issues/12
+
+** Imu pataisytą programos kodą iš GitHub: https://github.com/nufeng1999/chkservice
++
+```
+osboxes@ldvm1:~$ cd src
+
+osboxes@ldvm1:~/src$ git clone https://github.com/nufeng74/chkservice.git
+Cloning into 'chkservice'...
+remote: Enumerating objects: 424, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 424 (delta 1), reused 4 (delta 1), pack-reused 417
+Receiving objects: 100% (424/424), 98.22 KiB | 1.51 MiB/s, done.
+Resolving deltas: 100% (264/264), done.
+
+osboxes@ldvm1:~/src$ cd chkservice
+osboxes@ldvm1:~/src/chkservice$ mkdir build
+osboxes@ldvm1:~/src/chkservice$ cd build
+
+osboxes@ldvm1:~/src/chkservice/build$ cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+
+Command 'cmake' not found, but can be installed with:
+
+sudo snap install cmake  # version 3.20.5, or
+sudo apt  install cmake  # version 3.16.3-1ubuntu1
+
+See 'snap info cmake' for additional versions.
+```
+
+** Diegiu kūrimo priemones:
++
+```
+osboxes@ldvm1:~/src/chkservice/build$ sudo apt-get install cmake g++ libsystemd-dev libncurses-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  cmake-doc ninja-build g++-multilib ncurses-doc
+The following NEW packages will be installed:
+  cmake g++ libncurses-dev libsystemd-dev
+0 upgraded, 4 newly installed, 0 to remove and 153 not upgraded.
+Need to get 0 B/4,256 kB of archives.
+After this operation, 22.6 MB of additional disk space will be used.
+Selecting previously unselected package cmake.
+(Reading database ... 196958 files and directories currently installed.)
+Preparing to unpack .../cmake_3.16.3-1ubuntu1_amd64.deb ...
+Unpacking cmake (3.16.3-1ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking g++ (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libncurses-dev:amd64.
+Preparing to unpack .../libncurses-dev_6.2-0ubuntu2_amd64.deb ...
+Unpacking libncurses-dev:amd64 (6.2-0ubuntu2) ...
+Selecting previously unselected package libsystemd-dev:amd64.
+Preparing to unpack .../libsystemd-dev_245.4-4ubuntu3.7_amd64.deb ...
+Unpacking libsystemd-dev:amd64 (245.4-4ubuntu3.7) ...
+Setting up libncurses-dev:amd64 (6.2-0ubuntu2) ...
+Setting up g++ (4:9.3.0-1ubuntu2) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up cmake (3.16.3-1ubuntu1) ...
+Setting up libsystemd-dev:amd64 (245.4-4ubuntu3.7) ...
+Processing triggers for man-db (2.9.1-1) ...
+```
+
+** Kompiliuoju įrankį:
++
+```
+osboxes@ldvm1:~/src/chkservice/build$ cmake ..
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- DEBUG mode disabled
+-- Local build
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'libsystemd'
+--   Found libsystemd, version 245
+-- Checking for module 'ncurses'
+--   Found ncurses, version 6.2.20200212
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/osboxes/src/chkservice/build
+
+osboxes@ldvm1:~/src/chkservice/build$ make chkservice
+Scanning dependencies of target CHKSYSTEMD
+[ 10%] Building CXX object src/CMakeFiles/CHKSYSTEMD.dir/chk-systemd.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/CHKSYSTEMD.dir/chk-systemd-utils.cpp.o
+[ 30%] Linking CXX static library libCHKSYSTEMD.a
+[ 30%] Built target CHKSYSTEMD
+[ 40%] Building CXX object src/CMakeFiles/CHKCTL.dir/chk-ctl.cpp.o
+[ 50%] Linking CXX static library libCHKCTL.a
+[ 50%] Built target CHKCTL
+[ 60%] Building CXX object src/CMakeFiles/CHKUI.dir/chk-wmain.cpp.o
+  ...
+[ 70%] Building CXX object src/CMakeFiles/CHKUI.dir/chk-wutils.cpp.o
+[ 80%] Linking CXX static library libCHKUI.a
+[ 80%] Built target CHKUI
+[ 90%] Building CXX object src/CMakeFiles/chkservice.dir/chkservice.cpp.o
+[100%] Linking CXX executable chkservice
+[100%] Built target chkservice
+```
+
+** Išbandau pataisymą:
++
+```
+osboxes@ldvm1:~/src/chkservice/build$ ll src/chkservice
+-rwxrwxr-x 1 osboxes osboxes 94344 Jul  4 15:27 src/chkservice*
+
+osboxes@ldvm1:~/src/chkservice/build$ sudo src/chkservice
+----8><----------------------------------------------------------------------------------------------------><8----
+                                                                                                                  
+                                                                                                                  
+  [x]  >  irqbalance.service                              irqbalance daemon                                       
+  -m-     kbd.service                                     kbd.service                                             
+  [x]  >  kerneloops.service                              Tool to automatically collect and submit kernel crash   
+  [x]  =  keyboard-setup.service                          Set the console keyboard layout                         
+  [s]  =  kmod-static-nodes.service                       Create list of static device nodes for the current ker  
+  [s]     kmod.service                                    /lib/systemd/system/kmod.service                        
+  [s]  =  logrotate.service                               Rotate log files                                        
+> [ ]     ModemManager.service                            /lib/systemd/system/ModemManager.service               <
+  [s]  =  man-db.service                                  Daily man-db regeneration                               
+  [s]     modprobe@.service                               /lib/systemd/system/modprobe@.service                   
+  [s]  =  modprobe@drm.service                            Load Kernel Module drm                                  
+  [s]  =  motd-news.service                               Message of the Day                                      
+  [x]  >  mysql.service                                   MySQL Community Server                                  
+  [x]     NetworkManager-dispatcher.service               /lib/systemd/system/NetworkManager-dispatcher.service   
+  [x]  =  NetworkManager-wait-online.service              Network Manager Wait Online                             
+  [x]  >  NetworkManager.service                          Network Manager                                         
+                                                                                                                  
+                                                         91/532                                                   
+----8><----------------------------------------------------------------------------------------------------><8----
+```
++
+Ties `ModemManager` paspaudus `Space`, tarnyba dabar išsijungia jau iškart.
+
+** `chkservice` trūkumai:
+
+*** Nevystomas, autorės apleistas.
+*** Nevisai intuityvus GUI:
+**** Pagalbos klavišas `?`;
+**** Paieška randa tik pirmą rezultatą;
+**** Neaprašytas būsenos stulpelis:
+***** `=` – sustabdyta tarnyba;
+***** `>` – veikianti tarnyba.
+
+* Susirandu dar vieną įrankį, `systemctl-ui`.
+
+** Pasiimu jį iš GitHub:
++
+```
+osboxes@ldvm1:~/src$ git clone https://github.com/mpbcode/systemctl-ui
+Cloning into 'systemctl-ui'...
+remote: Enumerating objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), 14.05 KiB | 1.76 MiB/s, done.
+```
+
+** Diegiu Lua interpretatorių:
++
+```
+osboxes@ldvm1:~/src$ sudo apt-get install lua5.3
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  lua5.3
+0 upgraded, 1 newly installed, 0 to remove and 153 not upgraded.
+Need to get 0 B/110 kB of archives.
+After this operation, 414 kB of additional disk space will be used.
+Selecting previously unselected package lua5.3.
+(Reading database ... 197606 files and directories currently installed.)
+Preparing to unpack .../lua5.3_5.3.3-1.1ubuntu2_amd64.deb ...
+Unpacking lua5.3 (5.3.3-1.1ubuntu2) ...
+Setting up lua5.3 (5.3.3-1.1ubuntu2) ...
+update-alternatives: using /usr/bin/lua5.3 to provide /usr/bin/lua (lua-interpreter) in auto mode
+update-alternatives: using /usr/bin/luac5.3 to provide /usr/bin/luac (lua-compiler) in auto mode
+Processing triggers for man-db (2.9.1-1) ...
+```
+
+** Tikrinu įrankį:
++
+image::https://user-images.githubusercontent.com/74717106/124387489-9462ef80-dce7-11eb-91be-66d6f26e259d.png[]
+
+** Deja, jis rodo tik uždraustas (_Disabled_) tarnybas:  +
+   https://github.com/mpbcode/systemctl-ui/issues/1
+
+* Įrankio paieškos apibendrinimas:
+
+** įrankis `chkservice` gana tiksliai atitinka `sysvconfig`;
+** puikiai veikia su SystemD _Init_-mechanizmu;
+** tik nerodo tarnybų priklausomybių nuo _Runlevels_ (arba nuo _targets_, kalbant SystemD terminais).
+
+
+SSH serverio instaliavimas
+
+```
+osboxes@ldvm1:~$ sudo apt-get install ssh
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+Suggested packages:
+  molly-guard monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh ssh-import-id
+0 upgraded, 5 newly installed, 0 to remove and 153 not upgraded.
+Need to get 429 kB/693 kB of archives.
+After this operation, 6,130 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.2 [51.5 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.2 [377 kB]
+Fetched 429 kB in 1s (300 kB/s)         
+Preconfiguring packages ...
+Selecting previously unselected package openssh-sftp-server.
+(Reading database ... 194772 files and directories currently installed.)
+Preparing to unpack .../openssh-sftp-server_1%3a8.2p1-4ubuntu0.2_amd64.deb ...
+Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.2) ...
+Selecting previously unselected package openssh-server.
+Preparing to unpack .../openssh-server_1%3a8.2p1-4ubuntu0.2_amd64.deb ...
+Unpacking openssh-server (1:8.2p1-4ubuntu0.2) ...
+Selecting previously unselected package ssh.
+Preparing to unpack .../ssh_1%3a8.2p1-4ubuntu0.2_all.deb ...
+Unpacking ssh (1:8.2p1-4ubuntu0.2) ...
+Selecting previously unselected package ncurses-term.
+Preparing to unpack .../ncurses-term_6.2-0ubuntu2_all.deb ...
+Unpacking ncurses-term (6.2-0ubuntu2) ...
+Selecting previously unselected package ssh-import-id.
+Preparing to unpack .../ssh-import-id_5.10-0ubuntu1_all.deb ...
+Unpacking ssh-import-id (5.10-0ubuntu1) ...
+Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.2) ...
+Setting up openssh-server (1:8.2p1-4ubuntu0.2) ...
+rescue-ssh.target is a disabled or a static unit, not starting it.
+Setting up ssh-import-id (5.10-0ubuntu1) ...
+Setting up ncurses-term (6.2-0ubuntu2) ...
+Setting up ssh (1:8.2p1-4ubuntu0.2) ...
+Processing triggers for systemd (245.4-4ubuntu3.7) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ufw (0.36-6) ...
+```
+
+* Patikrinu, veikia:
++
+```
+osboxes@ldvm1:~$ systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2021-07-04 18:04:15 EEST; 12min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 34166 (sshd)
+      Tasks: 1 (limit: 1105)
+     Memory: 1.8M
+     CGroup: /system.slice/ssh.service
+             └─34166 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+Jul 04 18:04:15 ldvm1 systemd[1]: Starting OpenBSD Secure Shell server...
+Jul 04 18:04:15 ldvm1 sshd[34166]: Server listening on 0.0.0.0 port 22.
+Jul 04 18:04:15 ldvm1 sshd[34166]: Server listening on :: port 22.
+Jul 04 18:04:15 ldvm1 systemd[1]: Started OpenBSD Secure Shell server.
+Jul 04 18:04:46 ldvm1 sshd[34863]: Accepted password for osboxes from 192.168.10.254 port 33654 ssh2
+Jul 04 18:04:46 ldvm1 sshd[34863]: pam_unix(sshd:session): session opened for user osboxes by (uid=0)
+```
+Tą patį pakartojau ir kaimyniniame kompiuteryje.
+
+
+### 3. Tinklo paslaugų tikrinimas
+
+Teikiamos tinklo paslaugos:
+
+```
+osboxes@ldvm1:~$ netstat -an
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:33060         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp6       0      0 :::80                   :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+tcp6       0      0 :::443                  :::*                    LISTEN     
+udp        0      0 0.0.0.0:631             0.0.0.0:*                          
+udp        0      0 0.0.0.0:40623           0.0.0.0:*                          
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+udp6       0      0 :::39624                :::*                               
+udp6       0      0 :::5353                 :::*                               
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     SEQPACKET  LISTENING     15802    /run/udev/control
+unix  2      [ ]         DGRAM                    29218    /run/user/1000/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     15777    /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     29221    /run/user/1000/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     29227    /run/user/1000/bus
+unix  2      [ ACC ]     STREAM     LISTENING     15779    /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     15788    /run/systemd/fsck.progress
+unix  2      [ ACC ]     STREAM     LISTENING     29228    /run/user/1000/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     29229    /run/user/1000/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     29231    /run/user/1000/gnupg/S.gpg-agent.extra
+unix  12     [ ]         DGRAM                    15796    /run/systemd/journal/dev-log
+unix  2      [ ACC ]     STREAM     LISTENING     29232    /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     15798    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     29233    /run/user/1000/gnupg/S.gpg-agent
+unix  7      [ ]         DGRAM                    15800    /run/systemd/journal/socket
+unix  2      [ ACC ]     STREAM     LISTENING     29234    /run/user/1000/pk-debconf-socket
+unix  2      [ ACC ]     STREAM     LISTENING     29235    /run/user/1000/pulse/native
+unix  2      [ ACC ]     STREAM     LISTENING     29236    /run/user/1000/snapd-session-agent.socket
+unix  2      [ ACC ]     STREAM     LISTENING     14249    /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     20196    /run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     20198    /run/avahi-daemon/socket
+unix  2      [ ACC ]     STREAM     LISTENING     20200    /run/cups/cups.sock
+unix  2      [ ACC ]     STREAM     LISTENING     20202    /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     20204    /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     20206    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     20208    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     21772    /run/irqbalance//irqbalance690.sock
+unix  2      [ ACC ]     STREAM     LISTENING     24907    /var/run/mysqld/mysqlx.sock
+unix  2      [ ACC ]     STREAM     LISTENING     24909    /var/run/mysqld/mysqld.sock
+unix  4      [ ]         DGRAM                    15774    /run/systemd/notify
+unix  3      [ ]         STREAM     CONNECTED     30471    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    24880    
+unix  3      [ ]         DGRAM                    18641    
+unix  3      [ ]         STREAM     CONNECTED     22232    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30484    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    18637    
+unix  3      [ ]         STREAM     CONNECTED     23851    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30483    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    15776    
+unix  3      [ ]         STREAM     CONNECTED     30494    
+unix  3      [ ]         STREAM     CONNECTED     22231    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20475    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30482    
+unix  3      [ ]         DGRAM                    18642    
+unix  2      [ ]         DGRAM                    29196    
+unix  3      [ ]         STREAM     CONNECTED     21631    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30463    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     20540    
+unix  3      [ ]         STREAM     CONNECTED     29438    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    18640    
+unix  3      [ ]         STREAM     CONNECTED     20719    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    15775    
+unix  3      [ ]         STREAM     CONNECTED     30464    
+unix  2      [ ]         DGRAM                    29209    
+unix  3      [ ]         STREAM     CONNECTED     20579    
+unix  3      [ ]         STREAM     CONNECTED     30424    
+unix  3      [ ]         STREAM     CONNECTED     22913    
+unix  3      [ ]         STREAM     CONNECTED     30421    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     20542    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    23016    
+unix  3      [ ]         STREAM     CONNECTED     30495    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19045    
+unix  3      [ ]         DGRAM                    29219    
+unix  3      [ ]         STREAM     CONNECTED     20543    
+unix  3      [ ]         STREAM     CONNECTED     30470    
+unix  3      [ ]         DGRAM                    29220    
+unix  3      [ ]         STREAM     CONNECTED     20717    
+unix  3      [ ]         STREAM     CONNECTED     30481    
+unix  3      [ ]         STREAM     CONNECTED     29222    
+unix  3      [ ]         STREAM     CONNECTED     30420    
+unix  3      [ ]         DGRAM                    18639    
+unix  3      [ ]         STREAM     CONNECTED     29223    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20474    
+unix  3      [ ]         STREAM     CONNECTED     20726    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    14303    
+unix  3      [ ]         STREAM     CONNECTED     22122    
+unix  2      [ ]         DGRAM                    19439    
+unix  3      [ ]         STREAM     CONNECTED     20541    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17776    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20806    
+unix  3      [ ]         STREAM     CONNECTED     21561    
+unix  3      [ ]         STREAM     CONNECTED     18626    
+unix  3      [ ]         STREAM     CONNECTED     23830    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22229    
+unix  3      [ ]         STREAM     CONNECTED     21840    
+unix  2      [ ]         DGRAM                    20651    
+unix  3      [ ]         STREAM     CONNECTED     22237    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24572    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20547    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22233    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21447    
+unix  2      [ ]         DGRAM                    29676    
+unix  2      [ ]         DGRAM                    26316    
+unix  3      [ ]         STREAM     CONNECTED     21973    
+unix  3      [ ]         STREAM     CONNECTED     19230    
+unix  3      [ ]         STREAM     CONNECTED     22230    
+unix  3      [ ]         STREAM     CONNECTED     21566    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24571    
+unix  3      [ ]         STREAM     CONNECTED     23831    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22623    
+unix  2      [ ]         DGRAM                    22228    
+unix  3      [ ]         STREAM     CONNECTED     20795    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19782    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20805    
+unix  3      [ ]         STREAM     CONNECTED     19291    
+unix  3      [ ]         STREAM     CONNECTED     17695    
+unix  3      [ ]         STREAM     CONNECTED     20904    
+unix  3      [ ]         STREAM     CONNECTED     22626    
+unix  3      [ ]         STREAM     CONNECTED     29188    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25536    
+unix  3      [ ]         STREAM     CONNECTED     23036    
+unix  3      [ ]         STREAM     CONNECTED     23430    
+unix  3      [ ]         STREAM     CONNECTED     20401    
+unix  3      [ ]         STREAM     CONNECTED     23019    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20402    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24668    
+unix  3      [ ]         STREAM     CONNECTED     22238    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21017    
+unix  3      [ ]         STREAM     CONNECTED     22234    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23972    
+unix  3      [ ]         STREAM     CONNECTED     20918    
+unix  2      [ ]         DGRAM                    14251    
+unix  3      [ ]         STREAM     CONNECTED     22210    
+unix  3      [ ]         STREAM     CONNECTED     23040    
+unix  3      [ ]         STREAM     CONNECTED     24669    
+unix  3      [ ]         STREAM     CONNECTED     23639    
+unix  3      [ ]         STREAM     CONNECTED     23431    
+unix  3      [ ]         STREAM     CONNECTED     24606    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22235    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    22625    
+unix  3      [ ]         STREAM     CONNECTED     29186    
+unix  3      [ ]         STREAM     CONNECTED     25537    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    25319    
+unix  3      [ ]         STREAM     CONNECTED     23037    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    20912    
+unix  3      [ ]         STREAM     CONNECTED     23050    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24605    
+unix  2      [ ]         STREAM     CONNECTED     23035    
+unix  3      [ ]         STREAM     CONNECTED     22351    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    25318    
+unix  3      [ ]         STREAM     CONNECTED     23041    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    20403    
+unix  3      [ ]         STREAM     CONNECTED     29382    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     30503    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     26851    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22256    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30507    
+unix  3      [ ]         STREAM     CONNECTED     29348    
+unix  2      [ ]         DGRAM                    29531    
+unix  3      [ ]         STREAM     CONNECTED     30383    
+unix  2      [ ]         DGRAM                    29378    
+unix  3      [ ]         STREAM     CONNECTED     24280    
+unix  3      [ ]         STREAM     CONNECTED     29620    
+unix  3      [ ]         STREAM     CONNECTED     30255    
+unix  3      [ ]         STREAM     CONNECTED     26299    
+unix  3      [ ]         STREAM     CONNECTED     29443    
+unix  3      [ ]         STREAM     CONNECTED     24183    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    21100    
+unix  3      [ ]         STREAM     CONNECTED     29621    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30294    
+unix  3      [ ]         STREAM     CONNECTED     25509    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30476    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     29402    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25928    
+unix  3      [ ]         DGRAM                    16825    
+unix  2      [ ]         STREAM     CONNECTED     23636    
+unix  3      [ ]         STREAM     CONNECTED     24182    
+unix  3      [ ]         STREAM     CONNECTED     29527    
+unix  3      [ ]         STREAM     CONNECTED     30385    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     30466    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    28978    
+unix  3      [ ]         STREAM     CONNECTED     29526    
+unix  3      [ ]         STREAM     CONNECTED     29363    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     29379    
+unix  3      [ ]         STREAM     CONNECTED     30384    
+unix  3      [ ]         STREAM     CONNECTED     30499    
+unix  3      [ ]         STREAM     CONNECTED     29404    
+unix  3      [ ]         STREAM     CONNECTED     29578    
+unix  3      [ ]         STREAM     CONNECTED     30469    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27810    
+unix  3      [ ]         STREAM     CONNECTED     30500    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     29286    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24286    
+unix  3      [ ]         STREAM     CONNECTED     29538    
+unix  3      [ ]         STREAM     CONNECTED     29486    
+unix  3      [ ]         DGRAM                    16826    
+unix  3      [ ]         STREAM     CONNECTED     29380    
+unix  3      [ ]         STREAM     CONNECTED     24301    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     29619    
+unix  2      [ ]         DGRAM                    30253    
+unix  2      [ ]         DGRAM                    16820    
+unix  3      [ ]         STREAM     CONNECTED     30513    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     29440    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24287    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30475    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     29383    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     24181    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30502    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     29285    
+unix  3      [ ]         STREAM     CONNECTED     24300    
+unix  3      [ ]         STREAM     CONNECTED     29536    
+unix  3      [ ]         STREAM     CONNECTED     30247    
+unix  3      [ ]         STREAM     CONNECTED     30501    
+unix  3      [ ]         STREAM     CONNECTED     29439    
+unix  3      [ ]         STREAM     CONNECTED     24281    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30506    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     29243    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     23227    
+unix  3      [ ]         STREAM     CONNECTED     30512    
+unix  3      [ ]         STREAM     CONNECTED     29537    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     26844    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30508    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     30387    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     30511    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     26850    
+unix  3      [ ]         STREAM     CONNECTED     25322    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21371    
+```
+
+Jungiuosi prie kaimyno per SSH:
+
+```
+osboxes@ldvm1:~$ ssh 192.168.10.13
+osboxes@192.168.10.13's password: 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+158 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+Last login: Sat Jul  3 03:12:12 2021 from 192.168.10.14
+osboxes@ldvm2:~$ 
+```
+
+Stebiu paslaugų būvio pasikeitimą:
+
+```
+osboxes@ldvm1:~$ netstat -an
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:33060         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+  ...
+
+osboxes@ldvm1:~$ netstat -an > debug/06.nestat_-an_po_SSH_jungimosi.txt
+
+osboxes@ldvm1:~$ diff -u debug/{05,06}*.txt
+--- debug/05.nestat_-an_iki_SSH_jungimosi.txt   2021-07-04 20:06:52.016784218 +0300
++++ debug/06.nestat_-an_po_SSH_jungimosi.txt    2021-07-04 20:10:53.017234133 +0300
+@@ -4,6 +4,8 @@
+ tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN     
+ tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+ tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
++tcp        0      0 192.168.10.14:51672     192.168.10.13:22        TIME_WAIT  
++tcp        0      0 192.168.10.14:51674     192.168.10.13:22        ESTABLISHED
+ tcp6       0      0 :::80                   :::*                    LISTEN     
+ tcp6       0      0 :::22                   :::*                    LISTEN     
+ tcp6       0      0 ::1:631                 :::*                    LISTEN     
+@@ -25,7 +27,7 @@
+ unix  2      [ ACC ]     STREAM     LISTENING     29228    /run/user/1000/gnupg/S.dirmngr
+ unix  2      [ ACC ]     STREAM     LISTENING     29229    /run/user/1000/gnupg/S.gpg-agent.browser
+ unix  2      [ ACC ]     STREAM     LISTENING     29231    /run/user/1000/gnupg/S.gpg-agent.extra
+-unix  12     [ ]         DGRAM                    15796    /run/systemd/journal/dev-log
++unix  13     [ ]         DGRAM                    15796    /run/systemd/journal/dev-log
+ unix  2      [ ACC ]     STREAM     LISTENING     29232    /run/user/1000/gnupg/S.gpg-agent.ssh
+ unix  2      [ ACC ]     STREAM     LISTENING     15798    /run/systemd/journal/stdout
+ unix  2      [ ACC ]     STREAM     LISTENING     29233    /run/user/1000/gnupg/S.gpg-agent
+@@ -90,9 +92,11 @@
+ unix  3      [ ]         STREAM     CONNECTED     20474    
+ unix  3      [ ]         STREAM     CONNECTED     20726    /run/systemd/journal/stdout
+ unix  2      [ ]         DGRAM                    14303    
++unix  3      [ ]         STREAM     CONNECTED     30697    /run/user/1000/bus
+ unix  3      [ ]         STREAM     CONNECTED     22122    
+ unix  2      [ ]         DGRAM                    19439    
+ unix  3      [ ]         STREAM     CONNECTED     20541    /run/systemd/journal/stdout
++unix  3      [ ]         STREAM     CONNECTED     30763    
+ unix  3      [ ]         STREAM     CONNECTED     17776    /run/systemd/journal/stdout
+ unix  3      [ ]         STREAM     CONNECTED     20806    
+ unix  3      [ ]         STREAM     CONNECTED     21561    
+@@ -165,6 +169,7 @@
+ unix  3      [ ]         STREAM     CONNECTED     29348    
+ unix  2      [ ]         DGRAM                    29531    
+```
+Palyginimui įrašiau komandos išvesti abu kartus į skirtingus failus.  +
+Tuomet pasinaudojau įrankiu `diff -u`.
+
+Iš tinklinių (ne _Unix-socket_) prisijungimų atsirado du nauji įrašai:
+
+```
+tcp        0      0 192.168.10.14:51672     192.168.10.13:22        TIME_WAIT  
+tcp        0      0 192.168.10.14:51674     192.168.10.13:22        ESTABLISHED
+```
+
+* Pirmasis iš jų yra rodo mano pirmą bandymą prisijungti (nepavykusi autentikacija ir nutrūkęs ryšys).
+* Antrasis iš jų yra rodo antrą, sėkmingą bandymą prisijungti.
+
+
+### 4. Kaimyno skenavimas
+
+Rezultatai:
+
+```
+osboxes@ldvm1:~$ sudo nmap -sS -P0 -n -F 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-04 20:37 EEST
+Nmap scan report for 192.168.10.13
+Host is up (0.00067s latency).
+Not shown: 99 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
+```
+
+- Kaimyno kompiuteryje matau prieinamą tik vieną paslaugą / tarnybą:
+
+** SSH
+
+Taip pat nuskenavau ir savo kompiuterį iš kaimyninio kompiuterio:  +
+(kadangi žiniatinklis paruoštas tik savajame)
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 07:23 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.0013s latency).
+Not shown: 97 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
+```
+
+- Savajame kompiuteryje matau prieinamas jau tris paslaugas / tarnybas:
+
+** SSH
+** HTTP
+** HTTPS
+
+
+### 5. Paketų persiuntimo įjungimas
+
+Įjungiu persiuntimą faile:
+
+```
+osboxes@ldvm1:~$ sudo vim.tiny /etc/sysctl.conf
+  ...
+osboxes@ldvm1:~$ diff -u /etc/sysctl.conf.BACKUP /etc/sysctl.conf
+--- /etc/sysctl.conf.BACKUP     2020-02-14 00:44:31.000000000 +0200
++++ /etc/sysctl.conf    2021-07-04 21:44:31.551125680 +0300
+@@ -25,7 +25,7 @@
+ #net.ipv4.tcp_syncookies=1
+ 
+ # Uncomment the next line to enable packet forwarding for IPv4
+-#net.ipv4.ip_forward=1
++ net.ipv4.ip_forward=1
+ 
+ # Uncomment the next line to enable packet forwarding for IPv6
+ #  Enabling this option disables Stateless Address Autoconfiguration
+```
+
+Peržiūriu įkeltus modulius:
+
+```
+osboxes@ldvm1:~$ lsmod
+Module                  Size  Used by
+vboxsf                 32768  0
+intel_rapl_msr         20480  0
+joydev                 24576  0
+intel_rapl_common      28672  1 intel_rapl_msr
+crct10dif_pclmul       16384  1
+ghash_clmulni_intel    16384  0
+aesni_intel           372736  0
+snd_intel8x0           45056  2
+crypto_simd            16384  1 aesni_intel
+snd_ac97_codec        139264  1 snd_intel8x0
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+ac97_bus               16384  1 snd_ac97_codec
+glue_helper            16384  1 aesni_intel
+snd_pcm               114688  2 snd_intel8x0,snd_ac97_codec
+rapl                   20480  0
+snd_seq_midi           20480  0
+vboxvideo              24576  0
+input_leds             16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+drm_vram_helper        24576  1 vboxvideo
+serio_raw              20480  0
+snd_rawmidi            36864  1 snd_seq_midi
+drm_ttm_helper         16384  1 drm_vram_helper
+ttm                   102400  2 drm_vram_helper,drm_ttm_helper
+snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+drm_kms_helper        217088  4 drm_vram_helper,vboxvideo
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_timer              40960  2 snd_seq,snd_pcm
+cec                    53248  1 drm_kms_helper
+snd                    94208  11 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi
+rc_core                61440  1 cec
+fb_sys_fops            16384  1 drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+soundcore              16384  1 snd
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+vboxguest              45056  2 vboxsf
+mac_hid                16384  0
+sch_fq_codel           20480  3
+parport_pc             45056  0
+ppdev                  24576  0
+lp                     20480  0
+parport                65536  3 parport_pc,lp,ppdev
+drm                   552960  6 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttm
+ip_tables              32768  0
+x_tables               49152  1 ip_tables
+autofs4                45056  2
+crc32_pclmul           16384  0
+ahci                   40960  4
+video                  49152  0
+psmouse               155648  0
+libahci                36864  1 ahci
+i2c_piix4              28672  0
+e1000                 147456  0
+```
+
+Nustatau automatinį poros modulių užkrovimą:
+
+```
+osboxes@ldvm1:~$ sudo vim.tiny /etc/modules
+
+osboxes@ldvm1:~$ diff -u /etc/modules.BACKUP /etc/modules
+--- /etc/modules.BACKUP 2021-02-09 20:47:47.000000000 +0200
++++ /etc/modules        2021-07-04 21:50:30.436516065 +0300
+@@ -2,4 +2,5 @@
+ #
+ # This file contains the names of kernel modules that should be loaded
+ # at boot time, one per line. Lines beginning with "#" are ignored.
+-
++iptable_nat
++ip_conntrack
+```
+
+Nerperkraudamas kompiuterio nustatau šias vertes tiesioges:
+
+```
+osboxes@ldvm1:~$ cat /proc/sys/net/ipv4/ip_forward
+0
+osboxes@ldvm1:~$ sudo -i
+
+root@ldvm1:~# echo "1" > /proc/sys/net/ipv4/ip_forward
+root@ldvm1:~# modprobe iptable_nat
+root@ldvm1:~# logout
+```
+
+Patikrinu:
+
+```
+osboxes@ldvm1:~$ cat /proc/sys/net/ipv4/ip_forward
+1
+
+osboxes@ldvm1:~$ diff -u debug/{07,08}*
+--- "debug/07.lsmod_iki_konfig\305\253ravimo.txt"       2021-07-04 21:47:37.557323506 +0300
++++ "debug/08.lsmod_po_konfig\305\253ravimo.txt"        2021-07-04 22:02:47.493794416 +0300
+@@ -1,4 +1,10 @@
+ Module                  Size  Used by
++iptable_nat            16384  0
++nf_nat                 45056  1 iptable_nat
++nf_conntrack          147456  1 nf_nat
++nf_defrag_ipv6         24576  1 nf_conntrack
++nf_defrag_ipv4         16384  1 nf_conntrack
++libcrc32c              16384  2 nf_conntrack,nf_nat
+ vboxsf                 32768  0
+ intel_rapl_msr         20480  0
+ joydev                 24576  0
+@@ -43,7 +49,7 @@
+ lp                     20480  0
+ parport                65536  3 parport_pc,lp,ppdev
+ drm                   552960  6 drm_kms_helper,drm_vram_helper,vboxvideo,drm_ttm_helper,ttm
+-ip_tables              32768  0
++ip_tables              32768  1 iptable_nat
+ x_tables               49152  1 ip_tables
+ autofs4                45056  2
+ crc32_pclmul           16384  0
+```
+Nustatymas įvyko, o `iptable_nat` modulis įkeltas į branduolio erdvę (kartu su dar penkiais moduliais).
+
+
+### 6. `iptables` patikrinimas
+
+Peržiūriu nustatymus pagal nutylėjimą:
+
+```
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+Uždraudžiu įeinančius paketus:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -j DROP
+```
+
+Išbandau draudimą, veikia:
+
+```
+osboxes@ldvm2:~$ time ssh 192.168.10.14
+ssh: connect to host 192.168.10.14 port 22: Connection timed out
+
+real    2m10.382s
+user    0m0.004s
+sys     0m0.011s
+```
+Ryšys iš kaimyninio kompiuterio nebeužsimezga, įvyksta _Timeout_.
+
+Žiūriu, kaip pasikeitė nustatymai:
+
+```
+osboxes@ldvm1:~$ sudo iptables --list
+sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       all  --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+```
+```
+osboxes@ldvm1:~$ sudo iptables --list > debug/10.iptables_po_bandymų.txt
+osboxes@ldvm1:~$ diff -u debug/{09,10}*
+--- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
++++ "debug/10.iptables_po_bandym\305\263.txt"   2021-07-04 22:17:24.473222360 +0300
+@@ -1,5 +1,6 @@
+ Chain INPUT (policy ACCEPT)
+ target     prot opt source               destination         
++DROP       all  --  anywhere             anywhere            
+ 
+ Chain FORWARD (policy ACCEPT)
+ target     prot opt source               destination         
+```
+
+Atsirado viena nauja eilutė: `DROP       all  --  anywhere             anywhere`
+
+Išvalau `iptables`:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+```
+
+Patikrinu ICMP pingą iš kaimyninio kompiuterio:
+
+```
+sboxes@ldvm2:~$ ping -c 3 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.776 ms
+64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.968 ms
+64 bytes from 192.168.10.14: icmp_seq=3 ttl=64 time=0.776 ms
+
+--- 192.168.10.14 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.776/0.840/0.968/0.090 ms
+```
+
+Uždraudžiu ICMP protokolą:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
+```
+
+Tikrinu, ar atsirado taisyklė:
+
+```
+osboxes@ldvm1:~$ sudo iptables --list 
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       icmp --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+```
+osboxes@ldvm1:~$ sudo iptables --list > debug/11.iptables_po_ICMP_taisyklės.txt
+osboxes@ldvm1:~$ diff -u debug/{09,11}*.txt
+--- "debug/09.iptables_iki_bandym\305\263.txt"  2021-07-04 22:08:14.293905599 +0300
++++ "debug/11.iptables_po_ICMP_taisykl\304\227s.txt"    2021-07-04 22:45:28.062899693 +0300
+@@ -1,5 +1,6 @@
+ Chain INPUT (policy ACCEPT)
+ target     prot opt source               destination         
++DROP       icmp --  anywhere             anywhere            
+ 
+ Chain FORWARD (policy ACCEPT)
+ target     prot opt source               destination         
+```
+
+Tikrinu ją, veikia:
+
+```
+sboxes@ldvm2:~$ ping -c 3 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+
+--- 192.168.10.14 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 3054ms
+
+```
+
+Kompiuteris į ICMP pingą nebeatsako.
+
+Išvalau `iptables`:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
+
+Paleidžiu `ping` srautą į virtualų kompiuterį:
+
+```
+[p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+```
+
+Stebiu, kaip vykdoma komanda:
+
+```
+64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.439 ms
+64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.567 ms
+64 bytes from 192.168.10.14: icmp_seq=3 ttl=64 time=0.745 ms
+64 bytes from 192.168.10.14: icmp_seq=4 ttl=64 time=0.568 ms
+```
+
+Sustabdau srautą `Ctrl+C` pagalba:
+
+```
+^C
+--- 192.168.10.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3000ms
+rtt min/avg/max/mdev = 0.439/0.579/0.745/0.112 ms
+```
+
+Nustatau apribojimą 1 šalt./s:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst 1 -j ACCEPT
+```
+
+* Deja, virtualaus kompiuterio reakcija į _ping_ srautą nepasikeitė.  +
+  Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
+
+* Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     icmp --  anywhere             anywhere             limit: avg 1/sec burst 1
+DROP       icmp --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+```
+
+* Vėl paleidžiu _ping_ srautą:
+
+```
+[p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.771 ms
+64 bytes from 192.168.10.14: icmp_seq=4 ttl=64 time=0.665 ms
+64 bytes from 192.168.10.14: icmp_seq=6 ttl=64 time=0.623 ms
+64 bytes from 192.168.10.14: icmp_seq=8 ttl=64 time=0.636 ms
+^C
+--- 192.168.10.14 ping statistics ---
+8 packets transmitted, 4 received, 50% packet loss, time 7000ms
+rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
+```
+
+* Dabar iš aštuonių paketų per 7s atkeliavo tik 4 (50%).  +
+  Kompiuteris atmeta kas antrą ICMP paketą.  +
+  Panašu, kad įeinančio ICMP srauto ribojimas dabar veikia.
+
+Išvalau `iptables`:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+### 8. _Telnet_ uždraudimas
+
+Registruoju _Telnet_ užklausas žurnale ir jų neleidžiu:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j LOG --log-prefix 'TELNET ATTEMPT: '
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+Kreipiuosi iš realaus į savo virtualų kompiuterį _Telnet_ protokolu:
+
+```
+[p@localhost Saulius-Krasuckas]$ telnet 192.168.10.14
+Trying 192.168.10.14...
+telnet: connect to address 192.168.10.14: Connection refused
+```
+
+Peržiūriu įrašus jo žurnale:
+
+```
+osboxes@ldvm1:~$ tail -0f /var/log/syslog
+Jul  5 10:00:26 ldvm1 kernel: [ 7539.021434] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=46720 DF PROTO=TCP SPT=52720 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+```
+
+Kreipiuosi iš kaimyno į savo virtualų kompiuterį _Telnet_ protokolu:
+
+```
+osboxes@ldvm2:~$ time telnet 192.168.10.14
+Trying 192.168.10.14...
+telnet: Unable to connect to remote host: Connection refused
+
+real    0m0.013s
+user    0m0.006s
+sys     0m0.005s
+```
+
+Užklausa atmetama iškart.
+
+O žurnalas vėl pasipildė:
+
+```
+Jul  5 10:04:18 ldvm1 kernel: [ 7765.363946] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:08:00:27:7a:d0:b7:08:00 SRC=192.168.10.13 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=1374 DF PROTO=TCP SPT=39398 DPT=23 WINDOW=64240 RES=0x00 SYN URGP=0 
+```
+
+* Tačiau tai yra užklausų ne uždraudimas, o tik jų registravimas.  +
+  Uždraudimui reikėtų papildomos taisyklės su `-j DROP`.
+
+* Uždraudžiu _Telnet_ užklausas iš tikrųjų:
++
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j DROP
+osboxes@ldvm1:~$ sudo iptables --list
+[sudo] password for osboxes: 
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
+DROP       tcp  --  anywhere             ldvm1                tcp dpt:telnet
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+* Kreipiuosi iš kaimyninio kompiuterio į savo virtualųjį:
++
+```
+osboxes@ldvm2:~$ time telnet 192.168.10.14
+Trying 192.168.10.14...
+telnet: Unable to connect to remote host: Connection timed out
+
+real    2m9.458s
+user    0m0.003s
+sys     0m0.008s
+```
+
+* Šįkart užklausa trunka ilgai, ir irgi nesėkminga.
+
+* Dabar virtualiojo kompiuterio žurnalas pasipildė net septyniais įrašais apie užklausą:
++
+```
+osboxes@ldvm1:~$ tail -0f /var/log/syslog
+Jul  5 10:13:59 ldvm1 tracker-store[1682]: OK
+Jul  5 10:13:59 ldvm1 systemd[997]: tracker-store.service: Succeeded.
+Jul  5 10:14:06 ldvm1 kernel: [ 8339.632492] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9577 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:07 ldvm1 kernel: [ 8340.609642] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9578 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:09 ldvm1 kernel: [ 8342.562629] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9579 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:13 ldvm1 kernel: [ 8346.473122] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9580 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:21 ldvm1 kernel: [ 8354.294072] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9581 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:14:38 ldvm1 kernel: [ 8369.935750] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9582 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:15:10 ldvm1 kernel: [ 8401.219388] TELNET ATTEMPT: IN=enp0s8 OUT= MAC=08:00:27:40:2c:f6:0a:00:27:00:00:00:08:00 SRC=192.168.10.254 DST=192.168.10.14 LEN=60 TOS=0x10 PREC=0x00 TTL=64 ID=9583 DF PROTO=TCP SPT=52736 DPT=23 WINDOW=29200 RES=0x00 SYN URGP=0 
+Jul  5 10:17:02 ldvm1 CRON[1816]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+```
+
+* Tad panašu, kad dabar ji tikrai atmetama (ir todėl kartojama).
+
+
+### 9. Automatinė taisyklių keltis
+
+Sukuriu direktoriją taisyklėms saugoti:
+
+```
+osboxes@ldvm1:~$ sudo mkdir /etc/iptables
+```
+
+Sukonfigūruoju `iptables`:
+
+- išvalau buvusius nustatymus:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+```
+
+- nustatau taisykles pagal nutylėjimą:
+
+```
+osboxes@ldvm1:~$ sudo iptables -P INPUT DROP
+osboxes@ldvm1:~$ sudo iptables -P FORWARD DROP
+osboxes@ldvm1:~$ sudo iptables -P OUTPUT ACCEPT
+osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 22 -j ACCEPT
+osboxes@ldvm1:~$ sudo iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 443 -j ACCEPT
+```
+
+Patikrinu konfigūraciją:
+
+```
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:ssh
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:https
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+Įrašau konfigūraciją į failą:
+
+```
+osboxes@ldvm1:~$ sudo -i
+root@ldvm1:~# 
+root@ldvm1:~# /sbin/iptables-save > /etc/iptables/iptables.conf
+root@ldvm1:~# logout
+
+osboxes@ldvm1:~$ ll /etc/iptables/iptables.conf
+-rw-r--r-- 1 root root 531 Jul  5 13:13 /etc/iptables/iptables.conf
+
+osboxes@ldvm1:~$ wc -l /etc/iptables/iptables.conf
+17 /etc/iptables/iptables.conf
+```
+
+Sukuriu failą `myfirewall`:
+
+```
+osboxes@ldvm1:~$ cat > myfirewall << \
+--------------------------------------------------------------
+#!/bin/sh
+case "\$1" in
+  start)
+      echo "Starting firewall (iptables)"
+      /sbin/iptables-restore < /etc/iptables/iptables.conf
+          ;;
+  stop)
+      echo "Stopping firewall (flushing rules)"
+      /sbin/iptables -F
+      /sbin/modprobe -r iptable_filter
+          ;;
+  show)
+      echo "Current firewall rules:"
+      /sbin/iptables-save
+          ;;
+  *)
+      echo "Usage: /etc/init.d/myfirewall {start|stop|show}"
+      exit 1
+          ;;
+esac
+exit 0
+--------------------------------------------------------------
+```
+
+Kopijuoju į paleidimo sritį:
+
+```
+osboxes@ldvm1:~$ sudo cp -v myfirewall /etc/init.d/
+'myfirewall' -> '/etc/init.d/myfirewall'
+```
+
+Suteikiu paleidimo teises:
+
+```
+osboxes@ldvm1:~$ sudo chmod 755 /etc/init.d/myfirewall
+osboxes@ldvm1:~$ ls -l /etc/init.d/myfirewall
+-rwxr-xr-x 1 root root 453 Jul  5 12:48 /etc/init.d/myfirewall
+```
+
+Scenarijaus veikimas:
+
+```
+osboxes@ldvm1:~$ /etc/init.d/myfirewall
+Usage: /etc/init.d/myfirewall {start|stop|show}
+
+osboxes@ldvm1:~$ /etc/init.d/myfirewall show
+Current firewall rules:
+Failed to list table names in /proc/net/ip_tables_names: Permission denied
+
+osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall show
+Current firewall rules:
+# Generated by iptables-save v1.8.4 on Mon Jul  5 12:52:52 2021
+*filter
+:INPUT DROP [46:5323]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [991:138573]
+-A INPUT -d 192.168.10.14/32 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -d 192.168.10.14/32 -p tcp -m tcp --dport 443 -j ACCEPT
+COMMIT
+# Completed on Mon Jul  5 12:52:52 2021
+# Generated by iptables-save v1.8.4 on Mon Jul  5 12:52:52 2021
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [3:304]
+:POSTROUTING ACCEPT [3:304]
+COMMIT
+# Completed on Mon Jul  5 12:52:52 2021
+```
+
+Patikrinu, ar scenarijus išvalo taisykles:
+
+```
+osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall stop
+Stopping firewall (flushing rules)
+
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+Įkeliu reikiamas `iptables` taisykles:
+
+```
+osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall start
+Starting firewall (iptables)
+```
+
+Tikrinu jų veikimą:
+
+- HTTP paslauga nebeprieinama:
++
+```
+[p@localhost Saulius-Krasuckas]$ time curl -k http://192.168.10.14
+curl: (7) Failed connect to 192.168.10.14:80; Connection timed out
+
+real    2m7.277s
+user    0m0.005s
+sys     0m0.019s
+```
++
+Klientinė programa `curl` po 2 min. sulaukia _Timeout_.
+
+- o HTTPS paslauga vis dar prieinama išorei:
+
+```
+[p@localhost Saulius-Krasuckas]$ time curl -k https://192.168.10.14
+<html> ldvm1 (kompiuterio vardas) </html>
+
+real    0m0.186s
+user    0m0.108s
+sys     0m0.066s
+```
+
+Perkaunu virtualų kompiuterį:
+
+```
+osboxes@ldvm1:~$ sudo reboot
+Connection to 192.168.10.14 closed by remote host.
+Connection to 192.168.10.14 closed.
+[p@localhost ~]$ 
+[p@localhost ~]$ 
+[p@localhost ~]$ ssh osboxes@192.168.10.14
+osboxes@192.168.10.14's password: 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+154 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Jul  5 14:04:49 2021 from 192.168.10.254
+osboxes@ldvm1:~$ 
+```
+
+* Patikrinu iptables taisykles – deja, jos neužsikrovė:
+
+```
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+* Iš patirties žinau, kad automatiniam scenarijaus startui reikalinga papildoma simbolinė nuoroda.  +
+  Ji turi būti `/etc/init.d/rc?.d` direktorijoje, kur `?` atitinka pageidaujamą _Runlevel_.
+
+* Nustatau dabartinį _Runlevel_:
++
+```
+osboxes@ldvm1:~$ runlevel 
+N 3
+```
+
+* Patikrinu reikiamą direktoriją:
++
+```
+osboxes@ldvm1:~$ ll /etc/rc3.d/
+total 16
+drwxr-xr-x   2 root root  4096 Jul  3 01:07 ./
+drwxr-xr-x 132 root root 12288 Jul  5 12:20 ../
+lrwxrwxrwx   1 root root    29 Jun 30 12:08 K01apache-htcacheclean -> ../init.d/apache-htcacheclean*
+lrwxrwxrwx   1 root root    27 Mar  7 00:02 K01speech-dispatcher -> ../init.d/speech-dispatcher*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01acpid -> ../init.d/acpid*
+lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01anacron -> ../init.d/anacron*
+lrwxrwxrwx   1 root root    17 Jun 30 12:08 S01apache2 -> ../init.d/apache2*
+lrwxrwxrwx   1 root root    16 Mar  7 00:02 S01apport -> ../init.d/apport*
+lrwxrwxrwx   1 root root    22 Mar  7 00:02 S01avahi-daemon -> ../init.d/avahi-daemon*
+lrwxrwxrwx   1 root root    19 Mar  7 00:02 S01bluetooth -> ../init.d/bluetooth*
+lrwxrwxrwx   1 root root    26 Mar  7 00:02 S01console-setup.sh -> ../init.d/console-setup.sh*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01cron -> ../init.d/cron*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01cups -> ../init.d/cups*
+lrwxrwxrwx   1 root root    22 Mar  7 00:02 S01cups-browsed -> ../init.d/cups-browsed*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01dbus -> ../init.d/dbus*
+lrwxrwxrwx   1 root root    14 Mar  7 00:02 S01gdm3 -> ../init.d/gdm3*
+lrwxrwxrwx   1 root root    21 Mar  7 00:02 S01grub-common -> ../init.d/grub-common*
+lrwxrwxrwx   1 root root    20 Mar  7 00:02 S01irqbalance -> ../init.d/irqbalance*
+lrwxrwxrwx   1 root root    20 Mar  7 00:02 S01kerneloops -> ../init.d/kerneloops*
+lrwxrwxrwx   1 root root    15 Jun 30 12:08 S01mysql -> ../init.d/mysql*
+lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01openvpn -> ../init.d/openvpn*
+lrwxrwxrwx   1 root root    18 Mar  7 00:02 S01plymouth -> ../init.d/plymouth*
+lrwxrwxrwx   1 root root    37 Mar  7 00:02 S01pulseaudio-enable-autospawn -> ../init.d/pulseaudio-enable-autospawn*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01rsync -> ../init.d/rsync*
+lrwxrwxrwx   1 root root    17 Mar  7 00:02 S01rsyslog -> ../init.d/rsyslog*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01saned -> ../init.d/saned*
+lrwxrwxrwx   1 root root    23 Mar  7 00:02 S01spice-vdagent -> ../init.d/spice-vdagent*
+lrwxrwxrwx   1 root root    13 Jun 29 11:37 S01ssh -> ../init.d/ssh*
+lrwxrwxrwx   1 root root    29 Mar  7 00:02 S01unattended-upgrades -> ../init.d/unattended-upgrades*
+lrwxrwxrwx   1 root root    15 Mar  7 00:02 S01uuidd -> ../init.d/uuidd*
+lrwxrwxrwx   1 root root    32 Mar  7 00:15 S01virtualbox-guest-utils -> ../init.d/virtualbox-guest-utils*
+lrwxrwxrwx   1 root root    18 Mar  7 00:02 S01whoopsie -> ../init.d/whoopsie*
+```
+
+* Čia kuriu simbolinę nuorodą:
++
+```
+osboxes@ldvm1:~$ sudo ln -sv /etc/init.d/myfirewall /etc/rc3.d/S99myfirewall
+'/etc/rc3.d/S99myfirewall' -> '/etc/init.d/myfirewall'
+```
+
+** Dar sykį perkraunu virtualų kompiuterį:
++
+```
+osboxes@ldvm1:~$ sudo reboot
+Connection to 192.168.10.14 closed by remote host.
+Connection to 192.168.10.14 closed.
+```
+
+Patikrinu iptables taisykles – dabar jau užsikrovė:
+
+```
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:ssh
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:https
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+Patikrinu taisyklių veikimą:
+
+- HTTPS užklausa praleidžiama:
+
+```
+[p@localhost ~]$ curl -k https://192.168.10.14
+<html> ldvm1 (kompiuterio vardas) </html>
+```
+
+- HTTP užklausa atmetama:
+
+```
+[p@localhost ~]$ curl -m 10 http://192.168.10.14
+curl: (28) Connection timed out after 10001 milliseconds
+```
+
+- `iptables` taisyklės veikia.
+
+
+### 10. Apsaugoto kompiuterio skenavimas
+
+* Skenuoju kaimyną, bet gaunu klaidą:
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F --max_rtt_timeout 6 192.168.10.14
+nmap: unrecognized option '--max_rtt_timeout'
+See the output of nmap -h for a summary of options.
+```
+
+* Tikrinu `nmap` versiją:
++
+```
+osboxes@ldvm2:~$ nmap --version
+Nmap version 7.80 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.39 libpcap-1.9.1 nmap-libdnet-1.12 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+```
+
+* Skenuoju kaimyną pagal ketvirtą žingsnį:
++
+```
+osboxes@ldvm1:~$ sudo nmap -sS -P0 -n -F 192.168.10.13
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 14:54 EEST
+Nmap scan report for 192.168.10.13
+Host is up (0.00085s latency).
+Not shown: 99 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.43 seconds
+```
+
+* Rezultatas identiškas.  +
+  Taip dėl to, kad tiek žiniatinklį, tiek tarpsegmentinį ekraną konfigūravau savame kompiuteryje, o ne kaimyininiame.
+
+* Dėl to skenuoju savo kompiuterį iš kaimyninio:
++
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 07:46 EDT
+Nmap scan report for 192.168.10.14
+Host is up (0.00070s latency).
+Not shown: 98 filtered ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 2.17 seconds
+```
+
+Palyginu matomas paslaugas savame kompiuteryje:
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14 > debug/02.ldvm1-paslaugos-įjungus-tarpsegmentinį-ekraną.txt
+osboxes@ldvm2:~$ diff -u debug/{01,02}*
+  ...
+ Nmap scan report for 192.168.10.14
+-Host is up (0.00068s latency).
+-Not shown: 97 closed ports
++Host is up (0.00064s latency).
++Not shown: 98 filtered ports
+ PORT    STATE SERVICE
+ 22/tcp  open  ssh
+-80/tcp  open  http
+ 443/tcp open  https
+ MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+```
+
+Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo nebeprieinamas išorėje.
+
+
+### Sunkumai ir atsakymai į klausimus
+
+
+### Pasirinktosios `iptables` komandos aprašymas
+
+Komandą pasirinkau iš šių pavyzdžių:  +
+https://www.thegeekstuff.com/2011/06/iptables-rules-examples/#:~:text=11.%20Load%20Balance%20Incoming%20Web%20Traffic
+
+```
+iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 0 -j DNAT --to-destination 192.168.1.101:443
+iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 1 -j DNAT --to-destination 192.168.1.102:443
+iptables -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 2 -j DNAT --to-destination 192.168.1.103:443
+```
+
+* Originaliose komandose yra klaida:  +
+   +
+  tūksta nurodytos lentelės `nat`, nes kitaip komanda bando rašyti į `filter` lentelę, ir joje neranda grandinės `PREROUTING`.  +
+
+* Taigi, komandas pataisau:
++
+```
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 0 -j DNAT --to-destination 192.168.1.101:443
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 1 -j DNAT --to-destination 192.168.1.102:443
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -m state --state NEW -m nth --counter 0 --every 3 --packet 2 -j DNAT --to-destination 192.168.1.103:443
+```
+
+* Ši komanda naudoja nestandartinį `iptables` modulį `state` (angl. _Extension module_).  +
+  Jis aprašytas čia:
+https://www.netfilter.org/documentation/HOWTO/netfilter-extensions-HOWTO-3.html#ss3.9
+
+* Šios komandos papildo `nat` lentelę.
+* Lentelė naudojama maršrutizavimo sprendimų priėmimui (taisymui).
+* Kiekviena ši komanda:
+** tikrina, ar paketas ateina per tinklo sąsają `eth0`;
+** tikrina, ar jo transportinis protokolas yra TCP;
+** tikrina, ar ar paskirties prievadas yra HTTPS (443/TCP);
+** įjungia modulį `state` (angl. _Extension module_);
+** tikrina, ar tai nauja TCP sesija;
+** įjungia modulį `nth`;
+** pasirenka skaitiklį #0;
+** nustato skaitiklio #0 talpą = 3;
+** tikrina, ar paketo numeris skaitiklyje yra vienas iš trijų:
+*** = 0
+*** = 1
+*** = 2
+** ir jei šios sąlygos patenkintos, komanda nurodo tokį paketą nukreipti į vieną iš trijų IP adresų  +
+   (pagal paketo numerį nurodytame skaitiklyje):
+*** 192.168.1.101
+*** 192.168.1.102
+*** 192.168.1.103
+** ... pritaikant paketui atitinkamą `Destination NAT` transliaciją.
+** ... ir išlaikant tą patį paskirties prievadą (_Destination port_) – `443/TCP`.
+
+Kiekvienos šios komandos tikslas – gaunamą HTTPS srautą po lygiai (paketų skaičiaus atžvilgiu, angl. _Round-robin_) išskirstyti į tris HTTPS gavėjus.
+Pvz.:
+
+* žiniatinklio serverius,
+* Proxy serverius,
+* L7 ugniasienes
+* ar kitus su HTTPS apdorojančius tinklo įrenginius.
+
+Kitaip sakant, atlikti apkrovos paskirstymą (angl. _Load balancing_) tarp trijų tinklo mazgų.
