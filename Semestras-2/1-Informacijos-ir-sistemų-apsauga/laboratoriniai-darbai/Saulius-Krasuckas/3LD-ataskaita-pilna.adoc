@@ -1607,6 +1607,21 @@ exit 0
 --------------------------------------------------------------
 ```
 
+Kopijuoju į paleidimo sritį:
+
+```
+osboxes@ldvm1:~$ sudo cp -v myfirewall /etc/init.d/
+'myfirewall' -> '/etc/init.d/myfirewall'
+```
+
+Suteikiu paleidimo teises:
+
+```
+osboxes@ldvm1:~$ sudo chmod 755 /etc/init.d/myfirewall
+osboxes@ldvm1:~$ ls -l /etc/init.d/myfirewall
+-rwxr-xr-x 1 root root 453 Jul  5 12:48 /etc/init.d/myfirewall
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
