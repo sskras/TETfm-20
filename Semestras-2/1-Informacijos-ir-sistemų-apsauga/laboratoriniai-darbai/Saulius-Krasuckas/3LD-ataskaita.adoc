@@ -162,11 +162,6 @@ Išvalau `iptables`:
 
 Paleidžiu `ping` srautą į virtualų kompiuterį:
 
-```
-[p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
-PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
-```
-
 Stebiu, kaip vykdoma komanda:
 
 ```
@@ -187,28 +182,10 @@ rtt min/avg/max/mdev = 0.439/0.579/0.745/0.112 ms
 
 Nustatau apribojimą 1 šalt./s:
 
-```
-osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst 1 -j ACCEPT
-```
-
 * Deja, virtualaus kompiuterio reakcija į _ping_ srautą nepasikeitė.  +
   Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
 
 * Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės:
-
-```
-osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
-osboxes@ldvm1:~$ sudo iptables --list
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     icmp --  anywhere             anywhere             limit: avg 1/sec burst 1
-DROP       icmp --  anywhere             anywhere            
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-```
 
 * Vėl paleidžiu _ping_ srautą:
 
@@ -230,19 +207,6 @@ rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
   Panašu, kad įeinančio ICMP srauto ribojimas dabar veikia.
 
 Išvalau `iptables`:
-
-```
-osboxes@ldvm1:~$ sudo iptables -F
-osboxes@ldvm1:~$ sudo iptables --list
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
 
 ### 8. _Telnet_ uždraudimas
 
@@ -1291,6 +1255,45 @@ Sunkumų neaptikta.
 ### 6. `iptables` patikrinimas
 
 Sunkumų neaptikta.
+
+
+### 7. Kompiuterio apsaugojimas nuo resursus išnaudojančio ICMP srauto
+
+Nustatau apribojimą 1 šalt./s
+
+* Deja, virtualaus kompiuterio reakcija į _ping_ srautą nepasikeitė.  +
+  Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
+
+* Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     icmp --  anywhere             anywhere             limit: avg 1/sec burst 1
+DROP       icmp --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+```
+
+* Vėl paleidžiu _ping_ srautą:
+
+```
+[p@localhost Saulius-Krasuckas]$ ping 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=2 ttl=64 time=0.771 ms
+64 bytes from 192.168.10.14: icmp_seq=4 ttl=64 time=0.665 ms
+64 bytes from 192.168.10.14: icmp_seq=6 ttl=64 time=0.623 ms
+64 bytes from 192.168.10.14: icmp_seq=8 ttl=64 time=0.636 ms
+^C
+--- 192.168.10.14 ping statistics ---
+8 packets transmitted, 4 received, 50% packet loss, time 7000ms
+rtt min/avg/max/mdev = 0.623/0.673/0.771/0.066 ms
+```
 
 
 ### Pasirinktosios `iptables` komandos aprašymas
