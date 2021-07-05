@@ -162,7 +162,6 @@ lsmod
   | Išvalykite `iptables`:
   |`iptables -F`
   |
-
   
 3+| +++<center>+++ *8. _Telnet_ uždraudimas* +++</center>+++
 
@@ -176,5 +175,82 @@ lsmod
   | Peržiūrėkite įrašus žurnale:
   |`less /var/log/messages`
   |
+  
+ 3+| +++<center>+++ *9. Automatinė taisyklių keltis* +++</center>+++
+  
+   | Įrašykite taisykles į automatinio užsikrovimo scenarijų, sukurkite direktoriją ir konfigūracijos failą:
+ 2+|`mkdir /etc/iptables`
+
+ 3+| Sukonfigūruokite iptables;
+
+   | * išvalykite buvusius nustatymus:
+2+a|
+```
+iptables -F
+```
+
+   | * nustatykite taisykles pagal nutylėjimą:
+2+a|
+```
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+```
+
+   | * leiskite reikiamų paslaugų pasiekimą:
+2+a|
+```
+iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 443 -j ACCEPT
+```
+  
+   | Patikrinkite konfigūraciją:
+ 2+|`iptables -L`
+
+   | Konfigūraciją įrašykite į failą:
+ 2+|`/bin/iptables-save > /etc/iptables/iptables.conf`
+
+   | Sukurkite failą `myfirewall` su tokiu turiniu:
+2+a|
+```
+#!/bin/sh
+case "$1" in
+  start)
+      echo "Starting firewall (iptables)"
+      /sbin/iptables-restore < /etc/iptables/iptables.conf
+  stop)
+      echo "Stopping firewall (flushing rules)"
+      /sbin/iptables -F
+      /sbin/modprobe -r iptable_filter
+          ;;
+  show)
+      echo "Current firewall rules:"
+      /sbin/iptables-save
+          ;;
+  *)
+      echo "Usage: /etc/init.d/myfirewall {start\|stop\|show}"
+      exit 1
+          ;;
+esac
+exit 0
+```
+   
+   | Nukopijuokite jį į paleidimo sritį:
+ 2+|`cp myfirewall /etc/init.d/`
+   
+   | Suteikite vykdymo teises:
+ 2+|`chmod 755 /etc/init.d/myfirewall`
+   
+ 3+| Panagrinėkite kaip veikia `myfirewall` scenarijus:
+   
+ 2+| * užkraukite taisykles
+   |
+   
+ 2+| * patikrinkite, ar užsikrovė ir veikia reikiamos taisyklės
+   |
+   
+ 3+| Perkraukite virtualų kompiuterį ir patikrinkite, ar taisyklės užsikrovė bei veikia.
+
+ 3+| Esant veikimo problemoms, naudokite komandą `tcpdump` tinklo srauto stebėjimui.
 
 |===
