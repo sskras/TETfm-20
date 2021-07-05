@@ -1374,6 +1374,22 @@ osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -m limit --limit 1/s --limit-bur
 * Deja, virtualaus kompiuterio reakcija į _ping_ srautą nepasikeitė.  +
   Įtarimų sukėlė `-j ACCEPT` ir `Chain INPUT (policy ACCEPT)`.
 
+* Papildau, kad `iptables` atmestų visus ICMP paketus, neatitikusius šios taisyklės:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -p icmp -j DROP
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     icmp --  anywhere             anywhere             limit: avg 1/sec burst 1
+DROP       icmp --  anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
