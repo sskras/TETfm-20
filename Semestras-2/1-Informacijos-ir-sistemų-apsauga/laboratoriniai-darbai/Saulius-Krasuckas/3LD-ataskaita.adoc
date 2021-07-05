@@ -932,7 +932,7 @@ Ties `ModemManager` paspaudus `Space`, tarnyba dabar išsijungia jau iškart.
 ** `chkservice` trūkumai:
 
 *** Nevystomas, autorės apleistas.
-*** Nevisai intuityvus GUI:
+*** Nevisai intuityvus TUI (_Text User Interface_);
 **** Pagalbos klavišas `?`;
 **** Paieška randa tik pirmą rezultatą;
 **** Neaprašytas būsenos stulpelis:
