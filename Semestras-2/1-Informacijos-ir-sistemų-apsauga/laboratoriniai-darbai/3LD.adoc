@@ -218,6 +218,7 @@ case "$1" in
   start)
       echo "Starting firewall (iptables)"
       /sbin/iptables-restore < /etc/iptables/iptables.conf
+          ;;
   stop)
       echo "Stopping firewall (flushing rules)"
       /sbin/iptables -F
