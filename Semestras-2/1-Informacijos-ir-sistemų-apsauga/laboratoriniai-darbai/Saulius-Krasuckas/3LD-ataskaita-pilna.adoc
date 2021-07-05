@@ -1666,6 +1666,23 @@ COMMIT
 # Completed on Mon Jul  5 12:52:52 2021
 ```
 
+Patikrinu, ar scenarijus išvalo taisykles:
+
+```
+osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall stop
+Stopping firewall (flushing rules)
+
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
