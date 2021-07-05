@@ -459,6 +459,8 @@ Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo 
 
 #### Laboratorinis darbas atliktas
 
+<<<
+
 [.text-left]
 ### Iškilę sunkumai ir pastebėti netikslumai
 
@@ -1207,7 +1209,7 @@ Available nsock engines: epoll poll select
 ### Pasirinktosios `iptables` komandos aprašymas
 
 Komandą (o tiksliau tris beveik identiškas) pasirinkau iš šių pavyzdžių:  +
-+
+
 https://www.thegeekstuff.com/2011/06/iptables-rules-examples/#:~:text=11.%20Load%20Balance%20Incoming%20Web%20Traffic
 
 ```
@@ -1263,4 +1265,4 @@ Pvz.:
 * L7 ugniasienes
 * ar kitus su HTTPS apdorojančius tinklo įrenginius.
 
-Kitaip sakant, atlikti apkrovos paskirstymą (angl. _Load balancing_) tarp trijų tinklo mazgų.
+Kitaip sakant, tikslas – atlikti HTTPS apkrovos paskirstymą (angl. _Load balancing_) tarp trijų tinklo mazgų.
