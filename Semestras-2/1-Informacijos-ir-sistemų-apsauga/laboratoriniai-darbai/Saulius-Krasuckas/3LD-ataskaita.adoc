@@ -382,58 +382,12 @@ curl: (28) Connection timed out after 10001 milliseconds
 
 ### 10. Apsaugoto kompiuterio skenavimas
 
-* Skenuoju kaimyną, bet gaunu klaidą:
-
-```
-osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F --max_rtt_timeout 6 192.168.10.14
-nmap: unrecognized option '--max_rtt_timeout'
-See the output of nmap -h for a summary of options.
-```
-
-* Tikrinu `nmap` versiją:
-+
-```
-osboxes@ldvm2:~$ nmap --version
-Nmap version 7.80 ( https://nmap.org )
-Platform: x86_64-pc-linux-gnu
-Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.39 libpcap-1.9.1 nmap-libdnet-1.12 ipv6
-Compiled without:
-Available nsock engines: epoll poll select
-```
-
 * Skenuoju kaimyną pagal ketvirtą žingsnį:
-+
-```
-osboxes@ldvm1:~$ sudo nmap -sS -P0 -n -F 192.168.10.13
-Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 14:54 EEST
-Nmap scan report for 192.168.10.13
-Host is up (0.00085s latency).
-Not shown: 99 closed ports
-PORT   STATE SERVICE
-22/tcp open  ssh
-MAC Address: 08:00:27:7A:D0:B7 (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 1.43 seconds
-```
 
 * Rezultatas identiškas.  +
   Taip dėl to, kad tiek žiniatinklį, tiek tarpsegmentinį ekraną konfigūravau savame kompiuteryje, o ne kaimyininiame.
 
 * Dėl to skenuoju savo kompiuterį iš kaimyninio:
-+
-```
-osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
-Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 07:46 EDT
-Nmap scan report for 192.168.10.14
-Host is up (0.00070s latency).
-Not shown: 98 filtered ports
-PORT    STATE SERVICE
-22/tcp  open  ssh
-443/tcp open  https
-MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 2.17 seconds
-```
 
 Palyginu matomas paslaugas savame kompiuteryje:
 
@@ -454,7 +408,6 @@ osboxes@ldvm2:~$ diff -u debug/{01,02}*
 ```
 
 Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo nebeprieinamas išorėje.
-
 
 ### Sunkumai ir atsakymai į klausimus
 
@@ -1174,6 +1127,28 @@ osboxes@ldvm1:~$ sudo reboot
 Connection to 192.168.10.14 closed by remote host.
 Connection to 192.168.10.14 closed.
 ```
+
+### 10. Apsaugoto kompiuterio skenavimas
+
+* Skenuoju kaimyną, bet gaunu klaidą:
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F --max_rtt_timeout 6 192.168.10.14
+nmap: unrecognized option '--max_rtt_timeout'
+See the output of nmap -h for a summary of options.
+```
+
+* Tikrinu `nmap` versiją:
++
+```
+osboxes@ldvm2:~$ nmap --version
+Nmap version 7.80 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.39 libpcap-1.9.1 nmap-libdnet-1.12 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+```
+
 
 
 ### Pasirinktosios `iptables` komandos aprašymas
