@@ -1580,11 +1580,15 @@ target     prot opt source               destination
 
 Įrašau konfigūraciją į failą:
 
-* Komandai iš aprašo gaunu klaidą:
-
 ```
-root@ldvm1:~# /bin/iptables-save > /etc/iptables/iptables.conf
--bash: /bin/iptables-save: No such file or directory
+root@ldvm1:~# /sbin/iptables-save > /etc/iptables/iptables.conf
+root@ldvm1:~# logout
+
+osboxes@ldvm1:~$ ll /etc/iptables/iptables.conf
+-rw-r--r-- 1 root root 531 Jul  5 13:13 /etc/iptables/iptables.conf
+
+osboxes@ldvm1:~$ wc -l /etc/iptables/iptables.conf
+17 /etc/iptables/iptables.conf
 ```
 
 Sukuriu failą `myfirewall`:

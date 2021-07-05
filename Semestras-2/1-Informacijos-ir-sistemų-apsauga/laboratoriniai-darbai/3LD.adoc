@@ -208,7 +208,7 @@ iptables -A INPUT -s 0/0 -d 192.168.10.1x -p tcp --dport 443 -j ACCEPT
  2+|`iptables -L`
 
    | Konfigūraciją įrašykite į failą:
- 2+|`/bin/iptables-save > /etc/iptables/iptables.conf`
+ 2+|`/sbin/iptables-save > /etc/iptables/iptables.conf`
 
    | Sukurkite failą `myfirewall` su tokiu turiniu:
 2+a|
