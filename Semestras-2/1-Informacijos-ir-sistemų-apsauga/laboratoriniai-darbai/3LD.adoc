@@ -40,7 +40,7 @@ Nustatyti paprastą tarpsegmentinį ekraną.
   | * maršrutizacijos lentelę:
   |`route -n`
   | Tik vartai pagal nutylėjimą  +
-   `Gateway 192.168.19.254`
+   `Gateway 192.168.10.254`
 
   | Jei nustatymai ne tokie, pataisykite juos faile:
   |`/etc/network/interfaces`
@@ -166,7 +166,7 @@ lsmod
 3+| +++<center>+++ *8. _Telnet_ uždraudimas* +++</center>+++
 
   | Registruokite žurnale _telnet_ užklausas ir jų neleiskite:
-2+|`iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j LOG --log-prefix 'TELNET ATTEMPT: '`
+2+|`iptables -A INPUT -d 192.168.10.1x -p tcp --dport 23 -j LOG --log-prefix 'TELNET ATTEMPT: '`
 
   | Kreipkitės iš realaus ir kaimyno kompiuterių į savo virtualų kompiuterį _telnet_ protokolu:
   |`telnet 192.168.10.1x`
@@ -200,8 +200,8 @@ iptables -P OUTPUT ACCEPT
    | * leiskite reikiamų paslaugų pasiekimą:
 2+a|
 ```
-iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 22 -j ACCEPT
-iptables -A INPUT -s 0/0 -d 192.168.10.14 -p tcp --dport 443 -j ACCEPT
+iptables -A INPUT -s 0/0 -d 192.168.10.1x -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -s 0/0 -d 192.168.10.1x -p tcp --dport 443 -j ACCEPT
 ```
   
    | Patikrinkite konfigūraciją:
@@ -252,5 +252,12 @@ exit 0
  3+| Perkraukite virtualų kompiuterį ir patikrinkite, ar taisyklės užsikrovė bei veikia.
 
  3+| Esant veikimo problemoms, naudokite komandą `tcpdump` tinklo srauto stebėjimui.
+   
+ 3+| +++<center>+++ *10. Apsaugoto kompiuterio skenavimas* +++</center>+++
+ 
+   | Skenuokite apsaugotą kaimyno virtualų kompiuterį:
+ 2+|`nmap -sS -P0 -n -F -max_rtt_timeout 6 192.168.10.(1x-1)`
+   
+ 3+| Palyginkite gautus rezultatus su gautais darbo pradžioje.
 
 |===
