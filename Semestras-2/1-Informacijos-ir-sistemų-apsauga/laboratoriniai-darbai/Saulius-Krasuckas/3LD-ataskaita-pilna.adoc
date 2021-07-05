@@ -1053,9 +1053,9 @@ Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
 - Kaimyno kompiuteryje matau prieinamą tik vieną paslaugą / tarnybą:
 -- SSH
 
-- Taip pat nuskenavau ir savo kompiuterį iš kaimyninio kompiuterio:  +
-   (kadangi žiniatinklis paruoštas tik savajame)
-+
+Taip pat nuskenavau ir savo kompiuterį iš kaimyninio kompiuterio:  +
+(kadangi žiniatinklis paruoštas tik savajame)
+
 ```
 osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
 Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-05 07:23 EDT
@@ -1072,7 +1072,6 @@ Nmap done: 1 IP address (1 host up) scanned in 0.97 seconds
 ```
 
 - Savajame kompiuteryje matau prieinamas jau tris paslaugas / tarnybas:
-
 -- SSH
 -- HTTP
 -- HTTPS
