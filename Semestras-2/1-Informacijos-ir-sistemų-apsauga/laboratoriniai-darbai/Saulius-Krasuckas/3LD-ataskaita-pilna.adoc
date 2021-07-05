@@ -1424,6 +1424,24 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
 
+### 8. _Telnet_ uždraudimas
+
+Registruoju _Telnet_ užklausas žurnale ir jų neleidžiu:
+
+```
+osboxes@ldvm1:~$ sudo iptables -A INPUT -d 192.168.10.14 -p tcp --dport 23 -j LOG --log-prefix 'TELNET ATTEMPT: '
+osboxes@ldvm1:~$ sudo iptables --list
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+LOG        tcp  --  anywhere             ldvm1                tcp dpt:telnet LOG level warning prefix "TELNET ATTEMPT: "
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
 
 ### Sunkumai ir atsakymai į klausimus
 
