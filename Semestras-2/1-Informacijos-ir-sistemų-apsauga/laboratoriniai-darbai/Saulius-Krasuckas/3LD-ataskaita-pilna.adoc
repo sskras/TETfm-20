@@ -1743,7 +1743,7 @@ Last login: Mon Jul  5 14:04:49 2021 from 192.168.10.254
 osboxes@ldvm1:~$ 
 ```
 
-* Patikrinu iptables taisykles:
+* Patikrinu iptables taisykles – deja, jos neužsikrovė:
 
 ```
 osboxes@ldvm1:~$ sudo iptables -L
@@ -1756,8 +1756,6 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ```
-
-* Deja, jos neužsikrovė.
 
 * Iš patirties žinau, kad automatiniam scenarijaus startui reikalinga papildoma simbolinė nuoroda.  +
   Ji turi būti `/etc/init.d/rc?.d` direktorijoje, kur `?` atitinka pageidaujamą _Runlevel_.
@@ -1821,6 +1819,22 @@ osboxes@ldvm1:~$ sudo ln -sv /etc/init.d/myfirewall /etc/rc3.d/S99myfirewall
 osboxes@ldvm1:~$ sudo reboot
 Connection to 192.168.10.14 closed by remote host.
 Connection to 192.168.10.14 closed.
+```
+
+Patikrinu iptables taisykles – dabar jau užsikrovė:
+
+```
+osboxes@ldvm1:~$ sudo iptables -L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:ssh
+ACCEPT     tcp  --  anywhere             ldvm1                tcp dpt:https
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
 ```
 
 
