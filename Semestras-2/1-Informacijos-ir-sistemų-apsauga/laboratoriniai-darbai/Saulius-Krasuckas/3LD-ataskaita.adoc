@@ -10,158 +10,14 @@
 
 Tikrinu IP adresus:
 
-```
-enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
-        inet6 fe80::440e:4f39:f7ec:bb91  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
-        RX packets 32094  bytes 40220614 (40.2 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 15495  bytes 1016242 (1.0 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
-        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
-        RX packets 51491  bytes 3770623 (3.7 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 78571  bytes 33188421 (33.1 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 816  bytes 70179 (70.1 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 816  bytes 70179 (70.1 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-```
-
 Tikrinu maršrutizacijos lentelę:
-
-```
-osboxes@ldvm1:~$ route
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
-default         10.0.2.2        0.0.0.0         UG    100    0        0 enp0s3
-10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
-link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
-192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
-```
-
-* Nustatymai nevsai atitinka LD aprašą:
-
-** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
-   (šiame darbe naudojamas branduolys `5.8.0-59-generic`)  +
-   Palieku kaip yra.
-
-** 2. Trūksta `10.10.10.x` adreso (nes LD2 buvo uždėtas rankomis, o po to OS perkrauta).
-
-** 3. OS turi du vartus pagal nutylėjimą:
-
-*** vienas pasiekiamas per `enp0s3`, _NAT_ tipo tinklo sąsają (su automatiniu IP adresu);
-*** kitas pasiekiamas per `enp0s8`, _Host-only_ tipo tinklo sąsają.
-+
-   Atsekiau, kad pirmuosius vartus sukonfigūruoja _NetworkManager_ įrankis,
-   sukurdamas dedikuotą tinklo prisijungimą
-   (tam atskirą tinklo valdymo abstrakciją):
-+
-```
-osboxes@ldvm1:~$ nmcli connection show
-NAME                UUID                                  TYPE      DEVICE
-Wired connection 1  2c671148-b52a-4426-9325-d35a52967e3c  ethernet  enp0s3
-
-osboxes@ldvm1:~$ nmcli connection show id "Wired connection 1" | grep 10.0.2.2
-IP4.GATEWAY:                            10.0.2.2
-IP4.ROUTE[1]:                           dst = 0.0.0.0/0, nh = 10.0.2.2, mt = 100
-DHCP4.OPTION[23]:                       routers = 10.0.2.2
-```
 
 Pataisau `interfaces` failą ir palyginu su ankstesne versija:
 
-```
-osboxes@ldvm1:~$ sudo cp -av /etc/network/interfaces /etc/network/interfaces.BACKUP
-'/etc/network/interfaces' -> '/etc/network/interfaces.BACKUP'
-
-osboxes@ldvm1:~$ sudo vim.tiny /etc/network/interfaces
-
-osboxes@ldvm1:~$ diff -u /etc/network/interfaces.BACKUP /etc/network/interfaces
---- /etc/network/interfaces.BACKUP  2021-07-02 15:19:26.453975316 -0400
-+++ /etc/network/interfaces 2021-07-02 15:19:30.491993480 -0400
-@@ -1,6 +1,11 @@
- auto enp0s8
-+auto enp0s8:2
- 
- iface enp0s8 inet static
- address 192.168.10.14
- netmask 255.255.255.0
- gateway 192.168.10.254
-+
-+iface enp0s8:2 inet static
-+address 10.10.10.4
-```
-
 Aktyvuoju pakeistus nustatymus:
 
-```
-osboxes@ldvm1:~$ sudo ifup enp0s8:2
-
-osboxes@ldvm1:~$ ifconfig -a
-enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
-        RX packets 32114  bytes 40222382 (40.2 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 15527  bytes 1018963 (1.0 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
-        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
-        RX packets 53197  bytes 3911386 (3.9 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 79746  bytes 33383444 (33.3 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.10.10.4  netmask 255.255.255.0  broadcast 10.10.10.255
-        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 817  bytes 70252 (70.2 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 817  bytes 70252 (70.2 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-```
 Abu IP adresai, prašomi LD3, nurodyti.
 
-* Nereikalingus vartus pagal nutylėjimą bandau išmest būtent per _NetworkManager_
-  kartu su minimu abstrakčiu tinklo prisijungimu:
-+
-```
-osboxes@ldvm1:~$ sudo nmcli connection delete "Wired connection 1"
-Connection 'Wired connection 1' (2c671148-b52a-4426-9325-d35a52967e3c) successfully deleted.
-```
-
-** Tikrinu maršrutizacijos lentelę:
-+
-```
-osboxes@ldvm1:~$ route
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
-10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
-link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
-192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
-```
 Vieninteliai vartai pagal nutylėjimą yra `192.168.10.254`, kaip ir prašo LD3 aprašas.  +
 Patikrinimo žingsnis atliktas.
 
@@ -1961,6 +1817,67 @@ Matyti, jog savojo kompiuterio prievadas `80/TCP`, skirtas HTTP paslaugai, tapo 
 
 
 ### Sunkumai ir atsakymai į klausimus
+
+#### 1. Virtualaus kompiuterio konfigūracija
+
+```
+osboxes@ldvm1:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+default         10.0.2.2        0.0.0.0         UG    100    0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
+
+* Nustatymai nevisai atitinka LD aprašą:
+
+** 1. Vietoj `eth*` tinklo sąsajų vardų Linux naudoja `enp0s*` vardus.  +
+   (šiame darbe naudojamas branduolys `5.8.0-59-generic`)  +
+   Palieku kaip yra.
+
+** 2. Trūksta `10.10.10.x` adreso (nes LD2 buvo uždėtas rankomis, o po to OS perkrauta).
+
+** 3. OS turi du vartus pagal nutylėjimą:
+
+*** vienas pasiekiamas per `enp0s3`, _NAT_ tipo tinklo sąsają (su automatiniu IP adresu);
+*** kitas pasiekiamas per `enp0s8`, _Host-only_ tipo tinklo sąsają.
++
+   Atsekiau, kad pirmuosius vartus sukonfigūruoja _NetworkManager_ įrankis,
+   sukurdamas dedikuotą tinklo prisijungimą
+   (tam atskirą tinklo valdymo abstrakciją):
++
+```
+osboxes@ldvm1:~$ nmcli connection show
+NAME                UUID                                  TYPE      DEVICE
+Wired connection 1  2c671148-b52a-4426-9325-d35a52967e3c  ethernet  enp0s3
+
+osboxes@ldvm1:~$ nmcli connection show id "Wired connection 1" | grep 10.0.2.2
+IP4.GATEWAY:                            10.0.2.2
+IP4.ROUTE[1]:                           dst = 0.0.0.0/0, nh = 10.0.2.2, mt = 100
+DHCP4.OPTION[23]:                       routers = 10.0.2.2
+```
+
+* Nereikalingus vartus pagal nutylėjimą bandau išmest būtent per _NetworkManager_
+  kartu su minimu abstrakčiu tinklo prisijungimu:
++
+```
+osboxes@ldvm1:~$ sudo nmcli connection delete "Wired connection 1"
+Connection 'Wired connection 1' (2c671148-b52a-4426-9325-d35a52967e3c) successfully deleted.
+```
+
+** Tikrinu maršrutizacijos lentelę:
++
+```
+osboxes@ldvm1:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
+10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
+```
 
 
 ### Pasirinktosios `iptables` komandos aprašymas
