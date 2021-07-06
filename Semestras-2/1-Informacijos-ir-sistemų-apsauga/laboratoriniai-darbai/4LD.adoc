@@ -273,7 +273,7 @@ alert tcp any any -> 192.168.10.1x 23 (content: "root"; nocase; msg: "Suspicious
 ```
 telnet 192.168.10.(1x-1)
 
-   | Bandykite įvesti vartotojo vardą `root` ir bet kokį slaptažodį.
+   | Bandykite įvesti vartotojo vardą `root` ir, jei reikės, bet kokį slaptažodį.
  2+|
 
    | Analizuokite įrašus.
