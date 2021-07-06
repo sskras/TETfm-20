@@ -258,6 +258,27 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ nano doc/INSTALL
 [1]+  Stopped                 nano doc/INSTALL
 ```
 
+* Konfigūruoju kompiliatorių, iškyla sunkumas:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+  ...
+checking for pfring_open in -lpfring... no
+checking for pfring_open in -lpcap... no
+
+   ERROR!  Libpcap library/headers (libpcap.a (or .so)/pcap.h)
+   not found, go get it from http://www.tcpdump.org
+   or use the --with-libpcap-* options, if you have it installed
+   in unusual place.  Also check if your libpcap depends on another
+   shared library that may be installed in an unusual place
+```
+
 
 ### Snort taisyklės analizė
 
