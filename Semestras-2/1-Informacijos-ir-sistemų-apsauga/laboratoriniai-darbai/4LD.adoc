@@ -1,1 +1,11 @@
+Informacijos ir sistemų apsauga
 
+# Laboratorinis darbas #4 +++<br />+++ https://moodle.garsva.lt/mod/assign/view.php?id=297[Atakų atpažinimų sistemos `Snort` tyrimas]
+
+
+### Užduotis
+
+Instaliuokite Snort IDS:  +
+https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/000/211/original/Snort3.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20200410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200410T130133Z&X-Amz-Expires=172800&X-Amz-SignedHeaders=host&X-Amz-Signature=2653d7e835a6de85758122fb296a5a516fd9fdce8f5687355fe86c59f1a898d5
+
+Ataskaitoje aprašykite problemas, su kuriomis susidūrėte, ir jų sprendimą.
