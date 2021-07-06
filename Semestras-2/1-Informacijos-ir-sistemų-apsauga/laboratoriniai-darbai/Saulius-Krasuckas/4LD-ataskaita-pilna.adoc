@@ -241,6 +241,23 @@ snort-2.9.18/depcomp
 osboxes@ldvm1:/usr/local/src$ 
 ```
 
+Pereinu į išarchyvuotą direktoriją:
+
+```
+osboxes@ldvm1:/usr/local/src$ cd snort-2.9.18/
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ 
+```
+
+Peržiūriu instaliavimo rekomendacijas:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ wc -l doc/INSTALL
+683 doc/INSTALL
+
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ nano doc/INSTALL
+[1]+  Stopped                 nano doc/INSTALL
+```
+
 
 ### Snort taisyklės analizė
 
