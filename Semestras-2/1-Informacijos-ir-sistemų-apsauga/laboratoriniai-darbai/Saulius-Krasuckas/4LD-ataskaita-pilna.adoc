@@ -547,6 +547,27 @@ Setting up libdaq-dev (2.0.4-3build2) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 ```
 
+* Konfigūruoju kompiliatorių, dar viena klaida:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+  ...
+checking for inflate in -lz... yes
+checking lzma.h usability... no
+checking lzma.h presence... no
+checking for lzma.h... no
+checking for lzma_stream_decoder in -llzma... no
+
+   ERROR!  flex not found.
+   Get it from http://flex.sourceforge.net/
+   (You may also try lex instead.)
+```
+
 
 ### Snort taisyklės analizė
 
