@@ -184,6 +184,25 @@ snort-2.9.18.tar.gz: Permission denied
 Cannot write to ‘snort-2.9.18.tar.gz’ (Success).`
 ```
 
+* Tikrinu teises:
++
+```
+osboxes@ldvm1:/usr/local/src$ ll -d .
+drwxr-xr-x 2 root root 4096 Feb  9 20:47 ./
+
+osboxes@ldvm1:/usr/local/src$ id
+uid=1000(osboxes) gid=1000(osboxes) groups=1000(osboxes),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
+```
+
+* Ir jas pakeičiu:
++
+```
+osboxes@ldvm1:/usr/local/src$ sudo chown osboxes:osboxes .
+
+osboxes@ldvm1:/usr/local/src$ ll -d .
+drwxr-xr-x 2 osboxes osboxes 4096 Feb  9 20:47 ./
+```
+
 
 ### Snort taisyklės analizė
 
