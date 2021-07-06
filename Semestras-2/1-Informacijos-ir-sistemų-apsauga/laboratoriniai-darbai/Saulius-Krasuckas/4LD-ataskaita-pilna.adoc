@@ -746,6 +746,34 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i dynam
 
 * Turbūt pernelyg pasikeitė kodas versijoje 2.9.18.  Mėginu jų nebenaudoti.
 
+Konfigūruoju kompiliatorių:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --disable-open-appid
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+  ...
+checking for yylex_destroy support... yes
+checking for SFLINUX... no
+checking for WRLINUX... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating snort.pc
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/sfutil/Makefile
+config.status: creating src/control/Makefile
+  ...
+config.status: creating src/reload-adjust/Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+```
+
 
 ### Snort taisyklės analizė
 
