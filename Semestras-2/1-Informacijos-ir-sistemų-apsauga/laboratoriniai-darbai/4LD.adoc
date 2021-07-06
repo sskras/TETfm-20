@@ -5,9 +5,10 @@ Informacijos ir sistemų apsauga
 
 ### Užduotis
 
-:SNORT-GUIDE-AWS-URL: https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/003/979/original/Snort3_3.1.0.0_on_Ubuntu_18___20.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210706T151701Z&X-Amz-Expires=172800&X-Amz-SignedHeaders=host&X-Amz-Signature=84e7cf18a349d0d173ce96592e1fb63bf8a69d86c473de12f01a92ddfe6bb7d1
+:SNORT3-GUIDE-AWS-URL: https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/003/979/original/Snort3_3.1.0.0_on_Ubuntu_18___20.pdf
 
-Instaliuokite Snort IDS: {SNORT-GUIDE-AWS-URL}[Snort3_3.1.0.0_on_Ubuntu_18___20.pdf]
+Instaliuokite Snort IDS:  +
+{SNORT3-GUIDE-AWS-URL}[Snort3_3.1.0.0_on_Ubuntu_18___20.pdf]
 
 Ataskaitoje aprašykite problemas, su kuriomis susidūrėte, ir jų sprendimą.
 
