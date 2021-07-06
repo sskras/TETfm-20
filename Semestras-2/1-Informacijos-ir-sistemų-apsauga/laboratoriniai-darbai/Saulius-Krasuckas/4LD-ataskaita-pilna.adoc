@@ -404,6 +404,31 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 ```
 
+* Konfigūruoju kompiliatorių, klaida išlieka:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+  ...
+checking for SHA256_Init in -lcrypto... yes
+checking for MD5_Init in -lcrypto... yes
+checking dnet.h usability... no
+checking dnet.h presence... no
+checking for dnet.h... no
+checking dumbnet.h usability... no
+checking dumbnet.h presence... no
+checking for dumbnet.h... no
+
+   ERROR!  dnet header not found, go get it from
+   http://code.google.com/p/libdnet/ or use the --with-dnet-*
+   options, if you have it installed in an unusual place
+```
+
 
 ### Snort taisyklės analizė
 
