@@ -228,6 +228,27 @@ nano /etc/snort/rules/local.rules
 alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
 
 
+ 3+| +++<center>+++ *8. ICMP užklausų atpažinimas* +++</center>+++
+
+   | Startuokite Snort paslaugą:
+2+a|
+```
+/usr/local/bin/snort -u snort -g snort -c /etc/snort/snort.conf
+
+   | Gaukite _ping_ užklausas iš kaimyninio kompiuterio
+2+a|
+
+   | Sustabdykite stebėjimą:
+2+a|
+```
+Ctrl+C
+
+   | Stebėkite, ar jos buvo atpažintos:
+2+a|
+```
+cat /var/log/snort/alert
+
+
 |===
 
 ### Ataskaitos turinys
