@@ -733,6 +733,19 @@ config.status: executing libtool commands
 configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
 ```
 
+* Tikrinu dvi minimas opcijas:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i mysql
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i plugin
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i dynam
+  --enable-so-with-static-lib  Enable linking of dynamically loaded preprocessors with a static preprocessor library
+  --enable-build-dynamic-examples   Enable building of example dynamically loaded preprocessor and rule (off by default)
+  --disable-dlclose        Only use if you are developing dynamic preprocessors or shared object rules.  Disable (--disable-dlclose) for testing valgrind leaks in dynamic libraries so a usable backtrace is reported.  Enabled by default.
+```
+
+* Turbūt pernelyg pasikeitė kodas versijoje 2.9.18.  Mėginu jų nebenaudoti.
+
 
 ### Snort taisyklės analizė
 
