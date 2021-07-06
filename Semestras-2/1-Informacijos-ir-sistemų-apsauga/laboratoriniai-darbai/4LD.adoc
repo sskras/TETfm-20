@@ -119,7 +119,7 @@ cp /usr/local/src/snort-2.8.1/etc/*.* /etc/snort/
 chown snort:snort /etc/snort/snort.conf
 
 
- 3+| +++<center>+++ *4. TODO* +++</center>+++
+ 3+| +++<center>+++ *4. Pradinis stebėjimas* +++</center>+++
 
  3+| Snort tinklo stebėjimo režime stebimos tinklu keliaujančių paketų antraštės arba visi paketai
 
@@ -128,16 +128,45 @@ chown snort:snort /etc/snort/snort.conf
 ```
 cd /root
 snort -v > snort1
-
+   
    | Stebėjimą stabdykite:
 2+a|
 ```
 Ctrl-C
-
+   
    | Analizuokite stebėjimo failus.
 2+a|
 ```
 
+ 3+| +++<center>+++ *5. Paketų rinkimo režimas* +++</center>+++
+
+ 3+| Snort tinklo paketų rinkimo režimas leidžia rinkti tinklo paketus ir saugoti juos dvejetainiuose failuose tolesnei analizei.
+
+   | Startuokite Snort paketų rinkimo režimu:
+2+a|
+```
+snort -dev -l /var/log/snort
+
+   | Gaukite _ping_ užklausas iš kaimyno kompiuterio.
+2+a|
+```
+
+   | Sustabdykite paketų rinkimą:
+2+a|
+```
+Ctrl-C
+
+ 3+| Gautą informaciją galima nuskaityti įvairiais tinklo stebėjimo įrankiais.
+
+   | Nuskaitykite informaciją apie sustebėtus ICMP paketus:
+2+a|
+```
+snort -dvr /var/log/snort/snort.log.xxxxxx icmp
+
+   | Peržiūrėti informaciją, esančią ekrano viršuje galima:
+2+a|
+```
+Shift+PgUP, Shift+PgDOWN
 
 |===
 
