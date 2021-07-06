@@ -511,6 +511,42 @@ checking for daq_load_modules in -ldaq_static... no
    http://www.snort.org/.
 ```
 
+* Diegiu `libdaq`:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ daq-modules-config
+
+Command 'daq-modules-config' not found, but can be installed with:
+
+sudo apt install libdaq-dev
+
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get install libdaq-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libdaq2
+The following NEW packages will be installed:
+  libdaq-dev libdaq2
+0 upgraded, 2 newly installed, 0 to remove and 153 not upgraded.
+Need to get 171 kB of archives.
+After this operation, 651 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdaq2 amd64 2.0.4-3build2 [65.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdaq-dev amd64 2.0.4-3build2 [106 kB]
+Fetched 171 kB in 1s (124 kB/s) 
+Selecting previously unselected package libdaq2.
+(Reading database ... 197948 files and directories currently installed.)
+Preparing to unpack .../libdaq2_2.0.4-3build2_amd64.deb ...
+Unpacking libdaq2 (2.0.4-3build2) ...
+Selecting previously unselected package libdaq-dev.
+Preparing to unpack .../libdaq-dev_2.0.4-3build2_amd64.deb ...
+Unpacking libdaq-dev (2.0.4-3build2) ...
+Setting up libdaq2 (2.0.4-3build2) ...
+Setting up libdaq-dev (2.0.4-3build2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
 
 ### Snort taisyklės analizė
 
