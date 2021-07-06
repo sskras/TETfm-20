@@ -366,6 +366,44 @@ checking for dumbnet.h... no
 
 * Trūksta `libdnet`.
 
+* Ieškau ir diegiu `libdnet`:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ apt-cache search libdnet
+dnet-common - Base package for Linux DECnet
+libdnet - DECnet Libraries
+libdnet-dev - DECnet development libraries & Headers
+libdumbnet-dev - dumb, portable networking library -- development files
+libdumbnet1 - dumb, portable networking library -- shared library
+libnet-libdnet-perl - interface to libdumbnet's low-level network functions
+libnet-libdnet6-perl - module to add IPv6 support to Net::Libdnet
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get install libdnet libdnet-dev 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  dnet-common
+The following NEW packages will be installed:
+  libdnet libdnet-dev
+0 upgraded, 2 newly installed, 0 to remove and 153 not upgraded.
+Need to get 357 kB of archives.
+After this operation, 996 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdnet amd64 2.65build2 [60.1 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdnet-dev amd64 2.65build2 [297 kB]
+Fetched 357 kB in 1s (248 kB/s)      
+Selecting previously unselected package libdnet:amd64.
+(Reading database ... 197909 files and directories currently installed.)
+Preparing to unpack .../libdnet_2.65build2_amd64.deb ...
+Unpacking libdnet:amd64 (2.65build2) ...
+Selecting previously unselected package libdnet-dev:amd64.
+Preparing to unpack .../libdnet-dev_2.65build2_amd64.deb ...
+Unpacking libdnet-dev:amd64 (2.65build2) ...
+Setting up libdnet:amd64 (2.65build2) ...
+Setting up libdnet-dev:amd64 (2.65build2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
 
 ### Snort taisyklės analizė
 
