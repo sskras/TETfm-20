@@ -831,6 +831,28 @@ make[2]: Leaving directory '/usr/local/src/snort-2.9.18'
 make[1]: Leaving directory '/usr/local/src/snort-2.9.18'
 ```
 
+#### 3. Konfigūracijos failas ir žurnalas
+
+Sukuriu direktorijas:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo mkdir /etc/snort
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo mkdir /var/log/snort
+```
+
+Pridedu grupę ir vartotoją:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo groupadd snort
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo useradd -g snort snort
+```
+
+Pakeičiu logų direktorijos teises:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo chown snort:snort /var/log/snort
+```
+
 
 ### Snort taisyklės analizė
 
