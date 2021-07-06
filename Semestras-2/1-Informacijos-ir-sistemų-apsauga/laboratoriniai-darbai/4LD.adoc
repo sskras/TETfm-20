@@ -85,7 +85,7 @@ make
 ```
 make install
    
- 3+| +++<center>+++ *3. Konfigūracijos ir žurnalo failai* +++</center>+++
+ 3+| +++<center>+++ *3. Konfigūracijos failas ir žurnalas* +++</center>+++
 
    | Sukurkite direktorijas:
 2+a|
@@ -208,6 +208,24 @@ var EXTERNAT_NET !$HOME_NET
 2+a|
 ```
 output database: log, mysql
+
+
+ 3+| +++<center>+++ *7. Taisyklių vieta* +++</center>+++
+
+   | Sukurkite direktoriją:
+2+a|
+```
+mkdir /etc/snort/rules
+
+   | Redaguokite failą `local.rules`:
+2+a|
+```
+nano /etc/snort/rules/local.rules
+
+   | Parašykite paprastą taisyklę, pranešančią apie ICMP paketus:
+2+a|
+```
+alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
 
 
 |===
