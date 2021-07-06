@@ -489,6 +489,28 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 ```
 
+* Konfigūruoju kompiliatorių, nauja klaida:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+  ...
+checking dumbnet.h presence... yes
+checking for dumbnet.h... yes
+checking for eth_set in -ldnet... no
+checking for eth_set in -ldumbnet... yes
+checking for dlsym in -ldl... yes
+./configure: line 12576: daq-modules-config: command not found
+checking for daq_load_modules in -ldaq_static... no
+
+   ERROR!  daq_static library not found, go get it from
+   http://www.snort.org/.
+```
+
 
 ### Snort taisyklės analizė
 
