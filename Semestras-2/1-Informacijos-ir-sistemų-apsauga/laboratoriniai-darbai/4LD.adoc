@@ -29,7 +29,7 @@ Parengti ir išbandyti _Snort 3_ atakų atpažinimo sistemą.
 |===
 
 
- 3+| +++<center>+++ *1. Pasirengimas darbui* +++</center>+++
+ 3+| +++<center>+++ *1. Tinklo paruošimas* +++</center>+++
 
    | Išvalykite `iptables` nustatymus:
  2+|`iptables -F`
@@ -41,7 +41,7 @@ ifconfig -a
 route -n
 ```
 
- 3+| +++<center>+++ *3. TODO* +++</center>+++
+ 3+| +++<center>+++ *2. Snort paruošimas* +++</center>+++
 
    | Pereikite į išeities tekstų direktoriją:
  2+|`cd /usr/local/src`
