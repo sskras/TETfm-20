@@ -224,6 +224,23 @@ snort-2.9.18.tar.gz      100%[===============================>]   6.59M  1.14MB/
 2021-07-06 23:17:49 (779 KB/s) - ‘snort-2.9.18.tar.gz’ saved [6909928/6909928]
 ```
 
+Išarchyvuoju:
+
+```
+osboxes@ldvm1:/usr/local/src$ tar xvzf snort-2.9.18.tar.gz
+snort-2.9.18/
+snort-2.9.18/Makefile.in
+snort-2.9.18/Makefile.am
+snort-2.9.18/configure
+snort-2.9.18/configure.in
+  ...
+snort-2.9.18/tools/u2streamer/UnifiedLog.h
+snort-2.9.18/tools/u2streamer/sf_error.c
+snort-2.9.18/tools/u2streamer/sf_error.h
+snort-2.9.18/depcomp
+osboxes@ldvm1:/usr/local/src$ 
+```
+
 
 ### Snort taisyklės analizė
 
