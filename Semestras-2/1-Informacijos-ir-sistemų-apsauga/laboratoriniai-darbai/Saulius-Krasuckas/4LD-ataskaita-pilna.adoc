@@ -5,6 +5,22 @@
 
 ### Trumpas atlikto darbo aptarimas
 
+#### 1. Tinklo paruošimas
+
+Išvalau `iptables` nustatymus:
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+osboxes@ldvm1:~$ 
+```
+
+* Iškart iškilo sunkumas – užstrigo SSH ryšys ir po ilgo laiko SSH klientas atsijungė:
++
+```
+osboxes@ldvm1:~$ 
+osboxes@ldvm1:~$ packet_write_wait: Connection to 192.168.10.14 port 22: Broken pipe
+```
+
 
 ### Snort taisyklės analizė
 
