@@ -774,6 +774,39 @@ config.status: executing depfiles commands
 config.status: executing libtool commands
 ```
 
+Sukompiliuoju:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ time make
+make  all-recursive
+make[1]: Entering directory '/usr/local/src/snort-2.9.18'
+Making all in src
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/src'
+Making all in sfutil
+make[3]: Entering directory '/usr/local/src/snort-2.9.18/src/sfutil'
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../src -I../../src/sfutil -I/usr/include/pcap -I../../src/output-plugins -I../../src/detection-plugins -I../../src/dynamic-plugins -I../../src/preprocessors -I../../src/preprocessors/portscan -I../../src/preprocessors/HttpInspect/include -I../../src/preprocessors/Session -I../../src/preprocessors/Stream6 -I../../src/target-based -I../../src/control -I../../src/file-process -I../../src/file-process/libs -I../../src/side-channel -I../../src/side-channel/plugins -I../../src/reload-adjust  -DGRE -DMPLS -DPPM_MGR -DNDEBUG -DENABLE_REACT -DENABLE_RESPOND -DENABLE_RESPONSE3 -DSF_WCHAR -DTARGET_BASED -DPERF_PROFILING -DSNORT_RELOAD -DNO_NON_ETHER_DECODER -DNORMALIZER -DACTIVE_RESPONSE  -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -c sfghash.c
+  ...
+make[3]: Leaving directory '/usr/local/src/snort-2.9.18/tools/u2boat'
+Making all in u2spewfoo
+make[3]: Entering directory '/usr/local/src/snort-2.9.18/tools/u2spewfoo'
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../src -I../../src/sfutil -I/usr/include/pcap -I../../src/output-plugins -I../../src/detection-plugins -I../../src/dynamic-plugins -I../../src/preprocessors -I../../src/preprocessors/portscan -I../../src/preprocessors/HttpInspect/include -I../../src/preprocessors/Session -I../../src/preprocessors/Stream6 -I../../src/target-based -I../../src/control -I../../src/file-process -I../../src/file-process/libs -I../../src/side-channel -I../../src/side-channel/plugins -I../../src/reload-adjust -I/usr/include/pcap  -DGRE -DMPLS -DPPM_MGR -DNDEBUG -DENABLE_REACT -DENABLE_RESPOND -DENABLE_RESPONSE3 -DSF_WCHAR -DTARGET_BASED -DPERF_PROFILING -DSNORT_RELOAD -DNO_NON_ETHER_DECODER -DNORMALIZER -DACTIVE_RESPONSE -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall  -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -MT u2spewfoo-u2spewfoo.o -MD -MP -MF .deps/u2spewfoo-u2spewfoo.Tpo -c -o u2spewfoo-u2spewfoo.o `test -f 'u2spewfoo.c' || echo './'`u2spewfoo.c
+mv -f .deps/u2spewfoo-u2spewfoo.Tpo .deps/u2spewfoo-u2spewfoo.Po
+/bin/bash ../../libtool  --tag=CC   --mode=link gcc -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall  -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall  -lpcre -ldumbnet -o u2spewfoo u2spewfoo-u2spewfoo.o  -lz -ldaq_static -ldumbnet -lpcre -lpcap -lnsl -lm -lm  -lcrypto -ldl -L/usr/lib -ldaq_static_modules  -lsfbpf -lpcap -lsfbpf -lpcap -lz -lpthread -lpthread -lpthread
+libtool: link: gcc -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -o u2spewfoo u2spewfoo-u2spewfoo.o  -ldaq_static /usr/lib/x86_64-linux-gnu/libdumbnet.so -lpcre -lnsl -lm -lcrypto -ldl -L/usr/lib -ldaq_static_modules -lsfbpf -lpcap -lz -lpthread
+make[3]: Leaving directory '/usr/local/src/snort-2.9.18/tools/u2spewfoo'
+make[3]: Entering directory '/usr/local/src/snort-2.9.18/tools'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[2]: Entering directory '/usr/local/src/snort-2.9.18'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18'
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18'
+
+real    3m11.636s
+user    2m30.736s
+sys     0m27.825s
+```
+
 
 ### Snort taisyklės analizė
 
