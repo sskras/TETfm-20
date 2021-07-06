@@ -429,6 +429,66 @@ checking for dumbnet.h... no
    options, if you have it installed in an unusual place
 ```
 
+* Tikrinu `INSTALL` faile nurodytą įrankį:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ dnet-config
+
+Command 'dnet-config' not found, but can be installed with:
+
+sudo apt install libdumbnet-dev
+```
+
+* Išmet `libdnet` paketus:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get autoremove libdnet libdnet-dev 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  libdnet libdnet-dev
+0 upgraded, 0 newly installed, 2 to remove and 153 not upgraded.
+After this operation, 996 kB disk space will be freed.
+Do you want to continue? [Y/n] 
+(Reading database ... 197958 files and directories currently installed.)
+Removing libdnet-dev:amd64 (2.65build2) ...
+Removing libdnet:amd64 (2.65build2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
+* Diegiu `libdumbnet` paketus:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get install libdumbnet-dev 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libdumbnet1
+The following NEW packages will be installed:
+  libdumbnet-dev libdumbnet1
+0 upgraded, 2 newly installed, 0 to remove and 153 not upgraded.
+Need to get 81.8 kB of archives.
+After this operation, 329 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdumbnet1 amd64 1.12-9build1 [25.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdumbnet-dev amd64 1.12-9build1 [56.4 kB]
+Fetched 81.8 kB in 1s (102 kB/s)     
+Selecting previously unselected package libdumbnet1:amd64.
+(Reading database ... 197909 files and directories currently installed.)
+Preparing to unpack .../libdumbnet1_1.12-9build1_amd64.deb ...
+Unpacking libdumbnet1:amd64 (1.12-9build1) ...
+Selecting previously unselected package libdumbnet-dev.
+Preparing to unpack .../libdumbnet-dev_1.12-9build1_amd64.deb ...
+Unpacking libdumbnet-dev (1.12-9build1) ...
+Setting up libdumbnet1:amd64 (1.12-9build1) ...
+Setting up libdumbnet-dev (1.12-9build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
 
 ### Snort taisyklės analizė
 
