@@ -85,7 +85,7 @@ make
 ```
 make install
    
- 3+| +++<center>+++ *3. Konfigūracijos paruošimas* +++</center>+++
+ 3+| +++<center>+++ *3. Konfigūracijos ir žurnalo failai* +++</center>+++
 
    | Sukurkite direktorijas:
 2+a|
@@ -149,7 +149,6 @@ snort -dev -l /var/log/snort
 
    | Gaukite _ping_ užklausas iš kaimyno kompiuterio.
 2+a|
-```
 
    | Sustabdykite paketų rinkimą:
 2+a|
@@ -167,6 +166,49 @@ snort -dvr /var/log/snort/snort.log.xxxxxx icmp
 2+a|
 ```
 Shift+PgUP, Shift+PgDOWN
+
+
+ 3+| +++<center>+++ *6. Snort konfigūravimas* +++</center>+++
+
+ 3+| Atakų atpažinimo režimas yra pagrindinis ir turintis daugiausia galimybių.
+
+   | Snort konfigūracija saugoma faile:
+2+a|
+```
+snort.conf
+
+   | Susipažinkite su jo struktūra:
+2+a|
+```
+nano /etc/snort/snort.conf
+
+   | Atkreipkite dėmesį į:
+2+a| 
+
+* globalius kintamuosius,
+* naudojamus preprocesorius,
+* išvedimo įsiepius ir
+* naudojamas taisykles
+
+   | Redaguokite konfigūracinį failą:
+2+a|
+```
+nano /etc/snort/snort.conf
+
+   | Jame įrašykite parametrus:
+2+a|
+```
+var RULE_PATH /etc/snort/rules
+var HOME_NET 192.168.10.0/24
+var EXTERNAT_NET !$HOME_NET
+
+ 3+| Naudodami simbolį `#` užkomentuokite visas taisykles išskyrus `local.rules`.
+
+   | Patikrinkite, ar užkomentuotas išvedimas į duomenų bazę:
+2+a|
+```
+output database: log, mysql
+
 
 |===
 
