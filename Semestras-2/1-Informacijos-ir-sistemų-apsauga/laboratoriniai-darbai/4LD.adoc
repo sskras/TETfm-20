@@ -32,16 +32,14 @@ Parengti ir išbandyti _Snort 3_ atakų atpažinimo sistemą.
  3+| +++<center>+++ *1. Pasirengimas darbui* +++</center>+++
 
    | Išvalykite `iptables` nustatymus:
-   |`iptables -F`
-   |
-  
+ 2+|`iptables -F`
+
    | Patikrinkite tinklo nustatymus:
-  a|
+2+a|
 ```
 ifconfig -a
 route -n
 ```
-   |
 
  3+| +++<center>+++ *3. TODO* +++</center>+++
 
