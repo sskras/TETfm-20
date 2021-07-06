@@ -9,3 +9,45 @@ Instaliuokite Snort IDS:  +
 https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/000/211/original/Snort3.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20200410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200410T130133Z&X-Amz-Expires=172800&X-Amz-SignedHeaders=host&X-Amz-Signature=2653d7e835a6de85758122fb296a5a516fd9fdce8f5687355fe86c59f1a898d5
 
 Ataskaitoje aprašykite problemas, su kuriomis susidūrėte, ir jų sprendimą.
+
+(Žemiau – https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/4lab_iptableslaboras8.docx?forcedownload=1[4lab_iptableslaboras8.docx] konspektas, jo tikslų URL praganiau)
+
+Darbe bus remiamasi rekomendacijomis iš http://www.snort.org/docs/setup_guides/deb-snort-howto.pdf
+
+
+### Tikslas
+
+Parengti ir išbandyti _Snort 2.8.1_ atakų atpažinimo sistemą.
+
+
+### Darbo eiga
+
+[cols=3]
+|===
+
+
+3+| +++<center>+++ *1. TODO* +++</center>+++
+
+  |
+  |
+  |
+
+
+|===
+
+### Ataskaitos turinys
+
+#### Darbo Tikslas
+#### Trumpas atlikto darbo aptarimas
+#### Snort taisyklės analizė:
+
+     (a) alert  tcp any any -> 192.168.1.0/24 111 (content: "|00 01 86 a5|"; msg: "mountd access";)
+     (b) alert  tcp any any -> 192.168.1.0/24  80 (content: "cgi-bin/phf"; offset: 3; depth: 22; msg: "CGI-PHF attack";)
+     (c) alert      any any -> 192.168.1.0/24 any (flags: SF; msg: "Possible SYN FIN scan";)
+     (d) alert  tcp any any -> 192.168.1.0/24  21 (content: "USER root"; msg: "FTP root login";)
+     (e) alert  tcp any any -> 192.168.1.0/24  80 (content: "cgi-bin/phf"; flags: PA; msg: "CGI-PHF attack";)
+     (f) alert   ip $HOME_NET 5060 –> any any     (msg: "BLEEDING-EDGE VoIP Multiple Unauthorized SIP Responses"; content: "SIP/2.0 401 Unauthorized"; depth 24; threshold: type both, track by_src, count 5, seconds 360; classtype: attempted-dos; sid: 2003194; rev: 2;)"
+     (g) alert  tcp $EXTERNAL_NET 6112 -> $HOME_NET any (msg: "BLEEDING-EDGE GAMES Battle.net failed account login (OLS)\: wrong password"; flow: established, from_server; content: "|FF 3A 08 00 02 00 00 00|"; classtype: policy-violation; sid: 2002115; rev: 1;)
+     (h) alert  tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "BLEEDING-EDGE GAMES Blizzard Downloader"; flow: established, to_server; content: "User-agent\: Blizzard Downloader"; nocase; reference: url,www.worldofwarcraft.com/info/faq/blizzarddownloader.html; classtype: policy-violation; sid: 2002855; rev: 4;)
+     (i) alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg: "ICMP PING NMAP"; dsize: 0; itype: 8; reference: arachnids,162; classtype: attempted-recon; sid: 469; rev 3;)
+     (j) alert  udp $EXTERNAL_NET any -> $SQL_SERVERS any (msg: "MS-SQL probe response overflow attempt"; content: "|05|"; depth: 1; byte_test: 2,>,512,1; content: "|3B|"; within: 512; reference: bugtraq,9407; classtype: attempted-user; sid: 2329; rev: 6;)
