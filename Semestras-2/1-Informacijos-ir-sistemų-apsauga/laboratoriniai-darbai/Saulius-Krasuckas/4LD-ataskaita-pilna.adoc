@@ -156,6 +156,15 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 Tinklo nustatymai tvarkingi.
 
+#### 2. Snort instaliavimas
+
+Pereinu į išeities tekstų direktoriją:
+
+```
+osboxes@ldvm1:~$ cd /usr/local/src/
+osboxes@ldvm1:/usr/local/src$ 
+```
+
 
 ### Snort taisyklės analizė
 
