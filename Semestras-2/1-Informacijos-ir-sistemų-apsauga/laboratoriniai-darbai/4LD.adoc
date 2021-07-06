@@ -5,19 +5,22 @@ Informacijos ir sistemų apsauga
 
 ### Užduotis
 
-Instaliuokite Snort IDS:  +
-https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/000/211/original/Snort3.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20200410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200410T130133Z&X-Amz-Expires=172800&X-Amz-SignedHeaders=host&X-Amz-Signature=2653d7e835a6de85758122fb296a5a516fd9fdce8f5687355fe86c59f1a898d5
+:SNORT-GUIDE-AWS-URL: https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/003/979/original/Snort3_3.1.0.0_on_Ubuntu_18___20.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210706T151701Z&X-Amz-Expires=172800&X-Amz-SignedHeaders=host&X-Amz-Signature=84e7cf18a349d0d173ce96592e1fb63bf8a69d86c473de12f01a92ddfe6bb7d1
+
+Instaliuokite Snort IDS: {SNORT-GUIDE-AWS-URL}[Snort3_3.1.0.0_on_Ubuntu_18___20.pdf]
 
 Ataskaitoje aprašykite problemas, su kuriomis susidūrėte, ir jų sprendimą.
 
 (Žemiau – https://moodle.garsva.lt/pluginfile.php/.../mod_assign/introattachment/0/4lab_iptableslaboras8.docx?forcedownload=1[4lab_iptableslaboras8.docx] konspektas, jo tikslų URL praganiau)
 
-Darbe bus remiamasi rekomendacijomis iš http://www.snort.org/docs/setup_guides/deb-snort-howto.pdf
+---
 
+Anksčiau darbe buvo remiamasi rekomendacijomis iš https://web.archive.org/web/20090126162649/http://snort.org:80/docs/setup_guides/deb-snort-howto.pdf[http://www.snort.org/docs/setup_guides/deb-snort-howto.pdf]  +
+(Jos skirtos senesnėms, _Snort 2.4.5_ ir _2.6_ versijoms)
 
 ### Tikslas
 
-Parengti ir išbandyti _Snort 2.8.1_ atakų atpažinimo sistemą.
+Parengti ir išbandyti _Snort 3_ atakų atpažinimo sistemą.
 
 
 ### Darbo eiga
