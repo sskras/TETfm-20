@@ -279,6 +279,93 @@ checking for pfring_open in -lpcap... no
    shared library that may be installed in an unusual place
 ```
 
+* Įdiegiu 2LD metu praleistus ir dabar trūkstančius paketus:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get install libnet1 libnet1-dev libpcre3 libpcre3-dev libpcap0.8 libpcap0.8-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libpcap0.8 is already the newest version (1.9.1-3).
+libpcap0.8 set to manually installed.
+libpcre3 is already the newest version (2:8.39-12build1).
+libpcre3 set to manually installed.
+The following additional packages will be installed:
+  libpcre16-3 libpcre32-3 libpcrecpp0v5
+The following NEW packages will be installed:
+  libnet1 libnet1-dev libpcap0.8-dev libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5
+0 upgraded, 7 newly installed, 0 to remove and 153 not upgraded.
+Need to get 1,234 kB of archives.
+After this operation, 5,059 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet1 amd64 1.1.6+dfsg-3.1build1 [43.3 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet1-dev amd64 1.1.6+dfsg-3.1build1 [101 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpcap0.8-dev amd64 1.9.1-3 [244 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpcre16-3 amd64 2:8.39-12build1 [150 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpcre32-3 amd64 2:8.39-12build1 [140 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpcrecpp0v5 amd64 2:8.39-12build1 [15.5 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpcre3-dev amd64 2:8.39-12build1 [540 kB]
+Fetched 1,234 kB in 4s (345 kB/s)     
+Selecting previously unselected package libnet1:amd64.
+(Reading database ... 197632 files and directories currently installed.)
+Preparing to unpack .../0-libnet1_1.1.6+dfsg-3.1build1_amd64.deb ...
+Unpacking libnet1:amd64 (1.1.6+dfsg-3.1build1) ...
+Selecting previously unselected package libnet1-dev.
+Preparing to unpack .../1-libnet1-dev_1.1.6+dfsg-3.1build1_amd64.deb ...
+Unpacking libnet1-dev (1.1.6+dfsg-3.1build1) ...
+Selecting previously unselected package libpcap0.8-dev:amd64.
+Preparing to unpack .../2-libpcap0.8-dev_1.9.1-3_amd64.deb ...
+Unpacking libpcap0.8-dev:amd64 (1.9.1-3) ...
+Selecting previously unselected package libpcre16-3:amd64.
+Preparing to unpack .../3-libpcre16-3_2%3a8.39-12build1_amd64.deb ...
+Unpacking libpcre16-3:amd64 (2:8.39-12build1) ...
+Selecting previously unselected package libpcre32-3:amd64.
+Preparing to unpack .../4-libpcre32-3_2%3a8.39-12build1_amd64.deb ...
+Unpacking libpcre32-3:amd64 (2:8.39-12build1) ...
+Selecting previously unselected package libpcrecpp0v5:amd64.
+Preparing to unpack .../5-libpcrecpp0v5_2%3a8.39-12build1_amd64.deb ...
+Unpacking libpcrecpp0v5:amd64 (2:8.39-12build1) ...
+Selecting previously unselected package libpcre3-dev:amd64.
+Preparing to unpack .../6-libpcre3-dev_2%3a8.39-12build1_amd64.deb ...
+Unpacking libpcre3-dev:amd64 (2:8.39-12build1) ...
+Setting up libpcrecpp0v5:amd64 (2:8.39-12build1) ...
+Setting up libpcre16-3:amd64 (2:8.39-12build1) ...
+Setting up libpcap0.8-dev:amd64 (1.9.1-3) ...
+Setting up libnet1:amd64 (1.1.6+dfsg-3.1build1) ...
+Setting up libpcre32-3:amd64 (2:8.39-12build1) ...
+Setting up libpcre3-dev:amd64 (2:8.39-12build1) ...
+Setting up libnet1-dev (1.1.6+dfsg-3.1build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
+* Taisau, bet dar nesusikonfigūravo:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+  ...
+checking for SHA256_Init in -lcrypto... yes
+checking for MD5_Init in -lcrypto... yes
+checking dnet.h usability... no
+checking dnet.h presence... no
+checking for dnet.h... no
+checking dumbnet.h usability... no
+checking dumbnet.h presence... no
+checking for dumbnet.h... no
+
+   ERROR!  dnet header not found, go get it from
+   http://code.google.com/p/libdnet/ or use the --with-dnet-*
+   options, if you have it installed in an unusual place
+```
+
+* Trūksta `libdnet`.
+
 
 ### Snort taisyklės analizė
 
