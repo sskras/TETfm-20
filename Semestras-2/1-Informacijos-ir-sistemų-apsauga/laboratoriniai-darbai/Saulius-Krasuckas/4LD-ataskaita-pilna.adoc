@@ -674,6 +674,65 @@ update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) i
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
+* Vėl konfigūruoju kompiliatorių, šįkart be klaidų – tik perspėjimai :
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+  ...
+checking for pthread_tryjoin_np... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for luajit... no
+
+   ERROR!  LuaJIT library not found. Go get it from http://www.luajit.org/ (or)
+   Try compiling without openAppId using '--disable-open-appid'
+configure: error: "Fatal!"
+```
+
+* Šį sykį mėginu apsieiti be nurodytos bibliotekos (ir OpenAppID palaikymo):
+  
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin --disable-open-appid
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+  ...
+ecking for lzma_stream_decoder in -llzma... no
+checking for pthread_tryjoin_np... yes
+checking for nghttp2_option_new in -lnghttp2... no
+
+   Libnghttp2 library not found.
+   Get it from https://nghttp2.org/
+
+checking for linuxthreads... no
+checking for yylex_destroy support... yes
+checking for SFLINUX... no
+checking for WRLINUX... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating snort.pc
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/sfutil/Makefile
+config.status: creating src/control/Makefile
+config.status: creating src/file-process/Makefile
+  ...
+config.status: creating tools/file_server/Makefile
+config.status: creating src/win32/Makefile
+config.status: creating src/reload-adjust/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+```
+
 
 ### Snort taisyklės analizė
 
