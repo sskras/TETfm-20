@@ -203,6 +203,27 @@ osboxes@ldvm1:/usr/local/src$ ll -d .
 drwxr-xr-x 2 osboxes osboxes 4096 Feb  9 20:47 ./
 ```
 
+Parsisiunčiu Snort:
+
+```
+osboxes@ldvm1:/usr/local/src$ wget https://www.snort.org/downloads/snort/snort-2.9.18.tar.gz
+--2021-07-06 23:17:38--  https://www.snort.org/downloads/snort/snort-2.9.18.tar.gz
+Resolving www.snort.org (www.snort.org)... 104.18.138.9, 104.18.139.9, 2606:4700::6812:8b09, ...
+Connecting to www.snort.org (www.snort.org)|104.18.138.9|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/474/original/snort-2.9.18.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210706T201740Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5dd830302594716f459629ffbc4e1479e7e61b2d7534516a1422ac482626c025 [following]
+--2021-07-06 23:17:39--  https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/474/original/snort-2.9.18.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210706T201740Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5dd830302594716f459629ffbc4e1479e7e61b2d7534516a1422ac482626c025
+Resolving snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)... 52.216.239.139
+Connecting to snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)|52.216.239.139|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6909928 (6.6M) [binary/octet-stream]
+Saving to: ‘snort-2.9.18.tar.gz’
+
+snort-2.9.18.tar.gz      100%[===============================>]   6.59M  1.14MB/s    in 8.7s    
+
+2021-07-06 23:17:49 (779 KB/s) - ‘snort-2.9.18.tar.gz’ saved [6909928/6909928]
+```
+
 
 ### Snort taisyklės analizė
 
