@@ -249,6 +249,24 @@ Ctrl+C
 cat /var/log/snort/alert
 
 
+ 3+| +++<center>+++ *9. _Telnet_ paruošimas* +++</center>+++
+
+   | Instaliuokite _Telnet_ serverį:
+2+a|
+```
+apt-get install telnetd
+
+   | Redaguokite failą `local.rules`:
+2+a|
+```
+nano /etc/snort/rules/local.rules
+
+   | Parašykite taisyklę, atpažįstančią _Telnet_ prisijungimą su  vartotoju `root`:
+2+a|
+```
+alert tcp any any -> 192.168.10.1x 23 (content: "root"; nocase; msg: "Suspicious Telnet"; sid: 10000002;)
+
+
 |===
 
 ### Ataskaitos turinys
