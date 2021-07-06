@@ -165,6 +165,25 @@ osboxes@ldvm1:~$ cd /usr/local/src/
 osboxes@ldvm1:/usr/local/src$ 
 ```
 
+* Siunčiu Snort ir iškart antra kliūtis:
++
+```
+osboxes@ldvm1:/usr/local/src$ wget https://www.snort.org/downloads/snort/snort-2.9.18.tar.gz
+--2021-07-06 23:11:27--  https://www.snort.org/downloads/snort/snort-2.9.18.tar.gz
+Resolving www.snort.org (www.snort.org)... 104.18.139.9, 104.18.138.9, 2606:4700::6812:8b09, ...
+Connecting to www.snort.org (www.snort.org)|104.18.139.9|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/474/original/snort-2.9.18.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210706T201127Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=56f418bb145628cfcf085140ffdcd693b1dbf5deb116d8fac3117c594e7c1a8f [following]
+--2021-07-06 23:11:28--  https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/474/original/snort-2.9.18.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210706T201127Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=56f418bb145628cfcf085140ffdcd693b1dbf5deb116d8fac3117c594e7c1a8f
+Resolving snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)... 52.217.137.153
+Connecting to snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)|52.217.137.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6909928 (6.6M) [binary/octet-stream]
+snort-2.9.18.tar.gz: Permission denied
+
+Cannot write to ‘snort-2.9.18.tar.gz’ (Success).`
+```
+
 
 ### Snort taisyklės analizė
 
