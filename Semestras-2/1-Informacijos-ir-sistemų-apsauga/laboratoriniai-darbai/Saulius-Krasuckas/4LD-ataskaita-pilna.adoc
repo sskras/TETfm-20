@@ -110,7 +110,7 @@ osboxes@ldvm1:~$
 
 * 4LD aprašas šiam žingsniui nevisai korektiškas.
 
-Tikrinu tiklo nustatymus:
+Tikrinu tinklo nustatymus:
 
 ```
 osboxes@ldvm1:~$ ifconfig -a
