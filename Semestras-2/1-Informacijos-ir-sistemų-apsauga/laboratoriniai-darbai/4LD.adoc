@@ -66,6 +66,39 @@ route -n
    
    | Ir suinstaliuokite:
  2+|`make install`
+   
+ 3+| +++<center>+++ *3. TODO* +++</center>+++
+
+   | Sukurkite direktorijas:
+2+a|
+```
+mkdir /etc/snort
+mkdir /var/log/snort
+
+   | Pridėkite grupę:
+2+a|
+```
+groupadd snort
+
+   | ... ir vartotoją:
+2+a|
+```
+useradd -g snort snort
+
+   | Pakeiskite logų direktorijos teises:
+2+a|
+```
+chown snort:snort /var/log/snort
+
+   | Nukopijuokite standartinius konfigūracinius failus:
+2+a|
+```
+cp /usr/local/src/snort-2.8.1/etc/*.* /etc/snort/
+
+   | Nustatykite teises:
+2+a|
+```
+chown snort:snort /etc/snort/snort.conf
 
 
 |===
