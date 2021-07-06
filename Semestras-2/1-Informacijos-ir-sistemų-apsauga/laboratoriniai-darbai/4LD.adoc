@@ -32,42 +32,59 @@ Parengti ir išbandyti _Snort 3_ atakų atpažinimo sistemą.
  3+| +++<center>+++ *1. Tinklo paruošimas* +++</center>+++
 
    | Išvalykite `iptables` nustatymus:
- 2+|`iptables -F`
+2+a|
+```
+iptables -F
 
    | Patikrinkite tinklo nustatymus:
 2+a|
 ```
 ifconfig -a
 route -n
-```
 
  3+| +++<center>+++ *2. Snort instaliavimas* +++</center>+++
 
    | Pereikite į išeities tekstų direktoriją:
- 2+|`cd /usr/local/src`
+2+a|
+```
+cd /usr/local/src
 
    | Parsisiųskite Snort:
- 2+|`wget http://snort.org/dl/current/snort-2.8.1.tar.gz`
+2+a|
+```
+wget http://snort.org/dl/current/snort-2.8.1.tar.gz
   
    | Išarchyvuokite:
- 2+|`tar xvzf snort-2.8.1.tar.gz`
+2+a|
+```
+tar xvzf snort-2.8.1.tar.gz
 
    | Pereikite į išarchyvuotą direktoriją:
- 2+|`cd snort-2.8.1`
+2+a|
+```
+cd snort-2.8.1
    
    | Peržiūrėkite instaliavimo rekomendacijas:
- 2+|`nano doc/INSTALL`
+2+a|
+```
+nano doc/INSTALL
    
    | Sukonfigūruokite kompiliatorių:
- 2+|`./configure --with-mysql --enable-dynamicplugin`
+2+a|
+```
+./configure --with-mysql --enable-dynamicplugin
    
    | Sukompiliuokite:
- 2+|`make`
+2+a|
+```
+make
    
    | Ir suinstaliuokite:
- 2+|`make install`
+2+a|
+```
+make install
    
- 3+| +++<center>+++ *3. Snort konfigūracija* +++</center>+++
+ 3+| +++<center>+++ *3. Konfigūracijos paruošimas* +++</center>+++
 
    | Sukurkite direktorijas:
 2+a|
