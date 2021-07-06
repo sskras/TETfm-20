@@ -871,6 +871,35 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo cp -v /usr/local/src/snort-2.9.1
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo chown snort:snort /etc/snort/
 ```
 
+#### 4. Pradinis stebėjimas
+
+Stebiu tinklo srautą ir įrašau duomenis į failus:
+
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo -i
+root@ldvm1:~# snort -v > snort1
+Running in packet dump mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+pcap DAQ configured to passive.
+Acquiring network traffic from "enp0s3".
+Decoding Ethernet
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.18 GRE (Build 169) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+Commencing packet processing (pid=49740)
+```
+
 
 ### Snort taisyklės analizė
 
