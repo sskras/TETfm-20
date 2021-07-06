@@ -135,8 +135,7 @@ snort -v > snort1
 Ctrl-C
    
    | Analizuokite stebėjimo failus.
-2+a|
-```
+ 2+|
 
  3+| +++<center>+++ *5. Paketų rinkimo režimas* +++</center>+++
 
@@ -148,7 +147,7 @@ Ctrl-C
 snort -dev -l /var/log/snort
 
    | Gaukite _ping_ užklausas iš kaimyno kompiuterio.
-2+a|
+ 2+|
 
    | Sustabdykite paketų rinkimą:
 2+a|
@@ -265,6 +264,20 @@ nano /etc/snort/rules/local.rules
 2+a|
 ```
 alert tcp any any -> 192.168.10.1x 23 (content: "root"; nocase; msg: "Suspicious Telnet"; sid: 10000002;)
+
+
+ 3+| +++<center>+++ *10. _Telnet_ tikrinimas* +++</center>+++
+
+   | Junkitės _Telnet_ protokolu orie kaimyno kompiuterio:
+2+a|
+```
+telnet 192.168.10.(1x-1)
+
+   | Bandykite įvesti vartotojo vardą `root` ir bet kokį slaptažodį.
+ 2+|
+
+   | Analizuokite įrašus.
+ 2+|
 
 
 |===
