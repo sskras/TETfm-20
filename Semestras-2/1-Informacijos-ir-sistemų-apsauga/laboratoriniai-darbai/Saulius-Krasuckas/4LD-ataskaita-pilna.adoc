@@ -1,0 +1,11 @@
+### Darbo Tikslas
+
+- [ ] Parengti ir išbandyti _Snort 2.9.18_ atakų atpažinimo sistemą.
+
+
+### Trumpas atlikto darbo aptarimas
+
+
+### Snort taisyklės analizė
+
+

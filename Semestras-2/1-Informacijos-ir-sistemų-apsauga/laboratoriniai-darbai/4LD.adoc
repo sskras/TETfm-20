@@ -6,9 +6,11 @@ Informacijos ir sistemų apsauga
 ### Užduotis
 
 :SNORT3-GUIDE-AWS-URL: https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/003/979/original/Snort3_3.1.0.0_on_Ubuntu_18___20.pdf
+:SNORT2-GUIDE-AWS-URL: https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf
 
 Instaliuokite Snort IDS:  +
-{SNORT3-GUIDE-AWS-URL}[Snort3_3.1.0.0_on_Ubuntu_18___20.pdf]
+{SNORT3-GUIDE-AWS-URL}[Snort3_3.1.0.0_on_Ubuntu_18___20.pdf]  +
+{SNORT2-GUIDE-AWS-URL}[Snort_2.9.9.x_on_Ubuntu_14-16.pdf]
 
 Ataskaitoje aprašykite problemas, su kuriomis susidūrėte, ir jų sprendimą.
 
@@ -21,7 +23,7 @@ Anksčiau darbe buvo remiamasi rekomendacijomis iš https://web.archive.org/web/
 
 ### Tikslas
 
-Parengti ir išbandyti _Snort 3_ atakų atpažinimo sistemą.
+Parengti ir išbandyti _Snort_ atakų atpažinimo sistemą.
 
 
 ### Darbo eiga
