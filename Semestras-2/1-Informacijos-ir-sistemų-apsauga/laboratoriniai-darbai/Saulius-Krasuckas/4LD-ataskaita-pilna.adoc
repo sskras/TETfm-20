@@ -624,6 +624,56 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for install-info (6.7.0.dfsg.2-5) ...
 ```
 
+* Vėl konfigūruoju kompiliatorių:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
+configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+  ...
+checking for lzma.h... no
+checking for lzma_stream_decoder in -llzma... no
+
+   ERROR!  bison not found.
+   Get it from http://www.gnu.org/software/bison/
+   (You may also try byacc or yacc instead.)
+```
+
+* Diegiu `bison`:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ bison
+
+Command 'bison' not found, but can be installed with:
+
+sudo apt install bison    # version 2:3.5.1+dfsg-1, or
+sudo apt install bison++  # version 1.21.11-4build1
+
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get install bison
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  bison-doc
+The following NEW packages will be installed:
+  bison
+0 upgraded, 1 newly installed, 0 to remove and 153 not upgraded.
+Need to get 657 kB of archives.
+After this operation, 2,028 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 bison amd64 2:3.5.1+dfsg-1 [657 kB]
+Fetched 657 kB in 2s (318 kB/s)
+Selecting previously unselected package bison.
+(Reading database ... 198128 files and directories currently installed.)
+Preparing to unpack .../bison_2%3a3.5.1+dfsg-1_amd64.deb ...
+Unpacking bison (2:3.5.1+dfsg-1) ...
+Setting up bison (2:3.5.1+dfsg-1) ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) in auto mode
+Processing triggers for man-db (2.9.1-1) ...
+```
+
 
 ### Snort taisyklės analizė
 
