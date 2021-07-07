@@ -285,6 +285,24 @@ telnet 192.168.10.(1x-1)
  2+|
 
 
+
+ 3+| +++<center>+++ *11. TODO* +++</center>+++
+ 
+   | Parsisiųskite bendruomenės taisykles arba registruoto vartotojo taisykles (klaiskite dėstytojo):
+2+a|
+```
+cd /etc/snort
+wget http://snort.org/pub-bin/downloads.cgi/Download/comm_rules/Community-Rules-CURRENT.tar.gz
+
+ 3+| Naujausias taisykles gauna komerciniai vartotojai, kiek senesnes registruoti.
+ 
+   | Išarchyvuokite taisykles:
+ 2+|`tar zxvf Community-Rules-CURRENT.tar.gz`
+
+   | Peržiūrėkite jų struktūrą.
+ 2+|
+
+
 |===
 
 ### Ataskaitos turinys
