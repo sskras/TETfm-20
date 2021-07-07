@@ -5033,6 +5033,9 @@ IP 192.168.10.13.38380 > 192.168.10.14.23: tcp 0
   ...
 ```
 
+* Matyti, kad dabar visi 4 simboliai `"root"` atkeliauja kartu.  +
+  Tačiau Snort jų vis tiek neaptinka.
+
 
 ### Snort taisyklės analizė
 
