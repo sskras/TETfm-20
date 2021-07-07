@@ -1598,6 +1598,17 @@ Sukuriu direktoriją:
 root@ldvm1:~# mkdir /etc/snort/rules
 ```
 
+Redaguoju failą `local.rules`:
+
+```
+root@ldvm1:~# nano /etc/snort/rules/local.rules
+
+
+Use "fg" to return to nano.
+
+[2]+  Stopped                 nano /etc/snort/rules/local.rules
+```
+
 
 ### Snort taisyklės analizė
 
