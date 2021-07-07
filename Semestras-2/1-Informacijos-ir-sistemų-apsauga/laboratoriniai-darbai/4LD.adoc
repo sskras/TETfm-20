@@ -350,6 +350,24 @@ mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
 mysql> exit
 
 
+ 3+| +++<center>+++ *14. Snort DB importavimas* +++</center>+++
+
+   | Importuokite Snort dumenų bazės schemą:
+2+a|
+```
+cd /usr/local/src/snort-X.X.X/schemas/
+mysql -u root -p mypass < create_mysql snort
+
+   | Patikrinkite, ar buvo sukurtos reikiamos lentelės:
+2+a|
+```
+mysql -u root -p mypass
+mysql> user snort;
+mysql> show tables;
+
+ 3+| Turėtumėte matyti naujas importuotas lenteles.
+
+
 |===
 
 ### Ataskaitos turinys
