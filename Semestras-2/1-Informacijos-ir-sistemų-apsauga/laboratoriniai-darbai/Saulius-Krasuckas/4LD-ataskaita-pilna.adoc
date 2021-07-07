@@ -2606,6 +2606,25 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for systemd (245.4-4ubuntu3.7) ...
 ```
 
+Redaguoju `local.rules` ir pridedu naują taisyklę:
+
+```
+root@ldvm1:~# jobs
+[1]+  Stopped                 nano /etc/snort/snort.conf
+[2]   Stopped                 nano /etc/snort/rules/local.rules
+root@ldvm1:~# fg 2
+nano /etc/snort/rules/local.rules
+
+
+Use "fg" to return to nano.
+
+[2]+  Stopped                 nano /etc/snort/rules/local.rules
+
+root@ldvm1:~# cat /etc/snort/rules/local.rules
+alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
+alert tcp any any -> 192.168.10.14 23 (content: "root"; nocase; msg: "Suspicious Telnet"; sid: 10000002;)
+```
+
 
 ### Snort taisyklės analizė
 
