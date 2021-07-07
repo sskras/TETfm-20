@@ -1634,6 +1634,44 @@ ERROR: /etc/snort/snort.conf(48) Failed to parse the IP address: !$HOME_INET.
 Fatal Error, Quitting..
 ```
 
+* Gaunu klaidą.  Matau perteklinę raidę kintamojo `HOME_INET` varde.
+* Pataisau `snort.conf` ir startuoju paslaugą iš naujo.
++
+```
+root@ldvm1:~# fg 1
+nano /etc/snort/snort.conf
+
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano /etc/snort/snort.conf
+
+root@ldvm1:~# /usr/local/bin/snort -u snort -g snort -c /etc/snort/snort.conf
+Running in IDS mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Initializing Preprocessors!
+Initializing Plug-ins!
+Parsing Rules file "/etc/snort/snort.conf"
+PortVar 'HTTP_PORTS' defined :  [ 80:81 311 383 591 593 901 1220 1414 1741 1830 2301 2381 2809 3037 3128 3702 4343 4848 5250 6988 7000:7001 7144:7145 7510 7777 7779 8000 8008 8014 8028 8080 8085 8088 8090 8118 8123 8180:8181 8243 8280 8300 8800 8888 8899 9000 9060 9080 9090:9091 9443 9999 11371 34443:34444 41080 50002 55555 ]
+PortVar 'SHELLCODE_PORTS' defined :  [ 0:79 81:65535 ]
+PortVar 'ORACLE_PORTS' defined :  [ 1024:65535 ]
+PortVar 'SSH_PORTS' defined :  [ 22 ]
+PortVar 'FTP_PORTS' defined :  [ 21 2100 3535 ]
+PortVar 'SIP_PORTS' defined :  [ 5060:5061 5600 ]
+PortVar 'FILE_DATA_PORTS' defined :  [ 80:81 110 143 311 383 591 593 901 1220 1414 1741 1830 2301 2381 2809 3037 3128 3702 4343 4848 5250 6988 7000:7001 7144:7145 7510 7777 7779 8000 8008 8014 8028 8080 8085 8088 8090 8118 8123 8180:8181 8243 8280 8300 8800 8888 8899 9000 9060 9080 9090:9091 9443 9999 11371 34443:34444 41080 50002 55555 ]
+PortVar 'GTP_PORTS' defined :  [ 2123 2152 3386 ]
+Detection:
+   Search-Method = AC-Full-Q
+    Split Any/Any group = enabled
+    Search-Method-Optimizations = enabled
+    Maximum pattern length = 20
+ERROR: /etc/snort/snort.conf(253) Could not stat dynamic module path "/usr/local/lib/snort_dynamicrules": No such file or directory.
+
+Fatal Error, Quitting..
+```
+
 
 ### Snort taisyklės analizė
 
