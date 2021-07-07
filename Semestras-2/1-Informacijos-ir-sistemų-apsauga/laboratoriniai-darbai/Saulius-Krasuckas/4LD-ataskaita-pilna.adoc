@@ -5055,6 +5055,32 @@ ii  libdaq-dev     2.0.4-3build2 amd64        Data Acquisition library for pack>
 ii  libdaq2        2.0.4-3build2 amd64        Data Acquisition library for pack>
 ```
 
+* `snort.org` siūlo naujesnę `libdaq` versiją:
+https://www.snort.org/downloads/snort/daq-2.0.7.tar.gz
+
+* Parsisiunčiu libdaq`:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ cd ..
+osboxes@ldvm1:/usr/local/src$ 
+osboxes@ldvm1:/usr/local/src$ wget https://www.snort.org/downloads/snort/daq-2.0.7.tar.gz
+--2021-07-07 15:41:19--  https://www.snort.org/downloads/snort/daq-2.0.7.tar.gz
+Resolving www.snort.org (www.snort.org)... 104.18.138.9, 104.18.139.9, 2606:4700::6812:8a09, ...
+Connecting to www.snort.org (www.snort.org)|104.18.138.9|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/470/original/daq-2.0.7.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210707%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210707T124119Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=20b5a0a6ff60da192509cbf10c3be60e2a2393ee8a3d61be526f3d70f335f153 [following]
+--2021-07-07 15:41:19--  https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/470/original/daq-2.0.7.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210707%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210707T124119Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=20b5a0a6ff60da192509cbf10c3be60e2a2393ee8a3d61be526f3d70f335f153
+Resolving snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)... 52.216.251.172
+Connecting to snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)|52.216.251.172|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 515154 (503K) [binary/octet-stream]
+Saving to: ‘daq-2.0.7.tar.gz.2’
+
+daq-2.0.7.tar.gz.2  100%[===================>] 503.08K   398KB/s    in 1.3s    
+
+2021-07-07 15:41:21 (398 KB/s) - ‘daq-2.0.7.tar.gz.2’ saved [515154/515154]
+```
+
 
 ### Snort taisyklės analizė
 
