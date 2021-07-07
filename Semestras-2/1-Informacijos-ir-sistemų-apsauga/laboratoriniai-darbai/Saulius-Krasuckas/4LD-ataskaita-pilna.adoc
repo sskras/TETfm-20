@@ -1672,6 +1672,29 @@ ERROR: /etc/snort/snort.conf(253) Could not stat dynamic module path "/usr/local
 Fatal Error, Quitting..
 ```
 
+* Tikrinu direktoriją:
++
+```
+root@ldvm1:~# ll -d /usr/local/lib/snort*
+drwxr-xr-x 4 root root 4096 Jul  7 01:03 /usr/local/lib/snort/
+drwxr-xr-x 2 root root 4096 Jul  7 01:03 /usr/local/lib/snort_dynamicengine/
+drwxr-xr-x 2 root root 4096 Jul  7 01:03 /usr/local/lib/snort_dynamicpreprocessor/
+```
+
+* Susirandu dokumentą ir pagal jį sukuriu trūkstamą direktoriją:
+https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/091/original/snort-centos6x-7x-298x.pdf#page=15[snort-centos6x-7x-298x.pdf]
++
+```
+root@ldvm1:~# mkdir /usr/local/lib/snort_dynamicrules
+root@ldvm1:~# chown -R snort:snort /usr/local/lib/snort_dynamicrules
+root@ldvm1:~# chmod -R 700 /usr/local/lib/snort_dynamicrules
+root@ldvm1:~# ll -d /usr/local/lib/snort*
+drwxr-xr-x 4 root  root  4096 Jul  7 01:03 /usr/local/lib/snort/
+drwxr-xr-x 2 root  root  4096 Jul  7 01:03 /usr/local/lib/snort_dynamicengine/
+drwxr-xr-x 2 root  root  4096 Jul  7 01:03 /usr/local/lib/snort_dynamicpreprocessor/
+drwx------ 2 snort snort 4096 Jul  7 09:37 /usr/local/lib/snort_dynamicrules/
+```
+
 
 ### Snort taisyklės analizė
 
