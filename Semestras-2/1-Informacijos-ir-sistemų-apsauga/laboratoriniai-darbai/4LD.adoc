@@ -88,7 +88,8 @@ make
 ```
 make install
    
- 3+| +++<center>+++ *3. Konfigūracijos failas ir žurnalas* +++</center>+++
+
+ 3+| +++<center>+++ *3. Konfigūracijos ir žurnalo direktorijos* +++</center>+++
 
    | Sukurkite direktorijas:
 2+a|
@@ -139,6 +140,7 @@ Ctrl-C
    
    | Analizuokite stebėjimo failus.
  2+|
+
 
  3+| +++<center>+++ *5. Paketų rinkimo režimas* +++</center>+++
 
