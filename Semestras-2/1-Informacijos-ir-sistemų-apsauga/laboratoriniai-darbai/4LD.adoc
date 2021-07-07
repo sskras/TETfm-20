@@ -312,6 +312,44 @@ nmap -sS -P0 -n -F 192.168.10.(1x-1)
    | Analizuokite įrašus.
  2+|
 
+
+ 3+| +++<center>+++ *13. MySQL konfigūravimas* +++</center>+++
+
+   | Sukonfigūruokite MySQL vartotoją:
+2+a|
+```
+mysqladmin -u root password mypass
+
+ 3+| Sukurkite duomenų bazę:
+
+  a| * įeikite į mysql komandinį režimą:
+2+a|
+```
+mysql -u root -p mypass
+
+  a| * jame sukurkite duomenų bazę:  +
+2+a|
+```
+mysql> create database snort;`
+```
+(kabliataškis priklauso komandai)
+
+  a| * sukurkite vartotoją su teisėmis:
+2+a|
+```
+mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost;
+
+   | Nustatykite slaptažodį duomenų bazei:
+2+a|
+```
+mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
+
+   | Išeikite iš mysql komandinio režimo:
+2+a|
+```
+mysql> exit
+
+
 |===
 
 ### Ataskaitos turinys
