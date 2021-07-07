@@ -2667,6 +2667,33 @@ osboxes@ldvm1:~$ grep 1000000 /var/log/snort/alert
 [**] [1:10000001:0] ICMP test [**]
 ```
 
+* Prisimenu konfigūravimo scenarijaus perspėjimus apie DAQ.
+
+* Kartoju konfigūravimą, ieškau pranešimų apie DAQ:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure | grep -i daq
+checking for daq_load_modules in -ldaq_static... yes
+checking for daq_hup_apply... yes
+checking for daq_acquire_with_meta... yes
+checking for daq_dp_add_dc... yes
+checking for daq real addresses... no
+checking whether DAQ_PKT_FLAG_DECRYPTED_SSL is declared... no
+checking whether DAQ_PKT_FLAG_LOCALLY_ORIGINATED is declared... no
+checking whether DAQ_PKT_FLAG_LOCALLY_DESTINED is declared... no
+checking for struct _DAQ_DP_key_t.sa.src_ip4... yes
+checking for daq address space ID... yes
+checking for daq flow ID... yes
+checking for daq extended flow modifiers... no
+checking for daq query flow... no
+checking for daq data channel flags... no
+checking for DAQ_VERDICT_RETRY... yes
+checking for daq packet trace... no
+DAQ version doesn't support packet trace.
+checking for daq verdict reason... no
+DAQ version doesn't support tracing verdict reason.
+```
+
 
 ### Snort taisyklės analizė
 
