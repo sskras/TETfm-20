@@ -344,7 +344,7 @@ mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhos
 ```
 mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
 
-   | Išeikite iš mysql komandinio režimo:
+   | Išeikite iš MySQL komandinio režimo:
 2+a|
 ```
 mysql> exit
