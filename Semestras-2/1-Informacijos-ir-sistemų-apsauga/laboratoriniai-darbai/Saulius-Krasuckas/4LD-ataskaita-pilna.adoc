@@ -4870,10 +4870,12 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
 [**] [1:10000001:0] ICMP test [**]
 ```
 
-* Sutraukiu taisyklę iki vienos raidės:
+* Išdalinu taisyklę į kelias taisykles po vieną raidę:
 +
 ```
 alert tcp any any -> any 23 (content: "r"; nocase; msg: "Telnet su raide <r>"; sid: 10000003;)
+alert tcp any any -> any 23 (content: "o"; nocase; msg: "Telnet su raide <o>"; sid: 10000004;)
+alert tcp any any -> any 23 (content: "t"; nocase; msg: "Telnet su raide <t>"; sid: 10000005;)
 ```
 
 * Nurodau Snort atsinaujinti konfigūraciją:
@@ -4917,6 +4919,19 @@ WARNING: flowbits key 'ms_sql_seen_dns' is checked but not ever set.
 Session Reload: Reference Count Non-zero for old configuration.
 
         --== Reload Complete ==--
+```
+
+* Kartoju _telnet_ užklausą, šitaip Snortas užklausas aptinka:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000003:0] Telnet su raide <r> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+[**] [1:10000005:0] Telnet su raide <t> [**]
 ```
 
 
