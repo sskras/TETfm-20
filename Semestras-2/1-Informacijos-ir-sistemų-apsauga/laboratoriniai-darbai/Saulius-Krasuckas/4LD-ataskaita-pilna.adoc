@@ -5653,6 +5653,16 @@ TCP Options (3) => NOP NOP TS: 141966812 1508637531
 
 ```
 
+Analizuoju atsiradusį įrašą. Jame rodoma:
+
+. taisyklės identifikatorius `"sid"` (_Snort rule ID_),
+. taisyklės pavadinimas (`"Suspicious Telnet"`),
+. taisyklės prioritetas (`0`),
+. užklausos gavimo data,
+. abu IP adresai,
+. abu TCP portai
+. ir didelė dalis likusios TCP (Layer 4) antraštės.
+
 
 ### Snort taisyklės analizė
 
