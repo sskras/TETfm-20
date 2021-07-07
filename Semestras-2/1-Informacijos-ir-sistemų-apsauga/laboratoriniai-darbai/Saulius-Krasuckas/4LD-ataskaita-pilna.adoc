@@ -5437,6 +5437,52 @@ root@ldvm1:~# cat /etc/snort/rules/local.rules
  alert tcp any any -> any 23 (content: "t"; nocase; msg: "Telnet su raide <t>"; sid: 10000005;)
 ```
 
+* Ir vėl startuoju naują Snort:
++
+```
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8:enp0s3 --daq afpacket --daq-mode inline
+Running in IDS mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Initializing Preprocessors!
+Initializing Plug-ins!
+Parsing Rules file "/etc/snort/snort.conf"
+PortVar 'HTTP_PORTS' defined :  [ 80:81 311 383 591 593 901 1220 1414 1741 1830 2301 2381 2809 3037 3128 3702 4343 4848 5250 6988 7000:7001 7144:7145 7510 7777 7779 8000 8008 8014 8028 8080 8085 8088 8090 8118 8123 8180:8181 8243 8280 8300 8800 8888 8899 9000 9060 9080 9090:9091 9443 9999 11371 34443:34444 41080 50002 55555 ]
+  ...
+Set gid to 1001
+Set uid to 1001
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.18 GRE (Build 169) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+           Rules Engine: SF_SNORT_DETECTION_ENGINE  Version 3.2  <Build 1>
+           Preprocessor Object: SF_SMTP  Version 1.1  <Build 9>
+           Preprocessor Object: SF_SSLPP  Version 1.1  <Build 4>
+           Preprocessor Object: SF_FTPTELNET  Version 1.2  <Build 13>
+           Preprocessor Object: SF_GTP  Version 1.1  <Build 1>
+           Preprocessor Object: SF_MODBUS  Version 1.1  <Build 1>
+           Preprocessor Object: SF_IMAP  Version 1.0  <Build 1>
+           Preprocessor Object: SF_POP  Version 1.0  <Build 1>
+           Preprocessor Object: SF_DNP3  Version 1.1  <Build 1>
+           Preprocessor Object: SF_S7COMMPLUS  Version 1.0  <Build 1>
+           Preprocessor Object: SF_SDF  Version 1.1  <Build 1>
+           Preprocessor Object: SF_SSH  Version 1.1  <Build 3>
+           Preprocessor Object: SF_SIP  Version 1.1  <Build 1>
+           Preprocessor Object: SF_REPUTATION  Version 1.1  <Build 1>
+           Preprocessor Object: SF_DNS  Version 1.1  <Build 4>
+           Preprocessor Object: SF_DCERPC2  Version 1.0  <Build 3>
+Commencing packet processing (pid=103090)
+```
+
 
 ### Snort taisyklės analizė
 
