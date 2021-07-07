@@ -285,7 +285,7 @@ telnet 192.168.10.(1x-1)
  2+|
 
 
- 3+| +++<center>+++ *11. Bendruomėnės taisyklės* +++</center>+++
+ 3+| +++<center>+++ *11. Bendruomenės taisyklės* +++</center>+++
  
    | Parsisiųskite bendruomenės taisykles arba registruoto vartotojo taisykles (klauskite dėstytojo):
 2+a|
