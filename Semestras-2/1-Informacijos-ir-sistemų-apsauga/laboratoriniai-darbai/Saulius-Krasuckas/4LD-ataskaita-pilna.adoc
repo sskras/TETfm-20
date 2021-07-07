@@ -5483,6 +5483,47 @@ Set uid to 1001
 Commencing packet processing (pid=103090)
 ```
 
+* Siunčiu kaimyno kompiuterio...
+
+** ICMP užklausą:
++
+```
+osboxes@ldvm2:~$ ping -c1 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.633 ms
+
+--- 192.168.10.14 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.633/0.633/0.633/0.000 ms
+```
+
+** _telnet_ užklausą po vieną raidę + tuščias slaptažodis:
++
+```
+osboxes@ldvm2:~$ telnet 192.168.10.14
+Trying 192.168.10.14...
+Connected to 192.168.10.14.
+Escape character is '^]'.
+Ubuntu 20.04.2 LTS
+ldvm1 login: root
+Password: 
+
+Login incorrect
+ldvm1 login: 
+telnet> Connection closed.
+```
+
+** _telnet_ užklausą su visai keturiais simboliais kartu + slaptažodis = `"o"`:
++
+```
+osboxes@ldvm2:~$ telnet -l root 192.168.10.14
+Trying 192.168.10.14...
+Connected to 192.168.10.14.
+Escape character is '^]'.
+Password: 
+telnet> Connection closed.
+```
+
 
 ### Snort taisyklės analizė
 
