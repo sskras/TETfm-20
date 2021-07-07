@@ -5012,6 +5012,27 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
 [**] [1:10000005:0] Telnet su raide <t> [**]
 ```
 
+* Tikrinu su `tcpdump`:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo tcpdump -tni enp0s8 -X -q dst host 192.168.10.14 and tcp port 23 | grep -A1 -e ^IP -e USER -e oot
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp0s8, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+IP 192.168.10.13.38376 > 192.168.10.14.23: tcp 0
+        0x0000:  4510 003c 9df2 4000 4006 074e c0a8 0a0d  E..<..@.@..N....
+  ...
+IP 192.168.10.13.38380 > 192.168.10.14.23: tcp 53
+        0x0000:  4510 0069 9dfa 4000 4006 0719 c0a8 0a0d  E..i..@.@.......
+--
+        0x0040:  3430 30ff f0ff fa27 0000 5553 4552 0172  400....'..USER.r
+        0x0050:  6f6f 74ff f0ff fa18 0078 7465 726d 2d32  oot......xterm-2
+        0x0060:  3536 636f 6c6f 72ff f0                   56color..
+IP 192.168.10.13.38380 > 192.168.10.14.23: tcp 0
+        0x0000:  4510 0034 9dfb 4000 4006 074d c0a8 0a0d  E..4..@.@..M....
+  ...
+```
+
 
 ### Snort taisyklės analizė
 
