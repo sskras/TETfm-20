@@ -490,7 +490,7 @@ Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 ```
 
 * Konfigūruoju kompiliatorių, nauja klaida:
-
++
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
 configure: WARNING: unrecognized options: --with-mysql, --enable-dynamicplugin
@@ -512,7 +512,7 @@ checking for daq_load_modules in -ldaq_static... no
 ```
 
 * Diegiu `libdaq`:
-
++
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ daq-modules-config
 
@@ -923,7 +923,7 @@ root@ldvm1:~#
 * Panašu į Snort bugą, kad kol nepagavo nei vieno paketo, programa ignoruoja `Ctrl-C` paspaudimus.
 
 * Paskaitinėju `man snort` ir pakeičiu stebimą tinklo sąsają:
-
++
 ```
 root@ldvm1:~# snort -v -i enp0s8 > snort1
 Running in packet dump mode
@@ -4882,6 +4882,7 @@ alert tcp any any -> any 23 (content: "t"; nocase; msg: "Telnet su raide <t>"; s
 +
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo pkill -SIGHUP snort
+```
 ```
   ...
 Rule application order: activation->dynamic->pass->drop->sdrop->reject->alert->log
