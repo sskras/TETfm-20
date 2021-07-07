@@ -5081,7 +5081,81 @@ daq-2.0.7.tar.gz.2  100%[===================>] 503.08K   398KB/s    in 1.3s
 2021-07-07 15:41:21 (398 KB/s) - ‘daq-2.0.7.tar.gz.2’ saved [515154/515154]
 ```
 
+* Atnaujinu `libdaq` pagal {SNORT2-GUIDE-AWS-URL}[Snort_2.9.9.x_on_Ubuntu_14-16.pdf].
+
+** Išarchyvuoju:
++
+```
+osboxes@ldvm1:/usr/local/src$ tar xvzf daq-2.0.7.tar.gz
+daq-2.0.7/
+daq-2.0.7/config.h.in
+daq-2.0.7/config.guess
+daq-2.0.7/api/
+daq-2.0.7/api/daq.h
+daq-2.0.7/api/Makefile.am
+  ...
+daq-2.0.7/sfbpf/sf-redefines.h
+daq-2.0.7/README
+daq-2.0.7/configure.ac
+daq-2.0.7/Makefile.in
+daq-2.0.7/ChangeLog
+daq-2.0.7/depcomp
+```
+
+** Konfigūruoju kompiliatorių:
++
+```
+osboxes@ldvm1:/usr/local/src$ cd daq-2.0.7/
+
+osboxes@ldvm1:/usr/local/src/daq-2.0.7$ ./configure
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+  ...
+checking for strtoul... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating api/Makefile
+config.status: creating os-daq-modules/Makefile
+config.status: creating os-daq-modules/daq-modules-config
+config.status: creating sfbpf/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+Build AFPacket DAQ module.. : yes
+Build Dump DAQ module...... : yes
+Build IPFW DAQ module...... : yes
+Build IPQ DAQ module....... : no
+Build NFQ DAQ module....... : no
+Build PCAP DAQ module...... : yes
+Build netmap DAQ module.... : no
+```
+
+** Kompiliuoju:
++
+```
+osboxes@ldvm1:/usr/local/src/daq-2.0.7$ make
+make  all-recursive
+make[1]: Entering directory '/usr/local/src/daq-2.0.7'
+Making all in api
+make[2]: Entering directory '/usr/local/src/daq-2.0.7/api'
+/bin/bash ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..   -I/usr/include  -g -O2 -fvisibility=hidden -Wall -Wwrite-strings -Wsign-compare -Wcast-align -Wextra -Wformat -Wformat-security -Wno-unused-parameter -fno-strict-aliasing -fdiagnostics-show-option -pedantic -std=c99 -D_GNU_SOURCE -MT daq_base.lo -MD -MP -MF .deps/daq_base.Tpo -c -o daq_base.lo daq_base.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I/usr/include -g -O2 -fvisibility=hidden -Wall -Wwrite-strings -Wsign-compare -Wcast-align -Wextra -Wformat -Wformat-security -Wno-unused-parameter -fno-strict-aliasing -fdiagnostics-show-option -pedantic -std=c99 -D_GNU_SOURCE -MT daq_base.lo -MD -MP -MF .deps/daq_base.Tpo -c daq_base.c  -fPIC -DPIC -o .libs/daq_base.o
+  ...
+/bin/bash ../libtool  --tag=CC   --mode=link gcc -DBUILDING_SO -g -O2 -fvisibility=hidden -Wall -Wwrite-strings -Wsign-compare -Wcast-align -Wextra -Wformat -Wformat-security -Wno-unused-parameter -fno-strict-aliasing -fdiagnostics-show-option -pedantic -std=c99 -D_GNU_SOURCE -module -export-dynamic -avoid-version -shared   -o daq_ipfw.la -rpath /usr/local/lib/daq daq_ipfw_la-daq_ipfw.lo ../sfbpf/libsfbpf.la 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/daq_ipfw_la-daq_ipfw.o   -Wl,-rpath -Wl,/usr/local/src/daq-2.0.7/sfbpf/.libs ../sfbpf/.libs/libsfbpf.so  -g -O2   -Wl,-soname -Wl,daq_ipfw.so -o .libs/daq_ipfw.so
+libtool: link: ( cd ".libs" && rm -f "daq_ipfw.la" && ln -s "../daq_ipfw.la" "daq_ipfw.la" )
+make[2]: Leaving directory '/usr/local/src/daq-2.0.7/os-daq-modules'
+make[2]: Entering directory '/usr/local/src/daq-2.0.7'
+make[2]: Leaving directory '/usr/local/src/daq-2.0.7'
+make[1]: Leaving directory '/usr/local/src/daq-2.0.7'
+```
+
 
 ### Snort taisyklės analizė
 
 
+:SNORT2-GUIDE-AWS-URL: https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf
