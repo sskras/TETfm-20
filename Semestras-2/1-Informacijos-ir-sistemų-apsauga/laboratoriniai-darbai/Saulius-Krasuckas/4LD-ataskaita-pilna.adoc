@@ -5331,6 +5331,30 @@ checking for daq verdict reason... no
 DAQ version doesn't support tracing verdict reason.
 ```
 
+* Vėl instaliuoju naują Snort:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo make install
+Making install in src
+make[1]: Entering directory '/usr/local/src/snort-2.9.18/src'
+Making install in sfutil
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/src/sfutil'
+make[3]: Entering directory '/usr/local/src/snort-2.9.18/src/sfutil'
+  ...
+make[3]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[1]: Entering directory '/usr/local/src/snort-2.9.18'
+make[2]: Entering directory '/usr/local/src/snort-2.9.18'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/share/man/man8'
+ /usr/bin/install -c -m 644 snort.8 '/usr/local/share/man/man8'
+ /usr/bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 snort.pc '/usr/local/lib/pkgconfig'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18'
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18'
+```
+
 
 ### Snort taisyklės analizė
 
