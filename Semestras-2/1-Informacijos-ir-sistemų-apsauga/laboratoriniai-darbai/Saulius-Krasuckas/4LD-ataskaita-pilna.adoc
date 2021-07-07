@@ -5625,6 +5625,16 @@ osboxes@ldvm1:/usr/local/src$ cat ~/debug/snort.dont-normalize-telnet.conf
      ports { 21 2100 3535 } \
 ```
 
+* Išvalau laikinas debuginimo taisykles ir atnaujinu jas Snorte:
++
+```
+osboxes@ldvm1:/usr/local/src$ cat /etc/snort/rules/local.rules
+ alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
+ alert  tcp any any -> 192.168.10.14 23 (content: "root"; nocase; msg: "Suspicious Telnet"; sid: 10000002;)
+
+osboxes@ldvm1:/usr/local/src$ sudo pkill -SIGHUP snort
+```
+
 * Jungiuosi iš kaimyno į virtualų kompiuterį per _telnet_ ir su `"root"` vartotoju:
 +
 ```
@@ -5671,7 +5681,7 @@ Analizuoju atsiradusį įrašą. Jame rodoma:
 
 ```
 11:37:15
-19:22:02
+19:25:09
 ```
 
 * Dėl to baigiu aiškinimąsi ir palieku tai netikslaus 4LD aprašo sąžinei.
