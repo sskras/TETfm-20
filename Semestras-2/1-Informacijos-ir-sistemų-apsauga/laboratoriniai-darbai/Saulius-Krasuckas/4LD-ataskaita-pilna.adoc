@@ -5936,6 +5936,37 @@ osboxes@ldvm1:/etc/snort$ grep -ci community snort.conf
 
 * Faile nėra jokių nuorodų į šias taisykles.
 
+* Išsisaugau Snort _Self-test_ išvestį prieš bendruomenės taisyklių įtraukimą:
++
+```
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/14.Snort-selftest-local.rules-only.txt | wc -l
+446
+```
+
+* Įtraukiu taisykles rankomis, remdamasis https://upcloud.com/community/tutorials/install-snort-ubuntu/[pavyzdžiu]:
++
+```
+osboxes@ldvm1:/etc/snort$ diff -u snort.conf.v2 snort.conf | colordiff
+--- snort.conf.v2       2021-07-07 18:39:36.620734396 +0300
++++ snort.conf  2021-07-08 00:28:41.882814390 +0300
+@@ -545,6 +545,8 @@
+ 
+ # site specific rules
+ include $RULE_PATH/local.rules
++# community rules
++include $RULE_PATH/community-rules/community.rules
+ 
+ #include $RULE_PATH/app-detect.rules
+ #include $RULE_PATH/attack-responses.rules
+```
+
+* Išsisaugau Snort _Self-test_ išvestį _po_ bendruomenės taisyklių įtraukimo:
++
+```
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/15.Snort-selftest-+-community.rules.txt | wc -l
+483
+```
+
 
 ### Snort taisyklės analizė
 
