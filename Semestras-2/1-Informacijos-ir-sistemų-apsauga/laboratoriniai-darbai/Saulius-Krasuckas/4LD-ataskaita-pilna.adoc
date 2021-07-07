@@ -5536,6 +5536,18 @@ osboxes@ldvm1:/usr/local/src$ grep 1000000 /var/log/snort/alert
 [**] [1:10000004:0] Telnet su raide <o> [**]
 ```
 
+* `"libdaq"` ir Snort 2 versijos yra trijų mėnesių ir mėnesio senumo:
++
+```
+osboxes@ldvm1:/usr/local/src$ tar ztvf daq-2.0.7.tar.gz | awk '{$1=$2=$3=$6=""; print}' | sort -u | tail -1
+   2021-03-29 07:21 
+osboxes@ldvm1:/usr/local/src$ tar ztvf snort-2.9.18.tar.gz | awk '{$1=$2=$3=$6=""; print}' | sort -u | tail -1
+   2021-06-08 12:23 
+```
+
+** 2021-03-29 07:21, daq-2.0.7.tar.gz
+** 2021-06-08 12:23, snort-2.9.18.tar.gz
+
 
 ### Snort taisyklės analizė
 
