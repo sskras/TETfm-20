@@ -489,8 +489,20 @@ pear install Image_Graph
 ```
 /etc/init.d/apache-ssl restart
 
-   | ... ir bandykite prisijungti prie BASE puslapio.
+ 3+| ... ir bandykite prisijungti prie BASE puslapio.
 
+
+ 3+| +++<center>+++ *19. Snort paslauga* +++</center>+++
+
+   | Startuokite Snort paslaugą:
+2+a|
+```
+/usr/local/bin/snort -Dq -u snort -g snort -c /etc/snort/snort.conf
+
+
+ 3+| +++<center>+++ *20. Veikimas saugumo įvvykiais* +++</center>+++
+
+ 3+| Bandykite veikti kaimyno kompiuterį stebimais saugumo įvykiais pagal 9, 11 ir 12 punktus.
 
 
 |===
