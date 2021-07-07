@@ -1442,6 +1442,8 @@ Heap Statistics of file:
 Snort exiting
 ```
 
+Išsiųstos buvo dvi ICMP užklausos, iš viso surinkti keturi ICMP paketai.
+
 
 ### Snort taisyklės analizė
 
