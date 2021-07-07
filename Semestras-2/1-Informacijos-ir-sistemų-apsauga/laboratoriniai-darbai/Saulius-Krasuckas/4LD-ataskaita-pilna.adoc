@@ -4985,6 +4985,20 @@ IP 192.168.10.13.38356 > 192.168.10.14.23: tcp 0
 
 * Matyti, kad perduodami simboliai yra poros pirmojo paketo gale.
 
+* Surandu būdą perduoti `"root"` vartotojo vardą iškart, iš komandinės eilutės:
++
+```
+osboxes@ldvm2:~$ telnet -l root 192.168.10.14
+Trying 192.168.10.14...
+Connected to 192.168.10.14.
+Escape character is '^]'.
+Password: 
+
+Login incorrect
+ldvm1 login: 
+telnet> Connection closed.
+```
+
 
 ### Snort taisyklės analizė
 
