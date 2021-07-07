@@ -5394,6 +5394,26 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ snort -V
            Using ZLIB version: 1.2.11
 ```
 
+* Vėl įdedu naujo Snort failus:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo groupadd snort
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo useradd -g snort snort
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo mkdir /var/log/snort
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo chown snort:snort /var/log/snort
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo cp -v /usr/local/src/snort-2.9.18/etc/*.* /etc/snort/
+'/usr/local/src/snort-2.9.18/etc/attribute_table.dtd' -> '/etc/snort/attribute_table.dtd'
+'/usr/local/src/snort-2.9.18/etc/classification.config' -> '/etc/snort/classification.config'
+'/usr/local/src/snort-2.9.18/etc/file_magic.conf' -> '/etc/snort/file_magic.conf'
+'/usr/local/src/snort-2.9.18/etc/gen-msg.map' -> '/etc/snort/gen-msg.map'
+'/usr/local/src/snort-2.9.18/etc/Makefile.am' -> '/etc/snort/Makefile.am'
+'/usr/local/src/snort-2.9.18/etc/Makefile.in' -> '/etc/snort/Makefile.in'
+'/usr/local/src/snort-2.9.18/etc/reference.config' -> '/etc/snort/reference.config'
+'/usr/local/src/snort-2.9.18/etc/snort.conf' -> '/etc/snort/snort.conf'
+'/usr/local/src/snort-2.9.18/etc/threshold.conf' -> '/etc/snort/threshold.conf'
+'/usr/local/src/snort-2.9.18/etc/unicode.map' -> '/etc/snort/unicode.map'
+```
+
 
 ### Snort taisyklės analizė
 
