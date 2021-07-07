@@ -5154,6 +5154,32 @@ make[2]: Leaving directory '/usr/local/src/daq-2.0.7'
 make[1]: Leaving directory '/usr/local/src/daq-2.0.7'
 ```
 
+** Išinstaliuoju `libdaq` ir `snort` versijas pagal nutylėjimą:
++
+```
+osboxes@ldvm1:/usr/local/src/daq-2.0.7$ sudo apt-get autoremove libdaq2 libdaq-dev
+[sudo] password for osboxes: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  libdaq-dev libdaq2 oinkmaster snort snort-common snort-common-libraries snort-rules-default
+  0 upgraded, 0 newly installed, 7 to remove and 154 not upgraded.
+  After this operation, 7,703 kB disk space will be freed.
+  Do you want to continue? [Y/n] y
+  (Reading database ... 198493 files and directories currently installed.)
+  Removing libdaq-dev (2.0.4-3build2) ...
+  Removing snort (2.9.7.0-5build1) ...
+  Stopping snort (via systemctl): snort.service.
+  Removing libdaq2 (2.0.4-3build2) ...
+  Removing oinkmaster (2.0-4) ...
+  Removing snort-common (2.9.7.0-5build1) ...
+  Removing snort-common-libraries (2.9.7.0-5build1) ...
+  Removing snort-rules-default (2.9.7.0-5build1) ...
+  Processing triggers for man-db (2.9.1-1) ...
+  Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+```
+
 
 ### Snort taisyklės analizė
 
