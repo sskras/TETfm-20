@@ -1099,6 +1099,83 @@ TCP Options (3) => NOP NOP TS: 61716058 1184245986
 =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
 ```
 
+#### 5. Paketų rinkimo režimas
+
+Startuoju paketų rinkimo režimu:
+
+```
+root@ldvm1:~# snort -dev -l -i enp0s8 /var/log/snort
+Running in packet logging mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Snort BPF option: enp0s8 /var/log/snort
+ERROR: Stat check on log dir failed: No such file or directory.
+Fatal Error, Quitting..
+root@ldvm1:~# snort -i enp0s8 -dev -l /var/log/snort
+Running in packet logging mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Log directory = /var/log/snort
+pcap DAQ configured to passive.
+Acquiring network traffic from "enp0s8".
+Decoding Ethernet
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.18 GRE (Build 169) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+Commencing packet processing (pid=51843)
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+```
+
 
 ### Snort taisyklės analizė
 
