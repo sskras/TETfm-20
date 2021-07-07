@@ -1549,6 +1549,18 @@ var RULE_PATH /etc/snort/rules
 root@ldvm1:~# 
 ```
 
+Naudoju simbolį `#` ir užkomentuoju visas taisykles, išskyrus `local.rules`:
+
+```
+root@ldvm1:~# cat /etc/snort/snort.conf | grep '^include .RULE'
+include $RULE_PATH/local.rules
+
+root@ldvm1:~# cat /etc/snort/snort.conf | grep -c '^#include .RULE'
+104
+```
+
+- Iš viso užkomentavau 104 taisykles – daug.
+
 
 ### Snort taisyklės analizė
 
