@@ -6123,6 +6123,39 @@ root@ldvm1:~# diff -u ~osboxes/debug/{14,15}*.txt
  Snort exiting
 ```
 
+Snorto _Self-test_ išvedimas pasikeitė taip (atmetus smulkmenas):
+
+```
+ +++++++++++++++++++++++++++++++++++++++++++++++++++
+ Initializing rule chains...
+-2 Snort rules read
+-    2 detection rules
++508 Snort rules read
++    508 detection rules
+     0 decoder rules
+     0 preprocessor rules
+-2 Option Chains linked into 2 Chain Headers
++508 Option Chains linked into 49 Chain Headers
+ +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ +-------------------[Rule Port Counts]---------------------------------------
+ |             tcp     udp    icmp      ip
+-|     src       0       0       0       0
+-|     dst       1       0       0       0
+-|     any       0       0       1       0
++|     src     117       2       0       0
++|     dst     357       7       0       0
++|     any      25       0       1       0
+ |      nc       0       0       1       0
+-|     s+d       0       0       0       0
++|     s+d       0       1       0       0
+ +----------------------------------------------------------------------------
+```
+
+image::https://user-images.githubusercontent.com/74717106/124834692-dc547180-df88-11eb-8ca3-cac1c4bf446a.png[]
+
+Vietoj 2 taisyklių dabar turime 508.
+
 
 ### Snort taisyklės analizė
 
