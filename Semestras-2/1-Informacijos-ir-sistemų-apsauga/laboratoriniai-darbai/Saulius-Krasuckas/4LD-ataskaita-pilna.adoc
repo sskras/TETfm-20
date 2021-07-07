@@ -1590,6 +1590,14 @@ root@ldvm1:~# cat /etc/snort/snort.conf | grep -n -w -e log -e mysql
 - Tokios eilutės net nerandu. Laikau, kad užkomentuota.
 
 
+#### 7. Taisyklių vieta
+
+Sukuriu direktoriją:
+
+```
+root@ldvm1:~# mkdir /etc/snort/rules
+```
+
 
 ### Snort taisyklės analizė
 
