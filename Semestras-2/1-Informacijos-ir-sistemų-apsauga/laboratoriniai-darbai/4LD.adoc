@@ -368,6 +368,19 @@ mysql> show tables;
  3+| Turėtumėte matyti naujas importuotas lenteles.
 
 
+ 3+| +++<center>+++ *15. Snort rašymas į DB* +++</center>+++
+
+   | Nustatykite, kad Snort darytų įrašus duomenų bazėje:
+2+a|
+```
+nano /etc/snort/snort.conf
+
+   | Įsitikinkite, kad yra eilutė:
+2+a|
+```
+output database: log, mysql, user=snort password=mypass dbname=snort host=localhost
+
+
 |===
 
 ### Ataskaitos turinys
