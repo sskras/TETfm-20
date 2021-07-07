@@ -344,7 +344,7 @@ mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhos
 ```
 mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
 
-   | Išeikite iš MySQL komandinio režimo:
+   | Išeikite iš mysql komandinio režimo:
 2+a|
 ```
 mysql> exit
@@ -409,6 +409,49 @@ extension=mysql.so
 ```
 /etc/init.d/apache-ssl restart
 
+
+ 3+| +++<center>+++ *17. Analizės įrankis BASE* +++</center>+++
+
+   | Instaliuokite Snort pranešimų analizės įrankį BASE:
+2+a|
+```
+cd /var/www
+rm index.html
+wget http://internap.dl.sourceforge.net/sourceforge/secureideas/base-1.2.5.tar.gz
+tar xvzf base-1.2.5.tar.gz
+mv base-1.2.5 base
+chmod 755 base
+
+   | Iš realaus kompiuterio nueikite į puslapį:
+2+a|
+```
+https://192.168.10.x/base
+
+   | Spauskite
+ 2+| *_Next_*
+
+   | Pasirinkite
+ 2+| *_English_*
+   
+   | Nurodykite *_ADODB_* kelią:
+2+a|
+```
+/usr/share/php/adodb
+
+   | ... ir kitus parametrus:
+2+a|
+```
+Database Name: snort
+Database Host: localhost
+Database Port: Leave blank for default! <blank>
+Database User Name: snort
+Database Password: mypass
+
+   | Spauskite
+ 2+| *_Submit_*
+
+   | Spauskite
+ 2+| *_create baseag_*
 
 |===
 
