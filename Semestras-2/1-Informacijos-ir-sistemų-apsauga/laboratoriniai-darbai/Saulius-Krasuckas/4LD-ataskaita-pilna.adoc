@@ -1538,6 +1538,17 @@ include $RULE_PATH/web-php.rules
 include $RULE_PATH/x11.rules
 ```
 
+Redaguoju failą ir jame įrašau parametrus:
+
+```
+[1]+  Stopped                 nano /etc/snort/snort.conf
+root@ldvm1:~# cat /etc/snort/snort.conf | awk '/var (RULE_PATH|HOME_NET|EXTERNAL_NET)/'
+ipvar HOME_NET 192.168.10.0/24
+ipvar EXTERNAL_NET !$HOME_INET
+var RULE_PATH /etc/snort/rules
+root@ldvm1:~# 
+```
+
 
 ### Snort taisyklės analizė
 
