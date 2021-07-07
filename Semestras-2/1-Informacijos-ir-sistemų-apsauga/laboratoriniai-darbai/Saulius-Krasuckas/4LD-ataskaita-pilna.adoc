@@ -873,7 +873,7 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo chown snort:snort /etc/snort/
 
 #### 4. Pradinis stebėjimas
 
-* Stebiu tinklo srautą, įrašau duomenis į failus, ir susiduriu kliūtim:
+Stebiu tinklo srautą, įrašau duomenis į failus:
 
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo -i
@@ -900,7 +900,7 @@ Decoding Ethernet
 Commencing packet processing (pid=49740)
 ```
 
-* Snort naudoja ne mano sukonfigūruotąją tinklo sąsają `enp0s8`.  +
+* Ir susiduriu kliūtim: Snort naudoja ne mano sukonfigūruotąją tinklo sąsają `enp0s8`.  +
   Panašu, kad naudoja pirmą iš eilės, `enp0s3`, kurios aš nenaudoju.
 
 * Iškart kita kliūtis – Snort nereaguoja į `Ctrl-C` paspaudimus ir tęsią veikimą:
@@ -921,6 +921,134 @@ root@ldvm1:~#
 ```
 
 * Panašu į Snort bugą, kad kol nepagavo nei vieno paketo, programa ignoruoja `Ctrl-C` paspaudimus.
+
+* Paskaitinėju `man snort` ir pakeičiu stebimą tinklo sąsają:
+
+```
+root@ldvm1:~# snort -v -i enp0s8 > snort1
+Running in packet dump mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+pcap DAQ configured to passive.
+Acquiring network traffic from "enp0s8".
+Decoding Ethernet
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.18 GRE (Build 169) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+Commencing packet processing (pid=51648)
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+WARNING: No preprocessors configured for policy 0.
+^C*** Caught Int-Signal
+===============================================================================
+Run time for packet processing was 8.187221 seconds
+Snort processed 23 packets.
+Snort ran for 0 days 0 hours 0 minutes 8 seconds
+   Pkts/sec:            2
+===============================================================================
+Memory usage summary:
+  Total non-mmapped bytes (arena):       786432
+  Bytes in mapped regions (hblkhd):      22941696
+  Total allocated space (uordblks):      688640
+  Total free space (fordblks):           97792
+  Topmost releasable block (keepcost):   95696
+===============================================================================
+Packet I/O Totals:
+   Received:           28
+   Analyzed:           23 ( 82.143%)
+    Dropped:            0 (  0.000%)
+   Filtered:            0 (  0.000%)
+Outstanding:            5 ( 17.857%)
+   Injected:            0
+===============================================================================
+Breakdown by protocol (includes rebuilt packets):
+        Eth:           23 (100.000%)
+       VLAN:            0 (  0.000%)
+        IP4:           23 (100.000%)
+       Frag:            0 (  0.000%)
+       ICMP:            0 (  0.000%)
+        UDP:            0 (  0.000%)
+        TCP:           23 (100.000%)
+        IP6:            0 (  0.000%)
+    IP6 Ext:            0 (  0.000%)
+   IP6 Opts:            0 (  0.000%)
+      Frag6:            0 (  0.000%)
+      ICMP6:            0 (  0.000%)
+       UDP6:            0 (  0.000%)
+       TCP6:            0 (  0.000%)
+     Teredo:            0 (  0.000%)
+    ICMP-IP:            0 (  0.000%)
+    IP4/IP4:            0 (  0.000%)
+    IP4/IP6:            0 (  0.000%)
+    IP6/IP4:            0 (  0.000%)
+    IP6/IP6:            0 (  0.000%)
+        GRE:            0 (  0.000%)
+    GRE Eth:            0 (  0.000%)
+   GRE VLAN:            0 (  0.000%)
+    GRE IP4:            0 (  0.000%)
+    GRE IP6:            0 (  0.000%)
+GRE IP6 Ext:            0 (  0.000%)
+   GRE PPTP:            0 (  0.000%)
+    GRE ARP:            0 (  0.000%)
+    GRE IPX:            0 (  0.000%)
+   GRE Loop:            0 (  0.000%)
+       MPLS:            0 (  0.000%)
+        ARP:            0 (  0.000%)
+        IPX:            0 (  0.000%)
+   Eth Loop:            0 (  0.000%)
+   Eth Disc:            0 (  0.000%)
+   IP4 Disc:            0 (  0.000%)
+   IP6 Disc:            0 (  0.000%)
+   TCP Disc:            0 (  0.000%)
+   UDP Disc:            0 (  0.000%)
+  ICMP Disc:            0 (  0.000%)
+All Discard:            0 (  0.000%)
+      Other:            0 (  0.000%)
+Bad Chk Sum:           12 ( 52.174%)
+    Bad TTL:            0 (  0.000%)
+     S5 G 1:            0 (  0.000%)
+     S5 G 2:            0 (  0.000%)
+      Total:           23
+===============================================================================
+
+Memory Statistics for File at:Wed Jul  7 07:52:55 2021
+
+Total buffers allocated:           0          
+Total buffers freed:               0          
+Total buffers released:            0          
+Total file mempool:                0          
+Total allocated file mempool:      0          
+Total freed file mempool:          0          
+Total released file mempool:       0          
+
+Heap Statistics of file:
+          Total Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              0
+                 No of frees:              0
+===============================================================================
+Snort exiting
+```
+
+* Sunkumas išspręstas nurodžius aktyvią tinklo sąsają.
 
 
 ### Snort taisyklės analizė
