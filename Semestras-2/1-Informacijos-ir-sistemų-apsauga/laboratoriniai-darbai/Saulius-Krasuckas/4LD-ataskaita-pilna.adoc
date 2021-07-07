@@ -5916,7 +5916,8 @@ rules/community-rules/snort.conf:  ASCII text, with very long lines
 
 - `snort.conf` antraštė teigia, kad šis konfigūracinis failas tinka
   https://blog.snort.org/2014/06/sourcefire-vrt-certified-snort-rules.html[Sourcefire VRT]
-  (Vulnerability Response Team) taisyklių paketui ir įgalina atsaką (turbūt IPS veikimą).  +
+  (Vulnerability Response Team) taisyklių paketui. Kas tai tokio, nežinau.
+  Ir įgalina atsaką (turbūt IPS veikimą).  +
   Taip pat detalizuoja 9 žingsnius, kuriuos reikėtų įvkdyti pritaikant konfigūraciją sau.
 
 
