@@ -5602,6 +5602,29 @@ osboxes@ldvm1:/usr/local/src$ grep 1000000 /var/log/snort/alert
 * Pradėjau tyrinėt `snort.conf` pagal tekstą "telnet".  +
   Įtarimų sukėlė `ftp_telnet` preprocesorius.
 
+* Išjungiu `telnet` normalizaciją tik `telnet` protokolui giminingame preprocesoriuje `ftp_telnet_protocol`:
++
+```
+osboxes@ldvm1:/usr/local/src$ cat ~/debug/snort.dont-normalize-telnet.conf
+--- snort-2.9.18/etc/snort.conf 2021-06-08 12:23:20.000000000 +0300
++++ /etc/snort/snort.conf       2021-07-07 18:36:16.334477803 +0300
+@@ -336,10 +336,10 @@
+ 
+ # FTP / Telnet normalization and anomaly detection.  For more information, see README.ftptelnet
+ preprocessor ftp_telnet: global inspection_type stateful encrypted_traffic no check_encrypted
+-preprocessor ftp_telnet_protocol: telnet \
+-    ayt_attack_thresh 20 \
+-    normalize ports { 23 } \
+-    detect_anomalies
++# preprocessor ftp_telnet_protocol: telnet \
++#     ayt_attack_thresh 20 \
++#     normalize ports { 23 } \
++#     detect_anomalies
+ preprocessor ftp_telnet_protocol: ftp server default \
+     def_max_param_len 100 \
+     ports { 21 2100 3535 } \
+```
+
 
 ### Snort taisyklės analizė
 
