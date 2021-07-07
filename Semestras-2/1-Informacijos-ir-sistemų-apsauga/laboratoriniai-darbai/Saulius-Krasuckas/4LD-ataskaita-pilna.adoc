@@ -1460,6 +1460,84 @@ Use "fg" to return to nano.
 [1]+  Stopped                 nano /etc/snort/snort.conf
 ```
 
+Atkreipiu dėmesį:
+
+- į globalius kintamuosius:
++
+```
+###################################################
+# Step #1: Set the network variables.  For more information, see README.variables
+###################################################
+
+# Setup the network addresses you are protecting
+ipvar HOME_NET any
+
+# Set up the external network addresses. Leave as "any" in most situations
+ipvar EXTERNAL_NET any
+
+# List of DNS servers on your network 
+ipvar DNS_SERVERS $HOME_NET
+```
+
+- naudojamus preprocesorius:
++
+```
+###################################################
+# Step #5: Configure preprocessors
+# For more information, see the Snort Manual, Configuring Snort - Preprocessors
+###################################################
+
+# GTP Control Channle Preprocessor. For more information, see README.GTP
+# preprocessor gtp: ports { 2123 3386 2152 }
+
+# Inline packet normalization. For more information, see README.normalize
+# Does nothing in IDS mode
+preprocessor normalize_ip4
+preprocessor normalize_tcp: ips ecn stream
+preprocessor normalize_icmp4
+```
+
+- į išvedimo įskiepius:
++
+```
+###################################################
+# Step #6: Configure output plugins
+# For more information, see Snort Manual, Configuring Snort - Output Modules
+###################################################
+
+# unified2 
+# Recommended for most installs
+# output unified2: filename merged.log, limit 128, nostamp, mpls_event_types, vlan_event_types
+  ...
+# pcap
+# output log_tcpdump: tcpdump.log
+
+# metadata reference data.  do not modify these lines
+include classification.config
+include reference.config
+```
+
+- ir į naudojamas taisykles:
++
+```
+###################################################
+# Step #7: Customize your rule set
+# For more information, see Snort Manual, Writing Snort Rules
+#
+# NOTE: All categories are enabled in this conf file
+###################################################
+
+# site specific rules
+include $RULE_PATH/local.rules
+
+include $RULE_PATH/app-detect.rules
+include $RULE_PATH/attack-responses.rules
+  ...
+include $RULE_PATH/web-misc.rules
+include $RULE_PATH/web-php.rules
+include $RULE_PATH/x11.rules
+```
+
 
 ### Snort taisyklės analizė
 
