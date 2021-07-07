@@ -2894,6 +2894,31 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for systemd (245.4-4ubuntu3.7) ...
 ```
 
+* Tikrinu.  Pasileido automatinė Snort _systemd_ paslauga:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ systemctl status snort
+● snort.service - LSB: Lightweight network intrusion detection system
+     Loaded: loaded (/etc/init.d/snort; generated)
+     Active: active (running) since Wed 2021-07-07 12:24:04 EEST; 56s ago
+       Docs: man:systemd-sysv-generator(8)
+      Tasks: 2 (limit: 1105)
+     Memory: 142.2M
+     CGroup: /system.slice/snort.service
+             └─66919 /usr/sbin/snort -m 027 -D -d -l /var/log/snort -u snort -g snort -c /etc/snort/snort.conf -S HOME_NET=[192.168.0.0/16] -i enp0s8
+
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_IMAP  Version 1.0  <Build 1>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_POP  Version 1.0  <Build 1>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_DNP3  Version 1.1  <Build 1>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_SDF  Version 1.1  <Build 1>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_SSH  Version 1.1  <Build 3>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_SIP  Version 1.1  <Build 1>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_REPUTATION  Version 1.1  <Build 1>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_DNS  Version 1.1  <Build 4>
+Jul 07 12:24:04 ldvm1 snort[66919]:            Preprocessor Object: SF_DCERPC2  Version 1.0  <Build 3>
+Jul 07 12:24:04 ldvm1 snort[66919]: Commencing packet processing (pid=66919)
+```
+
 
 ### Snort taisyklės analizė
 
