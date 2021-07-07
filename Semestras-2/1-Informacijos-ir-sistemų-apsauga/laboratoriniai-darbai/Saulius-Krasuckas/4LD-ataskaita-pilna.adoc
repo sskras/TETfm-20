@@ -5524,6 +5524,18 @@ Password:
 telnet> Connection closed.
 ```
 
+* Deja, `"root"` seka _telnet_ sraute nepagaunama, registruojami tik pavieniai simboliai:
++
+```
+osboxes@ldvm1:/usr/local/src$ grep 1000000 /var/log/snort/alert
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000003:0] Telnet su raide <r> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+[**] [1:10000005:0] Telnet su raide <t> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+```
+
 
 ### Snort taisyklės analizė
 
