@@ -2625,6 +2625,34 @@ alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
 alert tcp any any -> 192.168.10.14 23 (content: "root"; nocase; msg: "Suspicious Telnet"; sid: 10000002;)
 ```
 
+#### 10. _Telnet_ tikrinimas
+
+Jungiuosi prie kaimyno kompiuterio per _telnet_:
+
+```
+osboxes@ldvm1:~$ telnet kaimynas
+Trying 192.168.10.13...
+telnet: Unable to connect to remote host: Connection refused
+```
+
+* Akivaizdu, kad prisijungti nepavyko: _telnet_ paslauga instaliuota ne į jį.
+
+* Jungiuosi priešingai – **iš** kaimyno kompiuterį į savo virtualųjį:
++
+```
+osboxes@ldvm2:~$ telnet 192.168.10.14
+Trying 192.168.10.14...
+Connected to 192.168.10.14.
+Escape character is '^]'.
+Ubuntu 20.04.2 LTS
+ldvm1 login: root
+Password: 
+
+Login incorrect
+ldvm1 login: 
+telnet> Connection closed.
+```
+
 
 ### Snort taisyklės analizė
 
