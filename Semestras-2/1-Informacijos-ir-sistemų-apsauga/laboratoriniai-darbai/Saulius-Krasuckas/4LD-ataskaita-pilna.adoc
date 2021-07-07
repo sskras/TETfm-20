@@ -5639,6 +5639,20 @@ ldvm1 login:
 telnet> Connection closed.
 ```
 
+* Pagaliau telnet srauto stebėjimas veikia!
++
+```
+osboxes@ldvm1:/usr/local/src$ tail -1f /var/log/snort/alert
+
+[**] [1:10000002:0] Suspicious Telnet [**]
+[Priority: 0] 
+07/07-18:53:37.013296 192.168.10.13:38560 -> 192.168.10.14:23
+TCP TTL:64 TOS:0x10 ID:56855 IpLen:20 DgmLen:105 DF
+***AP*** Seq: 0xFB94525  Ack: 0x47141D77  Win: 0x1F6  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 141966812 1508637531 
+
+```
+
 
 ### Snort taisyklės analizė
 
