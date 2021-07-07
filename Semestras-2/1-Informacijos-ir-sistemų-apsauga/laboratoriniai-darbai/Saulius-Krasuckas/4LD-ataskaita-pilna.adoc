@@ -901,7 +901,7 @@ Commencing packet processing (pid=49740)
 ```
 
 * Ir susiduriu kliūtim: Snort naudoja ne mano sukonfigūruotąją tinklo sąsają `enp0s8`.  +
-  Panašu, kad naudoja pirmą iš eilės, `enp0s3`, kurios aš nenaudoju.
+  Panašu, kad naudoja pirmą sąsją iš eilės, `enp0s3`, per kurią nėra jokio srauto.
 
 * Iškart kita kliūtis – Snort nereaguoja į `Ctrl-C` paspaudimus ir tęsią veikimą:
 
@@ -913,11 +913,11 @@ Commencing packet processing (pid=49740)
 
 ```
 ^Z
-[1]+  Stopped                 snort -v > snort0
+[1]+  Stopped                 snort -v > snort1
 root@ldvm1:~# 
 root@ldvm1:~# pkill -9 snort
 root@ldvm1:~# 
-[1]+  Killed                  snort -v > snort0
+[1]+  Killed                  snort -v > snort1
 ```
 
 * Panašu į Snort bugą, kad kol nepagavo nei vieno paketo, programa ignoruoja `Ctrl-C` paspaudimus.
