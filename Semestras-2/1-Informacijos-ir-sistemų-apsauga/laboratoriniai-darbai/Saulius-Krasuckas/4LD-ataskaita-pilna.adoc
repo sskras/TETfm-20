@@ -5786,6 +5786,33 @@ Setting up tree (1.8.0-1) ...
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
+* Peržiūriu taisyklių direktorijos medį:
++
+```
+osboxes@ldvm1:/etc/snort$ tree rules
+rules
+├── community-rules
+│   ├── AUTHORS
+│   ├── community.rules
+│   ├── LICENSE
+│   ├── sid-msg.map
+│   ├── snort.conf
+│   └── VRT-License.txt
+├── local.rules
+└── local.rules.BACKUP
+
+osboxes@ldvm1:/etc/snort$ ll rules/community-rules/
+total 2308
+drwxr-xr-x 2 1210 root    4096 Jul  7 18:54 ./
+drwxr-xr-x 3 root root   12288 Jul  7 21:14 ../
+-rw-r--r-- 1 1210 root    7834 Nov  9  2018 AUTHORS
+-rw-r--r-- 1 1210 root 1777148 Jul  7 18:54 community.rules
+-rw-r--r-- 1 1210 root   15127 Mar 20  2013 LICENSE
+-rw-r--r-- 1 1210 root  484378 Jul  7 18:54 sid-msg.map
+-rw-r--r-- 1 1210 root   29817 Mar 10 21:04 snort.conf
+-rw-r--r-- 1 1210 root   21084 Feb 25 15:49 VRT-License.txt
+```
+
 
 ### Snort taisyklės analizė
 
