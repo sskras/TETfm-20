@@ -5687,6 +5687,33 @@ Analizuoju atsiradusį įrašą. Jame rodoma:
 * Dėl to baigiu aiškinimąsi ir palieku tai netikslaus 4LD aprašo sąžinei.
 
 
+#### 11. Bendruomenės taisyklės
+
+Parsisiunčiu bendruomenės taisykles:
+
+```
+osboxes@ldvm1:/usr/local/src$ wget https://www.snort.org/downloads/community/com
+munity-rules.tar.gz
+--2021-07-07 20:57:31--  https://www.snort.org/downloads/community/community-rules.tar.gz
+Resolving www.snort.org (www.snort.org)... 104.18.138.9, 104.18.139.9, 2606:4700::6812:8b09, ...
+Connecting to www.snort.org (www.snort.org)|104.18.138.9|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/901/original/community-rules.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210707%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210707T175732Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=692fc950b7285a4c9b4579ed31b95a8d9a7da5c17e7da20ab076c2cc9aee9088 [following]
+--2021-07-07 20:57:32--  https://snort-org-site.s3.amazonaws.com/production/release_files/files/000/018/901/original/community-rules.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210707%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210707T175732Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=692fc950b7285a4c9b4579ed31b95a8d9a7da5c17e7da20ab076c2cc9aee9088
+Resolving snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)... 52.216.107.84
+Connecting to snort-org-site.s3.amazonaws.com (snort-org-site.s3.amazonaws.com)|52.216.107.84|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 337941 (330K) [application/gzip]
+Saving to: ‘community-rules.tar.gz’
+
+community-rules.tar 100%[===================>] 330.02K   252KB/s    in 1.3s    
+
+2021-07-07 20:57:34 (252 KB/s) - ‘community-rules.tar.gz’ saved [337941/337941]
+```
+
+* LD aprašo nuoroda netiksli, https://www.snort.org/downloads[susiradau] veikiančią.
+
+
 ### Snort taisyklės analizė
 
 
