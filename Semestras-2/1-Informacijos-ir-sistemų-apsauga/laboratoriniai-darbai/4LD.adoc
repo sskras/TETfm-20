@@ -204,7 +204,7 @@ nano /etc/snort/snort.conf
 ```
 var RULE_PATH /etc/snort/rules
 var HOME_NET 192.168.10.0/24
-var EXTERNAT_NET !$HOME_NET
+var EXTERNAL_NET !$HOME_NET
 
  3+| Naudodami simbolį `#` užkomentuokite visas taisykles išskyrus `local.rules`.
 
