@@ -2976,6 +2976,50 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ diff -u ~/debug/{12,13}*.txt
             Using PCRE version: 8.39 2016-06-14
 ```
 
+* Vėl sukonfigūruoju `snort.conf` ir palyginu su paketine konfigūracija:
++
+```
+root@ldvm1:~# nano /etc/snort/snort.conf
+
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano /etc/snort/snort.conf
+
+root@ldvm1:~# diff -u /etc/snort/snort.conf.orig /etc/snort/snort.conf | colordiff
+--- /etc/snort/snort.conf.orig  2021-07-07 12:39:46.071405789 +0300
++++ /etc/snort/snort.conf       2021-07-07 13:00:46.412413918 +0300
+@@ -48,14 +48,14 @@
+ # value of DEBIAN_SNORT_HOME_NET s defined in the
+ # /etc/snort/snort.debian.conf configuration file
+ #
+-ipvar HOME_NET any
++ipvar HOME_NET 192.168.10.0/24
+ 
+ # Set up the external network addresses. Leave as "any" in most situations
+-ipvar EXTERNAL_NET any
++#ipvar EXTERNAL_NET any
+ # If HOME_NET is defined as something other than "any", alternative, you can
+ # use this definition if you do not want to detect attacks from your internal
+ # IP addresses:
+-#ipvar EXTERNAL_NET !$HOME_NET
++ ipvar EXTERNAL_NET !$HOME_NET
+ 
+ # List of DNS servers on your network 
+ ipvar DNS_SERVERS $HOME_NET
+@@ -533,7 +533,7 @@
+ # unified2 
+ # Recommended for most installs
+ # output unified2: filename merged.log, limit 128, nostamp, mpls_event_types, vlan_event_types
+-output unified2: filename snort.log, limit 128, nostamp, mpls_event_types, vlan_event_types
++#output unified2: filename snort.log, limit 128, nostamp, mpls_event_types, vlan_event_types
+ 
+ # Additional configuration for specific types of installs
+ # output alert_unified2: filename snort.alert, limit 128, nostamp
+```
++
+image::https://user-images.githubusercontent.com/74717106/124740522-8d282580-df23-11eb-833d-b01cdd28fce8.png[]
+
 
 ### Snort taisyklės analizė
 
