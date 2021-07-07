@@ -873,7 +873,7 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo chown snort:snort /etc/snort/
 
 #### 4. Pradinis stebėjimas
 
-Stebiu tinklo srautą ir įrašau duomenis į failus:
+* Stebiu tinklo srautą, įrašau duomenis į failus, ir susiduriu kliūtim:
 
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo -i
@@ -899,6 +899,9 @@ Decoding Ethernet
 
 Commencing packet processing (pid=49740)
 ```
+
+* Snort naudoja ne mano sukonfigūruotąją tinklo sąsają `enp0s8`.  +
+  Panašu, kad naudoja pirmą iš eilės, `enp0s3`, kurios aš nenaudoju.
 
 
 ### Snort taisyklės analizė
