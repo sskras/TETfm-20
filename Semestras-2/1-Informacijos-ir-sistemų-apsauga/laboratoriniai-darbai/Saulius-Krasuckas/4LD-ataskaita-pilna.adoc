@@ -1189,6 +1189,101 @@ PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.647/0.649/0.651/0.002 ms
 ```
 
+Sustabdau paketų rinkimą:
+
+```
+^C*** Caught Int-Signal
+===============================================================================
+Run time for packet processing was 36.425998 seconds
+Snort processed 77 packets.
+Snort ran for 0 days 0 hours 0 minutes 36 seconds
+   Pkts/sec:            2
+===============================================================================
+Memory usage summary:
+  Total non-mmapped bytes (arena):       786432
+  Bytes in mapped regions (hblkhd):      22941696
+  Total allocated space (uordblks):      685984
+  Total free space (fordblks):           100448
+  Topmost releasable block (keepcost):   93552
+===============================================================================
+Packet I/O Totals:
+   Received:           81
+   Analyzed:           77 ( 95.062%)
+    Dropped:            0 (  0.000%)
+   Filtered:            0 (  0.000%)
+Outstanding:            4 (  4.938%)
+   Injected:            0
+===============================================================================
+Breakdown by protocol (includes rebuilt packets):
+        Eth:           77 (100.000%)
+       VLAN:            0 (  0.000%)
+        IP4:           77 (100.000%)
+       Frag:            0 (  0.000%)
+       ICMP:            4 (  5.195%)
+        UDP:            2 (  2.597%)
+        TCP:           71 ( 92.208%)
+        IP6:            0 (  0.000%)
+    IP6 Ext:            0 (  0.000%)
+   IP6 Opts:            0 (  0.000%)
+      Frag6:            0 (  0.000%)
+      ICMP6:            0 (  0.000%)
+       UDP6:            0 (  0.000%)
+       TCP6:            0 (  0.000%)
+     Teredo:            0 (  0.000%)
+    ICMP-IP:            0 (  0.000%)
+    IP4/IP4:            0 (  0.000%)
+    IP4/IP6:            0 (  0.000%)
+    IP6/IP4:            0 (  0.000%)
+    IP6/IP6:            0 (  0.000%)
+        GRE:            0 (  0.000%)
+    GRE Eth:            0 (  0.000%)
+   GRE VLAN:            0 (  0.000%)
+    GRE IP4:            0 (  0.000%)
+    GRE IP6:            0 (  0.000%)
+GRE IP6 Ext:            0 (  0.000%)
+   GRE PPTP:            0 (  0.000%)
+    GRE ARP:            0 (  0.000%)
+    GRE IPX:            0 (  0.000%)
+   GRE Loop:            0 (  0.000%)
+       MPLS:            0 (  0.000%)
+        ARP:            0 (  0.000%)
+        IPX:            0 (  0.000%)
+   Eth Loop:            0 (  0.000%)
+   Eth Disc:            0 (  0.000%)
+   IP4 Disc:            0 (  0.000%)
+   IP6 Disc:            0 (  0.000%)
+   TCP Disc:            0 (  0.000%)
+   UDP Disc:            0 (  0.000%)
+  ICMP Disc:            0 (  0.000%)
+All Discard:            0 (  0.000%)
+      Other:            0 (  0.000%)
+Bad Chk Sum:           37 ( 48.052%)
+    Bad TTL:            0 (  0.000%)
+     S5 G 1:            0 (  0.000%)
+     S5 G 2:            0 (  0.000%)
+      Total:           77
+===============================================================================
+
+Memory Statistics for File at:Wed Jul  7 08:29:37 2021
+
+Total buffers allocated:           0          
+Total buffers freed:               0          
+Total buffers released:            0          
+Total file mempool:                0          
+Total allocated file mempool:      0          
+Total freed file mempool:          0          
+Total released file mempool:       0          
+
+Heap Statistics of file:
+          Total Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              0
+                 No of frees:              0
+===============================================================================
+Snort exiting
+root@ldvm1:~# 
+```
+
 
 ### Snort taisyklės analizė
 
