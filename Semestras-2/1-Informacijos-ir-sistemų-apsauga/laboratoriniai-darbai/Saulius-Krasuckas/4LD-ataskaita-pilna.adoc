@@ -5548,6 +5548,10 @@ osboxes@ldvm1:/usr/local/src$ tar ztvf snort-2.9.18.tar.gz | awk '{$1=$2=$3=$6="
 ** 2021-03-29 07:21, daq-2.0.7.tar.gz
 ** 2021-06-08 12:23, snort-2.9.18.tar.gz
 
+* https://github.com/bensooter/Snort16OnUbuntu[Viename iš instaliavimo gidų] radau užuominą, kad tinklo plokštėms verta išjungti
+  "Large Receive Offload" (LRO) ir "Generic Receive Offload" (GRO) palaikymą.  +
+  Kitaip dalis duomenų bus nukerpami.
+
 
 ### Snort taisyklės analizė
 
