@@ -5663,6 +5663,19 @@ Analizuoju atsiradusį įrašą. Jame rodoma:
 . abu TCP portai
 . ir didelė dalis likusios TCP (Layer 4) antraštės.
 
+* Tačiau tekstą `"root"` renkant ranka, po simbolį, Snort užklausos vis tiek neaptinka.  +
+  Galimai reikia perkonfigūruoti preprocesorių `ftp_telnet` arba `ftp_telnet_protocol`, kad duomenys būtų imami iš jo tiesiogiai.  +
+  Ar galbūt tiesiog panaudoti kitą sintaksę, skirtą priėjimui prie šio preprocesoriaus apdorotų duomenų tiesiogiai.
+
+Šiam žingsniui išspręsti skyriau beveik 8 val.:
+
+```
+11:37:15
+19:22:02
+```
+
+* Dėl to baigiu aiškinimąsi ir palieku tai netikslaus 4LD aprašo sąžinei.
+
 
 ### Snort taisyklės analizė
 
