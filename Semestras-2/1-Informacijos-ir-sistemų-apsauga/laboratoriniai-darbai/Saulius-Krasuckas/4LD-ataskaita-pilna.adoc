@@ -2061,6 +2061,23 @@ root@ldvm1:~# find / -name white_list.rules
 find: ‘/run/user/1000/gvfs’: Permission denied
 ```
 
+* Tokio failo nėra.  Tikrinu jo naudotoją:
++
+```
+root@ldvm1:~# grep -C5 WHITE_LIST_PATH/ /etc/snort/snort.conf
+# Reputation preprocessor. For more information see README.reputation
+preprocessor reputation: \
+   memcap 500, \
+   priority whitelist, \
+   nested_ip inner, \
+   whitelist $WHITE_LIST_PATH/white_list.rules, \
+   blacklist $BLACK_LIST_PATH/black_list.rules 
+
+###################################################
+# Step #6: Configure output plugins
+# For more information, see Snort Manual, Configuring Snort - Output Modules
+```
+
 
 ### Snort taisyklės analizė
 
