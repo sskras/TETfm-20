@@ -5732,6 +5732,38 @@ community-rules/sid-msg.map
 osboxes@ldvm1:/etc/snort$ 
 ```
 
+* Manau, kad išarchyvuota į nekorektišką direktoriją:  +
+  (galbūt aprašas ir čia paseno?)
++
+```
+osboxes@ldvm1:/etc/snort$ ll
+total 420
+drwxr-xr-x   4 snort snort   4096 Jul  7 21:02 ./
+drwxr-xr-x 133 root  root   12288 Jul  7 16:54 ../
+-r-xr-xr-x   1 root  root    1281 Jul  7 16:54 attribute_table.dtd*
+-r--r--r--   1 root  root    3757 Jul  7 16:54 classification.config
+drwxr-xr-x   2  1210 root    4096 Jul  7 18:54 community-rules/
+-r--r--r--   1 root  root   23654 Jul  7 16:54 file_magic.conf
+-r--r--r--   1 root  root   33272 Jul  7 16:54 gen-msg.map
+-r--r--r--   1 root  root     190 Jul  7 16:54 Makefile.am
+-rw-r--r--   1 root  root   12306 Jul  7 16:54 Makefile.in
+-r--r--r--   1 root  root     687 Jul  7 16:54 reference.config
+drwxr-xr-x   2 root  root   12288 Jul  7 18:53 rules/
+-rw-r--r--   1 root  root   27010 Jul  7 18:39 snort.conf
+-rw-r-----   1 root  root   28880 Jul  7 12:39 snort.conf.orig
+-rw-r-----   1 root    136  28880 Apr  3  2018 snort.conf.ORIGINAL
+-rw-r--r--   1 root  root   40960 Jul  7 18:37 .snort.conf.swp
+-r--r--r--   1 root  root    2335 Jul  7 16:54 threshold.conf
+-r--r--r--   1 root  root  160606 Jul  7 16:54 unicode.map
+```
+
+* Perkeliu į įprastą direktoriją:
++
+```
+osboxes@ldvm1:/etc/snort$ sudo mv -v community-rules rules/
+renamed 'community-rules' -> 'rules/community-rules'
+```
+
 
 ### Snort taisyklės analizė
 
