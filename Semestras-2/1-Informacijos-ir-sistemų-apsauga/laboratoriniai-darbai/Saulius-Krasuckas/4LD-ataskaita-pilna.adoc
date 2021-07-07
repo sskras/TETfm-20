@@ -5801,17 +5801,115 @@ rules
 ├── local.rules
 └── local.rules.BACKUP
 
-osboxes@ldvm1:/etc/snort$ ll rules/community-rules/
-total 2308
-drwxr-xr-x 2 1210 root    4096 Jul  7 18:54 ./
-drwxr-xr-x 3 root root   12288 Jul  7 21:14 ../
--rw-r--r-- 1 1210 root    7834 Nov  9  2018 AUTHORS
--rw-r--r-- 1 1210 root 1777148 Jul  7 18:54 community.rules
--rw-r--r-- 1 1210 root   15127 Mar 20  2013 LICENSE
+osboxes@ldvm1:/etc/snort$ ls -lt rules/community-rules
+total 2292
 -rw-r--r-- 1 1210 root  484378 Jul  7 18:54 sid-msg.map
+-rw-r--r-- 1 1210 root 1777148 Jul  7 18:54 community.rules
 -rw-r--r-- 1 1210 root   29817 Mar 10 21:04 snort.conf
 -rw-r--r-- 1 1210 root   21084 Feb 25 15:49 VRT-License.txt
+-rw-r--r-- 1 1210 root    7834 Nov  9  2018 AUTHORS
+-rw-r--r-- 1 1210 root   15127 Mar 20  2013 LICENSE
 ```
+
+Peržiūriu taisyklių failo struktūrą:
+
+```
+osboxes@ldvm1:/etc/snort$ ll -h rules/community-rules/community.rules
+-rw-r--r-- 1 1210 root 1.7M Jul  7 18:54 rules/community-rules/community.rules
+
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | wc -l
+3986
+osboxes@ldvm1:/etc/snort$ less -S rules/community-rules/community.rules
+```
+
+- Beveik 4000 eilučių. Peržiūriu paskutines:
++
+```
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | tail -2
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"INDICATOR-COMPROMISE Revil Kaseya ransomware log clearing http upload"; flow:to_server,established; file_data; content:"Server.CreateObject"; content:"KComWExec.execCmd"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy connectivity-ips drop, policy max-detect-ips drop, policy security-ips drop, ruleset community, service http; reference:url,doublepulsar.com/kaseya-supply-chain-attack-delivers-mass-ransomware-event-to-us-companies-76e4ec6ec64b; reference:url,www.huntress.com/blog/rapid-response-kaseya-vsa-mass-msp-ransomware-incident; classtype:web-application-attack; sid:57879; rev:2;)
+```
+
+– Kiekviena taisyklė gana ilga, todėl kerpu ties 80 simb.:
++
+```
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | tail | cut -c 1-80
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"OS-WINDOWS Microsoft 
+# alert tcp any any -> $HOME_NET $HTTP_PORTS (msg:"POLICY-OTHER Active Directory
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"INDICATOR-COMPROMISE 
+```
+
+- Dalis eilučių užkomentuotos.
+
+- Skaičiuoju tik atkomentuotąsias:
++
+```
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -vc ^#
+508
+```
+
+- Pežiūriu 10 pirmų:
++
+```
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -v ^#| head | cut -c 1-80
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY RealNet
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY RealNet
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY RealNet
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY RealNet
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY Microso
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY Microso
+alert tcp $HOME_NET 5880 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR Y3KRAT 1.5 
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5880 (msg:"MALWARE-BACKDOOR Y3KRAT 1.5 
+alert tcp $EXTERNAL_NET any -> $HOME_NET 139 (msg:"NETBIOS SMB Trans2 QUERY_FILE
+```
+
+- Peržiūriu 10 paskutinių:
++
+```
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -v ^#| tail | cut -c 1-80
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"MALWARE-BACKDOOR Perl
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"OS-WINDOWS Microsoft 
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"INDICATOR-COMPROMISE 
+```
+
+- Peržiūriu pilną pirmąją:
++
+```
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -v ^#| head -2
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY RealNetworks Realplayer .ram playlist file download request"; flow:to_server,established; content:".ra"; fast_pattern:only; http_uri; pcre:"/\x2eram?([\?\x5c\x2f]|$)/smiU"; flowbits:set,file.realplayer.playlist; flowbits:noalert; metadata:policy max-detect-ips alert, ruleset community, service http; reference:url,en.wikipedia.org/wiki/.ram; classtype:misc-activity; sid:2419; rev:30;)
+```
+
+- Dar direktorijoje randu pora failų:
++
+```
+osboxes@ldvm1:/etc/snort$ ll rules/community-rules/*.{map,conf}
+-rw-r--r-- 1 1210 root 484378 Jul  7 18:54 rules/community-rules/sid-msg.map
+-rw-r--r-- 1 1210 root  29817 Mar 10 21:04 rules/community-rules/snort.conf
+
+osboxes@ldvm1:/etc/snort$ file rules/community-rules/*.{map,conf}
+rules/community-rules/sid-msg.map: ASCII text, with very long lines
+rules/community-rules/snort.conf:  ASCII text, with very long lines
+```
+
+- `sig-msg.map` matau sąrašą su `sid` ir `msg` reikšmų poromis iš `*.rules` failo.
+
+- `snort.conf` antraštė teigia, kad šis konfigūracinis failas tinka
+  https://blog.snort.org/2014/06/sourcefire-vrt-certified-snort-rules.html[Sourcefire VRT]
+  (Vulnerability Response Team) taisyklių paketui ir įgalina atsaką (turbūt IPS veikimą).  +
+  Taip pat detalizuoja 9 žingsnius, kuriuos reikėtų įvkdyti pritaikant konfigūraciją sau.
 
 
 ### Snort taisyklės analizė
