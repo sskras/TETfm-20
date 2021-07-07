@@ -5224,6 +5224,105 @@ make[2]: Leaving directory '/usr/local/src/daq-2.0.7'
 make[1]: Leaving directory '/usr/local/src/daq-2.0.7'
 ```
 
+* Iš naujo susikompiliuoju Snort:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ make clean
+Making clean in src
+make[1]: Entering directory '/usr/local/src/snort-2.9.18/src'
+Making clean in sfutil
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/src/sfutil'
+rm -rf .libs _libs
+test -z "libsfutil.a" || rm -f libsfutil.a
+rm -f *.o
+rm -f *.lo
+  ...
+rm -rf .libs _libs
+rm -f *.lo
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[1]: Entering directory '/usr/local/src/snort-2.9.18'
+rm -rf .libs _libs
+rm -f *.lo
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18'
+```
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --disable-open-appid 2>&1 | tee configure-v2.log 
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+  ...
+checking for separate IP versions on pinhole endpoints... no
+checking for DAQ_VERDICT_RETRY... yes
+checking for daq packet trace... no
+DAQ version doesn't support packet trace.
+checking for daq verdict reason... no
+DAQ version doesn't support tracing verdict reason.
+checking for sparc... no
+checking for visibility support... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for inflate in -lz... yes
+checking lzma.h usability... no
+checking lzma.h presence... no
+checking for lzma.h... no
+checking for lzma_stream_decoder in -llzma... no
+checking for pthread_tryjoin_np... yes
+checking for nghttp2_option_new in -lnghttp2... no
+
+   Libnghttp2 library not found.
+   Get it from https://nghttp2.org/
+
+checking for linuxthreads... no
+checking for yylex_destroy support... yes
+checking for SFLINUX... no
+checking for WRLINUX... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating snort.pc
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/sfutil/Makefile
+config.status: creating src/control/Makefile
+  ...
+config.status: creating tools/file_server/Makefile
+config.status: creating src/win32/Makefile
+config.status: creating src/reload-adjust/Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+```
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ time make
+make  all-recursive
+make[1]: Entering directory '/usr/local/src/snort-2.9.18'
+Making all in src
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/src'
+Making all in sfutil
+make[3]: Entering directory '/usr/local/src/snort-2.9.18/src/sfutil'
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../src -I../../src/sfutil -I/usr/include/pcap -I../../src/output-plugins -I../../src/detection-plugins -I../../src/dynamic-plugins -I../../src/preprocessors -I../../src/preprocessors/portscan -I../../src/preprocessors/HttpInspect/include -I../../src/preprocessors/Session -I../../src/preprocessors/Stream6 -I../../src/target-based -I../../src/control -I../../src/file-process -I../../src/file-process/libs -I../../src/side-channel -I../../src/side-channel/plugins -I../../src/reload-adjust  -DGRE -DMPLS -DPPM_MGR -DNDEBUG -DENABLE_REACT -DENABLE_RESPOND -DENABLE_RESPONSE3 -DSF_WCHAR -DTARGET_BASED -DPERF_PROFILING -DSNORT_RELOAD -DNO_NON_ETHER_DECODER -DNORMALIZER -DACTIVE_RESPONSE  -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -c sfghash.c
+  ...
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../.. -I../../src -I../../src/sfutil -I/usr/include/pcap -I../../src/output-plugins -I../../src/detection-plugins -I../../src/dynamic-plugins -I../../src/preprocessors -I../../src/preprocessors/portscan -I../../src/preprocessors/HttpInspect/include -I../../src/preprocessors/Session -I../../src/preprocessors/Stream6 -I../../src/target-based -I../../src/control -I../../src/file-process -I../../src/file-process/libs -I../../src/side-channel -I../../src/side-channel/plugins -I../../src/reload-adjust -I/usr/include/pcap  -DGRE -DMPLS -DPPM_MGR -DNDEBUG -DENABLE_REACT -DENABLE_RESPOND -DENABLE_RESPONSE3 -DSF_WCHAR -DTARGET_BASED -DPERF_PROFILING -DSNORT_RELOAD -DNO_NON_ETHER_DECODER -DNORMALIZER -DACTIVE_RESPONSE -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall  -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -MT u2spewfoo-u2spewfoo.o -MD -MP -MF .deps/u2spewfoo-u2spewfoo.Tpo -c -o u2spewfoo-u2spewfoo.o `test -f 'u2spewfoo.c' || echo './'`u2spewfoo.c
+mv -f .deps/u2spewfoo-u2spewfoo.Tpo .deps/u2spewfoo-u2spewfoo.Po
+/bin/bash ../../libtool  --tag=CC   --mode=link gcc -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall  -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall  -lpcre -ldumbnet -o u2spewfoo u2spewfoo-u2spewfoo.o  -lz -ldaq_static -ldumbnet -lpcre -lpcap -lnsl -lm -lm  -lcrypto -ldl -L/usr/local/lib -ldaq_static_modules  -lsfbpf -lpcap -lsfbpf -lpcap -lz -lpthread -lpthread -lpthread
+libtool: link: gcc -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -g -O2 -DSF_VISIBILITY -fvisibility=hidden -Wall -o u2spewfoo u2spewfoo-u2spewfoo.o  /usr/local/lib/libdaq_static.a /usr/lib/x86_64-linux-gnu/libdumbnet.so -lpcre -lnsl -lm -lcrypto -ldl -L/usr/local/lib /usr/local/lib/libdaq_static_modules.a /usr/local/lib/libsfbpf.so -lpcap -lz -lpthread
+make[3]: Leaving directory '/usr/local/src/snort-2.9.18/tools/u2spewfoo'
+make[3]: Entering directory '/usr/local/src/snort-2.9.18/tools'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[2]: Entering directory '/usr/local/src/snort-2.9.18'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18'
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18'
+
+real    3m9.933s
+user    2m30.969s
+sys     0m27.158s
+```
+
 
 ### Snort taisyklės analizė
 
