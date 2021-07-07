@@ -1284,6 +1284,164 @@ Snort exiting
 root@ldvm1:~# 
 ```
 
+Nuskaitau informaciją apie sustebėtus ICMP paketus:
+
+```
+root@ldvm1:~# snort -dvr /var/log/snort/snort.log.1625635740 icmp
+Running in packet dump mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Snort BPF option: icmp
+pcap DAQ configured to read-file.
+Acquiring network traffic from "/var/log/snort/snort.log.1625635740".
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.18 GRE (Build 169) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+Commencing packet processing (pid=51944)
+WARNING: No preprocessors configured for policy 0.
+07/07-08:29:18.674234 192.168.10.254 -> 192.168.10.14
+ICMP TTL:64 TOS:0x0 ID:25922 IpLen:20 DgmLen:84 DF
+Type:8  Code:0  ID:16476   Seq:1  ECHO
+AE 3B E5 60 00 00 00 00 D9 01 0D 00 00 00 00 00  .;.`............
+10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F  ................
+20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F   !"#$%&'()*+,-./
+30 31 32 33 34 35 36 37                          01234567
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+WARNING: No preprocessors configured for policy 0.
+07/07-08:29:18.674311 192.168.10.14 -> 192.168.10.254
+ICMP TTL:64 TOS:0x0 ID:59141 IpLen:20 DgmLen:84
+Type:0  Code:0  ID:16476  Seq:1  ECHO REPLY
+AE 3B E5 60 00 00 00 00 D9 01 0D 00 00 00 00 00  .;.`............
+10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F  ................
+20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F   !"#$%&'()*+,-./
+30 31 32 33 34 35 36 37                          01234567
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+WARNING: No preprocessors configured for policy 0.
+07/07-08:29:19.657679 192.168.10.254 -> 192.168.10.14
+ICMP TTL:64 TOS:0x0 ID:26495 IpLen:20 DgmLen:84 DF
+Type:8  Code:0  ID:16476   Seq:2  ECHO
+AF 3B E5 60 00 00 00 00 2F 04 0D 00 00 00 00 00  .;.`..../.......
+10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F  ................
+20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F   !"#$%&'()*+,-./
+30 31 32 33 34 35 36 37                          01234567
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+WARNING: No preprocessors configured for policy 0.
+07/07-08:29:19.657727 192.168.10.14 -> 192.168.10.254
+ICMP TTL:64 TOS:0x0 ID:59190 IpLen:20 DgmLen:84
+Type:0  Code:0  ID:16476  Seq:2  ECHO REPLY
+AF 3B E5 60 00 00 00 00 2F 04 0D 00 00 00 00 00  .;.`..../.......
+10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F  ................
+20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F   !"#$%&'()*+,-./
+30 31 32 33 34 35 36 37                          01234567
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+===============================================================================
+Run time for packet processing was 0.244 seconds
+Snort processed 4 packets.
+Snort ran for 0 days 0 hours 0 minutes 0 seconds
+   Pkts/sec:            4
+===============================================================================
+Memory usage summary:
+  Total non-mmapped bytes (arena):       786432
+  Bytes in mapped regions (hblkhd):      23216128
+  Total allocated space (uordblks):      685584
+  Total free space (fordblks):           100848
+  Topmost releasable block (keepcost):   93024
+===============================================================================
+Packet I/O Totals:
+   Received:            4
+   Analyzed:            4 (100.000%)
+    Dropped:            0 (  0.000%)
+   Filtered:            0 (  0.000%)
+Outstanding:            0 (  0.000%)
+   Injected:            0
+===============================================================================
+Breakdown by protocol (includes rebuilt packets):
+        Eth:            4 (100.000%)
+       VLAN:            0 (  0.000%)
+        IP4:            4 (100.000%)
+       Frag:            0 (  0.000%)
+       ICMP:            4 (100.000%)
+        UDP:            0 (  0.000%)
+        TCP:            0 (  0.000%)
+        IP6:            0 (  0.000%)
+    IP6 Ext:            0 (  0.000%)
+   IP6 Opts:            0 (  0.000%)
+      Frag6:            0 (  0.000%)
+      ICMP6:            0 (  0.000%)
+       UDP6:            0 (  0.000%)
+       TCP6:            0 (  0.000%)
+     Teredo:            0 (  0.000%)
+    ICMP-IP:            0 (  0.000%)
+    IP4/IP4:            0 (  0.000%)
+    IP4/IP6:            0 (  0.000%)
+    IP6/IP4:            0 (  0.000%)
+    IP6/IP6:            0 (  0.000%)
+        GRE:            0 (  0.000%)
+    GRE Eth:            0 (  0.000%)
+   GRE VLAN:            0 (  0.000%)
+    GRE IP4:            0 (  0.000%)
+    GRE IP6:            0 (  0.000%)
+GRE IP6 Ext:            0 (  0.000%)
+   GRE PPTP:            0 (  0.000%)
+    GRE ARP:            0 (  0.000%)
+    GRE IPX:            0 (  0.000%)
+   GRE Loop:            0 (  0.000%)
+       MPLS:            0 (  0.000%)
+        ARP:            0 (  0.000%)
+        IPX:            0 (  0.000%)
+   Eth Loop:            0 (  0.000%)
+   Eth Disc:            0 (  0.000%)
+   IP4 Disc:            0 (  0.000%)
+   IP6 Disc:            0 (  0.000%)
+   TCP Disc:            0 (  0.000%)
+   UDP Disc:            0 (  0.000%)
+  ICMP Disc:            0 (  0.000%)
+All Discard:            0 (  0.000%)
+      Other:            0 (  0.000%)
+Bad Chk Sum:            0 (  0.000%)
+    Bad TTL:            0 (  0.000%)
+     S5 G 1:            0 (  0.000%)
+     S5 G 2:            0 (  0.000%)
+      Total:            4
+===============================================================================
+
+Memory Statistics for File at:Wed Jul  7 08:35:20 2021
+
+Total buffers allocated:           0          
+Total buffers freed:               0          
+Total buffers released:            0          
+Total file mempool:                0          
+Total allocated file mempool:      0          
+Total freed file mempool:          0          
+Total released file mempool:       0          
+
+Heap Statistics of file:
+          Total Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              0
+                 No of frees:              0
+===============================================================================
+Snort exiting
+```
+
 
 ### Snort taisyklės analizė
 
