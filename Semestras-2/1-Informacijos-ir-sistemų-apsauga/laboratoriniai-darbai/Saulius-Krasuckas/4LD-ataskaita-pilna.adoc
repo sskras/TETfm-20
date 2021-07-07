@@ -5036,6 +5036,25 @@ IP 192.168.10.13.38380 > 192.168.10.14.23: tcp 0
 * Matyti, kad dabar visi 4 simboliai `"root"` atkeliauja kartu.  +
   Tačiau Snort jų vis tiek neaptinka.
 
+* Kilo mintis, kad Ubuntu DAQ biblioteka pagla nutylėjimą galbūt ne tik per sena, bet turi defektą.
+
+* Tikrinu turimą `libdaq` versiją:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ dpkg --list | grep daq | cut -c 1-80
+ii  libdaq-dev                                 2.0.4-3build2                    
+ii  libdaq2                                    2.0.4-3build2                    
+
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ dpkg --list libdaq2 libdaq-dev
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version       Architecture Description
++++-==============-=============-============-=================================>
+ii  libdaq-dev     2.0.4-3build2 amd64        Data Acquisition library for pack>
+ii  libdaq2        2.0.4-3build2 amd64        Data Acquisition library for pack>
+```
+
 
 ### Snort taisyklės analizė
 
