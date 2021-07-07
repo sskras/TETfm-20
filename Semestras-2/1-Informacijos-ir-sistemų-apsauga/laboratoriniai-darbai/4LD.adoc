@@ -285,10 +285,9 @@ telnet 192.168.10.(1x-1)
  2+|
 
 
-
- 3+| +++<center>+++ *11. TODO* +++</center>+++
+ 3+| +++<center>+++ *11. Bendruomėnės taisyklės* +++</center>+++
  
-   | Parsisiųskite bendruomenės taisykles arba registruoto vartotojo taisykles (klaiskite dėstytojo):
+   | Parsisiųskite bendruomenės taisykles arba registruoto vartotojo taisykles (klauskite dėstytojo):
 2+a|
 ```
 cd /etc/snort
@@ -302,6 +301,16 @@ wget http://snort.org/pub-bin/downloads.cgi/Download/comm_rules/Community-Rules-
    | Peržiūrėkite jų struktūrą.
  2+|
 
+
+ 3+| +++<center>+++ *12. Skenavimas veikiant bendruomenės taisyklėms* +++</center>+++
+ 
+   | Esant veikiančiai Snort atakų atpažinimo sistemai skenuokite kaimyno kompiuterį:
+2+a|
+```
+nmap -sS -P0 -n -F 192.168.10.(1x-1)
+
+   | Analizuokite įrašus.
+ 2+|
 
 |===
 
