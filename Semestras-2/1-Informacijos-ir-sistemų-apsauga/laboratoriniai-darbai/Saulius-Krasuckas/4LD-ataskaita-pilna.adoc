@@ -5625,6 +5625,20 @@ osboxes@ldvm1:/usr/local/src$ cat ~/debug/snort.dont-normalize-telnet.conf
      ports { 21 2100 3535 } \
 ```
 
+* Jungiuosi iš kaimyno į virtualų kompiuterį per _telnet_ ir su `"root"` vartotoju:
++
+```
+osboxes@ldvm2:~$ telnet -l root 192.168.10.14
+Trying 192.168.10.14...
+Connected to 192.168.10.14.
+Escape character is '^]'.
+Password: 
+
+Login incorrect
+ldvm1 login: 
+telnet> Connection closed.
+```
+
 
 ### Snort taisyklės analizė
 
