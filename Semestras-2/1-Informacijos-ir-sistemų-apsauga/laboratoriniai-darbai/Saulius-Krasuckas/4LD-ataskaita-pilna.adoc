@@ -4934,6 +4934,17 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
 [**] [1:10000005:0] Telnet su raide <t> [**]
 ```
 
+* Paskutinis įrašas toks:
++
+```
+[**] [1:10000005:0] Telnet su raide <t> [**]
+[Priority: 0]
+07/07-14:51:47.052408 192.168.10.13:38348 -> 192.168.10.14:23
+TCP TTL:64 TOS:0x10 ID:24141 IpLen:20 DgmLen:53 DF
+***AP*** Seq: 0x461679D9  Ack: 0xB290FFC2  Win: 0x1F6  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 127699005 1494370432
+```
+
 * Leidžiu `tcpdump` paketų gaudyklę ir kartoju _telnet_ užklausą:
 +
 ```
