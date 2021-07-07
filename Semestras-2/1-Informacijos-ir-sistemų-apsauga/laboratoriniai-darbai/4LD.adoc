@@ -453,6 +453,46 @@ Database Password: mypass
    | Spauskite
  2+| *_create baseag_*
 
+
+ 3+| +++<center>+++ *18. Papildomi grafiniai nustatymai* +++</center>+++
+
+   | Grafiniams elementams reikia papildomų nustatymų:
+2+a|
+```
+rm /etc/alternatives/php
+ln -s /usr/bin/php4 /etc/alternatives/php
+
+   | Įvykdykite komandą:
+2+a|
+```
+pear config-set preferred_state alpha
+
+   | Atlikite tolimesnius pakeitimus:
+2+a|
+```
+nano /etc/php/cli/php.ini
+
+   | Atkomentuokite:
+2+a|
+```
+extension=gd.so
+
+   | Įvykdykite tolesnes komandas:
+2+a|
+```
+pear install Image_Color
+pear install Image_Canvas
+pear install Image_Graph
+
+   | Perkraukite Apache:
+2+a|
+```
+/etc/init.d/apache-ssl restart
+
+   | ... ir bandykite prisijungti prie BASE puslapio.
+
+
+
 |===
 
 ### Ataskaitos turinys
