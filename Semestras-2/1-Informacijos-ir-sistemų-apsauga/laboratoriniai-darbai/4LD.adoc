@@ -381,6 +381,35 @@ nano /etc/snort/snort.conf
 output database: log, mysql, user=snort password=mypass dbname=snort host=localhost
 
 
+ 3+| +++<center>+++ *16. Žiniatinklio perkonfigūravimas* +++</center>+++
+
+   | Papildykite žiniatinlio konfigūracinį failą:
+2+a|
+```
+nano /etc/apache-ssl/httpd.conf
+
+   | Atkomentuokite:
+2+a|
+```
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+
+   | Leiskite MySQL išplėtimus:
+2+a|
+```
+nano /etc/php4/apache/php.ini
+
+   | ... atkomentuokite:
+2+a|
+```
+extension=mysql.so
+
+   | Perkraukite Apache serverį:
+2+a|
+```
+/etc/init.d/apache-ssl restart
+
+
 |===
 
 ### Ataskaitos turinys
