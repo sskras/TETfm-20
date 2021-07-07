@@ -5589,6 +5589,7 @@ Cannot change large-receive-offload
 ```
 
 * Deja, išjungus GRO ir nusiuntus tas pačias užklausas, Snort elgesys nepasikeitė:
++
 ```
 osboxes@ldvm1:/usr/local/src$ grep 1000000 /var/log/snort/alert
 [**] [1:10000001:0] ICMP test [**]
@@ -5655,7 +5656,7 @@ ldvm1 login:
 telnet> Connection closed.
 ```
 
-* Pagaliau telnet srauto stebėjimas veikia!
+* Pagaliau _telnet_ srauto stebėjimas veikia!
 +
 ```
 osboxes@ldvm1:/usr/local/src$ tail -1f /var/log/snort/alert
@@ -5679,7 +5680,7 @@ Analizuoju atsiradusį įrašą. Jame rodoma:
 . abu TCP portai
 . ir didelė dalis likusios TCP (Layer 4) antraštės.
 
-* Tačiau tekstą `"root"` renkant ranka, po simbolį, Snort užklausos vis tiek neaptinka.  +
+- Tačiau tekstą `"root"` renkant ranka, po simbolį, Snort užklausos vis tiek neaptinka.  +
   Galimai reikia perkonfigūruoti preprocesorių `ftp_telnet` arba `ftp_telnet_protocol`, kad duomenys būtų imami iš jo tiesiogiai.  +
   Ar galbūt tiesiog panaudoti kitą sintaksę, skirtą priėjimui prie šio preprocesoriaus apdorotų duomenų tiesiogiai.
 
@@ -5770,8 +5771,8 @@ osboxes@ldvm1:/etc/snort$ sudo mv -v community-rules rules/
 renamed 'community-rules' -> 'rules/community-rules'
 ```
 
-* Instaliuoju papildomą įrankį `tree`:
-
+* Direktorijos struktūros supratimui instaliuoju papildomą įrankį `tree`:
++
 ```
 osboxes@ldvm1:/etc/snort$ sudo apt-get install tree
 Reading package lists... Done
@@ -5835,7 +5836,7 @@ osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | tail -2
 alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"INDICATOR-COMPROMISE Revil Kaseya ransomware log clearing http upload"; flow:to_server,established; file_data; content:"Server.CreateObject"; content:"KComWExec.execCmd"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy connectivity-ips drop, policy max-detect-ips drop, policy security-ips drop, ruleset community, service http; reference:url,doublepulsar.com/kaseya-supply-chain-attack-delivers-mass-ransomware-event-to-us-companies-76e4ec6ec64b; reference:url,www.huntress.com/blog/rapid-response-kaseya-vsa-mass-msp-ransomware-incident; classtype:web-application-attack; sid:57879; rev:2;)
 ```
 
-– Kiekviena taisyklė gana ilga, todėl kerpu ties 80 simb.:
+- Kiekviena taisyklė gana ilga, todėl kerpu ties 80 simb.:
 +
 ```
 osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | tail | cut -c 1-80
