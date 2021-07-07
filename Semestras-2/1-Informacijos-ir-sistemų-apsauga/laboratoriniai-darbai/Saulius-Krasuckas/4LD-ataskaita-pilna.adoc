@@ -5923,6 +5923,19 @@ rules/community-rules/snort.conf:  ASCII text, with very long lines
 
 #### 12. Skenavimas įgalinus bendruomenės taisykles
 
+* Pirmiausia įtariu, kad išarchyvuotosios taisyklės nebus savaime įtrauktos į Snort veikimą.
+
+* Ieškau `community.rules` faile `snort.conf`:
++
+```
+osboxes@ldvm1:/etc/snort$ grep -c community.rules snort.conf
+0
+osboxes@ldvm1:/etc/snort$ grep -ci community snort.conf
+0
+```
+
+* Faile nėra jokių nuorodų į šias taisykles.
+
 
 ### Snort taisyklės analizė
 
