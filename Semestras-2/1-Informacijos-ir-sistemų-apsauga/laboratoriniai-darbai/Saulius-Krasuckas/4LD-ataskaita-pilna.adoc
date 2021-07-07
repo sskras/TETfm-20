@@ -2078,6 +2078,31 @@ preprocessor reputation: \
 # For more information, see Snort Manual, Configuring Snort - Output Modules
 ```
 
+* Tai preprocesorius `reputation`.  Išjungiu jį:
++
+```
+root@ldvm1:~# fg
+nano /etc/snort/snort.conf
+
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano /etc/snort/snort.conf
+
+root@ldvm1:~# grep -C5 WHITE_LIST_PATH/ /etc/snort/snort.conf
+# 2021-07-07 saukrs: Užkomentuoju, nes neturiu "white_list.rules"
+#preprocessor reputation: \
+#   memcap 500, \
+#   priority whitelist, \
+#   nested_ip inner, \
+#   whitelist $WHITE_LIST_PATH/white_list.rules, \
+#   blacklist $BLACK_LIST_PATH/black_list.rules 
+
+###################################################
+# Step #6: Configure output plugins
+# For more information, see Snort Manual, Configuring Snort - Output Modules
+```
+
 
 ### Snort taisyklės analizė
 
