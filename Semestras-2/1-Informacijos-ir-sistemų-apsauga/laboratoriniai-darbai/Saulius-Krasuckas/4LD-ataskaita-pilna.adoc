@@ -2046,6 +2046,21 @@ ERROR: /etc/snort/snort.conf(512) => Unable to open address file /etc/snort/../r
 Fatal Error, Quitting..
 ```
 
+* Tikrinu nurodytą failą ir jo direktoriją:
++
+```
+root@ldvm1:~# grep white_list.rules /etc/snort/snort.conf
+   whitelist $WHITE_LIST_PATH/white_list.rules, \
+
+root@ldvm1:~# grep -w WHITE_LIST_PATH /etc/snort/snort.conf
+var WHITE_LIST_PATH ../rules
+   whitelist $WHITE_LIST_PATH/white_list.rules, \
+
+root@ldvm1:~# find /etc/snort -name white_list.rules
+root@ldvm1:~# find / -name white_list.rules
+find: ‘/run/user/1000/gvfs’: Permission denied
+```
+
 
 ### Snort taisyklės analizė
 
