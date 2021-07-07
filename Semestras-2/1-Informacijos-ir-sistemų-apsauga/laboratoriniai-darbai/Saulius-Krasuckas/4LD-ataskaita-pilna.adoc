@@ -4870,6 +4870,12 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
 [**] [1:10000001:0] ICMP test [**]
 ```
 
+* Sutraukiu taisyklę iki vienos raidės:
++
+```
+alert tcp any any -> any 23 (content: "r"; nocase; msg: "Telnet su raide <r>"; sid: 10000003;)
+```
+
 
 ### Snort taisyklės analizė
 
