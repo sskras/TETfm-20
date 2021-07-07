@@ -5713,6 +5713,25 @@ community-rules.tar 100%[===================>] 330.02K   252KB/s    in 1.3s
 
 * LD aprašo nuoroda netiksli, https://www.snort.org/downloads[susiradau] veikiančią.
 
+Išarchyvuoju taisykles:
+
+```
+osboxes@ldvm1:/usr/local/src$ pwd
+/usr/local/src
+
+osboxes@ldvm1:/usr/local/src$ cd /etc/snort
+
+osboxes@ldvm1:/etc/snort$ sudo tar zxvf /usr/local/src/community-rules.tar.gz
+community-rules/
+community-rules/community.rules
+community-rules/VRT-License.txt
+community-rules/LICENSE
+community-rules/AUTHORS
+community-rules/snort.conf
+community-rules/sid-msg.map
+osboxes@ldvm1:/etc/snort$ 
+```
+
 
 ### Snort taisyklės analizė
 
