@@ -2637,7 +2637,7 @@ telnet: Unable to connect to remote host: Connection refused
 
 * Akivaizdu, kad prisijungti nepavyko: _telnet_ paslauga instaliuota ne į jį.
 
-* Jungiuosi priešingai – **iš** kaimyno kompiuterį į savo virtualųjį:
+* Jungiuosi priešingai – **iš** kaimyno į savo virtualų kompiuterį:
 +
 ```
 osboxes@ldvm2:~$ telnet 192.168.10.14
@@ -2645,6 +2645,12 @@ Trying 192.168.10.14...
 Connected to 192.168.10.14.
 Escape character is '^]'.
 Ubuntu 20.04.2 LTS
+ldvm1 login: 
+```
+
+* Vedu vartotojo vardą `root`:
++
+```
 ldvm1 login: root
 Password: 
 
