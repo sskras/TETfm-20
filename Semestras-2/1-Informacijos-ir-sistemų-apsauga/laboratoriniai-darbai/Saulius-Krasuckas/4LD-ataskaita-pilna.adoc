@@ -1445,6 +1445,22 @@ Snort exiting
 Išsiųstos buvo dvi ICMP užklausos, iš viso surinkti keturi ICMP paketai.
 
 
+#### 6. Snort konfigūravimas
+
+Susipažįstu su konfigūracijos failo struktūra:
+
+```
+root@ldvm1:~# wc -l /etc/snort/snort.conf
+689 /etc/snort/snort.conf
+
+root@ldvm1:~# nano /etc/snort/snort.conf
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano /etc/snort/snort.conf
+```
+
+
 ### Snort taisyklės analizė
 
 
