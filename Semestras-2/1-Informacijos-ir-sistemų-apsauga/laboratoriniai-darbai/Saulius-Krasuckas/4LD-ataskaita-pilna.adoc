@@ -5414,6 +5414,29 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo cp -v /usr/local/src/snort-2.9.1
 '/usr/local/src/snort-2.9.18/etc/unicode.map' -> '/etc/snort/unicode.map'
 ```
 
+* Grąžinu savo pradinę konfigūraciją:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo -i
+root@ldvm1:~# 
+root@ldvm1:~# cat ~osboxes/debug/snort.conf.diff | patch /etc/snort/snort.conf
+patching file /etc/snort/snort.conf
+
+root@ldvm1:~# nano /etc/snort/rules/local.rules
+
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano /etc/snort/rules/local.rules
+
+root@ldvm1:~# cat /etc/snort/rules/local.rules
+ alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
+ alert tcp any any -> any 23 (content: "root"; nocase; msg: "Suspicious Telnet"; sid: 10000002;)
+ alert tcp any any -> any 23 (content: "r"; nocase; msg: "Telnet su raide <r>"; sid: 10000003;)
+ alert tcp any any -> any 23 (content: "o"; nocase; msg: "Telnet su raide <o>"; sid: 10000004;)
+ alert tcp any any -> any 23 (content: "t"; nocase; msg: "Telnet su raide <t>"; sid: 10000005;)
+```
+
 
 ### Snort taisyklės analizė
 
