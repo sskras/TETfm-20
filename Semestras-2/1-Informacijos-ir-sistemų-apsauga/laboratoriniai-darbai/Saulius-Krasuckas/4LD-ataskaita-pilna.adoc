@@ -4876,6 +4876,49 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
 alert tcp any any -> any 23 (content: "r"; nocase; msg: "Telnet su raide <r>"; sid: 10000003;)
 ```
 
+* Nurodau Snort atsinaujinti konfigūraciją:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo pkill -SIGHUP snort
+```
+  ...
+Rule application order: activation->dynamic->pass->drop->sdrop->reject->alert->log
+      Max Expected Streams: 768
+Verifying Preprocessor Configurations!
+WARNING: flowbits key 'smb.tree.create.llsrpc' is set but not ever checked.
+WARNING: flowbits key 'ms_sql_seen_dns' is checked but not ever set.
+33 out of 1024 flowbits in use.
+
+[ Port Based Pattern Matching Memory ]
++- [ Aho-Corasick Summary ] -------------------------------------
+| Storage Format    : Full-Q 
+| Finite Automaton  : DFA
+| Alphabet Size     : 256 Chars
+| Sizeof State      : Variable (1,2,4 bytes)
+| Instances         : 215
+|     1 byte states : 204
+|     2 byte states : 11
+|     4 byte states : 0
+| Characters        : 64987
+| States            : 32138
+| Transitions       : 872093
+| State Density     : 10.6%
+| Patterns          : 5057
+| Match States      : 3865
+| Memory (MB)       : 17.00
+|   Patterns        : 0.51
+|   Match Lists     : 1.02
+|   DFA
+|     1 byte states : 4.07
+|     2 byte states : 56.22
+|     4 byte states : 0.00
++----------------------------------------------------------------
+[ Number of patterns truncated to 20 bytes: 1039 ]
+Session Reload: Reference Count Non-zero for old configuration.
+
+        --== Reload Complete ==--
+```
+
 
 ### Snort taisyklės analizė
 
