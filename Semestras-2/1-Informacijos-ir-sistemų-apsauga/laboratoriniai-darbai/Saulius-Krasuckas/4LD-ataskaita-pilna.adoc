@@ -5912,6 +5912,9 @@ rules/community-rules/snort.conf:  ASCII text, with very long lines
   Taip pat detalizuoja 9 žingsnius, kuriuos reikėtų įvkdyti pritaikant konfigūraciją sau.
 
 
+#### 12. Skenavimas įgalinus bendruomenės taisykles
+
+
 ### Snort taisyklės analizė
 
 

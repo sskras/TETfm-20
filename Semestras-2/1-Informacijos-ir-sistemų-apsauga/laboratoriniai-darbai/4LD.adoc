@@ -302,7 +302,7 @@ wget http://snort.org/pub-bin/downloads.cgi/Download/comm_rules/Community-Rules-
  2+|
 
 
- 3+| +++<center>+++ *12. Skenavimas veikiant bendruomenės taisyklėms* +++</center>+++
+ 3+| +++<center>+++ *12. Skenavimas įgalinus bendruomenės taisykles* +++</center>+++
  
    | Esant veikiančiai Snort atakų atpažinimo sistemai skenuokite kaimyno kompiuterį:
 2+a|
