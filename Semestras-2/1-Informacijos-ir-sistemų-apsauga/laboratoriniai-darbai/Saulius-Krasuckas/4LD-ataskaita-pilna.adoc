@@ -1561,6 +1561,35 @@ root@ldvm1:~# cat /etc/snort/snort.conf | grep -c '^#include .RULE'
 
 - Iš viso užkomentavau 104 taisykles – daug.
 
+Tikrinu, ar užkomentuotas išvedimas į DB:
+
+```
+root@ldvm1:~# cat /etc/snort/snort.conf | grep -n database
+
+root@ldvm1:~# cat /etc/snort/snort.conf | grep -n output
+34:#  6) Configure output plugins
+515:# Step #6: Configure output plugins
+521:# output unified2: filename merged.log, limit 128, nostamp, mpls_event_types, vlan_event_types
+524:# output alert_unified2: filename snort.alert, limit 128, nostamp
+525:# output log_unified2: filename snort.log, limit 128, nostamp 
+528:# output alert_syslog: LOG_AUTH LOG_ALERT
+531:# output log_tcpdump: tcpdump.log
+
+root@ldvm1:~# cat /etc/snort/snort.conf | grep -n -w -e log -e mysql
+184:# Configure default log directory for snort to log to.  For more information see snort -h command line options (-l)
+201:config event_queue: max_queue 8 log 5 order_events content_length
+218:#   pkt-log
+225:#   rule-log alert
+521:# output unified2: filename merged.log, limit 128, nostamp, mpls_event_types, vlan_event_types
+525:# output log_unified2: filename snort.log, limit 128, nostamp 
+531:# output log_tcpdump: tcpdump.log
+591:#include $RULE_PATH/mysql.rules
+628:#include $RULE_PATH/server-mysql.rules
+```
+
+- Tokios eilutės net nerandu. Laikau, kad užkomentuota.
+
+
 
 ### Snort taisyklės analizė
 
