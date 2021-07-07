@@ -4999,6 +4999,19 @@ ldvm1 login:
 telnet> Connection closed.
 ```
 
+* Deja, šios _telnet_ užklausos Snort neaptiko:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000001:0] ICMP test [**]
+[**] [1:10000003:0] Telnet su raide <r> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+[**] [1:10000004:0] Telnet su raide <o> [**]
+[**] [1:10000005:0] Telnet su raide <t> [**]
+```
+
 
 ### Snort taisyklės analizė
 
