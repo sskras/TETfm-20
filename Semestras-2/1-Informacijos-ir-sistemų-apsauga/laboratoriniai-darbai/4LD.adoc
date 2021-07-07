@@ -191,7 +191,7 @@ nano /etc/snort/snort.conf
 
 * globalius kintamuosius,
 * naudojamus preprocesorius,
-* išvedimo įsiepius ir
+* išvedimo įskiepius ir
 * naudojamas taisykles
 
    | Redaguokite konfigūracinį failą:
