@@ -2946,6 +2946,37 @@ Jul 07 12:27:13 ldvm1 systemd[1]: snort.service: Succeeded.
 Jul 07 12:27:13 ldvm1 systemd[1]: Stopped LSB: Lightweight network intrusion detection system.
 ```
 
+* Palyginu Snort versijų skirtumą:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ snort -V 2>&1 | tee ~/debug/13.snort-iš-pkg.txt
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.7.0 GRE (Build 149) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ diff -u ~/debug/{12,13}*.txt
+--- "/home/osboxes/debug/12.snort-i\305\241-src.txt"    2021-07-07 12:10:10.174286960 +0300
++++ "/home/osboxes/debug/13.snort-i\305\241-pkg.txt"    2021-07-07 12:30:59.455117888 +0300
+@@ -1,8 +1,8 @@
+ 
+    ,,_     -*> Snort! <*-
+-  o"  )~   Version 2.9.18 GRE (Build 169) 
++  o"  )~   Version 2.9.7.0 GRE (Build 149) 
+    ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+-           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
++           Copyright (C) 2014 Cisco and/or its affiliates. All rights reserved.
+            Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+            Using libpcap version 1.9.1 (with TPACKET_V3)
+            Using PCRE version: 8.39 2016-06-14
+```
+
+
 ### Snort taisyklės analizė
 
 
