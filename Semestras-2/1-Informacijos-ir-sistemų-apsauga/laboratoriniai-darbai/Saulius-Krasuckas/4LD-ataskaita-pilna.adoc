@@ -1617,6 +1617,23 @@ alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
 root@ldvm1:~# 
 ```
 
+#### 8. ICMP užklausų atpažinimas
+
+Startuoju Snort paslaugą:
+
+```
+root@ldvm1:~# /usr/local/bin/snort -u snort -g snort -c /etc/snort/snort.conf
+Running in IDS mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Initializing Preprocessors!
+Initializing Plug-ins!
+Parsing Rules file "/etc/snort/snort.conf"
+ERROR: /etc/snort/snort.conf(48) Failed to parse the IP address: !$HOME_INET.
+Fatal Error, Quitting..
+```
+
 
 ### Snort taisyklės analizė
 
