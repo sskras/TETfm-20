@@ -6156,6 +6156,54 @@ image::https://user-images.githubusercontent.com/74717106/124834692-dc547180-df8
 
 Vietoj 2 taisyklių dabar turime 508.
 
+* Taip pat įjungiu ir vienuoliktame žingsnyje išjungtą `ftp_telnet_protocol` preprocesorių:
++
+```
+--- snort-2.9.18/etc/snort.conf 2021-06-08 12:23:20.000000000 +0300
++++ /etc/snort/snort.conf       2021-07-07 18:36:16.334477803 +0300
+@@ -336,10 +336,10 @@
+ 
+ # FTP / Telnet normalization and anomaly detection.  For more information, see README.ftptelnet
+ preprocessor ftp_telnet: global inspection_type stateful encrypted_traffic no check_encrypted
+-preprocessor ftp_telnet_protocol: telnet \
+-    ayt_attack_thresh 20 \
+-    normalize ports { 23 } \
+-    detect_anomalies
++# preprocessor ftp_telnet_protocol: telnet \
++#     ayt_attack_thresh 20 \
++#     normalize ports { 23 } \
++#     detect_anomalies
+ preprocessor ftp_telnet_protocol: ftp server default \
+     def_max_param_len 100 \
+     ports { 21 2100 3535 } \
+
+root@ldvm1:~# cat ~osboxes/debug/snort.dont-normalize-telnet.conf | patch -R /etc/snort/snort.conf
+patching file /etc/snort/snort.conf
+
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/16.Snort-selftest-ftp_telnet_protocol-enabled.txt | wc -l
+488
+
+root@ldvm1:~# diff -u ~osboxes/debug/{15,16}*.txt | colordiff | perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight
+  ...
+ FTPTelnet Config:
+     GLOBAL CONFIG
+       Inspection Type: stateful
+       Check for Encrypted Traffic: YES alert: NO
+       Continue to check encrypted data: YES
++    TELNET CONFIG:
++      Ports: 23 
++      Are You There Threshold: 20
++      Normalize: YES
++      Detect Anomalies: YES
+     FTP CONFIG:
+       FTP Server: default
+         Ports (PAF): 21 2100 3535 
+```
+
+image::https://user-images.githubusercontent.com/74717106/124835642-52a5a380-df8a-11eb-96fd-14a5f46ce555.png[]
+
+* `ftp_telnet_protocol` preprocesorius grąžintas.
+
 
 ### Snort taisyklės analizė
 
