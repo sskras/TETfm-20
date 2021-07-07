@@ -5599,6 +5599,9 @@ osboxes@ldvm1:/usr/local/src$ grep 1000000 /var/log/snort/alert
 [**] [1:10000005:0] Telnet su raide <t> [**]
 ```
 
+* Pradėjau tyrinėt `snort.conf` pagal tekstą "telnet".  +
+  Įtarimų sukėlė `ftp_telnet` preprocesorius.
+
 
 ### Snort taisyklės analizė
 
