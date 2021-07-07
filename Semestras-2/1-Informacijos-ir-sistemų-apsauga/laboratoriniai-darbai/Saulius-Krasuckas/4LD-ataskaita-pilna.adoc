@@ -2544,6 +2544,27 @@ PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.677/0.846/1.016/0.169 ms
 ```
 
+Stebiu, ar jos buvo atpažintos.
+
+```
+osboxes@ldvm1:~$ cat /var/log/snort/alert
+[**] [1:10000001:0] ICMP test [**]
+[Priority: 0] 
+07/07-10:00:37.250810 192.168.10.13 -> 192.168.10.14
+ICMP TTL:64 TOS:0x0 ID:12730 IpLen:20 DgmLen:84 DF
+Type:8  Code:0  ID:1   Seq:1  ECHO
+
+[**] [1:10000001:0] ICMP test [**]
+[Priority: 0] 
+07/07-10:00:38.251703 192.168.10.13 -> 192.168.10.14
+ICMP TTL:64 TOS:0x0 ID:12920 IpLen:20 DgmLen:84 DF
+Type:8  Code:0  ID:1   Seq:2  ECHO
+
+osboxes@ldvm1:~$ logout
+```
+
+Abi išsiųstos ICMP užklausos aptiktos ir atpažintos.
+
 
 ### Snort taisyklės analizė
 
