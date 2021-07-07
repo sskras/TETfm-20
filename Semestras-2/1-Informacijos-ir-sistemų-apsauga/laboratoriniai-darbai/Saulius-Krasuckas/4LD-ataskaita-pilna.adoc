@@ -2696,7 +2696,7 @@ DAQ version doesn't support tracing verdict reason.
 
 * Kyla įtarimas, kad nauja Snort versija nėra suderinama su sena DAQ biblioteka.
 
-* Pasižymiu Snort versiją ir darau `make uninstall`:
+* Pasižymiu Snort versiją, stabdau ją ir darau `make uninstall`:
 +
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ snort -V 2>&1 | tee ~/debug/12.snort-iš-src.txt
@@ -4830,6 +4830,35 @@ Set uid to 129
            Preprocessor Object: SF_DNS  Version 1.1  <Build 4>
            Preprocessor Object: SF_DCERPC2  Version 1.0  <Build 3>
 Commencing packet processing (pid=67857)
+```
+
+* Kartoju ICMP užklausą:
++
+```
+osboxes@ldvm2:~$ 
+osboxes@ldvm2:~$ ping -c1 192.168.10.14
+PING 192.168.10.14 (192.168.10.14) 56(84) bytes of data.
+64 bytes from 192.168.10.14: icmp_seq=1 ttl=64 time=0.557 ms
+
+--- 192.168.10.14 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.557/0.557/0.557/0.000 ms
+```
+
+* Kartoju _telnet_ užklausą:
++
+```
+osboxes@ldvm2:~$ telnet 192.168.10.14
+Trying 192.168.10.14...
+Connected to 192.168.10.14.
+Escape character is '^]'.
+Ubuntu 20.04.2 LTS
+ldvm1 login: root
+Password: 
+
+Login incorrect
+ldvm1 login: 
+telnet> Connection closed.
 ```
 
 
