@@ -145,7 +145,6 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 ```
-+
 ```
 osboxes@ldvm1:~$ route -n
 Kernel IP routing table
@@ -441,7 +440,7 @@ Command 'dnet-config' not found, but can be installed with:
 sudo apt install libdumbnet-dev
 ```
 
-* Išmet `libdnet` paketus:
+* Išmetu `libdnet` paketus:
 +
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo apt-get autoremove libdnet libdnet-dev 
@@ -676,7 +675,7 @@ update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) i
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
-* Vėl konfigūruoju kompiliatorių, šįkart be klaidų – tik perspėjimai :
+* Vėl konfigūruoju kompiliatorių, dar viena klaida:
 +
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --with-mysql --enable-dynamicplugin
@@ -746,6 +745,7 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i dynam
   --disable-dlclose        Only use if you are developing dynamic preprocessors or shared object rules.  Disable (--disable-dlclose) for testing valgrind leaks in dynamic libraries so a usable backtrace is reported.  Enabled by default.
 ```
 
+* Nieko panašaus `./configure` skriptas nesiūlo.
 * Turbūt pernelyg pasikeitė kodas versijoje 2.9.18.  Mėginu jų nebenaudoti.
 
 Konfigūruoju kompiliatorių:
@@ -903,16 +903,17 @@ Commencing packet processing (pid=49740)
 ```
 
 * Ir susiduriu kliūtim: Snort naudoja ne mano sukonfigūruotąją tinklo sąsają `enp0s8`.  +
-  Panašu, kad naudoja pirmą sąsją iš eilės, `enp0s3`, per kurią nėra jokio srauto.
+  Panašu, kad naudoja pirmą sąsają iš eilės, `enp0s3`, per kurią nėra jokio srauto.
 
-* Iškart kita kliūtis – Snort nereaguoja į `Ctrl-C` paspaudimus ir tęsią veikimą:
-
+* Iškart kita kliūtis – Snort nereaguoja į `Ctrl-C` paspaudimus ir tęsia veikimą:
++
 ```
 ^C
 ^C^C
 ```
-* Tuomet procesą tik pristabdau paspausdamas `Ctrl-Z` ir terminuoju su komanda `pkill`:
 
+* Tuomet procesą tik pristabdau paspausdamas `Ctrl-Z` ir terminuoju su komanda `pkill`:
++
 ```
 ^Z
 [1]+  Stopped                 snort -v > snort1
@@ -1481,7 +1482,7 @@ ipvar EXTERNAL_NET any
 ipvar DNS_SERVERS $HOME_NET
 ```
 
-- naudojamus preprocesorius:
+- į naudojamus preprocesorius:
 +
 ```
 ###################################################
@@ -2696,7 +2697,7 @@ checking for daq verdict reason... no
 DAQ version doesn't support tracing verdict reason.
 ```
 
-* Kyla įtarimas, kad nauja Snort versija nėra suderinama su sena DAQ biblioteka.
+* Kyla įtarimas, kad nauja Snort versija nėra pilnai suderinama su sena DAQ biblioteka.
 
 * Pasižymiu Snort versiją, stabdau ją ir darau `make uninstall`:
 +
@@ -4863,7 +4864,7 @@ ldvm1 login:
 telnet> Connection closed.
 ```
 
-* Deja, naujos _telnet_ užklausos Snort neaptiko, tik naują ICMP:
+* Deja, Snort neaptiko naujos _telnet_ užklausos, tik naują ICMP:
 +
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
@@ -5003,7 +5004,7 @@ ldvm1 login:
 telnet> Connection closed.
 ```
 
-* Deja, šios _telnet_ užklausos Snort neaptiko:
+* Deja, Snort šios _telnet_ užklausos neaptiko:
 +
 ```
 osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
@@ -5489,7 +5490,7 @@ Set uid to 1001
 Commencing packet processing (pid=103090)
 ```
 
-* Siunčiu kaimyno kompiuterio...
+* Siunčiu iš kaimyno kompiuterio...
 
 ** ICMP užklausą:
 +
@@ -5519,7 +5520,7 @@ ldvm1 login:
 telnet> Connection closed.
 ```
 
-** _telnet_ užklausą su visai keturiais simboliais kartu + slaptažodis = `"o"`:
+** _telnet_ užklausą su visais keturiais simboliais kartu + slaptažodis yra `"o"`:
 +
 ```
 osboxes@ldvm2:~$ telnet -l root 192.168.10.14
@@ -5558,7 +5559,7 @@ osboxes@ldvm1:/usr/local/src$ tar ztvf snort-2.9.18.tar.gz | awk '{$1=$2=$3=$6="
   "Large Receive Offload" (LRO) ir "Generic Receive Offload" (GRO) palaikymą.  +
   Kitaip dalis duomenų bus nukerpami.
 
-* Instaliuoju `ethtool`:
+** Instaliuoju `ethtool`:
 +
 ```
 root@ldvm1:~# apt-get install ethtool
@@ -5580,7 +5581,7 @@ Setting up ethtool (1:5.4-1) ...
 Processing triggers for man-db (2.9.1-1) ...
 ```
 
-* Keičiu nustatymus:
+** Keičiu nustatymus:
 +
 ```
 root@ldvm1:~# ethtool -K enp0s8 gro off
@@ -5588,7 +5589,7 @@ root@ldvm1:~# ethtool -K enp0s8 lro off
 Cannot change large-receive-offload
 ```
 
-* Deja, išjungus GRO ir nusiuntus tas pačias užklausas, Snort elgesys nepasikeitė:
+** Deja, išjungus GRO ir nusiuntus tas pačias užklausas, Snort elgesys nepasikeitė:
 +
 ```
 osboxes@ldvm1:/usr/local/src$ grep 1000000 /var/log/snort/alert
@@ -5899,7 +5900,7 @@ osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -v ^#
 alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"FILE-IDENTIFY RealNetworks Realplayer .ram playlist file download request"; flow:to_server,established; content:".ra"; fast_pattern:only; http_uri; pcre:"/\x2eram?([\?\x5c\x2f]|$)/smiU"; flowbits:set,file.realplayer.playlist; flowbits:noalert; metadata:policy max-detect-ips alert, ruleset community, service http; reference:url,en.wikipedia.org/wiki/.ram; classtype:misc-activity; sid:2419; rev:30;)
 ```
 
-- Dar direktorijoje randu pora failų:
+- Direktorijoje randu dar pora failų:
 +
 ```
 osboxes@ldvm1:/etc/snort$ ll rules/community-rules/*.{map,conf}
