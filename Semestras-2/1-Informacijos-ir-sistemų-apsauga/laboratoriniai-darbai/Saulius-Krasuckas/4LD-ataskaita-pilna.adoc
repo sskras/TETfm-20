@@ -2694,6 +2694,44 @@ checking for daq verdict reason... no
 DAQ version doesn't support tracing verdict reason.
 ```
 
+* Kyla įtarimas, kad nauja Snort versija nėra suderinama su sena DAQ biblioteka.
+
+* Pasižymiu Snort versiją ir darau `make uninstall`:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ snort -V 2>&1 | tee ~/debug/12.snort-iš-src.txt
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.18 GRE (Build 169) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo make uninstall
+[sudo] password for osboxes: 
+Making uninstall in src
+make[1]: Entering directory '/usr/local/src/snort-2.9.18/src'
+Making uninstall in sfutil
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/src/sfutil'
+make[2]: Nothing to be done for 'uninstall'.
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/src/sfutil'
+  ...
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools/u2boat'
+Making uninstall in u2spewfoo
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/tools/u2spewfoo'
+ ( cd '/usr/local/bin' && rm -f u2spewfoo )
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools/u2spewfoo'
+make[2]: Entering directory '/usr/local/src/snort-2.9.18/tools'
+make[2]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18/tools'
+make[1]: Entering directory '/usr/local/src/snort-2.9.18'
+ ( cd '/usr/local/share/man/man8' && rm -f snort.8 )
+ ( cd '/usr/local/lib/pkgconfig' && rm -f snort.pc )
+make[1]: Leaving directory '/usr/local/src/snort-2.9.18'
+```
 
 ### Snort taisyklės analizė
 
