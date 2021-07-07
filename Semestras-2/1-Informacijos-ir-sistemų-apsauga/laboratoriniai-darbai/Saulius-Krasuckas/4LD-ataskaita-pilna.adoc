@@ -1609,6 +1609,14 @@ Use "fg" to return to nano.
 [2]+  Stopped                 nano /etc/snort/rules/local.rules
 ```
 
+Parašau paprastą taisyklę, kuri praneša apie ICMP paketus, ir failą išsaugau:
+
+```
+root@ldvm1:~# cat /etc/snort/rules/local.rules
+alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
+root@ldvm1:~# 
+```
+
 
 ### Snort taisyklės analizė
 
