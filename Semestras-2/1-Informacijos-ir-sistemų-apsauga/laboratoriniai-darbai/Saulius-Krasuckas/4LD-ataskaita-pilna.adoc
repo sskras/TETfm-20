@@ -2566,6 +2566,47 @@ osboxes@ldvm1:~$ logout
 Abi išsiųstos ICMP užklausos aptiktos ir atpažintos.
 
 
+#### 9. _Telnet_ paruošimas
+
+Instaliuoju _telnet_ serverį:
+
+```
+root@ldvm1:~# apt-get install telnetd
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  openbsd-inetd tcpd
+The following NEW packages will be installed:
+  openbsd-inetd tcpd telnetd
+0 upgraded, 3 newly installed, 0 to remove and 154 not upgraded.
+Need to get 89.6 kB of archives.
+After this operation, 329 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 tcpd amd64 7.6.q-30 [24.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 openbsd-inetd amd64 0.20160825-4build1 [26.4 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 telnetd amd64 0.17-41.2build1 [38.8 kB]
+Fetched 89.6 kB in 1s (105 kB/s)
+Selecting previously unselected package tcpd.
+(Reading database ... 198223 files and directories currently installed.)
+Preparing to unpack .../tcpd_7.6.q-30_amd64.deb ...
+Unpacking tcpd (7.6.q-30) ...
+Selecting previously unselected package openbsd-inetd.
+Preparing to unpack .../openbsd-inetd_0.20160825-4build1_amd64.deb ...
+Unpacking openbsd-inetd (0.20160825-4build1) ...
+Selecting previously unselected package telnetd.
+Preparing to unpack .../telnetd_0.17-41.2build1_amd64.deb ...
+Unpacking telnetd (0.17-41.2build1) ...
+Setting up tcpd (7.6.q-30) ...
+Setting up openbsd-inetd (0.20160825-4build1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/inetd.service → /lib/systemd/system/inetd.service.
+Setting up telnetd (0.17-41.2build1) ...
+Adding user telnetd to group utmp
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.7) ...
+```
+
+
 ### Snort taisyklės analizė
 
 
