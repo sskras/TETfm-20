@@ -273,7 +273,7 @@ alert tcp any any -> 192.168.10.1x 23 (content: "root"; nocase; msg: "Suspicious
 
  3+| +++<center>+++ *10. _Telnet_ tikrinimas* +++</center>+++
 
-   | Junkitės _Telnet_ protokolu orie kaimyno kompiuterio:
+   | Junkitės _Telnet_ protokolu prie kaimyno kompiuterio:
 2+a|
 ```
 telnet 192.168.10.(1x-1)
