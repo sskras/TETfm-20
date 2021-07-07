@@ -4934,6 +4934,46 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ grep 1000000 /var/log/snort/alert
 [**] [1:10000005:0] Telnet su raide <t> [**]
 ```
 
+* Leidžiu `tcpdump` paketų gaudyklę ir kartoju _telnet_ užklausą:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ sudo tcpdump -tni enp0s8 -X -q dst host 192.168.10.14 and tcp port 23
+```
+
+* Su kiekvienu klavišo paspaudimu virtualus kompiuteris gauna po du paketus:
+
+** simboliui `"r"`:
++
+```
+IP 192.168.10.13.38356 > 192.168.10.14.23: tcp 1
+        0x0000:  4510 0035 5bdf 4000 4006 4968 c0a8 0a0d  E..5[.@.@.Ih....
+        0x0010:  c0a8 0a0e 95d4 0017 5080 9674 e054 41d4  ........P..t.TA.
+        0x0020:  8018 01f6 1865 0000 0101 080a 07a3 51cd  .....e........Q.
+        0x0030:  5919 035a 72                             Y..Zr
+IP 192.168.10.13.38356 > 192.168.10.14.23: tcp 0
+        0x0000:  4510 0034 5be0 4000 4006 4968 c0a8 0a0d  E..4[.@.@.Ih....
+        0x0010:  c0a8 0a0e 95d4 0017 5080 9675 e054 41d5  ........P..u.TA.
+        0x0020:  8010 01f6 74ce 0000 0101 080a 07a3 51cf  ....t.........Q.
+        0x0030:  5919 18f6                                Y...
+```
+
+** simboliui `"o"`:
++
+```
+IP 192.168.10.13.38356 > 192.168.10.14.23: tcp 1
+        0x0000:  4510 0035 5be1 4000 4006 4966 c0a8 0a0d  E..5[.@.@.If....
+        0x0010:  c0a8 0a0e 95d4 0017 5080 9675 e054 41d5  ........P..u.TA.
+        0x0020:  8018 01f6 f6c9 0000 0101 080a 07a3 60ca  ..............`.
+        0x0030:  5919 18f6 6f                             Y...o
+IP 192.168.10.13.38356 > 192.168.10.14.23: tcp 0
+        0x0000:  4510 0034 5be2 4000 4006 4966 c0a8 0a0d  E..4[.@.@.If....
+        0x0010:  c0a8 0a0e 95d4 0017 5080 9676 e054 41d6  ........P..v.TA.
+        0x0020:  8010 01f6 56d2 0000 0101 080a 07a3 60cb  ....V.........`.
+        0x0030:  5919 27f4                                Y.'.
+```
+
+* Matyti, kad perduodami simboliai yra poros pirmojo paketo gale.
+
 
 ### Snort taisyklės analizė
 
