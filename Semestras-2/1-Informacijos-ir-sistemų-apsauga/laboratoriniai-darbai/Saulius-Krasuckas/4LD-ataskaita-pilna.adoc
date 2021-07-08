@@ -6441,6 +6441,12 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sch
 
 * Nieko bendro su MySQL neradau.
 
+* Turiu vienintelį spėjimą pagal `"src/dynamic-preprocessors/appid/service_plugins/service_mysql.c"` failą:  +
+  galbūt MySQL palaikymui reikalingas įjungtas OpenAppID palaikymas.  +
+  O pastarąjį esu išjungęs kompiliatoriaus konfigūravimo fazėje.
+
+Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
+
 
 ### Snort taisyklės analizė
 
