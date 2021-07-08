@@ -6230,11 +6230,39 @@ Nmap done: 1 IP address (1 host up) scanned in 1.07 seconds
 osboxes@ldvm1:/etc/snort$ sudo sed -i 's/^# alert/alert/' rules/community-rules/community.rules
 osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -vc ^#
 3970
+osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
 ```
 
 * Taisyklių skaičius paaugo nuo 508 iki 3970.
 
 * Kartoju skenavimą su `nmap` – ir vėl jokio įrašo.
+
+* Ieškau internete ir perkonfigūruoju preprocesorių `sfportscan` pagal
+  https://stackoverflow.com/questions/52411580/how-to-use-snort-to-detect-nmap-default-syn-scan/52421369#52421369[How to Use Snort to detect NMAP default SYN scan?]
++
+```
+osboxes@ldvm1:/etc/snort$ sudo nano snort.conf
+
+
+Use "fg" to return to nano.
+
+[3]+  Stopped                 sudo nano snort.conf
+
+osboxes@ldvm1:/etc/snort$ diff -u snort.conf.v3 snort.conf | colordiff
+--- snort.conf.v3       2021-07-08 09:15:06.473158930 +0300
++++ snort.conf  2021-07-08 09:16:11.260650206 +0300
+@@ -415,7 +415,7 @@
+     xlink2state { enabled }
+ 
+ # Portscan detection.  For more information, see README.sfportscan
+-preprocessor sfportscan: proto  { all } memcap { 10000000 } sense_level { low }
++preprocessor sfportscan: proto  { all } memcap { 10000000 } sense_level { high } scan_type { all } include_midstream detect_ack_scans logfile { alert }
+ 
+ # ARP spoof detection.  For more information, see the Snort Manual - Configuring Snort - Preprocessors - ARP Spoof Preprocessor
+ # preprocessor arpspoof
+
+osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
+```
 
 
 ### Snort taisyklės analizė
