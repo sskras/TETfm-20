@@ -6281,6 +6281,15 @@ Port/Proto Count: 10
 Port/Proto Range: 25:8888
 ```
 
+Įrašas atsirado tik vienas. Jame matyti:
+
+- kad vykdomas TCP prievadų skenavimas;
+- kad skenuotojas tik vienas;
+- kad atlikti 10 TCP prisijungimų
+  (tikėtina, jog skenuota 10 portų, bet nebūtinai) – bendru atveju galimas ir vieno TCP porto skenavimas su keliais prisijungimais);
+- skenuotų TCP prievadų yra 10;
+- skenuotų TCP prievadų intervalas yra 25 – 8888.
+
 
 ### Snort taisyklės analizė
 
