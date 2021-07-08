@@ -581,6 +581,7 @@ Vėl klaida.  Atlieku analizę.  Išsprendimui reikia daug daugiau laiko.
 
 #### Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
 
+<<<
 
 [.text-right]
 ### Iškilę sunkumai ir pastebėti netikslumai
