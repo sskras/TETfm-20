@@ -6292,6 +6292,17 @@ Port/Proto Range: 25:8888
 - skenuotų TCP prievadų intervalas yra 25 – 8888.
 
 
+#### 13. MySQL konfigūravimas
+
+Konfigūruoju MySQL vartotoją:
+
+```
+osboxes@ldvm1:/etc/snort$ sudo mysqladmin -u root password mypass
+mysqladmin: [Warning] Using a password on the command line interface can be insecure.
+Warning: Since password will be sent to server in plain text, use ssl connection to ensure password safety.
+```
+
+
 ### Snort taisyklės analizė
 
 
