@@ -551,92 +551,20 @@ Konfigūruoju MySQL vartotoją:
 
 Sukuriu duomenų bazę:
 
-Sprendžių sunkumą su neveikiančia mysql komanda.
+Sprendžiu sunkumą su neveikiančia mysql komanda.
 
 Įeinu į MyQSL komandinį režimą:
 
-```
-osboxes@ldvm1:/etc/snort$ sudo mysql -u root -p
-Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 16
-Server version: 8.0.25-0ubuntu0.20.04.1 (Ubuntu)
-
-Copyright (c) 2000, 2021, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql> 
-```
-
 Jame sukuriu duomenų bazę:
 
-```
-mysql> create database snort;
-Query OK, 1 row affected (0.26 sec)
-
-mysql> 
-```
-
 Kuriu vartotoją su teisėmis:
-+
-```
-mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost;
-ERROR 1410 (42000): You are not allowed to create a user with GRANT
-
-mysql> 
-```
-
-* Gaunu vartotojo kūrimo klaidą.  Turbūt gerokai naujesnė MySQL versija / pasenęs LD aprašas.
-
-* Kuriu pagal https://askubuntu.com/questions/1322175/not-allowed-to-create-user-with-grant/1322177#1322177[https://askubuntu.com/a/1322177/833343]:
-+
-```
-mysql> CREATE USER snort@localhost;
-Query OK, 0 rows affected (0.74 sec)
-
-mysql> 
-```
-
-* Suteikiu teises atskirai po sukūrimo:
-+
-```
-mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost;
-Query OK, 0 rows affected (0.09 sec)
-
-mysql> 
-```
 
 Nustatau slaptažodį duomenų bazei:
 
-```
-mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PASSWORD('mypass')' at line 1
-mysql> 
-```
-
-* Ir vėl neatitikimas. Įtariu tą patį LD aprašo pasenimą.
-
-* Sprendžiu pagal https://stackoverflow.com/questions/36099028/error-1064-42000-you-have-an-error-in-your-sql-syntax-want-to-configure-a-pa/57718773#57718773[https://stackoverflow.com/a/57718773/1025073]:
-+
-```
-mysql> ALTER USER snort@localhost IDENTIFIED WITH mysql_native_password BY 'mypass';
-Query OK, 0 rows affected (0.17 sec)
-
-mysql> 
-```
+Sprendžiu sunkumą su neveikiančia mysql komanda.
 
 Išeinu iš MySQL komandinio režimo:
 
-```
-mysql> exit
-Bye
-osboxes@ldvm1:/etc/snort$ 
-```
 
 #### 14. Snort DB importavimas
 
@@ -5904,4 +5832,22 @@ ERROR 1049 (42000): Unknown database 'mypass'
   (Uždraudė slaptažodžių pateikimą per CLI kaip nesaugų)
 * Pašalinsiu slaptažodį iš komandinės eilutės.
 
+```
+mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PASSWORD('mypass')' at line 1
+mysql> 
+```
+
+* Ir vėl neatitikimas. Įtariu tą patį LD aprašo pasenimą.
+
+* Sprendžiu pagal https://stackoverflow.com/questions/36099028/error-1064-42000-you-have-an-error-in-your-sql-syntax-want-to-configure-a-pa/57718773#57718773[https://stackoverflow.com/a/57718773/1025073]:
++
+```
+mysql> ALTER USER snort@localhost IDENTIFIED WITH mysql_native_password BY 'mypass';
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> 
+```
+
 #### 14. Snort DB importavimas
+
