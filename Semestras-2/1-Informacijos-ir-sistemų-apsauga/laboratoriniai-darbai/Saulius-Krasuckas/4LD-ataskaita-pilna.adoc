@@ -6359,6 +6359,17 @@ ERROR 1410 (42000): You are not allowed to create a user with GRANT
 mysql> 
 ```
 
+* Gaunu vartotojo kūrimo klaidą.  Turbūt gerokai naujesnė MySQL versija / pasenęs LD aprašas.
+
+* Kuriu pagal https://askubuntu.com/questions/1322175/not-allowed-to-create-user-with-grant/1322177#1322177[https://askubuntu.com/a/1322177/833343]:
++
+```
+mysql> CREATE USER snort@localhost;
+Query OK, 0 rows affected (0.74 sec)
+
+mysql> 
+```
+
 
 ### Snort taisyklės analizė
 
