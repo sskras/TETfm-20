@@ -6350,6 +6350,16 @@ Query OK, 1 row affected (0.26 sec)
 mysql> 
 ```
 
+Kuriu vartotoją su teisėmis:
++
+```
+mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost;
+ERROR 1410 (42000): You are not allowed to create a user with GRANT
+
+mysql> 
+```
+
+
 ### Snort taisyklės analizė
 
 
