@@ -6341,7 +6341,14 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql> 
 ```
 
+Jame sukuriu duomenų bazę:
 
+```
+mysql> create database snort;
+Query OK, 1 row affected (0.26 sec)
+
+mysql> 
+```
 
 ### Snort taisyklės analizė
 
