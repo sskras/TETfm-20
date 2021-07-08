@@ -349,7 +349,13 @@ Analizuoju atsiradusį įrašą. Jame rodoma:
 19:25:09
 ```
 
-* Dėl to baigiu aiškinimąsi ir palieku tai netikslaus 4LD aprašo sąžinei.
+* Dėl to baigiu šio žingsnio aiškinimąsi ir palieku tai netikslaus 4LD aprašo sąžinei.
+
+Galiausiai lieka neaišku:
+
+- ar taip ir turėjo būti,
+- ar `ftp_telnet*` preprocesorius veikia klaidingai,
+- ar jam visgi trūko sukonfigūravimo.
 
 
 #### 11. Bendruomenės taisyklės
