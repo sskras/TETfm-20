@@ -47,7 +47,7 @@ VILNIUS, 2021
 
 ### Darbo Tikslas
 
-- [ ] Parengti ir išbandyti _Snort 2.9.18_ atakų atpažinimo sistemą.
+- [x] Parengti ir išbandyti _Snort 2.9.18_ atakų atpažinimo sistemą.
 
 :SNORT2-GUIDE-AWS-URL: https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf
 
@@ -6495,6 +6495,19 @@ osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sch
 Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
 
 
-### Snort taisyklės analizė
+### Iškilę sunkumai ir pastebėti netikslumai
 
-
+#### 1. Tinklo paruošimas
+#### 2. Snort instaliavimas
+#### 3. Konfigūracijos ir žurnalo direktorijos
+#### 4. Pradinis stebėjimas
+#### 5. Paketų rinkimo režimas
+#### 6. Snort konfigūravimas
+#### 7. Taisyklių vieta
+#### 8. ICMP užklausų atpažinimas
+#### 9. _Telnet_ paruošimas
+#### 10. _Telnet_ tikrinimas
+#### 11. Bendruomenės taisyklės
+#### 12. Skenavimas įgalinus bendruomenės taisykles
+#### 13. MySQL konfigūravimas
+#### 14. Snort DB importavimas
