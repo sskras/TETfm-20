@@ -6222,6 +6222,20 @@ MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 1.07 seconds
 ```
 
+* Deja, jokio įrašo `alert` loge Snort nesukuria
+
+* Atkomentuoju užkomentuotas `community.rules` taisykles:
++
+```
+osboxes@ldvm1:/etc/snort$ sudo sed -i 's/^# alert/alert/' rules/community-rules/community.rules
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -vc ^#
+3970
+```
+
+* Taisyklių skaičius paaugo nuo 508 iki 3970.
+
+* Kartoju skenavimą su `nmap` – ir vėl jokio įrašo.
+
 
 ### Snort taisyklės analizė
 
