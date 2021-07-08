@@ -6370,6 +6370,15 @@ Query OK, 0 rows affected (0.74 sec)
 mysql> 
 ```
 
+* Suteikiu teises atskirai po sukūrimo:
++
+```
+mysql> grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> 
+```
+
 
 ### Snort taisyklės analizė
 
