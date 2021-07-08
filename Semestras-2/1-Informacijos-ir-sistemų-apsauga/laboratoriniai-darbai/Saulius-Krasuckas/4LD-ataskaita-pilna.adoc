@@ -6415,6 +6415,22 @@ osboxes@ldvm1:/etc/snort$ cd /usr/local/src/snort-2.9.18/schemas
 -bash: cd: /usr/local/src/snort-2.9.18/schemas: No such file or directory
 ```
 
+* Tokios direktorijos nėra.
+
+* Ieškau susijusių pavadinimų:
++
+```
+osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*schem*'
+
+osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*sql*'
+/usr/local/src/snort-2.9.18/src/dynamic-preprocessors/appid/service_plugins/service_mysql.h
+/usr/local/src/snort-2.9.18/src/dynamic-preprocessors/appid/service_plugins/service_mysql.c
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.c
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.lo
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.o
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/.libs/misc_mysql_com_table_dump.o
+```
+
 
 ### Snort taisyklės analizė
 
