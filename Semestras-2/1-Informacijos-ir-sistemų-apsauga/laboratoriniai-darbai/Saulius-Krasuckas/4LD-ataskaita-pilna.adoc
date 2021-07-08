@@ -6387,6 +6387,16 @@ ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that 
 mysql> 
 ```
 
+* Ir vėl neatitikimas. Įtariu tą patį LD aprašo pasenimą.
+
+* Sprendžiu pagal https://stackoverflow.com/questions/36099028/error-1064-42000-you-have-an-error-in-your-sql-syntax-want-to-configure-a-pa/57718773#57718773[https://stackoverflow.com/a/57718773/1025073]:
++
+```
+mysql> ALTER USER snort@localhost IDENTIFIED WITH mysql_native_password BY 'mypass';
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> 
+```
 
 ### Snort taisyklės analizė
 
