@@ -45,12 +45,14 @@ VILNIUS, 2021
 
 <<<
 
+[.text-right]
 ### Darbo Tikslas
 
 - [x] Parengti ir išbandyti _Snort 2.9.18_ atakų atpažinimo sistemą.
 
 :SNORT2-GUIDE-AWS-URL: https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf
 
+[.text-right]
 ### Trumpas atlikto darbo aptarimas
 
 
@@ -579,6 +581,7 @@ Vėl klaida.  Atlieku analizę.  Išsprendimui reikia daug daugiau laiko.
 Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
 
 
+[.text-right]
 ### Iškilę sunkumai ir pastebėti netikslumai
 
 #### 1. Tinklo paruošimas
