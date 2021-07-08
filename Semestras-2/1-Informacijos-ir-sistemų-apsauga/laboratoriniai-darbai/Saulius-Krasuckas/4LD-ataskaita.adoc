@@ -549,30 +549,9 @@ Port/Proto Range: 25:8888
 
 Konfigūruoju MySQL vartotoją:
 
-```
-osboxes@ldvm1:/etc/snort$ sudo mysqladmin -u root password mypass
-mysqladmin: [Warning] Using a password on the command line interface can be insecure.
-Warning: Since password will be sent to server in plain text, use ssl connection to ensure password safety.
-```
-
 Sukuriu duomenų bazę:
 
-* įeinu į MySQL komandinį režimą:
-
-```
-osboxes@ldvm1:/etc/snort$ sudo mysql -u root -p mypass
-Enter password: 
-ERROR 1049 (42000): Unknown database 'mypass'
-```
-
-* Iškart kliūtis:
-
-** `mysql` ignoruoja CLI slaptažodį;
-** `mysql` neranda DB `"mypass"`.
-
-* Manau, kad LD aprašas pasenęs ir CLI pasikeitė.
-  (Uždraudė slaptažodžių pateikimą per CLI kaip nesaugų)
-* Pašalinsiu slaptažodį iš komandinės eilutės.
+Sprendžių sunkumą su neveikiančia mysql komanda.
 
 Įeinu į MyQSL komandinį režimą:
 
@@ -5907,4 +5886,22 @@ osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
 * Vėl skenuoju su ta pačia `nmap` komanda.
 
 #### 13. MySQL konfigūravimas
+
+* įeinu į MySQL komandinį režimą:
+
+```
+osboxes@ldvm1:/etc/snort$ sudo mysql -u root -p mypass
+Enter password: 
+ERROR 1049 (42000): Unknown database 'mypass'
+```
+
+* Iškart kliūtis:
+
+** `mysql` ignoruoja CLI slaptažodį;
+** `mysql` neranda DB `"mypass"`.
+
+* Manau, kad LD aprašas pasenęs ir CLI pasikeitė.
+  (Uždraudė slaptažodžių pateikimą per CLI kaip nesaugų)
+* Pašalinsiu slaptažodį iš komandinės eilutės.
+
 #### 14. Snort DB importavimas
