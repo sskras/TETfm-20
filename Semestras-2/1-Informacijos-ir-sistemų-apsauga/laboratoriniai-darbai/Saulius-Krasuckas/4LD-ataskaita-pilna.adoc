@@ -6204,6 +6204,24 @@ image::https://user-images.githubusercontent.com/74717106/124835642-52a5a380-df8
 
 * `ftp_telnet_protocol` preprocesorius grąžintas.
 
+Vykdau skenavimą iš kaimyno kompiuterio:
+
+```
+osboxes@ldvm2:~$ sudo nmap -sS -P0 -n -F 192.168.10.14
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-07-08 01:36 EEST
+Nmap scan report for 192.168.10.14
+Host is up (0.0014s latency).
+Not shown: 96 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.07 seconds
+```
+
 
 ### Snort taisyklės analizė
 
