@@ -496,236 +496,7 @@ rules/community-rules/snort.conf:  ASCII text, with very long lines
 
 #### 12. Skenavimas įgalinus bendruomenės taisykles
 
-* Pirmiausia įtariu, kad išarchyvuotosios taisyklės nebus savaime įtrauktos į Snort veikimą.
-
-* Ieškau `community.rules` faile `snort.conf`:
-+
-```
-osboxes@ldvm1:/etc/snort$ grep -c community.rules snort.conf
-0
-osboxes@ldvm1:/etc/snort$ grep -ci community snort.conf
-0
-```
-
-* Faile nėra jokių nuorodų į šias taisykles.
-
-* Išsisaugau Snort _Self-test_ išvestį prieš bendruomenės taisyklių įtraukimą:
-+
-```
-root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/14.Snort-selftest-local.rules-only.txt | wc -l
-446
-```
-
-* Įtraukiu taisykles rankomis, remdamasis https://upcloud.com/community/tutorials/install-snort-ubuntu/[pavyzdžiu]:
-+
-```
-osboxes@ldvm1:/etc/snort$ diff -u snort.conf.v2 snort.conf | colordiff
---- snort.conf.v2       2021-07-07 18:39:36.620734396 +0300
-+++ snort.conf  2021-07-08 00:28:41.882814390 +0300
-@@ -545,6 +545,8 @@
- 
- # site specific rules
- include $RULE_PATH/local.rules
-+# community rules
-+include $RULE_PATH/community-rules/community.rules
- 
- #include $RULE_PATH/app-detect.rules
- #include $RULE_PATH/attack-responses.rules
-```
-
-* Išsisaugau Snort _Self-test_ išvestį _po_ bendruomenės taisyklių įtraukimo:
-+
-```
-root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/15.Snort-selftest-+-community.rules.txt | wc -l
-483
-```
-
-* Palyginu abi Snorto _Self-test_ išvestis po eilutę:
-+
-```
-root@ldvm1:~# diff -u ~osboxes/debug/{14,15}*.txt
---- /home/osboxes/debug/14.Snort-selftest-local.rules-only.txt  2021-07-08 00:44:03.473876602 +0300
-+++ /home/osboxes/debug/15.Snort-selftest-+-community.rules.txt 2021-07-08 00:44:16.696176899 +0300
-@@ -172,7 +172,7 @@
-     alert_large_fragments: INACTIVE
-     alert_incomplete: INACTIVE
-     alert_multiple_requests: INACTIVE
--MaxRss at the end of static preproc config:27200
-+MaxRss at the end of static preproc config:27168
- FTPTelnet Config:
-     GLOBAL CONFIG
-       Inspection Type: stateful
-@@ -336,30 +336,29 @@
-     Check Link-Layer CRCs: ENABLED
-     Ports:
-        20000
--MaxRss at the end of dynamic preproc config:30956
-+MaxRss at the end of dynamic preproc config:30916
- 
- +++++++++++++++++++++++++++++++++++++++++++++++++++
- Initializing rule chains...
--2 Snort rules read
--    2 detection rules
-+508 Snort rules read
-+    508 detection rules
-     0 decoder rules
-     0 preprocessor rules
--2 Option Chains linked into 2 Chain Headers
-+508 Option Chains linked into 49 Chain Headers
- +++++++++++++++++++++++++++++++++++++++++++++++++++
- 
- +-------------------[Rule Port Counts]---------------------------------------
- |             tcp     udp    icmp      ip
--|     src       0       0       0       0
--|     dst       1       0       0       0
--|     any       0       0       1       0
-+|     src     117       2       0       0
-+|     dst     357       7       0       0
-+|     any      25       0       1       0
- |      nc       0       0       1       0
--|     s+d       0       0       0       0
-+|     s+d       0       1       0       0
- +----------------------------------------------------------------------------
- 
- +-----------------------[detection-filter-config]------------------------------
- | memory-cap : 1048576 bytes
- +-----------------------[detection-filter-rules]-------------------------------
--| none
- -------------------------------------------------------------------------------
- 
- +-----------------------[rate-filter-config]-----------------------------------
-@@ -378,8 +377,46 @@
- -------------------------------------------------------------------------------
- Rule application order: pass->drop->sdrop->reject->alert->log
- Verifying Preprocessor Configurations!
-+WARNING: flowbits key 'file.exploit_kit.pe' is set but not ever checked.
-+WARNING: flowbits key 'file.oless.v4' is set but not ever checked.
-+WARNING: flowbits key 'acunetix-scan' is set but not ever checked.
-+WARNING: flowbits key 'file.smi' is set but not ever checked.
-+WARNING: flowbits key 'file.xm' is set but not ever checked.
-+WARNING: flowbits key 'smb.trans2.findfirst2' is set but not ever checked.
-+WARNING: flowbits key 'file.exploit_kit.flash' is set but not ever checked.
-+WARNING: flowbits key 'ttyprompt' is set but not ever checked.
-+WARNING: flowbits key 'file.dmg' is set but not ever checked.
-+WARNING: flowbits key 'file.png' is set but not ever checked.
-+WARNING: flowbits key 'smb.trans2.mid66' is set but not ever checked.
-+WARNING: flowbits key 'file.xul' is set but not ever checked.
-+WARNING: flowbits key 'smb.trans2.fileinfo' is set but not ever checked.
-+WARNING: flowbits key 'file.fpx' is set but not ever checked.
-+WARNING: flowbits key 'file.jar.agent_helper' is set but not ever checked.
-+WARNING: flowbits key 'smb.trans2.mid65' is set but not ever checked.
-+WARNING: flowbits key 'file.exploit_kit.pdf' is set but not ever checked.
-+WARNING: flowbits key 'file.emf' is set but not ever checked.
-+WARNING: flowbits key 'file.xlsb' is set but not ever checked.
-+WARNING: flowbits key 'file.pdf' is set but not ever checked.
-+WARNING: flowbits key 'file.zip.winrar.spoof' is set but not ever checked.
-+WARNING: flowbits key 'file.rmp' is set but not ever checked.
-+WARNING: flowbits key 'hawk.lgr' is set but not ever checked.
-+WARNING: flowbits key 'file.realplayer.playlist' is set but not ever checked.
-+WARNING: flowbits key 'file.rtf.embed' is set but not ever checked.
-+WARNING: flowbits key 'file.jpeg' is set but not ever checked.
-+WARNING: flowbits key 'file.bmp' is set but not ever checked.
-+WARNING: flowbits key 'file.exploit_kit.silverlight' is set but not ever checked.
-+WARNING: flowbits key 'smb.trans2.get_dfs_referral' is set but not ever checked.
-+WARNING: flowbits key 'file.xml' is set but not ever checked.
-+WARNING: flowbits key 'file.doc' is set but not ever checked.
-+WARNING: flowbits key 'smb.trans2' is set but not ever checked.
-+WARNING: flowbits key 'backdoor.y3krat_15.client.response' is set but not ever checked.
-+WARNING: flowbits key 'file.exploit_kit.jar' is set but not ever checked.
-+WARNING: flowbits key 'file.ani' is set but not ever checked.
-+WARNING: flowbits key 'smb.null_session' is set but not ever checked.
-+WARNING: flowbits key 'file.wmf' is set but not ever checked.
-+45 out of 1024 flowbits in use.
- 
--MaxRss at the end of rules:45276
-+MaxRss at the end of rules:48340
- 
- [ Port Based Pattern Matching Memory ]
- +- [ Aho-Corasick Summary ] -------------------------------------
-@@ -387,27 +424,27 @@
- | Finite Automaton  : DFA
- | Alphabet Size     : 256 Chars
- | Sizeof State      : Variable (1,2,4 bytes)
--| Instances         : 1
--|     1 byte states : 1
--|     2 byte states : 0
-+| Instances         : 35
-+|     1 byte states : 30
-+|     2 byte states : 5
- |     4 byte states : 0
--| Characters        : 4
--| States            : 5
--| Transitions       : 8
--| State Density     : 0.6%
--| Patterns          : 1
--| Match States      : 1
--| Memory (KB)       : 10.68
--|   Pattern         : 0.09
--|   Match Lists     : 0.12
-+| Characters        : 6712
-+| States            : 5382
-+| Transitions       : 94214
-+| State Density     : 6.8%
-+| Patterns          : 523
-+| Match States      : 499
-+| Memory (MB)       : 2.62
-+|   Patterns        : 0.05
-+|   Match Lists     : 0.10
- |   DFA
--|     1 byte states : 1.30
--|     2 byte states : 0.00
-+|     1 byte states : 0.28
-+|     2 byte states : 2.14
- |     4 byte states : 0.00
- +----------------------------------------------------------------
--[ Number of patterns truncated to 20 bytes: 0 ]
-+[ Number of patterns truncated to 20 bytes: 9 ]
- 
--MaxRss at the end of detection rules:45276
-+MaxRss at the end of detection rules:54988
- pcap DAQ configured to passive.
- Acquiring network traffic from "enp0s8".
- Set gid to 1001
-@@ -441,6 +478,6 @@
-            Preprocessor Object: SF_DNS  Version 1.1  <Build 4>
-            Preprocessor Object: SF_DCERPC2  Version 1.0  <Build 3>
- 
--Total snort Fixed Memory Cost - MaxRss:45672
-+Total snort Fixed Memory Cost - MaxRss:54988
- Snort successfully validated the configuration!
- Snort exiting
-```
-
-Snorto _Self-test_ išvedimas pasikeitė taip (atmetus smulkmenas):
-
-```
- +++++++++++++++++++++++++++++++++++++++++++++++++++
- Initializing rule chains...
--2 Snort rules read
--    2 detection rules
-+508 Snort rules read
-+    508 detection rules
-     0 decoder rules
-     0 preprocessor rules
--2 Option Chains linked into 2 Chain Headers
-+508 Option Chains linked into 49 Chain Headers
- +++++++++++++++++++++++++++++++++++++++++++++++++++
- 
- +-------------------[Rule Port Counts]---------------------------------------
- |             tcp     udp    icmp      ip
--|     src       0       0       0       0
--|     dst       1       0       0       0
--|     any       0       0       1       0
-+|     src     117       2       0       0
-+|     dst     357       7       0       0
-+|     any      25       0       1       0
- |      nc       0       0       1       0
--|     s+d       0       0       0       0
-+|     s+d       0       1       0       0
- +----------------------------------------------------------------------------
-```
-
-image::https://user-images.githubusercontent.com/74717106/124834692-dc547180-df88-11eb-8ca3-cac1c4bf446a.png[]
+Visų pirma įtraukiu taisykles į konfiguraciją (apraše neradau tokio žingsnio).
 
 Vietoj 2 taisyklių dabar turime 508.
 
@@ -5901,5 +5672,237 @@ Processing triggers for man-db (2.9.1-1) ...
 ```
 
 #### 12. Skenavimas įgalinus bendruomenės taisykles
+
+* Pirmiausia įtariu, kad išarchyvuotosios taisyklės nebus savaime įtrauktos į Snort veikimą.
+
+* Ieškau `community.rules` faile `snort.conf`:
++
+```
+osboxes@ldvm1:/etc/snort$ grep -c community.rules snort.conf
+0
+osboxes@ldvm1:/etc/snort$ grep -ci community snort.conf
+0
+```
+
+* Faile nėra jokių nuorodų į šias taisykles.
+
+* Išsisaugau Snort _Self-test_ išvestį prieš bendruomenės taisyklių įtraukimą:
++
+```
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/14.Snort-selftest-local.rules-only.txt | wc -l
+446
+```
+
+* Įtraukiu taisykles rankomis, remdamasis https://upcloud.com/community/tutorials/install-snort-ubuntu/[pavyzdžiu]:
++
+```
+osboxes@ldvm1:/etc/snort$ diff -u snort.conf.v2 snort.conf | colordiff
+--- snort.conf.v2       2021-07-07 18:39:36.620734396 +0300
++++ snort.conf  2021-07-08 00:28:41.882814390 +0300
+@@ -545,6 +545,8 @@
+ 
+ # site specific rules
+ include $RULE_PATH/local.rules
++# community rules
++include $RULE_PATH/community-rules/community.rules
+ 
+ #include $RULE_PATH/app-detect.rules
+ #include $RULE_PATH/attack-responses.rules
+```
+
+* Išsisaugau Snort _Self-test_ išvestį _po_ bendruomenės taisyklių įtraukimo:
++
+```
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/15.Snort-selftest-+-community.rules.txt | wc -l
+483
+```
+
+* Palyginu abi Snorto _Self-test_ išvestis po eilutę:
++
+```
+root@ldvm1:~# diff -u ~osboxes/debug/{14,15}*.txt
+--- /home/osboxes/debug/14.Snort-selftest-local.rules-only.txt  2021-07-08 00:44:03.473876602 +0300
++++ /home/osboxes/debug/15.Snort-selftest-+-community.rules.txt 2021-07-08 00:44:16.696176899 +0300
+@@ -172,7 +172,7 @@
+     alert_large_fragments: INACTIVE
+     alert_incomplete: INACTIVE
+     alert_multiple_requests: INACTIVE
+-MaxRss at the end of static preproc config:27200
++MaxRss at the end of static preproc config:27168
+ FTPTelnet Config:
+     GLOBAL CONFIG
+       Inspection Type: stateful
+@@ -336,30 +336,29 @@
+     Check Link-Layer CRCs: ENABLED
+     Ports:
+        20000
+-MaxRss at the end of dynamic preproc config:30956
++MaxRss at the end of dynamic preproc config:30916
+ 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++
+ Initializing rule chains...
+-2 Snort rules read
+-    2 detection rules
++508 Snort rules read
++    508 detection rules
+     0 decoder rules
+     0 preprocessor rules
+-2 Option Chains linked into 2 Chain Headers
++508 Option Chains linked into 49 Chain Headers
+ +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ +-------------------[Rule Port Counts]---------------------------------------
+ |             tcp     udp    icmp      ip
+-|     src       0       0       0       0
+-|     dst       1       0       0       0
+-|     any       0       0       1       0
++|     src     117       2       0       0
++|     dst     357       7       0       0
++|     any      25       0       1       0
+ |      nc       0       0       1       0
+-|     s+d       0       0       0       0
++|     s+d       0       1       0       0
+ +----------------------------------------------------------------------------
+ 
+ +-----------------------[detection-filter-config]------------------------------
+ | memory-cap : 1048576 bytes
+ +-----------------------[detection-filter-rules]-------------------------------
+-| none
+ -------------------------------------------------------------------------------
+ 
+ +-----------------------[rate-filter-config]-----------------------------------
+@@ -378,8 +377,46 @@
+ -------------------------------------------------------------------------------
+ Rule application order: pass->drop->sdrop->reject->alert->log
+ Verifying Preprocessor Configurations!
++WARNING: flowbits key 'file.exploit_kit.pe' is set but not ever checked.
++WARNING: flowbits key 'file.oless.v4' is set but not ever checked.
++WARNING: flowbits key 'acunetix-scan' is set but not ever checked.
++WARNING: flowbits key 'file.smi' is set but not ever checked.
++WARNING: flowbits key 'file.xm' is set but not ever checked.
++WARNING: flowbits key 'smb.trans2.findfirst2' is set but not ever checked.
++WARNING: flowbits key 'file.exploit_kit.flash' is set but not ever checked.
++WARNING: flowbits key 'ttyprompt' is set but not ever checked.
++WARNING: flowbits key 'file.dmg' is set but not ever checked.
++WARNING: flowbits key 'file.png' is set but not ever checked.
++WARNING: flowbits key 'smb.trans2.mid66' is set but not ever checked.
++WARNING: flowbits key 'file.xul' is set but not ever checked.
++WARNING: flowbits key 'smb.trans2.fileinfo' is set but not ever checked.
++WARNING: flowbits key 'file.fpx' is set but not ever checked.
++WARNING: flowbits key 'file.jar.agent_helper' is set but not ever checked.
++WARNING: flowbits key 'smb.trans2.mid65' is set but not ever checked.
++WARNING: flowbits key 'file.exploit_kit.pdf' is set but not ever checked.
++WARNING: flowbits key 'file.emf' is set but not ever checked.
++WARNING: flowbits key 'file.xlsb' is set but not ever checked.
++WARNING: flowbits key 'file.pdf' is set but not ever checked.
++WARNING: flowbits key 'file.zip.winrar.spoof' is set but not ever checked.
++WARNING: flowbits key 'file.rmp' is set but not ever checked.
++WARNING: flowbits key 'hawk.lgr' is set but not ever checked.
++WARNING: flowbits key 'file.realplayer.playlist' is set but not ever checked.
++WARNING: flowbits key 'file.rtf.embed' is set but not ever checked.
++WARNING: flowbits key 'file.jpeg' is set but not ever checked.
++WARNING: flowbits key 'file.bmp' is set but not ever checked.
++WARNING: flowbits key 'file.exploit_kit.silverlight' is set but not ever checked.
++WARNING: flowbits key 'smb.trans2.get_dfs_referral' is set but not ever checked.
++WARNING: flowbits key 'file.xml' is set but not ever checked.
++WARNING: flowbits key 'file.doc' is set but not ever checked.
++WARNING: flowbits key 'smb.trans2' is set but not ever checked.
++WARNING: flowbits key 'backdoor.y3krat_15.client.response' is set but not ever checked.
++WARNING: flowbits key 'file.exploit_kit.jar' is set but not ever checked.
++WARNING: flowbits key 'file.ani' is set but not ever checked.
++WARNING: flowbits key 'smb.null_session' is set but not ever checked.
++WARNING: flowbits key 'file.wmf' is set but not ever checked.
++45 out of 1024 flowbits in use.
+ 
+-MaxRss at the end of rules:45276
++MaxRss at the end of rules:48340
+ 
+ [ Port Based Pattern Matching Memory ]
+ +- [ Aho-Corasick Summary ] -------------------------------------
+@@ -387,27 +424,27 @@
+ | Finite Automaton  : DFA
+ | Alphabet Size     : 256 Chars
+ | Sizeof State      : Variable (1,2,4 bytes)
+-| Instances         : 1
+-|     1 byte states : 1
+-|     2 byte states : 0
++| Instances         : 35
++|     1 byte states : 30
++|     2 byte states : 5
+ |     4 byte states : 0
+-| Characters        : 4
+-| States            : 5
+-| Transitions       : 8
+-| State Density     : 0.6%
+-| Patterns          : 1
+-| Match States      : 1
+-| Memory (KB)       : 10.68
+-|   Pattern         : 0.09
+-|   Match Lists     : 0.12
++| Characters        : 6712
++| States            : 5382
++| Transitions       : 94214
++| State Density     : 6.8%
++| Patterns          : 523
++| Match States      : 499
++| Memory (MB)       : 2.62
++|   Patterns        : 0.05
++|   Match Lists     : 0.10
+ |   DFA
+-|     1 byte states : 1.30
+-|     2 byte states : 0.00
++|     1 byte states : 0.28
++|     2 byte states : 2.14
+ |     4 byte states : 0.00
+ +----------------------------------------------------------------
+-[ Number of patterns truncated to 20 bytes: 0 ]
++[ Number of patterns truncated to 20 bytes: 9 ]
+ 
+-MaxRss at the end of detection rules:45276
++MaxRss at the end of detection rules:54988
+ pcap DAQ configured to passive.
+ Acquiring network traffic from "enp0s8".
+ Set gid to 1001
+@@ -441,6 +478,6 @@
+            Preprocessor Object: SF_DNS  Version 1.1  <Build 4>
+            Preprocessor Object: SF_DCERPC2  Version 1.0  <Build 3>
+ 
+-Total snort Fixed Memory Cost - MaxRss:45672
++Total snort Fixed Memory Cost - MaxRss:54988
+ Snort successfully validated the configuration!
+ Snort exiting
+```
+
+Snorto _Self-test_ išvedimas pasikeitė taip (atmetus smulkmenas):
+
+```
+ +++++++++++++++++++++++++++++++++++++++++++++++++++
+ Initializing rule chains...
+-2 Snort rules read
+-    2 detection rules
++508 Snort rules read
++    508 detection rules
+     0 decoder rules
+     0 preprocessor rules
+-2 Option Chains linked into 2 Chain Headers
++508 Option Chains linked into 49 Chain Headers
+ +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ +-------------------[Rule Port Counts]---------------------------------------
+ |             tcp     udp    icmp      ip
+-|     src       0       0       0       0
+-|     dst       1       0       0       0
+-|     any       0       0       1       0
++|     src     117       2       0       0
++|     dst     357       7       0       0
++|     any      25       0       1       0
+ |      nc       0       0       1       0
+-|     s+d       0       0       0       0
++|     s+d       0       1       0       0
+ +----------------------------------------------------------------------------
+```
+
+image::https://user-images.githubusercontent.com/74717106/124834692-dc547180-df88-11eb-8ca3-cac1c4bf446a.png[]
+
 #### 13. MySQL konfigūravimas
 #### 14. Snort DB importavimas
