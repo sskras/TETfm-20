@@ -6302,6 +6302,16 @@ mysqladmin: [Warning] Using a password on the command line interface can be inse
 Warning: Since password will be sent to server in plain text, use ssl connection to ensure password safety.
 ```
 
+Sukuriu duomenų bazę:
+
+- įeinu į MySQL komandinį režimą:
+
+```
+osboxes@ldvm1:/etc/snort$ sudo mysql -u root -p mypass
+Enter password: 
+ERROR 1049 (42000): Unknown database 'mypass'
+```
+
 
 ### Snort taisyklės analizė
 
