@@ -500,54 +500,6 @@ Visų pirma įtraukiu taisykles į konfiguraciją (apraše neradau tokio žingsn
 
 Vietoj 2 taisyklių dabar turime 508.
 
-* Taip pat įjungiu ir vienuoliktame žingsnyje išjungtą `ftp_telnet_protocol` preprocesorių:
-+
-```
---- snort-2.9.18/etc/snort.conf 2021-06-08 12:23:20.000000000 +0300
-+++ /etc/snort/snort.conf       2021-07-07 18:36:16.334477803 +0300
-@@ -336,10 +336,10 @@
- 
- # FTP / Telnet normalization and anomaly detection.  For more information, see README.ftptelnet
- preprocessor ftp_telnet: global inspection_type stateful encrypted_traffic no check_encrypted
--preprocessor ftp_telnet_protocol: telnet \
--    ayt_attack_thresh 20 \
--    normalize ports { 23 } \
--    detect_anomalies
-+# preprocessor ftp_telnet_protocol: telnet \
-+#     ayt_attack_thresh 20 \
-+#     normalize ports { 23 } \
-+#     detect_anomalies
- preprocessor ftp_telnet_protocol: ftp server default \
-     def_max_param_len 100 \
-     ports { 21 2100 3535 } \
-
-root@ldvm1:~# cat ~osboxes/debug/snort.dont-normalize-telnet.conf | patch -R /etc/snort/snort.conf
-patching file /etc/snort/snort.conf
-
-root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/16.Snort-selftest-ftp_telnet_protocol-enabled.txt | wc -l
-488
-
-root@ldvm1:~# diff -u ~osboxes/debug/{15,16}*.txt | colordiff | perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight
-  ...
- FTPTelnet Config:
-     GLOBAL CONFIG
-       Inspection Type: stateful
-       Check for Encrypted Traffic: YES alert: NO
-       Continue to check encrypted data: YES
-+    TELNET CONFIG:
-+      Ports: 23 
-+      Are You There Threshold: 20
-+      Normalize: YES
-+      Detect Anomalies: YES
-     FTP CONFIG:
-       FTP Server: default
-         Ports (PAF): 21 2100 3535 
-```
-
-image::https://user-images.githubusercontent.com/74717106/124835642-52a5a380-df8a-11eb-96fd-14a5f46ce555.png[]
-
-* `ftp_telnet_protocol` preprocesorius grąžintas.
-
 Vykdau skenavimą iš kaimyno kompiuterio:
 
 ```
@@ -566,49 +518,7 @@ MAC Address: 08:00:27:40:2C:F6 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 1.07 seconds
 ```
 
-* Deja, jokio įrašo `alert` loge Snort nesukuria
-
-* Atkomentuoju užkomentuotas `community.rules` taisykles:
-+
-```
-osboxes@ldvm1:/etc/snort$ sudo sed -i 's/^# alert/alert/' rules/community-rules/community.rules
-osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -vc ^#
-3970
-osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
-```
-
-* Taisyklių skaičius paaugo nuo 508 iki 3970.
-
-* Kartoju skenavimą su `nmap` – ir vėl jokio įrašo.
-
-* Ieškau internete ir perkonfigūruoju preprocesorių `sfportscan` pagal
-  https://stackoverflow.com/questions/52411580/how-to-use-snort-to-detect-nmap-default-syn-scan/52421369#52421369[How to Use Snort to detect NMAP default SYN scan?]
-+
-```
-osboxes@ldvm1:/etc/snort$ sudo nano snort.conf
-
-
-Use "fg" to return to nano.
-
-[3]+  Stopped                 sudo nano snort.conf
-
-osboxes@ldvm1:/etc/snort$ diff -u snort.conf.v3 snort.conf | colordiff
---- snort.conf.v3       2021-07-08 09:15:06.473158930 +0300
-+++ snort.conf  2021-07-08 09:16:11.260650206 +0300
-@@ -415,7 +415,7 @@
-     xlink2state { enabled }
- 
- # Portscan detection.  For more information, see README.sfportscan
--preprocessor sfportscan: proto  { all } memcap { 10000000 } sense_level { low }
-+preprocessor sfportscan: proto  { all } memcap { 10000000 } sense_level { high } scan_type { all } include_midstream detect_ack_scans logfile { alert }
- 
- # ARP spoof detection.  For more information, see the Snort Manual - Configuring Snort - Preprocessors - ARP Spoof Preprocessor
- # preprocessor arpspoof
-
-osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
-```
-
-* Vėl skenuoju su ta pačia `nmap` komanda.
+Sprendžiu neaiškumą, kad Snort neaptinka skenavimo.
 
 Pagaliau Snort `alert` logas pasipildė:
 
@@ -5903,6 +5813,98 @@ Snorto _Self-test_ išvedimas pasikeitė taip (atmetus smulkmenas):
 ```
 
 image::https://user-images.githubusercontent.com/74717106/124834692-dc547180-df88-11eb-8ca3-cac1c4bf446a.png[]
+
+* Taip pat įjungiu ir vienuoliktame žingsnyje išjungtą `ftp_telnet_protocol` preprocesorių:
++
+```
+--- snort-2.9.18/etc/snort.conf 2021-06-08 12:23:20.000000000 +0300
++++ /etc/snort/snort.conf       2021-07-07 18:36:16.334477803 +0300
+@@ -336,10 +336,10 @@
+ 
+ # FTP / Telnet normalization and anomaly detection.  For more information, see README.ftptelnet
+ preprocessor ftp_telnet: global inspection_type stateful encrypted_traffic no check_encrypted
+-preprocessor ftp_telnet_protocol: telnet \
+-    ayt_attack_thresh 20 \
+-    normalize ports { 23 } \
+-    detect_anomalies
++# preprocessor ftp_telnet_protocol: telnet \
++#     ayt_attack_thresh 20 \
++#     normalize ports { 23 } \
++#     detect_anomalies
+ preprocessor ftp_telnet_protocol: ftp server default \
+     def_max_param_len 100 \
+     ports { 21 2100 3535 } \
+
+root@ldvm1:~# cat ~osboxes/debug/snort.dont-normalize-telnet.conf | patch -R /etc/snort/snort.conf
+patching file /etc/snort/snort.conf
+
+root@ldvm1:~# snort -u snort -g snort -c /etc/snort/snort.conf -i enp0s8 -T 2>&1 | tee ~osboxes/debug/16.Snort-selftest-ftp_telnet_protocol-enabled.txt | wc -l
+488
+
+root@ldvm1:~# diff -u ~osboxes/debug/{15,16}*.txt | colordiff | perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight
+  ...
+ FTPTelnet Config:
+     GLOBAL CONFIG
+       Inspection Type: stateful
+       Check for Encrypted Traffic: YES alert: NO
+       Continue to check encrypted data: YES
++    TELNET CONFIG:
++      Ports: 23 
++      Are You There Threshold: 20
++      Normalize: YES
++      Detect Anomalies: YES
+     FTP CONFIG:
+       FTP Server: default
+         Ports (PAF): 21 2100 3535 
+```
+
+image::https://user-images.githubusercontent.com/74717106/124835642-52a5a380-df8a-11eb-96fd-14a5f46ce555.png[]
+
+* `ftp_telnet_protocol` preprocesorius grąžintas.
+
+* Deja, jokio įrašo `alert` loge Snort nesukuria
+
+* Atkomentuoju užkomentuotas `community.rules` taisykles:
++
+```
+osboxes@ldvm1:/etc/snort$ sudo sed -i 's/^# alert/alert/' rules/community-rules/community.rules
+osboxes@ldvm1:/etc/snort$ cat rules/community-rules/community.rules | grep -vc ^#
+3970
+osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
+```
+
+* Taisyklių skaičius paaugo nuo 508 iki 3970.
+
+* Kartoju skenavimą su `nmap` – ir vėl jokio įrašo.
+
+* Ieškau internete ir perkonfigūruoju preprocesorių `sfportscan` pagal
+  https://stackoverflow.com/questions/52411580/how-to-use-snort-to-detect-nmap-default-syn-scan/52421369#52421369[How to Use Snort to detect NMAP default SYN scan?]
++
+```
+osboxes@ldvm1:/etc/snort$ sudo nano snort.conf
+
+
+Use "fg" to return to nano.
+
+[3]+  Stopped                 sudo nano snort.conf
+
+osboxes@ldvm1:/etc/snort$ diff -u snort.conf.v3 snort.conf | colordiff
+--- snort.conf.v3       2021-07-08 09:15:06.473158930 +0300
++++ snort.conf  2021-07-08 09:16:11.260650206 +0300
+@@ -415,7 +415,7 @@
+     xlink2state { enabled }
+ 
+ # Portscan detection.  For more information, see README.sfportscan
+-preprocessor sfportscan: proto  { all } memcap { 10000000 } sense_level { low }
++preprocessor sfportscan: proto  { all } memcap { 10000000 } sense_level { high } scan_type { all } include_midstream detect_ack_scans logfile { alert }
+ 
+ # ARP spoof detection.  For more information, see the Snort Manual - Configuring Snort - Preprocessors - ARP Spoof Preprocessor
+ # preprocessor arpspoof
+
+osboxes@ldvm1:/etc/snort$ sudo pkill -SIGHUP snort
+```
+
+* Vėl skenuoju su ta pačia `nmap` komanda.
 
 #### 13. MySQL konfigūravimas
 #### 14. Snort DB importavimas
