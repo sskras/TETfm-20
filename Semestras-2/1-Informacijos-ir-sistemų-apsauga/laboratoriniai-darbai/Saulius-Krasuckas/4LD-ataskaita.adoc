@@ -570,36 +570,7 @@ Išeinu iš MySQL komandinio režimo:
 
 Importuoju Snort duomenų bazės schemą:
 
-```
-osboxes@ldvm1:/etc/snort$ cd /usr/local/src/snort-2.9.18/schemas
--bash: cd: /usr/local/src/snort-2.9.18/schemas: No such file or directory
-```
-
-* Tokios direktorijos nėra.
-
-* Ieškau susijusių pavadinimų:
-+
-```
-osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*schem*'
-
-osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*sql*'
-/usr/local/src/snort-2.9.18/src/dynamic-preprocessors/appid/service_plugins/service_mysql.h
-/usr/local/src/snort-2.9.18/src/dynamic-preprocessors/appid/service_plugins/service_mysql.c
-/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.c
-/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.lo
-/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.o
-/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/.libs/misc_mysql_com_table_dump.o
-```
-
-* Tikrinu `"./configure"` skripto siūlomas galimybes:
-+
-```
-osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i mysql
-osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sql
-osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sch
-```
-
-* Nieko bendro su MySQL neradau.
+Vėl klaida.  Atlieku analizę.  Išsprendimui reikia daug daugiau laiko.
 
 * Turiu vienintelį spėjimą pagal `"src/dynamic-preprocessors/appid/service_plugins/service_mysql.c"` failą:  +
   galbūt MySQL palaikymui reikalingas įjungtas OpenAppID palaikymas.  +
@@ -5850,4 +5821,39 @@ mysql>
 ```
 
 #### 14. Snort DB importavimas
+
+```
+osboxes@ldvm1:/etc/snort$ cd /usr/local/src/snort-2.9.18/schemas
+-bash: cd: /usr/local/src/snort-2.9.18/schemas: No such file or directory
+```
+
+* Tokios direktorijos nėra.
+
+* Ieškau susijusių pavadinimų:
++
+```
+osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*schem*'
+
+osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*sql*'
+/usr/local/src/snort-2.9.18/src/dynamic-preprocessors/appid/service_plugins/service_mysql.h
+/usr/local/src/snort-2.9.18/src/dynamic-preprocessors/appid/service_plugins/service_mysql.c
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.c
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.lo
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/misc_mysql_com_table_dump.o
+/usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/.libs/misc_mysql_com_table_dump.o
+```
+
+* Tikrinu `"./configure"` skripto siūlomas galimybes:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i mysql
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sql
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sch
+```
+
+* Nieko bendro su MySQL neradau.
+
+* Turiu vienintelį spėjimą pagal `"src/dynamic-preprocessors/appid/service_plugins/service_mysql.c"` failą:  +
+  galbūt MySQL palaikymui reikalingas įjungtas OpenAppID palaikymas.  +
+  O pastarąjį esu išjungęs kompiliatoriaus konfigūravimo fazėje.
 
