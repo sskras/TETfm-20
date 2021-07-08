@@ -6431,6 +6431,16 @@ osboxes@ldvm1:/etc/snort$ find /usr/local/src/snort-2.9.18 -name '*sql*'
 /usr/local/src/snort-2.9.18/src/dynamic-plugins/sf_engine/examples/.libs/misc_mysql_com_table_dump.o
 ```
 
+* Tikrinu `"./configure"` skripto siūlomas galimybes:
++
+```
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i mysql
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sql
+osboxes@ldvm1:/usr/local/src/snort-2.9.18$ ./configure --help | grep -i sch
+```
+
+* Nieko bendro su MySQL neradau.
+
 
 ### Snort taisyklės analizė
 
