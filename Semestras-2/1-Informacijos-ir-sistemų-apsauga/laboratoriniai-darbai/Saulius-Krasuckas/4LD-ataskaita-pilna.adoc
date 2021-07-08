@@ -6379,6 +6379,14 @@ Query OK, 0 rows affected (0.09 sec)
 mysql> 
 ```
 
+Nustatau slaptažodį duomenų bazei:
+
+```
+mysql> SET PASSWORD FOR snort@localhost=PASSWORD('mypass');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PASSWORD('mypass')' at line 1
+mysql> 
+```
+
 
 ### Snort taisyklės analizė
 
