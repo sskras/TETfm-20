@@ -6406,6 +6406,15 @@ Bye
 osboxes@ldvm1:/etc/snort$ 
 ```
 
+#### 14. Snort DB importavimas
+
+Importuoju Snort duomenų bazės schemą:
+
+```
+osboxes@ldvm1:/etc/snort$ cd /usr/local/src/snort-2.9.18/schemas
+-bash: cd: /usr/local/src/snort-2.9.18/schemas: No such file or directory
+```
+
 
 ### Snort taisyklės analizė
 
