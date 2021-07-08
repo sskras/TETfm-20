@@ -232,22 +232,9 @@ root@ldvm1:~# cat /etc/snort/snort.conf | grep -n -w -e log -e mysql
 
 #### 7. Taisyklių vieta
 
-Sukuriu direktoriją:
-
-```
-root@ldvm1:~# mkdir /etc/snort/rules
-```
+Sukuriu direktoriją `/etc/snort/rules`.
 
 Redaguoju failą `local.rules`:
-
-```
-root@ldvm1:~# nano /etc/snort/rules/local.rules
-
-
-Use "fg" to return to nano.
-
-[2]+  Stopped                 nano /etc/snort/rules/local.rules
-```
 
 Parašau paprastą taisyklę, kuri praneša apie ICMP paketus, ir failą išsaugau:
 
@@ -256,6 +243,7 @@ root@ldvm1:~# cat /etc/snort/rules/local.rules
 alert icmp any any -> 192.168.10.14 any (msg: "ICMP test"; sid:10000001;)
 root@ldvm1:~# 
 ```
+
 
 #### 8. ICMP užklausų atpažinimas
 
@@ -5752,6 +5740,7 @@ Decoding Ethernet
            Using PCRE version: 8.39 2016-06-14
            Using ZLIB version: 1.2.11
 
+
 Commencing packet processing (pid=49740)
 ```
 
@@ -5907,8 +5896,17 @@ Snort exiting
 * Sunkumas išspręstas nurodžius aktyvią tinklo sąsają.
 
 #### 5. Paketų rinkimo režimas
+
+Sunkumų neaptikta.
+
 #### 6. Snort konfigūravimas
+
+Sunkumų neaptikta.
+
 #### 7. Taisyklių vieta
+
+Sunkumų neaptikta.
+
 #### 8. ICMP užklausų atpažinimas
 #### 9. _Telnet_ paruošimas
 #### 10. _Telnet_ tikrinimas
