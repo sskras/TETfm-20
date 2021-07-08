@@ -57,150 +57,7 @@ VILNIUS, 2021
 
 Išvalau `iptables` nustatymus:
 
-```
-osboxes@ldvm1:~$ sudo iptables -F
-osboxes@ldvm1:~$ 
-```
-
-* Iškart iškilo sunkumas – užstrigo SSH ryšys ir po ilgo laiko SSH klientas atsijungė:
-+
-```
-osboxes@ldvm1:~$ 
-osboxes@ldvm1:~$ packet_write_wait: Connection to 192.168.10.14 port 22: Broken pipe
-```
-
-* Priežasčių supratimui prisijungiau per Serial konsolę ir pasinaudojau `tcpdump` programa:
-+
-```
-osboxes@ldvm1:~$ sudo tcpdump -ni any
-sudo tcpdump -ni any
-tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
-listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
-22:35:57.299726 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 4070427175:4070427275, ack 809347258, win 501, options [nop,nop,TS val 1151414038 ecr 28314383], length 100
-22:35:57.299901 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28315249 ecr 1151414038,nop,nop,sack 1 {0:100}], length 0
-22:35:58.131852 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151414870 ecr 28314383], length 100
-22:35:58.134467 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28316095 ecr 1151414870,nop,nop,sack 1 {0:100}], length 0
-22:35:59.795988 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151416534 ecr 28314383], length 100
-22:35:59.798233 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28317788 ecr 1151416534,nop,nop,sack 1 {0:100}], length 0
-22:36:03.091852 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151419830 ecr 28314383], length 100
-22:36:03.093223 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28321139 ecr 1151419830,nop,nop,sack 1 {0:100}], length 0
-22:36:09.747774 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151426486 ecr 28314383], length 100
-22:36:09.748032 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28327908 ecr 1151426486,nop,nop,sack 1 {0:100}], length 0
-22:36:23.059826 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151439798 ecr 28314383], length 100
-22:36:23.060319 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28341446 ecr 1151439798,nop,nop,sack 1 {0:100}], length 0
-22:36:49.695812 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151466434 ecr 28314383], length 100
-22:36:49.696170 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28368534 ecr 1151466434,nop,nop,sack 1 {0:100}], length 0
-22:36:54.614139 ARP, Request who-has 192.168.10.14 tell 192.168.10.254, length 46
-22:36:54.614163 ARP, Reply 192.168.10.14 is-at 08:00:27:40:2c:f6, length 28
-22:36:54.803813 ARP, Request who-has 192.168.10.254 tell 192.168.10.14, length 28
-22:36:54.804052 ARP, Reply 192.168.10.254 is-at 0a:00:27:00:00:00, length 46
-22:37:42.948130 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151519686 ecr 28314383], length 100
-22:37:42.948395 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28422690 ecr 1151519686,nop,nop,sack 1 {0:100}], length 0
-22:37:47.870393 ARP, Request who-has 192.168.10.14 tell 192.168.10.254, length 46
-22:37:47.870439 ARP, Reply 192.168.10.14 is-at 08:00:27:40:2c:f6, length 28
-22:37:48.051718 ARP, Request who-has 192.168.10.254 tell 192.168.10.14, length 28
-22:37:48.052034 ARP, Reply 192.168.10.254 is-at 0a:00:27:00:00:00, length 46
-```
-
-* Matyti, kad:
-
-** virtualus kompiuteris fiziniam kompiuteriui siunčia duomenų bloką per TCP;
-** fizinis kompiuteris per TCP siunčia patvirtinimus, kad duomenis gavo;
-** ir veiksmai kartojasi su vis ilgėjančiu intervalu tarp pasikartojimų.
-
-* Peržiūrėjus `iptables` matyti, kad tai įvyksta dėl grandyje `INPUT` pasilikusio `POLICY = DROP` nustatymo:
-+
-```
-osboxes@ldvm1:~$ sudo iptables --list -n
-Chain INPUT (policy DROP)
-target     prot opt source               destination         
-ACCEPT     tcp  --  0.0.0.0/0            192.168.10.14        tcp dpt:22
-ACCEPT     tcp  --  0.0.0.0/0            192.168.10.14        tcp dpt:443
-
-Chain FORWARD (policy DROP)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-```
-
-* Tad jei tarpsegmentinį filtrą nustatome scenarijaus pagalba, jį išvalyti reikėtų taip pat:
-+
-```
-osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall stop
-sudo /etc/init.d/myfirewall stop
-Stopping firewall (flushing rules)
-```
-
-* Tikrinu ryšį:
-+
-```
-[p@localhost ~]$ ssh osboxes@192.168.10.14
-osboxes@192.168.10.14's password: 
-Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-154 updates can be installed immediately.
-0 of these updates are security updates.
-To see these additional updates run: apt list --upgradable
-
-Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
-
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Tue Jul  6 22:34:55 2021 from 192.168.10.254
-osboxes@ldvm1:~$ 
-```
-
-* Ryšys atsistatė.
-
-* 4LD aprašas šiam žingsniui nevisai korektiškas.
-
 Tikrinu tinklo nustatymus:
-
-```
-osboxes@ldvm1:~$ ifconfig -a
-enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        ether 08:00:27:7e:da:b1  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.10.14  netmask 255.255.255.0  broadcast 192.168.10.255
-        inet6 fe80::a00:27ff:fe40:2cf6  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
-        RX packets 16428  bytes 1629872 (1.6 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 17379  bytes 1393784 (1.3 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-enp0s8:2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.10.10.4  netmask 255.255.255.0  broadcast 10.10.10.255
-        ether 08:00:27:40:2c:f6  txqueuelen 1000  (Ethernet)
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 37  bytes 3595 (3.5 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 37  bytes 3595 (3.5 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-```
-```
-osboxes@ldvm1:~$ route -n
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         192.168.10.254  0.0.0.0         UG    0      0        0 enp0s8
-10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
-169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s8
-192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 enp0s8
-```
 
 Tinklo nustatymai tvarkingi.
 
@@ -6498,6 +6355,108 @@ Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
 ### Iškilę sunkumai ir pastebėti netikslumai
 
 #### 1. Tinklo paruošimas
+
+```
+osboxes@ldvm1:~$ sudo iptables -F
+osboxes@ldvm1:~$ 
+```
+
+* Iškart iškilo sunkumas – užstrigo SSH ryšys ir po ilgo laiko SSH klientas atsijungė:
++
+```
+osboxes@ldvm1:~$ 
+osboxes@ldvm1:~$ packet_write_wait: Connection to 192.168.10.14 port 22: Broken pipe
+```
+
+* Priežasčių supratimui prisijungiau per Serial konsolę ir pasinaudojau `tcpdump` programa:
++
+```
+osboxes@ldvm1:~$ sudo tcpdump -ni any
+sudo tcpdump -ni any
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
+22:35:57.299726 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 4070427175:4070427275, ack 809347258, win 501, options [nop,nop,TS val 1151414038 ecr 28314383], length 100
+22:35:57.299901 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28315249 ecr 1151414038,nop,nop,sack 1 {0:100}], length 0
+22:35:58.131852 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151414870 ecr 28314383], length 100
+22:35:58.134467 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28316095 ecr 1151414870,nop,nop,sack 1 {0:100}], length 0
+22:35:59.795988 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151416534 ecr 28314383], length 100
+22:35:59.798233 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28317788 ecr 1151416534,nop,nop,sack 1 {0:100}], length 0
+22:36:03.091852 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151419830 ecr 28314383], length 100
+22:36:03.093223 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28321139 ecr 1151419830,nop,nop,sack 1 {0:100}], length 0
+22:36:09.747774 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151426486 ecr 28314383], length 100
+22:36:09.748032 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28327908 ecr 1151426486,nop,nop,sack 1 {0:100}], length 0
+22:36:23.059826 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151439798 ecr 28314383], length 100
+22:36:23.060319 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28341446 ecr 1151439798,nop,nop,sack 1 {0:100}], length 0
+22:36:49.695812 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151466434 ecr 28314383], length 100
+22:36:49.696170 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28368534 ecr 1151466434,nop,nop,sack 1 {0:100}], length 0
+22:36:54.614139 ARP, Request who-has 192.168.10.14 tell 192.168.10.254, length 46
+22:36:54.614163 ARP, Reply 192.168.10.14 is-at 08:00:27:40:2c:f6, length 28
+22:36:54.803813 ARP, Request who-has 192.168.10.254 tell 192.168.10.14, length 28
+22:36:54.804052 ARP, Reply 192.168.10.254 is-at 0a:00:27:00:00:00, length 46
+22:37:42.948130 IP 192.168.10.14.22 > 192.168.10.254.40526: Flags [P.], seq 0:100, ack 1, win 501, options [nop,nop,TS val 1151519686 ecr 28314383], length 100
+22:37:42.948395 IP 192.168.10.254.40526 > 192.168.10.14.22: Flags [.], ack 100, win 466, options [nop,nop,TS val 28422690 ecr 1151519686,nop,nop,sack 1 {0:100}], length 0
+22:37:47.870393 ARP, Request who-has 192.168.10.14 tell 192.168.10.254, length 46
+22:37:47.870439 ARP, Reply 192.168.10.14 is-at 08:00:27:40:2c:f6, length 28
+22:37:48.051718 ARP, Request who-has 192.168.10.254 tell 192.168.10.14, length 28
+22:37:48.052034 ARP, Reply 192.168.10.254 is-at 0a:00:27:00:00:00, length 46
+```
+
+* Matyti, kad:
+
+** virtualus kompiuteris fiziniam kompiuteriui siunčia duomenų bloką per TCP;
+** fizinis kompiuteris per TCP siunčia patvirtinimus, kad duomenis gavo;
+** ir veiksmai kartojasi su vis ilgėjančiu intervalu tarp pasikartojimų.
+
+* Peržiūrėjus `iptables` matyti, kad tai įvyksta dėl grandyje `INPUT` pasilikusio `POLICY = DROP` nustatymo:
++
+```
+osboxes@ldvm1:~$ sudo iptables --list -n
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  0.0.0.0/0            192.168.10.14        tcp dpt:22
+ACCEPT     tcp  --  0.0.0.0/0            192.168.10.14        tcp dpt:443
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+```
+
+* Tad jei tarpsegmentinį filtrą nustatome scenarijaus pagalba, jį išvalyti reikėtų taip pat:
++
+```
+osboxes@ldvm1:~$ sudo /etc/init.d/myfirewall stop
+sudo /etc/init.d/myfirewall stop
+Stopping firewall (flushing rules)
+```
+
+* Tikrinu ryšį:
++
+```
+[p@localhost ~]$ ssh osboxes@192.168.10.14
+osboxes@192.168.10.14's password: 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+154 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Tue Jul  6 22:34:55 2021 from 192.168.10.254
+osboxes@ldvm1:~$ 
+```
+
+* Ryšys atsistatė.
+
+* 4LD aprašas šiam žingsniui nevisai korektiškas.
+
 #### 2. Snort instaliavimas
 #### 3. Konfigūracijos ir žurnalo direktorijos
 #### 4. Pradinis stebėjimas
