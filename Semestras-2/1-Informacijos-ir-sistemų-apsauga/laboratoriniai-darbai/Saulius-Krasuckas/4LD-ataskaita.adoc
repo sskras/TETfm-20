@@ -578,7 +578,8 @@ Vėl klaida.  Atlieku analizę.  Išsprendimui reikia daug daugiau laiko.
   galbūt MySQL palaikymui reikalingas įjungtas OpenAppID palaikymas.  +
   O pastarąjį esu išjungęs kompiliatoriaus konfigūravimo fazėje.
 
-Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
+
+#### Stabdau laboratorinio darbo atlikimą, nes per daug neatitikimų.
 
 
 [.text-right]
