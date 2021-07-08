@@ -16,7 +16,7 @@
 === Informacijos ir sistemų apsauga
 Modulis ELKRM17209
 
-==== Laboratorinio darbo nr <TODO>. ataskaita
+==== Laboratorinio darbo nr 4. ataskaita
 
 {nbsp}
 
@@ -44,3 +44,4 @@ Modulis ELKRM17209
 VILNIUS, 2021
 
 <<<
+
