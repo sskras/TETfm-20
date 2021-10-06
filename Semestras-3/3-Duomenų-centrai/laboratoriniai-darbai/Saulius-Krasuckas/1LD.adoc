@@ -62,6 +62,9 @@ Duomenų centrai
     https://hostline.lt/page/about-us.html#DC
 
   * https://www.bacloud.com/en/our-datacenter/lithuania
+  
+  * https://www.datacenterjournal.com/data-centers/lithuania/vilnius/rackray-dc/
+    
 
 . Lentelė:
 
@@ -71,15 +74,24 @@ Duomenų centrai
 6+| 
 
   | Įmonės:
-  | UAB *Rakrėjus*
+  | UAB https://www.rackray.com/lt/duomenu-centras/[*Rakrėjus*]
   | AB *Telia*
   | UAB *Duomenų logistikos centras*
   | UAB *Baltnetos komunikacijos*
   | UAB *HostLine*
   
   | DC iliustracijos
-  | 
-  | 
+ a|
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0006@2x-scaled.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0008-1.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2021/06/nuotrauka-0012.png[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0013.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0002.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0011-1.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2019/02/colocation.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2019/02/customdedicatedservers.jpg[width=200]
+ a| 
+image::[width=200]
   | 
   | 
   | 
@@ -92,29 +104,33 @@ Duomenų centrai
   | 
   
   | DC adresas:
-  | T. Ševčenkos 16 , Vilnius
-
+  | T. Ševčenkos g. 16 , Vilnius
   | 
   | 
   | 
   | 
   
   | DC paslaugos
-  | 
+ a| ?
+    
+* Dedikuoti serveriai
+* Cloud serveriai
+* Kolokacija
+* Sistemų administravimas
   | 
   | 
   | 
   | 
   
   | Paslaugų komponentės
-  | 
+  | ?
   | 
   | 
   | 
   | 
   
   | Tier lygis
-  | 
+  | 3
   | 
   | 
   | 
