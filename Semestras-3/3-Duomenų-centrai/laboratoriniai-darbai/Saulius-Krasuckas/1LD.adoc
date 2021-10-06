@@ -39,9 +39,10 @@ Duomenų centrai
   * https://www.telia.lt/eng/it-export/services/data-centers +
     https://www.telia.lt/pranesimai-spaudai/teo-built-a-new-certified-data-fortress-in-lithuania
   * https://datalogistics.lt/en/data-inn/ +
+    https://datalogistics.lt/data-inn/ +
     https://datalogistics.lt/en/data-center-j13/
   * https://www.goit.lt/lt/trecia-naujiena/
-  * TODO +
+  * https://www.balt.net/duomenu-centro-ploto-nuoma/#duomenu-centro-ploto-nuoma-infrastruktura +
     https://www.balt.net/tarptautiniai-sujungimai:
     
 > Lietuva +
