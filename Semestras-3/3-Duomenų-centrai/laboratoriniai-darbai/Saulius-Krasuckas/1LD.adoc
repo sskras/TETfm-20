@@ -4,10 +4,17 @@ Duomenų centrai
 == Laboratorinis darbas nr. 1:+++<br />+++Duomenų centrai Lietuvoje
 
 === Darbo tikslas
-* Susipažinti su duomenų centrų paslaugas Lietuvoje teikiančiomis įmonėmis.
+* Susipažinti su duomenų centrų (DC) paslaugas Lietuvoje teikiančiomis įmonėmis.
 
 === Užduotis
 . Naudodamiesi paieškos įrankiu internete suraskite informaciją apie Lietuvoje veikiančias DC paslaugas teikiančias įmones ir jų paslaugas.
 . Parenkite trumpą ataskaitą, kurioje:
+  * Aprašysite ne mažiau nei 4 įmones, teikiančias DC paslaugas.
+  * Pateiksite iliustracijas ir žemėlapius.
+  * Aprašysite pagrindines paslaugas ir jų komponentes.
+  * Aprašysite kiekvieno DC _Tier_ lygį.
+  * Pagal surinktą informaciją parinkite du DC, kurie galėtų veikti Active-Active poroje.
+  * Laikysitės principo: _Less is more_. Svarbu kokybė.
+  * Išlaikykite vienodą stilių.
 . Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
 . Vertinimas pagal išsamumą, medžiagos kokybę.
