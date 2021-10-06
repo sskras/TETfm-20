@@ -8,6 +8,7 @@ Duomenų centrai
 
 * Susipažinti su duomenų centrų (DC) paslaugas Lietuvoje teikiančiomis įmonėmis.
 
+[.text-left]
 === Užduotis
 
 . Naudodamiesi paieškos įrankiu internete suraskite informaciją apie Lietuvoje veikiančias DC paslaugas teikiančias įmones ir jų paslaugas.
