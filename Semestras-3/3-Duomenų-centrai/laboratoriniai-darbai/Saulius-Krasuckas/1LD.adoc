@@ -33,15 +33,15 @@ Duomenų centrai
   * https://www.google.com/search?q=Duomen%C5%B3+centrai+Lietuvoje
 
 . Rezultatai:
-  * https://www.datacenterjournal.com/data-centers/lithuania/vilnius/ +
-    (sąrašas!)
+  * Sąrašai:
+    - https://www.datacenterjournal.com/data-centers/lithuania/vilnius/
+    - https://www.datacentermap.com/lithuania/vilnius/
   * https://www.rackray.com/data-center/
   * https://www.telia.lt/eng/it-export/services/data-centers +
     https://www.telia.lt/pranesimai-spaudai/teo-built-a-new-certified-data-fortress-in-lithuania
   * https://datalogistics.lt/en/data-inn/ +
     https://datalogistics.lt/data-inn/ +
     https://datalogistics.lt/en/data-center-j13/
-  * https://www.goit.lt/lt/trecia-naujiena/
   * https://www.balt.net/duomenu-centro-ploto-nuoma/#duomenu-centro-ploto-nuoma-infrastruktura +
     https://www.balt.net/tarptautiniai-sujungimai:
     
@@ -50,3 +50,7 @@ Duomenų centrai
 > {nbsp} Vilnius, Liepkalnio str. 160c (Baltneta) +
 > {nbsp} Vilnius, T.Ševčenkos g. 16 (RackRay) +
 > {nbsp} Vilnius, Žirmūnų g. 141 (Telia)
+
+  * https://www.datacentermap.com/lithuania/vilnius/bridge2cloud.html
+  * https://www.datacentermap.com/lithuania/vilnius/hostline-dc1.html
+  
