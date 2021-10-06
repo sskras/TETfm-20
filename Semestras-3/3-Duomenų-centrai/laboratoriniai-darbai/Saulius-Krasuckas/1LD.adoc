@@ -57,5 +57,21 @@ Duomenų centrai
     {nbsp} Vilnius, Žirmūnų g. 141 (Telia)
 
   * https://www.datacentermap.com/lithuania/vilnius/bridge2cloud.html
-  * https://www.datacentermap.com/lithuania/vilnius/hostline-dc1.html
   
+  * https://www.datacentermap.com/lithuania/vilnius/hostline-dc1.html
+
+. Lentelė
+
+[cols=6]
+|===
+
+6+| 
+
+  | Įmonės:
+  | UAB *Rakrėjus*
+  | AB *Telia*
+  | UAB *Duomenų logistikos centras*
+  | UAB *Baltnetos komunikacijos*
+  | UAB *HostlineDC*
+
+|===
