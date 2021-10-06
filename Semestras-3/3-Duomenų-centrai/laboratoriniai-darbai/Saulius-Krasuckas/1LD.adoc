@@ -76,7 +76,7 @@ Duomenų centrai
   | Įmonės:
   | UAB https://www.rackray.com/lt/duomenu-centras/[*Rakrėjus*]
   | AB https://www.telia.lt/eng/it-export/services/data-centers[*Telia*]
-  | UAB *Duomenų logistikos centras*
+  | UAB https://datalogistics.lt/en/data-inn/[*Duomenų logistikos centras*]
   | UAB *Baltnetos komunikacijos*
   | UAB https://hostline.lt/page/about-us.html#DC[*HostLine*]
   
@@ -106,8 +106,16 @@ image::https://www.telia.lt/medias/duomenu-centras-83.jpg-telia2048x1367?context
 image::https://www.telia.lt/medias/duomenu-centras-85.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8Njg1MDQ3fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZmEvaDVjLzg4MDcxMjI0Njg4OTQuanBnfDc2ZWFhNDYxOTY4YzJlMTA5NmVkODU2MDIzOGVmZGM1NGFkNmEwMWVmNmYwOTNlNDlmODlmNzQwMjVhZGQ1MTE[width=200]
 image::https://www.telia.lt/medias/duomenu-centras-89.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8Mzg3MDY2fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYTQvaDczLzg4MDcxMjI3MzEwMzguanBnfGI4NmM1ZDI4YjQxMzYwYjM4ZGVlMzVkYmQ1MGMwYmI4NDc2YjM5YWM0NmQ4YWQ2MTJhNGMwNmJjZmQzNDVlMmM[width=200]
  a| 
-image::[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-161.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-99.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/07/6.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-105.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-59.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/07/7.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-135.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-131.jpg[width=200]
   | 
+image::[width=200]
  a| 
 image::https://hostline.lt/images/wings.png[width=200]
 image::https://static.hostline.lt/images/dc1.jpg[width=200]
@@ -117,14 +125,14 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   | Žemėlapis:
  a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
  a| image::https://user-images.githubusercontent.com/74717106/136252279-c0dd81fc-df07-47f8-a9ae-393219a6d129.png[width=200]
-  | 
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/4826.jpeg[width=200]
   | 
  a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
   
   | DC adresas:
   | T. Ševčenkos g. 16 , Vilnius
   | Žirmūnų g. 141, Vilnius
-  | 
+  | A. Juozapavičiaus g. 13, Vilnius
   | 
   | Dariaus ir Girėno g. 42A, Vilnius
   
@@ -155,7 +163,13 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 - [x] Hosting of individual servers
 - [x] Remote Hands
 
-  | 
+ a| 
+
+
+* Kolokacija
+* Duomenų perdavimas
+* Debesija
+
   | 
  a| 
  
@@ -177,14 +191,23 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   | Paslaugų komponentės
   | ?
   | ?
-  | 
+ a| 
+
+- [x] Office space
+- [x] Suites
+- [x] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
   | 
   | ?
   
   | DC Tier lygis
   | 3
   | 3
-  | 
+  | 3
   | 
   | Nerastas
 
