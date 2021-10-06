@@ -75,7 +75,7 @@ Duomenų centrai
 
   | Įmonės:
   | UAB https://www.rackray.com/lt/duomenu-centras/[*Rakrėjus*]
-  | AB *Telia*
+  | AB https://www.telia.lt/eng/it-export/services/data-centers[*Telia*]
   | UAB *Duomenų logistikos centras*
   | UAB *Baltnetos komunikacijos*
   | UAB https://hostline.lt/page/about-us.html#DC[*HostLine*]
@@ -92,8 +92,21 @@ image::https://www.rackray.com/wp-content/uploads/2019/02/colocation.jpg[width=2
 image::https://www.rackray.com/wp-content/uploads/2019/02/customdedicatedservers.jpg[width=200]
 image::https://www.rackray.com/wp-content/uploads/2020/10/systemadministration-2.jpg[width=200]
  a| 
+image::https://www.telia.lt/medias/duomenu-centras-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzY1NTgwfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYzEvaDRiLzg4MDcxMTc4ODEzNzQuanBnfGRjMDk0ZGZjM2U2ZDk5YjI1YWUwNGY0NjAzZDRkMTA4NWZhMWQwOWQ0N2RiY2UwZmQwY2QxOWMxOWZiZmIxYzg[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-9.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzEyMjc0fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oNDgvaDU2Lzg4MDcxMTgzNzI4OTQuanBnfDI2MjdiOGIzZjBiM2NhMjYxZWE1Y2QwOTEzMzI0YzFlZTIwYjYyNmEyMDA5NzQ0ZDk1NTQxZGNmZjVlODAxZTE[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-16-0.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MjM0NzEwfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZDgvaDMxLzg4MDcxMTg2MzUwMzguanBnfDUxZDMwMDBlYTE0NjhkZmU3MzI4YWM2ZWU5Zjg4YTA1MjZjMTllMTI0ODQzNGNjMzA4OTMzMWVhMDhjZGM0OGM[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-29-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzA0NDUwfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oMmYvaDczLzg4MDcxMTk0MjE0NzAuanBnfDMxNWRmMDFhYjAwZTUxMGNhNmJiN2I2Mjk0OTU1Yzg5NGRhNmUwZjk4N2ViNDNlMzg5NGYxOTk3MGUxYmY3MTA[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-34.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MTg1MzExfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oNjEvaDY5Lzg4MDcxMTk2ODM2MTQuanBnfGM0YmY4OGI0MDk5MjI3ZjczZDZlZjczNzY5ZDhmYzE3ZWM2MDY1ZmFkYzBkZjMwMGU3YmVlYzdhYzY1YzhjNmY[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-41-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MjU4MTU3fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oOWMvaGM1Lzg4MDcxMTk5NDU3NTguanBnfGZhNDg5YjI2NjY5MDE1OTQyMDY5MWFhNjRjYjE4MTQ5MDRmNzRmZmM5NTg3NDU4Njk0NWM3NDRmNzE5MjExMDA[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-50.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MjIzODkyfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oMjcvaGMwLzg4MDcxMjAyMDc5MDIuanBnfDgwN2M5OTJkOTdhOGVmN2U4ZTQ0OWZkOGNmNmNlMDMwZjZiMmJhMDM2Y2QzYWFiMDhlOTkxNDMwMmI3ZTI4M2I[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-58-0.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8NjMzMTM0fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZjAvaDg1Lzg4MDcxMjA3MzIxOTAuanBnfDRkNzUzMTc3MzM3ZDE0MjNmNWQwZGM5NGEyOWU1NmZkYTJiOTMwNWFjYzRjODAwYjIyY2IxZTJjYzljMzgyOGY[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-61.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzAwMTc1fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYTAvaDU2Lzg4MDcxMjA5OTQzMzQuanBnfDQzOTcxNmQxNGM5YjZiYjgxZTczMjhhYzhmODM0YzJhOTkwNGE3OTQyODNmMWIwZjY1M2E3Njk4MGU2MjkwOTc[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-67-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzE1MzE1fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oNjIvaDY1Lzg4MDcxMjE1MTg2MjIuanBnfGYxNTA3NzhhMWQxZjBhMTBiOWVlM2Y3MDI0ZjA3MzM5YzJkNzk4NzE3NDRmNzhlNzdmNTFkMWQyNmRiNWFmN2M[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-83.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzY0NTk2fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYzgvaDdlLzg4MDcxMjIyMDY3NTAuanBnfDQzOGE1ZGE3NmI3ZTgwNTJkOWYyNTE2MTU3NmFhNjNkZjVhMzEwZjM2MWYzNjU5MTk5ZWQxNWJmZWZiYjIxZjY[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-85.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8Njg1MDQ3fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZmEvaDVjLzg4MDcxMjI0Njg4OTQuanBnfDc2ZWFhNDYxOTY4YzJlMTA5NmVkODU2MDIzOGVmZGM1NGFkNmEwMWVmNmYwOTNlNDlmODlmNzQwMjVhZGQ1MTE[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-89.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8Mzg3MDY2fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYTQvaDczLzg4MDcxMjI3MzEwMzguanBnfGI4NmM1ZDI4YjQxMzYwYjM4ZGVlMzVkYmQ1MGMwYmI4NDc2YjM5YWM0NmQ4YWQ2MTJhNGMwNmJjZmQzNDVlMmM[width=200]
+ a| 
 image::[width=200]
-  | 
   | 
  a| 
 image::https://hostline.lt/images/wings.png[width=200]
@@ -103,14 +116,14 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   
   | Žemėlapis:
  a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
- a| image::[width=200]
+ a| image::https://user-images.githubusercontent.com/74717106/136252279-c0dd81fc-df07-47f8-a9ae-393219a6d129.png[width=200]
   | 
   | 
  a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
   
   | DC adresas:
   | T. Ševčenkos g. 16 , Vilnius
-  | 
+  | Žirmūnų g. 141, Vilnius
   | 
   | 
   | Dariaus ir Girėno g. 42A, Vilnius
@@ -122,7 +135,26 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 * Cloud serveriai
 * Kolokacija
 * Sistemų administravimas
-  | 
+ a| 
+
+* Debesijos sprendimai (cloud)
+* Duomenų centras
+* Telia cloud
+* Vmware viešasis debesis
+* Privatus debesis
+* Svetainių talpinimas
+* Atsarginės kopijos (backup)
+
+---
+
+- [x] Office space
+- [x] Suites
+- [x] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
   | 
   | 
  a| 
@@ -132,7 +164,7 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 * SmartOS virtualūs serveriai
 * MS Windows virtualūs serveriai
 
-?
+---
 
 - [ ] Office space
 - [x] Suites
@@ -144,14 +176,14 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 
   | Paslaugų komponentės
   | ?
-  | 
+  | ?
   | 
   | 
   | ?
   
-  | Tier lygis
+  | DC Tier lygis
   | 3
-  | 
+  | 3
   | 
   | 
   | Nerastas
