@@ -58,9 +58,12 @@ Duomenų centrai
 
   * https://www.datacentermap.com/lithuania/vilnius/bridge2cloud.html
   
-  * https://www.datacentermap.com/lithuania/vilnius/hostline-dc1.html
+  * https://www.datacentermap.com/lithuania/vilnius/hostline-dc1.html +
+    https://hostline.lt/page/about-us.html#DC
 
-. Lentelė
+  * https://www.bacloud.com/en/our-datacenter/lithuania
+
+. Lentelė:
 
 [cols=6]
 |===
@@ -72,7 +75,14 @@ Duomenų centrai
   | AB *Telia*
   | UAB *Duomenų logistikos centras*
   | UAB *Baltnetos komunikacijos*
-  | UAB *HostlineDC*
+  | UAB *HostLine*
+  
+  | DC iliustracijos
+  | 
+  | 
+  | 
+  | 
+  | 
   
   | Žemėlapis
   | 
@@ -81,7 +91,21 @@ Duomenų centrai
   | 
   | 
   
-  | DC Paslaugos
+  | DC paslaugos
+  | 
+  | 
+  | 
+  | 
+  | 
+  
+  | Paslaugų komponentės
+  | 
+  | 
+  | 
+  | 
+  | 
+  
+  | Tier lygis
   | 
   | 
   | 
