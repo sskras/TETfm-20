@@ -78,7 +78,7 @@ Duomenų centrai
   | AB *Telia*
   | UAB *Duomenų logistikos centras*
   | UAB *Baltnetos komunikacijos*
-  | UAB *HostLine*
+  | UAB https://hostline.lt/page/about-us.html#DC[*HostLine*]
   
   | DC iliustracijos
  a|
@@ -95,21 +95,25 @@ image::https://www.rackray.com/wp-content/uploads/2020/10/systemadministration-2
 image::[width=200]
   | 
   | 
-  | 
+ a| 
+image::https://hostline.lt/images/wings.png[width=200]
+image::https://static.hostline.lt/images/dc1.jpg[width=200]
+image::https://static.hostline.lt/images/genset.jpg[width=200]
+image::https://static.hostline.lt/images/networks.jpg[width=200]
   
   | Žemėlapis:
  a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
+ a| image::[width=200]
   | 
   | 
-  | 
-  | 
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
   
   | DC adresas:
   | T. Ševčenkos g. 16 , Vilnius
   | 
   | 
   | 
-  | 
+  | Dariaus ir Girėno g. 42A, Vilnius
   
   | DC paslaugos
  a| ?
@@ -121,20 +125,35 @@ image::[width=200]
   | 
   | 
   | 
-  | 
-  
+ a| 
+ 
+* Dedikuoti serveriai
+* Linux virtualūs serveriai
+* SmartOS virtualūs serveriai
+* MS Windows virtualūs serveriai
+
+?
+
+- [ ] Office space
+- [x] Suites
+- [ ] Footprints
+- [x] Virtual Servers
+- [ ] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
   | Paslaugų komponentės
   | ?
   | 
   | 
   | 
-  | 
+  | ?
   
   | Tier lygis
   | 3
   | 
   | 
   | 
-  | 
+  | Nerastas
 
 |===
