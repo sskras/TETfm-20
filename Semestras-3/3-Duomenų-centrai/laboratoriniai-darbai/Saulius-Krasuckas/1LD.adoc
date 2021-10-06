@@ -84,8 +84,16 @@ Duomenų centrai
   | 
   | 
   
-  | Žemėlapis
+  | Žemėlapis:
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
   | 
+  | 
+  | 
+  | 
+  
+  | DC adresas:
+  | T. Ševčenkos 16 , Vilnius
+
   | 
   | 
   | 
