@@ -90,6 +90,7 @@ image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0002.jpg[wid
 image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0011-1.jpg[width=200]
 image::https://www.rackray.com/wp-content/uploads/2019/02/colocation.jpg[width=200]
 image::https://www.rackray.com/wp-content/uploads/2019/02/customdedicatedservers.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/10/systemadministration-2.jpg[width=200]
  a| 
 image::[width=200]
   | 
