@@ -3,3 +3,5 @@ Duomenų centrai
 [.text-center]
 == Laboratorinis darbas nr. 1:+++<br />+++Duomenų centrai Lietuvoje
 
+=== Darbo tikslas
+* Susipažinti su duomenų centrų paslaugas Lietuvoje teikiančiomis įmonėmis.
