@@ -73,5 +73,19 @@ Duomenų centrai
   | UAB *Duomenų logistikos centras*
   | UAB *Baltnetos komunikacijos*
   | UAB *HostlineDC*
+  
+  | Žemėlapis
+  | 
+  | 
+  | 
+  | 
+  | 
+  
+  | DC Paslaugos
+  | 
+  | 
+  | 
+  | 
+  | 
 
 |===
