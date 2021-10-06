@@ -137,12 +137,13 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   | Dariaus ir Girėno g. 42A, Vilnius
   
   | DC paslaugos
- a| ?
+ a|
     
 * Dedikuoti serveriai
 * Cloud serveriai
 * Kolokacija
 * Sistemų administravimas
+
  a| 
 
 * Debesijos sprendimai (cloud)
@@ -152,16 +153,6 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 * Privatus debesis
 * Svetainių talpinimas
 * Atsarginės kopijos (backup)
-
----
-
-- [x] Office space
-- [x] Suites
-- [x] Footprints
-- [x] Virtual Servers
-- [x] Cages
-- [x] Hosting of individual servers
-- [x] Remote Hands
 
  a| 
 
@@ -178,19 +169,19 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 * SmartOS virtualūs serveriai
 * MS Windows virtualūs serveriai
 
----
+  | Paslaugų komponentės
+ a|
 
-- [ ] Office space
+- [x] Office space
 - [x] Suites
-- [ ] Footprints
+- [x] Footprints
 - [x] Virtual Servers
-- [ ] Cages
+- [x] Cages
 - [x] Hosting of individual servers
 - [x] Remote Hands
 
-  | Paslaugų komponentės
   | ?
-  | ?
+
  a| 
 
 - [x] Office space
@@ -202,8 +193,17 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 - [x] Remote Hands
 
   | 
-  | ?
-  
+
+ a| 
+
+- [ ] Office space
+- [x] Suites
+- [ ] Footprints
+- [x] Virtual Servers
+- [ ] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
   | DC Tier lygis
   | 3
   | 3
