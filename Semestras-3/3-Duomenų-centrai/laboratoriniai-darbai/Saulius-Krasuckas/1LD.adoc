@@ -83,11 +83,18 @@ Duomenų centrai
   | DC iliustracijos
  a|
 image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0006@2x-scaled.jpg[width=200]
-image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0008-1.jpg[width=200]
+
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=6&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=7&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=8&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=10&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=12&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=14&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
 image::https://www.rackray.com/wp-content/uploads/2021/06/nuotrauka-0012.png[width=200]
 image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0013.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0008-1.jpg[width=200]
 image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0002.jpg[width=200]
-image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0011-1.jpg[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=17&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
 image::https://www.rackray.com/wp-content/uploads/2019/02/colocation.jpg[width=200]
 image::https://www.rackray.com/wp-content/uploads/2019/02/customdedicatedservers.jpg[width=200]
 image::https://www.rackray.com/wp-content/uploads/2020/10/systemadministration-2.jpg[width=200]
