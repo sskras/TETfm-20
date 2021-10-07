@@ -1,1 +1,251 @@
+[.text-center]
+Duomenų centrai
 
+[.text-center]
+== Laboratorinis darbas nr. 1:+++<br />+++Duomenų centrai Lietuvoje
+
+[.text-left]
+=== Darbo tikslas
+
+* Susipažinti su duomenų centrų (DC) paslaugas Lietuvoje teikiančiomis įmonėmis.
+
+[.text-left]
+=== Užduotis
+
+. Naudodamiesi paieškos įrankiu internete suraskite informaciją apie Lietuvoje veikiančias DC paslaugas teikiančias įmones ir jų paslaugas.
+. Parenkite trumpą ataskaitą, kurioje:
+  * Aprašysite ne mažiau nei 4 įmones, teikiančias DC paslaugas.
+  * Pateiksite iliustracijas ir žemėlapius.
+  * Aprašysite pagrindines paslaugas ir jų komponentes.
+  * Aprašysite kiekvieno DC _Tier_ lygį.
+  * Pagal surinktą informaciją parinkite du DC, kurie galėtų veikti Active-Active poroje.
+  * Laikysitės principo: _Less is more_. Svarbu kokybė.
+  * Išlaikykite vienodą stilių.
+. Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+. Vertinimas pagal išsamumą, medžiagos kokybę.
+
+<<<
+
+[.text-left]
+=== Ataskaita
+
+==== 1. Lentelė:
+
+[cols=6]
+|===
+
+6+| +++<center>+++ *Trumpas duomenų centrų aprašymas*
+
+  | Įmonės:
+  | UAB https://www.rackray.com/lt/duomenu-centras/[*Rakrėjus*]
+  | AB https://www.telia.lt/eng/it-export/services/data-centers[*Telia*]
+  | UAB https://datalogistics.lt/en/data-inn/[*Duomenų logistikos centras*]
+  | UAB https://www.balt.net/duomenu-centro-ploto-nuoma[*Baltnetos komunikacijos*]
+  | UAB https://hostline.lt/page/about-us.html#DC[*HostLine*]
+  
+  | DC iliustracijos
+ a|
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0006@2x-scaled.jpg[width=200]
+
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=6&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=7&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=8&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=10&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=12&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=14&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.rackray.com/wp-content/uploads/2021/06/nuotrauka-0012.png[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0013.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0008-1.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/09/nuotrauka-0002.jpg[width=200]
+image::https://www.vz.lt/apps/pbcsi.dll/bilde?Site=VZ&Date=20190820&Category=ARTICLE&ArtNo=820009999&Ref=PH&Item=17&NewTbl=1&maxW=1500&AlignV=center&lastupdate=646[width=200]
+image::https://www.rackray.com/wp-content/uploads/2019/02/colocation.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2019/02/customdedicatedservers.jpg[width=200]
+image::https://www.rackray.com/wp-content/uploads/2020/10/systemadministration-2.jpg[width=200]
+ a| 
+image::https://www.telia.lt/medias/duomenu-centras-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzY1NTgwfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYzEvaDRiLzg4MDcxMTc4ODEzNzQuanBnfGRjMDk0ZGZjM2U2ZDk5YjI1YWUwNGY0NjAzZDRkMTA4NWZhMWQwOWQ0N2RiY2UwZmQwY2QxOWMxOWZiZmIxYzg[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-9.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzEyMjc0fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oNDgvaDU2Lzg4MDcxMTgzNzI4OTQuanBnfDI2MjdiOGIzZjBiM2NhMjYxZWE1Y2QwOTEzMzI0YzFlZTIwYjYyNmEyMDA5NzQ0ZDk1NTQxZGNmZjVlODAxZTE[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-16-0.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MjM0NzEwfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZDgvaDMxLzg4MDcxMTg2MzUwMzguanBnfDUxZDMwMDBlYTE0NjhkZmU3MzI4YWM2ZWU5Zjg4YTA1MjZjMTllMTI0ODQzNGNjMzA4OTMzMWVhMDhjZGM0OGM[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-29-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzA0NDUwfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oMmYvaDczLzg4MDcxMTk0MjE0NzAuanBnfDMxNWRmMDFhYjAwZTUxMGNhNmJiN2I2Mjk0OTU1Yzg5NGRhNmUwZjk4N2ViNDNlMzg5NGYxOTk3MGUxYmY3MTA[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-34.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MTg1MzExfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oNjEvaDY5Lzg4MDcxMTk2ODM2MTQuanBnfGM0YmY4OGI0MDk5MjI3ZjczZDZlZjczNzY5ZDhmYzE3ZWM2MDY1ZmFkYzBkZjMwMGU3YmVlYzdhYzY1YzhjNmY[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-41-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MjU4MTU3fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oOWMvaGM1Lzg4MDcxMTk5NDU3NTguanBnfGZhNDg5YjI2NjY5MDE1OTQyMDY5MWFhNjRjYjE4MTQ5MDRmNzRmZmM5NTg3NDU4Njk0NWM3NDRmNzE5MjExMDA[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-50.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MjIzODkyfGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oMjcvaGMwLzg4MDcxMjAyMDc5MDIuanBnfDgwN2M5OTJkOTdhOGVmN2U4ZTQ0OWZkOGNmNmNlMDMwZjZiMmJhMDM2Y2QzYWFiMDhlOTkxNDMwMmI3ZTI4M2I[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-58-0.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8NjMzMTM0fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZjAvaDg1Lzg4MDcxMjA3MzIxOTAuanBnfDRkNzUzMTc3MzM3ZDE0MjNmNWQwZGM5NGEyOWU1NmZkYTJiOTMwNWFjYzRjODAwYjIyY2IxZTJjYzljMzgyOGY[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-61.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzAwMTc1fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYTAvaDU2Lzg4MDcxMjA5OTQzMzQuanBnfDQzOTcxNmQxNGM5YjZiYjgxZTczMjhhYzhmODM0YzJhOTkwNGE3OTQyODNmMWIwZjY1M2E3Njk4MGU2MjkwOTc[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-67-1.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzE1MzE1fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oNjIvaDY1Lzg4MDcxMjE1MTg2MjIuanBnfGYxNTA3NzhhMWQxZjBhMTBiOWVlM2Y3MDI0ZjA3MzM5YzJkNzk4NzE3NDRmNzhlNzdmNTFkMWQyNmRiNWFmN2M[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-83.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8MzY0NTk2fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYzgvaDdlLzg4MDcxMjIyMDY3NTAuanBnfDQzOGE1ZGE3NmI3ZTgwNTJkOWYyNTE2MTU3NmFhNjNkZjVhMzEwZjM2MWYzNjU5MTk5ZWQxNWJmZWZiYjIxZjY[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-85.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8Njg1MDQ3fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oZmEvaDVjLzg4MDcxMjI0Njg4OTQuanBnfDc2ZWFhNDYxOTY4YzJlMTA5NmVkODU2MDIzOGVmZGM1NGFkNmEwMWVmNmYwOTNlNDlmODlmNzQwMjVhZGQ1MTE[width=200]
+image::https://www.telia.lt/medias/duomenu-centras-89.jpg-telia2048x1367?context=bWFzdGVyfGZja0ltYWdlL0IyQi9QYXZlaWtzbGVsaWFpL0lUIHBhc2xhdWdvcy9kdW9tZW51LWNlbnRyby1nYWxlcmlqYS9jb252ZXJ0ZWR8Mzg3MDY2fGltYWdlL2pwZWd8ZmNrSW1hZ2UvQjJCL1BhdmVpa3NsZWxpYWkvSVQgcGFzbGF1Z29zL2R1b21lbnUtY2VudHJvLWdhbGVyaWphL2NvbnZlcnRlZC9oYTQvaDczLzg4MDcxMjI3MzEwMzguanBnfGI4NmM1ZDI4YjQxMzYwYjM4ZGVlMzVkYmQ1MGMwYmI4NDc2YjM5YWM0NmQ4YWQ2MTJhNGMwNmJjZmQzNDVlMmM[width=200]
+ a| 
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-161.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-99.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/07/6.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-105.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-59.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/07/7.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-135.jpg[width=200]
+image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-131.jpg[width=200]
+ a| 
+image::https://www.balt.net/uploads/ECB/content_1582041217/pastatas_1334.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041217/spintos_4341.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041217/spintos2_6117.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041217/karstasis-koridorius_950.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/ups_4175.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/gesinimo-patalpa_4977.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/cooling2_1267.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/generatoriai_9026.jpg[width=200]
+ a| 
+image::https://hostline.lt/images/wings.png[width=200]
+image::https://static.hostline.lt/images/dc1.jpg[width=200]
+image::https://static.hostline.lt/images/genset.jpg[width=200]
+image::https://static.hostline.lt/images/networks.jpg[width=200]
+  
+  | Žemėlapis:
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
+ a| image::https://user-images.githubusercontent.com/74717106/136331972-36e69d7b-36da-4d92-b013-c8652a5d82d3.png[width=200]
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/4826.jpeg[width=200]
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/4623.jpeg[width=200]
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
+  
+  | DC adresas:
+  | T. Ševčenkos g. 16, Vilnius
+  | Žirmūnų g. 141, Vilnius
+  | A. Juozapavičiaus g. 13, Vilnius
+  | Panerių g. 26, Vilnius
+  | Dariaus ir Girėno g. 42A, Vilnius
+  
+  | DC paslaugos
+ a|
+    
+* Dedikuoti serveriai
+* Cloud serveriai
+* Kolokacija
+* Sistemų administravimas
+
+ a| 
+
+* Debesijos sprendimai (_Cloud_)
+* Duomenų centras
+* Telia cloud
+* Vmware viešasis debesis
+* Privatus debesis
+* Svetainių talpinimas
+* Atsarginės kopijos (_Backup_)
+
+ a| 
+
+* Kolokacija
+* Duomenų perdavimas
+* Debesija
+
+ a| 
+
+* Duomenų centro ploto nuoma
+* Dedikuotų serverių nuoma
+* Resursų nuoma (IaaS)
+* Privataus debesies nuoma
+* Virtualūs dedikuoti serveriai (VDS)
+* Duomenų bazių nuoma (DBaaS)
+* Microsoft 365
+* Svetainių talpinimas ir domenų registravimas
+
+ a| 
+ 
+* Dedikuoti serveriai
+* Linux virtualūs serveriai
+* SmartOS virtualūs serveriai
+* MS Windows virtualūs serveriai
+
+  | Paslaugų komponentės
+ a| `2021-10-07` duomenys:
+
+- `?` Office space
+- [x] Suites
+- `?` Footprints
+- [x] Virtual Servers
+- `?` Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
+ a| `2012-04-23` duomenys:
+
+- [x] Office space
+- [x] Suites
+- [x] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
+ a| `2012-10-17` duomenys:
+
+- [x] Office space
+- [x] Suites
+- [x] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
+ a| `2012-10-24` duomenys:
+
+- [x] Office space
+- [x] Suites
+- [ ] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
+ a| `2017-12-27` duomenys:
+
+- [ ] Office space
+- [x] Suites
+- [ ] Footprints
+- [x] Virtual Servers
+- [ ] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
+  | DC Tier lygis
+  | 3
+  | 3
+  | 3
+  | 3
+  | 3
+
+|===
+
+<<<
+
+==== 2. Dviejų DC parinkimas veikimui _Active-Active_ poroje
+
+* Kriterijais renkuosi:
+  - tinklo ir maitinimo patikimumus, 
+  - L2 sujungimo galimybę, 
+  - kuo didesnį atstumą tarp DC (_Geo-redundancy_).
+* *DLC* DC atmetu, nes jis minimas kaip https://www.datacenterjournal.com/data-centers/lithuania/vilnius/#:~:text=Non-Neutral%20Vilnius%20Data%20Center[Non-neutral DC (Carrier-wise?)]  +
+(Ar tai tiesa?)
+* *Baltnetos* DC atmetu, nes neradau tikslesnių duomenų apie tiekėją.
+* *RackRay* DC:
+  - 2N UPS, N+1 generatoriai.
+  - 5 skirtingi IPT, 100 Gbps tarptautinis pralaidumas, 2N dubliavimas.
+  - Galimybė dubliuotis/persikelti į kitą, geografiškai nutolusį DC (galimai Žirmūnų g. 21).
+* *Telia* DC:
+  - 2N el. skirstyklos, 2N+2 UPS.
+  - Pagrindinio tinklo sparta Nx10 Gbps.
+  - Galimybė dubliuotis/persikelti į DC "S2" @ Parko g. 16 (dubliuotas optinis žiedas)
+* *HostLine* DC:
+  - 2N UPS ir generatoriai.
+  - POP @ Juozapavičiaus g. 13; ryšys su beveik visais LR veikiančiais IPT, 100 Gbps.
+  - Galimybė dubliuotis/persikelti į DC Miunchene ir Amsterdame.
+  - _Backup_ kopijos atsarginiame DC (turbūt P. Lukšio g. 7)
+* Atstumai tarp:
+  - RackRay ir Telia DC: https://zemelapis.lt/atstumai#756ac41e55f5f0ef53121d4c57a16510[5.6 km]
+  - RackRay ir HostLine DC:     https://zemelapis.lt/atstumai#532912eb4f11ce1162dac7114588a555[3.2 km]
+  - Telia ir HostLine ir DC: https://zemelapis.lt/atstumai#ae08328858e05531e78b7b8f6d595eae[8.5 km]
+* Matyti, kad:
+  - pagal tinklo pralaidumus labiausiai tiktų RackRay ir HostLine DC
+  - tačiau atstumas tarp šių DC yra mažiausias (atstumo atžvilgiu yra prasčiausiai).
+  - o RackRay DC teturi N+1 generatorių atsargą.
+
+Dėl to veikimui _Active-Active_ poroje parenku šiuos duomenų centrus: *Telia* ir *HostLine*.
