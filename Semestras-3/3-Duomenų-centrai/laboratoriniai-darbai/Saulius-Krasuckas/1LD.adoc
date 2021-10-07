@@ -123,7 +123,6 @@ image::https://www.balt.net/uploads/ECB/content_1582041218/ups_4175.jpg[width=20
 image::https://www.balt.net/uploads/ECB/content_1582041218/gesinimo-patalpa_4977.jpg[width=200]
 image::https://www.balt.net/uploads/ECB/content_1582041218/cooling2_1267.jpg[width=200]
 image::https://www.balt.net/uploads/ECB/content_1582041218/generatoriai_9026.jpg[width=200]
-image::[width=200]
  a| 
 image::https://hostline.lt/images/wings.png[width=200]
 image::https://static.hostline.lt/images/dc1.jpg[width=200]
@@ -132,7 +131,7 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   
   | Žemėlapis:
  a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
- a| image::https://user-images.githubusercontent.com/74717106/136252279-c0dd81fc-df07-47f8-a9ae-393219a6d129.png[width=200]
+ a| image::https://user-images.githubusercontent.com/74717106/136331972-36e69d7b-36da-4d92-b013-c8652a5d82d3.png[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/4826.jpeg[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/4623.jpeg[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
@@ -187,19 +186,9 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 * MS Windows virtualūs serveriai
 
   | Paslaugų komponentės
- a|
-
-- [x] Office space
-- [x] Suites
-- [x] Footprints
-- [x] Virtual Servers
-- [x] Cages
-- [x] Hosting of individual servers
-- [x] Remote Hands
-
   | ?
 
- a| 
+ a| `2012-04-23` duomenys:
 
 - [x] Office space
 - [x] Suites
@@ -209,7 +198,17 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 - [x] Hosting of individual servers
 - [x] Remote Hands
 
- a| 2012 m. duomenys:
+ a| `2012-10-17` duomenys:
+
+- [x] Office space
+- [x] Suites
+- [x] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
+
+ a| `2012-10-24` duomenys:
 
 - [x] Office space
 - [x] Suites
@@ -219,7 +218,7 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 - [x] Hosting of individual servers
 - [x] Remote Hands
 
- a| 
+ a| `2017-12-27` duomenys:
 
 - [ ] Office space
 - [x] Suites
