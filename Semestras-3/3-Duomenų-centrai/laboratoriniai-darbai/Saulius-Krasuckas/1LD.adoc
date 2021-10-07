@@ -193,7 +193,15 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 * MS Windows virtualūs serveriai
 
   | Paslaugų komponentės
-  | ?
+ a| `2021-10-07` duomenys:
+
+- `?` Office space
+- [x] Suites
+- `?` Footprints
+- [x] Virtual Servers
+- `?` Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
 
  a| `2012-04-23` duomenys:
 
@@ -240,6 +248,6 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   | 3
   | 3
   | 3
-  | Nerastas
+  | 3
 
 |===
