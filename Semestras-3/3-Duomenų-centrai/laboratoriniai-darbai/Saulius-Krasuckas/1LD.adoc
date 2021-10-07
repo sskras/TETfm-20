@@ -144,7 +144,7 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
   
   | DC adresas:
-  | T. Ševčenkos g. 16 , Vilnius
+  | T. Ševčenkos g. 16, Vilnius
   | Žirmūnų g. 141, Vilnius
   | A. Juozapavičiaus g. 13, Vilnius
   | Panerių g. 26, Vilnius
@@ -160,13 +160,13 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 
  a| 
 
-* Debesijos sprendimai (cloud)
+* Debesijos sprendimai (_Cloud_)
 * Duomenų centras
 * Telia cloud
 * Vmware viešasis debesis
 * Privatus debesis
 * Svetainių talpinimas
-* Atsarginės kopijos (backup)
+* Atsarginės kopijos (_Backup_)
 
  a| 
 
@@ -251,3 +251,35 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   | 3
 
 |===
+
+. Dviejų DC parinkimas veikimui _Active-Active_ poroje
+
+* Kriterijais renkuosi:
+  - tinklo ir maitinimo patikimumus, 
+  - L2 sujungimo galimybę, 
+  - kuo didesnį atstumą tarp DC (_Georedundancy_).
+* *DLC* DC atmetu, nes jis minimas kaip https://www.datacenterjournal.com/data-centers/lithuania/vilnius/#:~:text=Non-Neutral%20Vilnius%20Data%20Center[Non-neutral DC (Carrier-wise?)]  +
+(Ar tai tiesa?)
+* *Baltnetos* DC atmetu, nes neradau tikslesnių duomenų apie tiekėją.
+* *RackRay* DC:
+  - 2N UPS, N+1 generatoriai.
+  - 5 skirtingi IPT, 100 Gbps tarptautinis pralaidumas, 2N dubliavimas.
+  - Galimybė dubliuotis/persikelti į kitą, geografiškai nutolusį DC (galimai Žirmūnų g. 21).
+* *Telia* DC:
+  - 2N el. skirstyklos, 2N+2 UPS.
+  - Pagrindinio tinklo sparta Nx10 Gbps.
+  - Galimybė dubliuotis/persikelti į DC "S2" @ Parko g. 16 (dubliuotas optinis žiedas)
+* *HostLine* DC:
+  - 2N UPS ir generatoriai.
+  - POP @ Juozapavičiaus g. 13; ryšys su beveik visais LR veikiančiais IPT, 100 Gbps.
+  - Galimybė dubliuotis/persikelti į DC Miunchene ir Amsterdame.
+  - _Backup_ kopijos atsarginiame DC (turbūt P. Lukšio g. 7)
+* Atstumai tarp:
+  - RackRay ir Telia DC: https://zemelapis.lt/atstumai#756ac41e55f5f0ef53121d4c57a16510[5.6 km]
+  - RackRay ir HostLine DC:     https://zemelapis.lt/atstumai#532912eb4f11ce1162dac7114588a555[3.2 km]
+  - Telia ir HostLine ir DC: https://zemelapis.lt/atstumai#ae08328858e05531e78b7b8f6d595eae[8.5 km]
+* Matyti, kad:
+  - pagal tinklo pralaidumus labiausiai tiktų RackRay ir HostLine DC
+  - tačiau atstumas tarp šių DC yra mažiausias (atstumo atžvilgiu yra prasčiausiai).
+  - o RackRay DC teturi N+1 generatorių atsargą.
+* Dėl to veikimui _Active-Active_ poroje parenku šiuos duomenų centrus: *Telia* ir *HostLine*.
