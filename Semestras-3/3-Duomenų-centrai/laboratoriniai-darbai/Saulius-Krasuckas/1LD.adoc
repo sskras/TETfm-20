@@ -77,7 +77,7 @@ Duomenų centrai
   | UAB https://www.rackray.com/lt/duomenu-centras/[*Rakrėjus*]
   | AB https://www.telia.lt/eng/it-export/services/data-centers[*Telia*]
   | UAB https://datalogistics.lt/en/data-inn/[*Duomenų logistikos centras*]
-  | UAB *Baltnetos komunikacijos*
+  | UAB https://www.balt.net/duomenu-centro-ploto-nuoma[*Baltnetos komunikacijos*]
   | UAB https://hostline.lt/page/about-us.html#DC[*HostLine*]
   
   | DC iliustracijos
@@ -114,7 +114,15 @@ image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-59.jpg[width=200]
 image::https://datalogistics.lt/wp-content/uploads/2020/07/7.jpg[width=200]
 image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-135.jpg[width=200]
 image::https://datalogistics.lt/wp-content/uploads/2020/09/FB-131.jpg[width=200]
-  | 
+ a| 
+image::https://www.balt.net/uploads/ECB/content_1582041217/pastatas_1334.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041217/spintos_4341.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041217/spintos2_6117.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041217/karstasis-koridorius_950.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/ups_4175.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/gesinimo-patalpa_4977.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/cooling2_1267.jpg[width=200]
+image::https://www.balt.net/uploads/ECB/content_1582041218/generatoriai_9026.jpg[width=200]
 image::[width=200]
  a| 
 image::https://hostline.lt/images/wings.png[width=200]
@@ -126,14 +134,14 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/5095.jpeg[width=200]
  a| image::https://user-images.githubusercontent.com/74717106/136252279-c0dd81fc-df07-47f8-a9ae-393219a6d129.png[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/4826.jpeg[width=200]
-  | 
+ a| image::https://www.datacenterjournal.com/mapshots/buildings/4623.jpeg[width=200]
  a| image::https://www.datacenterjournal.com/mapshots/buildings/2897.jpeg[width=200]
   
   | DC adresas:
   | T. Ševčenkos g. 16 , Vilnius
   | Žirmūnų g. 141, Vilnius
   | A. Juozapavičiaus g. 13, Vilnius
-  | 
+  | Panerių g. 26, Vilnius
   | Dariaus ir Girėno g. 42A, Vilnius
   
   | DC paslaugos
@@ -156,12 +164,21 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 
  a| 
 
-
 * Kolokacija
 * Duomenų perdavimas
 * Debesija
 
-  | 
+ a| 
+
+* Duomenų centro ploto nuoma
+* Dedikuotų serverių nuoma
+* Resursų nuoma (IaaS)
+* Privataus debesies nuoma
+* Virtualūs dedikuoti serveriai (VDS)
+* Duomenų bazių nuoma (DBaaS)
+* Microsoft 365
+* Svetainių talpinimas ir domenų registravimas
+
  a| 
  
 * Dedikuoti serveriai
@@ -192,7 +209,15 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
 - [x] Hosting of individual servers
 - [x] Remote Hands
 
-  | 
+ a| 2012 m. duomenys:
+
+- [x] Office space
+- [x] Suites
+- [ ] Footprints
+- [x] Virtual Servers
+- [x] Cages
+- [x] Hosting of individual servers
+- [x] Remote Hands
 
  a| 
 
@@ -208,7 +233,7 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   | 3
   | 3
   | 3
-  | 
+  | 3
   | Nerastas
 
 |===
