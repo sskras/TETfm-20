@@ -117,3 +117,21 @@ Duomenų centrai
   * `Slug` = `sauliaus-passive`
   * `Description` = `Pasyvus DC`
   * `[ Create ]`
+
+. _Rack_ kūrimas:
+
+  * _Organization_ > _RACKS_ > _Racks_ > `+`
+  * Rack.Site group = Sauliaus-DC-grupė
+  * Rack.Site = Site-Šiaurės-Miestelis
+  * Rack.Location = Sauliaus-active
+  * Rack.Name = Sauliaus-Rack-A1
+  * Rack.Status = Active
+  * Rack.Role = production
+  * Rack.Tags = `[Saulius]`
+  * Dimensions.Width = `19 inches` (nekeičiu)
+  * Dimensions.Height (U) = `52`
+  * `[ Create ]`
+  ---
+  * `[ Clone ]`
+  * Rack.Name = Sauliaus-Rack-A2
+  * `[ Create ]`
