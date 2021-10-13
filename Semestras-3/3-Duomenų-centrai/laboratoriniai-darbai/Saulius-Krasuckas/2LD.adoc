@@ -16,6 +16,8 @@ Duomenų centrai
 
 . *N+1 elektros infrastruktūros modeliavimas (_Power_ ir _Devices_ skiltis)*, 2 balai
 
+. *Įrenginių talpinimas spintoje (_Devices_ dalis)*, 2 balai
+
 . Parenkite trumpą ataskaitą, kurioje:
 
 . Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
