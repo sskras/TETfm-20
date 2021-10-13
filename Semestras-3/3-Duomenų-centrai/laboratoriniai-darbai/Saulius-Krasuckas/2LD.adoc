@@ -75,9 +75,9 @@ Duomenų centrai
 
 . Pirmojo _Site_ papildymas:
 
-  * _Organization_ > _SITES_ > _Sites_ > `Site-Šiaurės-Miestelis` > `Edit`
+  * _Organization_ > _SITES_ > _Sites_ > `Site-Šiaurės-Miestelis` > `[Edit]`
   * `Site.Group` = `Sauliaus-DC`
-  * `Site.Tags` = `Saulius`
+  * `Site.Tags` = `sauliaus`
   *  `[Save]`
 
 . Antro _Site_ kūrimas:
@@ -91,3 +91,11 @@ Duomenų centrai
   * `Site.Tags` = `Saulius`
   * `Site.Time zone` = `Europe/Vilnius`
   *  `[Create]`
+
+. _Site-Group_ pervadinimas:
+
+  * _Organization_ > _SITES_ > _Site groups_ > `Sauliaus-DC`
+  * `[Edit]`
+  * `Site.Group` = `Sauliaus-DC-grupė`
+  * `Site.Tags` = `sauliaus-dc-grupe`
+  *  `[Save]`
