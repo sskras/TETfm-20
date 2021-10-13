@@ -55,3 +55,11 @@ Duomenų centrai
   * `Site.Region` = `Vilnius`
   * `Site.Time zone` = `Europe/Vilnius`
   *  `[Create]`
+
+. Naujo _Tag_ kūrimas:
+
+  * _Other_ > _OTHER_ > _Tags_
+  * `Tag.Name` = `Saulius`
+  * `Tag.Slug` = `saulius`
+  * `Tag.Color` = `Ligh Blue`
+  *  `[Create]`
