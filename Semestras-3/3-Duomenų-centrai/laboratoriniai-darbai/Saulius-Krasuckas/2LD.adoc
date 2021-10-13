@@ -57,6 +57,14 @@ Duomenų centrai
   * `Site.Time zone` = `Europe/Vilnius`
   *  `[Create]`
 
+. Naujos _Site-Group_ kūrimas:
+
+  * _Organization_ > _SITES_ > _Site groups_ > `+`
+  * `Parent` = `<emptu>`
+  * `Name` = `Sauliaus-DC`
+  * `Slug` = `sauliaus-dc` (nekeičiu)
+  *  `[Create]`
+
 . Naujo _Tag_ kūrimas:
 
   * _Other_ > _OTHER_ > _Tags_ > `+`
@@ -64,3 +72,10 @@ Duomenų centrai
   * `Tag.Slug` = `saulius`
   * `Tag.Color` = `Ligh Blue`
   *  `[Create]`
+
+. Pirmojo _Site_ papildymas:
+
+  * _Organization_ > _SITES_ > _Sites_ > `Site-Šiaurės-Miestelis` > `Edit`
+  * `Site.Group` = `Sauliaus-DC`
+  * `Site.Tags` = `Saulius`
+  *  `[Save]`
