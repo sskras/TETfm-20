@@ -49,6 +49,7 @@ Duomenų centrai
 
 . Naujo _Site_ kūrimas:
 
+  * _Organization_ > _SITES_ > _Sites_ > `+`
   * `Site.Name` = `Site-Šiaurės-Miestelis` (naujas)
   * `Site.Slug` = `site-siaures-miestelis` (pataisau)
   * `Site.Status` = `Active`
@@ -58,7 +59,7 @@ Duomenų centrai
 
 . Naujo _Tag_ kūrimas:
 
-  * _Other_ > _OTHER_ > _Tags_
+  * _Other_ > _OTHER_ > _Tags_ > `+`
   * `Tag.Name` = `Saulius`
   * `Tag.Slug` = `saulius`
   * `Tag.Color` = `Ligh Blue`
