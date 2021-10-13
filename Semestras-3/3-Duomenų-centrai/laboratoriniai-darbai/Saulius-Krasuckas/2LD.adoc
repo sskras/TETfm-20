@@ -5,3 +5,17 @@ Duomenų centrai
 === Darbo tikslas
 
 * Susipažinti su duomenų centrų (DC) infrastruktūros modeliavimo įrankiu _Netbox_.
+
+=== Užduotis
+
+. Prisijunkite prie _Netbox_ sistemos: http://dc-lab-netbox.northeurope.cloudapp.azure.com:8000/  +
+   +
+  Kiekvienam elementui naudokite *tag-us su savo vardu*.
+
+. *Bazinės infrastruktūros modeliavimas (_Organization_ skiltis)*, 6 balai
+
+. *N+1 elektros infrastruktūros modeliavimas (_Power_ ir _Devices_ skiltis)*, 2 balai
+
+. Parenkite trumpą ataskaitą, kurioje:
+
+. Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
