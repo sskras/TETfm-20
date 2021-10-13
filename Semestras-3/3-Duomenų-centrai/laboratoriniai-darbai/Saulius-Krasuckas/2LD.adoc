@@ -90,12 +90,30 @@ Duomenų centrai
   * `Site.Group` = `Sauliaus-DC`
   * `Site.Tags` = `Saulius`
   * `Site.Time zone` = `Europe/Vilnius`
-  *  `[Create]`
+  * `[ Create ]`
 
 . _Site-Group_ pervadinimas:
 
   * _Organization_ > _SITES_ > _Site groups_ > `Sauliaus-DC`
-  * `[Edit]`
+  * `[ Edit ]`
   * `Site.Group` = `Sauliaus-DC-grupė`
   * `Site.Tags` = `sauliaus-dc-grupe`
-  *  `[Save]`
+  * `[ Save ]`
+
+. _Location_ sukūrimas:
+
+  * _Organization_ > _SITES_ > _Locations_ > `+`
+  * `Region` = `Vilnius`
+  * `Site group` = `Sauliaus-DC-grupė`
+  * `Site` = Site-Šiaurės-Miestelis`
+  * `Name` = `Sauliaus-active`
+  * `Slug` = `sauliaus-active`
+  * `Description` = `Aktyvus DC`
+  * `[ Create ]`
+  ---
+  * `[ Clone ]`
+  * `Site` = Site-Naujamiestis
+  * `Name` = `Sauliaus-passive`
+  * `Slug` = `sauliaus-passive`
+  * `Description` = `Pasyvus DC`
+  * `[ Create ]`
