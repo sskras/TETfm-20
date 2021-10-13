@@ -79,3 +79,15 @@ Duomenų centrai
   * `Site.Group` = `Sauliaus-DC`
   * `Site.Tags` = `Saulius`
   *  `[Save]`
+
+. Antro _Site_ kūrimas:
+
+  * _Organization_ > _SITES_ > _Sites_ > `+`
+  * `Site.Name` = `Site-Naujamiestis` (naujas)
+  * `Site.Slug` = `site-naujamiestis` (nekeičiu)
+  * `Site.Status` = `Active`
+  * `Site.Region` = `Vilnius`
+  * `Site.Group` = `Sauliaus-DC`
+  * `Site.Tags` = `Saulius`
+  * `Site.Time zone` = `Europe/Vilnius`
+  *  `[Create]`
