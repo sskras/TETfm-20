@@ -36,4 +36,8 @@ Duomenų centrai
 
 . Parenkite trumpą ataskaitą, kurioje:
 
+  * bus pateiktas modeliavimo rezultatas;
+  * laikysitės principo: _Less is more_.  Svarbu kokybė;
+  * Išlaikykite vienodą stilių.
+
 . Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
