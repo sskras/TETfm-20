@@ -29,6 +29,11 @@ Duomenų centrai
 
 . *Įrenginių talpinimas spintoje (_Devices_ dalis)*, 2 balai
 
+  * Kiekvienoje spintoje sumodeliuokite ir patalpinkite po du skirtingus įrenginius  +
+    (galite importuoti papildomų: https://github.com/netbox-community/devicetype-library)
+  * Sumodeliuokite kiekvieno įrenginio pajungimą prie el. energijos infrastruktūros.
+  * Kaip keičiasi _Power Feed_ apkrova?
+
 . Parenkite trumpą ataskaitą, kurioje:
 
 . Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
