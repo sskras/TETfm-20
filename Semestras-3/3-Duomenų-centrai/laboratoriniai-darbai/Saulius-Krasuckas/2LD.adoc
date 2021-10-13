@@ -14,6 +14,12 @@ Duomenų centrai
 
 . *Bazinės infrastruktūros modeliavimas (_Organization_ skiltis)*, 6 balai
 
+  * Sukurti ir aprašyti du DC: vieno rolė aktyvus, kito -- pasyvus.  +
+    Abu DC apjungti į grupę (_Site Groups_).
+  * DC gali būti skirtinguose miestuose, tad atitinkamai sukurkite reikalingus miestus.
+  * Sukurti ir aprašyti serverių patalpas (_Locations_).
+  * Sukurti ir aprašyti kiekvienoje patalpoje po vieną kompiuterinę spintą, kurios talpa 52U.
+
 . *N+1 elektros infrastruktūros modeliavimas (_Power_ ir _Devices_ skiltis)*, 2 balai
 
 . *Įrenginių talpinimas spintoje (_Devices_ dalis)*, 2 balai
