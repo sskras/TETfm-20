@@ -22,6 +22,11 @@ Duomenų centrai
 
 . *N+1 elektros infrastruktūros modeliavimas (_Power_ ir _Devices_ skiltis)*, 2 balai
 
+  * Aprašykite reikiamą kiekį _Power Panel_ ir _Power Feeds_,  +
+    sukurkite reikalingus ryšius (parinkite europietiškus parametrus:)
+  * Kiekvienoje spintoje įdiekite atitinkamą kiekį PDU įrenginių (_Devices_),  +
+    sukurkite ryšį su _Power_ infrastruktūra.
+
 . *Įrenginių talpinimas spintoje (_Devices_ dalis)*, 2 balai
 
 . Parenkite trumpą ataskaitą, kurioje:
