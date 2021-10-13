@@ -133,5 +133,7 @@ Duomenų centrai
   * `[ Create ]`
   ---
   * `[ Clone ]`
-  * Rack.Name = Sauliaus-Rack-A2
+  * Rack.Site = Site-Naujamiestis
+  * Rack.Location = Sauliaus-passive
+  * Rack.Name = Sauliaus-Naujamiestis-Rack-A1
   * `[ Create ]`
