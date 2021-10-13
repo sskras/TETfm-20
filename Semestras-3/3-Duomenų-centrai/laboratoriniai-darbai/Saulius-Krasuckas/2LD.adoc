@@ -47,4 +47,11 @@ Duomenų centrai
 [.text-left]
 === Eiga
 
-. Pirmas žingsnis: TODO
+. Naujo _Site_ kūrimas:
+
+  * `Site.Name` = `Site-Šiaurės-Miestelis` (naujas)
+  * `Site.Slug` = `site-siaures-miestelis` (pataisau)
+  * `Site.Status` = `Active`
+  * `Site.Region` = `Vilnius`
+  * `Site.Time zone` = `Europe/Vilnius`
+  *  `[Create]`
