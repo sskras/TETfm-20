@@ -1,3 +1,7 @@
 Duomenų centrai
 
 == Laboratorinis darbas nr. 2: +++<br />+++ Netbox DCIM
+
+=== Darbo tikslas
+
+* Susipažinti su duomenų centrų (DC) infrastruktūros modeliavimo įrankiu _Netbox_.
