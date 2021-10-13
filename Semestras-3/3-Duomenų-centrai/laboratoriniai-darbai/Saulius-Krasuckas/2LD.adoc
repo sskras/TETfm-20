@@ -41,3 +41,10 @@ Duomenų centrai
   * Išlaikykite vienodą stilių.
 
 . Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+
+<<<
+
+[.text-left]
+=== Eiga
+
+. Pirmas žingsnis: TODO
