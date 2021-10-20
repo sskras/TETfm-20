@@ -24,6 +24,10 @@ Norint nustatyti, aušinimo sistemos dydį, reikia suprasti, kiek uždaroje erdv
 Nėra jokios įtikinamos priežasties, kodėl visi šie skirtingi matai naudojami, tačiau bet kuris iš jų gali būti naudojamas galios ar vėsinimo pajėgumams išreikšti.
 Mišrus šių matų naudojimas sukelia daug beprasmiškos painiavos naudotojams ir specifikacijų rengėjams.
 
+Laimei, standartus nustatančiose organizacijose pastebima pasaulinė tendencija visus galios ir aušinimo pajėgumų matavimus perkelti į bendrą standartą -- vatus.
+Laikui bėgant bus atsisakyta archaiškų BTU ir tonos terminų.
+Dėl šios priežasties aušinimo ir galios pajėgumai toliau bus aptariami vatais.
+
 === Visos sistemos šiluminės galios nustatymas
 
 === Pavyzdys
