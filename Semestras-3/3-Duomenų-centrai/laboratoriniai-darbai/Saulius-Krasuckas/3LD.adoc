@@ -77,6 +77,8 @@ Greito įvertinimo privalumas yra ir tas, kad jį gali atlikti bet kas, neturėd
 3+| Viso                                                                                       | `+________+` W
 |===
 
+UPS sistemos galia: 2N atveju nereikia pridėti dubliuojančios sistemos galios.
+
 === Pavyzdys
 
 === Užduotis
