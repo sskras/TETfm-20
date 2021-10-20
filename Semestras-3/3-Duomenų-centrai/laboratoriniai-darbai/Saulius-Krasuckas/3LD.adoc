@@ -31,7 +31,11 @@ Dėl šios priežasties aušinimo ir galios pajėgumai toliau bus aptariami vata
 ==== Konvertavimo lentelė
 |===
 
-| Matavimo vienetas | Daugiklis | Norime
+| Matavimo vienetas | Daugiklis | Norime gauti
+| BTU/h             | 0,293     | vatus (W)
+| Vatai (W)         | 3,41      | BTU/h
+| Tonos             | 3,53      | Vatus (W)
+| Vatai (W)         | 0,000283  | Tonos
 
 |===
 
