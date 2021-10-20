@@ -28,6 +28,13 @@ Laimei, standartus nustatančiose organizacijose pastebima pasaulinė tendencija
 Laikui bėgant bus atsisakyta archaiškų BTU ir tonos terminų.
 Dėl šios priežasties aušinimo ir galios pajėgumai toliau bus aptariami vatais.
 
+==== Konvertavimo lentelė
+|===
+
+| Matavimo vienetas | Daugiklis | Norime
+
+|===
+
 === Visos sistemos šiluminės galios nustatymas
 
 === Pavyzdys
