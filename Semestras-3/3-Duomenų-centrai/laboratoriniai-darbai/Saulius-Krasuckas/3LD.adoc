@@ -1,1 +1,24 @@
+Duomenų centrai
 
+== Laboratorinis darbas nr. 3: +++<br />+++ DC išskiriamos šilumos skaičiavimas
+
+=== Darbo tikslas
+
+Išmokti suskaičiuoti DC išskiriamą šilumos kiekį.
+
+=== Bendra informacija
+
+=== Visos sistemos šiluminės galios nustatymas
+
+=== Pavyzdys
+
+=== Užduotis
+
+=== Parenkite trumpą ataskaitą, kurioje:
+
+=== Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+
+<<<
+
+[.text-left]
+=== Eiga
