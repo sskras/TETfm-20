@@ -59,6 +59,9 @@ Ventiliatoriai ir kompresoriai oro kondicionavimo įrenginiuose išskiria daug �
 Ši šiluma yra išleidžiama į išorę ir nesukuria šiluminės apkrovos duomenų centre.
 Tačiau ji yra, mažina oro kondicionavimo sistemos efektyvumą ir paprastais į ją atsižvelgiama, kai _<oro?>_ oro kondicionieriaus dydis.
 
+Galima atlikti išsamią šiluminę analizę naudojant kiekvieno DC elemento šiluminės galios duomenis, tačiau atlikus greitą įvertinimą pagal paprastas taisykles, gaunami rezultatai, kurie neviršija tipinės paklaidos, būdingos labiau sudėtingai analizei.
+Greito įvertinimo privalumas yra ir tas, kad jį gali atlikti bet kas, neturėdamas specialių žinių ar apmokymų.
+
 === Pavyzdys
 
 === Užduotis
