@@ -46,6 +46,10 @@ BTU per valandą, kaip kartais nurodoma duomenų lapuose, nėra būtina nustatan
 
 === Visos sistemos šiluminės galios nustatymas
 
+Bendra sistemos šiluminė galia yra sudedamųjų dalių šiluminės galios suma.
+Visą sistemą sudaro IT įranga ir kiti elementai, UPS, energijos skirstymo įrenginiai (PDU), oro kondicionieriai, apšvietimas ir žmonės.
+Laimei, šių elementų šiluminės galios rodiklius galima lengvai nustatyti naudojant paprastas ir standartizuotas taisykles.
+
 === Pavyzdys
 
 === Užduotis
