@@ -8,6 +8,10 @@ Išmokti suskaičiuoti DC išskiriamą šilumos kiekį.
 
 === Bendra informacija
 
+Visi elektros įrenginiai išskiria šilumą, kurią reikia šaltinti, kad įrangos temperatūra neviršytų priimtino lygio.
+Dauguma informacinių technologijų (IT) įrangos ir kitos įrangos, esančios DC ar tinklo patalpoje, yra aušinama oru.
+Norint nustatyti, aušinimo sistemos dydį, reikia suprasti, kiek uždaroje erdvėje esanti įranga sukuria šilumos.
+
 === Visos sistemos šiluminės galios nustatymas
 
 === Pavyzdys
