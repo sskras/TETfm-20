@@ -53,7 +53,7 @@ Laimei, šių elementų šiluminės galios rodiklius galima lengvai nustatyti na
 UPS ir maitinimo paskirstymo sistemų šiluminę galią sudaro fiksuoti nuostoliai ir nuostoliai, proporcingi darbinei galiai.
 Šie nuostoliai yra pakankamai vienodi įvairių prekės ženklų ir modelių įrangai, todėl juos galima apytiksliai apskaičiuoti be didelių paklaidų.
 Apšvietimą ir žmones taip pat galima lengvai įvertinti naudojant standartines vertes.
-Vienintelė informacija, kurios reikia visos sistemos vėsinimo apkrovai nustatyti, yra kelios lengvai prieinamos vertės, pavyzdžiui: grindų plotas kvadratiniais metrais ir vardinės elektros sistemos galia.
+Vienintelė informacija, kurios reikia visos sistemos vėsinimo apkrovai nustatyti, yra kelios lengvai prieinamos vertės, pavyzdžiui: grindų plotas kvadratiniais metrais ir vardinė  elektros sistemos galia.
 
 === Pavyzdys
 
