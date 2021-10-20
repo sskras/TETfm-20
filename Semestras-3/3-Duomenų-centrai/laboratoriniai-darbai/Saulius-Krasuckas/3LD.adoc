@@ -55,6 +55,10 @@ UPS ir maitinimo paskirstymo sistemų šiluminę galią sudaro fiksuoti nuostoli
 Apšvietimą ir žmones taip pat galima lengvai įvertinti naudojant standartines vertes.
 Vienintelė informacija, kurios reikia visos sistemos vėsinimo apkrovai nustatyti, yra kelios lengvai prieinamos vertės, pavyzdžiui: grindų plotas kvadratiniais metrais ir vardinė  elektros sistemos galia.
 
+Ventiliatoriai ir kompresoriai oro kondicionavimo įrenginiuose išskiria daug šilumos.
+Ši šiluma yra išleidžiama į išorę ir nesukuria šiluminės apkrovos duomenų centre.
+Tačiau ji yra, mažina oro kondicionavimo sistemos efektyvumą ir paprastais į ją atsižvelgiama, kai _<oro?>_ oro kondicionieriaus dydis.
+
 === Pavyzdys
 
 === Užduotis
