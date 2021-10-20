@@ -39,6 +39,11 @@ Dėl šios priežasties aušinimo ir galios pajėgumai toliau bus aptariami vata
 
 |===
 
+Visa iš kintamos srovės elektros (AC) tinklo suvartojama energija iš esmės paverčiama šiluma.
+Dėl šios priežasties IT įrangos šiluminė galia vatais yra tiesiog lygi jos suvartojamai energijai vatais.
+BTU per valandą, kaip kartais nurodoma duomenų lapuose, nėra būtina nustatant šiluminę įrangos galią.
+Šiluminė galia yra tiesiog tokia pati, kaip suvartojama galia.
+
 === Visos sistemos šiluminės galios nustatymas
 
 === Pavyzdys
