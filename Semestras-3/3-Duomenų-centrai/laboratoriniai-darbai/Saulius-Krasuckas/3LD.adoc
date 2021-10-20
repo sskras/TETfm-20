@@ -12,6 +12,18 @@ Visi elektros įrenginiai išskiria šilumą, kurią reikia šaltinti, kad įran
 Dauguma informacinių technologijų (IT) įrangos ir kitos įrangos, esančios DC ar tinklo patalpoje, yra aušinama oru.
 Norint nustatyti, aušinimo sistemos dydį, reikia suprasti, kiek uždaroje erdvėje esanti įranga sukuria šilumos.
 
+==== _Šiluminės galios matavimas_
+
+Šiluma yra energija, kuri paprastai išreiškiama džauliais, BTU, tonomis ar kalorijomis.
+Įprasti įrangos šilumos išėjimo rodikliai yra:
+
+  * BTU per valandą, 
+  * tonos per dieną ir 
+  * džauliai per sekundę (lygūs vatams).
+
+Nėra jokios įtikinamos priežasties, kodėl visi šie skirtingi matai naudojami, tačiau bet kuris iš jų gali būti naudojamas galios ar vėsinimo pajėgumams išreikšti.
+Mišrus šių matų naudojimas sukelia daug beprasmiškos painiavos naudotojams ir specifikacijų rengėjams.
+
 === Visos sistemos šiluminės galios nustatymas
 
 === Pavyzdys
