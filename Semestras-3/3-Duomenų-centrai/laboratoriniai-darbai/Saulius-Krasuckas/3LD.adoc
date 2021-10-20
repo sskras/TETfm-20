@@ -29,9 +29,10 @@ Laikui bėgant bus atsisakyta archaiškų BTU ir tonos terminų.
 Dėl šios priežasties aušinimo ir galios pajėgumai toliau bus aptariami vatais.
 
 ==== Konvertavimo lentelė
-|===
 
+|===
 | Matavimo vienetas | Daugiklis | Norime gauti
+
 | BTU/h             | 0,293     | vatus (W)
 | Vatai (W)         | 3,41      | BTU/h
 | Tonos             | 3,53      | Vatus (W)
@@ -61,6 +62,20 @@ Tačiau ji yra, mažina oro kondicionavimo sistemos efektyvumą ir paprastais į
 
 Galima atlikti išsamią šiluminę analizę naudojant kiekvieno DC elemento šiluminės galios duomenis, tačiau atlikus greitą įvertinimą pagal paprastas taisykles, gaunami rezultatai, kurie neviršija tipinės paklaidos, būdingos labiau sudėtingai analizei.
 Greito įvertinimo privalumas yra ir tas, kad jį gali atlikti bet kas, neturėdamas specialių žinių ar apmokymų.
+
+==== Sukuriamos šilumos apskaičiavimo lentelė
+
+|====
+  | Elementas    | Reikalingi duomenys   | Šilumos apskaičiavimas                              | Viso sukurtas šilumos kiekis
+  
+  | IT įranga    | Įrangos galia vatais  | Lygu įrangos galiai                                 | `+________+` W
+  | UPS          | Sistemos galia vatais | (0,04 x sistemos galia) + (0,05 x IT įrangos galia) | `+________+` W
+  | Elektros 
+  infrastruktūra | Sistemos galia vatais | (0,01 x sistemos galia) + (0,02 x IT įrangos galia) | `+________+` W
+  | Apšvietimas  | Apšv. patalpos plotas | 21,53 x patalpos plotas (m^2)                       | `+________+` W
+  | Žmonės       | Max. žmonių kiekis    | 100 x max. žmonių kiekis                            | `+________+` W
+3+| Viso                                                                                       | `+________+` W
+|===
 
 === Pavyzdys
 
