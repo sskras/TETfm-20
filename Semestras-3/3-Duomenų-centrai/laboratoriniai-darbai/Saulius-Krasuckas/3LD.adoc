@@ -16,9 +16,17 @@ Išmokti suskaičiuoti DC išskiriamą šilumos kiekį.
 
 === Parenkite trumpą ataskaitą, kurioje:
 
+  * Bus pateiktas skaičiavimo rezultatas;
+  * Bus pateiktas informatyvus sukuriamos informacijos (informacinis šilumos?) grafikas;
+  * Bus pateikta informacija apie pasirinktą serverį;
+  * Laikysitės principo: _Less is more_.  Svarbu kokybė;
+  * Išlaikykite vienodą stilių.
+
 === Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
 
 <<<
 
 [.text-left]
 === Eiga
+
+. TODO
