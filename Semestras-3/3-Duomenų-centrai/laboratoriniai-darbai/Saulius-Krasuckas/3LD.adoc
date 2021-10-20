@@ -81,6 +81,10 @@ UPS sistemos galia: 2N atveju nereikia pridėti dubliuojančios sistemos galios.
 
 === Pavyzdys
 
+Turime 465 m^2 dydžio DC, kurio galia 250 kW; jame yra 150 kompiuterinių spintų bei dirba 20 darbuotojų.
+Darome prielaidą, kad apkrova lygi 30% skaičiuojant nuo viso pajėgumo, t.y. 75 kW.
+Įvertinus visas prielaidas suskaičiuojame, jod DC sukuriama šiluminė galia yra 105 kW.
+
 === Užduotis
 
 Suskaičiuoti išskiriamą šilumos kiekį duomenų centre, kuris:
