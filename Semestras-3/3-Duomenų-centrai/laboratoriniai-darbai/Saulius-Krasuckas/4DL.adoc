@@ -66,3 +66,11 @@ Karštųjų ir šaltųjų praėjimų sistema sukuria natūralius koridorius arba
 Kadangi efektyvus DC pagrįstas eilių išdėstymu su praėjimais, kurie tarnauja kaip prieigos keliai, svarbu nustatyti ir suprasti kolonų išdėstymo įtaką.
 Jei kolona (pastato konstrukcijos dalis) yra spintų eilėje, ji gali užimti iki trijų stelažų (spintų) vietų.
 Dar blogiau: dėl jos gali būti panaikinta visa spintų eilė, jei ji užstoja praėjimą.
+
+_Atstumas tarp eilių (angl. _Pitch_)
+
+Eilių ilgis karštajame ir šaltajame koridoriuose reguliuojamas kompiuterių spintų pločio žingsniais, o tai suteikia daug lankstumo.
+Tačiau atstumas tarp eilių yra daug mažiau lankstus ir yra įrangos išdėstymo apribojimas.
+Atstumo tarp eilių matavimas vadinamas žingsniu, 
+t.y. tuo pačiu terminu, kuris vartojamas apibūdinant pasikartojantį atstumą tarp centrų, 
+pavyzdžiui varžtų sriegių, garso bangų ir kt.
