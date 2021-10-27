@@ -49,3 +49,6 @@ kuris patenka į įrangos oro išsiurbimo angas.
 Pagrindinė karšto ir šalto praėjimo koncepcija parodyta paveiksle:
 
 image::https://user-images.githubusercontent.com/74717106/139094860-44a1ba92-3328-4122-a981-aa8f4a30e999.png[]
+
+Čia eilėmis pavaizduotos IT įrangos spintos.
+Spintos išdėstytos taip, kad gretimos eilės būtų viena priešais kitą ir sudarytų karštuosius praėjimus.
