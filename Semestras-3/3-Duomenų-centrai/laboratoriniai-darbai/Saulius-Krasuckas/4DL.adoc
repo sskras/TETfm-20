@@ -13,6 +13,13 @@ Taip yra todėl, kad išdėstymas turi reikšmę aušinimo sistemos efektyvumui.
 Tai ypač pasakytina apie tradicinius perimetrinio aušinimo būdus.
 
 IT įrangos išdėstymas:
+
 * turi įtakos grįžtančiai temperatūrai į aušinimo įrenginius, 
 o netinkamas išdėstymas lemia žemesnę grįžtančio oro temperatūrą.
 Dėl žemesnės grįžtančio oro temperatūros sumažėja efektyvumas.
+
+* turi įtakos reikiamai oro tiekimo į aušinimo įrenginius temperatūrai,
+o blogas išdėstymas lemia, kad oro temperatūra yra žemesnė už reikiamą.
+Išdėstymas reikalauja žemesnės temperatūros, kad būtų užtikrinta ir išlaikoma reikalinga temperatūra prie IT apkrovos.
+Žemesnė nei reikalinga aušinimo sistemos tiekiamo oro temperatūra mažina vėsinimo įrenginių efektyvumą ir verčia juos sausinti orą, 
+o tai savo ruožtu didina energijos reikalaujančio drėkinimo poreikį.
