@@ -74,3 +74,6 @@ Tačiau atstumas tarp eilių yra daug mažiau lankstus ir yra įrangos išdėsty
 Atstumo tarp eilių matavimas vadinamas žingsniu, 
 t.y. tuo pačiu terminu, kuris vartojamas apibūdinant pasikartojantį atstumą tarp centrų, 
 pavyzdžiui varžtų sriegių, garso bangų ir kt.
+DC eilių išdėstymo žingsnis yra atstumas nuo vienos šaltos eilės vidurio iki kitos šaltos vidurinės (!) eilės:
+
+image::https://user-images.githubusercontent.com/74717106/139099408-a858481a-6cf4-446b-b1bf-ee92c3534bb8.png[]
