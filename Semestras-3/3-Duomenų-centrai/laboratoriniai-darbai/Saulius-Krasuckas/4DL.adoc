@@ -87,3 +87,11 @@ image::https://user-images.githubusercontent.com/74717106/139099798-ad5e58cb-7bf
 
 Didesnė erdvė šaltojoje zonoje naudinga, jeigu šalto oro padavimas organizuojamas per perforuotas pakeltų grindų groteles, 
 tokiu atveju turime daugiau šalto oro.
+
+Tarp eilių galų ir kitų kliūčių turi būti užtikrinta galimybė patekti į šias vietas vadovaujantis šiomis gairėmis:
+
+* Didesniuose DC dažnai pasirenkamos 3 "plytelės", kad būtų užtikrintas geresnis prieinamumas.
+* Kai kuriuose išplanavimuose gali būti pageidaujama, kad eilė baigtųsi prie sienos.
+Tačiau tapi sukuriama aklina "alėja".
+* Jei eilės ilgesnės nei 10 spintų, gali būti daromas tarpas, kad darbuotojai galėtų praeiti.
+Tai taip pat gali būti praktiškai svarbu technikams, kuriems reikia pasiekti abi spintos puses, kad nereikėtų eiti ilgo atstumo.
