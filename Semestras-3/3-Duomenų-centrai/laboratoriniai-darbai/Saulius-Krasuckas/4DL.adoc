@@ -84,3 +84,6 @@ Anksčiau, kai buvo populiarios pakeliamų grindų sistemos,
 Spintų žingsnis gali būti 7-9:
 
 image::https://user-images.githubusercontent.com/74717106/139099798-ad5e58cb-7bf9-48b5-8d8c-6de6eeef75a6.png[]
+
+Didesnė erdvė šaltojoje zonoje naudinga, jeigu šalto oro padavimas organizuojamas per perforuotas pakeltų grindų groteles, 
+tokiu atveju turime daugiau šalto oro.
