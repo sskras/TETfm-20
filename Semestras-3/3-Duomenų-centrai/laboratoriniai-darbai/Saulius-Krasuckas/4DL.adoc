@@ -7,3 +7,7 @@ Duomenų centrai
 Suprojektuoti IT įrangos įšdėstymą duomenų centre.
 
 === Bendra informacija
+
+Dauguma naudotojų nustema sužinoję, kad DC elektros energijos suvartojimui didelę įtaką daro įrangos išdėstymas.
+Taip yra todėl, kad išdėstymas turi reikšmę aušinimo sistemos efektyvumui.
+Tai ypač pasakytina apie tradicinius perimetrinio aušinimo būdus.
