@@ -11,3 +11,7 @@ Suprojektuoti IT įrangos įšdėstymą duomenų centre.
 Dauguma naudotojų nustema sužinoję, kad DC elektros energijos suvartojimui didelę įtaką daro įrangos išdėstymas.
 Taip yra todėl, kad išdėstymas turi reikšmę aušinimo sistemos efektyvumui.
 Tai ypač pasakytina apie tradicinius perimetrinio aušinimo būdus.
+
+IT įrangos išdėstymas:
+* turi įtakos grįžtančiai temperatūrai į aušinimo įrenginius, 
+o netinkamas išdėstymas lemia žemesnę grįžtančio oro temperatūrą.
