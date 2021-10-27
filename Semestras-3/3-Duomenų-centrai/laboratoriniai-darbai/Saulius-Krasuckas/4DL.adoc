@@ -37,3 +37,15 @@ Pagrindiniai principai apibrendinami taip:
 * Numatyti saugius ir patogius kelius;
 * Sumažinti izoliuotų IT įrenginių skaičių ir padidinti eilių ilgį;
 * Iš anksto suplanuokite visą įrangos išdėstymą, net jei ateities planai nėra apibrėžti.
+
+_Oro srauto kontrolė naudojant karštųjų ir šaltųjų zonų išdėstymą_
+
+"Karštųjų ir šaltųjų zonų" išdėstymo metodas yra gerai žinomas.
+Pagrindinis principas -- maksimaliai atskirti IT įrangos ištraukiamą ir įsiurbiamą orą, 
+sukuriant šaltuosius praėjimus, kuriuose yra tik įrangos įsiurbimo angos, 
+ir karštus koridorius, kuriuose yra tik įrangos karštas ištraukiamas oras.
+Tikslas yra sumažinti karšto išmetamo oro kiekį,
+kuris patenka į įrangos oro išsiurbimo angas.
+Pagrindinė karšto ir šalto praėjimo koncepcija parodyta paveiksle:
+
+image::https://user-images.githubusercontent.com/74717106/139094860-44a1ba92-3328-4122-a981-aa8f4a30e999.png[]
