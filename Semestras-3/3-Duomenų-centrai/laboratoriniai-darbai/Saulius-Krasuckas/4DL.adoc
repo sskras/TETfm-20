@@ -58,3 +58,8 @@ Palyginti su atsitiktiniu išdėstymu arba išdėstymu, kai visos lentynos išd�
 naudojant karštųjų ir šaltųjų praėjimų metodą galima padidinti galios tankį iki 100% ar daugiau, nesant karštųjų taškų, jei tinkamai išdėstyti aušinimo įrenginiai.
 Kadangi visoms aušinimo architektūroms (išskyrus visiškai izoliuotas kompiuterių spintų aušinimo sistemas) labai naudingas karštųjų ir šaltųjų zonų išdėstymas, 
 šis metodas yra pagrindinė bet kokio grindų išdėstymo projektavimo strategija.
+
+#### Užtikrinti saugius ir patogius praėjimo kelius
+
+Teisinis reikalavimas ir sveikas protas reikalauja įrengti tinkamus praėjimo kelius aplink įrangą.
+Karštųjų ir šaltųjų praėjimų sistema sukuria natūralius koridorius arba praėjimus, kurie yra gerai apibrėžti.
