@@ -63,3 +63,6 @@ Kadangi visoms aušinimo architektūroms (išskyrus visiškai izoliuotas kompiut
 
 Teisinis reikalavimas ir sveikas protas reikalauja įrengti tinkamus praėjimo kelius aplink įrangą.
 Karštųjų ir šaltųjų praėjimų sistema sukuria natūralius koridorius arba praėjimus, kurie yra gerai apibrėžti.
+Kadangi efektyvus DC pagrįstas eilių išdėstymu su praėjimais, kurie tarnauja kaip prieigos keliai, svarbu nustatyti ir suprasti kolonų išdėstymo įtaką.
+Jei kolona (pastato konstrukcijos dalis) yra spintų eilėje, ji gali užimti iki trijų stelažų (spintų) vietų.
+Dar blogiau: dėl jos gali būti panaikinta visa spintų eilė, jei ji užstoja praėjimą.
