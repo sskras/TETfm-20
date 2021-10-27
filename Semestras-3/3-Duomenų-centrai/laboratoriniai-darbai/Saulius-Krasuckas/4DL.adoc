@@ -27,3 +27,8 @@ o tai savo ruožtu didina energijos reikalaujančio drėkinimo poreikį.
 * turi įtakos aušinimo sisetmos oro srauto kiekiui, kuris turi būti naudojamas "maišant" DC orą, kad būtų suvienodinta temperatūra visoje patalpoje.
 Dėl netinkamo išdėstymo reikia papildomos maišymo ventiliatoriaus galios, o tai mažina efektyvumą,
 ir gali prireikti papildomų aušinimo įrenginių, kurie sunaudoja dar daugiau elektros energijos.
+
+=== Bendri principai
+
+Kadangi kompiuterių spinta (angl. _Rack_) yra pagrindinis išdėstymo elementas, galima taikyti standartizuotą grindų planavimo metodą.
+Pagrindiniai principai apibrendinami tapi:
