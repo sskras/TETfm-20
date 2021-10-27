@@ -52,3 +52,7 @@ image::https://user-images.githubusercontent.com/74717106/139094860-44a1ba92-332
 
 Čia eilėmis pavaizduotos IT įrangos spintos.
 Spintos išdėstytos taip, kad gretimos eilės būtų viena priešais kitą ir sudarytų karštuosius praėjimus.
+
+Didėjant galios tankiui, karštųjų ir šaltųjų zonų (praėjimų) privalumai tampa labai didelis.
+Palyginti su atsitiktiniu išdėstymu arba išdėstymu, kai visos lentynos išdėstytos ta pačia kryptimi, 
+naudojant karštųjų ir šaltųjų praėjimų metodą galima padidinti galios tankį iki 100% ar daugiau, nesant karštųjų taškų, jei tinkamai išdėstyti aušinimo įrenginiai.
