@@ -15,3 +15,4 @@ Tai ypač pasakytina apie tradicinius perimetrinio aušinimo būdus.
 IT įrangos išdėstymas:
 * turi įtakos grįžtančiai temperatūrai į aušinimo įrenginius, 
 o netinkamas išdėstymas lemia žemesnę grįžtančio oro temperatūrą.
+Dėl žemesnės grįžtančio oro temperatūros sumažėja efektyvumas.
