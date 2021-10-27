@@ -77,3 +77,10 @@ pavyzdžiui varžtų sriegių, garso bangų ir kt.
 DC eilių išdėstymo žingsnis yra atstumas nuo vienos šaltos eilės vidurio iki kitos šaltos vidurinės (!) eilės:
 
 image::https://user-images.githubusercontent.com/74717106/139099408-a858481a-6cf4-446b-b1bf-ee92c3534bb8.png[]
+
+Anksčiau, kai buvo populiarios pakeliamų grindų sistemos, 
+žingsnis buvo matuojamas "grindų plytelių" (angl. _Tiles_) vienetais, ar kitaip kvadratais, kurių kraštinė 600 mm.
+
+Spintų žingsnis gali būti 7-9:
+
+image::https://user-images.githubusercontent.com/74717106/139099798-ad5e58cb-7bf9-48b5-8d8c-6de6eeef75a6.png[]
