@@ -31,4 +31,9 @@ ir gali prireikti papildomų aušinimo įrenginių, kurie sunaudoja dar daugiau 
 === Bendri principai
 
 Kadangi kompiuterių spinta (angl. _Rack_) yra pagrindinis išdėstymo elementas, galima taikyti standartizuotą grindų planavimo metodą.
-Pagrindiniai principai apibrendinami tapi:
+Pagrindiniai principai apibrendinami taip:
+
+* Kontroliuoti oro srautą naudojant karštųjų ir šaltųjų angų išdėstymą;
+* Numatyti saugius ir patogius kelius;
+* Sumažinti izoliuotų IT įrenginių skaičių ir padidinti eilių ilgį;
+* Iš anksto suplanuokite visą įrangos išdėstymą, net jei ateities planai nėra apibrėžti.
