@@ -120,7 +120,7 @@ Suprojektuoti serverių patalpos išdėstymą
 ### Parenkite trumpą ataskaitą, kurioje:
 
 * Schemomis braižyti naudokite savo pasirinktą įrankį (pvz. naudokite `draw.io`);
-* Bus serverių patalpos išdėstymo planas, pažymėtos karštos zonos;
+* Bus serverių patalpos išdėstymo planas, pažymėtos karštos zonos (o idealiu atveju ir atskyrimo užsklandos);
 * Plane matysis reikalingi žymėjimai, matmenys;
 * Laikysitės principo: _Less is more_. Svarbu kokybė;
 * Išlaikykite vienodą stilių.
