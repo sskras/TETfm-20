@@ -56,3 +56,5 @@ Spintos išdėstytos taip, kad gretimos eilės būtų viena priešais kitą ir s
 Didėjant galios tankiui, karštųjų ir šaltųjų zonų (praėjimų) privalumai tampa labai didelis.
 Palyginti su atsitiktiniu išdėstymu arba išdėstymu, kai visos lentynos išdėstytos ta pačia kryptimi, 
 naudojant karštųjų ir šaltųjų praėjimų metodą galima padidinti galios tankį iki 100% ar daugiau, nesant karštųjų taškų, jei tinkamai išdėstyti aušinimo įrenginiai.
+Kadangi visoms aušinimo architektūroms (išskyrus visiškai izoliuotas kompiuterių spintų aušinimo sistemas) labai naudingas karštųjų ir šaltųjų zonų išdėstymas, 
+šis metodas yra pagrindinė bet kokio grindų išdėstymo projektavimo strategija.
