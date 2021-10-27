@@ -1,1 +1,9 @@
+Duomenų centrai
 
+== Laboratorinis darbas nr. 4: +++<br />+++ IT įrangos išdėstymas DC
+
+=== Darbo tikslas
+
+Suprojektuoti IT įrangos įšdėstymą duomenų centre.
+
+=== Bendra informacija
