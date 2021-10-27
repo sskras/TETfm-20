@@ -116,3 +116,12 @@ Suprojektuoti serverių patalpos išdėstymą
 * Internete suraskite kompiuterių spintą, kuri atitinka keliamus reikalavimus, 
   bei pridėkite jos specifikaciją prie ataskaitos.
 * Numatykite vietą 10 spintų augimui ateityje.
+
+### Parenkite trumpą ataskaitą, kurioje:
+
+* Schemomis braižyti naudokite savo pasirinktą įrankį (pvz. naudokite `draw.io`);
+* Bus serverių patalpos išdėstymo planas, pažymėtos karštos zonos;
+* Plane matysis reikalingi žymėjimai, matmenys;
+* Laikysitės principo: _Less is more_. Svarbu kokybė;
+* Išlaikykite vienodą stilių.
+
