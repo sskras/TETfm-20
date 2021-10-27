@@ -95,3 +95,19 @@ Tarp eilių galų ir kitų kliūčių turi būti užtikrinta galimybė patekti �
 Tačiau tapi sukuriama aklina "alėja".
 * Jei eilės ilgesnės nei 10 spintų, gali būti daromas tarpas, kad darbuotojai galėtų praeiti.
 Tai taip pat gali būti praktiškai svarbu technikams, kuriems reikia pasiekti abi spintos puses, kad nereikėtų eiti ilgo atstumo.
+
+### Užduotis
+
+Suprojektuoti serverių patalpos išdėstymą
+
+|=====
+  | Studentas             | Spintų kiekis | Spintos plotis, mm | Spintų ilgis, mm | Žingsnis
+ 
+5+| ...
+  | Justas Furmonas       | 20            | 600                | 1200             | 9
+5+| ...
+  | Saulius Krasuckas     | 25            | 800                | 1200             | 7
+5+| ...
+  | Rimvydas Ramanauskas  |
+5+| ...
+|=====
