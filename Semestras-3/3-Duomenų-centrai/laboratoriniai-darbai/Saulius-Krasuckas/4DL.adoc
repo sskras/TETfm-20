@@ -111,3 +111,8 @@ Suprojektuoti serverių patalpos išdėstymą
   | Rimvydas Ramanauskas  |
 5+| ...
 |=====
+
+* Suformuokite karšto/šalto oro zonas.
+* Internete suraskite kompiuterių spintą, kuri atitinka keliamus reikalavimus, 
+  bei pridėkite jos specifikaciją prie ataskaitos.
+* Numatykite vietą 10 spintų augimui ateityje.
