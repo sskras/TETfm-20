@@ -29,3 +29,5 @@ Debesų kompiuterija
     ir pateiktumėte juos per paslaugas (`Services`) aprašydami `yaml` apibrėžtis.
     `YAML` aprašo `Kubernetes` objektus.
     - https://www.katacoda.com/courses/kubernetes/creating-kubernetes-yaml-definitions[Deploy Containers Using YAML]
+  * Šiame scenarijuje paaiškinama, kaip paleisti paprastą daugiapakopę žiniatinklio programą naudojant `Kubernetes` ir `Docker`:
+    - https://www.katacoda.com/courses/kubernetes/guestbook[Deploy Guestbook example on Kubernetes]
