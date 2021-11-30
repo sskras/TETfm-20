@@ -8,3 +8,8 @@ Debesų kompiuterija
 
 * Išbandyti `Kubernetes` platformą
 * Atlikti pagrindinius veiksmus su `Kubernetes` resursais.
+
+[.text-left]
+=== Užduotis
+
+. Puslapyje *https://www.katacoda.com/courses/kubernetes[Learn Kubernetes using Interactive Browser-Based Labs | Katacoda]* susikurkite paskyrą.
