@@ -151,10 +151,19 @@ https://asciinema.org/a/452711
 
   * Žingsnis #4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
-    - įjungiame _Dashboard_ naudodami _Minicube_:
+    - įgaliname _Minicube_ priedą _Dashboard_:
 +
 ----
 $ minikube addons enable dashboard
 * The 'dashboard' addon is enabled
 ----
 https://asciinema.org/a/452714
+
+    - diegiame _Kubernetes Dashboard_ pagal duotą YAML šabloną:
++
+----
+$ kubectl apply -f /opt/kubernetes-dashboard.yaml
+namespace/kubernetes-dashboard configured
+service/kubernetes-dashboard-katacoda created
+----
+https://asciinema.org/a/452718
