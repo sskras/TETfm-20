@@ -2,6 +2,7 @@ Debesų kompiuterija
 
 [.text-center]
 === Laboratorinis darbas nr. 3
+
 [.text-center]
 == Susipažinimas su Kubernetes platforma
 
@@ -19,7 +20,7 @@ Debesų kompiuterija
   * Čia naudosite `Minicube` -- tai įrankis, kuriuo lengva pakeisti `Kubernetes`.
     `Minicube` paleidžia vieno mazgo `Kubernetes` klasterį virtualioje mašinoje nešiojamame kompiuteryje naudotojams, 
     norintiems išbandyti `Kubernetes` arba kurti su ja kasdien:
-    - https://www.katacoda.com/courses/kubernetes/launch-single-nde-cluster[Launch Single Node Kubernetes Cluster]
+    - https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster[Launch Single Node Kubernetes Cluster]
   * Šiame scenarijuje sužinosite, kaip naudoti `Kubectl`, 
     kad sukurtumėte ir paleistumėte diegimo, replikavimo valdiklius 
     ir pateiktumėte juos per paslaugas (angl. _Services_) be papildomų `yaml` konfigūracijų.
