@@ -91,7 +91,7 @@ https://asciinema.org/a/452671
 $ kubectl get nodes
 NAME       STATUS     ROLES    AGE   VERSION
 minikube   NotReady   master   16s   v1.17.3
-$ 
+
 $ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   18s   v1.17.3
