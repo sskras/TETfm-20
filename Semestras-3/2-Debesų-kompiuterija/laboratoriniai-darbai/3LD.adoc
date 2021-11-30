@@ -134,6 +134,7 @@ service/first-deployment exposed
 https://asciinema.org/a/452709
 
     - susirandame alokuotą TCP-portą ir vykdome HTTP-užklausą:
++
 ----
 $ kubectl get svc first-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}'
 31900
