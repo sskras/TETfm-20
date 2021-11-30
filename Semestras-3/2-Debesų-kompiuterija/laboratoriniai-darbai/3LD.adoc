@@ -148,3 +148,13 @@ $ curl host01:$PORT
 <h1>This request was processed by host: first-deployment-666c48b44-92c2z</h1>
 ----
 https://asciinema.org/a/452711
+
+  * Žingsnis #4, *_Kubernetes Dashboard web-UI_ sąsaja*
+
+    - įjungiame _Dashboard_ naudodami _Minicube_:
++
+----
+$ minikube addons enable dashboard
+* The 'dashboard' addon is enabled
+----
+https://asciinema.org/a/452714
