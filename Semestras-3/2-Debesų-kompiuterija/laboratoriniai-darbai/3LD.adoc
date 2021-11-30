@@ -74,7 +74,7 @@ https://asciinema.org/a/qcbhdN5CZysBQzNNef4rhwaz6
 
   * Žingsnis #2, *klasterio informacija*
 
-    - parodome klasterio detales
+    - rodome klasterio būseną:
 +
 ----
 $ kubectl cluster-info
@@ -83,4 +83,13 @@ KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/ser
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ----
-+++<a href="https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg" target="_blank"><img src="https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg.svg" /></a>+++
+https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg
+
+    - klasterio nodų sąrašas:
++
+----
+$ kubectl get nodes
+NAME       STATUS   ROLES    AGE   VERSION
+minikube   Ready    master   16m   v1.17.3
+----
+https://asciinema.org/a/WUoVCwEImwLqBJbb6uLmdMMpb
