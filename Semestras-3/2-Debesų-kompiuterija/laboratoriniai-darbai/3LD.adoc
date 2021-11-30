@@ -89,10 +89,14 @@ https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg
 +
 ----
 $ kubectl get nodes
+NAME       STATUS     ROLES    AGE   VERSION
+minikube   NotReady   master   16s   v1.17.3
+$ 
+$ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
-minikube   Ready    master   16m   v1.17.3
+minikube   Ready    master   18s   v1.17.3
 ----
-https://asciinema.org/a/WUoVCwEImwLqBJbb6uLmdMMpb
+https://asciinema.org/a/oXbQDHiAffxp5yhy4hTWtPTPn
 
   * Žingsnis #3, *diegiame konteinerius*
 
