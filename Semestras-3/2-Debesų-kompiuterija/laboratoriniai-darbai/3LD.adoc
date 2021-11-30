@@ -114,9 +114,11 @@ https://asciinema.org/a/452688
 $ kubectl get pods
 NAME                               READY   STATUS              RESTARTS   AGE
 first-deployment-666c48b44-92c2z   0/1     ContainerCreating   0          3s
+
 $ kubectl get pods
 NAME                               READY   STATUS              RESTARTS   AGE
 first-deployment-666c48b44-92c2z   0/1     ContainerCreating   0          4s
+
 $ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
 first-deployment-666c48b44-92c2z   1/1     Running   0          5s
@@ -130,3 +132,18 @@ $ kubectl expose deployment first-deployment --port=80 --type=NodePort
 service/first-deployment exposed
 ----
 https://asciinema.org/a/452709
+
+    - susirandame alokuotą TCP-portą ir vykdome HTTP-užklausą:
+----
+$ kubectl get svc first-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}'
+31900
+
+$ export PORT=$(kubectl get svc first-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')
+
+$ echo "Accessing host01:$PORT"
+Accessing host01:31900
+
+$ curl host01:$PORT
+<h1>This request was processed by host: first-deployment-666c48b44-92c2z</h1>
+----
+https://asciinema.org/a/452711
