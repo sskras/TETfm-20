@@ -15,3 +15,7 @@ Debesų kompiuterija
 === Užduotis
 
 . Puslapyje *https://www.katacoda.com/courses/kubernetes[Learn Kubernetes using Interactive Browser-Based Labs | Katacoda]* susikurkite paskyrą.
+. Atlikite šias užduotis:
+  * Čia naudosite `Minicube` -- tai įrankis, kuriuo lengva pakeisti `Kubernetes`.
+    `Minicube` paleidžia vieno mazgo `Kubernetes` klasterį virtualioje mašinoje nešiojamame kompiuteryje naudotojams, 
+    norintiems išbandyti `Kubernetes` arba kurti su ja kasdien.
