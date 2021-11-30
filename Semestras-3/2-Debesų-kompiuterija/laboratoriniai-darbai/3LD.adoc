@@ -43,7 +43,9 @@ Ataskaitos turinys:
 === Darbo eiga
 
 . Scenarijus *Launch Single Node Kubernetes Cluster*
+
   * Žingsnis #1, *startuojame `Minikube`*
+
     - patikriname versiją:
 +
 ----
@@ -51,8 +53,8 @@ $ minikube version
 minikube version: v1.8.1
 commit: cbda04cf6bbe65e987ae52bb393c10099ab62014
 ----
-+
 https://asciinema.org/connect/17d6505f-db3f-4ac3-b2f4-3e357d57a4bb
+
     - startuojame VM su `Kubernetes` klasteriu
 +
 ----
@@ -68,5 +70,17 @@ $ minikube start --wait=false
 * Configuring local host environment ...
 * Done! kubectl is now configured to use "minikube"
 ----
-+
 https://asciinema.org/a/qcbhdN5CZysBQzNNef4rhwaz6
+
+  * Žingsnis #2, *klasterio informacija*
+
+    - parodome klasterio detales
++
+----
+$ kubectl cluster-info
+Kubernetes master is running at https://172.17.0.86:8443
+KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+----
++++<a href="https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg" target="_blank"><img src="https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg.svg" /></a>+++
