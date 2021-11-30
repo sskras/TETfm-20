@@ -1,4 +1,10 @@
 Debesų kompiuterija
 
 [.text-center]
-== Laboratorinis darbas nr. 3 +++<br /><br />+++ Susipažinimas su `Kubernetes` platforma
+== Laboratorinis darbas nr. 3 +++<br /><br />+++ Susipažinimas su Kubernetes platforma
+
+[.text-left]
+=== Darbo tikslas
+
+* Išbandyti `Kubernetes` platformą
+* Atlikti pagrindinius veiksmus su `Kubernetes` resursais.
