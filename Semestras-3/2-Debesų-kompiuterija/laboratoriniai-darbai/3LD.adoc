@@ -20,3 +20,8 @@ Debesų kompiuterija
     `Minicube` paleidžia vieno mazgo `Kubernetes` klasterį virtualioje mašinoje nešiojamame kompiuteryje naudotojams, 
     norintiems išbandyti `Kubernetes` arba kurti su ja kasdien:
     - https://www.katacoda.com/courses/kubernetes/launch-single-nde-cluster[Launch Single Node Kubernetes Cluster]
+  * Šiame scenarijuje sužinosite, kaip naudoti `Kubectl`, 
+    kad sukurtumėte ir paleistumėte diegimo, replikavimo valdiklius 
+    ir pateiktumėte juos per paslaugas (`Services`) be papildomų `yaml` konfigūracijų.
+    Tai leidžia konteinerius greitai startuoti klasteryje.
+    - https://www.katacoda.com/courses/kubernetes/kubectl-run-containers[Start containers using Kubectl]
