@@ -53,7 +53,7 @@ $ minikube version
 minikube version: v1.8.1
 commit: cbda04cf6bbe65e987ae52bb393c10099ab62014
 ----
-https://asciinema.org/connect/17d6505f-db3f-4ac3-b2f4-3e357d57a4bb
+https://asciinema.org/a/452640
 
     - startuojame VM su `Kubernetes` klasteriu
 +
@@ -70,7 +70,7 @@ $ minikube start --wait=false
 * Configuring local host environment ...
 * Done! kubectl is now configured to use "minikube"
 ----
-https://asciinema.org/a/qcbhdN5CZysBQzNNef4rhwaz6
+https://asciinema.org/a/452643
 
   * Žingsnis #2, *klasterio informacija*
 
@@ -83,7 +83,7 @@ KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/ser
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ----
-https://asciinema.org/a/W7G6hV6vzy6v6X4VhBWP6rBxg
+https://asciinema.org/a/452671
 
     - klasterio nodų sąrašas:
 +
@@ -96,7 +96,7 @@ $ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   18s   v1.17.3
 ----
-https://asciinema.org/a/oXbQDHiAffxp5yhy4hTWtPTPn
+https://asciinema.org/a/452686
 
   * Žingsnis #3, *diegiame konteinerius*
 
@@ -106,16 +106,22 @@ https://asciinema.org/a/oXbQDHiAffxp5yhy4hTWtPTPn
 $ kubectl create deployment first-deployment --image=kataconda/docker-http-server
 deployment.apps/first-deployment created
 ----
-https://asciinema.org/a/UjfssxMQ3GlXljwh1hLQIFZQd
+https://asciinema.org/a/452688
 
     - tikriname diegimo būseną:
 +
 ----
 $ kubectl get pods
-NAME                                READY   STATUS             RESTARTS   AGE
-first-deployment-75959ffcfb-pttmg   0/1     ImagePullBackOff   0          7m50s
+NAME                               READY   STATUS              RESTARTS   AGE
+first-deployment-666c48b44-92c2z   0/1     ContainerCreating   0          3s
+$ kubectl get pods
+NAME                               READY   STATUS              RESTARTS   AGE
+first-deployment-666c48b44-92c2z   0/1     ContainerCreating   0          4s
+$ kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
+first-deployment-666c48b44-92c2z   1/1     Running   0          5s
 ----
-https://asciinema.org/a/0Ul9yzCIDbQRI5TDWuLsYLh1E
+https://asciinema.org/a/452708
 
     - paviešiname konteinerį tinkle:
 +
@@ -123,4 +129,4 @@ https://asciinema.org/a/0Ul9yzCIDbQRI5TDWuLsYLh1E
 $ kubectl expose deployment first-deployment --port=80 --type=NodePort
 service/first-deployment exposed
 ----
-https://asciinema.org/a/vkYG3QvR3Uhw2iDS9SzWC1791
+https://asciinema.org/a/452709
