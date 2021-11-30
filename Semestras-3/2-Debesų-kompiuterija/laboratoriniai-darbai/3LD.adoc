@@ -39,3 +39,34 @@ Ataskaitos turinys:
   * Failo dydis < 5 MiB, formatas `PDF`.
 
 <<<
+
+=== Darbo eiga
+
+. Scenarijus *Launch Single Node Kubernetes Cluster*
+  * Žingsnis #1, *startuojame `Minikube`*
+    - patikriname versiją:
++
+----
+$ minikube version
+minikube version: v1.8.1
+commit: cbda04cf6bbe65e987ae52bb393c10099ab62014
+----
++
+https://asciinema.org/connect/17d6505f-db3f-4ac3-b2f4-3e357d57a4bb
+    - startuojame VM su `Kubernetes` klasteriu
++
+----
+$ minikube start --wait=false
+* minikube v1.8.1 on Ubuntu 18.04
+* Using the none driver based on user configuration
+* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
+* OS release is Ubuntu 18.04.4 LTS
+* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
+  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
+* Launching Kubernetes ... 
+* Enabling addons: default-storageclass, storage-provisioner
+* Configuring local host environment ...
+* Done! kubectl is now configured to use "minikube"
+----
++
+https://asciinema.org/a/qcbhdN5CZysBQzNNef4rhwaz6
