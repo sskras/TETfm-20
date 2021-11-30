@@ -112,3 +112,11 @@ NAME                                READY   STATUS             RESTARTS   AGE
 first-deployment-75959ffcfb-pttmg   0/1     ImagePullBackOff   0          7m50s
 ----
 https://asciinema.org/a/0Ul9yzCIDbQRI5TDWuLsYLh1E
+
+    - paviešiname konteinerį tinkle:
++
+----
+$ kubectl expose deployment first-deployment --port=80 --type=NodePort
+service/first-deployment exposed
+----
+https://asciinema.org/a/vkYG3QvR3Uhw2iDS9SzWC1791
