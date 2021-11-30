@@ -149,7 +149,7 @@ $ curl host01:$PORT
 ----
 https://asciinema.org/a/452711
 
-  * Žingsnis #4, *_Kubernetes Dashboard web-UI_ sąsaja*
+  * Žingsnis #4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
     - įjungiame _Dashboard_ naudodami _Minicube_:
 +
