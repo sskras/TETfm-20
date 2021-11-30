@@ -94,7 +94,7 @@ minikube   Ready    master   16m   v1.17.3
 ----
 https://asciinema.org/a/WUoVCwEImwLqBJbb6uLmdMMpb
 
-  * Žingsnis #2, *diegiame konteinerius*
+  * Žingsnis #3, *diegiame konteinerius*
 
     - konteinerio diegimas klasteryje:
 +
@@ -103,3 +103,12 @@ $ kubectl create deployment first-deployment --image=kataconda/docker-http-serve
 deployment.apps/first-deployment created
 ----
 https://asciinema.org/a/UjfssxMQ3GlXljwh1hLQIFZQd
+
+    - tikriname diegimo būseną:
++
+----
+$ kubectl get pods
+NAME                                READY   STATUS             RESTARTS   AGE
+first-deployment-75959ffcfb-pttmg   0/1     ImagePullBackOff   0          7m50s
+----
+https://asciinema.org/a/0Ul9yzCIDbQRI5TDWuLsYLh1E
