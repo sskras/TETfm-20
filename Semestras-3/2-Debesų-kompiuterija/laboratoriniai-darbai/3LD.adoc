@@ -1,4 +1,4 @@
 Debesų kompiuterija
 
 [.text-center]
-== Laboratorinis darbas nr. 3: +++<br />+++ `Kubernetes` platformos išbandymas
+== Laboratorinis darbas nr. 3: +++<br />+++ Susipažinimas su `Kubernetes` platforma
