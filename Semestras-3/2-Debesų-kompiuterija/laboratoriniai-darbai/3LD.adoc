@@ -181,3 +181,10 @@ dashboard-metrics-scraper-7b64584c5c-7x46c   1/1     Running             0      
 $ 
 ----
 https://asciinema.org/a/452725
+
+    - tikriname web-UI sąsają tiesiogiai:  +
+      https://2886795274-30000-cykoria04.environments.katacoda.com/
++
+image::https://user-images.githubusercontent.com/74717106/144148514-50354ed8-1360-4e07-b3d0-df72c405f835.png[]
+---
+image::https://user-images.githubusercontent.com/74717106/144148533-842c3f90-4b59-4a7a-817e-d0000695ece9.png[]
