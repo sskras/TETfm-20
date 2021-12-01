@@ -167,3 +167,17 @@ namespace/kubernetes-dashboard configured
 service/kubernetes-dashboard-katacoda created
 ----
 https://asciinema.org/a/452718
+
+    - stebime _Dashboard_ konteinerių startą:
++
+----
+$ kubectl get pods -n kubernetes-dashboard -w
+NAME                                         READY   STATUS              RESTARTS   AGE
+dashboard-metrics-scraper-7b64584c5c-7x46c   0/1     ContainerCreating   0          1s
+kubernetes-dashboard-79d9cd965-7f5pb         0/1     ContainerCreating   0          1s
+kubernetes-dashboard-79d9cd965-7f5pb         1/1     Running             0          1s
+dashboard-metrics-scraper-7b64584c5c-7x46c   1/1     Running             0          2s
+^C
+$ 
+----
+https://asciinema.org/a/452725
