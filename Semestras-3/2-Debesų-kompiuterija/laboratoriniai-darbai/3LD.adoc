@@ -25,7 +25,7 @@ Debesų kompiuterija
     kad sukurtumėte ir paleistumėte diegimo, replikavimo valdiklius 
     ir pateiktumėte juos per paslaugas (angl. _Services_) be papildomų `yaml` konfigūracijų.
     Tai leidžia konteinerius greitai startuoti klasteryje.
-    - https://www.katacoda.com/courses/kubernetes/kubectl-run-containers[Start containers using Kubectl]
+    - https://www.katacoda.com/courses/kubernetes/kubectl-run-containers[Deploy Containers Using Kubectl]
   * Šiame scenarijuje sužinosite, kaip naudoti `Kubectl`, kad sukurtumėte ir startuotumėte diegimo, replikavimo valdiklius
     ir pateiktumėte juos per paslaugas (angl. _Services_) aprašydami `yaml` apibrėžtis.
     `YAML` aprašo `Kubernetes` objektus.
