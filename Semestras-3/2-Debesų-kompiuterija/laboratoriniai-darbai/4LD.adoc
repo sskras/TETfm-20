@@ -13,6 +13,7 @@ Debesų kompiuterija
 
 [.text-left]
 === Prisijungimai
+
 ==== Prie serverio nr. 1 (iš asmeninio tinklo) 
 |===
   | Service  | Username  | TCP port         | IP                | Hostname
@@ -23,7 +24,6 @@ Debesų kompiuterija
 ^*^ -- `**x**` reikšmę rasite žemiau:
 
 ==== Prie serverio nr. 2 (iš serverio nr. 1)
-
 |===
   | `**x**` | Studentas                        | Service  | Username     | TCP port  | IP                 | Hostname
 
@@ -52,7 +52,8 @@ Debesų kompiuterija
 
 === _Inventory failo paruošimas:_
 
-
+Inventoriaus faile pateikiama informacija apie mašinas, kurias valdysite naudodami `Ansible`.
+Į inventoriaus failą galite įtraukti nuo vieno iki kelių šimtų serverių, o prieglobos kompiuterius (angl. _Remote computers_ ar _hosts_ ?) galima suskirstyti į grupes ir pogrupius.
 
 === _Tikrinimas:_
 
