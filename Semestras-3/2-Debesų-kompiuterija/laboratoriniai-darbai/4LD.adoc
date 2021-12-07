@@ -55,6 +55,7 @@ Debesų kompiuterija
 Inventoriaus faile pateikiama informacija apie mašinas, kurias valdysite naudodami `Ansible`.
 Į inventoriaus failą galite įtraukti nuo vieno iki kelių šimtų serverių, 
 o prieglobos kompiuterius (angl. _Remote computers_ ar _hosts_ ?) galima suskirstyti į grupes ir pogrupius.
+
 Inventoriaus failas taip pat dažnai naudojamas nustatyti kintamiesiems, kurie galios tik tam tikriems prieglobos kompiuteriams arba grupėms, 
 kad juos būtų galima naudoti grojaraščiuose (angl. _Playbooks_ ?) ir šablonuose (angl. _Templates_ ?).
 
@@ -65,6 +66,9 @@ Inventoriaus failas yra `/etc/ansible/hosts`.  Jis pasiekiamas pvz. taip:  +
 Įdiegiant `Ansible` pateikiamas ir numatytasis inventoriaus failas.
 Jame yra keletas pavyzdžių, kuriais galite remtis nustatydami inventorių.
 
+Toliau pateiktame pavyzdyje apibrėžiama grupė pavadinimui `[serveriai]`.
+Joje yra trys skirtingi serveriai, kiekvienas identifikuojamas pasirinktiniu slapyvardžiu:
+`server1`, `server2`, `server3`.
 
 === _Tikrinimas:_
 
