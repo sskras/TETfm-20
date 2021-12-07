@@ -5,3 +5,34 @@ Debesų kompiuterija
 
 [.text-center]
 == Automatizavimas `Ansible` pagalba
+
+[.text-left]
+=== Darbo tikslas
+
+* Išbandyti `Ansible` įrankį.
+
+[.text-left]
+=== Prisijungimai
+==== Prie serverio nr. 1 (iš asmeninio tinklo) 
+|===
+  | Service  | Username  | TCP port         | IP                | Hostname
+
+  | SSH      | `stud`    | `45**x**22` ^*^  | `158.129.200.236` | `cc-lab`
+|===
+
+^*^ -- `**x**` reikšmę rasite žemiau:
+
+==== Prie serverio nr. 2 (iš serverio nr. 1)
+
+|===
+  | `**x**` | Studentas                        | Service  | Username     | TCP port  | IP                 | Hostname
+
+  | 1       | Šarūnas Budrevičius           .8+| SSH   .8+| `stud`    .8+| `22`      | `10.128.67.13`  .8+| `cc-lab`
+  | 2       | Areta Jaškūnaitė                                                       | `10.128.67.21`               
+  | 3       | Darius Jelinskij                                                       | `10.128.67.14`               
+  | 4       | Edgar Kalinovski                                                       | `10.128.67.17`               
+  | 5       | Saulius Krasuckas                                                      | `10.128.67.20`               
+  | 6       | Andrius Kęstutis Stanaitis                                             | `10.128.67.20`               
+  | 7       | Povilas Stepkovičius                                                   | `10.128.67.16`               
+  | 8       | Gediminas Zinkus                                                       | `10.128.67.18`               
+|===
