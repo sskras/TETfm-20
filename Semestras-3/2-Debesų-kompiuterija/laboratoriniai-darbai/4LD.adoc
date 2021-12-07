@@ -62,6 +62,9 @@ Inventoriaus failas yra `/etc/ansible/hosts`.  Jis pasiekiamas pvz. taip:  +
 
 * `sudo nano /etc/ansible/hosts`
 
+Įdiegiant `Ansible` pateikiamas ir numatytasis inventoriaus failas.
+Jame yra keletas pavyzdžių, kuriais galite remtis nustatydami inventorių.
+
 
 === _Tikrinimas:_
 
