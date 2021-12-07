@@ -4,4 +4,4 @@ Debesų kompiuterija
 === Laboratorinis darbas nr. 4
 
 [.text-center]
-== Automatizaimas `Ansible` pagalba
+== Automatizavimas `Ansible` pagalba
