@@ -58,6 +58,11 @@ o prieglobos kompiuterius (angl. _Remote computers_ ar _hosts_ ?) galima suskirs
 Inventoriaus failas taip pat dažnai naudojamas nustatyti kintamiesiems, kurie galios tik tam tikriems prieglobos kompiuteriams arba grupėms, 
 kad juos būtų galima naudoti grojaraščiuose (angl. _Playbooks_ ?) ir šablonuose (angl. _Templates_ ?).
 
+Inventoriaus failas yra `/etc/ansible/hosts`.  Jis pasiekiamas pvz. taip:  +
+
+* `sudo nano /etc/ansible/hosts`
+
+
 === _Tikrinimas:_
 
 
