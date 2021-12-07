@@ -36,3 +36,16 @@ Debesų kompiuterija
   | 7       | Povilas Stepkovičius                                                   | `10.128.67.16`               
   | 8       | Gediminas Zinkus                                                       | `10.128.67.18`               
 |===
+
+
+[.text-left]
+=== Užduotis
+
+. Prisijunkite prie jūsų **serverio nr. 1**
+. Atlikite šias užduotis:
+  * Atsinaujinkite:  +
+    `sudo apt update`
+  * Įdiekite `Ansible`:  +
+    `sudo apt install ansible`
+  * Užtikrinkite, kad **serveris nr. 1** pasiektų **serverį nr. 2** naudojantis SSH raktais  +
+    (https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys])
