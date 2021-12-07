@@ -69,6 +69,20 @@ Jame yra keletas pavyzdžių, kuriais galite remtis nustatydami inventorių.
 Toliau pateiktame pavyzdyje apibrėžiama grupė pavadinimui `[serveriai]`.
 Joje yra trys skirtingi serveriai, kiekvienas identifikuojamas pasirinktiniu slapyvardžiu:
 `server1`, `server2`, `server3`.
+Būtinai pakeiskite paryškintus IP adresus savo `Ansible` mašinų IP adresais:
+
+```
+[servers]
+server1 ansible_host=20.0.13.11
+server2 ansible_host=20.0.13.12
+server3 ansible_host=20.0.13.13
+```
+
+Paruoškite inventoriaus failą ir jame nurodykite Jums priskirtą serverį nr. 2.
+
+Pasitikrinkite savo inventoriaus failą:
+
+* `ansible-inventory --list -y`
 
 === _Tikrinimas:_
 
