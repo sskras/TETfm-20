@@ -53,7 +53,8 @@ Debesų kompiuterija
 === _Inventory failo paruošimas:_
 
 Inventoriaus faile pateikiama informacija apie mašinas, kurias valdysite naudodami `Ansible`.
-Į inventoriaus failą galite įtraukti nuo vieno iki kelių šimtų serverių, o prieglobos kompiuterius (angl. _Remote computers_ ar _hosts_ ?) galima suskirstyti į grupes ir pogrupius.
+Į inventoriaus failą galite įtraukti nuo vieno iki kelių šimtų serverių, 
+o prieglobos kompiuterius (angl. _Remote computers_ ar _hosts_ ?) galima suskirstyti į grupes ir pogrupius.
 
 === _Tikrinimas:_
 
