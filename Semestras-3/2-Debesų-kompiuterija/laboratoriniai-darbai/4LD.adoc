@@ -1,1 +1,13 @@
+Debesų kompiuterija
 
+[.text-center]
+=== Laboratorinis darbas nr. 4
+
+[.text-center]
+== `Ansible` įrankio išbandymas
+
+[.text-left]
+=== Darbo tikslas
+
+* Išbandyti `Kubernetes` platformą
+* Atlikti pagrindinius veiksmus su `Kubernetes` resursais.
