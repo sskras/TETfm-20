@@ -5,9 +5,3 @@ Debesų kompiuterija
 
 [.text-center]
 == `Ansible` įrankio išbandymas
-
-[.text-left]
-=== Darbo tikslas
-
-* Išbandyti `Kubernetes` platformą
-* Atlikti pagrindinius veiksmus su `Kubernetes` resursais.
