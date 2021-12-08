@@ -86,7 +86,7 @@ Pasitikrinkite savo inventoriaus failą:
 
 === _Tikrinimas:_
 
-Sukūrėte inventoriaus failą, į kurį įtraukėte savo serverius (serverį).
+Sukūrėte inventoriaus failą, į kurį įtraukėte savo serverius (serverį nr. 2).
 Laikas patikrinti, ar `Ansible` gali prisijungti prie prie šių serverių per SSH.
 
 Galite naudoti argumentą `-u` norėdami nurodyti nuotolinės sistemos naudotoją.
@@ -95,6 +95,15 @@ Jei jis nenurodytas, `Ansible` bandys prisijungti kaip dabartinis jūsų sistemo
 Iš `Ansible` valdymo mazgo paleiskite:
 
 * `ansible all -m ping -u stud`
+
+Rezultatas turėtų būti panašus į:
+
+```
+server1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
 
 === _Nuotolinis komandų vykdymas:_
 
