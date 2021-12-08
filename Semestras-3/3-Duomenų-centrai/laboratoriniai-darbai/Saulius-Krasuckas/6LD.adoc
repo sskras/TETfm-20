@@ -83,3 +83,13 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Daumantas Tinteris    >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Gediminas Zinkus      >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
 |===
+
+* Atlikite tyrimą ir atsakykite, kas yra mikrosegmentavimas.
+
+=== Parenkite trumpą ataskaitą, kurioje:
+
+* Bus pateikta medžiaga (ir specifikacijos) ne mažiau nei apie dvi ugniasienes.
+* Laikysitės principo: _Less is more_; svarbu kokybė.
+* Išlaikykite vienodą stilių.
+
+=== Parengtą ataskaitą PDF formatu įkelkite į `Moodle` sistemą
