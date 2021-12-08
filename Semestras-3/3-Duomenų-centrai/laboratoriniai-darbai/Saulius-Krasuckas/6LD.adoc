@@ -30,6 +30,10 @@ Vis didėjančių grėsmių akivaizdoje IT skyriai supranta, kad DC apsauga nuo 
 
 
 ==== DC ugniasienės privalumai
+
+Patikimas ugniasienės sprendimas užtikrina DC apsaugą „iš Šiaurės į Pietus“ ir „iš Rytų į Vakarus“:
+
+
 ==== Kaip veikia DC ugniasienė
 
 === Užduotis
