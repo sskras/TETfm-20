@@ -63,3 +63,23 @@ Parinkti ir apžvelgti ugniasienes.
 
 * Internete raskite bent dviejų skirtingų gamintojų naujos kartos DC ugniasienes (NGFW, angl. _Next-Generation Firewall_)
 ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
+
+|===
+  | Studentas              | Threat Protections, Gbps  | SSL/TLS Inspections, Gbps  | New Session rate (per second)
+  
+  | Justas Furmonas        |                           |                            | 
+  | Dovydas Gedminas       |                           |                            | 
+  | Benas Grigalauskas     |                           |                            | 
+  | Arnoldas Grincevičius  |                           |                            | 
+  | Areta Jaškūnaitė       |                           |                            | 
+  | Edgar Kalinovski       |                           |                            | 
+  | Arnas Karmonas         |                           |                            | 
+  | Saulius Krasuckas      |                           |                            | 
+  | Gytis Petruškevičius   |                           |                            | 
+  | Rimvydas Ramanauskas   |                           |                            | 
+  | Domantas Skuja         |                           |                            | 
+  | Kazimieras Slivka      |                           |                            | 
+  | Povilas Stepkovičius   |                           |                            | 
+  | Daumantas Tinteris     |                           |                            | 
+  | Gediminas Zinkus       |                           |                            | 
+|===
