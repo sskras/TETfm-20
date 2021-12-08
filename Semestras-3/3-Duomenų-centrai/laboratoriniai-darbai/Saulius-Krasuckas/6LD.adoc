@@ -5,3 +5,16 @@ Duomenų centrai
 === Darbo tikslas
 
 Susipažinti su duomenų centrų (DC) ugniasienėmis.
+
+=== Bendra informacija
+
+==== Kas yra DC ugniasienė
+==== Kodėl verta diegti DC ugniasienę?
+==== DC ugniasienės privalumai
+==== Kaip veikia DC ugniasienė
+
+=== Užduotis
+
+Parinkti ir apžvelgti ugniasienes.
+
+Internete raskite bent dviejų skirtingų gamintojų naujos kartos DC ugniasienes (NGFW, angl. _Next-Generation Firewall_) ir jų specifikaciją (angl. _Data sheet_), pagal savo reikalavimus:
