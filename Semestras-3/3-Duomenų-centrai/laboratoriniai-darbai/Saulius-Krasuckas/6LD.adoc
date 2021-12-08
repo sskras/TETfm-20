@@ -73,7 +73,7 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Arnoldas Grincevičius >|                      ≥ 2 >|                       ≥ 5 >|                     ≥ 200.000
   | Areta Jaškūnaitė      >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Edgar Kalinovski      >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
-  | Arnas Karmonas         |                           |                            | 
+  | Arnas Karmonas        >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Saulius Krasuckas      |                           |                            | 
   | Gytis Petruškevičius   |                           |                            | 
   | Rimvydas Ramanauskas   |                           |                            | 
