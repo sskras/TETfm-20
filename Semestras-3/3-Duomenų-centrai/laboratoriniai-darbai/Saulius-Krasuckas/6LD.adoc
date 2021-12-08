@@ -79,7 +79,7 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Rimvydas Ramanauskas  >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Domantas Skuja        >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Kazimieras Slivka     >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
-  | Povilas Stepkovičius   |                           |                            | 
+  | Povilas Stepkovičius  >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Daumantas Tinteris     |                           |                            | 
   | Gediminas Zinkus       |                           |                            | 
 |===
