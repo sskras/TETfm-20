@@ -68,7 +68,7 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Studentas              | Threat Protections, Gbps  | SSL/TLS Inspections, Gbps  | New Session rate (per second)
   
   | Justas Furmonas       >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
-  | Dovydas Gedminas       |                           |                            | 
+  | Dovydas Gedminas      >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Benas Grigalauskas     |                           |                            | 
   | Arnoldas Grincevičius  |                           |                            | 
   | Areta Jaškūnaitė       |                           |                            | 
