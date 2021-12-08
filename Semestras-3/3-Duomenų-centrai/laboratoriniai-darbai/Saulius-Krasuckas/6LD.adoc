@@ -9,6 +9,10 @@ Susipažinti su duomenų centrų (DC) ugniasienėmis.
 === Bendra informacija
 
 ==== Kas yra DC ugniasienė
+
+DC užkarda -- programinės arba techninės įrangos įrenginys, kuris stebi srautą, patenkantį į organizacijos tinklą ir išeinantį iš jo,
+arba (kai tinklo perimetras fragmentuotas) to tinklo dalį iki darbo krūvio lygio (angl. _Workload level_), kad būtų pašalintos išorinės grėsmės.
+
 ==== Kodėl verta diegti DC ugniasienę?
 ==== DC ugniasienės privalumai
 ==== Kaip veikia DC ugniasienė
