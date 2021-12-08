@@ -86,7 +86,8 @@ Pasitikrinkite savo inventoriaus failą:
 
 === _Tikrinimas:_
 
-
+Sukūrėte inventoriaus failą, į kurį įtraukėte savo serverius (serverį).
+Laikas patikrinti, ar `Ansible` gali prisijungti prie prie šių serverių per SSH.
 
 === _Nuotolinis komandų vykdymas:_
 
