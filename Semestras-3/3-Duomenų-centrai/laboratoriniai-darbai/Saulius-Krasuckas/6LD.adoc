@@ -40,7 +40,14 @@ Patikimas ugniasienės sprendimas užtikrina DC apsaugą „iš Šiaurės į Pie
 * sudaro sąlygas dirbti moderniam paskirstytajam serverių modeliui.
 
 image::https://user-images.githubusercontent.com/74717106/145286199-d127f89a-2d38-44c6-8a74-ca66bee4a92f.png[]
+
+
 ==== Kaip veikia DC ugniasienė
+
+DC ugniasienė nepriklausomai nuo to, ar ji yra perimetrinė, ar paskirstytoji, yra sargybinis,
+nuolat stebintis srautus į nustatytą tinklo sritį ir iš jos, blokuojantis įtartintą veiklą
+ir įspėjantis saugumo komandas apie grėsmės įvykius.
+
 
 === Užduotis
 
