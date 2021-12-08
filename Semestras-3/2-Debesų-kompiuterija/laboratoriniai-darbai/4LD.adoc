@@ -107,7 +107,8 @@ server1 | SUCCESS => {
 
 === _Nuotolinis komandų vykdymas:_
 
-
+Išbandėte, kad `Ansible` valdymo mazgas gali palaikyti ryšį su jūsų serveriais.
+Galite pradėti vykdyti _Ad-hoc_ komandas ir grojaraščius (angl. _Playbook_) savo serveriuose.
 
 Ataskaitos turinys:
 
