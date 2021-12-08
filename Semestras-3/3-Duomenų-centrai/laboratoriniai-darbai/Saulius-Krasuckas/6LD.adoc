@@ -71,7 +71,7 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Dovydas Gedminas      >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Benas Grigalauskas    >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
   | Arnoldas Grincevičius >|                      ≥ 2 >|                       ≥ 5 >|                     ≥ 200.000
-  | Areta Jaškūnaitė       |                           |                            | 
+  | Areta Jaškūnaitė      >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Edgar Kalinovski       |                           |                            | 
   | Arnas Karmonas         |                           |                            | 
   | Saulius Krasuckas      |                           |                            | 
