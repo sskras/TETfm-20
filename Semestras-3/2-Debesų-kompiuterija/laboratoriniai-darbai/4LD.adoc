@@ -115,6 +115,11 @@ Pavyzdžiui, galite patikrinti visų serverių failų sistemų (FS) užpildymą 
 
 * `ansible all -a "df -h" -u stud`
 
+Vykdydami `Ansible` komandas taip pat galite nukreipti į atskiras mašinas, grupes ir pogrupius.
+Pavyzdžiui, taip patikrinsite kiekvieno `servers` grupės kompiuterio veikimo laiką:
+
+* `ansible servers -a "uptime" -u stud`
+
 Ataskaitos turinys:
 
   * Aprašyti pasiekti rezultatai kiekvienoje užduotyje.
