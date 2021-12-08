@@ -69,7 +69,7 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   
   | Justas Furmonas       >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Dovydas Gedminas      >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
-  | Benas Grigalauskas     |                           |                            | 
+  | Benas Grigalauskas    >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
   | Arnoldas Grincevičius  |                           |                            | 
   | Areta Jaškūnaitė       |                           |                            | 
   | Edgar Kalinovski       |                           |                            | 
