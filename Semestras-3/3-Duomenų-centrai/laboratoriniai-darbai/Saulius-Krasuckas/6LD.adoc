@@ -33,7 +33,13 @@ Vis didėjančių grėsmių akivaizdoje IT skyriai supranta, kad DC apsauga nuo 
 
 Patikimas ugniasienės sprendimas užtikrina DC apsaugą „iš Šiaurės į Pietus“ ir „iš Rytų į Vakarus“:
 
+* suteikia pagrindą visapusiškai prieigos ir grėsmių kontrolei;
+* užtikrina nuoseklų programų ir duomenų veikimą ir pristatymą;
+* užtikrina, kad produktai ir paslaugos pasiektų klientus ir darbuotojus, kuriems jų reikia;
+* padeda išvengti prastovų ir žalos reputacijai dėl sėkmingų atakų;
+* sudaro sąlygas dirbti moderniam paskirstytajam serverių modeliui.
 
+image::https://user-images.githubusercontent.com/74717106/145286199-d127f89a-2d38-44c6-8a74-ca66bee4a92f.png[]
 ==== Kaip veikia DC ugniasienė
 
 === Užduotis
