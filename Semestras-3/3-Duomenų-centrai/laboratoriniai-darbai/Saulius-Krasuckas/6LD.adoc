@@ -1,6 +1,6 @@
 Duomenų centrai
 
-== Laboratorinis darbas nr. 5: +++<br />+++ DC ugniasienės
+== Laboratorinis darbas nr. 6: +++<br />+++ DC ugniasienės
 
 === Darbo tikslas
 
