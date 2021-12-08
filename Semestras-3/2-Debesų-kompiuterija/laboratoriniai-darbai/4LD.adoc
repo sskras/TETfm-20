@@ -110,6 +110,11 @@ server1 | SUCCESS => {
 Išbandėte, kad `Ansible` valdymo mazgas gali palaikyti ryšį su jūsų serveriais.
 Galite pradėti vykdyti _Ad-hoc_ komandas ir grojaraščius (angl. _Playbook_) savo serveriuose.
 
+Bet kokią komandą, kurią paprastai vykdytumėte nuotoliniame serveryje per SSH, galite paleisti naudodami `Ansible` savo inventoriaus faile nurodytuose serveriuose.
+Pavyzdžiui, galite patikrinti visų serverių failų sistemų (FS) užpildymą naudodami šią komandą:
+
+* `ansible all -a "df -h" -u stud`
+
 Ataskaitos turinys:
 
   * Aprašyti pasiekti rezultatai kiekvienoje užduotyje.
