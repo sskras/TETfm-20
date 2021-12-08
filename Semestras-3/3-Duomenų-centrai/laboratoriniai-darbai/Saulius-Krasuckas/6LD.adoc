@@ -23,6 +23,9 @@ Todėl reikia sudėtingų paskirstytųjų ugniasienių, galinčių užtikrinti t
 
 Nepaisant to, kad vis dažniau naudojami debesijos ištekliai ir paskirstytieji darbuotojai, DC išlieka labai svarbus daugeliui, jei ne daugumai, įmonių.
 
+DC, kuriame saugomos kritinės taikomosios programos ir kiti svarbūs verslo ištekliai, evoliucionavo ir dažnai išsisklaidė geografiškai,
+tačiau išlieka toks pat pažeidžiamas.
+
 ==== DC ugniasienės privalumai
 ==== Kaip veikia DC ugniasienė
 
