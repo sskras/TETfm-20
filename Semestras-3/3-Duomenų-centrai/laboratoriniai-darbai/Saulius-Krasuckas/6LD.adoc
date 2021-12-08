@@ -26,6 +26,9 @@ Nepaisant to, kad vis dažniau naudojami debesijos ištekliai ir paskirstytieji 
 DC, kuriame saugomos kritinės taikomosios programos ir kiti svarbūs verslo ištekliai, evoliucionavo ir dažnai išsisklaidė geografiškai,
 tačiau išlieka toks pat pažeidžiamas.
 
+Vis didėjančių grėsmių akivaizdoje IT skyriai supranta, kad DC apsauga nuo kenkėjiškų grėsmių ir neteisėtos prieigos išlieka labai svarbi verslo tęstinumui.
+
+
 ==== DC ugniasienės privalumai
 ==== Kaip veikia DC ugniasienė
 
