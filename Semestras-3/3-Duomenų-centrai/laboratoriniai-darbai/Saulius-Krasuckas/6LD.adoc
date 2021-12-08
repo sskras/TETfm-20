@@ -48,6 +48,8 @@ DC ugniasienė nepriklausomai nuo to, ar ji yra perimetrinė, ar paskirstytoji, 
 nuolat stebintis srautus į nustatytą tinklo sritį ir iš jos, blokuojantis įtartintą veiklą
 ir įspėjantis saugumo komandas apie grėsmės įvykius.
 
+Priklausomai nuo konstrukcijos, srautams kontroliuoti ugniasienės gali naudoti įvairius metodus.
+Tradicinės architektūros dažnai užtikrina statinį paketų filtravimą, tarpinių serverių paslaugas ir nuolatinį tikrinimą.
 
 === Užduotis
 
