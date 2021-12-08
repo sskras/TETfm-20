@@ -81,5 +81,5 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Kazimieras Slivka     >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
   | Povilas Stepkovičius  >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Daumantas Tinteris    >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
-  | Gediminas Zinkus       |                           |                            | 
+  | Gediminas Zinkus      >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
 |===
