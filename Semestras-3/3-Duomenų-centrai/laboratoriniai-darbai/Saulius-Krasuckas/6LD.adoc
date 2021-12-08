@@ -51,6 +51,10 @@ ir įspėjantis saugumo komandas apie grėsmės įvykius.
 Priklausomai nuo konstrukcijos, srautams kontroliuoti ugniasienės gali naudoti įvairius metodus.
 Tradicinės architektūros dažnai užtikrina statinį paketų filtravimą, tarpinių serverių paslaugas ir nuolatinį tikrinimą.
 
+Šiuolaikinės vartų užkardos (ar irgi _tiesiog ugniasienės_ ?) dažnai prideda įsilaužimo aptikimo (IDS/IPS),
+taikomųjų programų konteksto ir pažangios grėsmių analizės funkcijas, padedančias įvertinti perduodamo srauto turinį.
+
+
 === Užduotis
 
 Parinkti ir apžvelgti ugniasienes.
