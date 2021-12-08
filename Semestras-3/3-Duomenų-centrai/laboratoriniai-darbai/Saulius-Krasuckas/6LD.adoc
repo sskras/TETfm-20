@@ -1,1 +1,7 @@
+Duomenų centrai
 
+== Laboratorinis darbas nr. 5: +++<br />+++ DC ugniasienės
+
+=== Darbo tikslas
+
+Susipažinti su duomenų centrų (DC) ugniasienėmis.
