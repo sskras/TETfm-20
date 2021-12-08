@@ -76,7 +76,7 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
   | Arnas Karmonas        >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Saulius Krasuckas     >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
   | Gytis Petruškevičius  >|                      ≥ 4 >|                       ≥ 5 >|                     ≥ 300.000
-  | Rimvydas Ramanauskas   |                           |                            | 
+  | Rimvydas Ramanauskas  >|                      ≥ 2 >|                       ≥ 3 >|                     ≥ 200.000
   | Domantas Skuja         |                           |                            | 
   | Kazimieras Slivka      |                           |                            | 
   | Povilas Stepkovičius   |                           |                            | 
