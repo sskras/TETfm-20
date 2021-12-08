@@ -120,7 +120,7 @@ Pavyzdžiui, taip patikrinsite kiekvieno `servers` grupės kompiuterio veikimo l
 
 * `ansible servers -a "uptime" -u stud`
 
-Ataskaitos turinys:
+=== Ataskaitos turinys:
 
   * Aprašyti pasiekti rezultatai kiekvienoje užduotyje.
   * Failo dydis < 5 MiB, formatas `PDF`.
@@ -128,4 +128,4 @@ Ataskaitos turinys:
 <<<
 
 [.text-left]
-=== Darbo eiga
+== Darbo eiga
