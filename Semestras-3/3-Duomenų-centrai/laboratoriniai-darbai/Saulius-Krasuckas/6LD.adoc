@@ -10,13 +10,13 @@ Susipažinti su duomenų centrų (DC) ugniasienėmis.
 
 ==== Kas yra DC ugniasienė
 
-DC užkarda -- programinės arba techninės įrangos įrenginys, kuris stebi srautą, patenkantį į organizacijos tinklą ir išeinantį iš jo,
+DC užkarda yra programinės arba techninės įrangos įrenginys, kuris stebi srautą, patenkantį į organizacijos tinklą ir išeinantį iš jo,
 arba (kai tinklo perimetras fragmentuotas) to tinklo dalį iki darbo krūvio lygmens (angl. _Workload level_), kad būtų pašalintos išorinės grėsmės.
 
 DC saugumas tradiciškai buvo grindžiamas perimetro ugniasiene, skirta apsaugoti visaus resursus nuo piktavalių išorės kenkėjų, pasislėpusių „Šiaurės–Pietų“ sraute.
 
 Tačiau plintant paskirstytiesiems tinklams ir šiuolaikinėms taikomosioms programoms, tinklo perimetras tampa vis labiau išplėstas.
-Todėl reikia sudėtingų paskirstytųjų ugniasienių, galinčių užtikrinti tikslią vidaus (arba „Rytų-Vakarų“) srauto stebėseną ir apsaugą.
+Todėl reikia sudėtingų paskirstytųjų ugniasienių, galinčių užtikrinti tikslią vidaus (arba „Rytų–Vakarų“) srauto stebėseną ir apsaugą.
 
 
 ==== Kodėl verta diegti DC ugniasienę?
@@ -54,7 +54,7 @@ Tradicinės architektūros dažnai užtikrina statinį paketų filtravimą, tarp
 Šiuolaikinės vartų užkardos (ar irgi _tiesiog ugniasienės_ ?) dažnai prideda įsilaužimo aptikimo (IDS/IPS),
 taikomųjų programų konteksto ir pažangios grėsmių analizės funkcijas, padedančias įvertinti perduodamo srauto turinį.
 
-Galiausiai paskirstytosios ugniasienės skirtos filtruoti „Rytų-Vakarų“ srautą ir užtikrinti apsaugą iki pat darbo krūvio lygmens.
+Galiausiai paskirstytosios ugniasienės skirtos filtruoti „Rytų–Vakarų“ srautą ir užtikrinti apsaugą iki pat darbo krūvio lygmens.
 
 
 === Užduotis
