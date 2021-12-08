@@ -18,7 +18,11 @@ DC saugumas tradiciškai buvo grindžiamas perimetro ugniasiene, skirta apsaugot
 Tačiau plintant paskirstytiesiems tinklams ir šiuolaikinėms taikomosioms programoms, tinklo perimetras tampa vis labiau išplėstas.
 Todėl reikia sudėtingų paskirstytųjų ugniasienių, galinčių užtikrinti tikslią vidaus (arba „Rytų-Vakarų“) srauto stebėseną ir apsaugą.
 
+
 ==== Kodėl verta diegti DC ugniasienę?
+
+Nepaisant to, kad vis dažniau naudojami debesijos ištekliai ir paskirstytieji darbuotojai, DC išlieka labai svarbus daugeliui, jei ne daugumai, įmonių.
+
 ==== DC ugniasienės privalumai
 ==== Kaip veikia DC ugniasienė
 
