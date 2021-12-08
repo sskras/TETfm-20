@@ -61,4 +61,5 @@ Galiausiai paskirstytosios ugniasienės skirtos filtruoti „Rytų-Vakarų“ sr
 
 Parinkti ir apžvelgti ugniasienes.
 
-Internete raskite bent dviejų skirtingų gamintojų naujos kartos DC ugniasienes (NGFW, angl. _Next-Generation Firewall_) ir jų specifikaciją (angl. _Data sheet_), pagal savo reikalavimus:
+* Internete raskite bent dviejų skirtingų gamintojų naujos kartos DC ugniasienes (NGFW, angl. _Next-Generation Firewall_)
+ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
