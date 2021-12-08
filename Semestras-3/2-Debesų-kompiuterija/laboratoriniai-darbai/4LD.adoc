@@ -89,6 +89,9 @@ Pasitikrinkite savo inventoriaus failą:
 Sukūrėte inventoriaus failą, į kurį įtraukėte savo serverius (serverį).
 Laikas patikrinti, ar `Ansible` gali prisijungti prie prie šių serverių per SSH.
 
+Galite naudoti argumentą `-u` norėdami nurodyti nuotolinės sistemos naudotoją.
+Jei jis nenurodytas, `Ansible` bandys prisijungti kaip dabartinis jūsų sistemos naudotojas valdymo mazge (serveryje nr. 1).
+
 === _Nuotolinis komandų vykdymas:_
 
 
