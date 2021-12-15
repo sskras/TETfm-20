@@ -52,7 +52,7 @@ Hypervisor -- _[TODO]_
 Pasirenku apraše minimą _SmartOS_ hipervizorių.
 
 Tiksliau, tai hipervizorinė platforma (OS).
-VM valdymui ji turi (geba naudoti) net du hipervizorius pasirinktinai:
+Virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) net du hipervizorius pasirinktinai:
 
 * **KVM** (atportintas iš Linux branduolio);
 * **bhyve** (atportintas iš FreeBSD branduolio).
@@ -67,3 +67,7 @@ Tačiau kadangi ši OS yra bendros paskirties, pagal apibrėžimą tokį hipervi
 
 Dėl to juos priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai:  +
 https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5
+
+Pati _SmartOS_ yra distribucija _"illumos"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
+
+Ji specializuota -- skirta tik VMų ir konteinerių startavimui bei valdymui:
