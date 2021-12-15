@@ -4,7 +4,7 @@ Duomenų centrai
 
 === Darbo tikslas
 
-Artimiau susipažinti su virtualizacija, paanalizuoti vieną _Type-1_ hipervizorių bei jį aprašyti.
+Artimiau susipažinti su virtualizacija ir paanalizuoti _Type-1_ hipervizorių.
 
 
 === Bendra informacija
