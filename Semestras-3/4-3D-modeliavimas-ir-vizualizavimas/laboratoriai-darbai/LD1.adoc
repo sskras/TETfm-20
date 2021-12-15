@@ -5,3 +5,13 @@
 
 [.text-center]
 == Vizitinė kortelė, pakabukas ar panašaus dydžio daiktas su tekstu AutoCAD aplinkoje
+
+[.text-left]
+=== Darbo tikslas
+Pradėti trimatį modeliavimą AutoCAD aplinkoje
+
+[.text-left]
+=== Užduotis
+
+* Sumodeliuoti realaus dydžio vizitinę kortelę ar kt. su tekstu (vardu, pavadinimu) pagal norimą dizainą.
+* Į _Moodle_ įkelti `.dwg` failą.
