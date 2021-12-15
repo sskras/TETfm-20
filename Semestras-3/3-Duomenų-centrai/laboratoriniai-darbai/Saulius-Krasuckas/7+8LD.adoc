@@ -48,3 +48,10 @@ Hypervisor -- _[TODO]_
 
 [.text-left]
 == Darbo eiga
+
+Pasirenku apraše minimą _SmartOS_ hipervizorių.
+Tiksliau, tai hipervizorinė platforma (OS).
+VM valdymui ji turi (geba naudoti) net du hipervizorius pasirinktinai:
+
+* **KVM** (atportintas iš Linux branduolio);
+* **bhyve** (atportintas iš FreeBSD branduolio).
