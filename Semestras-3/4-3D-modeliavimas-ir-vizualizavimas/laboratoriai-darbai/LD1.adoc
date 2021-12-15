@@ -1,1 +1,7 @@
+3D modeliavimas ir vizualizavimas
 
+[.text-center]
+=== Laboratorinis darbas nr. 1
+
+[.text-center]
+== Vizitinė kortelė, pakabukas ar panašaus dydžio daiktas su tekstu AutoCAD aplinkoje
