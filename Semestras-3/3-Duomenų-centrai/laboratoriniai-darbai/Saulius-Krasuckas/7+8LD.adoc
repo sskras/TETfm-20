@@ -31,6 +31,7 @@ Hypervisor -- _[TODO]_
 
 ==== Types of hypervisor
 
+.
 
 
 === Parenkite trumpą ataskaitą, kurioje:
@@ -38,5 +39,6 @@ Hypervisor -- _[TODO]_
 * bus pateiktas Jūsų pasirinkto `I`-tipo hipervizoriaus pristatymas (pagrindinės funkcijos ir pan.)
 * laikysitės principo: _Less is more_; svarbu kokybė.
 * išlaikykite vienodą stilių.
+
 
 === Parengtą ataskaitą PDF formatu įkelkite į `Moodle` sistemą
