@@ -60,12 +60,12 @@ Virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) net du hipervi
 Tiesą sakant, tai nėra tikri _Type I_ hipervizoriai:  +
 https://www.serverwatch.com/virtualization/hypervisor-server/#:~:text=Linux%20KVM%20and%20FreeBSD%20bhyve
 
-Jie abu startuoja ne iš „pliko metalo“, bet iš jau veikiančios įprastinės OS (Linux, FreeBSD, SmartOS).
+Jie abu startuoja ne iš „pliko metalo“, bet iš jau veikiančio įprastinės OS (Linux, FreeBSD, SmartOS) branduolio.
 Jie abu tą OS paverčia _Type I_ hipervizoriumi.
 
 Tačiau kadangi ši OS yra bendros paskirties, pagal apibrėžimą tokį hipervizorių tinka laikyti ir _Type II_ hipervizoriumi.
 
-Dėl to juos abu priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai:  +
+Dėl aiškumo juos abu priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai:  +
 https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5
 
 Pati _SmartOS_ yra distribucija _"illumos"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
