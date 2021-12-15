@@ -70,13 +70,32 @@ https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%
 
 Pati _SmartOS_ yra distribucija _"illumos"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
 
-Ji specializuota -- skirta tik VMų ir konteinerių startavimui bei valdymui:
+Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
 
-* Beveik vien R/O failų sistema (FS);
-* Užima mažai vietos (keli šimtai MiB);
-* Root FS tipas laikomas RAMe;
-* Skirta kelčiai iš ne diskinės medijos:
+* Užima mažai vietos (kelis šimtus MiB):
+  - => sparti keltis, ~30s
+  - => sumažintas atakos perimetras
+* Skirta kelčiai iš R/O ar bent ne diskinės medijos:
   - per PXE (tinklu)
   - iš USB Flash Disk (UFD)
   - iš CD-ROM
-* [TODO]
+  - nenaudoja lokalių diskų
+  - => padidintas atsparumas sisteminio disko gedimams
+  - => spartus atnaujinimas (pakanka _Reboot_)
+  - => daugiau vietos lieka _Guest OS_ egzemplioriams
+  - => dar labiau sumažintas atakos perimetras
+* _Live OS_:
+  - _root_ failų sistema (FS) laikoma RAMe
+  - FS pakeitimai arba neįmanomi (R/O), arba efemeriniai (`/etc`)
+  - (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui)
+  - => supaprastėja „diegimas“
+  - => neveikia naujų vartotojų kūrimas
+  - => neveikia `/usr` failų keitimas
+  - => dar labiau sumažintas atakos perimetras
+* Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_) pagal RAIDZ:
+  - schema panaši į RAID 5/6/7
+  - => padidinta I/O sparta ir patikimumas
+* Naudoja dvigubą virtualizaciją:
+  - https://www.joyent.com/blog/reintroducing-bhyve#:~:text=This%20is%20what%20we%20mean%20when%20we%20say%20double%2Dhulled%2Dvirtualization[double-hulled-virtualization], Guest OS VMM procesas konteineryje
+  - => dar labiau sumažintas atakos perimetras
+  - => unifikuotas konteinerių ir VMų valdymas (`vmadm`)
