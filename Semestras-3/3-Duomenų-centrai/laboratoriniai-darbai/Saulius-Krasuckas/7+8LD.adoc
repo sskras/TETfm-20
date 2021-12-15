@@ -65,5 +65,5 @@ Jie abu tą OS suspecializuoja: paverčia _Type I_ hipervizoriumi.
 
 Tačiau kadangi ši OS yra bendros paskirties, pagal apibrėžimą tokį hipervizorių tinka laikyti ir _Type II_ hipervizoriumi.
 
-Dėl to juos priskiriu _Type 1.5_ kategorijai:  +
+Dėl to juos priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai:  +
 https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5
