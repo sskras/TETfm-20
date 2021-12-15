@@ -4,4 +4,4 @@
 === Laboratorinis darbas nr. 1
 
 [.text-center]
-== Paprastas daiktas (pakabukas) su tekstu
+== Vizitinė kortelė, pakabukas ar panašaus dydžio daiktas su tekstu AutoCAD aplinkoje
