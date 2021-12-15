@@ -71,3 +71,12 @@ https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%
 Pati _SmartOS_ yra distribucija _"illumos"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
 
 Ji specializuota -- skirta tik VMų ir konteinerių startavimui bei valdymui:
+
+* Beveik vien R/O failų sistema (FS);
+* Užima mažai vietos (keli šimtai MiB);
+* Root FS tipas laikomas RAMe;
+* Skirta kelčiai iš ne diskinės medijos:
+  - per PXE (tinklu)
+  - iš USB Flash Disk (UFD)
+  - iš CD-ROM
+* [TODO]
