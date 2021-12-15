@@ -1,1 +1,42 @@
+Duomenų centrai
 
+== Laboratorinis darbas nr. 7 (+8): +++<br />+++ Virtualizacija
+
+=== Darbo tikslas
+
+Artimiau susipažinti su virtualizacija ir pasigilinti į vieną _Type-1_ hipervizorių.
+
+
+=== Bendra informacija
+
+(toliau anglų k.)
+
+
+==== Terminai
+
+Virtual Machine -- _[TODO]_
+
+Hypervisor -- _[TODO]_
+
+
+==== Intro
+
+.
+
+
+==== Virtualization for Server Consolidation and Containment
+
+.
+
+
+==== Types of hypervisor
+
+
+
+=== Parenkite trumpą ataskaitą, kurioje:
+
+* bus pateiktas Jūsų pasirinkto `I` tipo hipervizoriaus pristatymas (pagrindinės funkcijos ir pan.)
+* laikysitės principo: _Less is more_; svarbu kokybė.
+* išlaikykite vienodą stilių.
+
+=== Parengtą ataskaitą PDF formatu įkelkite į `Moodle` sistemą
