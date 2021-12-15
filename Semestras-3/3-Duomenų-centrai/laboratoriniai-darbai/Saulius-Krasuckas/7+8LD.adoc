@@ -35,7 +35,7 @@ Hypervisor -- _[TODO]_
 
 === Parenkite trumpą ataskaitą, kurioje:
 
-* bus pateiktas Jūsų pasirinkto `I` tipo hipervizoriaus pristatymas (pagrindinės funkcijos ir pan.)
+* bus pateiktas Jūsų pasirinkto `I`-tipo hipervizoriaus pristatymas (pagrindinės funkcijos ir pan.)
 * laikysitės principo: _Less is more_; svarbu kokybė.
 * išlaikykite vienodą stilių.
 
