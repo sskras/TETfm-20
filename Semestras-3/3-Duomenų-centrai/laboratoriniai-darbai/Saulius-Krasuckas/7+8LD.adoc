@@ -42,3 +42,9 @@ Hypervisor -- _[TODO]_
 
 
 === Parengtą ataskaitą PDF formatu įkelkite į `Moodle` sistemą
+
+
+<<<
+
+[.text-left]
+== Darbo eiga
