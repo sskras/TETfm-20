@@ -46,3 +46,54 @@ Command:
 Command:
 Command: _commandline
 Command: COPYHIST
+
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command:
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command:
+
+Command:
+Command:
+Command: LIMITS
+
+Reset Model space limits:
+Specify lower left corner or [ON/OFF] <0.0000,0.0000>: 0,0
+
+Specify upper right corner <12.0000,9.0000>: 210,297
+
+Command: ZOOM
+Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: a
+
+Command: PLINE
+
+Specify start point: 0,0
+
+Current line-width is 0.0000
+Specify next point or [Arc/Halfwidth/Length/Undo/Width]: @0,297
+
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: @210,297
+
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: _u
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 210
+
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: _u
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]:  <Snap off>  <Snap on>  <Ortho on> 210
+
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 297
+
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 210
+
+Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: *Cancel*
+
+Command:
+Command: _commandlinehide
+Command: *Cancel*
+
+Command: COPYHIST
