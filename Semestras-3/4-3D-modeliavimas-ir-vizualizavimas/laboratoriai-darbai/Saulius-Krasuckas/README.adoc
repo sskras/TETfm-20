@@ -1,1 +1,1 @@
-
+Čia dėsiu `.dwg` failus ir pildysiu jų kūrimo CLI (komandinės eilutės) istoriją.
