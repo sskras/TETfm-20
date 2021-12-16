@@ -1,0 +1,59 @@
+[ AutoCAD - Thu Dec 16 20:54:53 2021  ]----------------------------------------
+
+Command: FILLETEDGE
+
+Radius = 3.0000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <3.0000>: *Cancel*
+
+2 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: 
+Command: _qnew 
+Command: 
+Command: 
+QNEW
+
+Command: 
+Command: FILLETEDGE
+
+Radius = 3.0000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <3.0000>: 1.2
+
+Select an edge or [Chain/Loop/Radius]: 
+
+2 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command: 
+FILLETEDGE
+
+Radius = 1.2000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: *Cancel*
+
+4 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: 
+Command: _SAVEAS 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 

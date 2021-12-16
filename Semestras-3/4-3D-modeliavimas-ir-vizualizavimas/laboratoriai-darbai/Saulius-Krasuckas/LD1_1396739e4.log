@@ -1,0 +1,108 @@
+[ AutoCAD - Thu Dec 16 20:56:36 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command: OPTIONS
+
+Command: 
+OPTIONS
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: LOGFILEMODE
+
+Enter new value for LOGFILEMODE <1>: 
+
+Command: LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: *Cancel*
+
+Command: (prompt "Na, bandykime kampus suapvalinti iš naujo)(princ)
+("_> "
+(_> 
+(_> 
+(_> *Cancel*
+; error: Function cancelled
+
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: (prompt)(princ)
+; error: too few arguments
+
+Command: (prompt "")(princ)
+
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: 
+LOGFILENAME
+
+LOGFILENAME = "C:\Users\saukrs\AppData\Local\Autodesk\AutoCAD 2022\R24.1\enu\LD1_1396739e4.log" (read only)
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: "*Cancel*
+
+Command: *Cancel*
+
+Command:  <3DOsnap on> 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 

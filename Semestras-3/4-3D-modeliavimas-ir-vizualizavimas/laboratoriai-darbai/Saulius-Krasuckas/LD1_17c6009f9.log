@@ -1,0 +1,465 @@
+[ AutoCAD - Thu Dec 16 20:24:32 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: FILLETEDGE
+
+Radius = 3.0000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+7 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <3.0000>: 0.1
+
+Press Enter to accept the fillet or [Radius]:
+
+Command: 
+FILLETEDGE
+
+Radius = 0.1000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <0.1000>: 1.2
+
+Select an edge or [Chain/Loop/Radius]:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.2000>: 1
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.0000>: 2
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <2.0000>: 1
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.0000>: 1.5
+
+Select an edge or [Chain/Loop/Radius]:  
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.5000>: 1.2
+
+Select an edge or [Chain/Loop/Radius]: 
+
+2 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+'NAVSWHEEL
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: FILLETEDGE
+
+Radius = 1.2000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.2000>: 
+
+Select an edge or [Chain/Loop/Radius]: _u 
+
+*Invalid selection*
+Expects a point or Chain/Loop
+
+Select an edge or [Chain/Loop/Radius]: _u 
+
+*Invalid selection*
+Expects a point or Chain/Loop
+
+Select an edge or [Chain/Loop/Radius]: _u 
+
+*Invalid selection*
+Expects a point or Chain/Loop
+
+Select an edge or [Chain/Loop/Radius]: _u 
+
+*Invalid selection*
+Expects a point or Chain/Loop
+
+Select an edge or [Chain/Loop/Radius]: *Cancel*
+
+2 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: _u FILLETEDGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 FILLETEDGE 
+Everything has been redone
+
+Command: _u FILLETEDGE 
+Command: _u 'NAVSWHEEL 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: '_zoom 
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Command: '_pan 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _s 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded>: _g 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shades of Gray>: _sk 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Sketchy>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _x 
+Command:  
+Command: '_perspective 
+Enter new value for PERSPECTIVE <0>: 1 
+Command: '_perspective 
+Enter new value for PERSPECTIVE <1>: 0 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _h 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Hidden>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _c 
+Command: 
+Command: 
+Command: _sunstatus 
+Enter new value for SUNSTATUS <0>: 1 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_2303_71a8d8ac.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _camera 
+Current camera settings: Height=0.0000 Lens Length=50.0000 mm
+Specify camera location: *Cancel*
+
+Command: 
+Command:  
+Command: 
+
+
+
+
+
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_2303_71a8d8ac.sv$ ...
+
+Command: 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _2d Regenerating model.
+
+Command: FILLETEDGE
+
+Radius = 1.2000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.2000>: 0.1
+
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: *Cancel*
+
+1 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: 
+Command: FILLETEDGE
+
+Radius = 1.2000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Modeling Operation Error:
+Error Code Number is 12053
+
+Select an edge or [Chain/Loop/Radius]: 
+Cannot blend this edge.
+
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Cannot blend this edge.
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.2000>: 0
+
+Radius too small. *Invalid*
+
+Enter fillet radius or [Expression] <1.2000>: 0
+
+Radius too small. *Invalid*
+
+Enter fillet radius or [Expression] <1.2000>: *Cancel*
+
+Modeling Operation Error:
+Error Code Number is 12053
+
+1 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: _u FILLETEDGE 
+Command: _u FILLETEDGE 
+Command: _u VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT Regenerating model.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _s 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded>: _g 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE RENDER 
+Command: _u GROUP RENDER 
+Command: _u 
+Command: _u RENDER GROUP 
+Command: _u VSCURRENT 
+Command: _u '.-LAYER 
+Command: _u 
+Command: _u GROUP LAYER 
+Command: _u CAMERA GROUP 
+Command: _u RENDER GROUP 
+Command: _u SUNSTATUS GROUP 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u 'PERSPECTIVE 
+Command: _u 'PERSPECTIVE 
+Command: _u CLEANSCREENOFF 
+Command:  
+Command: _u RIBBONCLOSE 
+Command: _u VSCURRENT Regenerating model.
+Regenerating model.
+
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u Pan GROUP 
+Command: _u '.3DZOOM2 
+Command: _u Zoom GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'ZOOM GROUP 
+Command: _u FILLETEDGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 FILLETEDGE 
+Command: _u FILLETEDGE 
+Command: _u FILLETEDGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 FILLETEDGE 
+Command: _u FILLETEDGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 FILLETEDGE 
+Command: _u FILLETEDGE 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
+Command: 
+Command: _SAVEAS 

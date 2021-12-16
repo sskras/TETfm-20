@@ -1,0 +1,1016 @@
+[ AutoCAD - Thu Dec 16 21:04:39 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command: 
+Command: 
+Command: _copyclip 
+Select objects: *Cancel*
+
+Command: 
+Command: _copyclip 
+Select objects: *Cancel*
+
+Command: 
+COPYCLIP
+
+Select objects: *Cancel*
+
+Command: "
+Command: 
+Command: _copyclip 
+Select objects: (*Cancel*
+(
+Command: 
+Command: _copyclip 
+Select objects: *Cancel*
+
+Command: (prompt "")(princ)
+
+
+Command: (prompt "Na, bandykime kampus suapvalinti iš naujo")(princ)
+Na, bandykime kampus suapvalinti iš naujo
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: FILLETEDGE
+
+Radius = 3.0000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <3.0000>: “*Cancel*
+“
+7 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: 
+FILLETEDGE
+
+Radius = 3.0000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 1.2
+
+
+*Invalid selection*
+Expects a point or Chain/Loop
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <3.0000>: 1.2
+
+Select an edge or [Chain/Loop/Radius]: 
+
+2 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command: 
+FILLETEDGE
+
+Radius = 1.2000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+9 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <1.2000>: 0.1
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+
+Command:  
+Command:  
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: LINE
+
+Specify first point: 
+Specify next point or [Undo]: *Cancel*
+
+Command: RIBBON
+
+Command: 
+Command: 
+Command:  
+Command: 
+Command: 
+Command:  
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_12760_aec5cbe6.sv$ ...
+
+Command: 
+Command: LAYER
+
+Command: LAYER
+
+Command: LAYERCLOSE
+
+Command: -LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: *Cancel*
+
+Command: 
+Command:  
+Command: 
+Command: 
+Command:  
+Command: _LAYER
+
+Command: LAYERCLOSE
+
+Command: -LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: T
+
+Enter name list of layer(s) to thaw: 0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: -LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: F
+
+Enter name list of layer(s) to freeze or <select objects>: 1
+
+No matching layer names found.
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: F
+
+Enter name list of layer(s) to freeze or <select objects>: 
+
+Select objects: 1 found
+
+Select objects: 
+
+Cannot freeze layer "1-Liežuv\U+0117lis".  It is the CURRENT layer.
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: LAYMCUR
+
+Select object whose layer will become current: 
+0 is now the current layer.
+
+Command: -LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: F
+
+Enter name list of layer(s) to freeze or <select objects>: 
+
+Select objects: 1 found
+
+Select objects: 
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _u 
+Enter name list of layer(s) to unlock or <select objects>: _u *Cancel*
+_u Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: *Cancel*
+
+Command: _u -LAYER 
+Command: LINE
+
+Specify first point: 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: 
+
+Command: -LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: F
+
+Enter name list of layer(s) to freeze or <select objects>: 
+
+Select objects: 1 found
+
+Select objects: 
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: LINE
+
+Specify first point: mid
+of 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: 
+
+Command: _u LINE 
+Command: LINE
+
+Specify first point: mid
+of 
+Specify next point or [Undo]: 20
+
+Specify next point or [Undo]: *Cancel*
+
+Command: _u LINE 
+Command: LINE
+
+Specify first point: mid
+of 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: 
+
+Command: 
+LINE
+
+Specify first point: 
+Specify next point or [Undo]: 20
+
+Specify next point or [Undo]:  <Polar off>  <Ortho on>  <Polar on>  <Object Snap Tracking off>  <Object Snap Tracking on>  <Polar off>  <Snap on>  <Snap off>  <Snap on>  <Ortho on> 
+Specify next point or [Close/Undo]: 
+
+Command: LENGTH
+DIST 
+Specify first point: 
+Specify second point or [Multiple points]: 
+Distance = 104.9238,  Angle in XY Plane = 169,  Angle from XY Plane = 0
+Delta X = -103.0000,  Delta Y = 20.0000,   Delta Z = 0.0000
+
+Command: DISTANCE
+
+DISTANCE = 104.9238 (read only)
+Command: *Cancel*
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: LENGTH
+DIST 
+Specify first point: 
+Specify second point or [Multiple points]: 
+Distance = 106.8878,  Angle in XY Plane = 180,  Angle from XY Plane = 349
+Delta X = -105.0000,  Delta Y = 0.0000,   Delta Z = -20.0000
+
+Command: _u DIST 
+Command: _u DISTANCE 
+Command: _u DIST 
+Command: _u LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 LINE 
+Command: o*Cancel*
+
+Command: LAYER
+
+Command: 
+
+
+
+
+
+
+
+Command: 
+Command: 
+Command: _open 
+Command: 
+Command: 
+
+
+
+
+
+Command: 
+
+
+
+
+
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_12760_aec5cbe6.sv$ ...
+
+Command: 
+Command: 
+Command: CHANGE
+1 found
+Specify change point or [Properties]: 
+
+View is not plan to UCS. Command results may not be obvious.
+No changeable object selected
+
+Command: CHANGE
+
+Select objects: 1 found
+
+Select objects: 
+Specify change point or [Properties]: P
+
+Enter property to change [Color/Elev/LAyer/LType/ltScale/LWeight/Thickness/TRansparency/Material/Annotative]: LA
+
+Enter new layer name <0>: 0-laikinai
+
+Enter property to change [Color/Elev/LAyer/LType/ltScale/LWeight/Thickness/TRansparency/Material/Annotative]: 
+
+Command: 
+CHANGE
+
+Select objects: 
+
+Command: LAYERCLOSE
+
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify through point or [Exit/Multiple/Undo] <Exit>: 20
+
+Select object to offset or [Exit/Undo] <Exit>:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming OFFSET command.
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming OFFSET command.
+
+Select object to offset or [Exit/Undo] <Exit>: *Cancel*
+
+Command: 
+OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: LENGTH
+DIST 
+Specify first point: 
+Specify second point or [Multiple points]: 
+Distance = 20.0000,  Angle in XY Plane = 90,  Angle from XY Plane = 0
+Delta X = 0.0000,  Delta Y = 20.0000,   Delta Z = 0.0000
+
+Command: LENGTH
+DIST 
+Specify first point: 
+Specify second point or [Multiple points]: '_pan 
+Resuming DIST command.
+
+Specify second point or [Multiple points]: '_zoom 
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Resuming DIST command.
+
+Specify second point or [Multiple points]: '_pan 
+Resuming DIST command.
+
+Specify second point or [Multiple points]:  <Snap off> 
+Distance = 19.8829,  Angle in XY Plane = 90,  Angle from XY Plane = 0
+Delta X = 0.0000,  Delta Y = 19.8829,   Delta Z = 0.0000
+
+Command: _u DIST 
+Command: _u DIST 
+Command: _u OFFSET 
+Command: _u OFFSET 
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify through point or [Exit/Multiple/Undo] <Exit>: 
+Invalid through point.
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify through point or [Exit/Multiple/Undo] <Exit>: 
+
+Command: _u OFFSET 
+Command: _u LAYERCLOSE 
+Command: _u CHANGE 
+Command: _u CHANGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHANGE 
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: 20
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: '_pan 
+Resuming OFFSET command.
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: *Cancel*
+
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <20.0000>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: _u 
+Select object to offset or [Exit/Undo] <Exit>: _u 
+Command has been completely undone.
+
+Select object to offset or [Exit/Undo] <Exit>: _u 
+Command has been completely undone.
+
+Select object to offset or [Exit/Undo] <Exit>: *Cancel*
+
+Command: _u OFFSET 
+Command: _u OFFSET 
+Command: _u CHANGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHANGE 
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: -20
+
+Value must be positive and nonzero.
+
+Specify offset distance or [Through/Erase/Layer] <Through>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify through point or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: *Cancel*
+
+Command: _u OFFSET 
+Command: _u CHANGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHANGE 
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: -20
+
+Value must be positive and nonzero.
+
+Specify offset distance or [Through/Erase/Layer] <Through>: 20
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+
+Command: 
+Command: *Cancel*
+
+Command: _u OFFSET 
+Command: _u CHANGE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHANGE 
+Command: 
+Command: _.erase 1 found
+
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>:  Specify second point: 
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: 
+OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <29.5000>: T
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify through point or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming OFFSET command.
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming OFFSET command.
+
+Select object to offset or [Exit/Undo] <Exit>: '_pan 
+Resuming OFFSET command.
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify through point or [Exit/Multiple/Undo] <Exit>: 
+
+Command: 
+OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: 9
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: '_pan 
+Resuming OFFSET command.
+
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_12760_aec5cbe6.sv$ ...
+
+Command: 
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <9.0000>: 4.5
+
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <4.5000>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: 
+OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <4.5000>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: 
+OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <4.5000>: 
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: *Cancel*
+
+Command: TRIM
+
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: _u 
+Command has been completely undone.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: *Cancel*
+
+Command: TRIM
+
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: T
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select cutting edges ...
+Select objects or <select all>: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: *Cancel*
+
+Command: 
+Command: 
+Command: _trim 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: *Cancel*
+
+Command: TRIM
+
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: _u 
+Command has been completely undone.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: *Cancel*
+
+Command: TRIM
+
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: T
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select cutting edges ...
+Window Lasso  Press Spacebar to cycle options1 found
+
+Select objects: '_NAVSWHEEL Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming TRIM command.
+
+Select objects: '_NAVSWHEEL Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming TRIM command.
+
+Select objects: *Cancel*
+
+Command: TRIM
+
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+Path does not intersect with the bounding edge.
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: T
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select cutting edges ...
+Select objects or <select all>: '_NAVSWHEEL Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming TRIM command.
+
+Select objects or <select all>: '_NAVSWHEEL Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming TRIM command.
+
+Select objects or <select all>: '_NAVSWHEEL Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming TRIM command.
+
+Select objects or <select all>: '_NAVSWHEEL Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming TRIM command.
+
+Select objects or <select all>: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: T
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select cutting edges ...
+Select objects or <select all>: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 1 found, 4 total
+
+Select objects: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: _u 
+Command has been completely undone.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: _u 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: _u 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: _u 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: _u 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: _u 
+Specify next fence point or [Undo]: 
+Specify next fence point or [Undo]: *Cancel*
+
+Command: _u TRIM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 TRIM 
+Everything has been redone
+
+Command: _u TRIM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 TRIM 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u TRIM 
+Command: _u TRIM 
+Command: _u TRIM 
+Command: _u TRIM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP TRIM 
+Command: _u TRIM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP TRIM 
+Command: _u TRIM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP TRIM 
+Command: _u TRIM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP TRIM 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _trim 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: _u 
+Command has been completely undone.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: *Cancel*
+
+Command: 
+Command: _line 
+Specify first point:  <Snap off> 
+Specify next point or [Undo]:  <Ortho off>  <Ortho on>  <Ortho off>  <Ortho on>  >>Tab Index <0>: 
+Resuming LINE command.
+
+Specify next point or [Undo]: *Cancel*
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: _line 
+Specify first point: 
+Specify next point or [Undo]:  <Ortho off> 
+Specify next point or [Undo]: 
+
+Command: 
+Command: 
+Command: _extend 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project]: C
+
+Specify first corner: 
+
+Command: 
+Command: 
+Command: _extend 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project]: 
+
+Path does not intersect with the bounding edge.
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project/Undo]: 
+
+Path does not intersect with the bounding edge.
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project/Undo]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _extend 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project]: 
+
+Path does not intersect with the bounding edge.
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project/Undo]: *Cancel*
+
+Command: 
+Command: _extend 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to extend or shift-select to trim or
+ [Boundary edges/Crossing/mOde/Project]: *Cancel*
+
+Command: _u EXTEND GROUP 
+Command: _u EXTEND GROUP 
+Command: _u EXTEND GROUP 
+Command: _u EXTEND GROUP 
+Command: _u LINE GROUP 
+Command: _u 'CLAYER 
+Command: _u 
+Command: _u '.-LAYER '.-LAYER 
+Command: _u 'CLAYER 
+Command: _u 
+Command: _u LINE GROUP 
+Command: _u TRIM GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u TRIM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP TRIM 
+Command: 
+Command: 
+Command: _ai_selall Selecting objects...done.
+
+Command: CHANGE
+11 found
+Specify change point or [Properties]: 
+
+View is not plan to UCS. Command results may not be obvious.
+No changeable object selected
+
+Command: CHANGE
+
+Select objects: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_12760_aec5cbe6.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _ai_selall Selecting objects...done.
+
+Command: CHANGE
+11 found
+Specify change point or [Properties]: P
+
+Enter property to change [Color/Elev/LAyer/LType/ltScale/LWeight/Thickness/TRansparency/Material/Annotative]: LA
+
+Enter new layer name <0>: 0-laikinai
+
+Enter property to change [Color/Elev/LAyer/LType/ltScale/LWeight/Thickness/TRansparency/Material/Annotative]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Window Lasso  Press Spacebar to cycle options
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _qsave 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
