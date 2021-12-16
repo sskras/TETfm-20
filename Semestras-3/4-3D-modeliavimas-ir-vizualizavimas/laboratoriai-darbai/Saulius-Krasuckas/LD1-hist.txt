@@ -48,6 +48,7 @@ Command: _commandline
 Command: COPYHIST
 
 
+
 Opening an AutoCAD 2018 format file.
 
 
@@ -94,6 +95,176 @@ Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: *Cancel*
 
 Command:
 Command: _commandlinehide
+Command: *Cancel*
+
+Command: COPYHIST
+
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+
+
+
+
+
+
+
+Command:
+
+
+
+
+
+
+
+Command:
+
+
+
+
+Command:
+
+
+
+
+
+
+
+Command:
+
+
+
+
+Command:
+
+
+
+
+
+
+
+Command: *Cancel*
+
+Command:
+Unknown command "-LAYER".  Press F1 for help.
+
+Command:
+ERASE
+Select objects:
+
+
+*Invalid selection*
+Expects a point or Window/Last/Crossing/BOX/ALL/Fence/WPolygon/CPolygon/Group/Add/Remove/Multiple/Previous/Undo/AUto/SIngle/SUbobject/Object
+
+Select objects:
+
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+Command:
+
+
+
+
+Command:
+
+
+
+
+
+Command:
+
+
+
+
+
+
+
+Command:
+
+
+
+
+Command:
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_1200_faf66078.sv$ ...
+
+Command:
+Command: *Cancel*
+
+Command:
+Command:
+Command: _commandline
+Command: (princ "hello")
+hello"hello"
+
+Command: (princ 'sveiki')
+; error: extra right paren on input
+
+Command: (princ "sveiki")
+sveiki"sveiki"
+
+Command: ;
+Unknown command ";".  Press F1 for help.
+
+Command: ; Unknown command ";".  Press F1 for help.
+
+Command: ;Sveiki
+Unknown command ";SVEIKI".  Press F1 for help.
+
+Command: #s
+Unknown command "#S".  Press F1 for help.
+
+Command: // Unknown command "//".  Press F1 for help.
+
+Command: //h
+Unknown command "//H".  Press F1 for help.
+
+Command: "sveiki"
+Unknown command ""SVEIKI"".  Press F1 for help.
+
+Command: ("Sveiki")
+; error: bad function: "Sveiki"
+
+Command:
+COMMANDLINE
+
+Command: (strcase "This is a TEST." T)
+"this is a test."
+
+Command: (strcase "This is a TEST." T)(princ
+(_> *Cancel*
+; error: Function cancelled
+
+Command:
+Command: _copyclip
+Select objects: *Cancel*
+
+Command:
+Command: _copyclip
+Select objects: *Cancel*
+
+Command:
+COPYCLIP
+
+Select objects: *Cancel*
+
+Command: (princ)
+
+Command: (strcase "This is a TEST." T)
+"this is a test."
+
+Command: (prompt "This is a TEST.")(princ)
+This is a TEST.
 Command: *Cancel*
 
 Command: COPYHIST
