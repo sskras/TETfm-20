@@ -140,3 +140,17 @@ https://docs.google.com/document/d/1PFUmz6XpTVAGkq5dBe8uaBFV2Y4i-uR88AuiCLIRxIQ/
 
 https://people.freebsd.org/~neel/bhyve/bhyve_bsdcan_2011.pdf  +
 https://papers.freebsd.org/2014/baldwin-Introduction_to_bhyve.files/slides.pdf  +
+
+Apie Triton DataCenter:
+
+https://docs.joyent.com/public-cloud/instances  +
+https://github.com/joyent/triton/blob/master/README.md#overview (iš ko susidaro)  +
+
+Apie SmartOS:
+
+https://www.gaige.net/docker-on-smartos.html  +
+https://www.cyber-tec.org/2018/02/11/run-docker-images-on-smartos/  +
+
+Orientavimasis į Node.js:
+
+https://www.joyent.com/blog/microservices-containers-nodejs  +
