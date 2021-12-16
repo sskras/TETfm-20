@@ -83,7 +83,7 @@ Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
   - _Host OS_ nenaudoja lokalių diskų
   - => padidintas atsparumas sisteminio disko gedimams
   - => supaprastėja „diegimas“, ypač turint daug mašinų
-  - => spartus atnaujinimas (pakanka atnaujinti bendrą atvaizdą tinklu + _Reboot_)
+  - => spartus atnaujinimas (pakanka tinklu nusikopijuoti bendrą atvaizdą + _Reboot_)
   - => daugiau vietos diskuose lieka _Guest OS_ egzemplioriams
   - => dar labiau sumažintas atakų perimetras
 * _Live OS_:
