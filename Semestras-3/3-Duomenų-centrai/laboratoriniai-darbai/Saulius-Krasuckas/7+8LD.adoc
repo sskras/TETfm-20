@@ -90,11 +90,12 @@ Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
   - FS pakeitimai arba neįmanomi (R/O), arba efemeriniai (`/etc`)
   - (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.?)
   - => neveikia naujų vartotojų kūrimas
-  - => neveikia `/usr` failų keitimas
+  - => `/usr` failai primontuoti R/O
   - => dar labiau sumažintas atakų perimetras
-* Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_) pagal RAIDZ:
+* Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_):
+  - apjungiama pagal RAIDZ
   - schema panaši į RAID 5/6/7
-  - => padidinta I/O sparta ir patikimumas
+  - => padidinta diskų I/O sparta ir patikimumas
 * Naudoja dvigubą virtualizaciją:
   - https://www.joyent.com/blog/reintroducing-bhyve#:~:text=This%20is%20what%20we%20mean%20when%20we%20say%20double%2Dhulled%2Dvirtualization[double-hulled-virtualization] -- Guest OS VMM procesas konteineryje
   - => dar labiau sumažintas atakos perimetras
@@ -107,14 +108,14 @@ https://klarasystems.com/articles/bhyve-the-freebsd-hypervisor/
 - Modernus kodas, Mažas Overhead, Spartus
 - Solaris/illumos projektuotas didesniam (apskritai) saugumui nei Linux, ir tai juntama
 - Palaiko labai įvairius Storage backend-us
-- ZFS privalumai: akimirksniniai klonai, šifravimas (jei reikia, ir deduplikacija)
+- ZFS privalumai: akimirksniniai klonai, duomenų šifravimas (jei reikia, ir deduplikacija)
 - PCI pass-through
 
 https://bhyvecon.org/bhyvecon2018-Gwydir.pdf
 
 - _Guest OS_ tik UEFI?
 - net antispoofing built-in
-- cloud-init
+- cloud-init [TODO]
 
 
 Trūkumai:
@@ -130,4 +131,5 @@ https://www.youtube.com/watch?v=uV61mVYsFM8
 
 https://docs.google.com/document/d/1PFUmz6XpTVAGkq5dBe8uaBFV2Y4i-uR88AuiCLIRxIQ/edit
 
-- dar tik kuriamas VM Cold/Warm/Live Migration
+- kol kas neveikia VM Warm/Live Migration (dar tik kuriamas),
+  veikia tik VM Cold Migration
