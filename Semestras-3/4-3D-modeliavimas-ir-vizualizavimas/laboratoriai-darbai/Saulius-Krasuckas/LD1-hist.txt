@@ -653,3 +653,332 @@ Command:
 Command:
 Command: _SAVEAS
 Command: COPYHIST
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command:  COPYHIST
+
+Command: *Cancel*
+
+Command: '_setvar
+Enter variable name or [?] <PERSPECTIVE>: SubObjSelectionMode
+
+Enter new value for SUBOBJSELECTIONMODE <0>: 1
+Command: '_setvar
+Enter variable name or [?] <SUBOBJSELECTIONMODE>: SubObjSelectionMode
+
+Enter new value for SUBOBJSELECTIONMODE <1>: 1
+Command: _u 'SETVAR
+Command: _u GROUP
+Command: _u 'SETVAR GROUP
+Command: _u COPYHIST
+Command: _u COPYHIST
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 COPYHIST
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: (getent "CopyHistLines")
+; error: no function definition: GETENT
+
+Command: (getenv "CopyHistLines")
+nil
+
+Command:
+Command:
+Command: _commandline
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command:
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: (setenv "CopyHistFiles" 5000)
+; error: bad argument type: stringp 5000
+
+Command: (setenv "CopyHistFiles" "5000")
+"5000"
+
+Command: (getenv "CopyHistLines")
+nil
+
+Command: (setenv "CopyHistFiles" "500")
+"500"
+
+Command: (getenv "CopyHistLines")
+nil
+
+Command: (setenv "CopyHistLines" "5000")
+"5000"
+
+Command: (getenv "CopyHistLines")
+"5000"
+
+Command: (setenv "CopyHistLines" "50000")
+"50000"
+
+Command: (getenv "CopyHistLines")
+"50000"
+
+Command: (setenv "CopyHistLines" "50000000")
+"50000000"
+
+Command: (getenv "CopyHistLines")
+"50000000"
+
+Command: (setenv "CopyHistLines" "50000000")
+Command:
+Command: _qnew
+Command:
+Command: (setenv "CopyHistLines" "50000000")
+Command:
+Command: _qnew
+Command:
+Command: (setenv "CopyHistLines" "1000000")
+"1000000"
+
+Command: (getenv "CopyHistLines")
+"1000000"
+
+Command: (prompt "Suklydau!")(princ)
+Suklydau!
+Command: (getenv "CmdHistLines")
+"400"
+
+Command: (setenv "CmdHistLines" 5000)
+; error: bad argument type: stringp 5000
+
+Command: (setenv "CmdHistLines" "5000")
+"5000"
+
+Command: (getenv "CmdHistLines")
+"400"
+
+Command: (setenv "CmdHistLines" "500")
+"500"
+
+Command: (getenv "CmdHistLines")
+"500"
+
+Command:
+Command:
+Command: _QSAVE
+Command: (setenv "CmdHistLines" "3000")
+"3000"
+
+Command: (getenv "CmdHistLines")
+"500"
+
+Command: (setenv "CmdHistLines" "2000")
+"2000"
+
+Command: (getenv "CmdHistLines")
+"2000"
+
+Command: (setenv "CmdHistLines" "2048")
+"2048"
+
+Command: (getenv "CmdHistLines")
+"2048"
+
+Command: (setenv "CmdHistLines" "2049")
+"2049"
+
+Command: (getenv "CmdHistLines")
+"2048"
+
+Command: (prompt "OK, tai
+Command:
+Command: _open
+Command:
+Command: (prompt "\nOK, tai 2048 eilučių yra komandų buferio riba, bandom.\n")(princ)
+
+OK, tai 2048 eilučių yra komandų buferio riba, bandom.
+
+Command: (prompt "O bandom pakartoti FILLETEDGE, tik su mažesniais spinduliais")(princ)
+O bandom pakartoti FILLETEDGE, tik su mažesniais spinduliais
+Command: FILLETEDGE
+
+Radius = 1.0000
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.0000>:
+
+Select an edge or [Chain/Loop/Radius]: '_pan
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+
+Command:
+FILLETEDGE
+
+Radius = 1.0000
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.0000>:
+
+Select an edge or [Chain/Loop/Radius]:
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command:
+Enter new value for NAVSWHEELMODE <4>:
+Command:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:
+'NAVSWHEEL
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: FILLETEDGE
+
+Radius = 1.0000
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.0000>: 3
+
+Select an edge or [Chain/Loop/Radius]:
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:'_zoom >>Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>:
+Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:'_zoom >>Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>:
+Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+>>Enter new value for NAVSWHEELMODE <4>:
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command:
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>:
+
+Command: '_perspective
+Enter new value for PERSPECTIVE <1>: 0
+Command:
+Enter new value for NAVSWHEELMODE <4>:
+Command:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command:
+Enter new value for NAVSWHEELMODE <4>:
+Command:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command:
+Enter new value for NAVSWHEELMODE <4>:
+Command:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1-var-1.0_1_6439_5895002a.sv$ ...
+
+Command:
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _g
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shades of Gray>: _x
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _h
+Command: '_zoom
+Specify corner of window, enter a scale factor (nX or nXP), or
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>:
+
+Command:  Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Command: '_pan
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]:
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Hidden>: _c
+Command:
+Enter new value for NAVSWHEELMODE <4>:
+Command:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: *Cancel*
+
+Command: (prompt "Čia jau labiau atitinka tikrą objektą")(princ)
+Čia jau labiau atitinka tikrą objektą
+Command:
+Command:
+Command: _SAVEAS
+Command: COPYHIST
