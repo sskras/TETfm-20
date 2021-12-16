@@ -73,25 +73,26 @@ Pati _SmartOS_ yra distribucija _"illumos"_ sistemos, kadaise kilusios iš Solar
 Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
 
 * Užima mažai vietos (kelis šimtus MiB):
+  - [TODO] naudokime _Ansible_
   - => sparti keltis, ~30s
-  - => sumažintas atakos perimetras
-* Skirta kelčiai iš R/O ar bent ne diskinės medijos:
+  - => sumažintas atakų perimetras
+* Skirta kelčiai iš R/O atvaizdo (_Live image_) ar bent ne diskinės medijos:
   - per PXE (tinklu)
   - iš USB Flash Disk (UFD)
   - iš CD-ROM
-  - nenaudoja lokalių diskų
+  - _Host_ nenaudoja lokalių diskų
   - => padidintas atsparumas sisteminio disko gedimams
   - => spartus atnaujinimas (pakanka _Reboot_)
   - => daugiau vietos lieka _Guest OS_ egzemplioriams
-  - => dar labiau sumažintas atakos perimetras
+  - => dar labiau sumažintas atakų perimetras
 * _Live OS_:
   - _root_ failų sistema (FS) laikoma RAMe
   - FS pakeitimai arba neįmanomi (R/O), arba efemeriniai (`/etc`)
   - (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui)
-  - => supaprastėja „diegimas“
+  - => supaprastėja „diegimas“, ypač turint daug mašinų
   - => neveikia naujų vartotojų kūrimas
   - => neveikia `/usr` failų keitimas
-  - => dar labiau sumažintas atakos perimetras
+  - => dar labiau sumažintas atakų perimetras
 * Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_) pagal RAIDZ:
   - schema panaši į RAID 5/6/7
   - => padidinta I/O sparta ir patikimumas
