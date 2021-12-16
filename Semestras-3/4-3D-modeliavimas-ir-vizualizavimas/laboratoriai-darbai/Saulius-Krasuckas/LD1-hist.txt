@@ -48,7 +48,6 @@ Command: _commandline
 Command: COPYHIST
 
 
-
 Opening an AutoCAD 2018 format file.
 
 
@@ -266,5 +265,21 @@ Command: (strcase "This is a TEST." T)
 Command: (prompt "This is a TEST.")(princ)
 This is a TEST.
 Command: *Cancel*
+
+Command: COPYHIST
+
+Command: LINE
+
+Specify first point: cent
+of *Cancel*
+
+Command: LINE
+
+Specify first point: mid
+of
+Specify next point or [Undo]: mid
+of
+
+Crossing Lasso  Press Spacebar to cycle options*Cancel*
 
 Command: COPYHIST
