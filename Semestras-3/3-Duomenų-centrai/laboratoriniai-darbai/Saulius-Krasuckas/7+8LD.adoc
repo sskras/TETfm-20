@@ -131,5 +131,5 @@ https://www.youtube.com/watch?v=uV61mVYsFM8
 
 https://docs.google.com/document/d/1PFUmz6XpTVAGkq5dBe8uaBFV2Y4i-uR88AuiCLIRxIQ/edit
 
-- kol kas neveikia VM Warm/Live Migration (dar tik kuriamas),
-  veikia tik VM Cold Migration
+- kol kas neveikia VM Live Migration (dar tik kuriamas),
+  veikia tik VM Warm/Cold Migration
