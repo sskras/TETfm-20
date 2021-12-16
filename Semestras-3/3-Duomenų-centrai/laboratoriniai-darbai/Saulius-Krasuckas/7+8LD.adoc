@@ -100,3 +100,30 @@ Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
   - https://www.joyent.com/blog/reintroducing-bhyve#:~:text=This%20is%20what%20we%20mean%20when%20we%20say%20double%2Dhulled%2Dvirtualization[double-hulled-virtualization] -- Guest OS VMM procesas konteineryje
   - => dar labiau sumažintas atakos perimetras
   - => unifikuotas konteinerių ir VMų valdymas (`vmadm`)
+
+[TODO:]
+
+https://klarasystems.com/articles/bhyve-the-freebsd-hypervisor/
+- Modernus kodas, Mažas Overhead, Spartus
+- Solaris/illumos projektuotas didesniam saugumui nei Linux, ir tai juntama
+- Palaiko labai įvairius Storage backend-us
+- ZFS privalumai: akimirsniniai klonai, šifravimas (kartais ir deduplikacija)
+- PCI pass-through
+
+https://bhyvecon.org/bhyvecon2018-Gwydir.pdf
+- tik UEFI?
+- net antispoofing built-in
+- cloud-init
+
+
+Trūkumai:
+https://www.youtube.com/watch?v=uV61mVYsFM8
+- kol kas tik x86 (no ARM)
+- kiek vėlokai žengė į rinką (2011-2013 m.)
+- valdoma per CLI, JSON ir truputį YAML (norint GUI reiktų naudoti Triton)
+- Marketingo strategija dar tik kuriama, kinta (kitur stipresnės adminų ir jūzerių bendruomenės)
+
+- VGA tik per VNC?
+
+https://docs.google.com/document/d/1PFUmz6XpTVAGkq5dBe8uaBFV2Y4i-uR88AuiCLIRxIQ/edit
+- kuriamas VM Cold/Warm/Live Migration
