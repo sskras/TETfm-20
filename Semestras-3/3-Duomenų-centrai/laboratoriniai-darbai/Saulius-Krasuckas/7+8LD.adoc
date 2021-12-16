@@ -82,13 +82,17 @@ Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
   - iš CD-ROM
   - _Host OS_ nenaudoja lokalių diskų
   - => padidintas atsparumas sisteminio disko gedimams
-  - => supaprastėja „diegimas“, ypač turint daug mašinų (vos keli nustatymai)
+  - => supaprastėja „diegimas“, ypač turint daug mašinų (vos keli nustatymai)  +
+    https://www.perkin.org.uk/posts/smartos-global-zone-tweaks.html
   - => spartus atnaujinimas (pakanka tinklu nusikopijuoti bendrą atvaizdą + _Reboot_)
+    - kaskart per PXE
+    - vieną sykį į UFD per SSH
   - => daugiau vietos diskuose lieka _Guest OS_ egzemplioriams
 * _Live OS_:
   - _root_ failų sistema (FS) laikoma RAMe
   - FS pakeitimai arba neįmanomi (R/O), arba efemeriniai (`/etc`)
-  - (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.?)
+  - (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.: ?)  +
+    https://www.perkin.org.uk/posts/smartos-and-the-global-zone.html#:~:text=on%20running%20SmartOS.-,So%20what%20can%20I%20do%3F,-Firstly%2C%20let%E2%80%99s%20look
   - => neveikia naujų vartotojų kūrimas
   - => `/usr` failai primontuoti R/O
   - => dar labiau sumažintas atakų perimetras
@@ -133,3 +137,6 @@ https://docs.google.com/document/d/1PFUmz6XpTVAGkq5dBe8uaBFV2Y4i-uR88AuiCLIRxIQ/
 
 - kol kas neveikia VM Live Migration (dar tik kuriamas),
   veikia tik VM Warm/Cold Migration
+
+https://people.freebsd.org/~neel/bhyve/bhyve_bsdcan_2011.pdf  +
+https://papers.freebsd.org/2014/baldwin-Introduction_to_bhyve.files/slides.pdf  +
