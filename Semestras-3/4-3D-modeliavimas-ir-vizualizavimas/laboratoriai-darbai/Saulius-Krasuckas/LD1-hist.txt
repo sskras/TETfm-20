@@ -283,3 +283,373 @@ of
 Crossing Lasso  Press Spacebar to cycle options*Cancel*
 
 Command: COPYHIST
+
+  ; <... lost from AutoCAD history | TODO prepare for future cases>
+
+>>Enter new value for NAVSWHEELMODE <4>:
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:
+
+2 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:'_zoom
+>>Specify corner of window, enter a scale factor (nX or nXP), or
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>:
+
+>>Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+>>Enter new value for NAVSWHEELMODE <4>:
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _u FILLETEDGE
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Everything has been redone
+Regenerating model.
+Regenerating model.
+
+Command: _u FILLETEDGE
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Everything has been redone
+Regenerating model.
+Regenerating model.
+
+Command:
+Specify corner of window, enter a scale factor (nX or nXP), or
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>:
+Regenerating model.
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u 'ZOOM GROUP
+Command: _u FILLETEDGE
+Command: FILLETEDGE
+
+Radius = 2.0000
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <2.0000>: 0.1
+
+Select an edge or [Chain/Loop/Radius]:
+
+7 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u FILLETEDGE
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Everything has been redone
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u FILLETEDGE
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Everything has been redone
+
+Command: _u FILLETEDGE
+Command: _u FILLETEDGE Regenerating model.
+
+Command: _u '-VIEW Regenerating model.
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 '-VIEW Regenerating model.
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Everything has been redone
+
+Command: _u FILLETEDGE
+Command: _u FILLETEDGE Regenerating model.
+
+Command: _u '-VIEW Regenerating model.
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 '-VIEW Regenerating model.
+
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 FILLETEDGE
+Everything has been redone
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Wireframe>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c
+Command: FILLETEDGE
+
+Radius = 2.0000
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]: r
+
+Enter fillet radius or [Expression] <2.0000>: 0.1
+
+Select an edge or [Chain/Loop/Radius]:
+
+7 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command:
+Command: *Cancel*
+
+Command: FILLETEDGE
+
+Radius = 0.1000
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]:
+Select an edge or [Chain/Loop/Radius]: r
+
+Enter fillet radius or [Expression] <0.1000>: 2
+
+Select an edge or [Chain/Loop/Radius]:
+>>Enter new value for NAVSWHEELMODE <4>:
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: r
+
+Enter fillet radius or [Expression] <2.0000>: 1.5
+
+Select an edge or [Chain/Loop/Radius]:
+
+2 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+>>Enter new value for NAVSWHEELMODE <4>:
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Press Enter to accept the fillet or [Radius]:
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_26058_c65b9968.sv$ ...
+
+Command:
+Command: '_perspective
+Enter new value for PERSPECTIVE <0>: 1
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]:
+Command: '_perspective
+Enter new value for PERSPECTIVE <1>: 0
+Command: '_perspective
+Enter new value for PERSPECTIVE <0>: 1
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _h
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Hidden>: _r
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _s
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded>: _e
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded with edges>: _g
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shades of Gray>: _sk
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Sketchy>: _w
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]:
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Wireframe>: _x
+Command:
+Enter new value for NAVSWHEELMODE <4>:
+Command:
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: '_perspective
+Enter new value for PERSPECTIVE <0>: 1
+Command: *Cancel*
+
+Command: '_zoom Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>:
+Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Command: '_pan
+Command:
+Command:
+Command: _SAVEAS
+Command: _u SAVEAS GROUP
+
+  ; <... saved a variant, let's try rollbacking a bit and try other, smaller FILLETEDGE numbers.>
+  
+Command:
+Command:
+Command: _SAVEAS
+Command: COPYHIST
