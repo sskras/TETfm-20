@@ -1,0 +1,48 @@
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command:
+Command:
+
+Command:
+Command:
+Command:  <Snap on>
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _quit
+Command:
+Command:
+Command: _qsave
+Command: COPYHIST
+
+Command:
+Command:
+Command: _commandlinehide
+Command:  <Snap off>
+Command:  <Snap on>
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command:
+Command: _commandline
+Command:
+Command:
+Command: _commandlinehide
+Command:
+Command:
+Command: _commandline
+Command:
+Command:
+Command: _commandlinehide
+Command:
+Command:
+Command: _commandline
+Command:
+Command:
+Command: _commandlinehide
+Command:
+Command:
+Command: _commandline
+Command: COPYHIST
