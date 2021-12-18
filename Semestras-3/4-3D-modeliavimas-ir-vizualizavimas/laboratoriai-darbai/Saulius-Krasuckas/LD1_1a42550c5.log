@@ -1,0 +1,329 @@
+[ AutoCAD - Sat Dec 18 02:11:57 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _2d Regenerating model.
+
+Command: 
+Command: 
+Command: _attach 
+Specify insertion point <0,0>: 
+Base image size: Width: 1, Height: 0.777572, Millimeters
+
+Specify scale factor <1>: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _imageclip 
+Enter image clipping option [ON/OFF/Delete/New boundary] <New>: _D 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+Command: 
+Command: _imageclip 
+Enter image clipping option [ON/OFF/Delete/New boundary] <New>: _N 
+Outside mode - Objects outside boundary will be hidden.
+Specify clipping boundary or select invert option:
+[Select polyline/Polygonal/Rectangular/Invert clip] <Rectangular>: Specify opposite corner point: 
+Command: _u GROUP 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _adjust 1 found
+
+Enter image option [Contrast/Fade/Brightness] <Brightness>: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command:  
+Enter new value for WSCURRENT <"3D Modeling">: 
+
+Command: 
+WSCURRENT
+
+Enter new value for WSCURRENT <"3D Basics">: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _w 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Wireframe>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_13007_4322ef4b.sv$ ...
+
+Command: 
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _w 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Wireframe>: _x 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: _u 
+Invalid window specification.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: _u CHPROP 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+
+ 
+** MOVE **
+Specify move point or [Base point/Copy/Undo/eXit]: *Cancel*
+
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+
+ 
+** MOVE **
+Specify move point or [Base point/Copy/Undo/eXit]: *Cancel*
+
+Command: 
+Command: 
+Command:   
+
+
+Select reference objects: _u All selections have been undone.
+
+
+Select reference objects: Specify opposite corner: 0 found
+
+Select reference objects: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _2d Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command:   
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+
+ 
+** MOVE **
+Specify move point or [Base point/Copy/Undo/eXit]: 
+
+ 
+** ROTATE **
+Specify rotation angle or [Base point/Copy/Undo/Reference/eXit]: *Cancel*
+
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]:  <Snap on>  <Polar on>  <Polar off>  <Snap off> 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: MOVE
+
+Select objects: Specify opposite corner: 0 found
+Select objects: Specify opposite corner: 0 found
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 1 found (1 duplicate), 1 total
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: *Cancel*
+
+Command: (prompt "Šiaip netaip \U+012Fk\U+0117liau užraš\U+0105 nuo serverio ranken\U+0117l\U+0117s")(princ)
+Šiaip netaip \U+012Fk\U+0117liau užraš\U+0105 nuo serverio ranken\U+0117l\U+0117s
+Command: FONTS
+Unknown command "FONTS".  Press F1 for help.
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_13007_4322ef4b.sv$ ...
+
+Command: 
+Command: TTF
+Unknown command "TTF".  Press F1 for help.
+
+Command:  
+Enter new value for WSCURRENT <"3D Basics">: 
+
+Command: 
+WSCURRENT
+
+Enter new value for WSCURRENT <"3D Modeling">: *Cancel*
+
+Command: 
+Command: 
+Command: xlist 
+Initializing...
+Select nested xref or block object to list: 
+Object was invalid or was not selected.
+Select nested xref or block object to list: 
+
+Object was invalid or was not selected.
+Select nested xref or block object to list: *Cancel*
+
+Cannot invoke (command) from *error* without prior call to (*push-error-using-command*).
+Converting (command) calls to (command-s) is recommended.
+Command: STYLE
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
