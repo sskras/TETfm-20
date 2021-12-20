@@ -163,3 +163,9 @@ Ataskaita gali turėti tokį formatą:
 * Ar daromos atsarginės duomenų kopijos?  +
   Jei tai, tai kokiu periodiškumu?  +
   Ar yra sudarytos atsarginių duomenų kopijų saugojimo taisyklės?
+
+* Ar yra sudarytos darbo su kompiuteriu taisyklės?  +
+  Ar gali darbuotojas kompiuteryje saugoti asmeninius duomenis?  +
+  Ar draudžiama prieiga prie pramoginio pobūdžio svetainių, vaizdinių ir garso bylų?
+
+* Kiek ilgai užtrukusi sistemos prastova sutrikdytų organizacijos veiklą?
