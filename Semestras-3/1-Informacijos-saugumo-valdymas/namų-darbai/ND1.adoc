@@ -4,3 +4,14 @@
 
 == Informacinės sistemos rizikos vertinimas
 
+Pagrindiniai vertinimo etapai yra devyni:
+
+* Informacinės sistemos (IS) charakteristikų nustatymas;
+* Grėsmių identifikavimas;
+* Pažeidžiamumų identifikavimas;
+* Apsaugos priemonių analizė;
+* Tikimybių nustatymas;
+* Poveikių analizė;
+* Rizikos nustatymas;
+* Rekomenduojamos apsaugos priemonės;
+* Apibendrinanti dokumentacija.
