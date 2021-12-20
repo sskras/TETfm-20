@@ -175,8 +175,8 @@ Ataskaita gali turėti tokį formatą:
 * Ar esamos ir planuojamos apsaugos priemonės užtikrins informacijos apsaugą visuose OSI lygmenyse?
 
 |===
-.2+| Nr. .2+| Grėsmė                      | Galima Grėsmės tikimybė | Žala                               | Rizikos lygis                    | Rekomenduojamos apsaugos priemonės | Likutinis rizikos lygis
-                                          | Taip / Ne               | Maža=0,1 Vidutinė=0,5, Didelė=1,0  | Maža=10 Vidutinė=50 Didelė=100   |                                    |
-   |        |                             |                         |                                    |                                  |                                    |
-   |   1    | Kenkėjiškos PĮ paleidimas   |                         |                                    |                                  |                                    |
+.2+| Nr. .2+| Grėsmė                      | Galima Grėsmės tikimybė | Žala                             | Rizikos lygis               .2+| Rekomenduojamos apsaugos priemonės  .2+| Likutinis rizikos lygis
+                                          | Taip / Ne               | Maža=0,1 Vidutinė=0,5 Didelė=1,0 | Maža=10 Vidutinė=50 Didelė=100 |
+   |        |                             |                         |                                  |                                |                                        |
+   |   1    | Kenkėjiškos PĮ paleidimas   |                         |                                  |                                |                                        |
 |===
