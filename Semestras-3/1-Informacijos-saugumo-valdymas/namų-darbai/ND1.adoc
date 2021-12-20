@@ -74,3 +74,7 @@ Ataskaita gali turėti tokį formatą:
  ** rizikos įvertinimas (reitingas)  +
     _(pvz. didelė, vidutinė, maža);_
  ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
+
+* Išvados.  +
+  _Pateikiama rizikų ir jų lygių suvestinė, rekomendacijos ir komentarai,
+  paaiškinantys rekomenduojamų apsaugos priemoni panaudojimą rizikos neutralizavimo procese._
