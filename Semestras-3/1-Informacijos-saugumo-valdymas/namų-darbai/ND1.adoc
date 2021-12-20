@@ -45,3 +45,6 @@ Ataskaita gali turėti tokį formatą:
   *** informacijos surinkimo metodai;
       _(klausimynai, programinės priemonės ir pan.);
   *** pasirinktos rizikos vertinimo skalės aprašymas.
+* Sistemos charakteristikos.  +
+  _Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
+  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
