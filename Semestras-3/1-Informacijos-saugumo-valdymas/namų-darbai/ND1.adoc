@@ -15,3 +15,5 @@ Pagrindiniai vertinimo etapai yra devyni:
 * Rizikos nustatymas;
 * Rekomenduojamos apsaugos priemonės;
 * Apibendrinanti dokumentacija.
+
+Pažeidžiamumų ir grėsmių identifikavimas, o taip pat apsaugos priemonių ir poveikių analizė gali būti vykdoma nepriklausomai ir lygiagrečiai po to, kai užbaigtas pirmasis etapas ir nustatytos IS charakteristikos.
