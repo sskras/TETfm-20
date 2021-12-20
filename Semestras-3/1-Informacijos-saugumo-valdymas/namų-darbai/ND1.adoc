@@ -68,4 +68,5 @@ Ataskaita gali turėti tokį formatą:
  ** poros „Pažeidžiamumas/Grėsmė“ aptarimas;
  ** riziką mažinančių esamų apsaugos priemonių rinkinys;
  ** grėsmės realizavimo tikimybės analizė ir jos įvertinimas  +
-    _(pvz. didelė [1,0], vidutinė [0,5], maža [0,1]);_
+    _(pvz. „didelė [1,0]“, „vidutinė [0,5]“, „maža [0,1]“);_
+    
