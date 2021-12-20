@@ -25,3 +25,23 @@ Pagrindiniai rizikos vertinimo proceso etapai, jų įėjimo ir išėjimo informa
 .**1 pav.** Pagrindiniai rizikos vertinimo proceso etapai, jų įėjimo ir išėjimo informacija
 image::https://user-images.githubusercontent.com/74717106/146775877-d348fef9-3ab5-4fe1-84f1-c6a81b15d3b9.png[width=100%]
 
+**Pastaba**. Ataskaitoje taip pat turi būti pateiktas nagrinėjamos IS kompiuterių tinklo (potinklio) planas.
+
+<<<
+
+[.text-left]
+=== Rizikos vertinimo ataskaitos pavyzdys
+
+Ataskaita gali turėti tokį formatą:
+
+* Turinys
+* Įvadas:
+ ** Tikslas
+ ** Rizikos vertinimo ribos.  +
+    _Aprašomos IS komponentai, jos vartotojai, nutolusių padalinių išsidėstymas (jeigu tokie yra) ir t.t._
+ ** Rizikos vertinimo būdas.  +
+    _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
+  *** riziką vertinančios grupės sudėtis;
+  *** informacijos surinkimo metodai;
+      _(klausimynai, programinės priemonės ir pan.);
+  *** pasirinktos rizikos vertinimo skalės aprašymas.
