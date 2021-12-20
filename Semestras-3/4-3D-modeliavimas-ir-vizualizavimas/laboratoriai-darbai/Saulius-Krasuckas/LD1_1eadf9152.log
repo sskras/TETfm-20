@@ -1,0 +1,1525 @@
+[ AutoCAD - Mon Dec 20 02:33:18 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+Regenerating model.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command: LINE
+
+Specify first point:  <Polar on>  <Polar off>  <Snap on> 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: 
+
+Command: LINE
+
+Specify first point: 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: 
+
+Command: 
+LINE
+
+Specify first point: 
+Specify next point or [Undo]: 
+
+Command: 
+LINE
+
+Specify first point: 
+
+Specify next point or [Undo]: 
+
+Command: 
+LINE
+
+Specify first point: 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: *Cancel*
+
+
+Command: DIST
+
+Specify first point: 
+Specify second point or [Multiple points]: 
+Distance = 4.0000,  Angle in XY Plane = 90,  Angle from XY Plane = 0
+Delta X = 0.0000,  Delta Y = 4.0000,   Delta Z = 0.0000
+
+Command: 
+DIST
+
+Specify first point: 
+Specify second point or [Multiple points]: 
+Distance = 3.5000,  Angle in XY Plane = 90,  Angle from XY Plane = 0
+Delta X = 0.0000,  Delta Y = 3.5000,   Delta Z = 0.0000
+
+Command: LINE
+
+Specify first point: 
+
+Specify next point or [Undo]: 
+Specify next point or [Undo]: 
+
+Command: MOVE
+
+Select objects: END
+of 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+
+Command: _u MOVE 
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: MID
+of 
+Command: _.erase 1 found
+
+Command: TEXT
+
+Current text style:  "Standard"  Text height:  0.2000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify height <0.2000>: 
+Specify rotation angle of text <0>: 
+
+Command: TEXTSTYLE
+
+Enter new value for TEXTSTYLE <"Standard">: "serveriui"
+
+Cannot set TEXTSTYLE to that value.
+*Invalid*
+
+Command: TEXTSTYLE
+
+Enter new value for TEXTSTYLE <"Standard">: 
+
+Command: STYLE
+
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  10.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+
+Command: *Cancel*
+
+Command: STYLE
+
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+Command: 
+Command: 
+Command: 
+
+
+Command: 
+Command:  
+Command: _u DROPGEOM GROUP 
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: ROTATE
+
+Current positive angle in UCS:  ANGDIR=counterclockwise  ANGBASE=0
+1 found
+
+Specify base point: 
+Specify rotation angle or [Copy/Reference] <0>:  <Snap off>  <Snap on>  <Ortho on> 
+
+Command: 
+ROTATE
+
+Current positive angle in UCS:  ANGDIR=counterclockwise  ANGBASE=0
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point: 
+Specify rotation angle or [Copy/Reference] <0>: 
+
+Command: *Cancel*
+
+Command: _u ROTATE 
+Command: _u ROTATE 
+Command: _u Grip Edit 
+Command: _u Grip Edit 
+Command: _u TEXT 
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_9f7d3efb.sv$ ...
+
+Command: 
+Command: 
+Command: 
+
+
+Command: 
+Command:  
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _textedit 
+Current settings: Edit mode = Multiple
+
+Select an annotation object or [Undo/Mode]: *Cancel*
+
+Command: 
+Command: 
+Command: 
+Command: _scaletext 1 found
+
+Enter a base point option for scaling
+[Existing/Left/Center/Middle/Right/TL/TC/TR/ML/MC/MR/BL/BC/BR] <Existing>: *Cancel*
+
+Command: 
+Command: _scaletext 
+Select objects: *Cancel*
+
+Command: 
+Command: _scaletext 
+Select objects: *Cancel*
+
+Command: 
+Command: _scaletext 
+Select objects: *Cancel*
+
+Command: 
+Command: _scaletext 
+Select objects: 1 found
+
+Select objects: *Cancel*
+
+Command: 
+Command: _scaletext 
+Select objects: 1 found
+
+Select objects: 
+
+Enter a base point option for scaling
+[Existing/Left/Center/Middle/Right/TL/TC/TR/ML/MC/MR/BL/BC/BR] <Existing>: R
+
+Specify new model height or [Paper height/Match object/Scale factor] <2.0000>: 2.2
+
+1 objects changed
+Command: 
+Command: 
+Command: 
+
+
+Command: 
+Command:  
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _textedit 
+Current settings: Edit mode = Multiple
+
+Select an annotation object or [Undo/Mode]: *Cancel*
+
+Command: 
+Command: _scaletext 
+Select objects: Specify opposite corner: 0 found
+Select objects: 1 found
+
+Select objects: 
+
+Enter a base point option for scaling
+[Existing/Left/Center/Middle/Right/TL/TC/TR/ML/MC/MR/BL/BC/BR] <Right>: R
+
+Specify new model height or [Paper height/Match object/Scale factor] <2.2000>: 2.3
+
+1 objects changed
+Command: 
+Command: 
+Command: 
+
+
+Command: 
+Command:  
+Command: 
+Command: 
+Command: 
+
+
+Command: 
+Command:  
+Command: 
+Command: 
+Command: 
+Command: _textedit 
+Current settings: Edit mode = Multiple
+
+Select an annotation object or [Undo/Mode]: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+TEXTEDIT
+
+Current settings: Edit mode = Multiple
+
+Select an annotation object or [Undo/Mode]: *Cancel*
+
+Command: 
+Command: 
+Command: _dim 
+Select objects or specify first extension line origin or [Angular/Baseline/Continue/Ordinate/aliGn/Distribute/Layer/Undo]:'_spell 
+Resuming DIM command.
+
+Command: 
+Command: 
+Command: _textalign 
+Current settings: Align = Left, Spacing Mode = Current Vertical 
+
+
+Select text objects to align [alIgnment/Options]: '_style 
+Resuming TEXTALIGN command.
+
+
+Select text objects to align [alIgnment/Options]: 
+
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+
+Command: 
+Crossing Lasso  Press Spacebar to cycle options
+Command: 
+Command: *Cancel*
+
+Command: 
+Crossing Lasso  Press Spacebar to cycle options
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: 
+Crossing Lasso  Press Spacebar to cycle options
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Window Lasso  Press Spacebar to cycle options
+Window Lasso  Press Spacebar to cycle options
+Command: 
+Command: 
+Command: 
+Command: '_.quickproperties 
+Command: *Cancel*
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Crossing Lasso  Press Spacebar to cycle options
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Window Lasso  Press Spacebar to cycle options
+Window Lasso  Press Spacebar to cycle options
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: 
+Command: '_style 
+Command: 
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+
+Command: '_style 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_9f7d3efb.sv$ ...
+
+Command: 
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+
+Command: '_style 
+Command: TEXT
+
+Current text style:  "serveriui"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify rotation angle of text <0>: 
+
+Command: '_style 
+Command: 
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: 
+MOVE
+
+Select objects: tex
+
+
+*Invalid selection*
+Expects a point or Window/Last/Crossing/BOX/ALL/Fence/WPolygon/CPolygon/Group/Add/Remove/Multiple/Previous/Undo/AUto/SIngle/SUbobject/Object
+
+Select objects: *Cancel*
+
+Command: TEXT
+
+Current text style:  "Standard"  Text height:  2.0000  Annotative:  No  Justify:  Left
+Specify start point of text or [Justify/Style]: 
+Specify height <2.0000>: 2.0000
+
+Specify rotation angle of text <0>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: _.erase 1 found
+
+Command: MTEXT
+
+Current text style:  "Standard"  Text height:  2.0000  Annotative:  No
+Specify first corner: 
+Specify opposite corner or [Height/Justify/Line spacing/Rotation/Style/Width/Columns]: 
+
+Command: _u MTEXT 
+Command: 
+U
+ERASE 
+Command: _u TEXT 
+Command: MTEXT
+
+Current text style:  "Standard"  Text height:  2.0000  Annotative:  No
+Specify first corner: 
+Specify opposite corner or [Height/Justify/Line spacing/Rotation/Style/Width/Columns]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>:  <Snap off> 
+Command: 
+MOVE
+
+Select objects: 
+
+Command: 
+MOVE
+
+Select objects: 1 found
+
+Select objects: Specify opposite corner: 0 found
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+
+Specify displacement <0.0000, 0.0000, 0.0000>: 
+Command: _u MOVE 
+Command: 
+U
+MOVE 
+Command: 
+Command: 
+U
+MOVE 
+Command: _u Grip Edit 
+Command: _u MTEXT 
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MTEXT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Command: MOVE
+
+Select objects: Specify opposite corner: 0 found
+Select objects: Specify opposite corner: 0 found
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: 
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_9f7d3efb.sv$ ...
+
+Command: 
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: MOVE
+1 found
+
+Specify base point or [Displacement] <Displacement>:  <Snap on> 
+Specify second point or <use first point as displacement>: 
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Everything has been redone
+
+Command: MOVE
+
+Select objects:  <Snap off> 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: near
+to 
+No found for specified point.
+Point or option keyword required.
+
+Specify base point or [Displacement] <Displacement>:  <Snap on>  <Snap off> 
+Specify second point or <use first point as displacement>: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: '_pan 
+>>Press ESC or ENTER to exit, or right-click to display shortcut menu.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: _.erase 1 found
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: MTEXT
+
+Current text style:  "Standard"  Text height:  2.0000  Annotative:  No
+Specify first corner: 
+Specify opposite corner or [Height/Justify/Line spacing/Rotation/Style/Width/Columns]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+U
+MTEXT 
+Command: _u Pan GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MTEXT 
+Everything has been redone
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Everything has been redone
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: MTEXT
+
+Current text style:  "Standard"  Text height:  2.0000  Annotative:  No
+Specify first corner: 
+Specify opposite corner or [Height/Justify/Line spacing/Rotation/Style/Width/Columns]: 
+
+Command: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+
+ 
+** MOVE **
+Specify move point or [Base point/Copy/Undo/eXit]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_9f7d3efb.sv$ ...
+
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _properties 
+Command: 
+Command: _u Modify Property GROUP Properties 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Properties Modify Property 
+Everything has been redone
+
+Command: _u Modify Property GROUP Properties 
+Command: _u MTEDIT GROUP 
+Command: _u Grip Edit 
+Command: _u MTEDIT GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP MTEDIT 
+Command: _u MTEDIT GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP MTEDIT 
+Command: _u MTEDIT GROUP 
+Command: _u MTEDIT GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP MTEDIT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP MTEDIT 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 ERASE 
+Everything has been redone
+
+Command: _u ERASE 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: _u MTEDIT GROUP 
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Grip Edit 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP MTEDIT 
+Everything has been redone
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: 
+Command: 
+Command: _RENDER 
+Command:  
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _s 
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded>: _h 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Hidden>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _sk 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Sketchy>: _w 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Wireframe>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _r 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: (prompt "Pagaliau užd\U+0117jau šiok\U+012F tok\U+012F tekst\U+0105, atradau Tracking-vs-Width-factor skirtumus AutoCAD šriftams.")(princ)
+Pagaliau užd\U+0117jau šiok\U+012F tok\U+012F tekst\U+0105, atradau Tracking-vs-Width-factor skirtumus AutoCAD šriftams.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_9f7d3efb.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _qsave 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
