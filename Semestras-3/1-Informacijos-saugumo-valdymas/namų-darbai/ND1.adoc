@@ -143,3 +143,15 @@ Ataskaita gali turėti tokį formatą:
 * Kaip skirstomi IP adresai tinkle?
 
 * Ar yra numatyta laisvų rozečių prieigai prie tinklo, prie kurių gali prisijungti pašaliniai asmenys?
+
+* Ar tinklas dalinamas į potinklius?
+
+* Ar tinkle naudojami serveriai?  +
+  Jei tapi, tai kokie? (Pvz. žiniatinklio, pašto, failų ir kt.)
+
+* Ar organizacijos kompiuteriai būna įjungti visą parą ar tik darbo valandomis?
+
+* Ar yra numatyta galimybė prisijungti prie organizacijos tinklo iš išorės?  +
+  Jei taip, kokios priemonės naudojamos siekiant užtikrinti perduodamų duomenų saugumą?
+
+* Ar yra organizacijos asmuo, prižiūrintis kompiuterių programinę įrangą?
