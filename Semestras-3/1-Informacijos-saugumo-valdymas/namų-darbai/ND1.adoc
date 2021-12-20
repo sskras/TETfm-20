@@ -51,5 +51,8 @@ Ataskaita gali turėti tokį formatą:
   _Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
   Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
 
-* Pažeidžiamumų sąrašas.
+* Pažeidžiamumų sąrašas.  +
   _Sudaromas galimai egzistuojančių potencialių IS pažeidžiamumų sąrašas._
+
+* Grėsmių šaltinių sąrašas.  +
+  _Sudaromas potencialių, aktualių vertinamai sistemai grėsmių sąrašas._
