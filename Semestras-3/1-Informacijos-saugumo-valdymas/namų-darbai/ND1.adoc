@@ -155,3 +155,11 @@ Ataskaita gali turėti tokį formatą:
   Jei taip, kokios priemonės naudojamos siekiant užtikrinti perduodamų duomenų saugumą?
 
 * Ar yra organizacijos asmuo, prižiūrintis kompiuterių programinę įrangą?
+
+* Kas rūpinasi informacijos saugumu organizacijoje?  +
+  Ar yra organizacijos asmuo, atsakingas už informacijos apsaugą?  +
+  Ar organizacijoje yra sudaryta saugumo politika?
+
+* Ar daromos atsarginės duomenų kopijos?  +
+  Jei tai, tai kokiu periodiškumu?  +
+  Ar yra sudarytos atsarginių duomenų kopijų saugojimo taisyklės?
