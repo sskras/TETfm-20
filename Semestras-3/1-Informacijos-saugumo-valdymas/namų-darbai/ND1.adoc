@@ -169,3 +169,7 @@ Ataskaita gali turėti tokį formatą:
   Ar draudžiama prieiga prie pramoginio pobūdžio svetainių, vaizdinių ir garso bylų?
 
 * Kiek ilgai užtrukusi sistemos prastova sutrikdytų organizacijos veiklą?
+
+* Ar patalpose, kuriose stovi aparatinė įranga, yra galimas užliejimas vandeniu, pvz. pažeidus santechninį mazgą?
+
+* Ar esamos ir planuojamos apsaugos priemonės užtikrins informacijos apsaugą visuose OSI lygmenyse?
