@@ -93,4 +93,16 @@ Ataskaita gali turėti tokį formatą:
   (Ar kompiuteriuose saugomi duomenys yra svarbūs organizacijos veiklos procesams?  +
    Kokią įtaką šių duomenų praradimas turėtų organizacijos veiklai?  +
    Kokią įtaką IS teikiamų paslaugų sutrikimas turėtų organizacijos veiklai?)
- 
+
+* Kokia tinklo įranga naudojama?
+
+* Tinklo įrangos išdėstymas patalpose.
+
+* Tinklo topologija.
+
+* Kokia kompiuterinė įranga naudojama?  +
+  (Pvz. spausdintuvai, skeneriai, projektoriai, kopijavimo aparatai)
+
+* Ar organizacija turi nešiojamų kompiuterių?  +
+  Ar yra numatytos taisyklės, kokią informaciją galiam kopijuoti ir saugoti šiuose įrenginiuose?  +
+  Ar naudojamos nešiojamos duomenų laikmenos ne darbo tikslais?
