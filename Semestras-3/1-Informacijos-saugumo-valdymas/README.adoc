@@ -1,1 +1,5 @@
+= Informacijos saugumo valdymas
 
+=== Vilnius TECH, magistrantūros kursas
+
+==== ELKRM17315, doc. dr. Nerijus Paulauskas
