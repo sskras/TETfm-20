@@ -130,3 +130,16 @@ Ataskaita gali turėti tokį formatą:
 * Ar į organizacijos patalpas gali patekti pašaliniai asmenys?  +
   Jeigu taip, ar patalpoje jis būna vienas, ar yra ir jį prižiūrintis asmuo?  +
   Ar pašaliniai asmenys gali prieiti prie kompiuterių?
+
+* Ar organizacijos patalpose yra įrengta patalpų apsaugos signalizacija?
+
+* Kas gali naudotis spausdintuvais?  +
+  Ar spausdintuvu galima naudotis iš bet kurio kompiuterio?
+
+* Ar tinklas turi bevielio ryšio prieigos tašką?  +
+  Ar bevielio ryšio prieigos taškas naudoja autentifikavimo protokolus, duomenų šifravimą?  +
+  Jei taip, tai kokius?
+
+* Kaip skirstomi IP adresai tinkle?
+
+* Ar yra numatyta laisvų rozečių prieigai prie tinklo, prie kurių gali prisijungti pašaliniai asmenys?
