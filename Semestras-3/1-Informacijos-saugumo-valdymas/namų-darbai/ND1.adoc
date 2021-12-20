@@ -106,3 +106,7 @@ Ataskaita gali turėti tokį formatą:
 * Ar organizacija turi nešiojamų kompiuterių?  +
   Ar yra numatytos taisyklės, kokią informaciją galiam kopijuoti ir saugoti šiuose įrenginiuose?  +
   Ar naudojamos nešiojamos duomenų laikmenos ne darbo tikslais?
+
+* Ar darbuotojai naudojasi išoriniais atminties įrenginiais (atmintukais, nešiojamais diskais)?  +
+  Ar yra numatytos taisyklės, kokią informaciją galima kopijuoti ir saugoti šiuos įrenginiuose?  +
+  Ar naudojamos nešiojamos duomenų laikmenos ne darbo tikslais?
