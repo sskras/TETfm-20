@@ -173,3 +173,9 @@ Ataskaita gali turėti tokį formatą:
 * Ar patalpose, kuriose stovi aparatinė įranga, yra galimas užliejimas vandeniu, pvz. pažeidus santechninį mazgą?
 
 * Ar esamos ir planuojamos apsaugos priemonės užtikrins informacijos apsaugą visuose OSI lygmenyse?
+
+|===
+   | Nr. | Grėsmė                      | Galima Grėsmės tikimybė | Žala                                | Rizikos lygis                    | Rekomenduojamos apsaugos priemonės | Likutinis rizikos lygis
+   |     |                             | Taip / Ne               | Maža=0,1 Vidutinė=0,5, Didelė=1,0   | Maža=10 Vidutinė=50 Didelė=100   |                                    |
+   |   1 | Kenkėjiškos PĮ paleidimas   |                         |                                     |                                  |                                    |
+|===
