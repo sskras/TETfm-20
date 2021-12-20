@@ -37,11 +37,13 @@ Ataskaita gali turėti tokį formatą:
 * Turinys
 
 * Įvadas:
+
  ** Tikslas
  ** Rizikos vertinimo ribos.  +
     _Aprašomos IS komponentai, jos vartotojai, nutolusių padalinių išsidėstymas (jeigu tokie yra) ir t.t._
  ** Rizikos vertinimo būdas.  +
     _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
+
   *** riziką vertinančios grupės sudėtis;
   *** informacijos surinkimo metodai;
       _(klausimynai, programinės priemonės ir pan.);
@@ -56,3 +58,14 @@ Ataskaita gali turėti tokį formatą:
 
 * Grėsmių šaltinių sąrašas.  +
   _Sudaromas potencialių, aktualių vertinamai sistemai grėsmių sąrašas._
+
+* Rizikos vertinimo rezultatai.  +
+  _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)._  +
+  Į kiekvieną šio sąrašo elementą turi įeiti:
+
+ ** numeris ir trumpas aprašymas  +
+    _(pvz. „1. Vartotojų slaptažodžiai gali būti atspėti arba parinkti“);_
+ ** poros „Pažeidžiamumas/Grėsmė“ aptarimas;
+ ** riziką mažinančių esamų apsaugos priemonių rinkinys;
+ ** grėsmės realizavimo tikimybės analizė ir jos įvertinimas  +
+    _(pvz. didelė [1,0], vidutinė [0,5], maža [0,1]);_
