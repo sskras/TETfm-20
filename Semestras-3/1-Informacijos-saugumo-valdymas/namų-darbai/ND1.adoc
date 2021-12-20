@@ -69,4 +69,6 @@ Ataskaita gali turėti tokį formatą:
  ** riziką mažinančių esamų apsaugos priemonių rinkinys;
  ** grėsmės realizavimo tikimybės analizė ir jos įvertinimas  +
     _(pvz. „didelė [1,0]“, „vidutinė [0,5]“, „maža [0,1]“);_
-    
+ ** rizikos įvertinimas (reitingas)  +
+    _(pvz. didelė, vidutinė, maža);_
+ ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
