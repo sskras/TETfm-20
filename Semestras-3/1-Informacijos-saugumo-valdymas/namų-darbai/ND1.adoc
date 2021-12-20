@@ -34,6 +34,7 @@ image::https://user-images.githubusercontent.com/74717106/146775877-d348fef9-3ab
 
 Ataskaita gali turėti tokį formatą:
 
+[disc]
 * Turinys
 
 * Įvadas:
@@ -78,3 +79,18 @@ Ataskaita gali turėti tokį formatą:
 * Išvados.  +
   _Pateikiama rizikų ir jų lygių suvestinė, rekomendacijos ir komentarai,
   paaiškinantys rekomenduojamų apsaugos priemoni panaudojimą rizikos neutralizavimo procese._
+
+<<<
+
+[.text-left]
+=== IS charakteristikų nustatymas
+
+* IS misija  +
+  (veiklos sfera, tikslai).
+  
+* IS duomenų ir informacijos, teikiamų paslaugų kritiškumas ir jautrumas organizacijos veiklai.  +
+   +
+  (Ar kompiuteriuose saugomi duomenys yra svarbūs organizacijos veiklos procesams?  +
+   Kokią įtaką šių duomenų praradimas turėtų organizacijos veiklai?  +
+   Kokią įtaką IS teikiamų paslaugų sutrikimas turėtų organizacijos veiklai?)
+ 
