@@ -1,0 +1,1102 @@
+[ AutoCAD - Tue Dec 21 21:44:58 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Everything has been undone
+
+Command: _.erase 1 found
+
+Command: _u 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: _.erase 1 found
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command:  
+Command: 
+
+
+
+
+
+Command: 
+Command: 
+Command: _RENDER 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command:  
+Command: 
+Command: 
+Command:  
+Command: 
+Command: 
+Command:  
+Command: 
+
+
+
+
+Command: 
+
+
+
+
+
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_17713_01a86387.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command:  
+Command: 
+
+
+
+
+
+
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _VIEW 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command:  <Grid off> 
+Command:  <Grid on> 
+Command: GROUP
+11 found
+
+Unnamed group has been created. 
+Command: 
+Command: UNGROUP
+
+Group exploded.
+Command: 
+Command: *Cancel*
+
+Command: 
+UNGROUP
+
+Select group or [Name]: 
+
+Object is not a member of a group.
+Select group or [Name]: 
+
+Object is not a member of a group.
+Select group or [Name]: *Cancel*
+
+Command: 
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _union 
+Select objects: Specify opposite corner: 11 found
+
+Select objects: 
+
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: _union 
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 
+
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: _u VSCURRENT 
+Command: _u UNION GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command:  
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_17713_01a86387.sv$ ...
+
+Command: 
+Command:  
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u '.VIEWCUBEACTION 
+Command: _u '.VIEWCUBEACTION 
+Command: _u '.-LAYER '.-LAYER '.-LAYER '.-LAYER '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER '.-LAYER '.-LAYER '.-LAYER '.-LAYER 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:  
+Command:  
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: '_perspective 
+Enter new value for PERSPECTIVE <1>: 0 
+Command: LINE
+
+Specify first point: 
+Specify next point or [Undo]:  <Object Snap Tracking off>  <Object Snap Tracking on> *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Command: LINE
+
+Specify first point: 
+Specify next point or [Undo]: 
+Specify next point or [Undo]: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command:  
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _mo Closed profiles creation mode [SOlid/SUrface] <Solid>: _su
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <-0.9500>: 
+
+Command: *Cancel*
+
+Command: _u EXTRUDE GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: *Cancel*
+
+Command: _u LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.VIEWCUBEACTION 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP EXTRUDE 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _sectionplane Type = Plane
+Select face or any point to locate section line or [Draw section/Orthographic/Type]: 
+Specify through point: 
+Command: 
+Command: '_.quickproperties 
+Command: _.erase 2 found
+
+Command: _.erase 1 found
+
+Command: *Cancel*
+
+Command: _u ERASE 
+Command: _u ERASE 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _slice 
+Select objects to slice: 1 found
+
+Select objects to slice: 
+
+Specify start point of slicing plane or [planar Object/Surface/Zaxis/View/XY/YZ/ZX/3points] <3points>: S
+
+Select a surface: 
+Select sliced object to keep or [keep Both sides] <Both>: 
+
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 0.2500
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <0.2500>: 2
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 0.2500
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <0.2500>: 2
+
+Select an edge or [Chain/Loop/Radius]: 
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_17713_01a86387.sv$ ...
+
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 2.0000
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+11 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <2.0000>: 0.25
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+
+Command: _u FILLETEDGE GROUP 
+Command: _u FILLETEDGE GROUP 
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 0.2500
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Edge has already been picked.
+
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+11 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:
+
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 0.2500
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:1
+
+Invalid option keyword.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <0.2500>: 1
+
+Press Enter to accept the fillet or [Radius]:*Cancel*
+
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 0.2500
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+1 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <0.2500>: 2
+
+Press Enter to accept the fillet or [Radius]:
+
+Command: 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_17713_01a86387.sv$ ...
+
+Command: 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u RENDER GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u INTELLIZOOM 
+Command: _u FILLETEDGE GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u FILLETEDGE GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _fillet 
+Current settings: Mode = TRIM, Radius = 1.2000
+Select first object or [Undo/Polyline/Radius/Trim/Multiple]: 
+Enter fillet radius or [Expression] <1.2000>: 1
+
+Select an edge or [Chain/Loop/Radius]: 
+
+1 edge(s) selected for fillet.
+
+Command: _u FILLET GROUP 
+Command: _u FILLETEDGE GROUP 
+Command: 
+Command: 
+Command: _fillet 
+Current settings: Mode = TRIM, Radius = 1.2000
+Select first object or [Undo/Polyline/Radius/Trim/Multiple]: 
+Enter fillet radius or [Expression] <1.2000>: 
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <1.2000>: 2
+
+Select an edge or [Chain/Loop/Radius]: R
+
+Enter fillet radius or [Expression] <2.0000>: 
+
+Select an edge or [Chain/Loop/Radius]: 
+
+1 edge(s) selected for fillet.
+
+Command: 
+Command: 
+Command: _fillet 
+Current settings: Mode = TRIM, Radius = 2.0000
+Select first object or [Undo/Polyline/Radius/Trim/Multiple]: 
+Enter fillet radius or [Expression] <2.0000>: *Cancel*
+
+0 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: 
+Command: 
+Command: _fillet 
+Current settings: Mode = TRIM, Radius = 2.0000
+Select first object or [Undo/Polyline/Radius/Trim/Multiple]: 
+Enter fillet radius or [Expression] <2.0000>:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming FILLET command.
+
+Enter fillet radius or [Expression] <2.0000>: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLET command.
+
+Enter fillet radius or [Expression] <2.0000>: *Cancel*
+
+0 edge(s) selected for fillet.
+
+No fillet to be computed.
+
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _FILLETEDGE 
+Radius = 0.2500
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Edge has already been picked.
+
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: '_pan 
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming FILLETEDGE command.
+
+Select an edge or [Chain/Loop/Radius]: 
+Edge has already been picked.
+
+Select an edge or [Chain/Loop/Radius]: 
+Select an edge or [Chain/Loop/Radius]: 
+
+13 edge(s) selected for fillet.
+
+Press Enter to accept the fillet or [Radius]:R
+Specify Radius or [Expression] <0.2500>: 
+
+Press Enter to accept the fillet or [Radius]:
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Command: 
+Command: 
+Command: _fillet 
+Current settings: Mode = TRIM, Radius = 2.0000
+Select first object or [Undo/Polyline/Radius/Trim/Multiple]: *Cancel*
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_17713_01a86387.sv$ ...
+
+Command: 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: _u RENDER GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u 'ZOOM GROUP 
+Command: _u FILLET GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u FILLETEDGE GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP FILLETEDGE 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _SAVEAS 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: 
+Command: 
+Command: _qsave 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
