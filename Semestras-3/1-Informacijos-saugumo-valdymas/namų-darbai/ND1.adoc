@@ -223,6 +223,7 @@ daugiausiai duomenų centrų (DC) IS, bet taip pat ir kelias Telco IS.
 „Bastionų“ (dar kartais vadinama _Jumphost_, angl.) IS skirta jungtis prie kitų IS.
 
 Pagalvojimui:
+
 * įsileidžia ir su _passwd_, bet tik iš KDV arba VPN
 * SSH raktai, jų auditas
 * papildomos (automatinės) funkcijos/perimetras: `cron`
