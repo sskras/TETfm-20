@@ -156,9 +156,9 @@ Ataskaita gali turėti tokį formatą:
 * Ar yra numatyta galimybė prisijungti prie organizacijos tinklo iš išorės?  +
   Jei taip, kokios priemonės naudojamos siekiant užtikrinti perduodamų duomenų saugumą?
 
-* Ar yra organizacijos asmuo, prižiūrintis kompiuterių programinę įrangą?
-
-* Kas rūpinasi informacijos saugumu organizacijoje?  +
+*  Ar yra organizacijos asmuo, prižiūrintis kompiuterių programinę įrangą?
+ 
+* Kas rūpinasi informacijos saugumu organizaci joje?  +    | Neleistinas išteklių naudojimas |                     |                                  |                                |                                        | 
   Ar yra organizacijos asmuo, atsakingas už informacijos apsaugą?  +
   Ar organizacijoje yra sudaryta saugumo politika?
 
@@ -178,7 +178,20 @@ Ataskaita gali turėti tokį formatą:
 
 |===
 .2+| Nr. .2+| Grėsmė                      | Galima Grėsmės tikimybė | Žala                             | Rizikos lygis               .2+| Rekomenduojamos apsaugos priemonės  .2+| Likutinis rizikos lygis
-                                          | Taip / Ne               | Maža=0,1 Vidutinė=0,5 Didelė=1,0 | Maža=10 Vidutinė=50 Didelė=100 |
-   |        |                             |                         |                                  |                                |                                        |
-   |   1    | Kenkėjiškos PĮ paleidimas   |                         |                                  |                                |                                        |
+                                          | Taip / Ne               | Maža=0,1 Vidutinė=0,5 Didelė=1,0 | Maža=10 Vidutinė=50 Didelė=100 |                                        |
+   |        |                             |                         |                                  |                                |                                        | 
+   |   1    | Kenkėjiškos PĮ paleidimas   |                         |                                  |                                |                                        | 
+   |   2    | Neleistinas taikomųjų programų naudojimas |           |                                  |                                |                                        | 
+   |   3    | Neleistinas išteklių naudojimas |                     |                                  |                                |                                        |
+   |   4    | Įsiskverbimas į tinklą      |                         |                                  |                                |                                        |
+   |   5    | Tinklu perduodamų duomenų perėmimas |                 |                                  |                                |                                        |
+   |   6    | Neleistinas tinklo srauto maršruto pakeitimas |       |                                  |                                |                                        |
+   |   7    | Ryšių klaida                |                         |                                  |                                |                                        |
+   |   8    | Ryšių sutrikimas            |                         |                                  |                                |                                        |
+   |   9    | Serverių gedimas            |                         |                                  |                                |                                        |
+   |  10    | Kompiuterių tinklo įrangos gedimas |                  |                                  |                                |                                        |
+   |  11    | Elektros tiekimo sutrikimai |                         |                                  |                                |                                        |
+   |  12    | Kompiuterių tinklo paslaugų sutrikimas |              |                                  |                                |                                        |
+   |  13    | Taikomųjų programų klaidos  |                         |                                  |                                |                                        |
+   |  14    | Tyčinis klaidingų duomenų įvedimas |                  |                                  |                                |                                        |
 |===
