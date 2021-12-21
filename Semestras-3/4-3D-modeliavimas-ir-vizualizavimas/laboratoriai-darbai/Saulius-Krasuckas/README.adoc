@@ -53,6 +53,6 @@ image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da
  ** Teko konvertuoti OTF šriftą į TTF formatą ir įsidiegti į Windows OS tik jį.
  ** Tuomet braižant tekstą ilgai užtruko tinkamo horizontalaus mastelio/ištempimo parinkimas šriftui:
   *** braižant su `TEXT` komanda, leidžiama keisti tik "Width Factor" reikšmę, bet raidės tampa per plačios;
-  *** vien tik tarpų tarp raidžių keitimui pasirodo esanti "Tracking" reikšmė;
-  *** tačiau tam reikalinga jau `MTEXT` (_Multiline text_) komanda.
+  *** vien tik tarpo tarp raidžių paderinimui pasirodo yra "Tracking" reikšmė;
+  *** ... tačiau tam reikalinga jau `MTEXT` (_Multiline text_) komanda.
  ** .
