@@ -1,0 +1,3471 @@
+[ AutoCAD - Tue Dec 21 14:07:41 2021  ]----------------------------------------
+
+Loading Modeler DLLs.
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command:  
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Command:  
+Command: 
+Command: 
+Command: _trim 
+View is not plan to UCS. Command results may not be obvious.
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Object is perpendicular to UCS XY plane.
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Command: TRIM
+
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: *Cancel*
+
+Command: *Cancel*
+
+Command: LINE
+
+Specify first point: MID
+of 
+Specify next point or [Undo]: MID
+of 
+Specify next point or [Undo]: *Cancel*
+
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: 200
+
+Specify second point or [Array] <use first point as displacement>: *Cancel*
+
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>: 20
+
+Specify second point or [Array/Exit/Undo] <Exit>:  <Ortho on> 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Command: _u COPY 
+Command: _u COPY 
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>:  <Ortho on> *Cancel*
+
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>: 
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Command: _u COPY 
+Command: _u INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: _u INTELLIZOOM 
+Command: _u COPY 
+Command: _u LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 LINE 
+Command: _u LINE 
+Command: LINE
+
+Specify first point: MID
+of 
+Specify next point or [Undo]: MID
+of 
+Specify next point or [Undo]: 
+
+Command: COPY
+
+Select objects: Specify opposite corner: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>:  <Ortho on> 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: 
+
+Command: _u COPY 
+Command: _u LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 LINE 
+Command: _u LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 COPY 
+Everything has been redone
+
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>: 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: 
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Command: _u COPY 
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>: 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: 
+Specify second point or [Array/Exit/Undo] <Exit>: _u 
+Specify second point or [Array/Exit/Undo] <Exit>: _u 
+Specify second point or [Array/Exit/Undo] <Exit>: _u 
+Command has been completely undone.
+
+Specify second point or [Array] <use first point as displacement>: _u 
+Point or option keyword required.
+
+Specify second point or [Array] <use first point as displacement>: *Cancel*
+
+Command: _u COPY 
+Command: _u COPY 
+Command: _u LINE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 LINE 
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: 200
+
+Specify second point or [Array] <use first point as displacement>: *Cancel*
+
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: COPY
+1 found
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>:  <Ortho on> 200
+
+Specify second point or [Array/Exit/Undo] <Exit>: @200<0
+
+Specify second point or [Array/Exit/Undo] <Exit>: 
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Command: _u COPY 
+Command: OFFSET
+
+Current settings: Erase source=No  Layer=Source  OFFSETGAPTYPE=0
+Specify offset distance or [Through/Erase/Layer] <Through>: 200
+
+Select object to offset or [Exit/Undo] <Exit>: 
+Specify point on side to offset or [Exit/Multiple/Undo] <Exit>: 
+Select object to offset or [Exit/Undo] <Exit>: 
+
+Command: _u OFFSET 
+Command: _u CHPROP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHPROP 
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>: a
+
+Enter number of items to array: 2
+
+Specify second point or [Fit]: *Cancel*
+
+Specify second point or [Array/Exit/Undo] <Exit>:  <Ortho on> @200<0
+
+Specify second point or [Array/Exit/Undo] <Exit>: 
+Specify second point or [Array/Exit/Undo] <Exit>: 
+Specify second point or [Array/Exit/Undo] <Exit>: 
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: _u 'ZOOM GROUP 
+Command: _u COPY 
+Command: _u CHPROP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHPROP 
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: INT
+of 
+Specify second point or [Array] <use first point as displacement>:  <Ortho on>  <Snap on> 20
+
+Specify second point or [Array/Exit/Undo] <Exit>: 20
+
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Command: 
+Command: 
+Command: _trim 
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  >>Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  >>Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]:  
+Resuming TRIM command.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: *Cancel*
+
+Command: 
+Command: 
+
+Current ucs name:  *WORLD*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command:  
+Command:  
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _s 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _2d Regenerating model.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command:  Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Regenerating model.
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _x 
+Command: 
+VSCURRENT
+
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: VSCURRENT
+
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+ 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+RENDER
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command:  Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _h 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Hidden>: _r 
+Command: 
+Command: 
+Command: _RENDER 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: EXPLODE
+3 found
+
+Command: MOVE
+
+Select objects: Specify opposite corner: 0 found
+Select objects: 1 found
+
+Select objects: 1 found (1 duplicate), 1 total
+
+Select objects: 1 found (1 duplicate), 1 total
+
+Select objects: 1 found (1 duplicate), 1 total
+
+Select objects: _u 
+Select objects: _u 
+Select objects: *Cancel*
+
+Command: _u MOVE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 EXPLODE 
+Command: _u EXPLODE 
+Command: 
+Command: 
+Command: txtexp 
+Initializing...
+Select text to be EXPLODED: 
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 
+
+Nested items = Off    Orphaned data = Off
+3 text object(s) have been exploded to lines.
+The line objects have been placed on layer 0.
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+Regenerating model.
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+Regenerating model.
+
+Command: Regenerating model.
+Regenerating model.
+Regenerating model.
+Regenerating model.
+_u INTELLIZOOM 
+Command: _u 'ZOOM GROUP Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: _u 'ZOOM GROUP Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: _u '.-LAYER Regenerating model.
+
+Command: _u 'CLAYER 
+Command: _u 
+Command: _u '.-LAYER '.-LAYER '.-LAYER '.-LAYER Regenerating model.
+
+Command: _u 'CLAYER 
+Command: _u 
+Command: _u '.-LAYER Regenerating model.
+
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: 
+Command: 
+Command: torient 
+Initializing...
+Select TEXT, MTEXT, ATTDEF, or BLOCK inserts w/attributes...
+Select objects: 1 found
+
+Select objects: 
+
+New absolute rotation <Most Readable>:  Specify second point: 
+1 objects modified.
+
+Command: 
+TORIENT
+
+Select TEXT, MTEXT, ATTDEF, or BLOCK inserts w/attributes...
+Select objects: *Cancel*
+
+Command: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: _u 
+Invalid window specification.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: Specify opposite corner or [Fence/WPolygon/CPolygon]: _u 
+Invalid window specification.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: Specify opposite corner or [Fence/WPolygon/CPolygon]: _u 
+Invalid window specification.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: _u '.-LAYER Regenerating model.
+
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: _u VSCURRENT 
+Command: _u RENDER GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP RENDER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT Regenerating model.
+
+Command: _u VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: _u VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT Regenerating model.
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: REGEN
+Regenerating model.
+
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _mtedit 
+Command: REGEN
+Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+
+Invalid window specification.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+
+Invalid window specification.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: 
+Command: txtexp 
+Select text to be EXPLODED: 1 found
+
+Nested items = Off    Orphaned data = Off
+1 text object(s) have been exploded to lines.
+The line objects have been placed on layer 0.
+Command: REGEN
+Regenerating model.
+
+Window Lasso  Press Spacebar to cycle options
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+Regenerating model.
+
+Command: _u 'ZOOM GROUP 
+Command: _u REGEN 
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: 
+Command: 
+Command: txtexp 
+Select text to be EXPLODED: 1 found
+
+Nested items = Off    Orphaned data = Off
+1 text object(s) have been exploded to lines.
+The line objects have been placed on layer 0.
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+Regenerating model.
+
+Window Lasso  Press Spacebar to cycle options
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: ID
+Specify point:  X = -8996.0000     Y = -741.5000     Z = 0.0000
+
+Command: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: INSUNITS
+
+Enter new value for INSUNITS <4>: _u 
+Requires an integer between 0 and 24.
+
+Enter new value for INSUNITS <4>: _u 
+Requires an integer between 0 and 24.
+
+Enter new value for INSUNITS <4>: *Cancel*
+
+Command: _u INSUNITS 
+Command: _u ID 
+Command: _u 'ZOOM GROUP 
+Command: _u INTELLIZOOM 
+Command: _u 'ZOOM GROUP 
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: _u 'ZOOM GROUP 
+Command: INSUNITS
+
+Enter new value for INSUNITS <4>: 0
+
+Command: MTEXT
+
+Current text style:  "Standard"  Text height:  2.0000  Annotative:  No
+Specify first corner: *Cancel*
+
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: 
+Command: txtexp 
+Select text to be EXPLODED: 1 found
+
+Nested items = Off    Orphaned data = Off
+1 text object(s) have been exploded to lines.
+The line objects have been placed on layer 0.
+Command: 
+Command: 
+Command: 
+Command: txtexp 
+Select text to be EXPLODED: 1 found
+
+Nested items = Off    Orphaned data = Off
+1 text object(s) have been exploded to lines.
+The line objects have been placed on layer 0.
+Command: 
+Command: 
+Command: 
+Command: txtexp 
+Select text to be EXPLODED: 1 found
+
+Nested items = Off    Orphaned data = Off
+1 text object(s) have been exploded to lines.
+The line objects have been placed on layer 0.
+Command: INSUNITS
+
+Enter new value for INSUNITS <0>: 4
+
+Command: 
+INSUNITS
+
+Enter new value for INSUNITS <4>: 0
+
+Cannot set INSUNITS to that value.
+*Invalid*
+
+Command: 
+Command: 
+Command: _explode 
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 
+
+Command: _u EXPLODE GROUP 
+Command: _u INSUNITS 
+Command: _u INSUNITS 
+Command: *Cancel*
+
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: _u GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) (Lisp Expression) 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INSUNITS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INSUNITS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP EXPLODE 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u EXPLODE GROUP 
+Command: _u INSUNITS 
+Command: _u INSUNITS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INSUNITS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INSUNITS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP EXPLODE 
+Everything has been redone
+
+Command: _u EXPLODE GROUP 
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: 
+Command: 
+Command: _trim 
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Command: 
+Command: 
+Command: 
+Command: _trim 
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select cutting edges ...1 found
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Does not intersect with the cutting edge.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Does not intersect with the cutting edge.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Does not intersect with the cutting edge.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Does not intersect with the cutting edge.
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Command: 
+Command: 
+Command: _trim 
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: *Cancel*
+
+Command: 
+Command: _trim 
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: *Cancel*
+
+Command: *Cancel*
+
+Command: _u TRIM GROUP 
+Command: 
+Command: 
+Command: _trim 
+Current settings: Projection=UCS, Edge=None, Mode=Quick
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: 
+
+Select object to trim or shift-select to extend or
+ [cuTting edges/Crossing/mOde/Project/eRase/Undo]: *Cancel*
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: _u TRIM GROUP 
+Command: _u TRIM GROUP 
+Command: _u TRIM GROUP 
+Command: _u TRIM GROUP 
+Command: _u Pan GROUP 
+Command: Regenerating model.
+Regenerating model.
+Regenerating model.
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: _u ERASE 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 2 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+11 found
+
+11 objects converted to 1 polyline
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+18 found
+
+17 objects converted to 1 polyline, 1 object discarded from the operation
+Command: 
+Command: 
+Command: _.erase 2 found
+
+Command: _u ERASE 
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: _u ERASE 
+Command: *Cancel*
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: _u Pan GROUP 
+Command: _u INTELLIZOOM 
+Command: _u '.-LAYER '.-LAYER '.-LAYER '.-LAYER '.-LAYER Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 3 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Regenerating model.
+ 
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _explode 2 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+40 found
+
+40 objects converted to 2 polylines
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: _u ERASE 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 6 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+66 found
+
+65 objects converted to 3 polylines, 1 object discarded from the operation
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _s 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Shaded>: _r 
+Command:  
+Command: _u '.VIEWCUBEACTION 
+Command: '_pan 
+Command: *Cancel*
+
+Command: 
+Command: CHANGE
+1 found
+Specify change point or [Properties]: p
+
+Enter property to change [Color/Elev/LAyer/LType/ltScale/LWeight/Thickness/TRansparency/Material/Annotative]: C
+
+New color [Truecolor/COlorbook] <254>: co
+Enter Color Book name: *Cancel*
+
+Command: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: *Cancel*
+
+Command: _u 'ZOOM GROUP 
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u CHPROP 
+Command: _u 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHPROP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.VIEWCUBEACTION 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u 'ZOOM GROUP 
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u CHPROP 
+Command: _u 
+Command: _u '.-LAYER 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+1 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression]: *Cancel*
+
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+1 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression]: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _r 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u EXTRUDE GROUP 
+Command: _u 'ZOOM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u EXTRUDE GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP EXTRUDE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.VIEWCUBEACTION 
+Command: _u '.VIEWCUBEACTION 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.VIEWCUBEACTION 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP EXTRUDE 
+Command: _u EXTRUDE GROUP 
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u EXTRUDE GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP EXTRUDE 
+Command: _u EXTRUDE GROUP 
+Command: _u '.-LAYER '.-LAYER 
+Command: _u CHANGE 
+Command: _u Pan GROUP 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: _u 'ZOOM GROUP Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: _u 'ZOOM GROUP Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command:  
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  *WORLD*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+27 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+1 object removed from selection set.
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <1.0060>: 0.005
+
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: _u RENDER GROUP 
+Command: _u EXTRUDE GROUP 
+Command: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+27 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+1 object removed from selection set.
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <0.0050>: 
+
+
+Command: _u EXTRUDE GROUP 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _u 
+Command: _u 'PAN GROUP 
+Command: _u 'ZOOM GROUP 
+Command: _u UCS GROUP 
+Command: _u 'ZOOM GROUP 
+Command: _u UCS GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+15 found
+
+15 objects converted to 1 polyline
+Command: 
+Command: *Cancel*
+
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command:  
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: Regenerating model.
+Regenerating model.
+Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+13 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+1 object removed from selection set.
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <0.0050>: 0.005
+
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _RENDER 
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: _u RENDER GROUP 
+Command: _u 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u RENDER GROUP 
+Command: _u 'ZOOM GROUP Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: _u 'ZOOM GROUP Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: _u 'ZOOM GROUP 
+Command: _u INTELLIZOOM INTELLIZOOM 
+Command: _u EXTRUDE GROUP 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+** STRETCH **
+Specify stretch point or [Base point/Copy/Undo/eXit]:
+Command: _u Grip Edit 
+Command: 
+Command: 
+Command: 
+Crossing Lasso  Press Spacebar to cycle options
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+3 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <0.0050>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: _.erase 13 found
+
+Command: _u ERASE 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Window Lasso  Press Spacebar to cycle options
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+'.-LAYER
+
+Current layer:  "0-laikinai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+10 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+1 object removed from selection set.
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <4.6165>: 0.005
+
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 1 found (1 duplicate), 1 total
+
+Select objects: *Cancel*
+
+Command: 
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 1 found (1 duplicate), 1 total
+
+Select objects: 
+No solids, surfaces, or regions selected.
+
+Command: _u SUBTRACT GROUP 
+Command: _u GROUP SUBTRACT 
+Command: _u '.-LAYER Regenerating model.
+
+Command: _u CHPROP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 CHPROP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SUBTRACT 
+Command: _u GROUP SUBTRACT 
+Command: _u '.-LAYER Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER Regenerating model.
+
+Command: 
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 
+
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 
+
+
+Command: 
+Command: 
+SUBTRACT
+Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 
+
+Command: 
+Command: 
+SUBTRACT
+Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 
+
+Command: 
+SUBTRACT
+Select solids, surfaces, and regions to subtract from ..
+
+Select objects: Specify opposite corner: 1 found
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 
+
+
+Command: 
+Command: 
+Command: _RENDER 
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 2 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+38 found
+
+38 objects converted to 2 polylines
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 3 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 3 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+41 found
+
+41 objects converted to 2 polylines
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 2 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+68 found
+
+68 objects converted to 2 polylines
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 4 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Window Lasso  Press Spacebar to cycle options
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+42 found
+
+42 objects converted to 2 polylines
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 3 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 6 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: 
+Command: _explode 3 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: 
+Command: _.erase 1 found
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+182 found
+
+182 objects converted to 7 polylines
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+7 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <0.0050>: 
+
+Command: 
+Command: 
+EXTRUDE
+
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+2 found
+
+Cannot sweep or extrude an object of this type.
+Cannot sweep or extrude an object of this type.
+2 objects removed from selection set.
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 1 found, 2 total
+
+Select objects to extrude or [MOde]: 1 found, 3 total
+
+Select objects to extrude or [MOde]: 1 found, 4 total
+
+Select objects to extrude or [MOde]: 1 found, 5 total
+
+Select objects to extrude or [MOde]: 1 found, 6 total
+
+Select objects to extrude or [MOde]: 1 found, 7 total
+
+Select objects to extrude or [MOde]: Specify opposite corner: 0 found
+Select objects to extrude or [MOde]: *Cancel*
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command:  Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: JOIN
+50 found
+
+50 objects converted to 1 polyline
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+10 found
+_MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <1.4460>: 
+
+Command: _u EXTRUDE GROUP 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 1 found, 2 total
+
+Select objects to extrude or [MOde]: 1 found, 3 total
+
+Select objects to extrude or [MOde]: 1 found, 4 total
+
+Select objects to extrude or [MOde]: 1 found, 5 total
+
+Select objects to extrude or [MOde]: 1 found, 6 total
+
+Select objects to extrude or [MOde]: 1 found, 7 total
+
+Select objects to extrude or [MOde]: 1 found, 8 total
+
+Select objects to extrude or [MOde]: 1 found, 9 total
+
+Select objects to extrude or [MOde]: 1 found, 10 total
+
+Select objects to extrude or [MOde]:  Regenerating model.
+
+Resuming EXTRUDE command.
+
+Select objects to extrude or [MOde]:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming EXTRUDE command.
+
+Select objects to extrude or [MOde]:  Regenerating model.
+
+Resuming EXTRUDE command.
+
+Select objects to extrude or [MOde]:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming EXTRUDE command.
+
+Select objects to extrude or [MOde]: *Cancel*
+*Cancel*
+
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 1 found, 2 total
+
+Select objects to extrude or [MOde]: 1 found, 3 total
+
+Select objects to extrude or [MOde]: 1 found, 4 total
+
+Select objects to extrude or [MOde]: 1 found, 5 total
+
+Select objects to extrude or [MOde]: 1 found, 6 total
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <0.6390>: 1
+
+
+Command: 
+EXTRUDE
+
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: Specify opposite corner: *Cancel*
+0 found
+Select objects to extrude or [MOde]: Specify opposite corner: *Cancel*
+0 found
+Select objects to extrude or [MOde]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 1 found, 4 total
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 1 found, 4 total
+
+Select objects: 
+
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _RENDER 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: _u RENDER GROUP 
+Command: _u SUBTRACT GROUP 
+Command: _u VSCURRENT Regenerating model.
+
+Command: _u EXTRUDE 
+Command: _u EXTRUDE GROUP 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: *Cancel*
+*Cancel*
+
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 1 found, 2 total
+
+Select objects to extrude or [MOde]: 1 found, 3 total
+
+Select objects to extrude or [MOde]: 1 found, 4 total
+
+Select objects to extrude or [MOde]: 1 found, 5 total
+
+Select objects to extrude or [MOde]: 1 found, 6 total
+
+Select objects to extrude or [MOde]: 1 found, 7 total
+
+Select objects to extrude or [MOde]: 1 found, 8 total
+
+Select objects to extrude or [MOde]: 1 found, 9 total
+
+Select objects to extrude or [MOde]: 1 found, 10 total
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <1.0000>: 0.005
+
+
+Command: 
+EXTRUDE
+
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: '_.quickproperties 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 1 found, 4 total
+
+Select objects: 1 found, 5 total
+
+Select objects: 1 found, 6 total
+
+Select objects: 1 found, 7 total
+
+Select objects: 1 found, 8 total
+
+Select objects: 1 found, 9 total
+
+Select objects: 1 found, 10 total
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 1 found, 4 total
+
+Select objects: 1 found, 5 total
+
+Select objects: 1 found, 6 total
+
+Select objects: 1 found, 7 total
+
+Select objects: 
+
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _color 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: _u Edge selection has been completely undone.
+
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'ZOOM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SOLIDEDIT 
+Everything has been redone
+
+Command: _u SOLIDEDIT GROUP 
+Command: 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _color 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: L
+
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _color 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: L
+
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _color 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: L
+
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_6fcf9165.sv$ ...
+
+Command: 
+Command: _u SOLIDEDIT GROUP 
+Command: _u INTELLIZOOM 
+Command: _u 
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u INTELLIZOOM 
+Command: _u 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 
+Everything has been redone
+
+Command: _u 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u 
+Command: _u 'ZOOM GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 
+Everything has been redone
+
+Command: _u 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _color 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _qsave 
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: 
+Command: 
+Command: _RENDER 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_13829_2278351c.sv$ ...
+
+Command: 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
