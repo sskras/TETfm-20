@@ -194,4 +194,19 @@ Ataskaita gali turėti tokį formatą:
    |  12    | Kompiuterių tinklo paslaugų sutrikimas |              |                                  |                                |                                        |
    |  13    | Taikomųjų programų klaidos  |                         |                                  |                                |                                        |
    |  14    | Tyčinis klaidingų duomenų įvedimas |                  |                                  |                                |                                        |
+   |  15    | Atsitiktinis klaidingų duomenų įvedimas |             |                                  |                                |                                        |
+   |  16    | Aparatinės įrangos priežiūros klaida |                |                                  |                                |                                        |
+   |  17    | Programinės įrangos priežiūros klaida |               |                                  |                                |                                        |
+   |  18    | Darbuotojų apsimetimas vienas kitu |                  |                                  |                                |                                        |
+   |  19    | Išorinių darbuotojų apsimetimas organizacijos darbuotojais | |                           |                                |                                        |
+   |  20    | Gaisras                     |                         |                                  |                                |                                        |
+   |  21    | Padegimas                   |                         |                                  |                                |                                        |
+   |  22    | Vandens žala                |                         |                                  |                                |                                        |
+   |  23    | Stichinės nelaimės          |                         |                                  |                                |                                        |
+   |  24    | Vagystė (iš vidaus)         |                         |                                  |                                |                                        |
+   |  25    | Vagystė (iš išorės)         |                         |                                  |                                |                                        |
+   |  26    | Sąmoningas išorės asmenų kenkimas |                   |                                  |                                |                                        |
+   |  27    | Sąmoningas vidaus asmenų kenkimas |                   |                                  |                                |                                        |
+   |  28    | Terorizmas                  |                         |                                  |                                |                                        |
+   |  29    | Vandalizmas                 |                         |                                  |                                |                                        |
 |===
