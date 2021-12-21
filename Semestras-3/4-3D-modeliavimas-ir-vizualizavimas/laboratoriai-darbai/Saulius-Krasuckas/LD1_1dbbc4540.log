@@ -1,0 +1,2605 @@
+[ AutoCAD - Tue Dec 21 18:40:01 2021  ]----------------------------------------
+
+Loading Modeler DLLs.
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: 
+Command: _SAVEAS 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command:  
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: 
+Command: *Cancel*
+
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: '_pan 
+Command: 
+Command: 
+Command: _xedges 
+Select objects: 1 found
+
+Select objects: 
+
+Command: 
+XEDGES
+
+Select objects: 1 found
+
+Select objects: 
+
+Command: 
+XEDGES
+
+Select objects: _u All selections have been undone.
+
+Select objects: _u All selections have been undone.
+
+Select objects: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+>>Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: _u XEDGES 
+Command: _u XEDGES 
+Command: _u XEDGES GROUP 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _copy 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 10
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: _u '.-LAYER '.-LAYER 
+Command: _u SOLIDEDIT GROUP 
+Command: _u Pan GROUP 
+Command: _u VSCURRENT Regenerating model.
+
+Command: _u INTELLIZOOM 
+Command: _u 'ZOOM GROUP 
+Command: _u INTELLIZOOM 
+Command: _u 'ZOOM GROUP 
+Command: _u Pan GROUP 
+Command: _u INTELLIZOOM 
+Command: _u Pan GROUP 
+Command: _u INTELLIZOOM 
+Command: _u '.VIEWCUBEACTION 
+Command: _u VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT Regenerating model.
+Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.VIEWCUBEACTION 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'ZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _x 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u '.-LAYER '.-LAYER 
+Command: _u VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u Pan GROUP 
+Command: _u VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: _u Pan GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: _u Pan GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Pan 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: _u VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 VSCURRENT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER '.-LAYER 
+Command: _u '.-LAYER '.-LAYER 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: 
+Command: _.erase 3 found
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command:  
+Command: 
+
+
+
+
+
+
+
+Command: 
+
+
+
+
+
+Command: 
+
+
+
+
+
+
+Command: _u '.-LAYER '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER '.-LAYER 
+Everything has been redone
+
+Command: _u '.-LAYER '.-LAYER 
+Command: 
+
+
+
+
+
+Command: 
+
+
+
+
+
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: 
+
+
+
+
+
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "2-Užrašai"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: '_pan 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _r 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: '_pan 
+Resuming SOLIDEDIT command.
+
+Select faces or [Undo/Remove/ALL]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: *Cancel*
+
+Command: '_pan 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: 
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SOLIDEDIT 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u Pan GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u INTELLIZOOM 
+Command: _u VSCURRENT 
+Command: _u INTELLIZOOM INTELLIZOOM 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM INTELLIZOOM 
+Command: _u INTELLIZOOM INTELLIZOOM 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: _u '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.-LAYER 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM INTELLIZOOM 
+Command: _u INTELLIZOOM INTELLIZOOM 
+Command: '_zoom 
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Command: '_pan 
+Command: '_zoom 
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Press ESC or ENTER to exit, or right-click to display shortcut-menu.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _copy 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: *Cancel*
+
+Command: 
+Command: 
+Command: _.erase 2 found
+
+Command: _u ERASE 
+Command: _.erase 1 found
+
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: _u ERASE 
+Command: 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: _u '.3DZOOM2 
+Command: _u Zoom GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP Zoom 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.3DZOOM2 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _copy 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 9.8
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SOLIDEDIT 
+Everything has been redone
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _body 
+Enter a body editing option
+[Imprint/seParate solids/Shell/cLean/Check/Undo/eXit] <eXit>: _separate 
+Select a 3D solid: 
+The selected solid does not have multiple lumps.
+
+Enter a body editing option
+[Imprint/seParate solids/Shell/cLean/Check/Undo/eXit] <eXit>: 
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: *Cancel*
+
+Command: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _copy 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement: *Cancel*
+
+Command: 
+SOLIDEDIT
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _copy 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Specify a base point or displacement: MID
+of 
+Specify a second point of displacement: 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: 
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: *Cancel*
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u 'ZOOM GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: 
+
+Invalid point.
+
+Specify a base point or displacement:  <Object Snap Tracking off>  <Object Snap Tracking on> *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: *Cancel*
+
+Command: ANNOALLVISIBLE 
+Enter new value for ANNOALLVISIBLE <1>: 0 
+Command: ANNOALLVISIBLE 
+Enter new value for ANNOALLVISIBLE <0>: 1 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 10
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u ANNOALLVISIBLE 
+Command: _u ANNOALLVISIBLE 
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT 
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP 'NAVSWHEELMODE 'NAVSWHEEL 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement:  
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement:  
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement:  
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u 'NAVSWHEEL GROUP 'NAVSWHEELMODE 
+Command:  
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: MID
+of INT
+
+Invalid point.
+
+Specify a base point or displacement: 
+
+Invalid point.
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 10
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u '.3DZOOM2 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.3DZOOM2 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: INT
+of  <Snap off>  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+of  <Polar on>  <Polar off>  <Ortho on> _.ISODRAFT
+
+Invalid point.
+
+Specify a base point or displacement: _Top 
+Invalid point.
+
+Specify a base point or displacement: _.ISODRAFT
+
+Invalid point.
+
+Specify a base point or displacement: _Left 
+Invalid point.
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 10
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: '_pan 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement:  
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement:  
+>>Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+
+Specify a base point or displacement: 
+Specify a second point of displacement:  <Polar on> *Cancel*
+
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement: 10
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u INTELLIZOOM 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 INTELLIZOOM 
+Command: '_pan 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  *WORLD*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  *WORLD*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _ucs 
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _VERT
+
+Point or option keyword required.
+
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+Specify point on X-axis or <accept>: 
+Specify point on the XY plane or <accept>: 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _+UCSMAN 
+Tab index <0>: 2 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _ucs 
+Current ucs name:  *NO NAME*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: *Cancel*
+
+Command: 
+Command: 
+Command: _+UCSMAN 
+Tab index <0>: 2 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: 
+
+Invalid point.
+
+Specify a base point or displacement:  <Snap off> 
+Specify a second point of displacement:  <Object Snap Tracking off>  <Object Snap Tracking on>  <Polar off>  <Ortho on> 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u +UCSMAN GROUP 
+Command: _u GROUP UCS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP UCS 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP +UCSMAN 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SOLIDEDIT 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement: 
+Specify a second point of displacement:  <Object Snap Tracking off> 10
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  >>Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _u 
+Command has been completely undone.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u +UCSMAN GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP +UCSMAN 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SOLIDEDIT 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP SOLIDEDIT 
+Everything has been redone
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 Nothing to redo
+
+Command: _u SOLIDEDIT GROUP 
+Command: _u SOLIDEDIT GROUP 
+Command: _u +UCSMAN GROUP 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 GROUP +UCSMAN 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement:  <Polar off>  <Snap off>  <Grid off>  <Object Snap Tracking off>  <Object Snap Tracking on> 
+Specify a second point of displacement:  <Polar on> 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: _u SOLIDEDIT GROUP 
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _edge 
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: _copy 
+Select edges or [Undo/Remove]: 
+Select edges or [Undo/Remove]: 
+
+Specify a base point or displacement:  <Snap off> 
+Specify a second point of displacement: 6
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>:  
+Resuming SOLIDEDIT command.
+
+Enter an edge editing option [Copy/coLor/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command:  
+Command:  
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: 
+Specify second point or [Array] <use first point as displacement>: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: 
+Specify second point or [Array] <use first point as displacement>: *Cancel*
+
+Command:  
+Command: '_pan 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression]: 0.8
+
+
+Command: *Cancel*
+
+Command: _u EXTRUDE GROUP 
+Command: COPY
+
+Select objects: 1 found
+
+Select objects: 
+
+Current settings:  Copy mode = Multiple
+Specify base point or [Displacement/mOde] <Displacement>: 
+Specify second point or [Array] <use first point as displacement>: 1
+
+Specify second point or [Array/Exit/Undo] <Exit>: *Cancel*
+
+Command:  
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command:  
+Command:  
+Command:  
+Command:  
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: '_pan 
+Resuming EXTRUDE command.
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <0.8000>: 1
+
+
+Command:  
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command:  
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 
+Command: 
+MOVE
+
+Select objects: *Cancel*
+
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _subtract Select solids, surfaces, and regions to subtract from ..
+
+Select objects: 1 found
+
+Select objects: 
+Select solids, surfaces, and regions to subtract ..
+Select objects: 1 found
+
+Select objects: 
+
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: '_perspective 
+Enter new value for PERSPECTIVE <1>: 0 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+'ZOOM
+
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: *Cancel*
+
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <1.0000>: 0.8
+
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: *Cancel*
+
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: *Cancel*
+
+Command: _u MOVE 
+Command: _u UCS GROUP 
+Command: _u MOVE 
+Command: _u EXTRUDE GROUP 
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: 
+Command: 
+Command: _extrude 
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: _MO Closed profiles creation mode [SOlid/SUrface] <Solid>: _SO
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <-0.8000>: 0.8
+
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: *Cancel*
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 7
+
+Command: _u INTELLIZOOM 
+Command: _u 
+Command: _u MOVE 
+Command: _u MOVE 
+Command: _u EXTRUDE GROUP 
+Command: EXTRUDE
+
+Current wire frame density:  ISOLINES=4, Closed profiles creation mode = Solid
+
+Select objects to extrude or [MOde]: 1 found
+
+Select objects to extrude or [MOde]: 
+
+Specify height of extrusion or [Direction/Path/Taper angle/Expression] <-0.8000>: 0.95
+
+
+Command: *Cancel*
+
+Command: DIST
+
+Specify first point: 
+Specify second point or [Multiple points]: 
+Distance = 7.0000,  Angle in XY Plane = 180,  Angle from XY Plane = 0
+Delta X = -7.0000,  Delta Y = 0.0000,   Delta Z = 0.0000
+
+Command: MOVE
+
+Select objects: 1 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 7
+
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: *Cancel*
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _r 
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: '_perspective 
+Enter new value for PERSPECTIVE <1>: 0 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command:  Regenerating model.
+
+Command: 
+
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _2d Regenerating model.
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+Select faces or [Undo/Remove/ALL]: 
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+Select faces or [Undo/Remove/ALL]: 
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+SOLIDEDIT
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: F
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+Select faces or [Undo/Remove/ALL]: 
+Please select an edge on the originally selected solid.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: L
+
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: 
+SOLIDEDIT
+
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: 
+'PAN
+
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 1 face found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: '_pan 
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command: 
+Command: 
+Command: _solidedit 
+Solids editing automatic checking:  SOLIDCHECK=1
+Enter a solids editing option [Face/Edge/Body/Undo/eXit] <eXit>: _face 
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: _color 
+Select faces or [Undo/Remove]: 2 faces found.
+
+Select faces or [Undo/Remove/ALL]: 
+
+Enter a face editing option
+[Extrude/Move/Rotate/Offset/Taper/Delete/Copy/coLor/mAterial/Undo/eXit] <eXit>: *Cancel*
+
+Command: 
+
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command: 
+
+Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: 
+Command: _.erase 10 found
+
+Command: _u ERASE 
+Command:  Regenerating model.
+
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Command: MOVE
+
+Select objects: Specify opposite corner: 11 found
+
+Select objects:  
+>>Enter new value for NAVSWHEELMODE <4>:  
+Resuming MOVE command.
+
+Select objects: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+Regenerating model.
+
+Resuming MOVE command.
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: *Cancel*
+
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+
+Command: MOVE
+
+Select objects: 
+
+Command: MOVE
+
+Select objects: PREV
+11 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: NEAR
+to 
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Everything has been redone
+
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Everything has been redone
+
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Everything has been redone
+
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Everything has been redone
+
+Command: _u MOVE 
+Command: MOVE
+
+Select objects: PREV
+11 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: NEAR
+to  <Ortho on> 
+No found for specified point.
+Invalid point.
+
+Specify second point or <use first point as displacement>:  <Snap on> *Cancel*
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Liežuv\U+0117lio veidas
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  Skersinis
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Command: MOVE
+
+Select objects: PREV
+11 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>:  <Snap off> 
+Specify second point or <use first point as displacement>: NEAR
+to 
+Command:  Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 '.VIEWCUBEACTION 
+Everything has been redone
+Regenerating model.
+
+Command:  Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: _u '.VIEWCUBEACTION Regenerating model.
+
+Command: _u MOVE 
+Command: MOVE
+
+Select objects: PREV
+11 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>:  <Snap off> 
+
+>>Press ESC or ENTER to exit, or right-click to display shortcut menu.
+
+Resuming MOVE command.
+
+Specify base point or [Displacement] <Displacement>: 
+Specify second point or <use first point as displacement>: 0.05
+
+Command: _u MOVE 
+Command: 
+Command: 
+Command: _mredo 
+Enter number of actions or [All/Last]: 1 MOVE 
+Everything has been redone
+
+Command: _u MOVE 
+Command: MOVE
+
+Select objects: PREV
+11 found
+
+Select objects: 
+
+Specify base point or [Displacement] <Displacement>:  <Snap off> 
+Specify second point or <use first point as displacement>: 0.05
+
+Command:  Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _r 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_18662_99c4da38.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _union 
+Select objects: 1 found
+
+Select objects: 1 found, 2 total
+
+Select objects: 1 found, 3 total
+
+Select objects: 1 found, 4 total
+
+Select objects: 1 found, 5 total
+
+Select objects: 1 found, 6 total
+
+Select objects: 1 found, 7 total
+
+Select objects: 1 found, 8 total
+
+Select objects: 1 found, 9 total
+
+Select objects: 1 found, 10 total
+
+Select objects: 1 found, 11 total
+
+Select objects: 
+
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _h 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Hidden>: _c 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Conceptual>: _2d Regenerating model.
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <2dwireframe>: _x 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _w 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Wireframe>: _x 
+Command: _.erase 1 found
+
+Command: _u ERASE 
+Command: 
+Command: 
+Command: _RENDER 
+Command: _u RENDER GROUP 
+Command: _u 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT Regenerating model.
+
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u VSCURRENT 
+Command: _u UNION GROUP 
+Command: 
+Command: 
+Command:  
+Command: 
+Command: 
+Command:  
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _COLOR
+
+New color [Truecolor/COlorbook] : _TRUECOLOR
+Red,Green,Blue: 0,0,0
+
+Enter name list of layer(s) for color 0,0,0 <3-Lipdukas>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _.erase 1 found
+
+Command:  
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  *WORLD*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command:  
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: '_perspective 
+Enter new value for PERSPECTIVE <1>: 0 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _x 
+Command: '_pan 
+Command: _u Pan GROUP 
+Command: _u INTELLIZOOM INTELLIZOOM 
+Command: _u 
+Command: _u VSCURRENT 
+Command: _u 'PERSPECTIVE 
+Command: _u 'ZOOM GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u '.VIEWCUBEACTION 
+Command: _u '.VIEWCUBEACTION 
+Command: _u UCS GROUP 
+Command: _u '.VIEWCUBEACTION 
+Command: _u ERASE 
+Command: 
+Command: 
+Command: 
+
+Current ucs name:  *WORLD*
+Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: 
+
+Enter an option [Restore/Save/Delete/?]: 
+
+Enter name of UCS to restore or [?]: 
+
+Command:  
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <Realistic>: _x 
+Command:  
+Specify corner of window, enter a scale factor (nX or nXP), or 
+[All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: 
+
+Command:  
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _vscurrent 
+Enter an option [2dwireframe/Wireframe/Hidden/Realistic/Conceptual/Shaded/shaded with Edges/shades of Gray/SKetchy/X-ray/Other] <X-Ray>: _r 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "3-Lipdukas"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: 
+Command: _qsave 
+Command: 
+Command: 
+Command: _RENDER Render aborted.
+Command: *Cancel*
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: 
+Command: 
+Command: _RENDER 
+Automatic save to C:\Users\saukrs\AppData\Local\Temp\LD1_1_13829_07871ce3.sv$ ...
+
+Command: 
+Command: 
+Command: 
+Command: _qsave 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
