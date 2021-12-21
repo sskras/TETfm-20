@@ -25,6 +25,8 @@ Pagrindiniai rizikos vertinimo proceso etapai, jų įėjimo ir išėjimo informa
 .**1 pav.** Pagrindiniai rizikos vertinimo proceso etapai, jų įėjimo ir išėjimo informacija
 image::https://user-images.githubusercontent.com/74717106/146775877-d348fef9-3ab5-4fe1-84f1-c6a81b15d3b9.png[width=100%]
 
+{nbsp}
+
 **Pastaba**. Ataskaitoje taip pat turi būti pateiktas nagrinėjamos IS kompiuterių tinklo (potinklio) planas.
 
 <<<
