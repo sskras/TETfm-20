@@ -12,23 +12,23 @@ serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų c
 image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=40%,link="https://www.ebay.com/itm/352395452329"]
 image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=33%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
 
-* Trūko matavimo įrankio.  +
-   +
-  Planavau naudoti mokyklinę liniuotę.  Pažįstamas pasiūlė kinišką elektroninį slankmatį (tik išsikrovęs ir nerodo milimetro dalių).  Pasinaudojau.
+* Trūko matavimo įrankio.
+
+  - Planavau naudoti mokyklinę liniuotę.  Pažįstamas pasiūlė kinišką elektroninį slankmatį (tik išsikrovęs ir nerodo milimetro dalių).  Pasinaudojau.
 
 * Sugalvojimas, į kokias erdvines dalis dekomponuoti „liežuvėlį“.
-   +
-  Turbūt atskirai braižysiu priekinę L-formos dalį ir atskirai galinių „auselių“ bloką.   +
-  Vėliau juos apjungsiu.  O apjungęs darysiu briaunų suapvalinimus.
 
-* Logotipo importas.  +
-   +
-  Planavau importuoti vektorinį `.svg` failą.  Vėliau nutariau tiesiog vektorizuoti _Bitmap_ vaizdą, įkeltą per _Paste_.
+  - Turbūt atskirai braižysiu priekinę L-formos dalį ir atskirai galinių „auselių“ bloką.
+  - Vėliau juos apjungsiu.  O apjungęs darysiu briaunų suapvalinimus.
 
-* Realistiškas logotipo ir užrašo dažų (juodos spalvos) sumodeliavimas.  +
-   +
-  Pradžiai mėginau nusibraižytą logotipą (du objektus) pakelti virš „auselės“ paviršiaus, tuomet jį nusikopijuoti pakištant iškart po paviršiumi, ir iš jo išpjauti, o į tuščią paviršiaus erdvę įsprausti abu juodos spalvos logotipo 3D objektus.  +
-  Deja, apjungus „auselę“ su logotipu pastarasis perėjo į kitą sluoksnį ir prarado juodą spalvą.  +
-  Tuomet atradau, kad įmanoma spalvinti tik vieną Solid objekto _feisą_.  +
-  Ir nutariau, kad dažai kadangi yra virš paviršiaus, tai išpjovimo nereik.  +
-  Tiesiog parinkau 5 μm storio dažų sluoksnį (bent jau slankmatis jo fiziškai neužkabina).
+* Logotipo importas.
+
+  - Planavau importuoti vektorinį `.svg` failą.  Vėliau nutariau tiesiog vektorizuoti _Bitmap_ vaizdą, įkeltą per _Paste_.
+
+* Realistiškas logotipo ir užrašo dažų (juodos spalvos) sumodeliavimas.
+
+  - Pradžiai mėginau nusibraižytą logotipą (du objektus) pakelti virš „auselės“ paviršiaus, tuomet jį nusikopijuoti pakištant iškart po paviršiumi, ir iš jo išpjauti, o į tuščią paviršiaus erdvę įsprausti abu juodos spalvos logotipo 3D objektus.
+  - Deja, apjungus „auselę“ su logotipu pastarasis perėjo į kitą sluoksnį ir prarado juodą spalvą.
+  - Tuomet atradau, kad įmanoma spalvinti tik vieną Solid objekto _feisą_.
+  - Ir nutariau, kad dažai kadangi yra virš paviršiaus, tai išpjovimo nereik.
+  - Tiesiog parinkau 5 μm storio dažų sluoksnį (bent jau slankmatis jo fiziškai neužkabina).
