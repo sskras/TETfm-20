@@ -1,0 +1,244 @@
+[ AutoCAD - Wed Dec 22 12:18:56 2021  ]----------------------------------------
+
+Opening an AutoCAD 2018 format file.
+
+
+AutoCAD menu utilities loaded.*Cancel*
+
+Command: 
+
+Autodesk DWG.  This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application.
+
+Command: 
+
+Command: 
+Command:  
+Command:  Specify corner of window, enter a scale factor (nX or nXP), or [All/Extents/Window/Previous/Object] <real time>: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "1-Liežuv\U+0117lis"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command: _laylck 
+Select an object on the layer to be locked: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+>>Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Resuming LAYLCK command.
+
+Command: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+>>Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Resuming LAYLCK command.
+
+Command: 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+>>Enter name list of layer(s) to freeze or <select objects>: =3-Lipdukas
+>>Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Resuming LAYLCK command.
+
+Command: *Cancel*
+
+Command: 
+Command: _ai_selall Selecting objects...done.
+
+Command: _.erase 6 found
+
+Command: _u ERASE 
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+
+Enter name list of layer(s) to freeze or <select objects>: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =0-laikinai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: '_.-LAYER
+
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _THAW
+
+Enter name list of layer(s) to thaw: =1-Liežuv\U+0117lis
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: 
+
+Command: 
+Command: 
+Command:  
+Command: 
+
+
+
+
+Command: 
+
+
+
+
+
+Command: *Cancel*
+
+Command: 
+
+
+
+
+
+Command:  
+Enter new value for NAVSWHEELMODE <4>:  
+Command: 
+Right-click to display the shortcut menu. Press ESC or ENTER to exit.
+
+Command: 
+Command: 
+Command: _RENDER 
+Command: *Cancel*
+
+Command: *Cancel*
+
+Command: _close 
+Command: 
