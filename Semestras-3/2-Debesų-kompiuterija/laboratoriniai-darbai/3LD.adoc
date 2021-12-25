@@ -40,7 +40,7 @@ Ataskaitos turinys:
 
 <<<
 
-=== Darbo eiga
+== Darbo eiga
 
 . Scenarijus *Launch Single Node Kubernetes Cluster*
 
