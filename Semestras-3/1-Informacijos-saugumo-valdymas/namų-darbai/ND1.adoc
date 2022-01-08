@@ -149,7 +149,7 @@ Ataskaita gali turėti tokį formatą:
 * Ar tinklas dalinamas į potinklius?
 
 * Ar tinkle naudojami serveriai?  +
-  Jei tapi, tai kokie? (Pvz. žiniatinklio, pašto, failų ir kt.)
+  Jei taip, tai kokie? (Pvz. žiniatinklio, pašto, failų ir kt.)
 
 * Ar organizacijos kompiuteriai būna įjungti visą parą ar tik darbo valandomis?
 
