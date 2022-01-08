@@ -158,7 +158,7 @@ Ataskaita gali turėti tokį formatą:
 
 *  Ar yra organizacijos asmuo, prižiūrintis kompiuterių programinę įrangą?
  
-* Kas rūpinasi informacijos saugumu organizaci joje?  +    | Neleistinas išteklių naudojimas |                     |                                  |                                |                                        | 
+* Kas rūpinasi informacijos saugumu organizaci joje?  +
   Ar yra organizacijos asmuo, atsakingas už informacijos apsaugą?  +
   Ar organizacijoje yra sudaryta saugumo politika?
 
