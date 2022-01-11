@@ -258,7 +258,7 @@ image::https://static.hostline.lt/images/networks.jpg[width=200]
   - tinklo ir maitinimo patikimumus, 
   - L2 sujungimo galimybę, 
   - kuo didesnį atstumą tarp DC (_Georedundancy_).
-* *DLC* DC atmetu, nes jis minimas kaip https://www.datacenterjournal.com/data-centers/lithuania/vilnius/#:~:text=Non-Neutral%20Vilnius%20Data%20Center[Non-neutral DC (Carrier-wise?)]  +
+* *DLC* DC atmetu, nes jis minimas kaip https://www.datacenterjournal.com/data-centers/lithuania/vilnius/#:~:text=Non-Neutral%20Vilnius%20Data%20Centers[Non-neutral DC (Carrier-wise?)]  +
 (Ar tai tiesa?)
 * *Baltnetos* DC atmetu, nes neradau tikslesnių duomenų apie tiekėją.
 * *RackRay* DC:
