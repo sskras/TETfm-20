@@ -147,22 +147,21 @@ Trūkumai:
 
 Ankstesnės FreeBSD prezentacijos (apie komponentus):
 
-<<12>>  +
-<<13>>  +
+- <<12>>
+- <<13>>
 
 Apie Triton DataCenter:
 
-Konteinerių ir VMų Combo diagramos <<14>>  +
-Detalesnė Triton DC sudėtis <<15>>  +
+- Konteinerių ir VMų Combo diagramos: <<14>>
+- Detalesnė Triton DC sudėtis: <<15>>
 
 Apie SmartOS:
 
-Docker konteinerių startavimas be _Triton_ pagalbos; (t. p. ir `fwadm` aprašymas) <<16>>  +
-Asmeninio Docker registro naudojimas. <<17>>  +
+- Docker konteinerių startavimas be _Triton_ pagalbos; <<16>>
+  (t. p. ir `fwadm` aprašymas)
+- Asmeninio Docker registro naudojimas. <<17>>
 
-SmartOS orientavimasis į Node.js servisus:
-
-<<18>>  +
+SmartOS orientavimasis į Node.js servisus: <<18>>  +
 
 
 <<<
