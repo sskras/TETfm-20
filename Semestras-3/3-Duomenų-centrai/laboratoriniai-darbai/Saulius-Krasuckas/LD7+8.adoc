@@ -16,6 +16,8 @@ Artimiau susipažinti su virtualizacija ir paanalizuoti _Type-1_ hipervizorių.
 
 Virtual Machine -- _[TODO]_
 
+VMM, Virtual machine manager -- _[TODO]_
+
 Hypervisor -- _[TODO]_
 
 
@@ -51,29 +53,30 @@ Hypervisor -- _[TODO]_
 
 Pasirenku apraše minimą _SmartOS_ hipervizorių.
 
-Tiksliau, tai hipervizorinė platforma (OS).
-Virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) net du hipervizorius pasirinktinai:
+Tiksliau, tai konverguota hipervizorinė platforma (operacijų sistema, OS).
+Virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) du skirtingus hipervizorius pasirinktinai:
 
-* **KVM** (atportintas iš Linux branduolio);
-* **bhyve** (atportintas iš FreeBSD branduolio).
+* **KVM** (gana senos Linux VMM versijos portas);
+* **bhyve** (gana naujos FreeBSD VMM versijos portas).
 
-Tiesą sakant, tai nėra tikri _Type I_ hipervizoriai:  +
+Tiesą sakant, jie abu nėra gryni _Type I_ hipervizoriai:  +
 https://www.serverwatch.com/virtualization/hypervisor-server/#:~:text=Linux%20KVM%20and%20FreeBSD%20bhyve
 
 Jie abu startuoja ne iš „pliko metalo“, bet iš jau veikiančio įprastinės OS (Linux, FreeBSD, SmartOS) branduolio.
-Jie abu tą OS paverčia _Type I_ hipervizoriumi.
+Ir jie abu tą OS paverčia _Type I_ hipervizoriumi, specializuoja.
 
 Tačiau kadangi ši OS yra bendros paskirties, pagal apibrėžimą tokį hipervizorių tinka laikyti ir _Type II_ hipervizoriumi.
 
 Dėl aiškumo juos abu priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai:  +
 https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5
 
-Pati _SmartOS_ yra distribucija _"illumos"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
+Pati _SmartOS_ yra distribucija _"illumOS"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS. 
 
 Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
 
 * Užima mažai vietos (kelis šimtus MiB):
-  - [TODO] naudokime _Ansible_ ar kt.
+  - Nodų priežiūrai rekomenduojama naudoti _Chef_ (gamintojo rekomenduojamiausią), _Ansible_ ar kt. _Configuration Management_ sistemą:
+    https://wiki.smartos.org/configuration-management-on-smartos/
   - => sparti keltis (įkrova), ~30s
   - => sumažintas atakų perimetras
 * Skirta kelčiai iš R/O atvaizdo (_Live image_) ar bent ne diskinės medijos:
@@ -100,18 +103,24 @@ Ji specializuota -- skirta tik VMų ir konteinerių startavimui / valdymui:
   - apjungiama pagal RAIDZ
   - schema panaši į RAID 5/6/7
   - => padidinta diskų I/O sparta ir patikimumas
-* Naudoja dvigubą virtualizaciją:
-  - https://www.joyent.com/blog/reintroducing-bhyve#:~:text=This%20is%20what%20we%20mean%20when%20we%20say%20double%2Dhulled%2Dvirtualization[double-hulled-virtualization] -- Guest OS VMM procesas veikia tik konteineryje
+* Naudoja dubliuotą virtualizaciją:
+ ** Guest OSą valdantis VMM procesas veikia tik konteineryje -- 
+    https://www.joyent.com/blog/reintroducing-bhyve#:~:text=This%20is%20what%20we%20mean%20when%20we%20say%20double%2Dhulled%2Dvirtualization[double-hulled-virtualization]:
   - => dar labiau sumažintas atakos perimetras
   - => unifikuotas konteinerių ir VMų valdymas (komamda `vmadm`)
 
-[TODO:]
 
+Kadangi apie KVM tikėtinai rašys kiti grupiokai (o čia naudojama sena KVM versija), toliau nagrinėju SmartOS + bhyve VMM kombinaciją.
+
+O kadangi pavienis įdiegtas _SmartOS_ egzempliorius nėra pakankamai lankstus, šios platformos (variklio) pagrindu buvo sukurta debesų valdymo (angl. _Cloud management_) platforma **Triton DataCenter** / **Triton Compute Service**:
+https://docs.joyent.com/private-cloud
+
+Taip pat atskirai apžvelgiu ir _bhyve_ hypervizorių, kilusį iš kitos OS ir ten anksčiau gaunantį naujas funkcijas:
 https://klarasystems.com/articles/bhyve-the-freebsd-hypervisor/
 
-- Modernus kodas, Mažas Overhead, Spartus
-- Solaris/illumos projektuotas didesniam (apskritai) saugumui nei Linux, ir tai juntama
-- Palaiko labai įvairius Storage backend-us
+- Modernus kodas, mažas _Overhead_, spartus
+- Solaris/illumOS projektuotas didesniam (apskritai) saugumui nei Linux, ir tai juntama tiesiogiai
+- Palaiko _labai_ įvairius Storage backend-us
 - ZFS privalumai: akimirksniniai klonai, duomenų šifravimas (jei reikia, ir deduplikacija)
 - PCI pass-through
 
