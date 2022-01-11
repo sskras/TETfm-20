@@ -124,8 +124,9 @@ Taip pat atskirai apžvelgiu ir _bhyve_ hypervizorių, kilusį iš kitos OS <<8>
 \... bei pasak gamintojo prezentacijos <<9>>:
 
 - _Guest OS_ tik UEFI?
-- net antispoofing built-in
-- cloud-init [TODO]
+- integruotas `net antispoofing`;
+
+- `cloud-init` technologijos palaikymas. <<19>>
 
 
 Trūkumai:
@@ -205,3 +206,6 @@ https://github.com/joyent/triton/blob/master/README.md#overview[Triton DataCente
 `2018-02-11` **[[[17]]]** `cyber-tec.org`, Thomas Merkel, https://www.cyber-tec.org/2018/02/11/run-docker-images-on-smartos/[Run Docker images on SmartOS]
 
 `2017-01-12` **[[[18]]]** `joyent.com`, Wyatt Preul, https://www.joyent.com/blog/microservices-containers-nodejs[Containers and microservices and Node.js! Oh, my!]
+
+`2019-01-16` **[[[19]]]** `shaner.life`, Shaner, 
+https://shaner.life/using-cloud-init-with-smartos/[Using cloud-init with SmartOS]
