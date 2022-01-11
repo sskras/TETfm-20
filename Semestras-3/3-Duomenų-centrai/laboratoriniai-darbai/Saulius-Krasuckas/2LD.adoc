@@ -110,7 +110,9 @@ Duomenų centrai
   * `Slug` = `sauliaus-active`
   * `Description` = `Aktyvus DC`
   * `[ Create ]`
+  
   ---
+  
   * `[ Clone ]`
   * `Site` = Site-Naujamiestis
   * `Name` = `Sauliaus-passive`
@@ -131,7 +133,9 @@ Duomenų centrai
   * Dimensions.Width = `19 inches` (nekeičiu)
   * Dimensions.Height (U) = `52`
   * `[ Create ]`
+  
   ---
+  
   * `[ Clone ]`
   * Rack.Site = Site-Naujamiestis
   * Rack.Location = Sauliaus-passive
