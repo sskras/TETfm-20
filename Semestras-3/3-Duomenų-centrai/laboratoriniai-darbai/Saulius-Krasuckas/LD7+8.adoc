@@ -56,8 +56,10 @@ Pasirenku apraše minimą _SmartOS_ hipervizorių.
 Tiksliau, tai konverguota hipervizorinė platforma (operacijų sistema, OS).
 Virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) du skirtingus hipervizorius pasirinktinai:
 
-* **KVM** (gana senos Linux VMM versijos portas);
-* **bhyve** (gana naujos FreeBSD VMM versijos portas).
+* **KVM** (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos emuliatoriaus portas, 2011 m.)  +
+  <<21>> psl. 5 + 14
+* **bhyve** (gana naujos FreeBSD 11.1 versijos VMM portas, 2017 m.)  +
+  <<24>> psl. 6
 
 Tiesą sakant, jie abu nėra gryni _Type I_ hipervizoriai. <<1>>
 
@@ -88,7 +90,7 @@ Ji specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / v
     *** kaskart per PXE
     *** vieną sykį į UFD per SSH
   - => daugiau vietos diskuose lieka _Guest OS_ egzemplioriams
-* _Live OS_:
+* _in-memory_ / _Live OS_:
  ** _root_ failų sistema (FS) laikoma RAMe
  ** FS pakeitimai arba neįmanomi (R/O), arba efemeriški (`/etc`) <<5>>  +
     (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.: ?)
@@ -99,49 +101,66 @@ Ji specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / v
  ** apjungiama pagal RAIDZ
  ** schema panaši į RAID 5/6/7
   - => padidinta diskų I/O sparta ir patikimumas
+ ** tinkliniai diskai nenaudojami
 * Naudoja dubliuotą virtualizaciją:
- ** Guest OSą valdantis VMM procesas veikia tik konteineryje  +
+ ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve` veikia tik konteineryje  +
     (_Double hulled virtualization_ patentas <<6>>)
-  - => dar labiau sumažintas atakos perimetras
-  - => unifikuotas OS atvaizdų ir konteinerių bei VMų valdymas (komandos `imgadm` ir `vmadm`)
+  - => dar labiau sumažintas atakos perimetras <<9>> psl. 9
+  - => preciziškas valdymas -- konteineris užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą,  <<21>> psl. 22
+  - => unifikuotas konteinerių bei VMų valdymas (komandos `vmadm`)
+ ** Host OS turi po atskirą įrankį:
+  - => `imgadm` valdyti Guest OS atvaizdams
+  - => `vmadm` valdyti Guest OS egzemplioriams
+  - => `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
+  - => `ipadm` valdyti OS potinkliams (L3)
+  - => `fwadm` valdyti OS ugniasienei (L2 - L4)
+ ** Abu VMMai, `KVM` ir `bhyve` geba veikti kartu; <<24>> psl. 8
+* Naudoja tarp-platforminį paketų valdiklį `pkgsrc` (kilusį NetBSD).
 
 
-Dalis šių savybių nulemia novatorišką, ne tipinį hipervizoriaus panaudojimo scenarijų, mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_.
+Dalis šių savybių nulemia novatorišką, ne tipinę hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_). <<23>>
 
-Kadangi apie KVM tikėtinai rašys kiti grupiokai (o čia, be to, naudojama sena KVM versija), toliau akcentuoju SmartOS + bhyve VMM kombinaciją.
+O kadangi pavienis įdiegtas _SmartOS_ egzempliorius nėra pakankamai lankstus, šios platformos (variklio) pagrindu buvo sukurta debesų valdymo (angl. _Cloud management_) platforma **Triton DataCenter** / **Triton Compute Service**, į kurios funkcijas irgi trumpai atsižvelgsiu. <<7>>
 
-O kadangi pavienis įdiegtas _SmartOS_ egzempliorius nėra pakankamai lankstus, šios platformos (variklio) pagrindu buvo sukurta debesų valdymo (angl. _Cloud management_) platforma **Triton DataCenter** / **Triton Compute Service**, į kurios funkcijas irgi atsižvelgsiu. <<7>>
+Kadangi apie KVM tikėtinai rašys kiti grupiokai (o čia, be to, naudojama sena KVM versija), toliau akcentuoju _SmartOS_ + _bhyve_ VMM kombinaciją.
 
-Taip pat atskirai apžvelgiu ir _bhyve_ hypervizorių, kilusį iš kitos OS, _FreeBSD_ <<8>> ir naujas funkcijas joje gaunantį anksčiau:
+_bhyve_ kilo iš kitos OS, _FreeBSD_ <<8>> ir naujas funkcijos ten atsiranda anksčiau / greičiau:
 
 - Modernus kodas, mažas _Overhead_, spartus
 - _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
 - Palaiko _labai_ įvairius Storage backend-us
 - ZFS privalumai: akimirksniniai duomenų klonai, duomenų šifravimas (jei reikia, ir jų deduplikacija)
 - _PCI pass-through_ galimybė
-- Palaiko vieną efektyviausių paravirtualizacijos (PV) interfeisų _VirtIO_  +
+- _VirtIO_ -- vieno efektyviausių paravirtualizacijos (PV) interfeisų palaikymas  +
 
-\... pasak _SmartOS_ gamintojo prezentacijos <<9>>:
+\... pasak _SmartOS_ gamintojo prezentacijos: <<9>>
 
-- _Guest OS_ tik UEFI?
-- integruotas `net antispoofing` mechanizmas;
+- palaikomi tik su UEFI suderinami _Guest OS_ (psl. 6)
+- integruotas `net antispoofing` mechanizmas (psl. 11)
 
-\... bei pasak dokumentacijos <<19>>:
+\... bei pasak _Cloud-init_ dokumentacijos <<19>>:
 
 - palaiko `cloud-init` standartą. <<20>>  +
-  Jis įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos.
-  Yra palaikomas tiek naudojantis visais didžiaisiais viešos debesijos tiekėjais, tiek atliekant OS provizijavimą ir privačiuose debesyse, ir „plikoj geležy“ (angl. _Bare metal_).
+ * Jis įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos, pvz.:
+ ** OS vartotojų paskyrų sukūrimą
+ ** programinių paketų sudiegimą
+ ** Git repozitorijų nuklonavimą
+ ** apskritai kone bet kuriuos OS administravimo veiksmus.
+ * Naudoja YAML sintaksę (tenka suderinti su SmartOS `vmadm` naudojama JSON sintakse)
+ * Yra palaikomas tiek visų didžiųjų viešos debesijos tiekėjų, tiek atliekant OS provizijavimą ir privačiuose debesyse, ir „plikoj geležy“ (angl. _Bare metal_).
 
 ---
 
 Trūkumai:
 
-- kol kas palaiko tik x86 arch. (_no ARM_); <<10>>
+- nepalaiko Legacy BIOS/Boot-ROM kelties <<24>> psl. 12
 
-- kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką dalį;
+- kol kas palaiko tik _x86_ architektūrą (_no ARM_); <<10>>
 
-- valdoma per CLI, JSON ir truputį YAML;  +
-  (norint GUI reiktų naudoti Triton)
+- kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;
+
+- (sąlyginis trūkumas) valdoma per CLI, JSON ir truputį YAML.  +
+  Norint GUI, reiktų naudoti orkestratorių Triton arba Project FiFo (jei mažesnis ūkis ir vengiama dedikuoto HNo).
 
 - rinkodaros strategija dar tik kuriama, ji kinta;  +
   (todėl kitur stipresnės adminų ir jūzerių bendruomenės)
@@ -216,3 +235,14 @@ https://github.com/joyent/triton/blob/master/README.md#overview[Triton DataCente
 
 `2019-01-16` **[[[20]]]** `shaner.life`, Shaner, 
 https://shaner.life/using-cloud-init-with-smartos/[Using cloud-init with SmartOS]
+
+`2011-08-15` **[[[21]]]** `slideshare.net`, Bryan Cantrill, 
+https://www.slideshare.net/bcantrill/experiences-porting-kvm-to-smartos/22[Experiences porting KVM to SmartOS]
+
+`2012-06-29` **[[[22]]]** `github.com/joyent/illumos-kvm`, (redaguota) 
+https://github.com/joyent/illumos-kvm/blob/master/README.md#illumos-kvm-kvm-for-illumos[illumos-kvm: KVM for illumos]
+
+`2014-06-06` **[[[23]]]** `wikipedia.org`, (redaguota) Trentstersla, https://en.wikipedia.org/wiki/SmartOS#:~:text=SmartOS%20follows%20a%20strict%20local%20node%20storage%20architecture[SmartOS | "SmartOS follows a strict local node storage architecture"]
+
+`2019-05-14` **[[[24]]]** `bhyvecon.org`, Patrick Mooney, 
+https://bhyvecon.org/bhyveconOttawa2019-Patrick.pdf[Porting bhyve to SmartOS]
