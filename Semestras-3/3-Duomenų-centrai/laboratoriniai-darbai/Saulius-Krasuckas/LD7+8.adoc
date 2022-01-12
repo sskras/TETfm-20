@@ -112,7 +112,7 @@ Kadangi apie KVM tikėtinai rašys kiti grupiokai (o čia, be to, naudojama sena
 
 O kadangi pavienis įdiegtas _SmartOS_ egzempliorius nėra pakankamai lankstus, šios platformos (variklio) pagrindu buvo sukurta debesų valdymo (angl. _Cloud management_) platforma **Triton DataCenter** / **Triton Compute Service**, į kurios funkcijas irgi atsižvelgsiu. <<7>>
 
-Taip pat atskirai apžvelgiu ir _bhyve_ hypervizorių, kilusį iš kitos OS <<8>> ir ten anksčiau gaunantį naujas funkcijas:
+Taip pat atskirai apžvelgiu ir _bhyve_ hypervizorių, kilusį iš kitos OS, _FreeBSD_ <<8>> ir naujas funkcijas joje gaunantį anksčiau:
 
 - Modernus kodas, mažas _Overhead_, spartus
 - _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
@@ -121,13 +121,18 @@ Taip pat atskirai apžvelgiu ir _bhyve_ hypervizorių, kilusį iš kitos OS <<8>
 - _PCI pass-through_ galimybė
 - Palaiko vieną efektyviausių paravirtualizacijos (PV) interfeisų _VirtIO_  +
 
-\... bei pasak gamintojo prezentacijos <<9>>:
+\... pasak _SmartOS_ gamintojo prezentacijos <<9>>:
 
 - _Guest OS_ tik UEFI?
-- integruotas `net antispoofing`;
+- integruotas `net antispoofing` mechanizmas;
 
-- `cloud-init` technologijos palaikymas. <<19>>
+\... bei pasak dokumentacijos <<19>>:
 
+- palaiko `cloud-init` standartą. <<20>>  +
+  Jis įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos.
+  Yra palaikomas tiek naudojantis visais didžiaisiais viešos debesijos tiekėjais, tiek atliekant OS provizijavimą ir privačiuose debesyse, ir „plikoj geležy“ (angl. _Bare metal_).
+
+---
 
 Trūkumai:
 
@@ -207,5 +212,7 @@ https://github.com/joyent/triton/blob/master/README.md#overview[Triton DataCente
 
 `2017-01-12` **[[[18]]]** `joyent.com`, Wyatt Preul, https://www.joyent.com/blog/microservices-containers-nodejs[Containers and microservices and Node.js! Oh, my!]
 
-`2019-01-16` **[[[19]]]** `shaner.life`, Shaner, 
+`2019-09-04` **[[[19]]]** `readthedocs.io`, (redaguota) https://cloudinit.readthedocs.io/en/latest/topics/datasources/smartos.html[cloud-init » Docs » Datasources » SmartOS Datasource]
+
+`2019-01-16` **[[[20]]]** `shaner.life`, Shaner, 
 https://shaner.life/using-cloud-init-with-smartos/[Using cloud-init with SmartOS]
