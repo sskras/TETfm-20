@@ -106,8 +106,8 @@ Ji specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / v
  ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve` veikia tik konteineryje  +
     (_Double hulled virtualization_ patentas <<6>>)
   - => dar labiau sumažintas atakos perimetras <<9>> psl. 9
-  - => preciziškas valdymas -- konteineris užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą,  <<21>> psl. 22
-  - => unifikuotas konteinerių bei VMų valdymas (komandos `vmadm`)
+  - => preciziškas valdymas -- konteineris užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą, kitą instrumentuotę  <<21>> psl. 22
+  - => apjungtas konteinerių bei VMų valdymas (komandos `vmadm`)
  ** Host OS turi po atskirą įrankį:
   - => `imgadm` valdyti Guest OS atvaizdams
   - => `vmadm` valdyti Guest OS egzemplioriams
@@ -115,23 +115,31 @@ Ji specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / v
   - => `ipadm` valdyti OS potinkliams (L3)
   - => `fwadm` valdyti OS ugniasienei (L2 - L4)
  ** Abu VMMai, `KVM` ir `bhyve` geba veikti kartu; <<24>> psl. 8
-* Naudoja tarp-platforminį paketų valdiklį `pkgsrc` (kilusį NetBSD).
+* Naudoja tarpplatforminį paketų valdiklį `pkgsrc` (kilusį NetBSD).
 
 
-Dalis šių savybių nulemia novatorišką, ne tipinę hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_). <<23>>
+Dalis šių savybių išplaukia iš griežtai lokalios talpyklinės nodo architektūros.
 
-O kadangi pavienis įdiegtas _SmartOS_ egzempliorius nėra pakankamai lankstus, šios platformos (variklio) pagrindu buvo sukurta debesų valdymo (angl. _Cloud management_) platforma **Triton DataCenter** / **Triton Compute Service**, į kurios funkcijas irgi trumpai atsižvelgsiu. <<7>>
+Tai reiškia, kad VMai kiekviename Host node yra saugomi lokaliai ir startuoja ne iš NAS ar SAN tinklo.
 
-Kadangi apie KVM tikėtinai rašys kiti grupiokai (o čia, be to, naudojama sena KVM versija), toliau akcentuoju _SmartOS_ + _bhyve_ VMM kombinaciją.
+Tokia architektūra lemia novatorišką, ne tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_). <<23>>
+
+Išnyksta _Storage_ tinklo sukuriamas vėlinimas, taip pat padidėja nodų nepriklausomumas.
+
+O daugianodžių _SmartOS_ debesų valdymui buvo sukurtas debesų valdymo (angl. _Cloud management_) įrankis **Triton DataCenter** / **Triton Compute Service**, į kurios funkcijas irgi trumpai atsižvelgsiu. <<7>>
+
+Kadangi apie KVM tikėtinai rašys kiti grupiokai (o be to, čia naudojama sena KVM versija), toliau akcentuoju _SmartOS_ + _bhyve_ VMM kombinaciją.
 
 _bhyve_ kilo iš kitos OS, _FreeBSD_ <<8>> ir naujas funkcijos ten atsiranda anksčiau / greičiau:
 
 - Modernus kodas, mažas _Overhead_, spartus
 - _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
+- Su _illumOS_ branduolio išeities kodu ("CDDL") suderinama licencija ("Simplified BSD License") leidžia integruoti `bhyve` kodą tiesiogiai į šį branduolį.  +
+  (priešingai nei `KVM` atveju ir `GPL` licencija)
 - Palaiko _labai_ įvairius Storage backend-us
-- ZFS privalumai: akimirksniniai duomenų klonai, duomenų šifravimas (jei reikia, ir jų deduplikacija)
+- ZFS privalumai: akimirksniniai duomenų (FSų) klonai, duomenų šifravimas (jei reikia, ir jų deduplikacija)
 - _PCI pass-through_ galimybė
-- _VirtIO_ -- vieno efektyviausių paravirtualizacijos (PV) interfeisų palaikymas  +
+- _VirtIO_ -- vieno efektyviausių paravirtualizacijos (PV) interfeisų palaikymas
 
 \... pasak _SmartOS_ gamintojo prezentacijos: <<9>>
 
@@ -142,10 +150,10 @@ _bhyve_ kilo iš kitos OS, _FreeBSD_ <<8>> ir naujas funkcijos ten atsiranda ank
 
 - palaiko `cloud-init` standartą. <<20>>  +
  * Jis įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos, pvz.:
- ** OS vartotojų paskyrų sukūrimą
- ** programinių paketų sudiegimą
- ** Git repozitorijų nuklonavimą
- ** apskritai kone bet kuriuos OS administravimo veiksmus.
+  ** OS vartotojų paskyrų sukūrimą
+  ** programinių paketų sudiegimą
+  ** Git repozitorijų nuklonavimą
+  ** apskritai kone bet kuriuos OS administravimo veiksmus.
  * Naudoja YAML sintaksę (tenka suderinti su SmartOS `vmadm` naudojama JSON sintakse)
  * Yra palaikomas tiek visų didžiųjų viešos debesijos tiekėjų, tiek atliekant OS provizijavimą ir privačiuose debesyse, ir „plikoj geležy“ (angl. _Bare metal_).
 
@@ -160,7 +168,7 @@ Trūkumai:
 - kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;
 
 - (sąlyginis trūkumas) valdoma per CLI, JSON ir truputį YAML.  +
-  Norint GUI, reiktų naudoti orkestratorių Triton arba Project FiFo (jei mažesnis ūkis ir vengiama dedikuoto HNo).
+  Norint GUI, reiktų naudoti debesinį orkestratorių _Triton_ arba _Project FiFo_ (kai mažesnis ūkis ir vengiama dedikuoto HNo).
 
 - rinkodaros strategija dar tik kuriama, ji kinta;  +
   (todėl kitur stipresnės adminų ir jūzerių bendruomenės)
