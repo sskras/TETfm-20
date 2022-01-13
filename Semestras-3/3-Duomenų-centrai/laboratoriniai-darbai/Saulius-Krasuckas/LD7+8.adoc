@@ -58,12 +58,18 @@ Tiksliau, tai konverguota hipervizorinė platforma (ar operacijų sistema, OS).
 Tai distribucija ne populiarios _Linux_ OS, bet _"illumOS"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
 Lyginant su _Linux_, ji turi gerokai stabilesnę architektūrą.
 
-O virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) du skirtingus hipervizorius pasirinktinai:
+Virtualių mašinų (toliau VMų) valdymui _SmartOS_ siūlo du skirtingus hipervizorius pasirinktinai:
 
-* **KVM** (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos emuliatoriaus portas, 2011 m.)  +
-  <<21>> psl. 5 + 14
+* **KVM** (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos emuliatoriaus portas, 2011 m.);  <<21>> psl. 5 + 14
+ ** Gana paplitęs VM mechanizmas / interfeisas;
+ ** Neleidžia plėsti VM talpos (tenka kurti iš naujo);
 * **bhyve** (gana naujos FreeBSD 11.1 versijos VMM portas, 2017 m.)  +
   <<24>> psl. 6
+ ** Palaiko šiek mažiau OS atvaizdų;
+ ** Palaiko tik UEFI įkrovą;  +
+    (todėl kai kurie OS privalo turėti po skirtingą atvaizdą kiekvienam hipervizoriui)
+ ** Didesnis našumas (angl. _Performance_);
+ ** Didesnis plečiamumas (angl. _Scalability_);
 
 Tiesą sakant, jie abu nėra gryni _Type I_ hipervizoriai. <<1>>
 
@@ -72,9 +78,9 @@ Ir jie abu tą OS paverčia _Type I_ hipervizoriumi, specializuoja.
 
 Tačiau kadangi ši OS yra bendros paskirties, pagal apibrėžimą tokį hipervizorių tinka laikyti ir _Type II_ hipervizoriumi.
 
-Dėl aiškumo juos abu priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai. <<2>>
+Dėl aiškumo juos abu priskiriu hibridinei _Type 1.5_ (dar vadinamai _Type 3_) kategorijai. <<2>>
 
-Pati _SmartOS_ yra specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / valdymui, ir niekam kitam:
+Pati _SmartOS_ yra specializuota -- skirta konverguotam VMų ir konteinerių startavimui / valdymui, ir niekam kitam:
 
 * Užima mažai vietos (kelis šimtus MiB):
  ** => sparti keltis (įkrova), ~30s
@@ -105,7 +111,10 @@ Pati _SmartOS_ yra specializuota -- skirta tik konverguotam VMų ir konteinerių
  ** schema panaši į RAID 5/6/7
   - => padidinta diskų I/O sparta ir patikimumas
  ** tinkliniai diskai nenaudojami
-* Naudoja dubliuotą virtualizaciją:
+* Siūlo du virtualizacijos lygius:
+ ** OS lygis (konteineriai);
+ ** „geležies“ lygis (virtualios mašinos, VM);
+* Naudoja ir dubliuotą virtualizaciją:
  ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve`) veikia tik konteineryje;  +
     (_Double hulled virtualization_ patentas <<6>>)
   - => dar labiau sumažintas atakos perimetras;  <<9>> psl. 9
@@ -129,7 +138,7 @@ Tokia architektūra lemia novatorišką, ne tipinį hipervizoriaus panaudojimo s
 
 Išnyksta _Storage_ tinklo įnešamas vėlinimas, taip pat padidėja Host nodų I/O nepriklausomumas.
 
-Daugianodžių _SmartOS_ debesų valdymui yra sukurtas irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
+Daugianodžių _SmartOS_ debesų valdymui siūlomas atskiras, irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
 
 Kadangi apie KVM tikėtinai rašys kiti grupiokai (o be to, čia naudojama sena KVM versija), toliau akcentuoju _SmartOS_ + _bhyve_ VMM kombinaciją.
 
@@ -262,3 +271,4 @@ https://bhyvecon.org/bhyveconOttawa2019-Patrick.pdf[Porting bhyve to SmartOS]
 
 `2019-05-14` **[[[25]]]** `bhyvecon.org`, Rod Grimes, 
 https://bhyvecon.org/bhyveconOttawa2019-Rodney.pdf#page=3[bhyve VM_MAXCPU cleanup | VM_MAXCPU]
+
