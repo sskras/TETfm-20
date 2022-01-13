@@ -53,8 +53,12 @@ Hypervisor -- _[TODO]_
 
 Pasirenku apraše minimą _SmartOS_ hipervizorių.
 
-Tiksliau, tai konverguota hipervizorinė platforma (operacijų sistema, OS).
-Virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) du skirtingus hipervizorius pasirinktinai:
+Tiksliau, tai konverguota hipervizorinė platforma (ar operacijų sistema, OS).
+
+Tai distribucija ne populiarios _Linux_ OS, bet _"illumOS"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS.
+Lyginant su _Linux_, ji turi gerokai stabilesnę architektūrą.
+
+O virtualių mašinų (toliau VMų) valdymui ji turi (geba naudoti) du skirtingus hipervizorius pasirinktinai:
 
 * **KVM** (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos emuliatoriaus portas, 2011 m.)  +
   <<21>> psl. 5 + 14
@@ -70,9 +74,7 @@ Tačiau kadangi ši OS yra bendros paskirties, pagal apibrėžimą tokį hipervi
 
 Dėl aiškumo juos abu priskiriu _Type 1.5_ (dar vadinamai _Type 3_) kategorijai. <<2>>
 
-Pati _SmartOS_ yra distribucija _"illumOS"_ sistemos, kadaise kilusios iš Solaris OS, ir yra klasikinė Unix OS. 
-
-Ji specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / valdymui:
+Pati _SmartOS_ yra specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / valdymui, ir niekam kitam:
 
 * Užima mažai vietos (kelis šimtus MiB):
  ** => sparti keltis (įkrova), ~30s
@@ -97,36 +99,37 @@ Ji specializuota -- skirta tik konverguotam VMų ir konteinerių startavimui / v
   - => neveikia naujų vartotojų kūrimas
   - => `/usr` failai primontuoti R/O
   - => dar labiau sumažintas atakų perimetras
-* Visi serverio lokalūs diskai _programiškai_ apjungiami į vieną grupę (_pool_):
+* Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_):
+ ** apjungimas _programinis_
  ** apjungiama pagal RAIDZ
  ** schema panaši į RAID 5/6/7
   - => padidinta diskų I/O sparta ir patikimumas
  ** tinkliniai diskai nenaudojami
 * Naudoja dubliuotą virtualizaciją:
- ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve` veikia tik konteineryje  +
+ ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve`) veikia tik konteineryje;  +
     (_Double hulled virtualization_ patentas <<6>>)
-  - => dar labiau sumažintas atakos perimetras <<9>> psl. 9
-  - => preciziškas valdymas -- konteineris užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą, kitą instrumentuotę  <<21>> psl. 22
+  - => dar labiau sumažintas atakos perimetras;  <<9>> psl. 9
+  - => preciziškas Guest OSų valdymas -- konteineris užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą, kitą instrumentuotę;  <<21>> psl. 22
   - => apjungtas konteinerių bei VMų valdymas (komandos `vmadm`)
- ** Host OS turi po atskirą įrankį:
-  - => `imgadm` valdyti Guest OS atvaizdams
-  - => `vmadm` valdyti Guest OS egzemplioriams
-  - => `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
-  - => `ipadm` valdyti OS potinkliams (L3)
-  - => `fwadm` valdyti OS ugniasienei (L2 - L4)
- ** Abu VMMai, `KVM` ir `bhyve` geba veikti kartu -- vienu metu viename hoste; <<24>> psl. 8
-* Naudoja tarpplatforminį paketų valdiklį `pkgsrc` (kilusį NetBSD).
+ ** Abu hipervizoriai, `KVM` ir `bhyve` geba veikti kartu -- vienu metu viename hoste;  <<24>> psl. 8
+* Host OS turi po atskirą įrankį:
+  - `imgadm` valdyti Guest OS atvaizdams
+  - `vmadm` valdyti Guest OS egzemplioriams
+  - `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
+  - `ipadm` valdyti OS potinkliams (L3)
+  - `fwadm` valdyti OS ugniasienei (L2 - L4)
+* Naudoja tarpplatforminį paketų valdiklį `pkgsrc` (kilusį NetBSD sistemoje).
 
 
-Dalis šių savybių išplaukia iš griežtai lokalios talpyklinės nodo architektūros.
+Dalis šių savybių išplaukia iš griežtai lokalios Host nodų talpyklinės architektūros.
 
 Tai reiškia, kad VMai kiekviename Host node yra saugomi lokaliai ir startuoja ne iš NAS ar SAN tinklo.
 
 Tokia architektūra lemia novatorišką, ne tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_). <<23>>
 
-Išnyksta _Storage_ tinklo sukuriamas vėlinimas, taip pat padidėja nodų nepriklausomumas.
+Išnyksta _Storage_ tinklo įnešamas vėlinimas, taip pat padidėja Host nodų I/O nepriklausomumas.
 
-O daugianodžių _SmartOS_ debesų valdymui buvo sukurtas debesų valdymo (angl. _Cloud management_) įrankis **Triton DataCenter** / **Triton Compute Service**, į kurios funkcijas irgi trumpai atsižvelgsiu. <<7>>
+Daugianodžių _SmartOS_ debesų valdymui yra sukurtas irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
 
 Kadangi apie KVM tikėtinai rašys kiti grupiokai (o be to, čia naudojama sena KVM versija), toliau akcentuoju _SmartOS_ + _bhyve_ VMM kombinaciją.
 
@@ -161,14 +164,14 @@ _bhyve_ kilo iš kitos OS, _FreeBSD_ <<8>> ir naujas funkcijos ten atsiranda ank
 
 Trūkumai:
 
-- nepalaiko Legacy BIOS/Boot-ROM kelties <<24>> psl. 12
+- nepalaiko Legacy BIOS/Boot-ROM kelties;  <<24>> psl. 12
 
-- kol kas palaiko tik _x86_ architektūrą (_no ARM_); <<10>>
+- kol kas palaiko tik _x86_ architektūrą (_no ARM_);  <<10>>
 
-- palaiko tik 16 vCPU / VM; <<25>>
+- palaiko tik 16 vCPU / VM;  <<25>>
 
 - Kol kas neveikia VM Live Migration (dar tik kuriamas);  +
-  veikia tik VM Warm/Cold Migration. <<11>>
+  veikia tik VM Warm/Cold Migration;  <<11>>
 
 - Guest OS VGA išvestis pasiekiama tik VNC protokolu;
 
@@ -178,7 +181,7 @@ Trūkumai:
 - kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;
 
 - rinkodaros strategija dar tik kuriama, ji kinta;  +
-  (todėl kitur stipresnės adminų ir jūzerių bendruomenės)
+  (todėl kitų hipervizorių stipresnės adminų ir jūzerių bendruomenės)
 
 Ankstesnės FreeBSD prezentacijos (apie komponentus):
 
@@ -259,4 +262,3 @@ https://bhyvecon.org/bhyveconOttawa2019-Patrick.pdf[Porting bhyve to SmartOS]
 
 `2019-05-14` **[[[25]]]** `bhyvecon.org`, Rod Grimes, 
 https://bhyvecon.org/bhyveconOttawa2019-Rodney.pdf#page=3[bhyve VM_MAXCPU cleanup | VM_MAXCPU]
-
