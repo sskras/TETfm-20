@@ -92,7 +92,7 @@ Palyginimas tarpusavyje:
  ** _bhyve_ kilo kitoje OS, _FreeBSD_, ir naujas funkcijos ten atsiranda anksčiau / greičiau;  <<8>>
  ** palaiko šiek mažiau OSų / OS atvaizdų;
  ** palaiko tik 16 vCPU / VM;  <<26>>
- ** grįsta UEFI interfeisu:
+ ** implementuoja UEFI platforminį interfeisą:
   *** palaikomi tik su UEFI suderinami _Guest OS_;  <<28>>
   *** nepalaiko tiesioginės, neemuliuotos _Legacy_ BIOS / Boot-ROM kelties;  <<24>> psl. 12
   *** todėl kai kuriems OS tenka turėti po skirtingą atvaizdą kiekvienam hipervizoriui;
@@ -104,7 +104,7 @@ Palyginimas tarpusavyje:
    - duomenų šifravimas (jei reikia)
    - ir jų deduplikacija (jei reikia)
  ** palaiko _labai_ įvairius Storage backend-us
- ** _PCI pass-through_ galimybė
+ ** _PCI pass-through_ galimybė;  <<13>> psl. 10
  ** integruotas `net antispoofing` mechanizmas;  <<9>> psl. 11
  ** su _illumOS_ išeities kodu ("CDDL") tiesiogiai suderinama licencija ("Simplified BSD License") leidžia integruoti `bhyve` kodą tiesiogiai į branduolį.  +
 
@@ -155,11 +155,11 @@ Pati SmartOS yra specializuota OS -- skirta konverguotam VMų ir konteinerių st
   - => apjungtas konteinerių bei VMų valdymas (komandos `vmadm`)
  ** Abu hipervizoriai, `KVM` ir `bhyve` geba veikti kartu -- vienu metu viename hoste;  <<24>> psl. 8
 * Host OS turi po atskirą įrankį:
-  - `imgadm` valdyti Guest OS atvaizdams
-  - `vmadm` valdyti Guest OS egzemplioriams
-  - `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
-  - `ipadm` valdyti OS potinkliams (L3)
-  - `fwadm` valdyti OS ugniasienei (L2 - L4)
+ ** `imgadm` valdyti Guest OS atvaizdams
+ ** `vmadm` valdyti Guest OS egzemplioriams
+ ** `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
+ ** `ipadm` valdyti OS potinkliams (L3)
+ ** `fwadm` valdyti OS ugniasienei (L2 - L4)
 * Naudoja tarpplatforminį paketų valdiklį `pkgsrc` (kilusį NetBSD sistemoje).
 
 
@@ -172,7 +172,7 @@ Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (
 * Atkrinta _Storage_ tinklo įnešamas vėlinimas;
 * Išauga nodų I/O nepriklausomumas.
 * HA / FT tenka projektuoti Application lygmenyje;  <<27>>
-* Pasunkėja _Live Migration_ įgyvendinimas.
+* Sunkiau įgyvendinamas _Live Migration_.
 
 Daugianodžių SmartOS debesų valdymui siūlomas atskiras, irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
 
@@ -180,44 +180,44 @@ Daugianodžių SmartOS debesų valdymui siūlomas atskiras, irgi atvirojo kodo �
 
 Privalumai:
 
-- _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
+* _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai TODO patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
 
-- _VirtIO_ -- vieno efektyviausių paravirtualizacijos (PV) interfeisų palaikymas
+* _VirtIO_ -- vieno efektyviausių paravirtualizacijos (PV) interfeisų palaikymas;  <<13>> psl. 10
 
-- _cloud-init_ standarto palaikymas: <<19>>, <<20>>  +
- * Įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos, pvz.:
-  ** OS vartotojų paskyrų sukūrimą
-  ** programinių paketų sudiegimą
-  ** Git repozitorijų nuklonavimą
-  ** apskritai kone bet kuriuos OS administravimo veiksmus.
- * Naudoja YAML sintaksę (tenka suderinti su SmartOS `vmadm` naudojama JSON sintakse)
- * Yra palaikomas tiek visų didžiųjų viešos debesijos tiekėjų, tiek atliekant OS provizijavimą ir privačiuose debesyse, ir „plikoj geležy“ (angl. _Bare metal_).
+* _cloud-init_ standarto palaikymas: <<19>>, <<20>>  +
+ ** Įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos, pvz.:
+  *** OS vartotojų paskyrų sukūrimą
+  *** programinių paketų sudiegimą
+  *** Git repozitorijų nuklonavimą
+  *** apskritai kone bet kuriuos OS administravimo veiksmus.
+ ** Naudoja YAML sintaksę (tenka suderinti su SmartOS `vmadm` naudojama JSON sintakse)
+ ** Yra palaikomas tiek visų didžiųjų viešos debesijos tiekėjų, tiek atliekant OS provizijavimą ir privačiuose debesyse, ir „plikoj geležy“ (angl. _Bare metal_).
 
 ---
 
 Trūkumai:
 
-- Kol kas palaiko tik _x86_ architektūrą (_no ARM_);  <<10>>
+* Kol kas palaiko tik _x86_ architektūrą (_no ARM_);  <<10>>
 
-- Kol kas neveikia VM _Live Migration_ (dar tik kuriamas);  +
+* Kol kas neveikia VM _Live Migration_ (dar tik kuriamas);  +
   veikia tik VM _Warm / Cold Migration_;  <<11>>
 
-- Guest OS VGA išvestis ribota ir pasiekiama tik VNC protokolu;
+* Guest OS VGA išvestis ribota ir pasiekiama tik VNC protokolu;
 
-- Hostas valdomas per CLI, JSON ir truputį YAML (sąlyginis trūkumas).  +
+* Hostas valdomas per CLI, JSON ir truputį YAML (sąlyginis trūkumas).  +
   Norint GUI, reiktų naudoti debesinį orkestratorių _Triton_ arba _Project FiFo_ (kai mažesnis ūkis ir vengiama dedikuoto HNo, _Head-node_).
 
-- Kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;
+* Kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;
 
-- Rinkodaros strategija dar tik kuriama, ji kinta;  +
+* Rinkodaros strategija dar tik kuriama, ji kinta;  +
   (todėl stipresnės kitų hipervizorių adminų ir jūzerių bendruomenės)
 
 ---
 
 Ankstesnės FreeBSD prezentacijos (apie komponentus):
 
-- <<12>> --
-- <<13>>
+- <<12>> Diagramos
+- <<13>> Sąrašėlis
 
 Apie Triton DataCenter + diagramos:
 
@@ -261,7 +261,7 @@ Taikymo pavyzdžiai:
 
 `2011-05-13` **[[[12]]]** `people.freebsd.org`, Neel Natu | Peter Grehan, https://people.freebsd.org/~neel/bhyve/bhyve_bsdcan_2011.pdf[BHyVe | BSD Hypervisor]
 
-`2014-05-07` **[[[13]]]** `papers.freebsd.org`, John Baldwin, https://papers.freebsd.org/2014/baldwin-Introduction_to_bhyve.files/slides.pdf[Introduction to bhyve]
+`2014-05-07` **[[[13]]]** `papers.freebsd.org`, John Baldwin, https://papers.freebsd.org/2014/baldwin-Introduction_to_bhyve.files/slides.pdf#page=6[Introduction to bhyve]
 
 `2021-01-05` **[[[14]]]** `joyent.com`, (redaguota) https://docs.joyent.com/public-cloud/instances[Triton End User Documentation › Containers and virtual machines ›]
 
