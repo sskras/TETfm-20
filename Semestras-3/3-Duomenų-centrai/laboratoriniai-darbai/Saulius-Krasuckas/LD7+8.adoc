@@ -51,14 +51,14 @@ Hypervisor -- _[TODO]_
 [.text-left]
 == Darbo eiga
 
-Pasirenku darbo apraše minimą _SmartOS_ hipervizorių.
+Pasirenku darbo apraše minimą **SmartOS** hipervizorių.
 
 Tiksliau, tai konverguota hipervizorinė platforma (ir operacijų sistema, OS).
 
-Tai distribucija ne populiarios _Linux_ OS, bet _"illumOS"_ sistemos (2010 m. kilusios iš Solaris OS), ir yra klasikinė Unix OS.
-Lyginant su _Linux_, ji turi gerokai stabilesnę architektūrą.
+Tai distribucija ne populiarios Linux OS, bet _"illumOS"_ sistemos (2010 m. kilusios iš Solaris OS), ir yra klasikinė Unix OS.
+Lyginant su Linux, ji turi gerokai stabilesnę architektūrą.
 
-Virtualių mašinų (toliau VMų) valdymui _SmartOS_ siūlo du skirtingus hipervizorius pasirinktinai:
+Virtualių mašinų (toliau VMų) valdymui SmartOS siūlo du skirtingus hipervizorius pasirinktinai:
 
 * **KVM**  <<21>> psl. 5 + 14   +
   (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos emuliatoriaus portas, 2011 m.);  +
@@ -78,37 +78,42 @@ Palyginimas tarpusavyje:
 
 * **KVM**:
  ** Gana paplitęs VM mechanizmas / interfeisas;
- ** _SmartOS_ implementacija neleidžia plėsti VM resursų (tenka VM perkurti iš naujo);
+ ** SmartOS KVM implementacija neleidžia plėsti VM resursų: diskų, CPU, RAM;  +
+    (tenka VM perkurti iš naujo ir perkelti aplikacijos duomenis)
  ** palaiko iki 256 vCPU / VM;  <<25>>
- ** palaiko iki 2 TiB RAM / VM.
+ ** palaiko iki 2 TiB RAM / VM;
+ ** su _illumOS_ išeities kodu nesuderinama `GPL` licencija;  <<29>> +
+    (Todėl SmartOS KVM vystomas kaip atskiras projektas)
+ ** Linux branduolys ir KVM yra „judantis taikinys“ su kitokia architektūra nei illumOS sistema.  +
+    Į pastarąją pastoviai atkelti naujus pakeitimus būtų itin daug darbo.  +
+    Todėl SmartOS KVM implementacija neanaujinama.
 
 * **bhyve**:
  ** _bhyve_ kilo kitoje OS, _FreeBSD_, ir naujas funkcijos ten atsiranda anksčiau / greičiau;  <<8>>
- ** Palaiko šiek mažiau OS atvaizdų;
- ** Palaiko tik UEFI:
-  *** palaikomi tik su UEFI suderinami _Guest OS_;  <<9>> psl. 8
-  *** nepalaiko tiesioginės Legacy BIOS/Boot-ROM kelties;  <<24>> psl. 12
-  *** todėl kai kurie OS privalo turėti po skirtingą atvaizdą kiekvienam hipervizoriui;
- ** Didesnis našumas (angl. _Performance_);
- ** Didesnis plečiamumas (angl. _Scalability_);
- ** Modernus kodas, mažas _Overhead_, spartus
+ ** palaiko šiek mažiau OSų / OS atvaizdų;
+ ** palaiko tik 16 vCPU / VM;  <<26>>
+ ** grįsta UEFI interfeisu:
+  *** palaikomi tik su UEFI suderinami _Guest OS_;  <<28>>
+  *** nepalaiko tiesioginės, neemuliuotos _Legacy_ BIOS / Boot-ROM kelties;  <<24>> psl. 12
+  *** todėl kai kuriems OS tenka turėti po skirtingą atvaizdą kiekvienam hipervizoriui;
+ ** modernus kodas, mažas _Overhead_
+ ** didesnis našumas (angl. _Performance_);
+ ** stipresnis pajėgumų dauginamumas (angl. _Scalability_);
  ** integracija su `ZFS`:
    - akimirksniniai duomenų (FSų) klonai
    - duomenų šifravimas (jei reikia)
    - ir jų deduplikacija (jei reikia)
- ** Palaiko _labai_ įvairius Storage backend-us
- ** Su _illumOS_ branduolio išeities kodu ("CDDL") suderinama licencija ("Simplified BSD License") leidžia integruoti `bhyve` kodą tiesiogiai į šį branduolį.  +
-  (Priešingai nei `KVM` atveju ir `GPL` licencija)
+ ** palaiko _labai_ įvairius Storage backend-us
  ** _PCI pass-through_ galimybė
  ** integruotas `net antispoofing` mechanizmas;  <<9>> psl. 11
- ** palaiko tik 16 vCPU / VM;  <<26>>
+ ** su _illumOS_ išeities kodu ("CDDL") tiesiogiai suderinama licencija ("Simplified BSD License") leidžia integruoti `bhyve` kodą tiesiogiai į branduolį.  +
 
 
 
-Kadangi apie KVM tikėtinai rašys kiti grupiokai (o be to, čia naudojama senoka KVM versija), toliau akcentuoju _SmartOS_ + _bhyve_ VMM kombinaciją.
+Kadangi apie KVM tikėtinai rašys kiti grupiokai (o be to, čia naudojama senoka KVM versija), toliau akcentuoju SmartOS + _bhyve_ VMM kombinaciją.
 
 
-Pati _SmartOS_ yra specializuota -- skirta konverguotam VMų ir konteinerių startavimui / valdymui, ir niekam kitam:
+Pati SmartOS yra specializuota OS -- skirta konverguotam VMų ir konteinerių startavimui / valdymui, ir niekam kitam:
 
 * Užima mažai vietos (kelis šimtus MiB):
  ** => sparti keltis (įkrova), ~30s
@@ -158,19 +163,18 @@ Pati _SmartOS_ yra specializuota -- skirta konverguotam VMų ir konteinerių sta
 * Naudoja tarpplatforminį paketų valdiklį `pkgsrc` (kilusį NetBSD sistemoje).
 
 
-Dalis šių savybių išplaukia iš griežtai lokalios Host nodų talpyklinės architektūros. <<23>>
+Dalis šių savybių išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
 
-Tai reiškia, kad kiekviename Host node VMai yra saugomi lokaliuose diskuose ir startuoja ne iš NAS ar SAN tinklo.
+Tai reiškia, kad kiekviename Host node VMai saugomi tik lokaliuose diskuose ir startuoja ne iš NAS ar SAN tinklo.
 
-Tokia architektūra lemia ne tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_).
+Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_):
 
-Atkrinta _Storage_ tinklo įnešamas vėlinimas, taip pat padidėja Host nodų I/O nepriklausomumas.
-Ir atsiranda kai kurie apribojimai:
+* Atkrinta _Storage_ tinklo įnešamas vėlinimas;
+* Išauga nodų I/O nepriklausomumas.
+* HA / FT tenka projektuoti Application lygmenyje;  <<27>>
+* Pasunkėja _Live Migration_ įgyvendinimas.
 
-* HA / FT turi veikti Application lygmenyje;
-* Pasunkėja Live Migration įgyvendinimas.
-
-Daugianodžių _SmartOS_ debesų valdymui siūlomas atskiras, irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
+Daugianodžių SmartOS debesų valdymui siūlomas atskiras, irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
 
 ---
 
@@ -195,10 +199,10 @@ Trūkumai:
 
 - Kol kas palaiko tik _x86_ architektūrą (_no ARM_);  <<10>>
 
-- Kol kas neveikia VM Live Migration (dar tik kuriamas);  +
-  veikia tik VM Warm/Cold Migration;  <<11>>
+- Kol kas neveikia VM _Live Migration_ (dar tik kuriamas);  +
+  veikia tik VM _Warm / Cold Migration_;  <<11>>
 
-- Guest OS VGA išvestis pasiekiama tik VNC protokolu;
+- Guest OS VGA išvestis ribota ir pasiekiama tik VNC protokolu;
 
 - Hostas valdomas per CLI, JSON ir truputį YAML (sąlyginis trūkumas).  +
   Norint GUI, reiktų naudoti debesinį orkestratorių _Triton_ arba _Project FiFo_ (kai mažesnis ūkis ir vengiama dedikuoto HNo, _Head-node_).
@@ -215,18 +219,17 @@ Ankstesnės FreeBSD prezentacijos (apie komponentus):
 - <<12>> --
 - <<13>>
 
-Apie Triton DataCenter:
+Apie Triton DataCenter + diagramos:
 
 - Konteinerių ir VMų Combo diagramos: <<14>>
 - Detalesnė Triton DC sudėtis: <<15>>
 
-Apie SmartOS:
+Taikymo pavyzdžiai:
 
 - Docker konteinerių startavimas be _Triton_ pagalbos; <<16>>
   (t. p. ir `fwadm` aprašymas)
 - Asmeninio Docker registro naudojimas. <<17>>
-
-SmartOS orientavimasis į _Node.js_ servisus: <<18>>  +
+- Orientavimasis į _Node.js_ servisus: <<18>>
 
 
 <<<
@@ -292,3 +295,8 @@ https://bhyvecon.org/bhyveconOttawa2019-Patrick.pdf[Porting bhyve to SmartOS]
 `2019-05-14` **[[[26]]]** `bhyvecon.org`, Rod Grimes, 
 https://bhyvecon.org/bhyveconOttawa2019-Rodney.pdf#page=3[bhyve VM_MAXCPU cleanup | VM_MAXCPU]
 
+`2015-12-08` **[[[27]]]** `lists.smartos.org`, Bryan Horstmann-Allen, https://www.mail-archive.com/smartos-discuss@lists.smartos.org.email.enqueue.archive.listbox.com/msg01707.html[Re: [smartos-discuss] High availability solutions with SmartOS]
+
+`2018-12-26` **[[[28]]]** `gist.github.com`, Mike Gerdts, https://gist.github.com/mgerdts/10376cdbd8f015f422d61664408db2aa#file-1-guest-images-md[Bhyve Machine Images | UEFI and BIOS Emulation]
+
+`2010-08-09` **[[[29]]]** `github.com/joyent/illumos-kvm`, https://github.com/joyent/illumos-kvm/blob/master/COPYING.linux[The KVM Project is derived from the Linux kernel.]
