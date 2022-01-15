@@ -144,21 +144,21 @@ Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / va
  ** FS pakeitimai arba efemeriški (`/etc`), arba neįmanomi (R/O) <<5>>  +
     (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.: ?)
   - => neveikia naujų vartotojų kūrimas
-  - => primontuoti R/O `/usr` failai ()
-    - => primontuota R/W `/usbkey` (OS įdiegimo duomenys)
-- => primontuota R/W `/zones` (Guest OS duomenys)
-  - => primontuota R/W `/var` (logai ir įvairūs būsenos failai)
-  - => primontuota R/W `/opt` (saugo visas esmines OS kustomizacijas, taip pat ir naujus paketus ir jų konfigūracijas)
+  - => primontuota **R/O**: `/usr` (pagrindinė OS failų vieta)
+  - => primontuota R/W: `/usbkey` (OS įdiegimo duomenys)
+  - => primontuota R/W: `/zones` (Guest OS duomenys)
+  - => primontuota R/W: `/var` (logai ir būsenos failai)
+  - => primontuota R/W: `/opt` (saugo esminius OS pakeitimus + naujus paketus ir jų konfigūracijas)
   - => dar labiau sumažintas atakų perimetras
 * Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_):
  ** apjungimas _programinis_
- ** apjungiama pagal RAIDZ
- ** schema panaši į RAID 5/6/7
-  - => padidinta diskų I/O sparta ir patikimumas
+ ** apjungimo metodas RAIDZ
+ ** panašus į RAID 5/6/7
+  - => padidinta ir diskų I/O sparta, ir patikimumas
  ** tinkliniai diskai nenaudojami
 * Siūlo iškart du virtualizacijos lygius:
- ** OS lygis (konteineriai), labai efektyvus;  +
-    Guest OS:  <<30>>
+ ** OS lygis, labai efektyvus (konteineriai: tiesiog _zonos_, dar vadinamos OS VM).  +
+    Guest OS gamintojo repozitorijoje:  <<30>>
   *** Linux distribucijų atvaizdai:
     - => CentOS 7: 20180323
     - => CentOS 6: 20170407
@@ -186,8 +186,8 @@ Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / va
     - => PostgreSQL
     - => Redis
     - => Standard (Web-development)
- ** „geležies“ lygis (virtualios mašinos, VM), labai izoliuotas;  +
-    Guest OS:  <<31>> (beveik visos populiariausios OS)
+ ** „geležies“ lygis, labai izoliuotas (virtualios mašinos: tiesiog VM, dar vadinamos HVM).  +
+    Palaikomos Guest OS:  <<31>> (beveik visos populiariausios)
   - => Windows _desktop_ ir Windows Server versijos;
   - => Linux distribucijos;
   - => *BSD distribucijos;
@@ -197,8 +197,8 @@ Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / va
  ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve`) veikia tik konteineryje;  +
     (_Double hulled virtualization_ patentas <<6>>)
   - => dar labiau sumažintas atakos perimetras;  <<9>> psl. 9
-  - => preciziškas Guest OSų valdymas -- konteineris užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą, kitą instrumentuotę;  <<21>> psl. 22
-  - => apjungtas konteinerių bei VMų valdymas (komandos `vmadm`)
+  - => preciziškas Guest OSų valdymas -- konteineris pilnai užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą, kitą instrumentuotę;  <<21>> psl. 22
+  - => apjungtas konteinerių bei VMų valdymas (komanda `vmadm`)
  ** Abu hipervizoriai, `KVM` ir `bhyve` geba veikti kartu -- vienu metu viename hoste aptarnauti savo atskirus VMus;  <<24>> psl. 8
 * Host OS turi po atskirą įrankį:
  ** `imgadm` valdyti Guest OS atvaizdams
@@ -207,36 +207,41 @@ Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / va
  ** `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
  ** `ipadm` valdyti OS potinkliams (L3)
  ** `fwadm` valdyti OS ugniasienei (L2 - L4)
-* Naudoja tarpplatforminį paketų valdiklį `pkgsrc` (kilusį NetBSD sistemoje).
+* Naudoja tarpplatforminius paketų valdiklius `pkgsrc` ir `pkgin` (kilusius NetBSD sistemoje).
 
 
-Dalis šių savybių išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
+Pirmosios šios savybės išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
 
 Tai reiškia, kad kiekviename Host node VMai saugomi tik lokaliuose diskuose ir startuoja ne iš NAS ar SAN tinklo.
 
 Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_):
 
-* Atkrinta _Storage_ tinklo įnešamas vėlinimas;
-* Išauga nodų I/O nepriklausomumas;
+* atkrinta _Storage_ tinklo įnešamas vėlinimas;
+* išauga nodų I/O nepriklausomumas;
 * _High-availability_ (HA) / _Fault tolerance_ (FT) tenka projektuoti _Application_ lygmenyje;  <<27>>, <<32>>
 * _Live Migration_ sunkiau įgyvendinamas;
 * _Live Migration_ lėtesnis.  +
   (Duomenų suvienodinimas tarp lokalių talpyklų „suvalgo“ dalį LAN pralaidumo).
 
-Kaip jau paminėta, šis hipervizorius Guest OS talpina ne tik į VM, bet ir į OS konteinerius.
-Guest OS valdymas yra konverguotas -- ir VMai, ir OS konteineriai valdomi vienu įrankiu.
+Kaip jau paminėta, SmartOS hipervizorius Guest OSą talpina į VMą, o jį aptarnaujantį _userland_ procesą į OS konteinerius.
+Guest OS valdymas konverguotas -- ir HVMai, ir OS VMai (konteineriai) valdomi vienu įrankiu.
 
 
 === Kokius DC/IT uždavinius SmartOS sprendžia ?
 
-Sprendžia ir įprastus virtualizavimo uždavinius, ir keletą naujų:
+SmartOS sprendžia ir įprastus virtualizavimo uždavinius, ir keletą naujų:
 
-- Kadangi greta VM virtualizacijos SmartOS naudoja dar ir lanksčią savo konteinerių architektūrą (angl. Cloud-native).
-Bent anksčiau (2013 m.) ji leisdavo SmartOS pagrindu veikiantiems „debesims“ drąsiai atlaikyti staigų apkrovų šuolį per kelias dešimtis tūkstančių KAV (kasdienių aktyvių vartotojų), kai tuo metu kitos architektūros tiesiog naudodavo 50% Overprovisioning.
-https://www.joyent.com/blog/joyent-takes-gaming-companies-to-the-next-level#:~:text=dramatically%20reducing%20the%20cost%20per%20DAU
+TODO įprastus?
 
-- Palaiko I/O pralaidumo paskirstymą tarp VMų Overprovisioning sumažinimui, VM tankio bei Host išnaudojamumo padidinimui:
-https://www.joyent.com/blog/nodestack-is-nodejs-mongodb-and-smartos#:~:text=burstable%20IO%20sharing%20across%20VMs%20for%20less%20overprovisioning
+* Kadangi SmartOS HVM virtualizaciją kombinuoja su savo efektyvia konteinerių architektūra (angl. _Cloud-native_), tai bent anksčiau, apie 2013 m. ji leisdavo SmartOS pagrindu veikiantiems „debesims“ drąsiai **atlaikyti staigų apkrovų šuolį per kelias dešimtis tūkstančių KAV** (kasdienių aktyvių vartotojų) tiek pagal CPU, tiek pagal RAM resursus.
++
+Kai tuo metu kitos debesinės architektūros buvo priverstos naudoti tiesiog 50% _Overprovisioning_.
++
+Scenarijus aktualus aptarnaujant pvz. mobiliųjų žaidimų ar socialinio tinklo žaidimų projektus.
+  <<33>>
+
+* SmartOS palaiko **I/O pralaidumo paskirstymą tarp VMų** ir (šuolių atveju) gelbsti jau paruošto _Overprovisioning_ sumažinimui, VM tankio bei Host I/O išnaudojamumo padidinimui.
+  <<34>>
 
 
 ==== Įprasti virtualizavimo uždaviniai
@@ -292,7 +297,7 @@ Pranašumai:
 
 * _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai TODO patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
 
-* _VirtIO_ -- vieno efektyviausių paravirtualizacijos (PV) interfeisų palaikymas;  <<13>> psl. 10
+* palaikymo _VirtIO_ -- efektyvų ir vieną populiariausių paravirtualizacijos (PV) interfeisų;  <<13>> psl. 10
 
 * _cloud-init_ standarto palaikymas: <<19>>, <<20>>  +
  ** Įgalina debesų (egzempliorių) inicializavimą nepriklausomai nuo platformos, pvz.:
@@ -307,9 +312,7 @@ Pranašumai:
   *** tiek atliekant OS provizijavimą ir privačiuose debesyse, 
   *** ir „plikoje geležy“ (angl. _Bare metal_).
 
----
-
-Trūkumai:
+==== SmartOS trūkumai:
 
 * Kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;  <<10>> 13m 41s
 
@@ -318,12 +321,12 @@ Trūkumai:
 * Kol kas neveikia VM _Live Migration_ (dar tik kuriama).  +
   Veikia tik VM _Warm / Cold Migration_;  <<11>>
 
-* Guest OS VGA išvestis ribota ir pasiekiama tik VNC protokolu;
+* Guest OS VGA išvestis ribota, pasiekiama tik VNC protokolu;
 
 * Hostas valdomas per CLI, JSON ir truputį YAML (sąlyginis trūkumas).  +
   Norint GUI, reiktų naudoti papildomą įrankį: 
- ** debesinį orkestratorių _Triton_ arba 
- ** _Project FiFo_ (kai mažesnis ūkis ir vengiama dedikuoto HNo, _Head-node_).
+ ** pilnavertę debesijos valdymo platformą _Triton DataCenter_ arba 
+ ** debesies valdiklį ir orkestratorių _Project FiFo_ (kai mažesnis ūkis ir vengiama dedikuoto HNo, _Head-node_).
 
 * Rinkodaros strategija dar tik kuriama, ji kinta;  +
   (todėl stipresnės kitų hipervizorių adminų ir jūzerių bendruomenės)
@@ -332,7 +335,7 @@ Trūkumai:
 
 Pagal rinkos dydį ir kai kuriuos trūkumus SmartOS gal ir tiktų vadinti nišiniu sprendimu.
 
-Tačiau pagal siūlomą architektūrą SmartOS yra kaip tik inovatyvus, genialiai paprastas ir nemokamas atvirojo kodo sprendimas.
+Tačiau pagal siūlomą architektūrą SmartOS vis dėlto yra inovatyvus, genialiai paprastas, efektyvus ir nemokamas atvirojo kodo sprendimas.
 
 Ar tai hipervizorių daro labiau nišiniu, ar mažinau nišiniu -- požiūrio ir susitarimo klausimas.
 
@@ -434,5 +437,10 @@ https://bhyvecon.org/bhyveconOttawa2019-Rodney.pdf#page=3[bhyve VM_MAXCPU cleanu
 
 `2021-12-10` **[[[31]]]** `wiki.freebsd.org`, Christos Margiolis, https://wiki.freebsd.org/bhyve#Q:_What_VM_operating_systems_does_bhyve_support.3F[bhyve | Q: What VM operating systems does bhyve support?]
 
-`2010-08-13` **[[[32]]]** `hoffmanmarcom.com`, 
+`2010-08-13` **[[[32]]]** `hoffmanmarcom.com`, (publikuota)
 https://www.hoffmanmarcom.com/dev/wp-content/docs/Cloud%20Architecture%20-%20Strategies%20and%20Configurations%20Guidebook%20Joyent.pdf#page=10[Cloud Based Application Architectures using Smart Computing | Tier 3: Web HA and database master/slave]
+
+`2013-01-30` **[[[33]]]** `joyent.com`, Rachel Balik, https://www.joyent.com/blog/joyent-takes-gaming-companies-to-the-next-level#:~:text=dramatically%20reducing%20the%20cost%20per%20DAU[Joyent Takes Gaming Companies to the Next Level]
+
+`2012-10-11` **[[[34]]]** `joyent.com`, Ben Wen, VP at MongoLab, 
+https://www.joyent.com/blog/nodestack-is-nodejs-mongodb-and-smartos#:~:text=burstable%20IO%20sharing%20across%20VMs%20for%20less%20overprovisioning[Nodestack is Node.js, MongoDB, and SmartOS]
