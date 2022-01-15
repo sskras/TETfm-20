@@ -123,6 +123,7 @@ Kadangi apie populiarų KVM tikėtinai rašys kiti grupiokai (o be to, SmartOS n
 === Ką SmartOS siūlo ?
 
 Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / valdymui, ir niekam kitam.
+Savybės:
 
 * Užima mažai vietos (kelis šimtus MiB):
   - => sparti keltis (įkrova), ~30s
@@ -210,28 +211,28 @@ Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / va
 * Naudoja tarpplatforminius paketų valdiklius `pkgsrc` ir `pkgin` (kilusius NetBSD sistemoje).
 
 
-Pirmosios šios savybės išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
+Pirmos keturios šios savybės išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
 
 Tai reiškia, kad kiekviename Host node VMai saugomi tik lokaliuose diskuose ir startuoja ne iš NAS ar SAN tinklo.
 
-Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką nei pvz. rinkos lyderis VMware _ESXi_):
+Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką ir labiau decentralizuotą nei pvz. rinkos lyderis VMware _ESXi_):
 
 * atkrinta _Storage_ tinklo įnešamas vėlinimas;
 * išauga nodų I/O nepriklausomumas;
+* talpykliniai diskai keičiami kiekvienam Hostui atskirai;
 * _High-availability_ (HA) / _Fault tolerance_ (FT) tenka projektuoti _Application_ lygmenyje;  <<27>>, <<32>>
 * _Live Migration_ sunkiau įgyvendinamas;
-* _Live Migration_ lėtesnis.  +
+* _Live Migration_ bus lėtesnis.  +
   (Duomenų suvienodinimas tarp lokalių talpyklų „suvalgo“ dalį LAN pralaidumo).
 
 Kaip jau paminėta, SmartOS hipervizorius Guest OSą talpina į VMą, o jį aptarnaujantį _userland_ procesą į OS konteinerius.
-Guest OS valdymas konverguotas -- ir HVMai, ir OS VMai (konteineriai) valdomi vienu įrankiu.
+Tai padėjo konverguoti Guest valdymą -- ir HVMus, ir OS VMus (konteinerius) valdyti viena komanda.
+Bet to, tai gelbsti saugantis nuo _Host-to-Guest escape_ atakų.
 
 
 === Kokius DC/IT uždavinius SmartOS sprendžia ?
 
 SmartOS sprendžia ir įprastus virtualizavimo uždavinius, ir keletą naujų:
-
-TODO įprastus?
 
 * Kadangi SmartOS HVM virtualizaciją kombinuoja su savo efektyvia konteinerių architektūra (angl. _Cloud-native_), tai bent anksčiau, apie 2013 m. ji leisdavo SmartOS pagrindu veikiantiems „debesims“ drąsiai **atlaikyti staigų apkrovų šuolį per kelias dešimtis tūkstančių KAV** (kasdienių aktyvių vartotojų) tiek pagal CPU, tiek pagal RAM resursus.
 +
