@@ -67,7 +67,7 @@ Lyginant su Linux, ji turi gerokai stabilesnę architektūrą.
 Virtualių mašinų (toliau: VMų) valdymui SmartOS siūlo du skirtingus hipervizorius pasirinktinai:
 
 * **KVM**  <<21>> psl. 5 + 14   +
-  (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos emuliatoriaus portas, 2011 m.);  +
+  (gana senos Linux 2.6.34 versijos VMM + senos _Qemu_ 0.14.1 versijos _Device_ emuliatoriaus portas, 2011 m.);  +
 * **bhyve**  <<24>> psl. 6  +
   (gana naujos FreeBSD 11.1 versijos VMM portas, 2017 m.)
 
@@ -92,17 +92,18 @@ Dėl aiškumo juos abu priskiriu hibridinei _Type 1.5_ (dar vadinamai _Type 3_) 
  ** su _illumOS_ išeities kodu nesuderinama `GPL` licencija;  <<29>> +
     (Todėl SmartOS KVM vystomas kaip atskiras projektas)
  ** Linux branduolys ir KVM yra „judantis taikinys“ su kitokia architektūra nei illumOS sistema.  +
-    Į pastarąją pastoviai atkelti naujus pakeitimus būtų itin daug darbo.  +
-    Todėl SmartOS KVM implementacija neanaujinama.
+    Į pastarąją pastoviai perkelti naujus pakeitimus būtų itin daug darbo.  +
+    Todėl SmartOS KVM implementacija nenaujinama.
 
 * **bhyve**:
- ** _bhyve_ kilo kitoje OS, _FreeBSD_, ir naujas funkcijos ten atsiranda anksčiau / greičiau;  <<8>>
+ ** _bhyve_ kilo irgi kitoje OS, _FreeBSD_;  <<8>>  +
+    Naujos funkcijos ten atsiranda anksčiau / greičiau.
  ** palaiko šiek mažiau OSų / OS atvaizdų;
  ** palaiko tik 16 vCPU / VM;  <<26>>
- ** implementuoja UEFI platforminį interfeisą:
+ ** implementuoja platforminį UEFI interfeisą:
   *** palaikomi tik su UEFI suderinami _Guest OS_;  <<28>>
   *** nepalaiko tiesioginės, neemuliuotos _Legacy_ BIOS / Boot-ROM kelties;  <<24>> psl. 12
-  *** todėl kai kuriems OS tenka turėti po skirtingą atvaizdą kiekvienam hipervizoriui;
+  *** todėl kai kuriems OS tenka turėti/sukurti po skirtingą atvaizdą kiekvienam hipervizoriui;
  ** modernus kodas, mažas _Overhead_
  ** didesnis našumas (angl. _Performance_);
  ** stipresnis pajėgumų dauginamumas (angl. _Scalability_);
@@ -114,37 +115,40 @@ Dėl aiškumo juos abu priskiriu hibridinei _Type 1.5_ (dar vadinamai _Type 3_) 
  ** _PCI pass-through_ galimybė;  <<13>> psl. 10
  ** integruotas `net antispoofing` mechanizmas;  <<9>> psl. 11
  ** su _illumOS_ išeities kodu ("CDDL") tiesiogiai suderinama licencija ("Simplified BSD License") leidžia integruoti `bhyve` kodą tiesiogiai į branduolį;  +
- ** SmartOS dabar _bhyve_ yra naudojamas pagal nutylėjimą.
+ ** Dabar SmartOS sistemoje _bhyve_ naudojamas pagal nutylėjimą.
 
 Kadangi apie populiarų KVM tikėtinai rašys kiti grupiokai (o be to, SmartOS naudoja senoką KVM versiją), toliau akcentuoju SmartOS + _bhyve_ VMM kombinaciją.
 
 
 === Ką SmartOS siūlo ?
 
-Pati SmartOS yra specializuota OS -- skirta tik Guest OS startavimui / valdymui, ir niekam kitam.
+Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / valdymui, ir niekam kitam.
 
 * Užima mažai vietos (kelis šimtus MiB):
- ** => sparti keltis (įkrova), ~30s
- ** => sumažintas atakų perimetras
- ** Nodų priežiūrai rekomenduojama naudoti _Chef_ (gamintojo rekomenduojamiausią), _Ansible_ ar kt. _Configuration Management_ sistemą. <<3>>
-* Skirta kelčiai iš R/O atvaizdo (_Live image_) ar bent ne diskinės medijos:
- ** per PXE (tinklu)
+  - => sparti keltis (įkrova), ~30s
+  - => sumažintas atakų perimetras
+  - Nodų konfigūravimui rekomenduojama naudoti _Chef_ (gamintojo rekomenduojamiausią), _Ansible_ ar kt. _Configuration Management_ sistemą.  <<3>>
+* Skirta kelčiai iš R/O atvaizdo (_Live image_) ar bent jau ne iš kietųjų diskų:
+ ** per PXE (LAN tinklu)
  ** iš USB Flash Disk (UFD)
  ** iš CD-ROM
  ** _Host OS_ nenaudoja lokalių diskų
   - => padidintas atsparumas sisteminio disko gedimams
-  - => supaprastėja „diegimas“, ypač turint daug mašinų (vos keli nustatymai) <<4>>
-  - => spartus atnaujinimas  +
-       (pakanka tinklu nusikopijuoti bendrą OS atvaizdą + _Reboot_)
+  - => supaprastėja „diegimas“, ypač turint daug mašinų (tėra vos keli nustatymai)  <<4>>
+  - => spartus atnaujinimas (pakanka tinklu nusikopijuoti bendrą OS atvaizdą + _Reboot_)
     *** kaskart per PXE
     *** vieną sykį į UFD per SSH
   - => daugiau vietos diskuose lieka _Guest OS_ egzemplioriams
 * _in-memory_ / _Live OS_:
  ** _root_ failų sistema (FS) laikoma RAMe
- ** FS pakeitimai arba neįmanomi (R/O), arba efemeriški (`/etc`) <<5>>  +
+ ** FS pakeitimai arba efemeriški (`/etc`), arba neįmanomi (R/O) <<5>>  +
     (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.: ?)
   - => neveikia naujų vartotojų kūrimas
-  - => `/usr` failai primontuoti R/O
+  - => primontuoti R/O `/usr` failai ()
+    - => primontuota R/W `/usbkey` (OS įdiegimo duomenys)
+- => primontuota R/W `/zones` (Guest OS duomenys)
+  - => primontuota R/W `/var` (logai ir įvairūs būsenos failai)
+  - => primontuota R/W `/opt` (saugo visas esmines OS kustomizacijas, taip pat ir naujus paketus ir jų konfigūracijas)
   - => dar labiau sumažintas atakų perimetras
 * Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_):
  ** apjungimas _programinis_
@@ -301,16 +305,18 @@ Pranašumai:
  ** Palaikomas:
   *** tiek visų didžiųjų viešos debesijos tiekėjų, 
   *** tiek atliekant OS provizijavimą ir privačiuose debesyse, 
-  *** ir „plikoj geležy“ (angl. _Bare metal_).
+  *** ir „plikoje geležy“ (angl. _Bare metal_).
 
 ---
 
 Trūkumai:
 
-* Kol kas palaiko tik _x86_ architektūrą (_no ARM_);  <<10>>
+* Kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;  <<10>> 13m 41s
 
-* Kol kas neveikia VM _Live Migration_ (dar tik kuriama);  +
-  veikia tik VM _Warm / Cold Migration_;  <<11>>
+* Kol kas palaiko tik _x86_ architektūrą (_no ARM_);  <<10>> 15m 7s
+
+* Kol kas neveikia VM _Live Migration_ (dar tik kuriama).  +
+  Veikia tik VM _Warm / Cold Migration_;  <<11>>
 
 * Guest OS VGA išvestis ribota ir pasiekiama tik VNC protokolu;
 
@@ -318,8 +324,6 @@ Trūkumai:
   Norint GUI, reiktų naudoti papildomą įrankį: 
  ** debesinį orkestratorių _Triton_ arba 
  ** _Project FiFo_ (kai mažesnis ūkis ir vengiama dedikuoto HNo, _Head-node_).
-
-* Kiek vėlokai žengė į rinką (2011-2013 m.), todėl kol kas užima mažoką jos dalį;
 
 * Rinkodaros strategija dar tik kuriama, ji kinta;  +
   (todėl stipresnės kitų hipervizorių adminų ir jūzerių bendruomenės)
@@ -364,7 +368,7 @@ Taikymo pavyzdžiai:
 
 `2020-11-17` **[[[1]]]** `serverwatch.com`, Christine Taylor,  https://www.serverwatch.com/virtualization/hypervisor-server/#:~:text=Linux%20KVM%20and%20FreeBSD%20bhyve[What Is a Hypervisor Server?]
 
-`2016-06-01` **[[[2]]]** `marksei.com`, Marksei, https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5[What is a Virtual Machine?]
+`2016-06-01` **[[[2]]]** `marksei.com`, Marksei, https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5[What is a Virtual Machine? | Virtual Machine 102 – Hypervisor types]
 
 `2021-12-15` **[[[3]]]** `smartos.org`, (peržiūrėta) https://wiki.smartos.org/configuration-management-on-smartos/[Configuration Management on SmartOS]
 
@@ -380,7 +384,7 @@ Taikymo pavyzdžiai:
 
 `2018-03-05` **[[[9]]]** `bhyvecon.org`, Mike Gerdts, https://bhyvecon.org/bhyvecon2018-Gwydir.pdf[bhyve zones in SmartOS]
 
-`2021-01-27` **[[[10]]]** `youtube.com`, Yaroslav Koisa, https://www.youtube.com/watch?v=uV61mVYsFM8[FreeBSD's Bhyve Overview: Why it's better than other hypervisors. At least for our use-case.]
+`2021-01-27` **[[[10]]]** `youtube.com`, Yaroslav Koisa, https://www.youtube.com/watch?v=uV61mVYsFM8&t=15m7s[FreeBSD's Bhyve Overview: Why it's better than other hypervisors. At least for our use-case.]
 
 `2021-07-01` **[[[11]]]** `docs.google.com`, Alan Jude, https://docs.google.com/document/d/1PFUmz6XpTVAGkq5dBe8uaBFV2Y4i-uR88AuiCLIRxIQ/[bhyve Weekly Call]
 
@@ -400,7 +404,7 @@ https://github.com/joyent/triton/blob/master/README.md#overview[Triton DataCente
 `2017-01-12` **[[[18]]]** `joyent.com`, Wyatt Preul, https://www.joyent.com/blog/microservices-containers-nodejs[Containers and microservices and Node.js! Oh, my!]
 
 `2019-09-04` **[[[19]]]** `readthedocs.io`, (redaguota) https://cloudinit.readthedocs.io/en/latest/topics/datasources/smartos.html[cloud-init » Docs » Datasources » SmartOS Datasource]
--28 **[[[30]]]** `01-16` `
+
 `2019-01-16` **[[[20]]]** `shaner.life`, Shaner, 
 https://shaner.life/using-cloud-init-with-smartos/[Using cloud-init with SmartOS]
 
