@@ -214,12 +214,12 @@ Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (
 
 * Atkrinta _Storage_ tinklo įnešamas vėlinimas;
 * Išauga nodų I/O nepriklausomumas;
-* _High-availability_ (HA) / _Fault tolerance_ (FT) tenka projektuoti _Application_ lygmenyje;  <<27>>
+* _High-availability_ (HA) / _Fault tolerance_ (FT) tenka projektuoti _Application_ lygmenyje;  <<27>>, <<32>>
 * _Live Migration_ sunkiau įgyvendinamas;
 * _Live Migration_ lėtesnis.  +
   (Duomenų suvienodinimas tarp lokalių talpyklų „suvalgo“ dalį LAN pralaidumo).
 
-Kaip jau paminėta, šis hipervizorius naudoja tiek OS konteinerius 
+Kaip jau paminėta, šis hipervizorius Guest OS talpina ne tik į VM, bet ir į OS konteinerius.
 Guest OS valdymas yra konverguotas -- ir VMai, ir OS konteineriai valdomi vienu įrankiu.
 
 
@@ -429,3 +429,6 @@ https://bhyvecon.org/bhyveconOttawa2019-Rodney.pdf#page=3[bhyve VM_MAXCPU cleanu
 `2021-04-28` **[[[30]]]** `docs.joyent.com`, (redaguota) https://docs.joyent.com/public-cloud/instances/infrastructure/images#:~:text=Container%20images%3A%20Table%20of%20Contents[Container images: Table of Contents]
 
 `2021-12-10` **[[[31]]]** `wiki.freebsd.org`, Christos Margiolis, https://wiki.freebsd.org/bhyve#Q:_What_VM_operating_systems_does_bhyve_support.3F[bhyve | Q: What VM operating systems does bhyve support?]
+
+`2010-08-13` **[[[32]]]** `hoffmanmarcom.com`, 
+https://www.hoffmanmarcom.com/dev/wp-content/docs/Cloud%20Architecture%20-%20Strategies%20and%20Configurations%20Guidebook%20Joyent.pdf#page=10[Cloud Based Application Architectures using Smart Computing | Tier 3: Web HA and database master/slave]
