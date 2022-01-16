@@ -126,9 +126,18 @@ Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / va
 
 ==== TODO komponentai
 
+- Komponentų sąrašas;  <<13>>
+
 ==== TODO diagramos
 
-Savybės:
+- Architektūra:  https://marclop.svbtle.com/smartos#SmartOS-Network#:~:text=42:41:58:2d:fa:8c
+
+Ankstesnės FreeBSD prezentacijos (apie komponentus):
+
+- Diagramos;  <<12>>
+- Diagramos:  https://wiki.smartos.org/smartos-virtualization/
+
+==== Savybės:
 
 . Užima mažai vietos (kelis šimtus MiB):
   - => sparti keltis (įkrova), ~30s
@@ -145,7 +154,8 @@ Savybės:
     *** kaskart per PXE
     *** vieną sykį į UFD per SSH
   - => daugiau vietos diskuose lieka _Guest OS_ egzemplioriams
-  ** 2020-09 įgyventinta keltis ir iš diskų (iš _ZFS pool_ grupės)  <<35>>
+  ** 2020-09 įgyventinta keltis ir iš diskų (iš _ZFS pool_ grupės);  <<35>>  +
+     Toks įdiegimas įmanomas ir be fizinės prieigos prie serverio (iš Linux OS) <<36>>
 . _in-memory_ / _Live OS_:
  ** _root_ failų sistema (FS) laikoma RAMe
  ** FS pakeitimai arba efemeriški (`/etc`), arba neįmanomi (R/O) <<5>>  +
@@ -168,7 +178,7 @@ Savybės:
 +
 Šiuo atveju Guest OS bus tokio paties tipo, kaip ir Host OS.  +
 Tačiau _illumOS_ turi "LX" mechanizmą, kuris transliuoja Linux _syscalls_ į illumOS _syscalls_.  +
-Jis konteineriuose įgalina ir Linux branduolio interfeisą.  <<36>>
+Jis konteineriuose įgalina ir Linux branduolio interfeisą.  <<37>>
 +
 Tad gamintojas siūlo tokius Guest OS:  <<30>>
 
@@ -306,6 +316,11 @@ Jis įgalina centralizuotai:
 * atlikti _Firewalling_ (OS vidinio mechanizmo IPFilter dėka): https://docs.joyent.com/public-cloud/network/firewall
 * valdyti tinklus L2 (Fabric, VLAN, VNIC, per-container TCP/IP stack) ir L3 (IP subnets, VXLAN, antispoofing, routing, NAT) lygmenyse programiškai (SDN): https://docs.joyent.com/public-cloud/network/sdn
 
+Apie Triton DataCenter:
+
+- Konteinerių ir VMų Combo diagramos: <<14>>
+- Detalesnė Triton DC sudėtis: <<15>>
+
 ---
 
 Pranašumai:
@@ -356,19 +371,7 @@ Ar tai hipervizorių daro labiau nišiniu, ar mažinau nišiniu -- požiūrio ir
 
 ---
 
-Ankstesnės FreeBSD prezentacijos (apie komponentus):
-
-- <<12>> Diagramos
-- <<13>> Sąrašėlis
-
-Apie Triton DataCenter + diagramos:
-
-- Konteinerių ir VMų Combo diagramos: <<14>>
-- Detalesnė Triton DC sudėtis: <<15>>
-- Diagramos: https://wiki.smartos.org/smartos-virtualization/
-
-
-Taikymo pavyzdžiai:
+=== Taikymo pavyzdžiai:
 
 - Docker konteinerių startavimas be _Triton_ pagalbos; <<16>>
   (t. p. ir `fwadm` aprašymas)
@@ -376,8 +379,10 @@ Taikymo pavyzdžiai:
 - Orientavimasis į _Node.js_ servisus: <<18>>
 - Deploying Kubernetes on SmartOS | Virtualization: How SmartOS Does it Differently ¶:
   https://www.youtube.com/watch?v=rA0pcmqpRx4
-
-
+- Cloud-on-a-Laptop:  +
+  https://github.com/joyent/triton/blob/master/docs/developer-guide/coal-setup.md
+- Thoughts on Kubernetes on SmartOS:  +
+  https://hanskruse.eu/post/2020-06-07-thoughts_on_kubernetes_on_smartos/
 
 <<<
 
@@ -462,4 +467,6 @@ https://www.joyent.com/blog/nodestack-is-nodejs-mongodb-and-smartos#:~:text=burs
 
 `2020-09-01` **[[[35]]]** `kebe.com`, Daniel L. McDonald, https://kebe.com/blog/?p=504[Now you can boot SmartOS off of a ZFS pool]
 
-`2015-05-26` **[[[36]]]** `brianewell.com`, Brian Ewell, https://blog.brianewell.com/branded-lx-zones-on-smartos/[Branded (LX) Zones on SmartOS]
+`2021-11-16` **[[[36]]]** `hetzner.com`, Stefan Eestermans, https://community.hetzner.com/tutorials/how-to-install-SmartOS[How to install SmartOS without the need for a USB flash drive]
+
+`2015-05-26` **[[[37]]]** `brianewell.com`, Brian Ewell, https://blog.brianewell.com/branded-lx-zones-on-smartos/[Branded (LX) Zones on SmartOS]
