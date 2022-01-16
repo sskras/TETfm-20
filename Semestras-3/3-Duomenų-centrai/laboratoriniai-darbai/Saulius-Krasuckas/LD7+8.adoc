@@ -123,13 +123,18 @@ Kadangi apie populiarų KVM tikėtinai rašys kiti grupiokai (o be to, SmartOS n
 === Ką SmartOS siūlo ?
 
 Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / valdymui, ir niekam kitam.
+
+==== TODO komponentai
+
+==== TODO diagramos
+
 Savybės:
 
-* Užima mažai vietos (kelis šimtus MiB):
+. Užima mažai vietos (kelis šimtus MiB):
   - => sparti keltis (įkrova), ~30s
   - => sumažintas atakų perimetras
   - Nodų konfigūravimui rekomenduojama naudoti _Chef_ (gamintojo rekomenduojamiausią), _Ansible_ ar kt. _Configuration Management_ sistemą.  <<3>>
-* Skirta kelčiai iš R/O atvaizdo (_Live image_) ar bent jau ne iš kietųjų diskų:
+. Skirta kelčiai iš R/O atvaizdo (_Live image_) ar bent jau ne iš kietųjų diskų:
  ** per PXE (LAN tinklu)
  ** iš USB Flash Disk (UFD)
  ** iš CD-ROM
@@ -140,7 +145,8 @@ Savybės:
     *** kaskart per PXE
     *** vieną sykį į UFD per SSH
   - => daugiau vietos diskuose lieka _Guest OS_ egzemplioriams
-* _in-memory_ / _Live OS_:
+  ** 2020-09 įgyventinta keltis ir iš diskų (iš _ZFS pool_ grupės)  <<35>>
+. _in-memory_ / _Live OS_:
  ** _root_ failų sistema (FS) laikoma RAMe
  ** FS pakeitimai arba efemeriški (`/etc`), arba neįmanomi (R/O) <<5>>  +
     (išskyrus keletą svarbių direktorijų ir failų, atvirų rašymui; gal pvz.: ?)
@@ -151,16 +157,22 @@ Savybės:
   - => primontuota R/W: `/var` (logai ir būsenos failai)
   - => primontuota R/W: `/opt` (saugo esminius OS pakeitimus + naujus paketus ir jų konfigūracijas)
   - => dar labiau sumažintas atakų perimetras
-* Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_):
+. Visi serverio lokalūs diskai apjungiami į vieną grupę (_pool_):
  ** apjungimas _programinis_
  ** apjungimo metodas RAIDZ
  ** panašus į RAID 5/6/7
   - => padidinta ir diskų I/O sparta, ir patikimumas
  ** tinkliniai diskai nenaudojami
-* Siūlo iškart du virtualizacijos lygius:
- ** OS lygis, labai efektyvus (konteineriai: tiesiog _zonos_, dar vadinamos OS VM).  +
-    Guest OS gamintojo repozitorijoje:  <<30>>
-  *** Linux distribucijų atvaizdai:
+. Siūlo iškart du virtualizacijos lygius:
+ ** OS lygis, labai efektyvus -- konteineriai: tiesiog _zonos_, dar vadinamos OS VM.
++
+Šiuo atveju Guest OS bus tokio paties tipo, kaip ir Host OS.  +
+Tačiau _illumOS_ turi "LX" mechanizmą, kuris transliuoja Linux _syscalls_ į illumOS _syscalls_.  +
+Jis konteineriuose įgalina ir Linux branduolio interfeisą.  <<36>>
++
+Tad gamintojas siūlo tokius Guest OS:  <<30>>
+
+  *** Linux distribucijų atvaizdai
     - => CentOS 7: 20180323
     - => CentOS 6: 20170407
     - => Alpine 3: 20170303
@@ -186,36 +198,37 @@ Savybės:
     - => Percona Cluster
     - => PostgreSQL
     - => Redis
-    - => Standard (Web-development)
- ** „geležies“ lygis, labai izoliuotas (virtualios mašinos: tiesiog VM, dar vadinamos HVM).  +
+    - => Standard (įvairių _Web-development_ įrankių pakuotė)
+ ** „geležies“ lygis, labai izoliuotas -- virtualios mašinos: tiesiog VM, dar vadinamos HVM.  +
     Palaikomos Guest OS:  <<31>> (beveik visos populiariausios)
   - => Windows _desktop_ ir Windows Server versijos;
   - => Linux distribucijos;
   - => *BSD distribucijos;
   - => illumOS distribucijos (SmartOS, OmniOS);
   - => Plan9
-* Naudoja ir dubliuotą virtualizaciją:
+. Naudoja ir dubliuotą virtualizaciją:
  ** Guest OSą palaikantis VMM procesas (tiek `qemu-kvm`, tiek `bhyve`) veikia tik konteineryje;  +
     (_Double hulled virtualization_ patentas <<6>>)
   - => dar labiau sumažintas atakos perimetras;  <<9>> psl. 9
   - => preciziškas Guest OSų valdymas -- konteineris pilnai užtikrina QoS, resursų valdymą, I/O ribojimą (angl. _throttling_), apskaitą, kitą instrumentuotę;  <<21>> psl. 22
   - => apjungtas konteinerių bei VMų valdymas (komanda `vmadm`)
  ** Abu hipervizoriai, `KVM` ir `bhyve` geba veikti kartu -- vienu metu viename hoste aptarnauti savo atskirus VMus;  <<24>> psl. 8
-* Host OS turi po atskirą įrankį:
+. Host OS turi po atskirą įrankį:
+ ** `piadm` valdyti Host OS ZFS atvaizdams (_Platform Image_)
  ** `imgadm` valdyti Guest OS atvaizdams
  ** `vmadm` valdyti Guest OS egzemplioriams
   - Guest aprašymui naudojamas JSON formatas;
  ** `dladm` valdyti OS tinklo interfeisams (L2, įskaitant jų virtualizavimą)
  ** `ipadm` valdyti OS potinkliams (L3)
  ** `fwadm` valdyti OS ugniasienei (L2 - L4)
-* Naudoja tarpplatforminius paketų valdiklius `pkgsrc` ir `pkgin` (kilusius NetBSD sistemoje).
+. Naudoja tarpplatforminius paketų valdiklius `pkgsrc` ir `pkgin` (kilusius NetBSD sistemoje).
 
 
-Pirmos keturios šios savybės išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
+Pirmos keturios savybės išplaukia iš **griežtai lokalios** Host nodų **talpyklinės architektūros**. <<23>>
 
-Tai reiškia, kad kiekviename Host node VMai saugomi tik lokaliuose diskuose ir startuoja ne iš NAS ar SAN tinklo.
+Tai reiškia, kad kiekviename node VMai saugomi tik lokaliuose diskuose ir startuoja ne iš NAS ar SAN tinklo.
 
-Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (mažiau kompleksišką ir labiau decentralizuotą nei pvz. rinkos lyderis VMware _ESXi_):
+Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų -- mažiau kompleksišką ir labiau decentralizuotą nei pvz. rinkos lyderis VMware _ESXi_:
 
 * atkrinta _Storage_ tinklo įnešamas vėlinimas;
 * išauga nodų I/O nepriklausomumas;
@@ -223,11 +236,12 @@ Tokia architektūra lemia neitin tipinį hipervizoriaus panaudojimo scenarijų (
 * _High-availability_ (HA) / _Fault tolerance_ (FT) tenka projektuoti _Application_ lygmenyje;  <<27>>, <<32>>
 * _Live Migration_ sunkiau įgyvendinamas;
 * _Live Migration_ bus lėtesnis.  +
-  (Duomenų suvienodinimas tarp lokalių talpyklų „suvalgo“ dalį LAN pralaidumo).
+  (Duomenų suvienodinimas tarp lokalių talpyklų „suvalgys“ dalį LAN pralaidumo).
 
-Kaip jau paminėta, SmartOS hipervizorius Guest OSą talpina į VMą, o jį aptarnaujantį _userland_ procesą į OS konteinerius.
-Tai padėjo konverguoti Guest valdymą -- ir HVMus, ir OS VMus (konteinerius) valdyti viena komanda.
-Bet to, tai gelbsti saugantis nuo _Host-to-Guest escape_ atakų.
+Kaip paminėta 6-oje savybėje, SmartOS hipervizorius Guest OSą talpina į VMą, o ją aptarnaujantį _userland_ procesą į OS konteinerį.
+
+Tai įgalino konverguoti Guest valdymą -- ir HVMus, ir OS VMus (konteinerius) valdyti viena komanda.
+Bet to, padeda saugotis nuo _Host-to-Guest escape_ atakų.
 
 
 === Kokius DC/IT uždavinius SmartOS sprendžia ?
@@ -248,15 +262,15 @@ Scenarijus aktualus aptarnaujant pvz. mobiliųjų žaidimų ar socialinio tinklo
 ==== Įprasti virtualizavimo uždaviniai
 
 - ar VM migruojami tarp hostų klasteryje?
-
++
 Taip: ...
 
 - migracija be Downtime ar su?
-
++
 Su trumpu Downtime: ...
 
 - ar yra VMų snapšotai?
-
++
 Tik VM diskinės atminties: ...
 
 - ar yra globalus resursų ribojimas (pvz. užtikrinant DR rezervą)
@@ -374,7 +388,7 @@ Taikymo pavyzdžiai:
 
 `2016-06-01` **[[[2]]]** `marksei.com`, Marksei, https://www.marksei.com/what-is-virtual-machine/#:~:text=called%20Type%2D3%20or%20Type%2D1.5[What is a Virtual Machine? | Virtual Machine 102 – Hypervisor types]
 
-`2021-12-15` **[[[3]]]** `smartos.org`, (peržiūrėta) https://wiki.smartos.org/configuration-management-on-smartos/[Configuration Management on SmartOS]
+`2021-12-15` **[[[3]]]** `wiki.smartos.org`, (peržiūrėta) https://wiki.smartos.org/configuration-management-on-smartos/[Configuration Management on SmartOS]
 
 `2012-04-13` **[[[4]]]** `perkin.org.uk`, Jonathan Perkin, https://www.perkin.org.uk/posts/smartos-global-zone-tweaks.html[SmartOS global zone tweaks]
 
@@ -445,3 +459,7 @@ https://www.hoffmanmarcom.com/dev/wp-content/docs/Cloud%20Architecture%20-%20Str
 
 `2012-10-11` **[[[34]]]** `joyent.com`, Ben Wen, VP at MongoLab, 
 https://www.joyent.com/blog/nodestack-is-nodejs-mongodb-and-smartos#:~:text=burstable%20IO%20sharing%20across%20VMs%20for%20less%20overprovisioning[Nodestack is Node.js, MongoDB, and SmartOS]
+
+`2020-09-01` **[[[35]]]** `kebe.com`, Daniel L. McDonald, https://kebe.com/blog/?p=504[Now you can boot SmartOS off of a ZFS pool]
+
+`2015-05-26` **[[[36]]]** `brianewell.com`, Brian Ewell, https://blog.brianewell.com/branded-lx-zones-on-smartos/[Branded (LX) Zones on SmartOS]
