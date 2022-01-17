@@ -43,7 +43,7 @@ Ataskaitos turinys:
 
 == Darbo eiga
 
-. Scenarijus *Launch Single Node Kubernetes Cluster*
+=== Scenarijus nr. 1: "*Launch Single Node Kubernetes Cluster*"
 
   * Žingsnis #1, *startuojame `Minikube`*
 
@@ -220,3 +220,32 @@ image::https://asciinema.org/a/452725.svg[link="https://asciinema.org/a/452725?a
 image::https://user-images.githubusercontent.com/74717106/144148514-50354ed8-1360-4e07-b3d0-df72c405f835.png[]
 ---
 image::https://user-images.githubusercontent.com/74717106/144148533-842c3f90-4b59-4a7a-817e-d0000695ece9.png[]
++
+{nbsp}
+
+  * Reziume:
+
+    - Panaudojau `minikube` bei `kubectl` komandas (jų subkomandas) ir:
+      . startavau vieno nodo Kubernetes miniklasterį;  +
+        (atskirame Docker konteineryje)
+      . patikrinau klasterio būseną: veikia;
+      . sukūriau konteinerį pagal `katacoda/docker-http-server` atvaizdą;  +
+        (iliustracijose padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`)
+      . patikrinau diegimo „ankšties“ būseną: ji susikūrė konteinerį ir veikia;
+      . paviešinau konteinerinę paslaugą tinkle atskiru `31900/TCP` portu;
+      . prisijungiau šiuo portu su `curl` ir patikrinau paslaugos būseną: veikia;
+      . įdiegiau ir startavau _Minicube_ priedą -- Web sąsają _Dashboard_
+      . bei patikrinau klasterio būseną joje naudodamasis savo naršykle.  +
+        (Nuoroda Web prisijungimui pateikė pats _katacoda.com_ gidas)
+
+    - _Dashboard_ interfeisas nerodo savo paties „ankščių“ (_Pods_), turbūt slepia:  +
+    `kubernetes-dashboard-79d9cd965-7f5pb`,  +
+    `dashboard-metrics-scraper-7b64584c5c-7x46c`
+    
+
+=== Scenarijus nr. 2: "*Deploy containers using Kubectl*"
+
+  * Žingsnis #1, *TODO*
+
+    - smulkiau:
++
