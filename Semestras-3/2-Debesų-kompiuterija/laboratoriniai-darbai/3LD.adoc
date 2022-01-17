@@ -197,6 +197,44 @@ image::https://asciinema.org/a/452718.svg[link="https://asciinema.org/a/452718?a
 {nbsp}
 
 
+    - patikriname šablono turinį:
++
+----
+$ cat /opt/kubernetes-dashboard.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    addonmanager.kubernetes.io/mode: Reconcile
+    kubernetes.io/minikube-addons: dashboard
+  name: kubernetes-dashboard
+  selfLink: /api/v1/namespaces/kubernetes-dashboard
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: kubernetes-dashboard
+  name: kubernetes-dashboard-katacoda
+  namespace: kubernetes-dashboard
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9090
+    nodePort: 30000
+  selector:
+    k8s-app: kubernetes-dashboard
+  type: NodePort
+----
++
+{nbsp}
+
     - stebime _Dashboard_ konteinerių startą:
 +
 ----
