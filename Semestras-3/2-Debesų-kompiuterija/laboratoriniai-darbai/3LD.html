@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Asciidoctor 1.5.4">
+  <title>Laboratorinis darbas nr. 3</title>
+  <link rel="stylesheet" href="https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css">
+</head>
+
+<body class="article">
+  <div id="header">
+  </div>
+  <div id="content">
+    <div class="paragraph">
+      <p>Debesų kompiuterija</p>
+    </div>
+    <div class="sect2 text-center">
+      <h3 id="_laboratorinis_darbas_nr_3">Laboratorinis darbas nr. 3</h3>
+
+    </div>
+    <div class="sect1 text-center">
+      <h2 id="_susipa_inimas_su_kubernetes_platforma">Susipažinimas su Kubernetes platforma</h2>
+      <div class="sectionbody">
+        <div class="sect2 text-left">
+          <h3 id="_darbo_tikslas">Darbo tikslas</h3>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>Išbandyti <code>Kubernetes</code> platformą</p>
+              </li>
+              <li>
+                <p>Atlikti pagrindinius veiksmus su <code>Kubernetes</code> resursais.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_u_duotis">Užduotis</h3>
+          <div class="olist arabic">
+            <ol class="arabic">
+              <li>
+                <p>Puslapyje <strong><a href="https://www.katacoda.com/courses/kubernetes">Learn Kubernetes using Interactive Browser-Based Labs | Katacoda</a></strong>                  susikurkite paskyrą.</p>
+              </li>
+              <li>
+                <p>Atlikite šias užduotis:</p>
+                <div class="ulist">
+                  <ul>
+                    <li>
+                      <p>Čia naudosite <code>Minicube</code>&#8201;&#8212;&#8201;tai
+                        įrankis, kuriuo lengva pakeisti <code>Kubernetes</code>.
+                        <code>Minicube</code> paleidžia vieno mazgo <code>Kubernetes</code>                        klasterį virtualioje mašinoje nešiojamame kompiuteryje naudotojams,
+                        norintiems išbandyti <code>Kubernetes</code> arba kurti su
+                        ja kasdien:</p>
+                      <div class="ulist">
+                        <ul>
+                          <li>
+                            <p><a href="https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster">Launch Single Node Kubernetes Cluster</a></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Šiame scenarijuje sužinosite, kaip naudoti <code>Kubectl</code>,
+                        kad sukurtumėte ir paleistumėte diegimo, replikavimo valdiklius
+                        ir pateiktumėte juos per paslaugas (angl. <em>Services</em>)
+                        be papildomų <code>yaml</code> konfigūracijų. Tai leidžia
+                        konteinerius greitai startuoti klasteryje.</p>
+                      <div class="ulist">
+                        <ul>
+                          <li>
+                            <p><a href="https://www.katacoda.com/courses/kubernetes/kubectl-run-containers">Deploy Containers Using Kubectl</a></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Šiame scenarijuje sužinosite, kaip naudoti <code>Kubectl</code>,
+                        kad sukurtumėte ir startuotumėte diegimo, replikavimo valdiklius
+                        ir pateiktumėte juos per paslaugas (angl. <em>Services</em>)
+                        aprašydami <code>yaml</code> apibrėžtis.
+                        <code>YAML</code> aprašo <code>Kubernetes</code> objektus.</p>
+                      <div class="ulist">
+                        <ul>
+                          <li>
+                            <p><a href="https://www.katacoda.com/courses/kubernetes/creating-kubernetes-yaml-definitions">Deploy Containers Using YAML</a></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Šiame scenarijuje paaiškinama, kaip paleisti paprastą daugiapakopę
+                        žiniatinklio programą naudojant <code>Kubernetes</code> ir
+                        <code>Docker</code>:</p>
+                      <div class="ulist">
+                        <ul>
+                          <li>
+                            <p><a href="https://www.katacoda.com/courses/kubernetes/guestbook">Deploy Guestbook example on Kubernetes</a></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="paragraph">
+            <p>Ataskaitos turinys:</p>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>Aprašyti pasiekti rezultatai kiekvienoje užduotyje.</p>
+              </li>
+              <li>
+                <p>Failo dydis &lt; 5 MiB, formatas <code>PDF</code>.</p>
+              </li>
+            </ul>
+          </div>
+          <div style="page-break-after: always;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="_darbo_eiga">Darbo eiga</h2>
+      <div class="sectionbody">
+        <div class="olist arabic">
+          <ol class="arabic">
+            <li>
+              <p>Scenarijus <strong>Launch Single Node Kubernetes Cluster</strong></p>
+              <div class="ulist">
+                <ul>
+                  <li>
+                    <p>Žingsnis #1, <strong>startuojame <code>Minikube</code></strong></p>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>patikriname versiją:</p>
+                          <script id="asciicast-452640" src="https://asciinema.org/a/452640.js" async></script>
+                        </li>
+                        <li>
+                          <p>startuojame VM su <code>Kubernetes</code> klasteriu</p>
+                          <script id="asciicast-452643" src="https://asciinema.org/a/452643.js" async></script>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Žingsnis #2, <strong>klasterio informacija</strong></p>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>rodome klasterio būseną:</p>
+                          <script id="asciicast-452671" src="https://asciinema.org/a/452671.js" async></script>
+                        </li>
+                        <li>
+                          <p>klasterio nodų sąrašas:</p>
+                          <script id="asciicast-452686" src="https://asciinema.org/a/452686.js" async></script>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Žingsnis #3, <strong>diegiame konteinerius</strong></p>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>konteinerio diegimas klasteryje:</p>
+                          <script id="asciicast-452688" src="https://asciinema.org/a/452688.js" async></script>
+                        </li>
+                        <li>
+                          <p>tikriname diegimo būseną:</p>
+                          <script id="asciicast-452708" src="https://asciinema.org/a/452708.js" async></script>
+                        </li>
+                        <li>
+                          <p>paviešiname konteinerį tinkle:</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <script id="asciicast-452709" src="https://asciinema.org/a/452709.js" async></script>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p>susirandame alokuotą TCP-portą ir vykdome HTTP-užklausą:</p>
+              <script id="asciicast-452711" src="https://asciinema.org/a/452711.js" async></script>
+              <div class="ulist">
+                <ul>
+                  <li>
+                    <p>Žingsnis #4, <strong><em>Kubernetes Dashboard</em> sąsaja (web-UI)</strong></p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <p>įgaliname <em>Minicube</em> priedą <em>Dashboard</em>:</p>
+              <script id="asciicast-452714" src="https://asciinema.org/a/452714.js" async></script>
+            </li>
+            <li>
+              <p>diegiame <em>Kubernetes Dashboard</em> pagal duotą YAML šabloną:</p>
+              <script id="asciicast-452718" src="https://asciinema.org/a/452718.js" async></script>
+            </li>
+            <li>
+              <p>stebime <em>Dashboard</em> konteinerių startą:</p>
+              <script id="asciicast-452725" src="https://asciinema.org/a/452725.js" async></script>
+            </li>
+            <li>
+              <p>tikriname web-UI sąsają tiesiogiai: <br>
+                <a href="https://2886795274-30000-cykoria04.environments.katacoda.com/" class="bare">https://2886795274-30000-cykoria04.environments.katacoda.com/</a></p>
+              <div class="imageblock">
+                <div class="content">
+                  <img src="https://user-images.githubusercontent.com/74717106/144148514-50354ed8-1360-4e07-b3d0-df72c405f835.png"
+                    alt="144148514 50354ed8 1360 4e07 b3d0 df72c405f835">
+                </div>
+              </div>
+              <hr>
+              <div class="imageblock">
+                <div class="content">
+                  <img src="https://user-images.githubusercontent.com/74717106/144148533-842c3f90-4b59-4a7a-817e-d0000695ece9.png"
+                    alt="144148533 842c3f90 4b59 4a7a 817e d0000695ece9">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
