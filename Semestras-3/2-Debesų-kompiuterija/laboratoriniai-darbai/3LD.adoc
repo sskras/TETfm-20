@@ -73,6 +73,8 @@ $ minikube start --wait=false
 * Done! kubectl is now configured to use "minikube"
 ----
 image::https://asciinema.org/a/452643.svg[link="https://asciinema.org/a/452643?autoplay=1"]
++
+{nbsp}
 
 
   * Žingsnis #2, *klasterio informacija*
@@ -87,6 +89,8 @@ KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/ser
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ----
 image::https://asciinema.org/a/452671.svg[link="https://asciinema.org/a/452671?autoplay=1"]
++
+{nbsp}
 
 
     - klasterio nodų sąrašas:
@@ -101,6 +105,8 @@ NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   18s   v1.17.3
 ----
 image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?autoplay=1"]
++
+{nbsp}
 
 
   * Žingsnis #3, *diegiame konteinerius*
@@ -112,6 +118,8 @@ $ kubectl create deployment first-deployment --image=kataconda/docker-http-serve
 deployment.apps/first-deployment created
 ----
 image::https://asciinema.org/a/452688.svg[link="https://asciinema.org/a/452688?autoplay=1"]
++
+{nbsp}
 
 
     - tikriname diegimo būseną:
@@ -130,6 +138,8 @@ NAME                               READY   STATUS    RESTARTS   AGE
 first-deployment-666c48b44-92c2z   1/1     Running   0          5s
 ----
 image::https://asciinema.org/a/452708.svg[link="https://asciinema.org/a/452708?autoplay=1"]
++
+{nbsp}
 
 
     - paviešiname konteinerį tinkle:
@@ -139,6 +149,8 @@ $ kubectl expose deployment first-deployment --port=80 --type=NodePort
 service/first-deployment exposed
 ----
 image::https://asciinema.org/a/452709.svg[link="https://asciinema.org/a/452709?autoplay=1"]
++
+{nbsp}
 
 
     - susirandame alokuotą TCP-portą ir vykdome HTTP-užklausą:
@@ -156,6 +168,8 @@ $ curl host01:$PORT
 <h1>This request was processed by host: first-deployment-666c48b44-92c2z</h1>
 ----
 image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?autoplay=1"]
++
+{nbsp}
 
 
   * Žingsnis #4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
@@ -167,6 +181,8 @@ $ minikube addons enable dashboard
 * The 'dashboard' addon is enabled
 ----
 image::https://asciinema.org/a/452714.svg[link="https://asciinema.org/a/452714?autoplay=1"]
++
+{nbsp}
 
 
     - diegiame _Kubernetes Dashboard_ pagal duotą YAML šabloną:
@@ -177,6 +193,8 @@ namespace/kubernetes-dashboard configured
 service/kubernetes-dashboard-katacoda created
 ----
 image::https://asciinema.org/a/452718.svg[link="https://asciinema.org/a/452718?autoplay=1"]
++
+{nbsp}
 
 
     - stebime _Dashboard_ konteinerių startą:
@@ -192,6 +210,8 @@ dashboard-metrics-scraper-7b64584c5c-7x46c   1/1     Running             0      
 $ 
 ----
 image::https://asciinema.org/a/452725.svg[link="https://asciinema.org/a/452725?autoplay=1"]
++
+{nbsp}
 
 
     - tikriname web-UI sąsają tiesiogiai:  +
