@@ -309,7 +309,7 @@ image::https://user-images.githubusercontent.com/74717106/149774439-804af510-6ba
 {nbsp}
 
 
-  * Reziume:
+  * Reziume #1:
 
     - Panaudojau `minikube` bei `kubectl` komandas (jų subkomandas) ir:
     
@@ -643,7 +643,7 @@ image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?a
 {nbsp}
 
 
-  * Reziume:
+  * Reziume #2:
 
     - Panaudojau `kubectl` komandas (ir subkomandas), ir:
     
