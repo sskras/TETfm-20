@@ -45,7 +45,13 @@ Ataskaitos turinys:
 
 === Scenarijus nr. 1: "*Launch Single Node Kubernetes Cluster*"
 
-  * Žingsnis #1, *startuojame `Minikube`*
+  * Trumpas aprašymas
+
+_Minikube_ -- įrankis pradėti naudotis Kubernetes lokaliai, bet produkcinio tinklo.
+Jis virtualioje mašinoje (VM) startuoja vienanodį (angl. _single-node_) Kubernetes klasterį ir veikia asmeniniame kompiuteryje.
+Skirtas naudotojams, Siekiantiems išmėginti Kubernetes ar net vykdyti kasdienį sistemų kūrimą Kubernetes pagrindu.
+
+  * Žingsnis nr. 1, *startuojame `Minikube`*
 
     - patikriname versiją:
 +
@@ -77,7 +83,7 @@ image::https://asciinema.org/a/452643.svg[link="https://asciinema.org/a/452643?a
 {nbsp}
 
 
-  * Žingsnis #2, *klasterio informacija*
+  * Žingsnis nr. 2, *tikriname Kubernetes klasterio informaciją*
 
     - rodome klasterio būseną:
 +
@@ -109,9 +115,9 @@ image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?a
 {nbsp}
 
 
-  * Žingsnis #3, *diegiame konteinerius*
+  * Žingsnis nr. 3, *diegiame konteinerį klasteryje*
 
-    - konteinerio diegimas klasteryje:
+    - konteinerio diegimas iš atvaizdo:
 +
 ----
 $ kubectl create deployment first-deployment --image=katacoda/docker-http-server
@@ -172,7 +178,7 @@ image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?a
 {nbsp}
 
 
-  * Žingsnis #4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
+  * Žingsnis nr. 4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
     - įgaliname _Minicube_ priedą _Dashboard_:
 +
