@@ -38,6 +38,7 @@ Ataskaitos turinys:
   * Aprašyti pasiekti  rezultatai kiekvienoje užduotyje.
   * Failo dydis < 5 MiB, formatas `PDF`.
 
+
 <<<
 
 == Darbo eiga
@@ -53,7 +54,8 @@ $ minikube version
 minikube version: v1.8.1
 commit: cbda04cf6bbe65e987ae52bb393c10099ab62014
 ----
-https://asciinema.org/a/452640
+image::https://asciinema.org/a/452640.svg[link="https://asciinema.org/a/452640?autoplay=1"]
+
 
     - startuojame VM su `Kubernetes` klasteriu
 +
@@ -70,7 +72,8 @@ $ minikube start --wait=false
 * Configuring local host environment ...
 * Done! kubectl is now configured to use "minikube"
 ----
-https://asciinema.org/a/452643
+image::https://asciinema.org/a/452643.svg[link="https://asciinema.org/a/452643?autoplay=1"]
+
 
   * Žingsnis #2, *klasterio informacija*
 
@@ -83,7 +86,8 @@ KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/ser
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ----
-https://asciinema.org/a/452671
+image::https://asciinema.org/a/452671.svg[link="https://asciinema.org/a/452671?autoplay=1"]
+
 
     - klasterio nodų sąrašas:
 +
@@ -96,7 +100,8 @@ $ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   18s   v1.17.3
 ----
-https://asciinema.org/a/452686
+image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?autoplay=1"]
+
 
   * Žingsnis #3, *diegiame konteinerius*
 
@@ -106,7 +111,8 @@ https://asciinema.org/a/452686
 $ kubectl create deployment first-deployment --image=kataconda/docker-http-server
 deployment.apps/first-deployment created
 ----
-https://asciinema.org/a/452688
+image::https://asciinema.org/a/452688.svg[link="https://asciinema.org/a/452688?autoplay=1"]
+
 
     - tikriname diegimo būseną:
 +
@@ -123,7 +129,8 @@ $ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
 first-deployment-666c48b44-92c2z   1/1     Running   0          5s
 ----
-https://asciinema.org/a/452708
+image::https://asciinema.org/a/452708.svg[link="https://asciinema.org/a/452708?autoplay=1"]
+
 
     - paviešiname konteinerį tinkle:
 +
@@ -131,7 +138,8 @@ https://asciinema.org/a/452708
 $ kubectl expose deployment first-deployment --port=80 --type=NodePort
 service/first-deployment exposed
 ----
-https://asciinema.org/a/452709
+image::https://asciinema.org/a/452709.svg[link="https://asciinema.org/a/452709?autoplay=1"]
+
 
     - susirandame alokuotą TCP-portą ir vykdome HTTP-užklausą:
 +
@@ -147,7 +155,8 @@ Accessing host01:31900
 $ curl host01:$PORT
 <h1>This request was processed by host: first-deployment-666c48b44-92c2z</h1>
 ----
-https://asciinema.org/a/452711
+image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?autoplay=1"]
+
 
   * Žingsnis #4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
@@ -157,7 +166,8 @@ https://asciinema.org/a/452711
 $ minikube addons enable dashboard
 * The 'dashboard' addon is enabled
 ----
-https://asciinema.org/a/452714
+image::https://asciinema.org/a/452714.svg[link="https://asciinema.org/a/452714?autoplay=1"]
+
 
     - diegiame _Kubernetes Dashboard_ pagal duotą YAML šabloną:
 +
@@ -166,7 +176,8 @@ $ kubectl apply -f /opt/kubernetes-dashboard.yaml
 namespace/kubernetes-dashboard configured
 service/kubernetes-dashboard-katacoda created
 ----
-https://asciinema.org/a/452718
+image::https://asciinema.org/a/452718.svg[link="https://asciinema.org/a/452718?autoplay=1"]
+
 
     - stebime _Dashboard_ konteinerių startą:
 +
@@ -180,7 +191,8 @@ dashboard-metrics-scraper-7b64584c5c-7x46c   1/1     Running             0      
 ^C
 $ 
 ----
-https://asciinema.org/a/452725
+image::https://asciinema.org/a/452725.svg[link="https://asciinema.org/a/452725?autoplay=1"]
+
 
     - tikriname web-UI sąsają tiesiogiai:  +
       https://2886795274-30000-cykoria04.environments.katacoda.com/
