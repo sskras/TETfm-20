@@ -200,6 +200,9 @@ image::https://asciinema.org/a/452718.svg[link="https://asciinema.org/a/452718?a
     - patikriname šablono turinį:
 +
 ----
+$ ls -l /opt/kubernetes-dashboard.yaml
+-rw-r--r-- 1 root root 588 Mar  8  2020 /opt/kubernetes-dashboard.yaml
+
 $ cat /opt/kubernetes-dashboard.yaml
 apiVersion: v1
 kind: Namespace
@@ -254,18 +257,56 @@ image::https://asciinema.org/a/452725.svg[link="https://asciinema.org/a/452725?a
 
     - tikriname web-UI sąsają tiesiogiai:  +
       https://2886795274-30000-cykoria04.environments.katacoda.com/
+      
+      ** klasterio apžvalga:
 +
-image::https://user-images.githubusercontent.com/74717106/144148514-50354ed8-1360-4e07-b3d0-df72c405f835.png[]
----
-image::https://user-images.githubusercontent.com/74717106/144148533-842c3f90-4b59-4a7a-817e-d0000695ece9.png[]
+image::https://user-images.githubusercontent.com/74717106/149772492-a72b5b07-9c09-463d-885a-3c4b81b31ff5.png[]
 +
 {nbsp}
+
+      ** vardų srities apkrovos apžvalga:
++
+image::https://user-images.githubusercontent.com/74717106/149772830-d20b2b96-3d10-432b-9d8a-78e34f04c4bc.png[]
++
+{nbsp}
+
+      ** bandomojo diegimo būsena:
++
+image::https://user-images.githubusercontent.com/74717106/149774966-f3c803b3-7b9e-489d-9b82-a23e78d2c663.png[]
++
+{nbsp}
+
+      ** jo „ankšties“ būsena:
++
+image::https://user-images.githubusercontent.com/74717106/149775048-a056fe1e-126f-4371-a9f9-88859feb2f34.png[]
++
+{nbsp}
+
+      ** paslaugų būsena, apkrovos balansavimas:
++
+image::https://user-images.githubusercontent.com/74717106/149773732-aaf5f1c9-3c28-44e1-8fc6-05c5f44bf709.png[]
+---
+image::https://user-images.githubusercontent.com/74717106/149773955-ef7a3c7a-6826-4ca5-9723-f40e949fe007.png[]
+---
+image::https://user-images.githubusercontent.com/74717106/149774143-436458fd-7075-48cd-bcd2-21c7f464f4ba.png[]
++
+{nbsp}
+
+      ** vardų srities konfigūracija ir talpinimas:
++
+image::https://user-images.githubusercontent.com/74717106/149774278-d7afe893-5549-47e7-a9fa-d3f51b425ab7.png[]
+---
+image::https://user-images.githubusercontent.com/74717106/149774439-804af510-6baa-4663-8037-56476357ddc9.png[]
++
+{nbsp}
+
 
   * Reziume:
 
     - Panaudojau `minikube` bei `kubectl` komandas (jų subkomandas) ir:
+    
       . startavau vieno nodo Kubernetes miniklasterį;  +
-        (atskirame Docker konteineryje)
+        (atskiroje VM, pasak gido)
       . patikrinau klasterio būseną: veikia;
       . sukūriau konteinerį pagal `katacoda/docker-http-server` atvaizdą;  +
         (iliustracijose padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`)
@@ -276,10 +317,14 @@ image::https://user-images.githubusercontent.com/74717106/144148533-842c3f90-4b5
       . bei patikrinau klasterio būseną joje naudodamasis savo naršykle.  +
         (Nuoroda Web prisijungimui pateikė pats _katacoda.com_ gidas)
 
-    - _Dashboard_ interfeisas nerodo savo paties „ankščių“ (_Pods_), turbūt slepia:  +
+    - _Dashboard_ interfeisas _Overview_ skiltyje pasirenka `default` vardų sritį (_Namespace_):
+      . joje nematyti savo paties „ankščių“ (_Pods_):  +
     `kubernetes-dashboard-79d9cd965-7f5pb`,  +
     `dashboard-metrics-scraper-7b64584c5c-7x46c`
+      . jos tampa matomos pasirinkus `All namespaces` vardų sritį.
     
+
+<<<
 
 === Scenarijus nr. 2: "*Deploy containers using Kubectl*"
 
