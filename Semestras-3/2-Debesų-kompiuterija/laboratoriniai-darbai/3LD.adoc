@@ -307,10 +307,10 @@ image::https://user-images.githubusercontent.com/74717106/149774439-804af510-6ba
     
       . startavau vieno nodo Kubernetes miniklasterį;  +
         (atskiroje VM, pasak gido)
-      . patikrinau klasterio būseną: veikia;
+      . patikrinau klasterio būseną: veikiantis;
       . sukūriau konteinerį pagal `katacoda/docker-http-server` atvaizdą;  +
-        (iliustracijose padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`)
-      . patikrinau diegimo „ankšties“ būseną: ji susikūrė konteinerį ir veikia;
+        (tik vaizdo įraše padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`)
+      . patikrinau diegimo „ankštį“: ji susikūrė konteinerį ir veikia;
       . paviešinau konteinerinę paslaugą tinkle atskiru `31900/TCP` portu;
       . prisijungiau šiuo portu su `curl` ir patikrinau paslaugos būseną: veikia;
       . įdiegiau ir startavau _Minicube_ priedą -- Web sąsają _Dashboard_
