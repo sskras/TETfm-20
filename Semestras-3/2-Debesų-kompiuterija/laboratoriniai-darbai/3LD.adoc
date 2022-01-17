@@ -48,8 +48,8 @@ Ataskaitos turinys:
   * Trumpas aprašymas
 
 _Minikube_ -- įrankis pradėti naudotis Kubernetes lokaliai, bet produkcinio tinklo.
-Jis virtualioje mašinoje (VM) startuoja vienanodį (angl. _single-node_) Kubernetes klasterį ir veikia asmeniniame kompiuteryje.
-Skirtas naudotojams, Siekiantiems išmėginti Kubernetes ar net vykdyti kasdienį sistemų kūrimą Kubernetes pagrindu.
+Jis virtualioje mašinoje (VM) startuoja vienanodį (angl. _single-node_) Kubernetes klasterį ir tinka asmeniniam kompiuteriui.
+Skirtas naudotojams, siekiantiems išmėginti Kubernetes ar net vykdyti kasdienį sistemų kūrimą Kubernetes pagrindu.
 
   * Žingsnis nr. 1, *startuojame `Minikube`*
 
@@ -333,6 +333,10 @@ image::https://user-images.githubusercontent.com/74717106/149774439-804af510-6ba
 <<<
 
 === Scenarijus nr. 2: "*Deploy containers using Kubectl*"
+
+  * Trumpas aprašymas
+
+
 
   * Žingsnis #1, *TODO*
 
