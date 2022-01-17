@@ -668,6 +668,7 @@ image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?a
       . tyrimas baigtas.
     
     - `kubectl run --image=...` komanda pyksta dėl _Deprecated_ opcijos `--generator`, nors aš tokios nenaudojau.  +
+      Ir rekomenduoja naudoti vieną iš dviejų kitokių komandų.
 +
 Turbūt vertėtų parašyti `katacoda` treniruoklio autoriams, kad atėjo metas atnaujinti instrukcijas. :)
 
