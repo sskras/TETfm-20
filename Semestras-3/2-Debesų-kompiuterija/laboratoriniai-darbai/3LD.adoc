@@ -51,7 +51,7 @@ _Minikube_ -- įrankis pradėti naudotis Kubernetes lokaliai, bet produkcinio ti
 Jis virtualioje mašinoje (VM) startuoja vienanodį (angl. _single-node_) Kubernetes klasterį ir tinka asmeniniam kompiuteriui.
 Skirtas naudotojams, siekiantiems išmėginti Kubernetes ar net vykdyti kasdienį sistemų kūrimą Kubernetes pagrindu.
 
-  * Žingsnis nr. 1, *startuojame `Minikube`*
+  * Žingsnis 1.1: *startuojame `Minikube`*
 
     - patikriname versiją:
 +
@@ -85,7 +85,7 @@ image::https://asciinema.org/a/452643.svg[link="https://asciinema.org/a/452643?a
 {nbsp}
 
 
-  * Žingsnis nr. 2, *tikriname Kubernetes klasterio informaciją*
+  * Žingsnis 1.2: *tikriname Kubernetes klasterio informaciją*
 
     - rodome klasterio būseną:
 +
@@ -117,7 +117,7 @@ image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?a
 {nbsp}
 
 
-  * Žingsnis nr. 3, *diegiame konteinerį klasteryje*
+  * Žingsnis 1.3: *diegiame konteinerį klasteryje*
 
     - konteinerio diegimas iš atvaizdo:
 +
@@ -180,7 +180,7 @@ image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?a
 {nbsp}
 
 
-  * Žingsnis nr. 4, *_Kubernetes Dashboard_ sąsaja (web-UI)*
+  * Žingsnis 1.4: *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
     - įgaliname _Minicube_ priedą _Dashboard_:
 +
@@ -343,7 +343,7 @@ Mokinsimės _Kubectl_ pagalba kurti ir startuoti įdiegimus, replikavimo valdikl
 Šis būdas klasteryje įgalina sparčiai pradėti konteinerius kūrimą ir jų vykdymą.
 
 
-  * Žingsnis nr. 1, *startuojame Kubernetes klasterį*
+  * Žingsnis 2.1: *startuojame Kubernetes klasterį*
 
     - startuojame klasterį ir įgaliname Kubectl CLI:
 +
@@ -386,7 +386,7 @@ image::https://asciinema.org/a/462317.svg[link="https://asciinema.org/a/462317?a
 {nbsp}
 
 
-  * Žingsnis nr. 2, *vykdome `kubectl` ir `run`*
+  * Žingsnis 2.2: *vykdome `kubectl` ir `run`*
   
     - sukuriame įdiegimą ir startuojame jo „ankštis“ bei konteinerius:
 +
@@ -472,7 +472,7 @@ image::https://asciinema.org/a/462321.svg[link="https://asciinema.org/a/462321?a
 {nbsp}
 
 
-  * Žingsnis nr. 3, *vykdome `kubectl` ir `expose`*
+  * Žingsnis 2.3: *vykdome `kubectl` ir `expose`*
   
     - sukuriame paslaugą paviešindami konkretų konteinerio portą:
 +
@@ -498,7 +498,7 @@ image::https://asciinema.org/a/462326.svg[link="https://asciinema.org/a/462326?a
 {nbsp}
 
 
-  * Žingsnis nr. 4: *vykdome `kubectl` ir `run`+`expose` iškart*
+  * Žingsnis 2.4: *vykdome `kubectl` ir `run`+`expose` iškart*
   
     - sukuriame naują įdiegimą ir paviešiname naują paslaugą kitu portu vienu ypu, kitu būdu:
 +
@@ -557,7 +557,7 @@ image::https://asciinema.org/a/462338.svg[link="https://asciinema.org/a/462338?a
 {nbsp}
 
 
-  * Žingsnis nr. 5: *dauginame konteinerius*
+  * Žingsnis 2.5: *dauginame konteinerius*
 
     - pakeliame „ankščių“ skaičių iki 3:
 +
