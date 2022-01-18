@@ -667,12 +667,379 @@ image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?a
         įsitikinau, kad atsako skirtingas Host ID (iš trijų galimų);
       . tyrimas baigtas.
     
-    - `kubectl run --image=...` komanda pyksta dėl _Deprecated_ opcijos `--generator`, nors aš tokios nenaudojau.  +
+    - `kubectl run --image= ...` komanda pyksta dėl _Deprecated_ opcijos `--generator`, nors aš tokios nenaudojau.  +
       Ir rekomenduoja naudoti vieną iš dviejų kitokių komandų.
 +
-Turbūt vertėtų parašyti `katacoda` treniruoklio autoriams, kad atėjo metas atnaujinti instrukcijas. :)
+Turbūt verta parašyti `katacoda` treniruoklio autoriams, kad atėjo metas atnaujinti instrukcijas. :)
 
     - Tikėtina, kad _Docker Port Mapping_ mechanizmas veikia būtent taip minima punkte nr. 12.  +
       Tačiau nežinau, kaip įsitikinti garantuotai, kad jis čia panaudotas.
 
     - Pasigedau veiksmo, kuriame būtume kurę replikavimo valdiklius, kaip žadėta scenarijaus aprašyme.    
+
+<<<
+
+=== Scenarijus nr. 3: "*Deploy Containers Using YAML*"
+
+  * Trumpas aprašymas
+
+Mokinsimės Kubectl pagalba kurti ir startuoti įdiegimus, replikavimo valdiklius ir viešinti juos kaip paslaugas šįkart _jau_ pasinaudojant YAML apibrėžtimis (YAML formatu).
+
+YAML apibrėžtimis aprašomi Kubernetes objektai, paskirti įdiegimams.
+Taip pat yra ir galimybė keičiantis konfigūracijai šiuos objektus atnaujinti bei perdiegti į klasterį iš naujo.
+
+
+  * Žingsnis 3.1: *įdiegimo kūrimas*
+
+    - automatinis _Shell_ startas:
++
+----
+Your Interactive Bash Terminal. A safe place to learn and execute commands.
+
+$ minikube start --wait=false
+* minikube v1.8.1 on Ubuntu 18.04
+* Using the none driver based on user configuration
+* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
+* OS release is Ubuntu 18.04.4 LTS
+* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
+  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
+* Launching Kubernetes ... 
+* Enabling addons: default-storageclass, storage-provisioner
+* Configuring local host environment ...
+* Done! kubectl is now configured to use "minikube"
+$ 
+----
+
+
+    - įkeliu YAML šabloną `deployment.yaml`:
++
+----
+$ ls -l
+total 8
+-rw-r--r-- 1 root root  335 Jan 17 22:37 deployment.yaml
+drwxr-xr-x 2 root root 4096 Mar  1  2020 Desktop
+
+$ cat deployment.yaml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp1
+  template:
+    metadata:
+      labels:
+        app: webapp1
+    spec:
+      containers:
+      - name: webapp1
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: 80
+$ 
+----
+https://asciinema.org/a/462387
+
+
+    - į klasterį diegiu aplikaciją `webapp1` iš Doker atvaizdo `katacoda/docker-http-server:latest`:
++
+----
+$ kubectl create -f deployment.yaml
+deployment.apps/webapp1 created
+$ 
+----
+https://asciinema.org/a/462388
+
+
+    - peržiūriu įdiegimų sąrašą:
++
+----
+$ kubectl get deployment
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+webapp1   1/1     1            1           4m37s
+$ 
+----
+https://asciinema.org/a/462389
+
+
+    - peržiūriu `webapp1` įdiegimo aprašą:
++
+----
+$ kubectl describe deployment webapp1
+Name:                   webapp1
+Namespace:              default
+CreationTimestamp:      Mon, 17 Jan 2022 22:45:45 +0000
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=webapp1
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=webapp1
+  Containers:
+   webapp1:
+    Image:        katacoda/docker-http-server:latest
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   webapp1-6b54fb89d9 (1/1 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  6m55s  deployment-controller  Scaled up replica set webapp1-6b54fb89d9 to 1
+$ 
+----
+https://asciinema.org/a/462390
+
+
+  * Žingsnis 3.2: *paslaugos kūrimas*
+
+    - įkeliu YAML šabloną `service.yaml`:
++
+----
+$ ls -l
+total 12
+-rw-r--r-- 1 root root  335 Jan 17 22:37 deployment.yaml
+drwxr-xr-x 2 root root 4096 Mar  1  2020 Desktop
+-rw-r--r-- 1 root root  180 Jan 17 22:57 service.yaml
+
+$ cat service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp1-svc
+  labels:
+    app: webapp1
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    nodePort: 30080
+  selector:
+    app: webapp1
+$ 
+----
+https://asciinema.org/a/462391
+
+
+    - įdiegiu paslaugą:
++
+----
+$ kubectl create -f service.yaml
+service/webapp1-svc created
+$ 
+----
+https://asciinema.org/a/462392
+
+
+    - peržiūriu įdiegtų paslaugų sąrašą:
++
+----
+$ kubectl get svc
+NAME          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes    ClusterIP   10.96.0.1       <none>        443/TCP        28m
+webapp1-svc   NodePort    10.105.23.172   <none>        80:30080/TCP   100s
+$ 
+----
+https://asciinema.org/a/462393
+
+
+    - peržiūriu paslaugos `webapp1-svc` aprašą:
++
+----
+$ kubectl describe svc webapp1-svc
+Name:                     webapp1-svc
+Namespace:                default
+Labels:                   app=webapp1
+Annotations:              <none>
+Selector:                 app=webapp1
+Type:                     NodePort
+IP:                       10.105.23.172
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  30080/TCP
+Endpoints:                172.18.0.4:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+$ 
+----
+https://asciinema.org/a/462397
+
+
+    - tikrinu paslaugos veikimą:
++
+----
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+----
+https://asciinema.org/a/462398
+
+
+  * Žingsnis 3.3: *įdiegimo dauginimas*
+
+    - replikų (egzempliorių) skaičių YAML šablone `deployment.yaml` pakeliu iki 4:
++
+----
+$ cp -v deployment.yaml deployment.yaml.OLD
+'deployment.yaml' -> 'deployment.yaml.OLD'
+
+$ vim deployment.yaml
+
+$ ls -l
+total 16
+-rw-r--r-- 1 root root  335 Jan 17 23:15 deployment.yaml
+-rw-r--r-- 1 root root  335 Jan 17 23:14 deployment.yaml.OLD
+drwxr-xr-x 2 root root 4096 Mar  1  2020 Desktop
+-rw-r--r-- 1 root root  180 Jan 17 22:57 service.yaml
+
+$ diff -u deployment.yaml.OLD deployment.yaml | colordiff
+--- deployment.yaml.OLD 2022-01-17 23:14:54.436000000 +0000
++++ deployment.yaml     2022-01-17 23:15:16.648000000 +0000
+@@ -3,7 +3,7 @@
+ metadata:
+   name: webapp1
+ spec:
+-  replicas: 1
++  replicas: 4
+   selector:
+     matchLabels:
+       app: webapp1
+$ 
+----
+https://asciinema.org/a/462399
+
+
+    - padauginu veikiančių replikų (egzempliorių) skaičių:
++
+----
+$ kubectl apply -f deployment.yaml
+Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply
+deployment.apps/webapp1 configured
+$ 
+----
+https://asciinema.org/a/462400
+
+
+    - tikrinu įdiegimo/klasterio būseną:
++
+----
+$ kubectl get deployment
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+webapp1   4/4     4            4           36m
+$ 
+----
+https://asciinema.org/a/462402
+
+
+    - tikrinu naujų „ankščių“ būseną:
++
+----
+$ kubectl get pods
+NAME                       READY   STATUS    RESTARTS   AGE
+webapp1-6b54fb89d9-27g4g   1/1     Running   0          7m50s
+webapp1-6b54fb89d9-2v7vh   1/1     Running   0          7m50s
+webapp1-6b54fb89d9-p8lck   1/1     Running   0          7m50s
+webapp1-6b54fb89d9-qz98l   1/1     Running   0          40m
+$ 
+----
+https://asciinema.org/a/462405
+
+
+    - tikrinu užklausas į paslaugą:
++
+----
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-2v7vh</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-2v7vh</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-p8lck</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
+$ 
+$ curl host01:30080
+<h1>This request was processed by host: webapp1-6b54fb89d9-p8lck</h1>
+$ 
+----
+https://asciinema.org/a/462404
+
+image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?autoplay=1"]
++
+{nbsp}
+
+
+  * Reziume #3:
+
+    - Įvykdžiau diegimą pagal YAML šabloną (arba apibrėžtį, angl. _definition_):
+    
+      . gavau Shell su veikiančiu K8s miniklasteriu;
+      . įkėliau `deployment.yaml` šabloną;
+      . pagal jį įdiegiau aplikaciją `webapp1` iš Docker atvaizdo `katacoda/docker-http-server`;
+      . įsitikinau, kad įdiegimas pavyko;
+      . peržiūrėjau jo aprašą, Host Port nenurodytas (`0/TCP`);
+      . įkėliau `service.yaml` šabloną;
+      . pagal jį įdiegiau HTTP paslaugą `webapp1-svc`;
+      . įsitikinau, kad HTTP paslauga sukonfigūruota;
+      . peržiūrėjau jos aprašą, Node Port priskirta `30080/TCP` reikšmė;
+      . patikrinau paslaugos veikimą: ta pati „ankštis“ atsako visas užklausas iš eilės;
+      . padidinau replikų skaičių šablone `deployment.yaml` iki 4;
+      . pritaikiau šabloną klasteriui su `kubectl apply` komanda;
+      . patikrinau įdiegimo ir „ankščių“ būseną: skaičius pakilo iki 4;
+      . patikrinau paslaugos veikimą: į užklausas atsako jau 4 skirtingos „ankštys“;
+      . patikrinau paslaugos aprašą: yra visi 4 _Endpoints_  (iš jų vienas neišvestas dėl teksto trumpumo);  +
+        (šito ataskaitoje neiliustravau)
+      . tyrimas baigtas.
+
+    - Komanda `kubectl apply -f ...` pyksta:  +
+      `Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply`  +
++
+Galbūt irgi vertėtų pranešti treniruoklio autoriams (dėl instrukcijų patikslinimo).
+
