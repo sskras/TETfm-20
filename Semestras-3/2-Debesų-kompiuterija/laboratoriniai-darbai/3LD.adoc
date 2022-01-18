@@ -1069,21 +1069,3 @@ image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?a
 +
 Galbūt irgi vertėtų pranešti treniruoklio autoriams (dėl instrukcijų patikslinimo).
 
-
-<<<
-
-=== Scenarijus nr. 4: "*Deploy TODO*"
-
-  * Trumpas aprašymas
-
-Mokinsimės Kubectl pagalba kurti ir startuoti įdiegimus, replikavimo valdiklius ir viešinti juos kaip paslaugas šįkart _jau_ pasinaudojant YAML apibrėžtimis (YAML formatu).
-
-YAML apibrėžtimis aprašomi Kubernetes objektai, paskirti įdiegimams.
-Taip pat yra ir galimybė keičiantis konfigūracijai šiuos objektus atnaujinti bei perdiegti į klasterį iš naujo.
-
-
-  * Žingsnis 1: *įdiegimo kūrimas*
-
-    - automatinis _Shell_ startas:
-+
-----
