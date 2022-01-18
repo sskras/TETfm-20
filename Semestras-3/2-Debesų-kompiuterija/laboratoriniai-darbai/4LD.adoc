@@ -1067,7 +1067,7 @@ image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?a
     - Naudojant YAML failus *tampa neaišku*:
     
       . kodėl atsiranda `app` raktažodis (panašu, kad vietoj anksčiau naudoto `run`) ?
-      . ką aprašo `spec.template` ir kas bus, jei nenurodysiu `spec.template.metadata.labels.app` ?
+      . ką aprašo `spec.template` ir kas bus, jei nenurodysiu `spec.template.metadata.labels.app` (kai jau tas pas nurodyta `spec.selector.app`)?
       . kodėl įdiegimo apraše reikia nurodyt `webapp1` vardą net 4x:
         ** `spec.metadata.name` ?
         ** `spec.selector.matchLabels.app` ?
