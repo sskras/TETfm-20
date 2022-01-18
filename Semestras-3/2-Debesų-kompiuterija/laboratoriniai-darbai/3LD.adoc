@@ -691,7 +691,7 @@ Taip pat yra ir galimybė keičiantis konfigūracijai šiuos objektus atnaujinti
 
   * Žingsnis 3.1: *įdiegimo kūrimas*
 
-    - automatinis _Shell_ startas:
+    - automatinis klasterio startas su _Shell_:
 +
 ----
 Your Interactive Bash Terminal. A safe place to learn and execute commands.
@@ -709,6 +709,8 @@ $ minikube start --wait=false
 * Done! kubectl is now configured to use "minikube"
 $ 
 ----
++
+{nbsp}
 
 
     - įkeliu YAML šabloną `deployment.yaml`:
@@ -741,7 +743,9 @@ spec:
         - containerPort: 80
 $ 
 ----
-https://asciinema.org/a/462387
+image::https://asciinema.org/a/462387.svg[link="https://asciinema.org/a/462387?autoplay=1"]
++
+{nbsp}
 
 
     - į klasterį diegiu aplikaciją `webapp1` iš Doker atvaizdo `katacoda/docker-http-server:latest`:
@@ -751,7 +755,9 @@ $ kubectl create -f deployment.yaml
 deployment.apps/webapp1 created
 $ 
 ----
-https://asciinema.org/a/462388
+image::https://asciinema.org/a/462388.svg[link="https://asciinema.org/a/462388?autoplay=1"]
++
+{nbsp}
 
 
     - peržiūriu įdiegimų sąrašą:
@@ -762,7 +768,9 @@ NAME      READY   UP-TO-DATE   AVAILABLE   AGE
 webapp1   1/1     1            1           4m37s
 $ 
 ----
-https://asciinema.org/a/462389
+image::https://asciinema.org/a/462389.svg[link="https://asciinema.org/a/462389?autoplay=1"]
++
+{nbsp}
 
 
     - peržiūriu `webapp1` įdiegimo aprašą:
@@ -802,7 +810,9 @@ Events:
   Normal  ScalingReplicaSet  6m55s  deployment-controller  Scaled up replica set webapp1-6b54fb89d9 to 1
 $ 
 ----
-https://asciinema.org/a/462390
+image::https://asciinema.org/a/462390.svg[link="https://asciinema.org/a/462390?autoplay=1"]
++
+{nbsp}
 
 
   * Žingsnis 3.2: *paslaugos kūrimas*
@@ -832,7 +842,9 @@ spec:
     app: webapp1
 $ 
 ----
-https://asciinema.org/a/462391
+image::https://asciinema.org/a/462391.svg[link="https://asciinema.org/a/462391?autoplay=1"]
++
+{nbsp}
 
 
     - įdiegiu paslaugą:
@@ -842,7 +854,9 @@ $ kubectl create -f service.yaml
 service/webapp1-svc created
 $ 
 ----
-https://asciinema.org/a/462392
+image::https://asciinema.org/a/462392.svg[link="https://asciinema.org/a/462392?autoplay=1"]
++
+{nbsp}
 
 
     - peržiūriu įdiegtų paslaugų sąrašą:
@@ -854,7 +868,9 @@ kubernetes    ClusterIP   10.96.0.1       <none>        443/TCP        28m
 webapp1-svc   NodePort    10.105.23.172   <none>        80:30080/TCP   100s
 $ 
 ----
-https://asciinema.org/a/462393
+image::https://asciinema.org/a/462393.svg[link="https://asciinema.org/a/462393?autoplay=1"]
++
+{nbsp}
 
 
     - peržiūriu paslaugos `webapp1-svc` aprašą:
@@ -877,7 +893,9 @@ External Traffic Policy:  Cluster
 Events:                   <none>
 $ 
 ----
-https://asciinema.org/a/462397
+image::https://asciinema.org/a/462397.svg[link="https://asciinema.org/a/462397?autoplay=1"]
++
+{nbsp}
 
 
     - tikrinu paslaugos veikimą:
@@ -905,7 +923,9 @@ $ curl host01:30080
 <h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
 $ 
 ----
-https://asciinema.org/a/462398
+image::https://asciinema.org/a/462398.svg[link="https://asciinema.org/a/462398?autoplay=1"]
++
+{nbsp}
 
 
   * Žingsnis 3.3: *įdiegimo dauginimas*
@@ -939,7 +959,9 @@ $ diff -u deployment.yaml.OLD deployment.yaml | colordiff
        app: webapp1
 $ 
 ----
-https://asciinema.org/a/462399
+image::https://asciinema.org/a/462399.svg[link="https://asciinema.org/a/462399?autoplay=1"]
++
+{nbsp}
 
 
     - padauginu veikiančių replikų (egzempliorių) skaičių:
@@ -950,7 +972,9 @@ Warning: kubectl apply should be used on resource created by either kubectl crea
 deployment.apps/webapp1 configured
 $ 
 ----
-https://asciinema.org/a/462400
+image::https://asciinema.org/a/462400.svg[link="https://asciinema.org/a/462400?autoplay=1"]
++
+{nbsp}
 
 
     - tikrinu įdiegimo/klasterio būseną:
@@ -961,7 +985,9 @@ NAME      READY   UP-TO-DATE   AVAILABLE   AGE
 webapp1   4/4     4            4           36m
 $ 
 ----
-https://asciinema.org/a/462402
+image::https://asciinema.org/a/462402.svg[link="https://asciinema.org/a/462402?autoplay=1"]
++
+{nbsp}
 
 
     - tikrinu naujų „ankščių“ būseną:
@@ -975,7 +1001,9 @@ webapp1-6b54fb89d9-p8lck   1/1     Running   0          7m50s
 webapp1-6b54fb89d9-qz98l   1/1     Running   0          40m
 $ 
 ----
-https://asciinema.org/a/462405
+image::https://asciinema.org/a/462405.svg[link="https://asciinema.org/a/462405?autoplay=1"]
++
+{nbsp}
 
 
     - tikrinu užklausas į paslaugą:
@@ -1009,9 +1037,7 @@ $ curl host01:30080
 <h1>This request was processed by host: webapp1-6b54fb89d9-p8lck</h1>
 $ 
 ----
-https://asciinema.org/a/462404
-
-image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?autoplay=1"]
+image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?autoplay=1"]
 +
 {nbsp}
 
@@ -1043,3 +1069,21 @@ image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?a
 +
 Galbūt irgi vertėtų pranešti treniruoklio autoriams (dėl instrukcijų patikslinimo).
 
+
+<<<
+
+=== Scenarijus nr. 4: "*Deploy TODO*"
+
+  * Trumpas aprašymas
+
+Mokinsimės Kubectl pagalba kurti ir startuoti įdiegimus, replikavimo valdiklius ir viešinti juos kaip paslaugas šįkart _jau_ pasinaudojant YAML apibrėžtimis (YAML formatu).
+
+YAML apibrėžtimis aprašomi Kubernetes objektai, paskirti įdiegimams.
+Taip pat yra ir galimybė keičiantis konfigūracijai šiuos objektus atnaujinti bei perdiegti į klasterį iš naujo.
+
+
+  * Žingsnis 1: *įdiegimo kūrimas*
+
+    - automatinis _Shell_ startas:
++
+----
