@@ -101,175 +101,69 @@ Skirtas naudotojams, siekiantiems išmėginti Kubernetes ar net vykdyti kasdien�
 ==== Žingsnis 1.1: *`Minikube` startas*
 
     - patikrinu versiją:
-+
-----
-$ minikube version
-minikube version: v1.8.1
-commit: cbda04cf6bbe65e987ae52bb393c10099ab62014
-----
 +++
 <script id="asciicast-452640" src="https://asciinema.org/a/452640.js" async></script>
 +++
-+
-{nbsp}
 
 
     - startuoju VM su `Kubernetes` klasteriu:
-+
-----
-$ minikube start --wait=false
-* minikube v1.8.1 on Ubuntu 18.04
-* Using the none driver based on user configuration
-* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
-* OS release is Ubuntu 18.04.4 LTS
-* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
-  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
-* Launching Kubernetes ... 
-* Enabling addons: default-storageclass, storage-provisioner
-* Configuring local host environment ...
-* Done! kubectl is now configured to use "minikube"
-----
 +++
 <script id="asciicast-452643" src="https://asciinema.org/a/452643.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 1.2: *_Kubernetes_ klasterio informacija*
 
     - tikrinu klasterio būseną:
-+
-----
-$ kubectl cluster-info
-Kubernetes master is running at https://172.17.0.86:8443
-KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-----
 +++
 <script id="asciicast-452671" src="https://asciinema.org/a/452671.js" async></script>
 +++
-+
-{nbsp}
 
 
     - klasterio mazgų sąrašas:
-+
-----
-$ kubectl get nodes
-NAME       STATUS     ROLES    AGE   VERSION
-minikube   NotReady   master   16s   v1.17.3
-
-$ kubectl get nodes
-NAME       STATUS   ROLES    AGE   VERSION
-minikube   Ready    master   18s   v1.17.3
-----
 +++
 <script id="asciicast-452686" src="https://asciinema.org/a/452686.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 1.3: *diegiame konteinerį klasteryje*
 
     - konteinerio diegimas iš atvaizdo:
-+
-----
-$ kubectl create deployment first-deployment --image=katacoda/docker-http-server
-deployment.apps/first-deployment created
-----
 +++
 <script id="asciicast-452688" src="https://asciinema.org/a/452688.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikrinu diegimo būseną:
-+
-----
-$ kubectl get pods
-NAME                               READY   STATUS              RESTARTS   AGE
-first-deployment-666c48b44-92c2z   0/1     ContainerCreating   0          3s
-
-$ kubectl get pods
-NAME                               READY   STATUS              RESTARTS   AGE
-first-deployment-666c48b44-92c2z   0/1     ContainerCreating   0          4s
-
-$ kubectl get pods
-NAME                               READY   STATUS    RESTARTS   AGE
-first-deployment-666c48b44-92c2z   1/1     Running   0          5s
-----
 +++
 <script id="asciicast-452708" src="https://asciinema.org/a/452708.js" async></script>
 +++
-+
-{nbsp}
 
 
     - paviešinu konteinerį tinkle:
-+
-----
-$ kubectl expose deployment first-deployment --port=80 --type=NodePort
-service/first-deployment exposed
-----
 +++
 <script id="asciicast-452709" src="https://asciinema.org/a/452709.js" async></script>
 +++
-+
-{nbsp}
 
 
     - susirandu alokuotą TCP-portą ir vykdome HTTP-užklausą:
-+
-----
-$ kubectl get svc first-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}'
-31900
-
-$ export PORT=$(kubectl get svc first-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')
-
-$ echo "Accessing host01:$PORT"
-Accessing host01:31900
-
-$ curl host01:$PORT
-<h1>This request was processed by host: first-deployment-666c48b44-92c2z</h1>
-----
 +++
 <script id="asciicast-452711" src="https://asciinema.org/a/452711.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 1.4: *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
     - įgalinu _Minicube_ priedą _Dashboard_:
-+
-----
-$ minikube addons enable dashboard
-* The 'dashboard' addon is enabled
-----
 +++
 <script id="asciicast-452714" src="https://asciinema.org/a/452714.js" async></script>
 +++
-+
-{nbsp}
 
 
     - diegiu _Kubernetes Dashboard_ pagal duotą YAML šabloną:
-+
-----
-$ kubectl apply -f /opt/kubernetes-dashboard.yaml
-namespace/kubernetes-dashboard configured
-service/kubernetes-dashboard-katacoda created
-----
 +++
 <script id="asciicast-452718" src="https://asciinema.org/a/452718.js" async></script>
 +++
-+
-{nbsp}
 
 
     - patikrinu šablono turinį:
@@ -310,26 +204,11 @@ spec:
     k8s-app: kubernetes-dashboard
   type: NodePort
 ----
-+
-{nbsp}
 
     - stebiu _Dashboard_ konteinerių startą:
-+
-----
-$ kubectl get pods -n kubernetes-dashboard -w
-NAME                                         READY   STATUS              RESTARTS   AGE
-dashboard-metrics-scraper-7b64584c5c-7x46c   0/1     ContainerCreating   0          1s
-kubernetes-dashboard-79d9cd965-7f5pb         0/1     ContainerCreating   0          1s
-kubernetes-dashboard-79d9cd965-7f5pb         1/1     Running             0          1s
-dashboard-metrics-scraper-7b64584c5c-7x46c   1/1     Running             0          2s
-^C
-$ 
-----
 +++
 <script id="asciicast-452725" src="https://asciinema.org/a/452725.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikrinu web-UI sąsają tiesiogiai:  +
@@ -416,331 +295,102 @@ Mokinsimės _Kubectl_ pagalba kurti ir startuoti įdiegimus, replikavimo valdikl
 ==== Žingsnis 2.1: *startuojame Kubernetes klasterį*
 
     - startuojame klasterį ir įgaliname Kubectl CLI:
-+
-----
-$ minikube start --wait=false
-* minikube v1.8.1 on Ubuntu 18.04
-* Using the none driver based on user configuration
-
-* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
-* OS release is Ubuntu 18.04.4 LTS
-
-* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
-  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
-* Launching Kubernetes ... 
-
-* Enabling addons: default-storageclass, storage-provisioner
-* Configuring local host environment ...
-* Done! kubectl is now configured to use "minikube"
-$ 
-----
 +++
 <script id="asciicast-462314" src="https://asciinema.org/a/462314.js" async></script>
 +++
-+
-{nbsp}
 
 
     - patikriname mazgo būseną:
-+
-----
-$ kubectl get nodes
-NAME       STATUS     ROLES    AGE   VERSION
-minikube   NotReady   master   15s   v1.17.3
-$ 
-$ kubectl get nodes
-NAME       STATUS   ROLES    AGE   VERSION
-minikube   Ready    master   23s   v1.17.3
-$ 
-----
 +++
 <script id="asciicast-462317" src="https://asciinema.org/a/462317.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 2.2: *vykdome `kubectl` su `run`*
   
     - sukuriame įdiegimą ir startuojame jo „ankštis“ bei konteinerius:
-+
-----
-$ kubectl run http --image=katacoda/docker-http-server:latest --replicas=1 
-kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
-deployment.apps/http created
-$ 
-----
 +++
 <script id="asciicast-462319" src="https://asciinema.org/a/462319.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikriname įdiegimų būsenas:
-+
-----
-$ kubectl get deployments
-NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-http   0/1     1            0           35s
-$ 
-$ kubectl get deployments
-NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-http   0/1     1            0           39s
-$ 
-$ kubectl get deployments
-NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-http   0/1     1            0           42s
-$ 
-$ kubectl get deployments
-NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-http   0/1     1            0           47s
-$ 
-$ kubectl get deployments
-NAME   READY   UP-TO-DATE   AVAILABLE   AGE
-http   1/1     1            1           55s
-$ 
-----
 +++
 <script id="asciicast-462320" src="https://asciinema.org/a/462320.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikriname išsamų įdiegimo aprašą:
-+
-----
-$ kubectl describe deployment http
-Name:                   http
-Namespace:              default
-CreationTimestamp:      Mon, 17 Jan 2022 18:02:36 +0000
-Labels:                 run=http
-Annotations:            deployment.kubernetes.io/revision: 1
-Selector:               run=http
-Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
-StrategyType:           RollingUpdate
-MinReadySeconds:        0
-RollingUpdateStrategy:  25% max unavailable, 25% max surge
-Pod Template:
-  Labels:  run=http
-  Containers:
-   http:
-    Image:        katacoda/docker-http-server:latest
-    Port:         <none>
-    Host Port:    <none>
-    Environment:  <none>
-    Mounts:       <none>
-  Volumes:        <none>
-Conditions:
-  Type           Status  Reason
-  ----           ------  ------
-  Available      True    MinimumReplicasAvailable
-  Progressing    True    NewReplicaSetAvailable
-OldReplicaSets:  <none>
-NewReplicaSet:   http-774bb756bb (1/1 replicas created)
-Events:
-  Type    Reason             Age   From                   Message
-  ----    ------             ----  ----                   -------
-  Normal  ScalingReplicaSet  76s   deployment-controller  Scaled up replica set http-774bb756bb to 1
-$ 
-----
 +++
 <script id="asciicast-462321" src="https://asciinema.org/a/462321.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 2.3: *vykdome `kubectl` su `expose`*
   
     - sukuriame paslaugą paviešindami konkretų konteinerio portą:
-+
-----
-$ kubectl expose deployment http --external-ip="172.17.0.11" --port=8000 --target-port=80
-service/http exposed
-$ 
-----
 +++
 <script id="asciicast-462325" src="https://asciinema.org/a/462325.js" async></script>
 +++
-+
-{nbsp}
 
 
     - patikriname paslaugos veikimą:
-+
-----
-$ curl http://172.17.0.11:8000
-<h1>This request was processed by host: http-774bb756bb-bbvm9</h1>
-$ 
-----
 +++
 <script id="asciicast-462326" src="https://asciinema.org/a/462326.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 2.4: *vykdome `kubectl` su `run`+`expose` iškart*
   
     - sukuriame naują įdiegimą ir paviešiname naują paslaugą kitu portu vienu ypu, kitu būdu:
-+
-----
-$ kubectl run httpexposed --image=katacoda/docker-http-server:latest --replicas=1 --port=80 --hostport=8001
-kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
-deployment.apps/httpexposed created
-$ 
-----
 +++
 <script id="asciicast-462331" src="https://asciinema.org/a/462331.js" async></script>
 +++
-+
-{nbsp}
 
 
     - patikriname naujos paslaugos veikimą:
-+
-----
-$ curl http://172.17.0.11:8001
-<h1>This request was processed by host: httpexposed-68cb8c8d4-d9b6w</h1>
-$ 
-----
 +++
 <script id="asciicast-462333" src="https://asciinema.org/a/462333.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikriname, ar naujas portas tikrai neatsirado paslaugų sąraše:
-+
-----
-$ kubectl get svc
-NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
-http         ClusterIP   10.96.205.142   172.17.0.11   8000/TCP   19m
-kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP    39m
-$ 
-----
 +++
 <script id="asciicast-462336" src="https://asciinema.org/a/462336.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikriname, ar naujas portas atsirado tos pačios „ankšties“ tinkliniame konteineryje `pause`:  +
       (per _Docker Port Mapping_ mechanizmą)
-+
-----
-$ docker ps | grep httpexposed
-5945f9a4fa9b        katacoda/docker-http-server   "/app"                   10 minutes ago      Up 10 minutes                              k8s_httpexposed_httpexposed-68cb8c8d4-d9b6w_default_f2718b05-501c-4158-8d8e-0e4a62e99db9_0
-6cc613c77542        k8s.gcr.io/pause:3.1          "/pause"                 10 minutes ago      Up 10 minutes       0.0.0.0:8001->80/tcp   k8s_POD_httpexposed-68cb8c8d4-d9b6w_default_f2718b05-501c-4158-8d8e-0e4a62e99db9_0
-$ 
-$ # OK
-$ 
-$ docker ps | wc -l
-21
-----
 +++
 <script id="asciicast-462338" src="https://asciinema.org/a/462338.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 2.5: *dauginame konteinerius*
 
     - pakeliame „ankščių“ skaičių iki 3:
-+
-----
-$ kubectl scale --replicas=3 deployment http
-deployment.apps/http scaled
-$ 
-----
 +++
 <script id="asciicast-462340" src="https://asciinema.org/a/462340.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikriname „ankščių“ būsenas:
-+
-----
-$ kubectl get pods
-NAME                          READY   STATUS    RESTARTS   AGE
-http-774bb756bb-bbvm9         1/1     Running   0          43m
-httpexposed-68cb8c8d4-d9b6w   1/1     Running   0          18m
-$ 
-$ kubectl get pods
-NAME                          READY   STATUS    RESTARTS   AGE
-http-774bb756bb-bbvm9         1/1     Running   0          51m
-http-774bb756bb-jcbgf         1/1     Running   0          7m50s
-http-774bb756bb-qvqkc         1/1     Running   0          7m50s
-httpexposed-68cb8c8d4-d9b6w   1/1     Running   0          26m
-----
 +++
 <script id="asciicast-462341" src="https://asciinema.org/a/462341.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikriname, ar „ankštys“ pateko į apkrovos balansavimą šiai paslaugai:
-+
-----
-$ kubectl describe svc http
-Name:              http
-Namespace:         default
-Labels:            run=http
-Annotations:       <none>
-Selector:          run=http
-Type:              ClusterIP
-IP:                10.96.205.142
-External IPs:      172.17.0.11
-Port:              <unset>  8000/TCP
-TargetPort:        80/TCP
-Endpoints:         172.18.0.4:80,172.18.0.6:80,172.18.0.7:80
-Session Affinity:  None
-Events:            <none>
-$ 
-----
 +++
 <script id="asciicast-462343" src="https://asciinema.org/a/462343.js" async></script>
 +++
-+
-{nbsp}
 
 
     - atliekame kelias tos pačios paslaugos užklausas iš eilės:
-+
-----
-$ curl http://172.17.0.11:8000
-<h1>This request was processed by host: http-774bb756bb-bbvm9</h1>
-$ 
-$ curl http://172.17.0.11:8000
-<h1>This request was processed by host: http-774bb756bb-qvqkc</h1>
-$ 
-$ # OK, kitas hosto ID
-$ 
-$ curl http://172.17.0.11:8000
-<h1>This request was processed by host: http-774bb756bb-bbvm9</h1>
-$ 
-$ curl http://172.17.0.11:8000
-<h1>This request was processed by host: http-774bb756bb-jcbgf</h1>
-$ 
-$ # dar vienas naujas hosto ID
-$ 
-$ curl http://172.17.0.11:8000
-<h1>This request was processed by host: http-774bb756bb-qvqkc</h1>
-$ 
-----
 +++
 <script id="asciicast-462344" src="https://asciinema.org/a/462344.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Suvestinė nr. 2:
@@ -811,365 +461,94 @@ $ minikube start --wait=false
 * Done! kubectl is now configured to use "minikube"
 $ 
 ----
-+
-{nbsp}
 
 
     - įkeliu YAML šabloną `deployment.yaml`:
-+
-----
-$ ls -l
-total 8
--rw-r--r-- 1 root root  335 Jan 17 22:37 deployment.yaml
-drwxr-xr-x 2 root root 4096 Mar  1  2020 Desktop
-
-$ cat deployment.yaml 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: webapp1
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: webapp1
-  template:
-    metadata:
-      labels:
-        app: webapp1
-    spec:
-      containers:
-      - name: webapp1
-        image: katacoda/docker-http-server:latest
-        ports:
-        - containerPort: 80
-$ 
-----
 +++
 <script id="asciicast-462387" src="https://asciinema.org/a/462387.js" async></script>
 +++
-+
-{nbsp}
 
 
     - į klasterį diegiu aplikaciją `webapp1` iš Doker atvaizdo `katacoda/docker-http-server:latest`:
-+
-----
-$ kubectl create -f deployment.yaml
-deployment.apps/webapp1 created
-$ 
-----
 +++
 <script id="asciicast-462388" src="https://asciinema.org/a/462388.js" async></script>
 +++
-+
-{nbsp}
 
 
     - peržiūriu įdiegimų sąrašą:
-+
-----
-$ kubectl get deployment
-NAME      READY   UP-TO-DATE   AVAILABLE   AGE
-webapp1   1/1     1            1           4m37s
-$ 
-----
 +++
 <script id="asciicast-462389" src="https://asciinema.org/a/462389.js" async></script>
 +++
-+
-{nbsp}
 
 
     - peržiūriu `webapp1` įdiegimo aprašą:
-+
-----
-$ kubectl describe deployment webapp1
-Name:                   webapp1
-Namespace:              default
-CreationTimestamp:      Mon, 17 Jan 2022 22:45:45 +0000
-Labels:                 <none>
-Annotations:            deployment.kubernetes.io/revision: 1
-Selector:               app=webapp1
-Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
-StrategyType:           RollingUpdate
-MinReadySeconds:        0
-RollingUpdateStrategy:  25% max unavailable, 25% max surge
-Pod Template:
-  Labels:  app=webapp1
-  Containers:
-   webapp1:
-    Image:        katacoda/docker-http-server:latest
-    Port:         80/TCP
-    Host Port:    0/TCP
-    Environment:  <none>
-    Mounts:       <none>
-  Volumes:        <none>
-Conditions:
-  Type           Status  Reason
-  ----           ------  ------
-  Available      True    MinimumReplicasAvailable
-  Progressing    True    NewReplicaSetAvailable
-OldReplicaSets:  <none>
-NewReplicaSet:   webapp1-6b54fb89d9 (1/1 replicas created)
-Events:
-  Type    Reason             Age    From                   Message
-  ----    ------             ----   ----                   -------
-  Normal  ScalingReplicaSet  6m55s  deployment-controller  Scaled up replica set webapp1-6b54fb89d9 to 1
-$ 
-----
 +++
 <script id="asciicast-462390" src="https://asciinema.org/a/462390.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 3.2: *paslaugos kūrimas*
 
     - įkeliu YAML šabloną `service.yaml`:
-+
-----
-$ ls -l
-total 12
--rw-r--r-- 1 root root  335 Jan 17 22:37 deployment.yaml
-drwxr-xr-x 2 root root 4096 Mar  1  2020 Desktop
--rw-r--r-- 1 root root  180 Jan 17 22:57 service.yaml
-
-$ cat service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: webapp1-svc
-  labels:
-    app: webapp1
-spec:
-  type: NodePort
-  ports:
-  - port: 80
-    nodePort: 30080
-  selector:
-    app: webapp1
-$ 
-----
 +++
 <script id="asciicast-462391" src="https://asciinema.org/a/462391.js" async></script>
 +++
-+
-{nbsp}
 
 
     - įdiegiu paslaugą:
-+
-----
-$ kubectl create -f service.yaml
-service/webapp1-svc created
-$ 
-----
 +++
 <script id="asciicast-462392" src="https://asciinema.org/a/462392.js" async></script>
 +++
-+
-{nbsp}
 
 
     - peržiūriu įdiegtų paslaugų sąrašą:
-+
-----
-$ kubectl get svc
-NAME          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-kubernetes    ClusterIP   10.96.0.1       <none>        443/TCP        28m
-webapp1-svc   NodePort    10.105.23.172   <none>        80:30080/TCP   100s
-$ 
-----
 +++
 <script id="asciicast-462393" src="https://asciinema.org/a/462393.js" async></script>
 +++
-+
-{nbsp}
 
 
     - peržiūriu paslaugos `webapp1-svc` aprašą:
-+
-----
-$ kubectl describe svc webapp1-svc
-Name:                     webapp1-svc
-Namespace:                default
-Labels:                   app=webapp1
-Annotations:              <none>
-Selector:                 app=webapp1
-Type:                     NodePort
-IP:                       10.105.23.172
-Port:                     <unset>  80/TCP
-TargetPort:               80/TCP
-NodePort:                 <unset>  30080/TCP
-Endpoints:                172.18.0.4:80
-Session Affinity:         None
-External Traffic Policy:  Cluster
-Events:                   <none>
-$ 
-----
 +++
 <script id="asciicast-462397" src="https://asciinema.org/a/462397.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikrinu paslaugos veikimą:
-+
-----
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-----
 +++
 <script id="asciicast-462398" src="https://asciinema.org/a/462398.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Žingsnis 3.3: *įdiegimo dauginimas*
 
     - replikų (egzempliorių) skaičių YAML šablone `deployment.yaml` pakeliu iki 4:
-+
-----
-$ cp -v deployment.yaml deployment.yaml.OLD
-'deployment.yaml' -> 'deployment.yaml.OLD'
-
-$ vim deployment.yaml
-
-$ ls -l
-total 16
--rw-r--r-- 1 root root  335 Jan 17 23:15 deployment.yaml
--rw-r--r-- 1 root root  335 Jan 17 23:14 deployment.yaml.OLD
-drwxr-xr-x 2 root root 4096 Mar  1  2020 Desktop
--rw-r--r-- 1 root root  180 Jan 17 22:57 service.yaml
-
-$ diff -u deployment.yaml.OLD deployment.yaml | colordiff
---- deployment.yaml.OLD 2022-01-17 23:14:54.436000000 +0000
-+++ deployment.yaml     2022-01-17 23:15:16.648000000 +0000
-@@ -3,7 +3,7 @@
- metadata:
-   name: webapp1
- spec:
--  replicas: 1
-+  replicas: 4
-   selector:
-     matchLabels:
-       app: webapp1
-$ 
-----
 +++
 <script id="asciicast-462399" src="https://asciinema.org/a/462399.js" async></script>
 +++
-+
-{nbsp}
 
 
     - padauginu veikiančių replikų (egzempliorių) skaičių:
-+
-----
-$ kubectl apply -f deployment.yaml
-Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply
-deployment.apps/webapp1 configured
-$ 
-----
 +++
 <script id="asciicast-462400" src="https://asciinema.org/a/462400.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikrinu įdiegimo / klasterio būseną:
-+
-----
-$ kubectl get deployment
-NAME      READY   UP-TO-DATE   AVAILABLE   AGE
-webapp1   4/4     4            4           36m
-$ 
-----
 +++
 <script id="asciicast-462402" src="https://asciinema.org/a/462402.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikrinu naujų „ankščių“ būseną:
-+
-----
-$ kubectl get pods
-NAME                       READY   STATUS    RESTARTS   AGE
-webapp1-6b54fb89d9-27g4g   1/1     Running   0          7m50s
-webapp1-6b54fb89d9-2v7vh   1/1     Running   0          7m50s
-webapp1-6b54fb89d9-p8lck   1/1     Running   0          7m50s
-webapp1-6b54fb89d9-qz98l   1/1     Running   0          40m
-$ 
-----
 +++
 <script id="asciicast-462405" src="https://asciinema.org/a/462405.js" async></script>
 +++
-+
-{nbsp}
 
 
     - tikrinu užklausas į paslaugą:
-+
-----
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-2v7vh</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-2v7vh</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-p8lck</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-27g4g</h1>
-$ 
-$ curl host01:30080
-<h1>This request was processed by host: webapp1-6b54fb89d9-p8lck</h1>
-$ 
-----
 +++
 <script id="asciicast-462404" src="https://asciinema.org/a/462404.js" async></script>
 +++
-+
-{nbsp}
 
 
 ==== Suvestinė nr. 3:
