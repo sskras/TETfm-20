@@ -13,6 +13,10 @@
 
 {nbsp}
 
+{nbsp}
+
+{nbsp}
+
 === Debesų kompiuterija
 Modulis ELKRM17304
 
@@ -20,6 +24,10 @@ Modulis ELKRM17304
 == Susipažinimas su Kubernetes platforma
 
 Laboratorinio darbo nr. 3 ataskaita
+
+{nbsp}
+
+{nbsp}
 
 {nbsp}
 
@@ -44,13 +52,15 @@ Laboratorinio darbo nr. 3 ataskaita
 
 {nbsp}
 
+{nbsp}
+
+{nbsp}
+
 VILNIUS, 2022
 
 <<<
 
 
-
-{nbsp}
 
 {nbsp}
 
@@ -60,8 +70,6 @@ VILNIUS, 2022
 [.text-center]
 == Susipažinimas su Kubernetes platforma
 
-
-{nbsp}
 
 {nbsp}
 
