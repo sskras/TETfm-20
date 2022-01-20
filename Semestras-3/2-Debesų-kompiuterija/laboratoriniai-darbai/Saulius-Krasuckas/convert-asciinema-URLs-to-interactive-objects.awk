@@ -16,7 +16,9 @@ BEGIN {
         gsub(/^image::https:[^0-9]+|.svg/, " ")
         CAST_ID = $1
         URL = $2
+        printf("+++\n")
         printf("<script id=\"asciicast-%s\" src=\"https://asciinema.org/a/%s.js\" async></script>\n", CAST_ID, CAST_ID)
+        printf("+++\n")
 
       # gsub(/^.*https:..|..$/, "")
       # print
