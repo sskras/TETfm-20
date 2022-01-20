@@ -1573,7 +1573,7 @@ image::https://user-images.githubusercontent.com/74717106/149956447-fb106765-499
 +
 -- veikia 3 valdikliai, 3 paslaugos ir 6 „ankštys“.
 
-      . patikrinau paslaugos veikimą iš išorinio interneto -- veikia puikiai;
+      . patikrinau paslaugos veikimą iš išorinio interneto -- veikia puikiai (tik primityviai);
       
       . tyrimas baigtas.
 
