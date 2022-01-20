@@ -172,6 +172,7 @@ image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?a
 $ kubectl create deployment first-deployment --image=katacoda/docker-http-server
 deployment.apps/first-deployment created
 ----
+(Čia vaizdo įraše padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`. Praktikoje vėliau tai pataisiau, tik nebeįrašiau)
 image::https://asciinema.org/a/452688.svg[link="https://asciinema.org/a/452688?autoplay=1"]
 +
 {nbsp}
@@ -634,6 +635,7 @@ http-774bb756bb-jcbgf         1/1     Running   0          7m50s
 http-774bb756bb-qvqkc         1/1     Running   0          7m50s
 httpexposed-68cb8c8d4-d9b6w   1/1     Running   0          26m
 ----
+(Čia įrašą sustabdžiau kiek per anksti -- jis nespėja atspindėti pilnos išvesties, parodytos aukščiau, kur atsiranda dvi naujos `http-*` „ankštys“)
 image::https://asciinema.org/a/462341.svg[link="https://asciinema.org/a/462341?autoplay=1"]
 +
 {nbsp}
