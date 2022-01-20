@@ -1,4 +1,4 @@
-= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
 [.text-center]
 == Elektronikos fakultetas
@@ -19,7 +19,7 @@ Modulis ELKRM17304
 [.text-center]
 == Susipažinimas su Kubernetes platforma
 
-==== Laboratorinio darbo nr. 3 ataskaita
+Laboratorinio darbo nr. 3 ataskaita
 
 {nbsp}
 
@@ -49,51 +49,34 @@ VILNIUS, 2022
 <<<
 
 
+
+{nbsp}
+
+{nbsp}
+
 [.text-center]
-=== Laboratorinis darbas nr. 3
+==== Laboratorinis darbas nr. 3
 
 [.text-center]
 == Susipažinimas su Kubernetes platforma
 
-[.text-left]
+
+{nbsp}
+
+{nbsp}
+
+[.text-center]
 === Darbo tikslas
 
-* Išbandyti `Kubernetes` platformą
-* Atlikti pagrindinius veiksmus su `Kubernetes` resursais.
-
 [.text-left]
-=== Užduotis
-
-. Atlikite šias užduotis:
-  * Čia naudosite `minicube` -- tai įrankis, kuriuo lengva pakeisti _Kubernetes_.
-    `minicube` paleidžia vieno mazgo _Kubernetes_ klasterį virtualioje mašinoje nešiojamame kompiuteryje naudotojams, 
-    norintiems išbandyti _Kubernetes_ arba kurti su ja kasdien:
-    - 
-  * Šiame scenarijuje sužinosite, kaip naudoti `kubectl`, 
-    kad sukurtumėte ir paleistumėte diegimo, replikavimo valdiklius 
-    ir pateiktumėte juos per paslaugas (angl. _Services_) be papildomų `yaml` konfigūracijų.
-    Tai leidžia konteinerius greitai startuoti klasteryje.
-    - 
-  * Šiame scenarijuje sužinosite, kaip naudoti `kubectl`, kad sukurtumėte ir startuotumėte diegimo, replikavimo valdiklius
-    ir pateiktumėte juos per paslaugas (angl. _Services_) aprašydami `yaml` apibrėžtis.
-    `YAML` aprašo _Kubernetes_ objektus.
-    - 
-  * Šiame scenarijuje paaiškinama, kaip paleisti paprastą daugiapakopę žiniatinklio programą naudojant _Kubernetes_ ir _Docker_:
-    - 
-
-Ataskaitos turinys:
-
-  * Aprašyti pasiekti  rezultatai kiekvienoje užduotyje.
-  * Failo dydis < 5 MiB, formatas `PDF`.
-
-<<<
+* Išbandyti `Kubernetes` platformą.
+* Atlikti pagrindinius veiksmus su `Kubernetes` resursais.
 
 
 [.text-center]
-== Darbo eiga
+=== Darbo eiga
 
 [.text-left]
-=== Pasirengimas
 
 Puslapyje *https://www.katacoda.com/courses/kubernetes[Learn Kubernetes using Interactive Browser-Based Labs | Katacoda]* susikūriau prisijungimą pasinaudodamas "_Log In with Github_" metodu ir autorizuodamas savo akademinę GitHub paskyrą.
 
@@ -116,7 +99,7 @@ $ minikube version
 minikube version: v1.8.1
 commit: cbda04cf6bbe65e987ae52bb393c10099ab62014
 ----
-image::https://asciinema.org/a/452640.svg[link="https://asciinema.org/a/452640?autoplay=1"]
+https://asciinema.org/a/452640?autoplay=1[asciinema.org/a/452640]
 +
 {nbsp}
 
@@ -136,7 +119,7 @@ $ minikube start --wait=false
 * Configuring local host environment ...
 * Done! kubectl is now configured to use "minikube"
 ----
-image::https://asciinema.org/a/452643.svg[link="https://asciinema.org/a/452643?autoplay=1"]
+https://asciinema.org/a/452643?autoplay=1[asciinema.org/a/452643]
 +
 {nbsp}
 
@@ -152,7 +135,7 @@ KubeDNS is running at https://172.17.0.86:8443/api/v1/namespaces/kube-system/ser
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ----
-image::https://asciinema.org/a/452671.svg[link="https://asciinema.org/a/452671?autoplay=1"]
+https://asciinema.org/a/452671?autoplay=1[asciinema.org/a/452671]
 +
 {nbsp}
 
@@ -168,7 +151,7 @@ $ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   18s   v1.17.3
 ----
-image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?autoplay=1"]
+https://asciinema.org/a/452686?autoplay=1[asciinema.org/a/452686]
 +
 {nbsp}
 
@@ -181,7 +164,7 @@ image::https://asciinema.org/a/452686.svg[link="https://asciinema.org/a/452686?a
 $ kubectl create deployment first-deployment --image=katacoda/docker-http-server
 deployment.apps/first-deployment created
 ----
-image::https://asciinema.org/a/452688.svg[link="https://asciinema.org/a/452688?autoplay=1"]
+https://asciinema.org/a/452688?autoplay=1[asciinema.org/a/452688]
 +
 {nbsp}
 
@@ -201,7 +184,7 @@ $ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
 first-deployment-666c48b44-92c2z   1/1     Running   0          5s
 ----
-image::https://asciinema.org/a/452708.svg[link="https://asciinema.org/a/452708?autoplay=1"]
+https://asciinema.org/a/452708?autoplay=1[asciinema.org/a/452708]
 +
 {nbsp}
 
@@ -212,7 +195,7 @@ image::https://asciinema.org/a/452708.svg[link="https://asciinema.org/a/452708?a
 $ kubectl expose deployment first-deployment --port=80 --type=NodePort
 service/first-deployment exposed
 ----
-image::https://asciinema.org/a/452709.svg[link="https://asciinema.org/a/452709?autoplay=1"]
+https://asciinema.org/a/452709?autoplay=1[asciinema.org/a/452709]
 +
 {nbsp}
 
@@ -231,7 +214,7 @@ Accessing host01:31900
 $ curl host01:$PORT
 <h1>This request was processed by host: first-deployment-666c48b44-92c2z</h1>
 ----
-image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?autoplay=1"]
+https://asciinema.org/a/452711?autoplay=1[asciinema.org/a/452711]
 +
 {nbsp}
 
@@ -244,7 +227,7 @@ image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?a
 $ minikube addons enable dashboard
 * The 'dashboard' addon is enabled
 ----
-image::https://asciinema.org/a/452714.svg[link="https://asciinema.org/a/452714?autoplay=1"]
+https://asciinema.org/a/452714?autoplay=1[asciinema.org/a/452714]
 +
 {nbsp}
 
@@ -256,7 +239,7 @@ $ kubectl apply -f /opt/kubernetes-dashboard.yaml
 namespace/kubernetes-dashboard configured
 service/kubernetes-dashboard-katacoda created
 ----
-image::https://asciinema.org/a/452718.svg[link="https://asciinema.org/a/452718?autoplay=1"]
+https://asciinema.org/a/452718?autoplay=1[asciinema.org/a/452718]
 +
 {nbsp}
 
@@ -314,7 +297,7 @@ dashboard-metrics-scraper-7b64584c5c-7x46c   1/1     Running             0      
 ^C
 $ 
 ----
-image::https://asciinema.org/a/452725.svg[link="https://asciinema.org/a/452725?autoplay=1"]
+https://asciinema.org/a/452725?autoplay=1[asciinema.org/a/452725]
 +
 {nbsp}
 
@@ -421,7 +404,7 @@ $ minikube start --wait=false
 * Done! kubectl is now configured to use "minikube"
 $ 
 ----
-image::https://asciinema.org/a/462314.svg[link="https://asciinema.org/a/462314?autoplay=1"]
+https://asciinema.org/a/462314?autoplay=1[asciinema.org/a/462314]
 +
 {nbsp}
 
@@ -438,7 +421,7 @@ NAME       STATUS   ROLES    AGE   VERSION
 minikube   Ready    master   23s   v1.17.3
 $ 
 ----
-image::https://asciinema.org/a/462317.svg[link="https://asciinema.org/a/462317?autoplay=1"]
+https://asciinema.org/a/462317?autoplay=1[asciinema.org/a/462317]
 +
 {nbsp}
 
@@ -453,7 +436,7 @@ kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in 
 deployment.apps/http created
 $ 
 ----
-image::https://asciinema.org/a/462319.svg[link="https://asciinema.org/a/462319?autoplay=1"]
+https://asciinema.org/a/462319?autoplay=1[asciinema.org/a/462319]
 +
 {nbsp}
 
@@ -482,7 +465,7 @@ NAME   READY   UP-TO-DATE   AVAILABLE   AGE
 http   1/1     1            1           55s
 $ 
 ----
-image::https://asciinema.org/a/462320.svg[link="https://asciinema.org/a/462320?autoplay=1"]
+https://asciinema.org/a/462320?autoplay=1[asciinema.org/a/462320]
 +
 {nbsp}
 
@@ -524,7 +507,7 @@ Events:
   Normal  ScalingReplicaSet  76s   deployment-controller  Scaled up replica set http-774bb756bb to 1
 $ 
 ----
-image::https://asciinema.org/a/462321.svg[link="https://asciinema.org/a/462321?autoplay=1"]
+https://asciinema.org/a/462321?autoplay=1[asciinema.org/a/462321]
 +
 {nbsp}
 
@@ -538,7 +521,7 @@ $ kubectl expose deployment http --external-ip="172.17.0.11" --port=8000 --targe
 service/http exposed
 $ 
 ----
-image::https://asciinema.org/a/462325.svg[link="https://asciinema.org/a/462325?autoplay=1"]
+https://asciinema.org/a/462325?autoplay=1[asciinema.org/a/462325]
 +
 {nbsp}
 
@@ -550,7 +533,7 @@ $ curl http://172.17.0.11:8000
 <h1>This request was processed by host: http-774bb756bb-bbvm9</h1>
 $ 
 ----
-image::https://asciinema.org/a/462326.svg[link="https://asciinema.org/a/462326?autoplay=1"]
+https://asciinema.org/a/462326?autoplay=1[asciinema.org/a/462326]
 +
 {nbsp}
 
@@ -565,7 +548,7 @@ kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in 
 deployment.apps/httpexposed created
 $ 
 ----
-image::https://asciinema.org/a/462331.svg[link="https://asciinema.org/a/462331?autoplay=1"]
+https://asciinema.org/a/462331?autoplay=1[asciinema.org/a/462331]
 +
 {nbsp}
 
@@ -577,7 +560,7 @@ $ curl http://172.17.0.11:8001
 <h1>This request was processed by host: httpexposed-68cb8c8d4-d9b6w</h1>
 $ 
 ----
-image::https://asciinema.org/a/462333.svg[link="https://asciinema.org/a/462333?autoplay=1"]
+https://asciinema.org/a/462333?autoplay=1[asciinema.org/a/462333]
 +
 {nbsp}
 
@@ -591,7 +574,7 @@ http         ClusterIP   10.96.205.142   172.17.0.11   8000/TCP   19m
 kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP    39m
 $ 
 ----
-image::https://asciinema.org/a/462336.svg[link="https://asciinema.org/a/462336?autoplay=1"]
+https://asciinema.org/a/462336?autoplay=1[asciinema.org/a/462336]
 +
 {nbsp}
 
@@ -609,7 +592,7 @@ $
 $ docker ps | wc -l
 21
 ----
-image::https://asciinema.org/a/462338.svg[link="https://asciinema.org/a/462338?autoplay=1"]
+https://asciinema.org/a/462338?autoplay=1[asciinema.org/a/462338]
 +
 {nbsp}
 
@@ -623,7 +606,7 @@ $ kubectl scale --replicas=3 deployment http
 deployment.apps/http scaled
 $ 
 ----
-image::https://asciinema.org/a/462340.svg[link="https://asciinema.org/a/462340?autoplay=1"]
+https://asciinema.org/a/462340?autoplay=1[asciinema.org/a/462340]
 +
 {nbsp}
 
@@ -643,7 +626,7 @@ http-774bb756bb-jcbgf         1/1     Running   0          7m50s
 http-774bb756bb-qvqkc         1/1     Running   0          7m50s
 httpexposed-68cb8c8d4-d9b6w   1/1     Running   0          26m
 ----
-image::https://asciinema.org/a/462341.svg[link="https://asciinema.org/a/462341?autoplay=1"]
+https://asciinema.org/a/462341?autoplay=1[asciinema.org/a/462341]
 +
 {nbsp}
 
@@ -667,7 +650,7 @@ Session Affinity:  None
 Events:            <none>
 $ 
 ----
-image::https://asciinema.org/a/462343.svg[link="https://asciinema.org/a/462343?autoplay=1"]
+https://asciinema.org/a/462343?autoplay=1[asciinema.org/a/462343]
 +
 {nbsp}
 
@@ -695,7 +678,7 @@ $ curl http://172.17.0.11:8000
 <h1>This request was processed by host: http-774bb756bb-qvqkc</h1>
 $ 
 ----
-image::https://asciinema.org/a/462344.svg[link="https://asciinema.org/a/462344?autoplay=1"]
+https://asciinema.org/a/462344?autoplay=1[asciinema.org/a/462344]
 +
 {nbsp}
 
@@ -802,7 +785,7 @@ spec:
         - containerPort: 80
 $ 
 ----
-image::https://asciinema.org/a/462387.svg[link="https://asciinema.org/a/462387?autoplay=1"]
+https://asciinema.org/a/462387?autoplay=1[asciinema.org/a/462387]
 +
 {nbsp}
 
@@ -814,7 +797,7 @@ $ kubectl create -f deployment.yaml
 deployment.apps/webapp1 created
 $ 
 ----
-image::https://asciinema.org/a/462388.svg[link="https://asciinema.org/a/462388?autoplay=1"]
+https://asciinema.org/a/462388?autoplay=1[asciinema.org/a/462388]
 +
 {nbsp}
 
@@ -827,7 +810,7 @@ NAME      READY   UP-TO-DATE   AVAILABLE   AGE
 webapp1   1/1     1            1           4m37s
 $ 
 ----
-image::https://asciinema.org/a/462389.svg[link="https://asciinema.org/a/462389?autoplay=1"]
+https://asciinema.org/a/462389?autoplay=1[asciinema.org/a/462389]
 +
 {nbsp}
 
@@ -869,7 +852,7 @@ Events:
   Normal  ScalingReplicaSet  6m55s  deployment-controller  Scaled up replica set webapp1-6b54fb89d9 to 1
 $ 
 ----
-image::https://asciinema.org/a/462390.svg[link="https://asciinema.org/a/462390?autoplay=1"]
+https://asciinema.org/a/462390?autoplay=1[asciinema.org/a/462390]
 +
 {nbsp}
 
@@ -901,7 +884,7 @@ spec:
     app: webapp1
 $ 
 ----
-image::https://asciinema.org/a/462391.svg[link="https://asciinema.org/a/462391?autoplay=1"]
+https://asciinema.org/a/462391?autoplay=1[asciinema.org/a/462391]
 +
 {nbsp}
 
@@ -913,7 +896,7 @@ $ kubectl create -f service.yaml
 service/webapp1-svc created
 $ 
 ----
-image::https://asciinema.org/a/462392.svg[link="https://asciinema.org/a/462392?autoplay=1"]
+https://asciinema.org/a/462392?autoplay=1[asciinema.org/a/462392]
 +
 {nbsp}
 
@@ -927,7 +910,7 @@ kubernetes    ClusterIP   10.96.0.1       <none>        443/TCP        28m
 webapp1-svc   NodePort    10.105.23.172   <none>        80:30080/TCP   100s
 $ 
 ----
-image::https://asciinema.org/a/462393.svg[link="https://asciinema.org/a/462393?autoplay=1"]
+https://asciinema.org/a/462393?autoplay=1[asciinema.org/a/462393]
 +
 {nbsp}
 
@@ -952,7 +935,7 @@ External Traffic Policy:  Cluster
 Events:                   <none>
 $ 
 ----
-image::https://asciinema.org/a/462397.svg[link="https://asciinema.org/a/462397?autoplay=1"]
+https://asciinema.org/a/462397?autoplay=1[asciinema.org/a/462397]
 +
 {nbsp}
 
@@ -982,7 +965,7 @@ $ curl host01:30080
 <h1>This request was processed by host: webapp1-6b54fb89d9-qz98l</h1>
 $ 
 ----
-image::https://asciinema.org/a/462398.svg[link="https://asciinema.org/a/462398?autoplay=1"]
+https://asciinema.org/a/462398?autoplay=1[asciinema.org/a/462398]
 +
 {nbsp}
 
@@ -1018,7 +1001,7 @@ $ diff -u deployment.yaml.OLD deployment.yaml | colordiff
        app: webapp1
 $ 
 ----
-image::https://asciinema.org/a/462399.svg[link="https://asciinema.org/a/462399?autoplay=1"]
+https://asciinema.org/a/462399?autoplay=1[asciinema.org/a/462399]
 +
 {nbsp}
 
@@ -1031,7 +1014,7 @@ Warning: kubectl apply should be used on resource created by either kubectl crea
 deployment.apps/webapp1 configured
 $ 
 ----
-image::https://asciinema.org/a/462400.svg[link="https://asciinema.org/a/462400?autoplay=1"]
+https://asciinema.org/a/462400?autoplay=1[asciinema.org/a/462400]
 +
 {nbsp}
 
@@ -1044,7 +1027,7 @@ NAME      READY   UP-TO-DATE   AVAILABLE   AGE
 webapp1   4/4     4            4           36m
 $ 
 ----
-image::https://asciinema.org/a/462402.svg[link="https://asciinema.org/a/462402?autoplay=1"]
+https://asciinema.org/a/462402?autoplay=1[asciinema.org/a/462402]
 +
 {nbsp}
 
@@ -1060,7 +1043,7 @@ webapp1-6b54fb89d9-p8lck   1/1     Running   0          7m50s
 webapp1-6b54fb89d9-qz98l   1/1     Running   0          40m
 $ 
 ----
-image::https://asciinema.org/a/462405.svg[link="https://asciinema.org/a/462405?autoplay=1"]
+https://asciinema.org/a/462405?autoplay=1[asciinema.org/a/462405]
 +
 {nbsp}
 
@@ -1096,7 +1079,7 @@ $ curl host01:30080
 <h1>This request was processed by host: webapp1-6b54fb89d9-p8lck</h1>
 $ 
 ----
-image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?autoplay=1"]
+https://asciinema.org/a/462404?autoplay=1[asciinema.org/a/462404]
 +
 {nbsp}
 
