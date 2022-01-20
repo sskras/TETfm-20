@@ -130,8 +130,8 @@ Skirtas naudotojams, siekiantiems išmėginti Kubernetes ar net vykdyti kasdien�
 
     - konteinerio diegimas iš atvaizdo:
 
-Čia vaizdo įraše padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`. Praktikoje vėliau tai pataisiau, tik nebeįrašiau:
 +
+Čia vaizdo įraše padariau klaidą įterpdamas vieną papildomą raidę: `kataco**n**da`. Praktikoje vėliau tai pataisiau, tik nebeįrašiau:
 +++
 <script id="asciicast-452688" src="https://asciinema.org/a/452688.js" async></script>
 +++
@@ -380,8 +380,8 @@ Mokinsimės _Kubectl_ pagalba kurti ir startuoti įdiegimus, replikavimo valdikl
 
     - tikriname „ankščių“ būsenas:
 
-Čia įrašą sustabdžiau kiek per anksti -- jis nespėja atspindėti pilnos išvesties, parodytos aukščiau, kur atsiranda dvi naujos `http-*` „ankštys“:
 +
+Čia įrašą sustabdžiau kiek per anksti -- jis nespėja atspindėti pilnos išvesties, parodytos aukščiau, kur atsiranda dvi naujos `http-*` „ankštys“:
 +++
 <script id="asciicast-462341" src="https://asciinema.org/a/462341.js" async></script>
 +++
