@@ -1,1 +1,47 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+=== Debesų kompiuterija
+Modulis ELKRM17304
+
+[.text-center]
+== Susipažinimas su Kubernetes platforma
+
+==== Laboratorinio darbo nr. 3 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
