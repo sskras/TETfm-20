@@ -8,12 +8,15 @@ BEGIN {
 {
     if (match ($0, /image::https:..asciinema/))
     {
+      # image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?autoplay=1"]
+      #   =>
+      # <script id="asciicast-462320" src="https://asciinema.org/a/462320.js" async></script>
+
         MATCH_AT = NR
-        sub(/image::/, "")
-        gsub(/^https:..|.svg|.link=.|..$/, " ")
-        URL_TITLE = $1
+        gsub(/^image::https:[^0-9]+|.svg/, " ")
+        CAST_ID = $1
         URL = $2
-        printf("%s[%s]\n", URL, URL_TITLE)
+        printf("<script id=\"asciicast-%s\" src=\"https://asciinema.org/a/%s.js\" async></script>\n", CAST_ID, CAST_ID)
 
       # gsub(/^.*https:..|..$/, "")
       # print
