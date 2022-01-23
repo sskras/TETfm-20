@@ -21,7 +21,7 @@ Debesų kompiuterija
   | SSH      | `stud`    | `45**x**22` ^*^  | `1y8.1z9.200.236` | `cc-lab`
 |===
 
-^*^ -- `**x**` reikšmę rasite žemiau:
+^*^ -- `**x**` reikšmę rasite žemiau:  +
 ^*^ -- `**y**` ir `**z**` reikšmes patikslins dėstytojas:
 
 ==== Prie serverio nr. 2 (iš serverio nr. 1)
