@@ -977,7 +977,7 @@ image::https://asciinema.org/a/462400.svg[link="https://asciinema.org/a/462400?a
 {nbsp}
 
 
-    - tikrinu įdiegimo / klasterio būseną:
+    - tikrinu įdiegimo/klasterio būseną:
 +
 ----
 $ kubectl get deployment
@@ -1066,15 +1066,14 @@ image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?a
 
     - Naudojant YAML failus *tampa neaišku*:
     
-      . kodėl atsiranda `app` raktažodis ? (Panašu, kad vietoj anksčiau naudoto `run`)
-      . ką aprašo `spec.template` ir kas bus, jei **ne**nurodysiu `spec.template.metadata.labels.app` ?  
-        (Kai jau tas pat nurodyta pas `spec.selector.app`)
-      . kodėl įdiegimo apraše vardą `webapp1` reikia nurodyti net 4x:
+      . kodėl atsiranda `app` raktažodis (panašu, kad vietoj anksčiau naudoto `run`) ?
+      . ką aprašo `spec.template` ir kas bus, jei nenurodysiu `spec.template.metadata.labels.app` (kai jau tas pas nurodyta `spec.selector.app`)?
+      . kodėl įdiegimo apraše reikia nurodyt `webapp1` vardą net 4x:
         ** `spec.metadata.name` ?
         ** `spec.selector.matchLabels.app` ?
         ** `spec.template.metadata.labels.app` ?
         ** `spec.template.spec.containers.name` ?
-      . kodėl TCP portą `80` reikia nurodyti tiek įdiegimui (`spec.template.spec.containers.ports`), tiek paslaugai (`spec.ports.port`), kai per CLI pakakdavo nurodyti tik vieną sykį ?
+      . kodėl portą `80` reikia nurodyti tiek įdiegimui (`spec.template.spec.containers.ports`), tiek paslaugai (`spec.ports.port`), kai per CLI pakakdavo nurodyt tik vieną sykį ?
       . ar paslaugos `spec.selector.app` nurodo įdiegimo konteinerį, ar įdiegimo „ankštį“ (galvojant ne YAML scenarijaus sąvokomis) ?
       . Išvada: YAML šablonai įneša painavios į anksčiau susidarytą pradinį supratimą apie K8s.
 
@@ -1102,7 +1101,6 @@ Numatoma aprėpti tokias esmines sąvokas:
     - _NodePortai_
 
 Jos sudaro _Kubernetes_ pagrindą.
-
 
   * Žingsnis 4.1: *klasterio startavimas*
 
@@ -1137,7 +1135,7 @@ controlplane $
 
   * Žingsnis 4.2: *Redis _master_ kontroleris*
 
-    - peržiūriu YAML aprašą:
+    - peržiūriu YAML šabloną:
 +
 ----
 controlplane $ cat redis-master-controller.yaml 
@@ -1184,7 +1182,7 @@ controlplane $
 ----
 
 
-    - tikrinu „ankščių“ / konteinerių būseną:
+    - tikrinu „ankščių“/konteinerių būseną:
 +
 ----
 controlplane $ kubectl get pods
@@ -1196,7 +1194,7 @@ controlplane $
 
   * Žingsnis 4.3: *Redis _master_ paslauga*
 
-    - peržiūriu YAML aprašą:
+    - peržiūriu YAML šabloną:
 +
 ----
 controlplane $ cat redis-master-service.yaml
@@ -1259,7 +1257,7 @@ controlplane $
 
   * Žingsnis 4.4: *Redis _tarnų_ kontroleris*
 
-    - peržiūriu YAML aprašą:
+    - peržiūriu YAML šabloną:
 +
 ----
 controlplane $ cat redis-slave-controller.yaml
@@ -1321,7 +1319,7 @@ controlplane $
 
   * Žingsnis 4.5: *Redis _tarnų_ paslauga*
 
-    - peržiūriu YAML aprašą:
+    - peržiūriu YAML šabloną:
 +
 ----
 controlplane $ cat redis-slave-service.yaml
@@ -1370,7 +1368,7 @@ redis-slave-x8mk8    1/1     Running   0          7m31s
 ----
 
 
-  * Žingsnis 4.6: *Frontendas -- replikacinis valdiklis ir jo „ankštys“*
+  * Žingsnis 4.6: *Frontendas -- replikacinis kontroleris ir ankštys*
 
     - :
 +
