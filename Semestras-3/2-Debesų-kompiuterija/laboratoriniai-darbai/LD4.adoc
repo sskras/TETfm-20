@@ -53,7 +53,7 @@ Skirtas naudotojams, siekiantiems išmėginti Kubernetes ar net vykdyti kasdien�
 
   * Žingsnis 1.1: *startuojame `Minikube`*
 
-    - patikrinu versiją:
+    - patikriname versiją:
 +
 ----
 $ minikube version
@@ -65,7 +65,7 @@ image::https://asciinema.org/a/452640.svg[link="https://asciinema.org/a/452640?a
 {nbsp}
 
 
-    - startuoju VM su `Kubernetes` klasteriu
+    - startuojame VM su `Kubernetes` klasteriu
 +
 ----
 $ minikube start --wait=false
@@ -87,7 +87,7 @@ image::https://asciinema.org/a/452643.svg[link="https://asciinema.org/a/452643?a
 
   * Žingsnis 1.2: *tikriname Kubernetes klasterio informaciją*
 
-    - tikrinu klasterio būseną:
+    - rodome klasterio būseną:
 +
 ----
 $ kubectl cluster-info
@@ -130,7 +130,7 @@ image::https://asciinema.org/a/452688.svg[link="https://asciinema.org/a/452688?a
 {nbsp}
 
 
-    - tikrinu diegimo būseną:
+    - tikriname diegimo būseną:
 +
 ----
 $ kubectl get pods
@@ -150,7 +150,7 @@ image::https://asciinema.org/a/452708.svg[link="https://asciinema.org/a/452708?a
 {nbsp}
 
 
-    - paviešinu konteinerį tinkle:
+    - paviešiname konteinerį tinkle:
 +
 ----
 $ kubectl expose deployment first-deployment --port=80 --type=NodePort
@@ -161,7 +161,7 @@ image::https://asciinema.org/a/452709.svg[link="https://asciinema.org/a/452709?a
 {nbsp}
 
 
-    - susirandu alokuotą TCP-portą ir vykdome HTTP-užklausą:
+    - susirandame alokuotą TCP-portą ir vykdome HTTP-užklausą:
 +
 ----
 $ kubectl get svc first-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}'
@@ -182,7 +182,7 @@ image::https://asciinema.org/a/452711.svg[link="https://asciinema.org/a/452711?a
 
   * Žingsnis 1.4: *_Kubernetes Dashboard_ sąsaja (web-UI)*
 
-    - įgalinu _Minicube_ priedą _Dashboard_:
+    - įgaliname _Minicube_ priedą _Dashboard_:
 +
 ----
 $ minikube addons enable dashboard
@@ -193,7 +193,7 @@ image::https://asciinema.org/a/452714.svg[link="https://asciinema.org/a/452714?a
 {nbsp}
 
 
-    - diegiu _Kubernetes Dashboard_ pagal duotą YAML šabloną:
+    - diegiame _Kubernetes Dashboard_ pagal duotą YAML šabloną:
 +
 ----
 $ kubectl apply -f /opt/kubernetes-dashboard.yaml
@@ -205,7 +205,7 @@ image::https://asciinema.org/a/452718.svg[link="https://asciinema.org/a/452718?a
 {nbsp}
 
 
-    - patikrinu šablono turinį:
+    - patikriname šablono turinį:
 +
 ----
 $ ls -l /opt/kubernetes-dashboard.yaml
@@ -246,7 +246,7 @@ spec:
 +
 {nbsp}
 
-    - stebiu _Dashboard_ konteinerių startą:
+    - stebime _Dashboard_ konteinerių startą:
 +
 ----
 $ kubectl get pods -n kubernetes-dashboard -w
@@ -263,7 +263,7 @@ image::https://asciinema.org/a/452725.svg[link="https://asciinema.org/a/452725?a
 {nbsp}
 
 
-    - tikrinu web-UI sąsają tiesiogiai:  +
+    - tikriname web-UI sąsają tiesiogiai:  +
       https://2886795274-30000-cykoria04.environments.katacoda.com/
       
       ** klasterio apžvalga:
@@ -1044,7 +1044,7 @@ image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?a
 
   * Reziume #3:
 
-    - Įvykdžiau diegimą pagal YAML šabloną (arba YAML apibrėžtį, angl. _definition_):
+    - Įvykdžiau diegimą pagal YAML šabloną (arba apibrėžtį, angl. _definition_):
     
       . gavau Shell su veikiančiu K8s miniklasteriu;
       . įkėliau `deployment.yaml` šabloną;
@@ -1055,7 +1055,7 @@ image::https://asciinema.org/a/462404.svg[link="https://asciinema.org/a/462404?a
       . pagal jį įdiegiau HTTP paslaugą `webapp1-svc`;
       . įsitikinau, kad HTTP paslauga sukonfigūruota;
       . peržiūrėjau jos aprašą, Node Port priskirta `30080/TCP` reikšmė;
-      . patikrinau paslaugos veikimą: ta pati „ankštis“ atsako į visas užklausas iš eilės;
+      . patikrinau paslaugos veikimą: ta pati „ankštis“ atsako visas užklausas iš eilės;
       . padidinau replikų skaičių šablone `deployment.yaml` iki 4;
       . pritaikiau šabloną klasteriui su `kubectl apply` komanda;
       . patikrinau įdiegimo ir „ankščių“ būseną: skaičius pakilo iki 4;
@@ -1097,7 +1097,7 @@ _Redis_ DB susideda iš _masterio_ (duomenų talpinimui) ir rinkinio iš repliku
 Numatoma aprėpti tokias esmines sąvokas:
 
     - „ankštys“
-    - replikavimo valdikliai
+    - replikavimo kontroleriai
     - paslaugos
     - _NodePortai_
 
@@ -1128,18 +1128,14 @@ KubeDNS is running at https://172.17.0.35:6443/api/v1/namespaces/kube-system/ser
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
 controlplane $ kubectl get nodes
-NAME           STATUS     ROLES    AGE   VERSION
-controlplane   NotReady   master   19s   v1.14.0
-
-controlplane $ kubectl get nodes
-NAME           STATUS   ROLES    AGE    VERSION
-controlplane   Ready    master   2m6s   v1.14.0
-node01         Ready    <none>   79s    v1.14.0
+NAME           STATUS   ROLES    AGE     VERSION
+controlplane   Ready    master   6m12s   v1.14.0
+node01         Ready    <none>   5m27s   v1.14.0
 controlplane $ 
 ----
 
 
-  * Žingsnis 4.2: *Redis _master_ valdiklis*
+  * Žingsnis 4.2: *Redis _master_ kontroleris*
 
     - peržiūriu YAML aprašą:
 +
@@ -1169,7 +1165,7 @@ controlplane $
 ----
 
 
-    - sukuriu ir startuoju Redis _masterio_ replikacinį valdiklį:
+    - sukuriu ir startuoju Redis _masterio_ replikacinį kontrolerį:
 +
 ----
 controlplane $ kubectl create -f redis-master-controller.yaml 
@@ -1178,16 +1174,12 @@ controlplane $
 ----
 
 
-    - tikrinu replikacinių valdiklių būseną:
+    - tikrinu replikacinių kontrolerių būseną:
 +
 ----
 controlplane $ kubectl get rc
 NAME           DESIRED   CURRENT   READY   AGE
-redis-master   1         1         0       5s
-
-controlplane $ kubectl get rc
-NAME           DESIRED   CURRENT   READY   AGE
-redis-master   1         1         1       18s
+redis-master   1         1         1       31s
 controlplane $ 
 ----
 
@@ -1197,7 +1189,7 @@ controlplane $
 ----
 controlplane $ kubectl get pods
 NAME                 READY   STATUS    RESTARTS   AGE
-redis-master-bv75w   1/1     Running   0          4m1s
+redis-master-zrnbw   1/1     Running   0          2m38s
 controlplane $ 
 ----
 
@@ -1234,13 +1226,13 @@ controlplane $
 ----
 
 
-    - tikrinu paslaugos būseną:
+    - tikrinu paslaugų būseną:
 +
 ----
 controlplane $ kubectl get services
 NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
-kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP    6m2s
-redis-master   ClusterIP   10.98.222.56   <none>        6379/TCP   4s
+kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP    20m
+redis-master   ClusterIP   10.96.47.163   <none>        6379/TCP   82s
 controlplane $ 
 ----
 
@@ -1255,17 +1247,17 @@ Labels:            name=redis-master
 Annotations:       <none>
 Selector:          name=redis-master
 Type:              ClusterIP
-IP:                10.98.222.56
+IP:                10.96.47.163
 Port:              <unset>  6379/TCP
 TargetPort:        6379/TCP
-Endpoints:         10.88.0.5:6379
+Endpoints:         10.32.0.193:6379
 Session Affinity:  None
 Events:            <none>
 controlplane $ 
 ----
 
 
-  * Žingsnis 4.4: *Redis _tarnų_ valdiklis*
+  * Žingsnis 4.4: *Redis _tarnų_ kontroleris*
 
     - peržiūriu YAML aprašą:
 +
@@ -1303,26 +1295,25 @@ controlplane $
 ----
 
 
-    - sukuriu ir startuoju Redis _tarnų_ replikacinį valdiklį:
+    - sukuriu ir startuoju Redis _tarnų_ replikacinį kontrolerį:
 +
 ----
 controlplane $ kubectl create -f redis-slave-controller.yaml
 replicationcontroller/redis-slave created
-controlplane $ 
 ----
 
 
-    - tikrinu replikacinių valdiklių būseną:
+    - tikrinu replikacinių kontrolerių būseną:
 +
 ----
 controlplane $ kubectl get rc
 NAME           DESIRED   CURRENT   READY   AGE
-redis-master   1         1         1       6m3s
+redis-master   1         1         1       14m
 redis-slave    2         2         0       3s
 
 controlplane $ kubectl get rc
 NAME           DESIRED   CURRENT   READY   AGE
-redis-master   1         1         1       6m5s
+redis-master   1         1         1       14m
 redis-slave    2         2         2       5s
 controlplane $ 
 ----
@@ -1346,7 +1337,6 @@ spec:
   - port: 6379
   selector:
     name: redis-slave
-controlplane $ 
 ----
 
 
@@ -1355,19 +1345,17 @@ controlplane $
 ----
 controlplane $ kubectl create -f redis-slave-service.yaml
 service/redis-slave created
-controlplane $ 
 ----
 
 
-    - tikrinu paslaugos būseną:
+    - tikrinu paslaugų būseną:
 +
 ----
 controlplane $ kubectl get services
 NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
-kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP    8m10s
-redis-master   ClusterIP   10.98.222.56   <none>        6379/TCP   2m12s
-redis-slave    ClusterIP   10.98.98.227   <none>        6379/TCP   1s
-controlplane $ 
+kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP    33m
+redis-master   ClusterIP   10.96.47.163   <none>        6379/TCP   14m
+redis-slave    ClusterIP   10.111.48.51   <none>        6379/TCP   74s
 ----
 
 
@@ -1376,204 +1364,14 @@ controlplane $
 ----
 controlplane $ kubectl get pods
 NAME                 READY   STATUS    RESTARTS   AGE
-redis-master-bv75w   1/1     Running   0          7m23s
-redis-slave-bfzm9    1/1     Running   0          83s
-redis-slave-f5f9f    1/1     Running   0          83s
-controlplane $ 
+redis-master-zrnbw   1/1     Running   0          22m
+redis-slave-9lc9b    1/1     Running   0          7m31s
+redis-slave-x8mk8    1/1     Running   0          7m31s
 ----
 
 
   * Žingsnis 4.6: *Frontendas -- replikacinis valdiklis ir jo „ankštys“*
 
-    - peržiūriu YAML aprašą:
+    - :
 +
 ----
-controlplane $ cat frontend-controller.yaml 
-apiVersion: v1
-kind: ReplicationController
-metadata:
-  name: frontend
-  labels:
-    name: frontend
-spec:
-  replicas: 3
-  selector:
-    name: frontend
-  template:
-    metadata:
-      labels:
-        name: frontend
-    spec:
-      containers:
-      - name: php-redis
-        image: gcr.io/google_samples/gb-frontend:v3
-        env:
-        - name: GET_HOSTS_FROM
-          value: dns
-          # If your cluster config does not include a dns service, then to
-          # instead access environment variables to find service host
-          # info, comment out the 'value: dns' line above, and uncomment the
-          # line below.
-          # value: env
-        ports:
-        - containerPort: 80
-controlplane $ 
-----
-
-
-    - sukuriu ir startuoju replikacinį valdiklį pagal `gcr.io/google_samples/gb-frontend` atvaizdą:
-+
-----
-controlplane $ kubectl create -f frontend-controller.yaml 
-replicationcontroller/frontend created
-controlplane $ 
-----
-
-
-    - tikrinu replikacinių valdiklių būsenas:
-+
-----
-controlplane $ kubectl get rc
-NAME           DESIRED   CURRENT   READY   AGE
-frontend       3         3         3       88s
-redis-master   1         1         1       12m
-redis-slave    2         2         2       6m53s
-controlplane $ kubectl get pods
-----
-
-
-    - tikrinu „ankščių“ būsenas:
-+
-----
-controlplane $ kubectl get pods
-NAME                 READY   STATUS    RESTARTS   AGE
-frontend-ctpql       1/1     Running   0          93s
-frontend-dwkqh       1/1     Running   0          93s
-frontend-g998c       1/1     Running   0          93s
-redis-master-bv75w   1/1     Running   0          12m
-redis-slave-bfzm9    1/1     Running   0          6m58s
-redis-slave-f5f9f    1/1     Running   0          6m58s
-----
-
-
-  * Žingsnis 4.7: *„Svečių knygos“ frontendinė paslauga*
-
-    - peržiūriu YAML aprašą:
-+
-----
-controlplane $ cat frontend-service.yaml 
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend
-  labels:
-    name: frontend
-spec:
-  # if your cluster supports it, uncomment the following to automatically create
-  # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
-  type: NodePort
-  ports:
-    # the port that this service should serve on
-    - port: 80
-      nodePort: 30080
-  selector:
-    name: frontend
-controlplane $ 
-----
-
-
-    - sukuriu ir startuoju frontedinę paslaugą:
-+
-----
-controlplane $ kubectl create -f frontend-service.yaml 
-service/frontend created
-controlplane $ 
-----
-
-
-    - tikrinu frontendinės paslaugos būseną:
-+
-----
-controlplane $ kubectl get services
-NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
-frontend       NodePort    10.96.81.216   <none>        80:30080/TCP   114s
-kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP        45m
-redis-master   ClusterIP   10.98.222.56   <none>        6379/TCP       39m
-redis-slave    ClusterIP   10.98.98.227   <none>        6379/TCP       37m
-controlplane $ 
-----
-
-
-  * Žingsnis 4.8: *Jungiamės į „Svečių knygos“ frontendą*
-
-    - tikrinu visų „ankščių“ būsenas (įsk. ir frontendines):
-+
-----
-controlplane $ kubectl get pods
-NAME                 READY   STATUS    RESTARTS   AGE
-frontend-ctpql       1/1     Running   0          43m
-frontend-dwkqh       1/1     Running   0          43m
-frontend-g998c       1/1     Running   0          43m
-redis-master-bv75w   1/1     Running   0          55m
-redis-slave-bfzm9    1/1     Running   0          49m
-redis-slave-f5f9f    1/1     Running   0          49m
-controlplane $ 
-----
-
-
-    - išsifiltruoju frontendinės paslaugos Node-portą:
-+
-----
-controlplane $ kubectl describe service frontend | grep NodePort:
-NodePort:                 <unset>  30080/TCP
-controlplane $ 
-----
-
-
-    - tikrinu Web-aplikaciją tiesiogiai (URL gautas iš treniruoklio puslapio):  +
-      https://2886795348-30080-frugo01.environments.katacoda.com/
-+
-image::https://user-images.githubusercontent.com/74717106/149956447-fb106765-4990-4f70-8d05-24dc87f3c052.png[]
-+
-{nbsp}
-
-
-  * Reziume #4:
-
-    - Įvykdžiau diegimą pagal YAML šabloną (arba YAML apibrėžtį, angl. _definition_):
-    
-      . gavau Shell su veikiančiu _K8s_ miniklasteriu;
-      
-      . taip pat gavau šešis YAML šablonus:
-        ** `redis-master-controller.yaml`
-        ** `redis-master-service.yaml`
-        ** `redis-slave-controller.yaml`
-        ** `redis-slave-service.yaml`
-        ** `frontend-controller.yaml`
-        ** `frontend-service.yaml`
-        
-      . pagal juos įdiegiau:
-        ** `redis-master` replikacinį valdiklį iš Docker atvaizdo `redis:3.0.7-alpine`;
-        ** `redis-master` paslaugą (1 vnt.);
-        ** `redis-slave` replikacinį valdiklį iš Docker atvaizdo `gb-redisslave:v1`;
-        ** `redis-slave` paslaugą (2 vnt.);
-        ** `frontend` replikacinį valdiklį iš Docker atvaizdo `gb-frontend:v3`;
-        ** `frontend` paslaugą (3 vnt.);
-        
-      . patikrinau būsenas:
-        ** replikacinių valdiklių,
-        ** paslaugų
-        ** „ankščių“,
-+
--- veikia 3 valdikliai, 3 paslaugos ir 6 „ankštys“.
-
-      . patikrinau paslaugos veikimą iš išorinio interneto -- veikia puikiai;
-      
-      . tyrimas baigtas.
-
-    - Naudojant YAML failus man *tampa išvis neaišku*, kaip konfigūruoti moduliai sąveikauja žemame lygmenyje.  +
-      Suvokiu tik abstraktų vaizdą, ir visiškai neaišku, kaip reikėtų tikrinti srautus / paslaugų strigimus įprastinėmis OS priemonėmis.
-
-* Minimaliai susipažinta su Kubernetes platforma.  +
-  Laboratorinio darbo pabaiga.
