@@ -18,10 +18,11 @@ Debesų kompiuterija
 |===
   | Service  | Username  | TCP port         | IP                | Hostname
 
-  | SSH      | `stud`    | `45**x**22` ^*^  | `158.129.200.236` | `cc-lab`
+  | SSH      | `stud`    | `45**x**22` ^*^  | `1y8.1z9.200.236` | `cc-lab`
 |===
 
 ^*^ -- `**x**` reikšmę rasite žemiau:
+^*^ -- `**y**` ir `**z**` reikšmes patikslins dėstytojas:
 
 ==== Prie serverio nr. 2 (iš serverio nr. 1)
 |===
