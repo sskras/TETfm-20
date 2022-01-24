@@ -579,7 +579,7 @@ stud@cc-lab:~$
 
 
 [.text-left]
-==== Serverių pasiekimas naudojantis SSH raktu
+==== Serverio nr. 1 (testinis) pasiekimas naudojantis SSH raktu
 
 Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: <<1>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
@@ -735,8 +735,7 @@ Connection to serveris1 closed.
 stud@cc-lab:~$ 
 ----
 
-=> SSH raktas veikia jungiantis į savo paties serverį.
-
+=> Testinis SSH prisijungimas raktu veikia (į savo paties serverį).
 
 
 [.text-left]
@@ -800,6 +799,14 @@ all:
     ungrouped: {}
 stud@cc-lab:~$ 
 ----
+
+
+<<<
+
+
+[.text-left]
+== Darbo eiga
+
 
 <<<
 
