@@ -579,10 +579,9 @@ stud@cc-lab:~$
 
 
 [.text-left]
-==== Serverio nr. 2 pasiekimas naudojantis SSH raktu
+==== Serverių pasiekimas naudojantis SSH raktu
 
-Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys]
-
+Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: <<1>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
 
 ----
@@ -613,9 +612,9 @@ stud@cc-lab:~$
 
 => Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame, atskirame SSH mazgų įraše.
 
-=> Tad dėl tvarkos reiktų į save jungtis vardu (ne IP adresu).
+=> Tad dėl tvarkos reiktų jungtis vardu (ne vien IP adresu, kuris į įrašą pateks vis tiek).
 
-=> O tam, kad įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
+=> O tam, kad šio įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
 
 Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminio vardų failo
 ir įrašau adekvatų vardą:
@@ -661,10 +660,12 @@ rtt min/avg/max/mdev = 0.055/0.057/0.060/0.002 ms
 stud@cc-lab:~$ 
 ----
 
-=> Prieš viešo SSH rakto kopijavimą verta patvirtinti, kad jo ECDSA rakto pėdsakas yra autentiškas.  +
-   Nors realiai nesu įsitikinęs, kaip turėčiau jį patikrinti + atpažinti „pasiklausymą“ / MITM ataką.
+=> Prieš viešojo SSH rakto kopijavimą į serverį tenka patikslinti,
+   ar serverio ECDSA rakto pėdsakas yra autentiškas.
+   +
+   Visiškai nesu įsitikinęs, kaip turėčiau jį patikrinti + atpažinti „pasiklausymą“ / MITM ataką. <<2>>
 
-Jungiuos prie serverio su slaptažodžiu ir iškart atsijungiu su `^D`:
+Jungiuos prie serverio su slaptažodžiu, patvirtinu pėdską ir iškart atsijungiu su `^D` kombinacija:
 
 ----
 stud@cc-lab:~$ ssh serveris1
@@ -799,3 +800,13 @@ all:
     ungrouped: {}
 stud@cc-lab:~$ 
 ----
+
+<<<
+
+
+[bibliography]
+=== Nuorodos
+
+`2020-04-23` **[[[1]]]** `digitalocean.com`, Brian Boucheron, https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys]
+
+`2021-02-13` **[[[2]]]** `jumpnowtek.com`, LLC Jumpnow Technologies, https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html[SSH Hostkey Fingerprints]
