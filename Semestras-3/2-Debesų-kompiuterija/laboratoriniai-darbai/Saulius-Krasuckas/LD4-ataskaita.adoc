@@ -322,9 +322,15 @@ stud@cc-lab:~$
 [.text-left]
 ==== SSH ryšio tarp serverių nr. 1 ir nr. 2 užtikrinimas
 
-Patikrinu kai kuriuos serverio nr. 1 IP adresus:
+Patikrinu kai kuriuos serverio nr. 1 IP nustatymus:
 
 ----
+stud@cc-lab:~$ ip r
+default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
+10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.8
+10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.8 metric 100
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+
 stud@cc-lab:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -340,12 +346,6 @@ stud@cc-lab:~$ ip a
     link/ether 02:42:5b:81:0f:4a brd ff:ff:ff:ff:ff:ff
     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
        valid_lft forever preferred_lft forever
-
-stud@cc-lab:~$ ip a | awk '/inet/'
-    inet 127.0.0.1/8 scope host lo
-    inet 10.128.67.8/24 brd 10.128.67.255 scope global ens160
-    inet6 fe80::250:56ff:fe9a:28de/64 scope link
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
 stud@cc-lab:~$ 
 ----
 
@@ -479,13 +479,138 @@ Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
 stud@cc-lab:~$ 
 ----
 
-Ir ieškau jų skenuodamas potinklį:
+Ir ieškau jų skenuodamas duotą vidinį potinklį:
 
 ----
-stud@cc-lab:~$ ip r
-default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
-10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.8
-10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.8 metric 100
-172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+stud@cc-lab:~$ ip a | awk '/inet/'
+    inet 127.0.0.1/8 scope host lo
+    inet 10.128.67.8/24 brd 10.128.67.255 scope global ens160
+    inet6 fe80::250:56ff:fe9a:28de/64 scope link
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+stud@cc-lab:~$ sudo nmap -sP 10.128.67.8/24
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-12-07 16:44 UTC
+Nmap scan report for 10.128.67.3
+Host is up (0.00025s latency).
+MAC Address: 00:50:56:9A:2F:79 (VMware)
+Nmap scan report for 10.128.67.4
+Host is up (0.00017s latency).
+MAC Address: 00:50:56:9A:D3:7C (VMware)
+Nmap scan report for 10.128.67.5
+Host is up (0.00016s latency).
+MAC Address: 00:50:56:9A:FD:C6 (VMware)
+Nmap scan report for 10.128.67.6
+Host is up (0.00016s latency).
+MAC Address: 00:50:56:9A:04:4E (VMware)
+Nmap scan report for 10.128.67.9
+Host is up (0.00023s latency).
+MAC Address: 00:50:56:9A:B7:C7 (VMware)
+Nmap scan report for 10.128.67.10
+Host is up (0.00017s latency).
+MAC Address: 00:50:56:9A:2A:F0 (VMware)
+Nmap scan report for 10.128.67.11
+Host is up (0.00016s latency).
+MAC Address: 00:50:56:9A:BD:36 (VMware)
+Nmap scan report for 10.128.67.12
+Host is up (0.00011s latency).
+MAC Address: 00:50:56:9A:5A:91 (VMware)
+Nmap scan report for cc-lab (10.128.67.8)
+Host is up.
+Nmap done: 256 IP addresses (9 hosts up) scanned in 1.82 seconds
+stud@cc-lab:~$ 
+----
+
+=> Kol neaišku, kas kam priklauso, nutariu treniruotis su savo serveriu `10.128.67.8` kaip taikiniu.
+
+Tikrinu `/etc/hosts` failo formatą ir turinį:
 
 ----
+stud@cc-lab:~$ tail /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 cc-lab
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+stud@cc-lab:~$ 
+----
+
+Aprašau savo serverį, tik vardu `serveris2`:
+
+----
+stud@cc-lab:~$ echo '10.128.67.8    serveris2' >> /etc/hosts
+-bash: /etc/hosts: Permission denied
+
+stud@cc-lab:~$ echo '10.128.67.8    serveris2' | sudo tee -a /etc/hosts
+10.128.67.8    serveris2
+
+stud@cc-lab:~$ tail /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 cc-lab
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+10.128.67.8    serveris2
+stud@cc-lab:~$ 
+----
+
+Patikrinu vardo išsprendimą:
+
+----
+stud@cc-lab:~$ ping serveris2
+PING serveris2 (10.128.67.8) 56(84) bytes of data.
+64 bytes from serveris2 (10.128.67.8): icmp_seq=1 ttl=64 time=0.084 ms
+64 bytes from serveris2 (10.128.67.8): icmp_seq=2 ttl=64 time=0.053 ms
+^C
+--- serveris2 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1016ms
+rtt min/avg/max/mdev = 0.053/0.068/0.084/0.015 ms
+stud@cc-lab:~$ 
+----
+
+=> Laikinas vardas veikia.
+
+
+[.text-left]
+==== Serverio nr. 2 pasiekimas naudojantis SSH raktu
+
+Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys]
+
+Sukuriu `stud` paskyrai naują SSH raktą:
+
+----
+stud@cc-lab:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/stud/.ssh/id_rsa):
+Created directory '/home/stud/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/stud/.ssh/id_rsa
+Your public key has been saved in /home/stud/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:eRmPaDqOuSZ8j+MXGe9DMROb9ewfCVJqK/OIjWWDH4g stud@cc-lab
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|        . . .    |
+|         =.=     |
+|      . *o+=+    |
+|     . *S=++.. . |
+|    E =oX.. . o  |
+| .    o@ B   . . |
+|  o +=+.* .   .  |
+|   =*=o  .       |
++----[SHA256]-----+
+stud@cc-lab:~$ 
+----
+
+=> Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas apie jį išsisaugos jame pačiame atskirame SSH mazgų įraše.
+=> Tad dėl tvarkos reiktų į save jungtis vardu (ne IP adresu).
+=> O tam, kad įrašo SSH mazgų vėliau nereiktų pildyti/taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
