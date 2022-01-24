@@ -1,1 +1,145 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+=== Debesų kompiuterija
+Modulis ELKRM17304
+
+[.text-center]
+== Susipažinimas su Kubernetes platforma
+
+Laboratorinio darbo nr. 3 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+
+
+{nbsp}
+
+[.text-center]
+==== Laboratorinis darbas nr. 4
+
+[.text-center]
+== Automatizavimas `Ansible` pagalba
+
+
+{nbsp}
+
+[.text-center]
+=== Darbo tikslas
+
+[.text-left]
+* Išbandyti `Ansible` įrankį.
+
+
+[.text-center]
+=== Darbo eiga
+
+[.text-left]
+
+==== Prisijungimas ir pasiruošimas
+
+* Prisijungiau prie savo **serverio nr. 1**
+
+Kol laukiau SSH paslaugos pasiekiamumo, tikrinau nurodytą TCP prievadą.
+Prisiminiau ir išmėginau kelis būdus:
+
+----
+$ ssh 158.129.200.236 45522
+ssh: connect to host 158.129.200.236 port 22: Connection timed out
+----
+
+
+----
+$ telnet 158.129.200.236 45522
+Trying 158.129.200.236...
+^C
+----
+
+
+----
+$ ssh ssh://stud@158.129.200.236:45522
+^C
+----
+
+Išskyrus `netcat`, kurį spėjau tik įsidiegti:
+
+----
+$ pacman -S openbsd-netcat
+resolving dependencies...
+looking for conflicting packages...
+Packages (1) openbsd-netcat-1.217_2-1
+Total Download Size:   0.03 MiB
+Total Installed Size:  0.12 MiB
+
+:: Proceed with installation? [Y/n]
+:: Retrieving packages...
+ openbsd-netcat-1.217_2-1-x86_64                                             35.4 KiB  37.8 KiB/s 00:01 [#############################################################] 100% 
+(1/1) checking keys in keyring                                                                          [#############################################################] 100% 
+(1/1) checking package integrity                                                                        [#############################################################] 100% 
+(1/1) loading package files                                                                             [#############################################################] 100% 
+(1/1) checking for file conflicts                                                                       [#############################################################] 100% 
+(1/1) checking available disk space                                                                     [#############################################################] 100% 
+:: Processing package changes...                                                                                                                                             
+(1/1) installing openbsd-netcat                                                                         [#############################################################] 100%
+----
+
+Ir tuomet paslauga tapo pasiekiama:
+
+----
+$ telnet 158.129.200.236 45522
+Trying 158.129.200.236...
+Connected to 158.129.200.236.
+Escape character is '^]'.
+SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.3
+
+Connection closed by foreign host.
+----
