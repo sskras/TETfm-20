@@ -21,9 +21,9 @@
 Modulis ELKRM17304
 
 [.text-center]
-== Susipažinimas su Kubernetes platforma
+== Automatizavimas Ansible pagalba
 
-Laboratorinio darbo nr. 3 ataskaita
+Laboratorinio darbo nr. 4 ataskaita
 
 {nbsp}
 
