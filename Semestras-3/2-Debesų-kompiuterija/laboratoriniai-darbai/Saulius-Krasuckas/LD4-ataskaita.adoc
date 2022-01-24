@@ -74,24 +74,23 @@ VILNIUS, 2022
 {nbsp}
 
 [.text-center]
-=== Darbo tikslas
+== Darbo tikslas
 
 [.text-left]
 * Išbandyti `Ansible` įrankį.
 
 
 [.text-center]
-=== Darbo eiga
+== Darbo eiga
 
 
 [.text-left]
-==== Įrankių pasiruošimas
+=== Infrastruktūros pasiruošimas
 
 Šiuo metu KDV naudoju Windows10.
 Darbui pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_. Pastaroji Windows OS emuliuoja *nix aplinką.
 
 
-[.text-left]
 ==== Prisijungimas prie savo **serverio nr. 1**
 
 Kol laukiau SSH paslaugos pasiekiamumo, tikrinau nurodytą TCP prievadą.
@@ -190,7 +189,6 @@ stud@cc-lab:~$
 ----
 
 
-[.text-left]
 ==== Gauto OS atnaujinimas:
 
 ----
@@ -210,7 +208,7 @@ Reading state information... Done
 stud@cc-lab:~$ 
 ----
 
-[.text-left]
+
 ==== _Ansible_ įdiegimas:
 
 ----
@@ -320,7 +318,6 @@ stud@cc-lab:~$
 ----
 
 
-[.text-left]
 ==== Ryšio tarp serverių nr. 1 ir nr. 2 tikrinimas ir aprašymas
 
 Patikrinu kai kuriuos serverio nr. 1 IP nustatymus:
@@ -579,8 +576,7 @@ stud@cc-lab:~$
 * => Laikinas vardas veikia.
 
 
-[.text-left]
-==== SSH ryšio ir rakto  paruošimas
+==== SSH ryšio ir rakto paruošimas
 
 Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: <<1>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
@@ -681,7 +677,6 @@ stud@cc-lab:~$
 ----
 
 
-[.text-left]
 ==== Serverio nr. 1 (testinis) pasiekimas naudojantis SSH raktu
 
 Kopijuoju SSH raktą į savo paties serverį:
@@ -744,7 +739,10 @@ stud@cc-lab:~$
 
 
 [.text-left]
-=== _Inventory_ failo testinis paruošimas:
+=== _Inventory_ failo paruošimas
+
+
+==== Testinė konfigūracija
 
 Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį failą `/etc/ansible/hosts`
 (iš atminties pasirodė, jog formatas toks pat):
@@ -806,6 +804,9 @@ all:
     ungrouped: {}
 stud@cc-lab:~$ 
 ----
+
+
+==== Pirmas _Inventory_ failo testas
 
 Tikrinu Ansible gebėjimą jungtis prie testinio inventorinio (t. y. savo paties) serverio:
 
