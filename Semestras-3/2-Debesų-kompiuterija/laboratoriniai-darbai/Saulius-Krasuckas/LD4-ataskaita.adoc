@@ -677,7 +677,7 @@ stud@cc-lab:~$
 ----
 
 
-==== Serverio nr. 1 (testinis) pasiekimas naudojantis SSH raktu
+==== Serverio nr. 1 (testinis) savęs pasiekimas naudojantis SSH raktu
 
 Kopijuoju SSH raktą į savo paties serverį:
 
@@ -744,7 +744,7 @@ stud@cc-lab:~$
 
 ==== Testinė konfigūracija
 
-Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį failą `/etc/ansible/hosts`
+Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį inventorinį failą `/etc/ansible/hosts`
 (iš atminties pasirodė, jog formatas toks pat):
 
 ----
@@ -773,9 +773,9 @@ all:
 stud@cc-lab:~$ 
 ----
 
-* => Bloga konfigūracinio failo struktūra.
+* => Bloga inventorinio failo struktūra.
 
-Šalinu tris savo įterptas eilutes interaktyviai taisydamas failo turinį:
+Šalinu tris savo įterptas eilutes (interaktyviai taisydamas failo turinį):
 
 ----
 stud@cc-lab:~$ sudo vim /etc/ansible/hosts
@@ -783,7 +783,7 @@ stud@cc-lab:~$ sudo vim /etc/ansible/hosts
 stud@cc-lab:~$ 
 ----
 
-Kol rasiu klaidą, aprašau mazgą nenaudodamas vardo išvis, tik IP adresu:
+Kol rasiu klaidą, inventoriuje aprašau mazgą nenaudodamas vardo išvis -- tik IP adresą:
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8' | sudo tee -a /etc/ansible/hosts
