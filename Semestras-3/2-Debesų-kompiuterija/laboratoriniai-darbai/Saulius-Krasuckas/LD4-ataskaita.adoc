@@ -822,7 +822,7 @@ stud@cc-lab:~$ ansible all -m ping -u stud
 stud@cc-lab:~$ 
 ----
 
-* => Ansible mazgas prisijungia prie paties savęs.
+* => Ansible mazgas jau prisijungia prie paties savęs.
 
 TODO
 
