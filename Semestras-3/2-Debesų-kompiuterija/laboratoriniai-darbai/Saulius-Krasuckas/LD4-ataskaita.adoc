@@ -611,7 +611,7 @@ The key's randomart image is:
 stud@cc-lab:~$ 
 ----
 
-=> Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas apie jį išsisaugos jame pačiame atskirame SSH mazgų įraše.
+=> Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame, atskirame SSH mazgų įraše.
 
 => Tad dėl tvarkos reiktų į save jungtis vardu (ne IP adresu).
 
