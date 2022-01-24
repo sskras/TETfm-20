@@ -521,7 +521,7 @@ Nmap done: 256 IP addresses (9 hosts up) scanned in 1.82 seconds
 stud@cc-lab:~$ 
 ----
 
-* => Kol neaišku, kuris IP kuriam magistrantui priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip taikiniu.
+* => Kol neaišku, kuris IP kam priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip pagrindiniu taikiniu.
 
 Tikrinu `/etc/hosts` failo formatą ir turinį:
 
@@ -580,7 +580,7 @@ stud@cc-lab:~$
 
 
 [.text-left]
-==== SSH rakto paruošimas
+==== SSH ryšio ir rakto  paruošimas
 
 Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: <<1>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
