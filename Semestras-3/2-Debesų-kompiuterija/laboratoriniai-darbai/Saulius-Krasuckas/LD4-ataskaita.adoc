@@ -735,14 +735,14 @@ Connection to serveris1 closed.
 stud@cc-lab:~$ 
 ----
 
-=> Testinis SSH prisijungimas raktu veikia (į savo paties serverį).
+=> Testinis SSH prisijungimas raktu jau veikia (į savo paties serverį).
 
 
 [.text-left]
 === _Inventory_ failo paruošimas:
 
-Bandau tokiu pat formatu įtraukti mazgo aprašymą į `/etc/ansible/hosts`
-(iš atminties atrodo, kad toks pat):
+Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį failą `/etc/ansible/hosts`
+(iš atminties pasirodė, jog formatas toks pat):
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8    serveris2' | sudo tee -a /etc/ansible/hosts
@@ -751,6 +751,8 @@ stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n
 10.128.67.8    serveris2
 stud@cc-lab:~$ 
 ----
+
+=> Čia apibrėžiau serverių grupę `servers`.
 
 Tikrinu inventoriaus failą:
 
@@ -768,9 +770,9 @@ all:
 stud@cc-lab:~$ 
 ----
 
-=> Bloga struktūra.
+=> Bloga konfigūracinio failo struktūra.
 
-Šalinu tris savo įterptas eilutes:
+Šalinu tris savo įterptas eilutes interaktyviai taisydamas failo turinį:
 
 ----
 stud@cc-lab:~$ sudo vim /etc/ansible/hosts
@@ -778,7 +780,7 @@ stud@cc-lab:~$ sudo vim /etc/ansible/hosts
 stud@cc-lab:~$ 
 ----
 
-Kol rasiu klaidą, aprašau mazgą nenaudodamas vardo:
+Kol rasiu klaidą, aprašau mazgą nenaudodamas vardo išvis, tik IP adresu:
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8' | sudo tee -a /etc/ansible/hosts
@@ -787,7 +789,7 @@ stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n
 10.128.67.8
 ----
 
-Ansible inventorius pradėjo veikti:
+Dabar Ansible inventorius pradėjo veikti:
 
 ----
 stud@cc-lab:~$ ansible-inventory --list -y
@@ -800,14 +802,23 @@ all:
 stud@cc-lab:~$ 
 ----
 
+Tikrinu Ansible gebėjimą jungtis prie testinio inventorinio (t. y. savo paties) serverio:
 
-<<<
+----
+stud@cc-lab:~$ ansible all -m ping -u stud
+10.128.67.8 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+stud@cc-lab:~$ 
+----
 
+=> Ansible mazgas prisijungia prie paties savęs.
 
-[.text-left]
-== Darbo eiga
-
-
+TODO
 <<<
 
 
