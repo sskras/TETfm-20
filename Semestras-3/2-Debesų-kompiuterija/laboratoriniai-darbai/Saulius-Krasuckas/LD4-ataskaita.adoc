@@ -616,3 +616,122 @@ stud@cc-lab:~$
 => Tad dėl tvarkos reiktų į save jungtis vardu (ne IP adresu).
 
 => O tam, kad įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
+
+Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminio vardų failo
+ir įrašau adekvatų vardą:
+
+----
+stud@cc-lab:~$ sudo vim /etc/hosts
+  ...
+
+stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n10.128.67.8    serveris1' | sudo tee -a /etc/hosts
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+10.128.67.8    serveris1
+stud@cc-lab:~$ 
+----
+
+Įsitikinu, kad failą sukonfigūravau teisingai:
+
+----
+stud@cc-lab:~$ tail /etc/hosts
+127.0.1.1 cc-lab
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+10.128.67.8    serveris1
+stud@cc-lab:~$ 
+----
+
+Tikrinu vardą `serveris1`, išsisprendžia:
+
+----
+stud@cc-lab:~$ ping serveris1
+PING serveris1 (10.128.67.8) 56(84) bytes of data.
+64 bytes from serveris1 (10.128.67.8): icmp_seq=1 ttl=64 time=0.060 ms
+64 bytes from serveris1 (10.128.67.8): icmp_seq=2 ttl=64 time=0.055 ms
+^C
+--- serveris1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 0.055/0.057/0.060/0.002 ms
+stud@cc-lab:~$ 
+----
+
+=> Prieš viešo SSH rakto kopijavimą verta patvirtinti, kad jo ECDSA rakto pėdsakas yra autentiškas.  +
+   Nors realiai nesu įsitikinęs, kaip turėčiau jį patikrinti + atpažinti „pasiklausymą“ / MITM ataką.
+
+Jungiuos prie serverio su slaptažodžiu ir iškart atsijungiu su `^D`:
+
+----
+stud@cc-lab:~$ ssh serveris1
+The authenticity of host 'serveris1 (10.128.67.8)' can't be established.
+ECDSA key fingerprint is SHA256:53taBSfMAMqEJLYWDEYZqm5IOYHYeEiBNK6eUve1agE.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'serveris1,10.128.67.8' (ECDSA) to the list of known hosts.
+stud@serveris1's password:
+
+stud@cc-lab:~$ ^D
+stud@cc-lab:~$ 
+----
+
+Pagaliau kopijuoju SSH raktą į savo paties serverį:
+
+----
+stud@cc-lab:~$ ssh-copy-id serveris1
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/stud/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+stud@serveris1's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'serveris1'"
+and check to make sure that only the key(s) you wanted were added.
+
+stud@cc-lab:~$ 
+----
+
+Ir tikrinu SSH prisijungimą raktu:
+
+----
+stud@cc-lab:~$ ssh serveris1
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-90-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue 07 Dec 2021 04:54:55 PM UTC
+
+  System load:  0.02               Processes:                233
+  Usage of /:   42.0% of 19.56GB   Users logged in:          1
+  Memory usage: 11%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for ens160:  10.128.67.8
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+41 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Dec  7 16:31:43 2021 from 86.38.73.194
+
+stud@cc-lab:~$ w
+ 16:54:58 up 57 min,  2 users,  load average: 0.10, 0.04, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+stud     pts/0    86.38.73.194     16:31    1.00s  0.25s  0.02s ssh serveris1
+stud     pts/1    10.128.67.8      16:54    2.00s  0.05s  0.00s w
+stud@cc-lab:~$ logout
+Connection to serveris1 closed.
+stud@cc-lab:~$ 
+----
+
+=> SSH raktas veikia jungiantis į savo paties serverį.
+
