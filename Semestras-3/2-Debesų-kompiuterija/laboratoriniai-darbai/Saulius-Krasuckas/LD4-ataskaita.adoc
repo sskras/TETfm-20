@@ -319,18 +319,13 @@ Processing triggers for man-db (2.9.1-1) ...
 stud@cc-lab:~$ 
 ----
 
+
 [.text-left]
-==== SSH ryšio tarp serverių nr. 1 ir nr. 2 užtikrinimas
+==== Ryšio tarp serverių nr. 1 ir nr. 2 tikrinimas ir aprašymas
 
 Patikrinu kai kuriuos serverio nr. 1 IP nustatymus:
 
 ----
-stud@cc-lab:~$ ip r
-default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
-10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.8
-10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.8 metric 100
-172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
-
 stud@cc-lab:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -346,6 +341,12 @@ stud@cc-lab:~$ ip a
     link/ether 02:42:5b:81:0f:4a brd ff:ff:ff:ff:ff:ff
     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
        valid_lft forever preferred_lft forever
+
+stud@cc-lab:~$ ip r
+default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
+10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.8
+10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.8 metric 100
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
 stud@cc-lab:~$ 
 ----
 
@@ -520,7 +521,7 @@ Nmap done: 256 IP addresses (9 hosts up) scanned in 1.82 seconds
 stud@cc-lab:~$ 
 ----
 
-=> Kol neaišku, kas kam priklauso, nutariu treniruotis su savo serveriu `10.128.67.8` kaip taikiniu.
+=> Kol neaišku, kuris IP kuriam magistrantui priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip taikiniu.
 
 Tikrinu `/etc/hosts` failo formatą ir turinį:
 
@@ -579,7 +580,7 @@ stud@cc-lab:~$
 
 
 [.text-left]
-==== Serverio nr. 1 (testinis) pasiekimas naudojantis SSH raktu
+==== SSH rakto paruošimas
 
 Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: <<1>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
@@ -610,7 +611,7 @@ The key's randomart image is:
 stud@cc-lab:~$ 
 ----
 
-=> Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame, atskirame SSH mazgų įraše.
+=> Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame kaip atskiras SSH mazgų įrašas.
 
 => Tad dėl tvarkos reiktų jungtis vardu (ne vien IP adresu, kuris į įrašą pateks vis tiek).
 
@@ -661,11 +662,11 @@ stud@cc-lab:~$
 ----
 
 => Prieš viešojo SSH rakto kopijavimą į serverį tenka patikslinti,
-   ar serverio ECDSA rakto pėdsakas yra autentiškas.
+   ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
    +
    Visiškai nesu įsitikinęs, kaip turėčiau jį patikrinti + atpažinti „pasiklausymą“ / MITM ataką. <<2>>
 
-Jungiuos prie serverio su slaptažodžiu, patvirtinu pėdską ir iškart atsijungiu su `^D` kombinacija:
+Jungiuosi prie savo serverio su slaptažodžiu, patvirtinu rakto eliptinį pėdsaką ir iškart atsijungiu su `^D` kombinacija:
 
 ----
 stud@cc-lab:~$ ssh serveris1
@@ -679,7 +680,11 @@ stud@cc-lab:~$ ^D
 stud@cc-lab:~$ 
 ----
 
-Pagaliau kopijuoju SSH raktą į savo paties serverį:
+
+[.text-left]
+==== Serverio nr. 1 (testinis) pasiekimas naudojantis SSH raktu
+
+Kopijuoju SSH raktą į savo paties serverį:
 
 ----
 stud@cc-lab:~$ ssh-copy-id serveris1
@@ -696,7 +701,7 @@ and check to make sure that only the key(s) you wanted were added.
 stud@cc-lab:~$ 
 ----
 
-Ir tikrinu SSH prisijungimą raktu:
+Ir tikrinu SSH prisijungimą tuo raktu:
 
 ----
 stud@cc-lab:~$ ssh serveris1
@@ -739,7 +744,7 @@ stud@cc-lab:~$
 
 
 [.text-left]
-=== _Inventory_ failo paruošimas:
+=== _Inventory_ failo testinis paruošimas:
 
 Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį failą `/etc/ansible/hosts`
 (iš atminties pasirodė, jog formatas toks pat):
@@ -819,6 +824,7 @@ stud@cc-lab:~$
 => Ansible mazgas prisijungia prie paties savęs.
 
 TODO
+
 <<<
 
 
