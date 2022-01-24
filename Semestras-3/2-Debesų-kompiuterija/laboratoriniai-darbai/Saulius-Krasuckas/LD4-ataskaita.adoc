@@ -350,7 +350,7 @@ default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
 stud@cc-lab:~$ 
 ----
 
-=> Lyginant su LD aprašu, vidiniai IP adresai šiek tiek persislinko.
+* => Lyginant su LD aprašu, vidiniai IP adresai šiek tiek persislinko.
 
 Ieškau „kaimynų“ su sniferiu:
 
@@ -420,7 +420,7 @@ ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
 stud@cc-lab:~$ 
 ----
 
-=> „Kaimynai“ tyli.
+* => „Kaimynai“ tyli.
 
 Diegiu tinklo skenerį:
 
@@ -521,7 +521,7 @@ Nmap done: 256 IP addresses (9 hosts up) scanned in 1.82 seconds
 stud@cc-lab:~$ 
 ----
 
-=> Kol neaišku, kuris IP kuriam magistrantui priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip taikiniu.
+* => Kol neaišku, kuris IP kuriam magistrantui priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip taikiniu.
 
 Tikrinu `/etc/hosts` failo formatą ir turinį:
 
@@ -576,7 +576,7 @@ rtt min/avg/max/mdev = 0.053/0.068/0.084/0.015 ms
 stud@cc-lab:~$ 
 ----
 
-=> Laikinas vardas veikia.
+* => Laikinas vardas veikia.
 
 
 [.text-left]
@@ -611,11 +611,11 @@ The key's randomart image is:
 stud@cc-lab:~$ 
 ----
 
-=> Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame kaip atskiras SSH mazgų įrašas.
+* => Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame kaip atskiras SSH mazgų įrašas.
 
-=> Tad dėl tvarkos reiktų jungtis vardu (ne vien IP adresu, kuris į įrašą pateks vis tiek).
+* => Tad dėl tvarkos reiktų jungtis vardu (ne vien IP adresu, kuris į įrašą pateks vis tiek).
 
-=> O tam, kad šio įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
+* => O tam, kad šio įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
 
 Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminio vardų failo
 ir įrašau adekvatų vardą:
@@ -661,7 +661,7 @@ rtt min/avg/max/mdev = 0.055/0.057/0.060/0.002 ms
 stud@cc-lab:~$ 
 ----
 
-=> Prieš viešojo SSH rakto kopijavimą į serverį tenka patikslinti,
+* => Prieš viešojo SSH rakto kopijavimą į serverį tenka patikslinti,
    ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
    +
    Visiškai nesu įsitikinęs, kaip turėčiau jį patikrinti + atpažinti „pasiklausymą“ / MITM ataką. <<2>>
@@ -740,7 +740,7 @@ Connection to serveris1 closed.
 stud@cc-lab:~$ 
 ----
 
-=> Testinis SSH prisijungimas raktu jau veikia (į savo paties serverį).
+* => Testinis SSH prisijungimas raktu jau veikia (į savo paties serverį).
 
 
 [.text-left]
@@ -757,7 +757,7 @@ stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n
 stud@cc-lab:~$ 
 ----
 
-=> Čia apibrėžiau serverių grupę `servers`.
+* => Čia apibrėžiau serverių grupę `servers`.
 
 Tikrinu inventoriaus failą:
 
@@ -775,7 +775,7 @@ all:
 stud@cc-lab:~$ 
 ----
 
-=> Bloga konfigūracinio failo struktūra.
+* => Bloga konfigūracinio failo struktūra.
 
 Šalinu tris savo įterptas eilutes interaktyviai taisydamas failo turinį:
 
@@ -821,7 +821,7 @@ stud@cc-lab:~$ ansible all -m ping -u stud
 stud@cc-lab:~$ 
 ----
 
-=> Ansible mazgas prisijungia prie paties savęs.
+* => Ansible mazgas prisijungia prie paties savęs.
 
 TODO
 
