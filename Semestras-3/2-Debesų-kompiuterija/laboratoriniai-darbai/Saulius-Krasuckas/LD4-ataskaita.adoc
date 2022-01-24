@@ -186,7 +186,7 @@ The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
 
 Last login: Tue Oct 19 19:27:21 2021 from 81.29.22.28
-stud@cc-lab:~$
+stud@cc-lab:~$ 
 ----
 
 
@@ -207,7 +207,7 @@ Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 43 packages can be upgraded. Run 'apt list --upgradable' to see them.
-stud@cc-lab:~$
+stud@cc-lab:~$ 
 ----
 
 [.text-left]
@@ -316,9 +316,176 @@ Setting up python3-netaddr (0.7.19-3ubuntu1) ...
 Setting up python3-winrm (0.3.0-2) ...
 Setting up ansible (2.9.6+dfsg-1) ...
 Processing triggers for man-db (2.9.1-1) ...
-stud@cc-lab:~$
+stud@cc-lab:~$ 
 ----
 
 [.text-left]
 ==== SSH ryšio tarp serverių nr. 1 ir nr. 2 užtikrinimas
 
+Patikrinu kai kuriuos serverio nr. 1 IP adresus:
+
+----
+stud@cc-lab:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: ens160: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:9a:28:de brd ff:ff:ff:ff:ff:ff
+    inet 10.128.67.8/24 brd 10.128.67.255 scope global ens160
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:56ff:fe9a:28de/64 scope link
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:5b:81:0f:4a brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+stud@cc-lab:~$ ip a | awk '/inet/'
+    inet 127.0.0.1/8 scope host lo
+    inet 10.128.67.8/24 brd 10.128.67.255 scope global ens160
+    inet6 fe80::250:56ff:fe9a:28de/64 scope link
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+stud@cc-lab:~$ 
+----
+
+=> Lyginant su LD aprašu, vidiniai IP adresai šiek tiek persislinko.
+
+Ieškau „kaimynų“ su sniferiu:
+
+----
+stud@cc-lab:~$ sudo tcpdump -tni ens160 not tcp port
+tcpdump: can't parse filter expression: syntax error
+stud@cc-lab:~$ sudo tcpdump -tni ens160 not tcp port 22
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on ens160, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+LLDP, length 338: sw-rlab-301-top
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.13 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.13 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.13 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.13 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.13 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.13 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.12 tell 10.128.67.5, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+LLDP, length 338: sw-rlab-301-top
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+ARP, Request who-has 10.128.67.14 tell 10.128.67.6, length 46
+^C
+52 packets captured
+52 packets received by filter
+0 packets dropped by kernel
+stud@cc-lab:~$ 
+----
+
+=> „Kaimynai“ tyli.
+
+Diegiu tinklo skenerį:
+
+----
+stud@cc-lab:~$ sudo apt install nmap
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap-common
+Suggested packages:
+  liblinear-tools liblinear-dev ncat ndiff zenmap
+The following NEW packages will be installed:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap nmap-common
+0 upgraded, 6 newly installed, 0 to remove and 43 not upgraded.
+Need to get 5,669 kB of archives.
+After this operation, 26.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+Get:1 http://lt.archive.ubuntu.com/ubuntu focal/main amd64 libblas3 amd64 3.9.0-1build1 [142 kB]
+Get:2 http://lt.archive.ubuntu.com/ubuntu focal/universe amd64 liblinear4 amd64 2.3.0+dfsg-3build1 [41.7 kB]
+Get:3 http://lt.archive.ubuntu.com/ubuntu focal/main amd64 liblua5.3-0 amd64 5.3.3-1.1ubuntu2 [116 kB]
+Get:4 http://lt.archive.ubuntu.com/ubuntu focal/universe amd64 lua-lpeg amd64 1.0.2-1 [31.4 kB]
+Get:5 http://lt.archive.ubuntu.com/ubuntu focal/universe amd64 nmap-common all 7.80+dfsg1-2build1 [3,676 kB]
+Get:6 http://lt.archive.ubuntu.com/ubuntu focal/universe amd64 nmap amd64 7.80+dfsg1-2build1 [1,662 kB]
+Fetched 5,669 kB in 3s (1,860 kB/s)
+Selecting previously unselected package libblas3:amd64.
+(Reading database ... 117331 files and directories currently installed.)
+Preparing to unpack .../0-libblas3_3.9.0-1build1_amd64.deb ...
+Unpacking libblas3:amd64 (3.9.0-1build1) ...
+Selecting previously unselected package liblinear4:amd64.
+Preparing to unpack .../1-liblinear4_2.3.0+dfsg-3build1_amd64.deb ...
+Unpacking liblinear4:amd64 (2.3.0+dfsg-3build1) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../2-liblua5.3-0_5.3.3-1.1ubuntu2_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.3-1.1ubuntu2) ...
+Selecting previously unselected package lua-lpeg:amd64.
+Preparing to unpack .../3-lua-lpeg_1.0.2-1_amd64.deb ...
+Unpacking lua-lpeg:amd64 (1.0.2-1) ...
+Selecting previously unselected package nmap-common.
+Preparing to unpack .../4-nmap-common_7.80+dfsg1-2build1_all.deb ...
+Unpacking nmap-common (7.80+dfsg1-2build1) ...
+Selecting previously unselected package nmap.
+Preparing to unpack .../5-nmap_7.80+dfsg1-2build1_amd64.deb ...
+Unpacking nmap (7.80+dfsg1-2build1) ...
+Setting up lua-lpeg:amd64 (1.0.2-1) ...
+Setting up libblas3:amd64 (3.9.0-1build1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+Setting up nmap-common (7.80+dfsg1-2build1) ...
+Setting up liblua5.3-0:amd64 (5.3.3-1.1ubuntu2) ...
+Setting up liblinear4:amd64 (2.3.0+dfsg-3build1) ...
+Setting up nmap (7.80+dfsg1-2build1) ...
+
+Progress: [ 88%] [####################################################################################################################################...................]
+
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+stud@cc-lab:~$ 
+----
+
+Ir ieškau jų skenuodamas potinklį:
+
+----
+stud@cc-lab:~$ ip r
+default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
+10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.8
+10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.8 metric 100
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+
+----
