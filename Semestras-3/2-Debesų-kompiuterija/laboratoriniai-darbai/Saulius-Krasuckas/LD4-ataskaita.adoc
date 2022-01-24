@@ -728,6 +728,7 @@ stud@cc-lab:~$ w
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
 stud     pts/0    86.38.73.194     16:31    1.00s  0.25s  0.02s ssh serveris1
 stud     pts/1    10.128.67.8      16:54    2.00s  0.05s  0.00s w
+
 stud@cc-lab:~$ logout
 Connection to serveris1 closed.
 stud@cc-lab:~$ 
@@ -735,3 +736,66 @@ stud@cc-lab:~$
 
 => SSH raktas veikia jungiantis į savo paties serverį.
 
+
+
+[.text-left]
+=== _Inventory_ failo paruošimas:
+
+Bandau tokiu pat formatu įtraukti mazgo aprašymą į `/etc/ansible/hosts`
+(iš atminties atrodo, kad toks pat):
+
+----
+stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8    serveris2' | sudo tee -a /etc/ansible/hosts
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+[servers]
+10.128.67.8    serveris2
+stud@cc-lab:~$ 
+----
+
+Tikrinu inventoriaus failą:
+
+----
+stud@cc-lab:~$ ansible-inventory --list -y
+[WARNING]:  * Failed to parse /etc/ansible/hosts with yaml plugin: Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/etc/ansible/hosts': line 47, column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [servers] 10.128.67.8
+serveris2 ^ here
+[WARNING]:  * Failed to parse /etc/ansible/hosts with ini plugin: /etc/ansible/hosts:47: Expected key=value host variable assignment, got: serveris2
+[WARNING]: Unable to parse /etc/ansible/hosts as an inventory source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+all:
+  children:
+    ungrouped: {}
+stud@cc-lab:~$ 
+----
+
+=> Bloga struktūra.
+
+Šalinu tris savo įterptas eilutes:
+
+----
+stud@cc-lab:~$ sudo vim /etc/ansible/hosts
+  ...
+stud@cc-lab:~$ 
+----
+
+Kol rasiu klaidą, aprašau mazgą nenaudodamas vardo:
+
+----
+stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8' | sudo tee -a /etc/ansible/hosts
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+[servers]
+10.128.67.8
+----
+
+Ansible inventorius pradėjo veikti:
+
+----
+stud@cc-lab:~$ ansible-inventory --list -y
+all:
+  children:
+    servers:
+      hosts:
+        10.128.67.8: {}
+    ungrouped: {}
+stud@cc-lab:~$ 
+----
