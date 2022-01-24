@@ -615,4 +615,4 @@ stud@cc-lab:~$
 
 => Tad dėl tvarkos reiktų į save jungtis vardu (ne IP adresu).
 
-=> O tam, kad įrašo SSH mazgų vėliau nereiktų pildyti/taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
+=> O tam, kad įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
