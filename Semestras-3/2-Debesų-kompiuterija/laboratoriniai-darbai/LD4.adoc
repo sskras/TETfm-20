@@ -35,7 +35,7 @@ $$**$$ -- `**y**` ir `**z**` reikšmes patikslins dėstytojas.
   | 3       | Darius Jelinskij                                                       | `10.128.67.14`               
   | 4       | Edgar Kalinovski                                                       | `10.128.67.17`               
   | 5       | Saulius Krasuckas                                                      | `10.128.67.20`               
-  | 6       | Andrius Kęstutis Stanaitis                                             | `10.128.67.20`               
+  | 6       | Andrius Kęstutis Stanaitis                                             | `10.128.67.19`               
   | 7       | Povilas Stepkovičius                                                   | `10.128.67.16`               
   | 8       | Gediminas Zinkus                                                       | `10.128.67.18`               
 |===
@@ -53,6 +53,8 @@ $$**$$ -- `**y**` ir `**z**` reikšmes patikslins dėstytojas.
   * Užtikrinkite, kad **serveris nr. 1** pasiektų **serverį nr. 2** naudojantis SSH raktais  +
     (https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys])
 
+
+[.text-left]
 === _Inventory failo paruošimas:_
 
 Inventoriaus faile pateikiama informacija apie mašinas, kurias valdysite naudodami `Ansible`.
@@ -87,6 +89,8 @@ Pasitikrinkite savo inventoriaus failą:
 
 * `ansible-inventory --list -y`
 
+
+[.text-left]
 === _Tikrinimas:_
 
 Sukūrėte inventoriaus failą, į kurį įtraukėte savo serverius (serverį nr. 2).
@@ -108,6 +112,7 @@ server1 | SUCCESS => {
 }
 ```
 
+[.text-left]
 === _Nuotolinis komandų vykdymas:_
 
 Išbandėte, kad `Ansible` valdymo mazgas gali palaikyti ryšį su jūsų serveriais.
@@ -123,12 +128,8 @@ Pavyzdžiui, taip patikrinsite kiekvieno `servers` grupės kompiuterio veikimo l
 
 * `ansible servers -a "uptime" -u stud`
 
+[.text-left]
 === Ataskaitos turinys:
 
   * Aprašyti pasiekti rezultatai kiekvienoje užduotyje.
   * Failo dydis < 5 MiB, formatas `PDF`.
-
-<<<
-
-[.text-left]
-== Darbo eiga
