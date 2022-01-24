@@ -87,6 +87,9 @@ VILNIUS, 2022
 
 ==== Prisijungimas ir pasiruošimas
 
+Šiuo metu KDV naudoju Windows10.
+Darbui pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_.
+
 * Prisijungiau prie savo **serverio nr. 1**
 
 Kol laukiau SSH paslaugos pasiekiamumo, tikrinau nurodytą TCP prievadą.
@@ -95,6 +98,7 @@ Prisiminiau ir išmėginau kelis būdus:
 ----
 $ ssh 158.129.200.236 45522
 ssh: connect to host 158.129.200.236 port 22: Connection timed out
+$ 
 ----
 
 
@@ -102,15 +106,17 @@ ssh: connect to host 158.129.200.236 port 22: Connection timed out
 $ telnet 158.129.200.236 45522
 Trying 158.129.200.236...
 ^C
+$ 
 ----
 
 
 ----
 $ ssh ssh://stud@158.129.200.236:45522
 ^C
+$ 
 ----
 
-Išskyrus `netcat`, kurį spėjau tik įsidiegti:
+Išskyrus `netcat`, kurį spėjau tik įsidiegti savo klientinėje OS:
 
 ----
 $ pacman -S openbsd-netcat
@@ -130,9 +136,10 @@ Total Installed Size:  0.12 MiB
 (1/1) checking available disk space                                                                     [#############################################################] 100% 
 :: Processing package changes...                                                                                                                                             
 (1/1) installing openbsd-netcat                                                                         [#############################################################] 100%
+$ 
 ----
 
-Ir tuomet paslauga tapo pasiekiama:
+Tuomet SSH paslauga tapo jau pasiekiama..:
 
 ----
 $ telnet 158.129.200.236 45522
@@ -140,6 +147,42 @@ Trying 158.129.200.236...
 Connected to 158.129.200.236.
 Escape character is '^]'.
 SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.3
+^]
 
 Connection closed by foreign host.
+$ 
+----
+
+\... ir prisijungiau prie server nr.1:
+
+----
+$ ssh ssh://stud@158.129.200.236:45522
+stud@158.129.200.236's password:
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-90-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue 07 Dec 2021 04:31:42 PM UTC
+
+  System load:  0.0                Processes:                229
+  Usage of /:   41.0% of 19.56GB   Users logged in:          0
+  Memory usage: 9%                 IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for ens160:  10.128.67.8
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+41 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Tue Oct 19 19:27:21 2021 from 81.29.22.28
+stud@cc-lab:~$
 ----
