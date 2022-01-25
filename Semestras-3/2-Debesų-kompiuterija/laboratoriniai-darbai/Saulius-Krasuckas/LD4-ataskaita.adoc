@@ -87,8 +87,8 @@ VILNIUS, 2022
 [.text-left]
 === Infrastruktūros pasiruošimas
 
-Šiuo metu KDV naudoju Windows10.
-Darbui pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_. Pastaroji Windows OS emuliuoja *nix aplinką.
+Šiuo metu KDV naudoju _Windows 10_ OS.
+Darbui atlikti pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_. Pastaroji Windows OS emuliuoja *nix aplinką.
 
 
 ==== Prisijungimas prie savo **serverio nr. 1**
@@ -117,7 +117,7 @@ $ ssh ssh://stud@158.129.200.236:45522
 $ 
 ----
 
-Išskyrus `netcat`, kurį spėjau tik įsidiegti savo klientinėje OS:
+Išskyrus tikrinimą `netcat` įrankiu, kurį spėjau tik įsidiegti savo klientinėje OS:
 
 ----
 $ pacman -S openbsd-netcat
@@ -154,7 +154,7 @@ Connection closed by foreign host.
 $ 
 ----
 
-\... ir prisijungiau prie server nr.1:
+{nbsp}... ir pagaliau prisijungiau prie serverio nr.1:
 
 ----
 $ ssh ssh://stud@158.129.200.236:45522
@@ -349,11 +349,9 @@ stud@cc-lab:~$
 
 * => Lyginant su LD aprašu, vidiniai IP adresai šiek tiek persislinko.
 
-Ieškau „kaimynų“ su sniferiu:
+Ieškau „kaimynų“ (serverio nr. 2) su sniferiu:
 
 ----
-stud@cc-lab:~$ sudo tcpdump -tni ens160 not tcp port
-tcpdump: can't parse filter expression: syntax error
 stud@cc-lab:~$ sudo tcpdump -tni ens160 not tcp port 22
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on ens160, link-type EN10MB (Ethernet), capture size 262144 bytes
@@ -536,7 +534,7 @@ ff02::2 ip6-allrouters
 stud@cc-lab:~$ 
 ----
 
-Aprašau savo serverį, tik vardu `serveris2`:
+Aprašau savo serverį nr. 1, tik vardu `serveris2`:
 
 ----
 stud@cc-lab:~$ echo '10.128.67.8    serveris2' >> /etc/hosts
@@ -607,11 +605,14 @@ The key's randomart image is:
 stud@cc-lab:~$ 
 ----
 
+* => Dėl patogumo ir nereikalaujamo padidinto saugumo, _Passphrase_ neįjungiau (nurodžiau tuščią).
+
 * => Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame kaip atskiras SSH mazgų įrašas.
 
-* => Tad dėl tvarkos reiktų jungtis vardu (ne vien IP adresu, kuris į įrašą pateks vis tiek).
+* => Kadangi šiame įraše išsisaugos ne vien IP adresas, bet ir serverio vardas, dėl tvarkos reiktų jungtis vardu.
 
-* => O tam, kad šio įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį vardą, nebe testinį `serveris2`.
+* => O tam, kad šio įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį mazgo vardą, nebe testinį `serveris2`.
+
 
 Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminio vardų failo
 ir įrašau adekvatų vardą:
@@ -660,7 +661,7 @@ stud@cc-lab:~$
 * => Prieš viešojo SSH rakto kopijavimą į serverį tenka patikslinti,
    ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
    +
-   Visiškai nesu įsitikinęs, kaip turėčiau jį patikrinti + atpažinti „pasiklausymą“ / MITM ataką. <<2>>
+Visiškai nesuprantu, kaip turėčiau jį patikrinti + atpažinti galimą „pasiklausymą“ / MITM ataką. <<2>>
 
 Jungiuosi prie savo serverio su slaptažodžiu, patvirtinu rakto eliptinį pėdsaką ir iškart atsijungiu su `^D` kombinacija:
 
@@ -679,7 +680,7 @@ stud@cc-lab:~$
 
 ==== Serverio nr. 1 (testinis) savęs pasiekimas naudojantis SSH raktu
 
-Kopijuoju SSH raktą į savo paties serverį:
+Kopijuoju SSH raktą į savo paties (tą patį) serverį:
 
 ----
 stud@cc-lab:~$ ssh-copy-id serveris1
@@ -745,7 +746,7 @@ stud@cc-lab:~$
 ==== Testinė konfigūracija
 
 Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį inventorinį failą `/etc/ansible/hosts`:  +
-(peržvelgus numatytąjį turinį pasirodė, jog formatai tokie patys)
+(pažvelgus į numatytąjį turinį pasirodė, jog formatai tokie patys)
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8    serveris2' | sudo tee -a /etc/ansible/hosts
@@ -827,9 +828,9 @@ stud@cc-lab:~$
 
 ==== _Inventory_ failo tikslinimas
 
-Pagaliau atkreipiau dėmesį, kad Ansible `hosts` failas LD aprašyme naudoja kitokį formatą aprašyti atskiram mazgui.
+Pagaliau LD aprašyme atkreipiau dėmesį, kad Ansible `hosts` failas naudoja kitokį formatą aprašyti atskiram mazgui.
 
-* => Šis formatas yra lankstus ir skirtingose situacijose „šakojasi“: <<3>>
+* => Šis formatas yra lankstus ir skirtingose situacijose turi galimybę „šakotis“: <<3>>
 
 |===
    | Failas                                           | Pirmas stulpelis      | Antras stulpelis
@@ -847,6 +848,7 @@ Taigi, ištrinu savo pradinę `/etc/ansible/hosts` konfigūraciją:
 ----
 stud@cc-lab:~$ sudo vim /etc/ansible/hosts
   ...
+stud@cc-lab:~$ 
 ----
 
 Papildau ją nauju formatu:
@@ -856,6 +858,7 @@ stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n
 # 2021-12-07 saukrs: pradedu laborą nr. 4,
 [servers]
 server1 ansible_host=10.128.67.8
+stud@cc-lab:~$ 
 ----
 
 Patikrinu naująjį formatą -- tinkamas:
@@ -886,7 +889,7 @@ server1 | SUCCESS => {
 stud@cc-lab:~$ 
 ----
 
-Nustoju CLI naudoti raktą `-u stud`, nes dabar virtualioje laboratorijoje dirbame tik su šia paskyra:
+Nustoju CLI naudoti raktą `-u stud`, nes dabar virtualioje laboratorijoje magistrantai dirba vien su šia paskyra, kitų nenaudojame:
 
 ----
 stud@cc-lab:~$ ansible all -m ping
@@ -900,7 +903,9 @@ server1 | SUCCESS => {
 stud@cc-lab:~$ 
 ----
 
-* => susipažinta su `/etc/ansible/hosts` formatu ir konfigūracija pataisyta.
+* => susipažinta su `/etc/ansible/hosts` formatu ir testinė konfigūracija sukurta.
+
+
 
 <<<
 
