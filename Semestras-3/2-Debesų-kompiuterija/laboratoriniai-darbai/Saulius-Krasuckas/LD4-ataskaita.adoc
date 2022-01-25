@@ -744,8 +744,8 @@ stud@cc-lab:~$
 
 ==== Testinė konfigūracija
 
-Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį inventorinį failą `/etc/ansible/hosts`
-(iš atminties pasirodė, jog formatas toks pat):
+Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį inventorinį failą `/etc/ansible/hosts`:  +
+(peržvelgus numatytąjį turinį pasirodė, jog formatai tokie patys)
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8    serveris2' | sudo tee -a /etc/ansible/hosts
@@ -824,14 +824,93 @@ stud@cc-lab:~$
 
 * => Ansible mazgas jau prisijungia prie paties savęs.
 
-TODO
+
+==== _Inventory_ failo tikslinimas
+
+Pagaliau atkreipiau dėmesį, kad Ansible `hosts` failas LD aprašyme naudoja kitokį formatą aprašyti atskiram mazgui.
+
+* => Šis formatas yra lankstus ir skirtingose situacijose „šakojasi“: <<3>>
+
+|===
+   | Failas                                           | Pirmas stulpelis      | Antras stulpelis
+   
+   | `/etc/hosts`                                     | `**<IP adresas>**`    | vardas
+   | `/etc/ansible/hosts`  IP adresams                | `**<IP adresas>**`    | --
+   | `/etc/ansible/hosts`  registruotiems vardams     | vardas                | --
+   | `/etc/ansible/hosts`  neregistr. vardams   | vardas                | `ansible_host=**<IP adresas>**`
+|===
+
+* => Jis turi ir daugiau galimybių (pvz. nurodyti netipinį mazgo TCP prievadą SSH prisijungimui).
+
+Taigi, ištrinu savo pradinę `/etc/ansible/hosts` konfigūraciją:
+
+----
+stud@cc-lab:~$ sudo vim /etc/ansible/hosts
+  ...
+----
+
+Papildau ją nauju formatu:
+
+----
+stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\nserver1 ansible_host=10.128.67.8' | sudo tee -a /etc/ansible/hosts
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+[servers]
+server1 ansible_host=10.128.67.8
+----
+
+Patikrinu naująjį formatą -- tinkamas:
+
+----
+stud@cc-lab:~$ ansible-inventory --list -y
+all:
+  children:
+    servers:
+      hosts:
+        server1:
+          ansible_host: 10.128.67.8
+    ungrouped: {}
+stud@cc-lab:~$ 
+----
+
+Patikrinu inventorinio failo veikimą:
+
+----
+stud@cc-lab:~$ ansible all -m ping -u stud
+server1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+stud@cc-lab:~$ 
+----
+
+Nustoju CLI naudoti raktą `-u stud`, nes dabar virtualioje laboratorijoje dirbame tik su šia paskyra:
+
+----
+stud@cc-lab:~$ ansible all -m ping
+server1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+stud@cc-lab:~$ 
+----
+
+* => susipažinta su `/etc/ansible/hosts` formatu ir konfigūracija pataisyta.
 
 <<<
 
 
 [bibliography]
-=== Nuorodos
+==== Nuorodos
 
 `2020-04-23` **[[[1]]]** `digitalocean.com`, Brian Boucheron, https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys]
 
-`2021-02-13` **[[[2]]]** `jumpnowtek.com`, LLC Jumpnow Technologies, https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html[SSH Hostkey Fingerprints]
+`2021-02-13` **[[[2]]]** `jumpnowtek.com`, Jumpnow Technologies, LLC  https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html[SSH Hostkey Fingerprints]
+
+`2020-12-01` **[[[3]]]** `ansible.com`, Red Hat, Inc.
+https://docs.ansible.com/ansible/2.3/intro_inventory.html#hosts-and-groups[Documentation: Ansible Core v2.3 > Introduction > Inventory > Hosts and Groups]
