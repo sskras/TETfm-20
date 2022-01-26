@@ -87,8 +87,9 @@ VILNIUS, 2022
 [.text-left]
 === Infrastruktūros pasiruošimas
 
-Šiuo metu KDV naudoju _Windows 10_ OS.
-Darbui atlikti pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_. Pastaroji Windows OS emuliuoja *nix aplinką.
+Šiuo metu KDV naudoju _Windows 10_.
+Darbui atlikti pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_.  +
+Pastaroji Windows OS emuliuoja *nix aplinką.  <<1>>
 
 
 ==== Prisijungimas prie savo **serverio nr. 1**
@@ -117,7 +118,7 @@ $ ssh ssh://stud@158.129.200.236:45522
 $ 
 ----
 
-Išskyrus tikrinimą `netcat` įrankiu, kurį spėjau tik įsidiegti savo klientinėje OS:
+Išskyrus tikrinimą `netcat` įrankiu, kurį savo klientinėje OS spėjau _tik įsidiegti_:
 
 ----
 $ pacman -S openbsd-netcat
@@ -140,7 +141,7 @@ Total Installed Size:  0.12 MiB
 $ 
 ----
 
-Tuomet SSH paslauga tapo jau pasiekiama..:
+Tuomet laboratorinė SSH paslauga tapo jau pasiekiama..:
 
 ----
 $ telnet 158.129.200.236 45522
@@ -318,7 +319,7 @@ stud@cc-lab:~$
 ----
 
 
-==== Ryšio tarp serverių nr. 1 ir nr. 2 tikrinimas ir aprašymas
+==== Ryšio tarp serverių tikrinimas ir pradinis aprašymas
 
 Patikrinu kai kuriuos serverio nr. 1 IP nustatymus:
 
@@ -516,6 +517,7 @@ Nmap done: 256 IP addresses (9 hosts up) scanned in 1.82 seconds
 stud@cc-lab:~$ 
 ----
 
+* => Radau aštuonis kaimynus.
 * => Kol neaišku, kuris IP kam priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip pagrindiniu taikiniu.
 
 Tikrinu `/etc/hosts` failo formatą ir turinį:
@@ -576,7 +578,7 @@ stud@cc-lab:~$
 
 ==== SSH ryšio ir rakto paruošimas
 
-Darbo SSH raktais prisiminimui pasinaudoju straipsneliu: <<1>>  +
+Darbo SSH raktais prisiminimui pasinaudoju straipsneliu:  <<2>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
 
 ----
@@ -609,13 +611,12 @@ stud@cc-lab:~$
 
 * => Kadangi pradžiai išmėginsiu raktą savo paties serveryje, viešas jo raktas išsisaugos jame pačiame kaip atskiras SSH mazgų įrašas.
 
-* => Kadangi šiame įraše išsisaugos ne vien IP adresas, bet ir serverio vardas, dėl tvarkos reiktų jungtis vardu.
+* => Kadangi šiame įraše telpa ne vien IP adresas, bet ir serverio vardas, dėl tvarkos reiktų jungtis vardu (tuomet išspręstasis IP adresas išsisaugo kartu).
 
-* => O tam, kad šio įrašo apie SSH mazgą vėliau nereiktų pildyti / taisyti, reiktų naudoti jau galutinį mazgo vardą, nebe testinį `serveris2`.
+* => O tam, kad šio įrašo apie SSH mazgą vėliau netektų pildyti / taisyti, reiktų prisijungimui naudoti jau galutinį mazgo vardą, nebe testinį `serveris2`.
 
 
-Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminio vardų failo
-ir įrašau adekvatų vardą:
+Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminės lentelės ir įrašau adekvatų vardą:
 
 ----
 stud@cc-lab:~$ sudo vim /etc/hosts
@@ -658,11 +659,6 @@ rtt min/avg/max/mdev = 0.055/0.057/0.060/0.002 ms
 stud@cc-lab:~$ 
 ----
 
-* => Prieš viešojo SSH rakto kopijavimą į serverį tenka patikslinti,
-   ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
-   +
-Visiškai nesuprantu, kaip turėčiau jį patikrinti + atpažinti galimą „pasiklausymą“ / MITM ataką. <<2>>
-
 Jungiuosi prie savo serverio su slaptažodžiu, patvirtinu rakto eliptinį pėdsaką ir iškart atsijungiu su `^D` kombinacija:
 
 ----
@@ -676,6 +672,13 @@ stud@serveris1's password:
 stud@cc-lab:~$ ^D
 stud@cc-lab:~$ 
 ----
+
+* => Prieš viešojo SSH rakto kopijavimą į serverį verta patikslinti,
+   ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
+   +
+   Visiškai nesuprantu, kaip tinkamai tai padaryti + atpažinti galimą „pasiklausymą“ / MITM ataką.  <<3>>
+   +
+  Todėl tiesiog įvedžiau `yes`.
 
 
 ==== Serverio nr. 1 (testinis) savęs pasiekimas naudojantis SSH raktu
@@ -743,10 +746,10 @@ stud@cc-lab:~$
 === _Inventory_ failo paruošimas
 
 
-==== Testinė konfigūracija
+===== Testinė konfigūracija
 
-Bandau tokiu pat formatu įtraukti mazgo aprašymą į numatytąjį inventorinį failą `/etc/ansible/hosts`:  +
-(pažvelgus į numatytąjį turinį pasirodė, jog formatai tokie patys)
+Bandau `/etc/hosts` formatu įtraukti `serveris1` aprašymą ir į numatytąjį inventorinį failą `/etc/ansible/hosts`:  +
+(pažvelgus į pastarojo turinį pasirodė, jog formatas toks pats)
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n10.128.67.8    serveris2' | sudo tee -a /etc/ansible/hosts
@@ -776,7 +779,7 @@ stud@cc-lab:~$
 
 * => Bloga inventorinio failo struktūra.
 
-Šalinu tris savo įterptas eilutes (interaktyviai taisydamas failo turinį):
+Šalinu tris savo įterptas eilutes (taisydamas failo turinį redaktoriuje):
 
 ----
 stud@cc-lab:~$ sudo vim /etc/ansible/hosts
@@ -793,7 +796,7 @@ stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\n
 10.128.67.8
 ----
 
-Dabar Ansible inventorius pradėjo veikti:
+Dabar _Ansible_ inventorius pradėjo veikti:
 
 ----
 stud@cc-lab:~$ ansible-inventory --list -y
@@ -809,7 +812,7 @@ stud@cc-lab:~$
 
 ==== Pirmas _Inventory_ failo testas
 
-Tikrinu Ansible gebėjimą jungtis prie testinio inventorinio (t. y. savo paties) serverio:
+Tikrinu _Ansible_ gebėjimą jungtis prie testinio inventorinio (t. y. savo paties) serverio:
 
 ----
 stud@cc-lab:~$ ansible all -m ping -u stud
@@ -823,15 +826,15 @@ stud@cc-lab:~$ ansible all -m ping -u stud
 stud@cc-lab:~$ 
 ----
 
-* => Ansible mazgas jau prisijungia prie paties savęs.
+* => _Ansible_ mazgas jau prisijungia prie paties savęs.
 
 
 ==== _Inventory_ failo tikslinimas
 
-Pagaliau LD aprašyme atkreipiau dėmesį, kad Ansible `hosts` failas naudoja kitokį formatą aprašyti atskiram mazgui.
+LD aprašyme pagaliau atkreipiau dėmesį, kad _Ansible_ `hosts` failas naudoja _kiek kitokį_ formatą aprašyti mazgui.
 
-* => Šis formatas yra lankstus ir skirtingose situacijose turi galimybę „šakotis“: <<3>>
-
+* => Šis formatas yra lankstesnis -- skirtingose situacijose turi galimybę „šakotis“:  <<4>>
++
 |===
    | Failas                                           | Pirmas stulpelis      | Antras stulpelis
    
@@ -851,7 +854,7 @@ stud@cc-lab:~$ sudo vim /etc/ansible/hosts
 stud@cc-lab:~$ 
 ----
 
-Papildau ją nauju formatu:
+Papildau ją kitu formatu:
 
 ----
 stud@cc-lab:~$ echo -e '# 2021-12-07 saukrs: pradedu laborą nr. 4,\n[servers]\nserver1 ansible_host=10.128.67.8' | sudo tee -a /etc/ansible/hosts
@@ -861,7 +864,7 @@ server1 ansible_host=10.128.67.8
 stud@cc-lab:~$ 
 ----
 
-Patikrinu naująjį formatą -- tinkamas:
+Patikrinu šį formatą -- tinkamas:
 
 ----
 stud@cc-lab:~$ ansible-inventory --list -y
@@ -875,7 +878,7 @@ all:
 stud@cc-lab:~$ 
 ----
 
-Patikrinu inventorinio failo veikimą:
+Patikrinu inventorinio failo veikimą -- veikia:
 
 ----
 stud@cc-lab:~$ ansible all -m ping -u stud
@@ -889,7 +892,7 @@ server1 | SUCCESS => {
 stud@cc-lab:~$ 
 ----
 
-Nustoju CLI naudoti raktą `-u stud`, nes dabar virtualioje laboratorijoje magistrantai dirba vien su šia paskyra, kitų nenaudojame:
+Nustoju naudoti CLI raktą `-u stud`, nes dabar virtualioje laboratorijoje magistrantai dirba vien su šia paskyra, kitų vardų nenaudojame:
 
 ----
 stud@cc-lab:~$ ansible all -m ping
@@ -903,8 +906,371 @@ server1 | SUCCESS => {
 stud@cc-lab:~$ 
 ----
 
-* => susipažinta su `/etc/ansible/hosts` formatu ir testinė konfigūracija sukurta.
+* => susipažinta su `/etc/ansible/hosts` formatu, sukurta testinė konfigūracija.
 
+
+==== Aprašau serverį nr. 2
+
+Kaip serverį nr. 2 pasirenku grupioko Andriaus K. S. mašiną, IP adresas `10.128.67.20`.
+
+Pirmiausia aprašau `/etc/hosts` faile:
+
+----
+stud@cc-lab:~$ echo '10.128.67.20   serveris2' | sudo tee -a /etc/hosts
+10.128.67.20   serveris2
+
+stud@cc-lab:~$ tail /etc/hosts
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+10.128.67.8    serveris1
+10.128.67.20   serveris2
+stud@cc-lab:~$ 
+----
+
+Paskui ir _Ansible_ inventoriuje:
+
+----
+stud@cc-lab:~$ echo 'serveris2 ansible_host=10.128.67.20' | sudo tee -a /etc/ansible/hosts
+serveris2 ansible_host=10.128.67.20
+
+stud@cc-lab:~$ tail /etc/ansible/hosts
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+#db-[99:101]-node.example.com
+
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+[servers]
+server1 ansible_host=10.128.67.8
+serveris2 ansible_host=10.128.67.20
+stud@cc-lab:~$
+----
+
+
+[.text-left]
+==== Konfigūracijos klaidų taisymas 
+
+
+* => Pastebiu netiksliai užrašytą serverio nr. 1 vardą.
+
+
+Pataisau serverio nr. 1 aprašymą redaktoriumi, rankiniu būdu:
+
+----
+stud@cc-lab:~$ sudo vim /etc/ansible/hosts
+  ...
+# 2021-12-07 saukrs: pradedu laborą nr. 4,
+[servers]
+serveris1 ansible_host=10.128.67.8
+serveris2 ansible_host=10.128.67.20
+                                                                                                                                                           47,8          All
+stud@cc-lab:~$ 
+----
+
+
+Įsitikinu, kad _Inventory_ papildžiau teisingai:
+
+----
+stud@cc-lab:~$ ansible-inventory --list -y
+all:
+  children:
+    servers:
+      hosts:
+        serveris1:
+          ansible_host: 10.128.67.8
+        serveris2:
+          ansible_host: 10.128.67.20
+    ungrouped: {}
+stud@cc-lab:~$ 
+----
+
+
+[.text-left]
+=== _Ansible_ prisijungimų tikrinimas
+
+----
+stud@cc-lab:~$ ansible all -m ping
+The authenticity of host '10.128.67.20 (10.128.67.20)' can't be established.
+ECDSA key fingerprint is SHA256:53taBSfMAMqEJLYWDEYZqm5IOYHYeEiBNK6eUve1agE.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? serveris1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+yes^C
+serveris2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '10.128.67.20' (ECDSA) to the list of known hosts.\r\nstud@10.128.67.20: Permission denied (pub
+lickey,password).",
+    "unreachable": true
+}
+stud@cc-lab:~$ 
+----
+
+* => Dar neparuoštas SSH prisijungimas iš `serveris1` į `serveris2`.
+
+
+==== Tolimesnis SSH prisijungimų tvarkymas
+
+Kopijuoju serverio nr. 1 raktą į serverį nr. 2:
+
+----
+stud@cc-lab:~$ ssh-copy-id serveris2
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/stud/.ssh/id_rsa.pub"
+The authenticity of host 'serveris2 (10.128.67.20)' can't be established.
+ECDSA key fingerprint is SHA256:53taBSfMAMqEJLYWDEYZqm5IOYHYeEiBNK6eUve1agE.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+stud@serveris2's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'serveris2'"
+and check to make sure that only the key(s) you wanted were added.
+
+stud@cc-lab:~$
+----
+
+
+==== Antras prisijungimų tikrinimas
+
+----
+stud@cc-lab:~$ ansible all -m ping
+serveris1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+serveris2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+stud@cc-lab:~$
+----
+
+* => Galų gale abu serveriai atsiliepia tinkamai.
+
+
+[.text-left]
+=== Nuotolinis komandų vykdymas
+
+
+==== LD užduoties komandos
+
+----
+stud@cc-lab:~$ ansible all -a "df -h"
+serveris1 | CHANGED | rc=0 >>
+Filesystem                         Size  Used Avail Use% Mounted on
+udev                               1.5G     0  1.5G   0% /dev
+tmpfs                              300M  1.2M  299M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   20G  8.3G   11G  45% /
+tmpfs                              1.5G  124K  1.5G   1% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+tmpfs                              1.5G     0  1.5G   0% /sys/fs/cgroup
+/dev/loop0                          56M   56M     0 100% /snap/core18/2246
+/dev/loop1                          56M   56M     0 100% /snap/core18/2253
+/dev/loop3                          62M   62M     0 100% /snap/core20/1270
+/dev/loop2                          62M   62M     0 100% /snap/core20/1242
+/dev/loop4                          68M   68M     0 100% /snap/lxd/21835
+/dev/loop5                          68M   68M     0 100% /snap/lxd/21803
+/dev/loop7                          33M   33M     0 100% /snap/snapd/13640
+/dev/loop6                         117M  117M     0 100% /snap/docker/1125
+/dev/loop8                          43M   43M     0 100% /snap/snapd/14066
+/dev/sda2                          976M  203M  707M  23% /boot
+tmpfs                              300M     0  300M   0% /run/user/1001
+serveris2 | CHANGED | rc=0 >>
+Filesystem                         Size  Used Avail Use% Mounted on
+udev                               1.5G     0  1.5G   0% /dev
+tmpfs                              300M  1.2M  299M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   20G  7.7G   11G  42% /
+tmpfs                              1.5G     0  1.5G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+tmpfs                              1.5G     0  1.5G   0% /sys/fs/cgroup
+/dev/loop1                          56M   56M     0 100% /snap/core18/2246
+/dev/loop2                          62M   62M     0 100% /snap/core20/1169
+/dev/loop0                          56M   56M     0 100% /snap/core18/2128
+/dev/loop3                          68M   68M     0 100% /snap/lxd/21803
+/dev/loop4                          68M   68M     0 100% /snap/lxd/21835
+/dev/loop5                         117M  117M     0 100% /snap/docker/1125
+/dev/loop6                          43M   43M     0 100% /snap/snapd/13831
+/dev/loop7                          33M   33M     0 100% /snap/snapd/13640
+/dev/sda2                          976M  203M  707M  23% /boot
+tmpfs                              300M     0  300M   0% /run/user/1001
+stud@cc-lab:~$ 
+----
+
+
+----
+stud@cc-lab:~$ ansible all -a uptime
+serveris1 | CHANGED | rc=0 >>
+ 17:08:48 up  1:10,  2 users,  load average: 0.07, 0.02, 0.00
+serveris2 | CHANGED | rc=0 >>
+ 17:08:48 up 51 min,  1 user,  load average: 0.00, 0.00, 0.00
+stud@cc-lab:~$ 
+----
+
+* => Gaunu primontuotų failinų sistemų (FS) būsenas.
+
+* => Gaunu mazgų (mašinų) veikimo trukmes ir sistemines apkrovas (_System load_).
+
+* => _Ansible_ abi komandas įvykdė abiejuose serveriuose.
+
+
+==== Kitos (paprastos) komandas
+
+----
+stud@cc-lab:~$ ansible all -a "ip r"
+serveris2 | CHANGED | rc=0 >>
+default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.20 metric 100
+10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.20
+10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.20 metric 100
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+serveris1 | CHANGED | rc=0 >>
+default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
+10.128.67.0/24 dev ens160 proto kernel scope link src 10.128.67.8
+10.128.67.254 dev ens160 proto dhcp scope link src 10.128.67.8 metric 100
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+stud@cc-lab:~$ 
+----
+
+* => Gavau maršrutų lenteles.
+
+----
+stud@cc-lab:~$ ansible all -a w
+serveris2 | CHANGED | rc=0 >>
+ 17:19:21 up  1:01,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+stud     pts/0    10.128.67.8      17:19    1.00s  0.19s  0.00s w
+serveris1 | CHANGED | rc=0 >>
+ 17:19:21 up  1:21,  2 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+stud     pts/0    86.38.73.194     16:31    5.00s  1.64s  0.00s ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthenticat
+ions=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf -tt 10.128.67.8 /bin
+/sh -c '/usr/bin/python3 /home/stud/.ansible/tmp/ansible-tmp-1638897559.5734017-231528218158292/AnsiballZ_command.py && sleep 0'
+stud     pts/3    10.128.67.8      17:19    1.00s  0.21s  0.01s w
+stud@cc-lab:~$ 
+----
+
+* => Gavau prisijungusių vartotojų skaičių ir aktyvias vykdomas programas.
+
+* => Čia atsitiktinai pastebiu, kad _Ansible_ jungimuisi į serverius naudoja komandą `ssh` su gana ilga komandine eilute:
++
+```
+ssh \
+  -C \
+  -o ControlMaster=auto \
+  -o ControlPersist=60s \
+  -o KbdInteractiveAuthentication=no \
+  -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey \
+  -o PasswordAuthentication=no \
+  -o ConnectTimeout=10 \
+  -o ControlPath=/home/stud/.ansible/cp/62369c22bf \
+  -tt \
+  10.128.67.8 /bin/sh \
+  -c '/usr/bin/python3 \
+        /home/stud/.ansible/tmp/ansible-tmp-1638897559.5734017-231528218158292/AnsiballZ_command.py \
+      && sleep 0'
+```
+
+* => ... ir nuotoliniame serveryje jau leidžia komandą, panašią į šią:
++
+```
+/usr/bin/python3 /home/stud/.ansible/tmp/ansible-tmp-1638897559.5734017-231528218158292/AnsiballZ_command.py
+```
+
+* => Panašu, kad failą `AnsiballZ_command.py` prieš tai _Ansible_ į nuotolinį serverį pats ir nusikopijuoja.
+
+Leidžiu paskutinę pavienę komandą:
+
+----
+stud@cc-lab:~$ ansible all -a "lsb_release -d"
+serveris1 | CHANGED | rc=0 >>
+Description:    Ubuntu 20.04.3 LTS
+serveris2 | CHANGED | rc=0 >>
+Description:    Ubuntu 20.04.3 LTS
+stud@cc-lab:~$ 
+----
+
+* => Visos paprastos (pavienės) komandos veikia.
+
+
+==== Kompozitinės komandos
+
+Mėginu komandą `lscpu | awk '/^CPU/'` nustatyti mašinos CPU branduolių skaičiui:
+
+----
+stud@cc-lab:~$ ansible all -a "lscpu | awk '/^CPU/'"
+serveris2 | FAILED | rc=1 >>
+lscpu: bad usage
+Try 'lscpu --help' for more information.non-zero return code
+serveris1 | FAILED | rc=1 >>
+lscpu: bad usage
+Try 'lscpu --help' for more information.non-zero return code
+stud@cc-lab:~$ 
+----
+
+* => Neveikia, ir neaišku, kokią komandinę eilutę `lscpu` gavo, kad „pyksta“.
+
+Mėginu visą komandą įvykdyti _Bash_ pagalba:
+
+----
+stud@cc-lab:~$ ansible all -a bash -c "lscpu | awk '/^CPU/'"
+serveris1 | FAILED | rc=-1 >>
+the connection plugin 'lscpu | awk '/^CPU/'' was not found
+serveris2 | FAILED | rc=-1 >>
+the connection plugin 'lscpu | awk '/^CPU/'' was not found
+stud@cc-lab:~$ 
+----
+
+* => Blogai: šitaip raktą `-c` _Ansible_ pasiima sau ir pasimeta.
+
+Visą komandinę eilutę kartu su `bash` apgaubiu išorinėmis dvigubomis kabutėmis (kaip vientisą, vieną argumentą), o vidines dvigubąsias „eskeipinu“:
+
+----
+stud@cc-lab:~$ ansible all -a "bash -c \"lscpu | awk '/^CPU.s/'\""
+serveris1 | CHANGED | rc=0 >>
+CPU(s):                          2
+serveris2 | CHANGED | rc=0 >>
+CPU(s):                          2
+stud@cc-lab:~$ 
+----
+
+* => Pagaliau veikia.  Beje, `awk` komandą šiek tiek papildžiau, kad grąžintų tik vieną eilutę per mazgą.
+
+Pamėginu išsitraukti ir CPU taktinį dažnį:
+
+----
+stud@cc-lab:~$ ansible all -a "bash -c \"lscpu | awk '/^CPU.s|Hz/'\""
+serveris1 | CHANGED | rc=0 >>
+CPU(s):                          2
+Model name:                      Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+CPU MHz:                         2400.085
+serveris2 | CHANGED | rc=0 >>
+CPU(s):                          2
+Model name:                      Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+CPU MHz:                         2400.085
+stud@cc-lab:~$ 
+----
+
+* => _Ansible_ geba vykdyti ir _Bash_-kompozitus.
+
+
+==== TODO
 
 
 <<<
@@ -913,9 +1279,11 @@ stud@cc-lab:~$
 [bibliography]
 ==== Nuorodos
 
-`2020-04-23` **[[[1]]]** `digitalocean.com`, Brian Boucheron, https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys]
+`2020-06-29` **[[[1]]]** `msys2.org`, (updated) https://github.com/msys2/msys2.github.io/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3f2ee343853bd21bf82ea9960d0cf06661baa244439dd6R9[MSYS2 | Software Distribution and Building Platform for Windows]
 
-`2021-02-13` **[[[2]]]** `jumpnowtek.com`, Jumpnow Technologies, LLC  https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html[SSH Hostkey Fingerprints]
+`2020-04-23` **[[[2]]]** `digitalocean.com`, Brian Boucheron, https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04[How to Set Up SSH Keys]
 
-`2020-12-01` **[[[3]]]** `ansible.com`, Red Hat, Inc.
+`2021-02-13` **[[[3]]]** `jumpnowtek.com`, Jumpnow Technologies, LLC  https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html[SSH Hostkey Fingerprints]
+
+`2020-12-01` **[[[4]]]** `ansible.com`, Red Hat, Inc.
 https://docs.ansible.com/ansible/2.3/intro_inventory.html#hosts-and-groups[Documentation: Ansible Core v2.3 > Introduction > Inventory > Hosts and Groups]
