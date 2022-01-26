@@ -991,9 +991,13 @@ all:
 stud@cc-lab:~$ 
 ----
 
+* => Paruoštas ir patikrintas inventoriaus failas, jame nurodytas serveris nr. 2.
+
 
 [.text-left]
 === _Ansible_ prisijungimų tikrinimas
+
+_Ansible_ valdymo mazge startuoju komandą:
 
 ----
 stud@cc-lab:~$ ansible all -m ping
@@ -1064,13 +1068,15 @@ stud@cc-lab:~$
 ----
 
 * => Galų gale abu serveriai atsiliepia tinkamai.
+     Rezultatas panašus į pateiktąjį LD apraše.
+     _Ansible_ valdymo mazgas palaiko ryšį su dviem serveriais (vienu testiniu ir vienu produkciniu).
 
 
 [.text-left]
 === Nuotolinis komandų vykdymas
 
 
-==== LD užduoties komandos
+==== LD užduoties _Ad-hoc_ komandos
 
 ----
 stud@cc-lab:~$ ansible all -a "df -h"
@@ -1124,14 +1130,14 @@ serveris2 | CHANGED | rc=0 >>
 stud@cc-lab:~$ 
 ----
 
-* => Gaunu primontuotų failinų sistemų (FS) būsenas.
+* => Gaunu serverių primontuotų failinių sistemų (FS) būsenas.
 
-* => Gaunu mazgų (mašinų) veikimo trukmes ir sistemines apkrovas (_System load_).
+* => Gaunu serverių veikimo trukmes ir sistemines apkrovas (_System load_).
 
 * => _Ansible_ abi komandas įvykdė abiejuose serveriuose.
 
 
-==== Kitos (paprastos) komandas
+==== Kitos (paprastos) _Ad-hoc_ komandas
 
 ----
 stud@cc-lab:~$ ansible all -a "ip r"
@@ -1195,7 +1201,7 @@ ssh \
 
 * => Panašu, kad failą `AnsiballZ_command.py` prieš tai _Ansible_ į nuotolinį serverį pats ir nusikopijuoja.
 
-Leidžiu paskutinę pavienę komandą:
+Leidžiu paskutinę paprastą komandą:
 
 ----
 stud@cc-lab:~$ ansible all -a "lsb_release -d"
@@ -1206,10 +1212,10 @@ Description:    Ubuntu 20.04.3 LTS
 stud@cc-lab:~$ 
 ----
 
-* => Visos paprastos (pavienės) komandos veikia.
+* => Visos paprastos (pavienės) _Ad-hoc_ komandos veikia.
 
 
-==== Kompozitinės komandos
+==== Kompozitinės _Ad-hoc_ komandos
 
 Mėginu komandą `lscpu | awk '/^CPU/'` nustatyti mašinos CPU branduolių skaičiui:
 
@@ -1267,12 +1273,32 @@ CPU MHz:                         2400.085
 stud@cc-lab:~$ 
 ----
 
-* => _Ansible_ geba vykdyti ir _Bash_-kompozitus.
+* => _Ansible_ geba vykdyti ir _Bash_-kompozitines _Ad-hoc_ komandas.
 
 
-==== TODO
+* => Pamiršau patikrinti _Ansible_ hostų grupavimą, t.y. nurodyti serverių grupę `servers` vietoje `all`.  +
+     Esu įsitikinęs, kad ji veiktų taip pat puikiai.
 
 
+[.text-left]
+=== TODO
+
+Tikrinu _Ansible_ versiją:
+
+----
+stud@cc-lab:~$ ansible --version
+ansible 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/stud/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Sep 28 2021, 16:10:42) [GCC 9.3.0]
+stud@cc-lab:~$ 
+----
+
+...
+
+---
 <<<
 
 
