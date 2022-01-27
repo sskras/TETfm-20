@@ -2,16 +2,16 @@ From: <Saved by Blink>
 Snapshot-Content-Location: file:///C:/Users/saukrs/Downloads/LD4-ataskaita.html
 Subject: =?utf-8?Q?=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Vilniaus=20Gedimino=20techn?=
  =?utf-8?Q?ikos=20universitetas?=
-Date: Thu, 27 Jan 2022 16:45:15 -0000
+Date: Thu, 27 Jan 2022 16:53:23 -0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--7VTZCFItke7nXgsRzCyJxnMQp3nwmT6YZoB48EZdLo----"
+	boundary="----MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe----"
 
 
-------MultipartBoundary--7VTZCFItke7nXgsRzCyJxnMQp3nwmT6YZoB48EZdLo----
+------MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe----
 Content-Type: text/html
-Content-ID: <frame-A773129B174F0FCF9676D67E704C0246@mhtml.blink>
+Content-ID: <frame-B048D7C72D42474E8710FFC5EB6A1688@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/Users/saukrs/Downloads/LD4-ataskaita.html
 
@@ -507,14 +507,6 @@ default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
 172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
 stud@cc-lab:~$</pre>
               </div>
-            </div>
-            <div class=3D"ulist">
-              <ul>
-                <li>
-                  <p>=E2=87=92 Lyginant su LD apra=C5=A1u, vidiniai IP adre=
-sai =C5=A1iek tiek persislinko.</p>
-                </li>
-              </ul>
             </div>
             <div class=3D"paragraph">
               <p>Ie=C5=A1kau =E2=80=9Ekaimyn=C5=B3=E2=80=9C (serverio nr. 2=
@@ -2612,7 +2604,7 @@ word in Ansible</a></p>
 
 
 </body></html>
-------MultipartBoundary--7VTZCFItke7nXgsRzCyJxnMQp3nwmT6YZoB48EZdLo----
+------MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css
@@ -3619,4 +3611,4 @@ ding: 0px !important; margin: 0px !important; }
   .hide-for-print { display: none !important; }
   .show-for-print { display: inherit !important; }
 }
-------MultipartBoundary--7VTZCFItke7nXgsRzCyJxnMQp3nwmT6YZoB48EZdLo------
+------MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe------
