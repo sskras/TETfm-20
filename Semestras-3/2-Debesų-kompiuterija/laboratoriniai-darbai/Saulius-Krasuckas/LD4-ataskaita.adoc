@@ -532,7 +532,8 @@ Nmap done: 256 IP addresses (9 hosts up) scanned in 1.82 seconds
 stud@cc-lab:~$ 
 ----
 
-* => Radau aštuonis kaimynus.
+* => Radau aštuonis kaimynus, turbūt grupiokų serverius nr. 1.
+
 * => Kol neaišku, kuris IP kam priklauso, treniruosiuosi su savo serveriu `10.128.67.8` kaip pagrindiniu taikiniu.
 
 Tikrinu `/etc/hosts` failo formatą ir turinį:
@@ -851,11 +852,11 @@ LD aprašyme pagaliau atkreipiau dėmesį, kad _Ansible_ `hosts` failas naudoja 
 * => Šis formatas yra lankstesnis -- skirtingose situacijose turi galimybę „šakotis“:  <<4>>
 +
 |===
-   | Failas                                           | Pirmas stulpelis      | Antras stulpelis
+   | Failas                                     | Pirmas stulpelis      | Antras stulpelis
    
-   | `/etc/hosts`                                     | `**<IP adresas>**`    | vardas
-   | `/etc/ansible/hosts`  IP adresams                | `**<IP adresas>**`    | --
-   | `/etc/ansible/hosts`  registruotiems vardams     | vardas                | --
+   | `/etc/hosts`                               | `**<IP adresas>**`    | vardas
+   | `/etc/ansible/hosts`  IP adresams          | `**<IP adresas>**`    | --
+   | `/etc/ansible/hosts`  registruot. vardams  | vardas                | --
    | `/etc/ansible/hosts`  neregistr. vardams   | vardas                | `ansible_host=**<IP adresas>**`
 |===
 
@@ -926,7 +927,7 @@ stud@cc-lab:~$
 
 ==== Aprašau serverį nr. 2
 
-Kaip serverį nr. 2 pasirenku grupioko Andriaus K. S. mašiną, IP adresas `10.128.67.20`.
+Kaip serverį nr. 2 pasirenku LD apraše man priskirtą IP adresą: `10.128.67.20`.
 
 Pirmiausia aprašau `/etc/hosts` faile:
 
@@ -1057,7 +1058,7 @@ Number of key(s) added: 1
 Now try logging into the machine, with:   "ssh 'serveris2'"
 and check to make sure that only the key(s) you wanted were added.
 
-stud@cc-lab:~$
+stud@cc-lab:~$ 
 ----
 
 
@@ -1296,11 +1297,326 @@ stud@cc-lab:~$
 
 
 [.text-left]
-=== TODO
+=== _Ansible_ grojaraščių vykdymas
 
-...
+Pradedu kurti atskirą grojaraštį (_Playbook_):
+
+----
+stud@cc-lab:~$ ls -Al
+total 52
+drwxrwxr-x 4 stud stud 4096 Dec  7 16:57 .ansible
+-rw------- 1 stud stud 1005 Dec  7 16:54 .bash_history
+-rw-r--r-- 1 stud stud  220 Oct 19 14:14 .bash_logout
+-rw-r--r-- 1 stud stud 3771 Oct 19 14:14 .bashrc
+drwxrwxr-x 3 stud stud 4096 Oct 19 16:23 build
+drwx------ 2 stud stud 4096 Oct 19 14:21 .cache
+-rw------- 1 stud stud   39 Dec  7 16:41 .lesshst
+drwxrwxr-x 3 stud stud 4096 Oct 19 16:08 .local
+-rw-r--r-- 1 stud stud  807 Oct 19 14:14 .profile
+drwxr-xr-x 3 stud stud 4096 Oct 19 15:40 snap
+drwx------ 2 stud stud 4096 Dec  7 17:07 .ssh
+-rw-r--r-- 1 stud stud    0 Oct 19 14:15 .sudo_as_admin_successful
+drwxrwxr-x 2 stud stud 4096 Oct 19 15:40 test
+-rw------- 1 stud stud 1162 Dec  7 16:38 .viminfo
+
+stud@cc-lab:~$ mkdir src
+
+stud@cc-lab:~$ cd src
+
+stud@cc-lab:~/src$ vim saukrs-1.yml
+  ...
+----
+
+Kopijuoju pavyzdį iš _Red Hat_:  <<5>>
+
+----
+# 2021-12-07 saukrs: kopijuoju iš https://www.redhat.com/en/blog/ansible-101-ansible-beginners
+#
+- name: saukrs Playbook nr.1
+  hosts: serveris2
+  tasks:
+    - name: diegiame nginx
+        yum:
+          name: nginx
+          state: present
+----
+
+Bandau grojaraštį:
+
+----
+[1]+  Stopped                 vim saukrs-1.yml
+
+stud@cc-lab:~/src$ ansible-playbook saukrs-1.yml
+ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/stud/src/saukrs-1.yml': line 7, column 12, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - name: diegiame nginx
+        yum:
+           ^ here
+stud@cc-lab:~/src$ 
+----
+
+* => Klaida.  Bet ne faktas, kad septintoje eilutėje.
+
+Įterpiu YAML pradžios žymę `---`:
+
+----
+stud@cc-lab:~/src$ fg
+----
+
+
+----
+---
+# 2021-12-07 saukrs: kopijuoju iš https://www.redhat.com/en/blog/ansible-101-ansible-beginners
+- name: saukrs Playbook nr.1
+  hosts: serveris2
+  tasks:
+    - name: diegiame nginx
+        yum:
+          name: nginx
+          state: present
+----
+
+* => Klaida išlieka tokia pati.
+
+Įsikopijuoja kitą pavyzdį:  <<6>>
+
+----
+stud@cc-lab:~/src$ vim saukrs-2.yml
+----
+
+
+----
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install packages
+    apt:
+      name:
+      - ntpdate
+      - nmap
+      state: latest
+      cache_valid_time: 3600
+
+----
+
+Bandau antrą grojaraštį:
+
+----
+[1]+  Stopped                 vim saukrs-2.yml
+stud@cc-lab:~/src$ ansible-playbook saukrs-2.yml
+
+PLAY [all] ******************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************
+fatal: [serveris1]: FAILED! => {"msg": "Missing sudo password"}
+fatal: [serveris2]: FAILED! => {"msg": "Missing sudo password"}
+
+PLAY RECAP ******************************************************************************************************************************************************************
+serveris1                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+serveris2                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+
+stud@cc-lab:~/src$ 
+----
+
+* => Grojaraštis nr. 2 sintaksės klaidų nebeturi, tačiau praneša, kad neturi `sudo` slaptažodžio.
+
+* => Grąžina `ok=0` ir `failed=1`.
+
+
+Suguglinu patarimą naudoti papildomą raktą `--ask-become-pass`:  <<7>>
+
+----
+stud@cc-lab:~/src$ ansible-playbook saukrs-2.yml --ask-become-pass
+BECOME password:
+
+PLAY [all] ******************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************
+ok: [serveris1]
+ok: [serveris2]
+
+TASK [Install packages] *****************************************************************************************************************************************************
+changed: [serveris1]
+changed: [serveris2]
+
+PLAY RECAP ******************************************************************************************************************************************************************
+serveris1                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+serveris2                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+stud@cc-lab:~/src$ 
+----
+
+* => _Ansible_ paprašė slaptažodžio -- spėjau, kad `stud` paskyros, ir pataikiau, regis.
+
+* => Žingsnis `[Install packages]` užtruko ilgiausiai:
+
+  - `serveris1` apie 10 s.
+  - `serveris2` apie 20 s.
+
+* => Grojaraštis grąžina `ok=2` ir `failed=0`.
+
+* => Panašu, kad jis įdiegė / atnaujino abu nurodytus paketus: `ntpdate` ir `nmap`.
+     Paketų būsenos tiesiogiai nepatikrinau.
+
+
+Nutariau pasitikrinti, ką tiksliai vykdo _Ansible_ ir kuri komanda paprašo `sudo` slaptažodžio.  +
+Dėstytojas pasiūlė naudoti `-v` ar net `-vvv`, mėginu:
+
+----
+stud@cc-lab:~/src$ ansible-playbook saukrs-2.yml -vvv
+ansible-playbook 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/stud/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.8.10 (default, Sep 28 2021, 16:10:42) [GCC 9.3.0]
+Using /etc/ansible/ansible.cfg as config file
+host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Parsed /etc/ansible/hosts inventory source with ini plugin
+
+PLAYBOOK: saukrs-2.yml ******************************************************************************************************************************************************
+1 plays in saukrs-2.yml
+
+PLAY [all] ******************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************
+task path: /home/stud/src/saukrs-2.yml:2
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf 10.128.67.8 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 10.128.67.20 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<10.128.67.8> (0, b'/home/stud\n', b'')
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf 10.128.67.8 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778 `" && echo ansible-tmp-1638899019.7293622-253348797528778="` echo /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778 `" ) && sleep 0'"'"''
+<10.128.67.8> (0, b'ansible-tmp-1638899019.7293622-253348797528778=/home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778\n', b'')
+<10.128.67.20> (0, b'/home/stud\n', b'')
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 10.128.67.20 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750 `" && echo ansible-tmp-1638899019.7481883-242494816437750="` echo /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750 `" ) && sleep 0'"'"''
+<10.128.67.20> (0, b'ansible-tmp-1638899019.7481883-242494816437750=/home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750\n', b'')
+<serveris2> Attempting python interpreter discovery
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<serveris1> Attempting python interpreter discovery
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 10.128.67.20 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf 10.128.67.8 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<10.128.67.20> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3\nENDFOUND\n', b'')
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 10.128.67.20 '/bin/sh -c '"'"'/usr/bin/python3 && sleep 0'"'"''
+<10.128.67.8> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3\nENDFOUND\n', b'')
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf 10.128.67.8 '/bin/sh -c '"'"'/usr/bin/python3 && sleep 0'"'"''
+<10.128.67.20> (0, b'{"platform_dist_result": [], "osrelease_content": "NAME=\\"Ubuntu\\"\\nVERSION=\\"20.04.3 LTS (Focal Fossa)\\"\\nID=ubuntu\\nID_LIKE=debian\\nPRETTY_NAME=\\"Ubuntu 20.04.3 LTS\\"\\nVERSION_ID=\\"20.04\\"\\nHOME_URL=\\"https://www.ubuntu.com/\\"\\nSUPPORT_URL=\\"https://help.ubuntu.com/\\"\\nBUG_REPORT_URL=\\"https://bugs.launchpad.net/ubuntu/\\"\\nPRIVACY_POLICY_URL=\\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\"\\nVERSION_CODENAME=focal\\nUBUNTU_CODENAME=focal\\n"}\n', b'')
+Using module file /usr/lib/python3/dist-packages/ansible/modules/system/setup.py
+<10.128.67.20> PUT /home/stud/.ansible/tmp/ansible-local-8956eid90gyx/tmpmvv1n7vm TO /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750/AnsiballZ_setup.py
+<10.128.67.20> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 '[10.128.67.20]'
+<10.128.67.8> (0, b'{"platform_dist_result": [], "osrelease_content": "NAME=\\"Ubuntu\\"\\nVERSION=\\"20.04.3 LTS (Focal Fossa)\\"\\nID=ubuntu\\nID_LIKE=debian\\nPRETTY_NAME=\\"Ubuntu 20.04.3 LTS\\"\\nVERSION_ID=\\"20.04\\"\\nHOME_URL=\\"https://www.ubuntu.com/\\"\\nSUPPORT_URL=\\"https://help.ubuntu.com/\\"\\nBUG_REPORT_URL=\\"https://bugs.launchpad.net/ubuntu/\\"\\nPRIVACY_POLICY_URL=\\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\"\\nVERSION_CODENAME=focal\\nUBUNTU_CODENAME=focal\\n"}\n', b'')
+Using module file /usr/lib/python3/dist-packages/ansible/modules/system/setup.py
+<10.128.67.8> PUT /home/stud/.ansible/tmp/ansible-local-8956eid90gyx/tmp7h_h8icd TO /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/AnsiballZ_setup.py
+<10.128.67.8> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf '[10.128.67.8]'
+<10.128.67.20> (0, b'sftp> put /home/stud/.ansible/tmp/ansible-local-8956eid90gyx/tmpmvv1n7vm /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750/AnsiballZ_setup.py\n', b'')
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 10.128.67.20 '/bin/sh -c '"'"'chmod u+x /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750/ /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750/AnsiballZ_setup.py && sleep 0'"'"''
+<10.128.67.8> (0, b'sftp> put /home/stud/.ansible/tmp/ansible-local-8956eid90gyx/tmp7h_h8icd /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/AnsiballZ_setup.py\n', b'')
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> (0, b'', b'')
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 -tt 10.128.67.20 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-uawkzdzxtwbuqhzyjbiocuqvsbhmallm ; /usr/bin/python3 /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf 10.128.67.8 '/bin/sh -c '"'"'chmod u+x /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/ /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/AnsiballZ_setup.py && sleep 0'"'"''
+<10.128.67.8> (0, b'', b'')
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf -tt 10.128.67.8 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-xucyadvmmhrwwkflwsxapwvnhklmvrvo ; /usr/bin/python3 /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation requires password
+<10.128.67.20> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.20> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/b650e54a14 10.128.67.20 '/bin/sh -c '"'"'rm -f -r /home/stud/.ansible/tmp/ansible-tmp-1638899019.7481883-242494816437750/ > /dev/null 2>&1 && sleep 0'"'"''
+<10.128.67.20> (0, b'', b'')
+Escalation requires password
+fatal: [serveris2]: FAILED! => {
+    "msg": "Missing sudo password"
+}
+<10.128.67.8> ESTABLISH SSH CONNECTION FOR USER: None
+<10.128.67.8> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/stud/.ansible/cp/62369c22bf 10.128.67.8 '/bin/sh -c '"'"'rm -f -r /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/ > /dev/null 2>&1 && sleep 0'"'"''
+<10.128.67.8> (0, b'', b'')
+fatal: [serveris1]: FAILED! => {
+    "msg": "Missing sudo password"
+}
+
+PLAY RECAP ******************************************************************************************************************************************************************
+serveris1                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+serveris2                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+
+stud@cc-lab:~/src$ 
+----
+
+* => Duomenų gavau išties daug.
+
+* => Į serverį SFTP įrankiu kopijuojamas ir per SSH vykdomas failas `AnsiballZ_setup.py`, kurį jau identifikavau anksčiau.
+
+* => Iš to vis tiek neaišku, ką tiksliai tas _Python_ skriptas veikia ir kada panaudoja `sudo`.
+
+* => Gavau dėstytojo patarimą greta `become:` instrukcijos panaudoti `become_user:` nurodant jai`stud`.  +
+
+Papildau antrąjį, veikiantį grojaraštį jo kilmės nuoroda ir šia instrukcija:
+
+----
+stud@cc-lab:~/src$ fg
 
 ---
+# 2021-12-07 saukrs: paėmiau iš https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/ ,
+  ...
+  become: yes
+  become_user: stud
+  ...
+
+----
+
+Ir jį patikrinu:
+
+----
+[1]+  Stopped                 vim saukrs-2.yml
+stud@cc-lab:~/src$ ansible-playbook saukrs-2.yml
+
+PLAY [all] ******************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************
+ok: [serveris1]
+ok: [serveris2]
+
+TASK [Install packages] *****************************************************************************************************************************************************
+ok: [serveris2]
+ok: [serveris1]
+
+PLAY RECAP ******************************************************************************************************************************************************************
+serveris1                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+serveris2                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+stud@cc-lab:~/src$ 
+----
+
+* => `BECOME password:` nebeprašomas, iš vienos pusės smagu.
+
+* => Iš kitos pusės _Ansible_ dabar nebedarė jokių pakeitimų.  +
+     Jei paketai serveriuose dar būtų neįdiegti ar neatnaujinti, `sudo` slaptažodžio turbūt vis tiek prireiktų.  +
+
+* => Kaip elgtųsi _Ansible_ pastaruoju atveju (ar paprašytų slaptažodžio ne iškart, vėliau, ar tiesiog sustotų ir pateiktų klaidą), lieka man neaišku ir neištestuota.
+
+
+[.text-left]
+==== Laboratorinio darbo pabaiga
+
+* Susipažinta su _Ansible_ sistema.
+* Sukurtas inventoriaus failas.
+* Patikrintas nuotolinis komandų vykdymas.
+* Patikrintas grojaraščio vykdymas.
+
 <<<
 
 
@@ -1315,3 +1631,9 @@ stud@cc-lab:~$
 
 `2020-12-01` **[[[4]]]** `ansible.com`, Red Hat, Inc.
 https://docs.ansible.com/ansible/2.3/intro_inventory.html#hosts-and-groups[Documentation: Ansible Core v2.3 > Introduction > Inventory > Hosts and Groups]
+
+`2020-04-06` **[[[5]]]** `redhat.com`, Ken Hitchcock, https://www.redhat.com/en/blog/ansible-101-ansible-beginners[Ansible 101 - Ansible for beginners]
+
+`2019-10-20` **[[[6]]]** `techexpert.tips`, facebook.com/fkingit, https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/#:~:text=To%20run%20this%20Ansible%20playbook,%20use%20the%20following%20command[Ansible - Playbook Examples for Ubuntu Linux | Ansible Playbook Example - Install a Package using Apt-get]
+
+`2018-08-15` **[[[7]]]**, `stackoverflow.com`, nesinor, https://stackoverflow.com/questions/25582740/missing-sudo-password-in-ansible/51864689#51864689[Missing sudo password in Ansible]
