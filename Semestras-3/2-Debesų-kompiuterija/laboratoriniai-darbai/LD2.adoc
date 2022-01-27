@@ -23,15 +23,15 @@ TODO
 [.text-left]
 === Užduotys
 
-==== **Užduotis nr. 1**: Prisijungimas prie Jūsų virtualaus serverio
+==== Užduotis nr. 1: **Prisijungimas prie Jūsų virtualaus serverio**
 
 TODO
 
-==== **Užduotis nr. 2**: _Docker_ tyrinėjimas
+==== Užduotis nr. 2: **_Docker_ tyrinėjimas**
 
 TODO
 
-==== **Užduotis nr. 3**: _Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_
+==== Užduotis nr. 3: **_Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_**
 
 TODO
 
