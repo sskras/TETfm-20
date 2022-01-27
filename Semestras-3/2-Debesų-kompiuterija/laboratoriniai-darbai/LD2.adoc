@@ -11,5 +11,34 @@ Debesų kompiuterija
 [.text-left]
 === Darbo tikslas
 
-* Naudotis pagrindinėmis _Docker_ funkcijomis
+* Naudotis pagrindinėmis _Docker_ funkcijomis.
 * Iš pirminio failo sukurti ir vykdyti konteinerio atvaizdį (angl. _Image).
+
+
+[.text-left]
+=== Įvadas. Kas yra _Docker_?
+
+TODO
+
+[.text-left]
+=== Užduotys
+
+==== **Užduotis nr. 1**: Prisijungimas prie Jūsų virtualaus serverio
+
+TODO
+
+==== **Užduotis nr. 2**: _Docker_ tyrinėjimas
+
+TODO
+
+==== **Užduotis nr. 3**: _Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_
+
+TODO
+
+==== Ataskaitos turinys:
+
+  * Aprašyti pasiekti  rezultatai kiekvienoje užduotyje.
+  * Iliustracija, kad Jūsų tinklalapis pasiekiamas internetu.
+  * Laikykitės principo: _Less is more_. Svarbu kokybė.
+  * Išlaikykite vienodą stilių.
+  * Failo dydis < 5 MiB, formatas `PDF`, talpinimo vieta: _Moodle_.
