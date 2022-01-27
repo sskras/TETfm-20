@@ -2,16 +2,16 @@ From: <Saved by Blink>
 Snapshot-Content-Location: file:///C:/Users/saukrs/Downloads/LD4-ataskaita.html
 Subject: =?utf-8?Q?=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Vilniaus=20Gedimino=20techn?=
  =?utf-8?Q?ikos=20universitetas?=
-Date: Thu, 27 Jan 2022 16:53:23 -0000
+Date: Thu, 27 Jan 2022 16:59:11 -0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe----"
+	boundary="----MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN----"
 
 
-------MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe----
+------MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN----
 Content-Type: text/html
-Content-ID: <frame-B048D7C72D42474E8710FFC5EB6A1688@mhtml.blink>
+Content-ID: <frame-75D821715D435974106CE00AED4E77D4@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/Users/saukrs/Downloads/LD4-ataskaita.html
 
@@ -1238,7 +1238,7 @@ sas&gt;</strong></code></p>
                       <tr>
                         <td class=3D"tableblock halign-left valign-top">
                           <p class=3D"tableblock"><code>/etc/ansible/hosts<=
-/code> registruot. vardams</p>
+/code> registruotuotiems vardams</p>
                         </td>
                         <td class=3D"tableblock halign-left valign-top">
                           <p class=3D"tableblock">vardas</p>
@@ -1251,7 +1251,7 @@ sas&gt;</strong></code></p>
                       <tr>
                         <td class=3D"tableblock halign-left valign-top">
                           <p class=3D"tableblock"><code>/etc/ansible/hosts<=
-/code> neregistr. vardams</p>
+/code> neregistruotiems vardams</p>
                         </td>
                         <td class=3D"tableblock halign-left valign-top">
                           <p class=3D"tableblock">vardas</p>
@@ -2541,7 +2541,6 @@ aiga</h5>
                 </li>
               </ul>
             </div>
-            <hr>
             <div style=3D"page-break-after: always;"></div>
           </div>
           <div class=3D"sect4">
@@ -2604,7 +2603,7 @@ word in Ansible</a></p>
 
 
 </body></html>
-------MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe----
+------MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css
@@ -3611,4 +3610,4 @@ ding: 0px !important; margin: 0px !important; }
   .hide-for-print { display: none !important; }
   .show-for-print { display: inherit !important; }
 }
-------MultipartBoundary--VP3dqolvwRb77tEZ3fvDzxfVgf5BxEuuIc7Wj6iuOe------
+------MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN------
