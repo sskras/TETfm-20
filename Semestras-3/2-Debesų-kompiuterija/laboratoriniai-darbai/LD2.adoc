@@ -1,1 +1,15 @@
+Debesų kompiuterija
 
+[.text-center]
+=== Laboratorinis darbas nr. 2
+
+
+[.text-center]
+== Susipažinimas su Docker konteineriais
+
+
+[.text-left]
+=== Darbo tikslas
+
+* Naudotis pagrindinėmis _Docker_ funkcijomis
+* Iš pirminio failo sukurti ir vykdyti konteinerio atvaizdį (angl. _Image).
