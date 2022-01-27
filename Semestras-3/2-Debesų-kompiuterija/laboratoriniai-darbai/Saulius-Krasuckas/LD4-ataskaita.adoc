@@ -855,12 +855,12 @@ LD aprašyme pagaliau atkreipiau dėmesį, kad _Ansible_ `hosts` failas naudoja 
 * => Šis formatas yra lankstesnis -- skirtingose situacijose turi galimybę „šakotis“:  <<4>>
 +
 |===
-   | Failas                                     | Pirmas stulpelis      | Antras stulpelis
+   | Failas                                           | Pirmas stulpelis      | Antras stulpelis
    
-   | `/etc/hosts`                               | `**<IP adresas>**`    | vardas
-   | `/etc/ansible/hosts`  IP adresams          | `**<IP adresas>**`    | --
-   | `/etc/ansible/hosts`  registruot. vardams  | vardas                | --
-   | `/etc/ansible/hosts`  neregistr. vardams   | vardas                | `ansible_host=**<IP adresas>**`
+   | `/etc/hosts`                                     | `**<IP adresas>**`    | vardas
+   | `/etc/ansible/hosts`  IP adresams                | `**<IP adresas>**`    | --
+   | `/etc/ansible/hosts`  registruotuotiems vardams  | vardas                | --
+   | `/etc/ansible/hosts`  neregistruotiems vardams   | vardas                | `ansible_host=**<IP adresas>**`
 |===
 
 * => Jis turi ir kitų galimybių (pvz. nurodyti netipinį mazgo TCP prievadą SSH prisijungimui).
@@ -1620,8 +1620,6 @@ stud@cc-lab:~/src$
 * Sukurtas inventoriaus failas.
 * Patikrintas nuotolinis komandų vykdymas.
 * Patikrintas grojaraščio vykdumas
-
----
 
 <<<
 
