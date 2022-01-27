@@ -1636,6 +1636,6 @@ https://docs.ansible.com/ansible/2.3/intro_inventory.html#hosts-and-groups[Docum
 
 `2020-04-06` **[[[5]]]** `redhat.com`, Ken Hitchcock, https://www.redhat.com/en/blog/ansible-101-ansible-beginners[Ansible 101 - Ansible for beginners]
 
-`2019-10-20` **[[[6]]]** `techexpert.tips`, facebook.com/fkingit, https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/#:~:text=To%20run%20this%20Ansible%20playbook,%20use%20the%20following%20command[Ansible - Playbook Examples for Ubuntu Linux | Ansible Playbook Example - Install a Package using Apt-get]
+`2019-10-20` **[[[6]]]** `techexpert.tips`, facebook.com/fkingit, https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/#:~:text=To%20run%20this%20Ansible%20playbook,%20use%20the%20following%20command[Ansible - Playbook Examples for Ubuntu Linux]
 
 `2018-08-15` **[[[7]]]**, `stackoverflow.com`, nesinor, https://stackoverflow.com/questions/25582740/missing-sudo-password-in-ansible/51864689#51864689[Missing sudo password in Ansible]
