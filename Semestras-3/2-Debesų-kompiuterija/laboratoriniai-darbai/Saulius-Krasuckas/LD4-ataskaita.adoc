@@ -860,7 +860,7 @@ LD aprašyme pagaliau atkreipiau dėmesį, kad _Ansible_ `hosts` failas naudoja 
    | `/etc/ansible/hosts`  neregistr. vardams   | vardas                | `ansible_host=**<IP adresas>**`
 |===
 
-* => Jis turi ir daugiau galimybių (pvz. nurodyti netipinį mazgo TCP prievadą SSH prisijungimui).
+* => Jis turi ir kitų galimybių (pvz. nurodyti netipinį mazgo TCP prievadą SSH prisijungimui).
 
 Taigi, ištrinu savo pradinę `/etc/ansible/hosts` konfigūraciją:
 
@@ -1615,7 +1615,9 @@ stud@cc-lab:~/src$
 * Susipažinta su _Ansible_ sistema.
 * Sukurtas inventoriaus failas.
 * Patikrintas nuotolinis komandų vykdymas.
-* Patikrintas grojaraščio vykdymas.
+* Patikrintas grojaraščio vykdumas
+
+---
 
 <<<
 
