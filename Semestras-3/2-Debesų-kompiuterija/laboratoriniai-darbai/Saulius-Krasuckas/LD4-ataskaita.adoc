@@ -552,7 +552,7 @@ ff02::2 ip6-allrouters
 stud@cc-lab:~$ 
 ----
 
-Aprašau savo serverį nr. 1, tik vardu `serveris2`:
+Aprašau jame savo serverį nr. 1, tik vardu `serveris2`:
 
 ----
 stud@cc-lab:~$ echo '10.128.67.8    serveris2' >> /etc/hosts
@@ -594,7 +594,7 @@ stud@cc-lab:~$
 
 ===== SSH ryšio ir rakto paruošimas
 
-Darbo SSH raktais prisiminimui pasinaudoju straipsneliu:  <<2>>  +
+Darbo su SSH raktais prisiminimui pasinaudoju straipsneliu:  <<2>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
 
 ----
@@ -629,7 +629,7 @@ stud@cc-lab:~$
 
 * => Kadangi šiame įraše telpa ne vien IP adresas, bet ir serverio vardas, dėl tvarkos reiktų jungtis vardu (tuomet išspręstasis IP adresas išsisaugo kartu).
 
-* => O tam, kad šio įrašo apie SSH mazgą vėliau netektų pildyti / taisyti, reiktų prisijungimui naudoti jau galutinį mazgo vardą, nebe testinį `serveris2`.
+* => O tam, kad šio įrašo apie SSH mazgą vėliau netektų keisti / taisyti, reiktų prisijungimui naudoti jau galutinį mazgo vardą, nebe testinį `serveris2`.
 
 
 Pašalinu pradinį, testinį mazgo vardą (dvi eilutes) iš sisteminės lentelės ir įrašau adekvatų vardą:
@@ -690,14 +690,16 @@ stud@cc-lab:~$
 ----
 
 * => Prieš viešojo SSH rakto kopijavimą į serverį verta patikslinti,
-   ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
-   +
-   Visiškai nesuprantu, kaip tinkamai tai padaryti + atpažinti galimą „pasiklausymą“ / MITM ataką.  <<3>>
-   +
-  Todėl tiesiog įvedžiau `yes`.
+     ar serverio ECDSA (eliptinis) rakto pėdsakas yra autentiškas.
++
+Visiškai nesuprantu, kaip tinkamai tai padaryti + atpažinti galimą „pasiklausymą“ / MITM ataką.  <<3>>
++
+Todėl tiesiog įvedžiau `yes`.
+
+* => `serveris1` jau pilnai paruoštas jungimuisi per SSH (su slaptažodžiu).
 
 
-===== Serverio nr. 1 (testinis) savęs pasiekimas naudojantis SSH raktu
+===== Serverio nr. 1 savęs pasiekimas (testinis) naudojantis SSH raktu
 
 Kopijuoju SSH raktą į savo paties (tą patį) serverį:
 
@@ -755,7 +757,7 @@ Connection to serveris1 closed.
 stud@cc-lab:~$ 
 ----
 
-* => Testinis SSH prisijungimas raktu jau veikia (į savo paties serverį).
+* => Testinis SSH prisijungimas raktu į `serveris1` jau irgi veikia.
 
 
 [.text-left]
@@ -794,6 +796,9 @@ stud@cc-lab:~$
 ----
 
 * => Bloga inventorinio failo struktūra.
+
+* => Nors vietoj `serveris1` klaidingai įrašiau `serveris2`, kol kas situacijos tai nekeitė.
+
 
 Šalinu tris savo įterptas eilutes (taisydamas failo turinį redaktoriuje):
 
@@ -842,7 +847,7 @@ stud@cc-lab:~$ ansible all -m ping -u stud
 stud@cc-lab:~$ 
 ----
 
-* => _Ansible_ mazgas jau prisijungia prie paties savęs.
+* => _Ansible_ mazgas jau prisijungia prie paties savęs (kol kas tik IP adresu).
 
 
 ===== _Inventory_ failo tikslinimas
@@ -927,9 +932,9 @@ stud@cc-lab:~$
 
 ===== Aprašau serverį nr. 2
 
-Kaip serverį nr. 2 pasirenku LD apraše man priskirtą IP adresą: `10.128.67.20`.
+LD aprašo susirandu mano serveriui nr. 2 priskirtą IP adresą: `10.128.67.20`.
 
-Pirmiausia aprašau `/etc/hosts` faile:
+Pirmiausia aprašau jį `/etc/hosts` faile:
 
 ----
 stud@cc-lab:~$ echo '10.128.67.20   serveris2' | sudo tee -a /etc/hosts
@@ -969,13 +974,11 @@ serveris2 ansible_host=10.128.67.20
 stud@cc-lab:~$
 ----
 
+* => Pastebiu netiksliai užrašytą serverio nr. 1 vardą.
+
 
 [.text-left]
 ===== Konfigūracijos klaidų taisymas 
-
-
-* => Pastebiu netiksliai užrašytą serverio nr. 1 vardą.
-
 
 Pataisau serverio nr. 1 aprašymą redaktoriumi, rankiniu būdu:
 
@@ -989,7 +992,6 @@ serveris2 ansible_host=10.128.67.20
                                                                                                                                                            47,8          All
 stud@cc-lab:~$ 
 ----
-
 
 Įsitikinu, kad _Inventory_ papildžiau teisingai:
 
@@ -1007,7 +1009,9 @@ all:
 stud@cc-lab:~$ 
 ----
 
-* => Paruoštas ir patikrintas inventoriaus failas, jame nurodytas serveris nr. 2.
+* => Jei `/etc/ansible/hosts` faile naudotume tik vardus (be IP adresų), tokias klaidas varduose (tą patį vardą, keliose vietose aprašomą skirtingai) būtų pavykę pastebėti iškart.
+
+* => Paruoštas ir patikrintas inventoriaus failas, jame aprašytas serveris nr. 2.
 
 
 [.text-left]
@@ -1036,7 +1040,7 @@ lickey,password).",
 stud@cc-lab:~$ 
 ----
 
-* => Dar neparuoštas SSH prisijungimas iš `serveris1` į `serveris2`.
+* => Vis dar neparuošiau SSH prisijungimo iš `serveris1` į `serveris2`.
 
 
 ===== Tolimesnis SSH prisijungimų tvarkymas
@@ -1084,7 +1088,7 @@ stud@cc-lab:~$
 ----
 
 * => Galų gale abu serveriai atsiliepia tinkamai.
-     Rezultatas panašus į pateiktąjį LD apraše.
+     Rezultatas panašus į pateiktąjį LD apraše.  +
      _Ansible_ valdymo mazgas palaiko ryšį su dviem serveriais (vienu testiniu ir vienu produkciniu).
 
 
@@ -1136,6 +1140,7 @@ tmpfs                              300M     0  300M   0% /run/user/1001
 stud@cc-lab:~$ 
 ----
 
+* => Gaunu serverių primontuotų failinių sistemų (FS) būsenas.
 
 ----
 stud@cc-lab:~$ ansible all -a uptime
@@ -1146,11 +1151,9 @@ serveris2 | CHANGED | rc=0 >>
 stud@cc-lab:~$ 
 ----
 
-* => Gaunu serverių primontuotų failinių sistemų (FS) būsenas.
-
 * => Gaunu serverių veikimo trukmes ir sistemines apkrovas (_System load_).
 
-* => _Ansible_ abi komandas įvykdė abiejuose serveriuose.
+* => _Ansible_ abi LD komandas įvykdė abiejuose serveriuose sėkmingai.
 
 
 ===== Kitos (paprastos) _Ad-hoc_ komandas
@@ -1209,13 +1212,14 @@ ssh \
       && sleep 0'
 ```
 
-* => ... ir nuotoliniame serveryje jau leidžia komandą, panašią į šią:
+* => ... ir nuotoliniame serveryje startuoja tokį _Python_ skriptą:
 +
 ```
 /usr/bin/python3 /home/stud/.ansible/tmp/ansible-tmp-1638897559.5734017-231528218158292/AnsiballZ_command.py
 ```
 
-* => Panašu, kad failą `AnsiballZ_command.py` prieš tai _Ansible_ į nuotolinį serverį pats ir nusikopijuoja.
+* => Panašu, kad skriptą `AnsiballZ_command.py` _Ansible_ į nuotolinį serverį sau nusikopijuoja prieš pat vykdymą.
+
 
 Leidžiu paskutinę paprastą komandą:
 
@@ -1297,7 +1301,7 @@ stud@cc-lab:~$
 
 
 [.text-left]
-=== _Ansible_ grojaraščių vykdymas
+=== ^(Bonus)^ _Ansible_ grojaraščių vykdymas
 
 Pradedu kurti atskirą grojaraštį (_Playbook_):
 
@@ -1327,7 +1331,7 @@ stud@cc-lab:~/src$ vim saukrs-1.yml
   ...
 ----
 
-Kopijuoju pavyzdį iš _Red Hat_:  <<5>>
+Kopijuoju pavyzdį iš _Red Hat_ Blog-įrašo:  <<5>>
 
 ----
 # 2021-12-07 saukrs: kopijuoju iš https://www.redhat.com/en/blog/ansible-101-ansible-beginners
@@ -1425,7 +1429,7 @@ serveris2                  : ok=0    changed=0    unreachable=0    failed=1    s
 stud@cc-lab:~/src$ 
 ----
 
-* => Grojaraštis nr. 2 sintaksės klaidų nebeturi, tačiau praneša, kad neturi `sudo` slaptažodžio.
+* => Grojaraštis nr. 2 sintaksės klaidų nebeturi, tačiau praneša, kad trūksta `sudo` slaptažodžio.
 
 * => Grąžina `ok=0` ir `failed=1`.
 
@@ -1568,14 +1572,16 @@ Papildau antrąjį, veikiantį grojaraštį jo kilmės nuoroda ir šia instrukci
 
 ----
 stud@cc-lab:~/src$ fg
+----
 
+
+----
 ---
 # 2021-12-07 saukrs: paėmiau iš https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/ ,
   ...
   become: yes
   become_user: stud
   ...
-
 ----
 
 Ir jį patikrinu:
@@ -1601,7 +1607,7 @@ serveris2                  : ok=2    changed=0    unreachable=0    failed=0    s
 stud@cc-lab:~/src$ 
 ----
 
-* => `BECOME password:` nebeprašomas, iš vienos pusės smagu.
+* => `BECOME password:` nebeprašomas, iš vienos pusės džiugu.
 
 * => Iš kitos pusės _Ansible_ dabar nebedarė jokių pakeitimų.  +
      Jei paketai serveriuose dar būtų neįdiegti ar neatnaujinti, `sudo` slaptažodžio turbūt vis tiek prireiktų.  +
