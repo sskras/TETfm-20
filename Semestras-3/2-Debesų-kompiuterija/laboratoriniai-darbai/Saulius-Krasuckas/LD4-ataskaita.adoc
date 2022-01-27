@@ -1612,20 +1612,21 @@ stud@cc-lab:~/src$
 
 * => Kaip elgtųsi _Ansible_ pastaruoju atveju (ar paprašytų slaptažodžio ne iškart, vėliau, ar tiesiog sustotų ir pateiktų klaidą), lieka man neaišku ir neištestuota.
 
+<<<
+
 
 [.text-left]
-===== Laboratorinio darbo pabaiga
+=== Laboratorinio darbo pabaiga
 
 * Susipažinta su _Ansible_ sistema.
 * Sukurtas inventoriaus failas.
 * Patikrintas nuotolinis komandų vykdymas.
 * Patikrintas grojaraščio vykdumas
 
-<<<
-
 
 [bibliography]
-===== Nuorodos
+[.text-left]
+=== Nuorodos
 
 `2020-06-29` **[[[1]]]** `msys2.org`, (updated) https://github.com/msys2/msys2.github.io/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3f2ee343853bd21bf82ea9960d0cf06661baa244439dd6R9[MSYS2 | Software Distribution and Building Platform for Windows]
 
