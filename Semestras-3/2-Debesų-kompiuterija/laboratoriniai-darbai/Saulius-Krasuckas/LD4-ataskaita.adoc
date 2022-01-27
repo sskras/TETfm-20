@@ -363,8 +363,6 @@ default via 10.128.67.254 dev ens160 proto dhcp src 10.128.67.8 metric 100
 stud@cc-lab:~$ 
 ----
 
-* => Lyginant su LD aprašu, vidiniai IP adresai šiek tiek persislinko.
-
 Ieškau „kaimynų“ (serverio nr. 2) su sniferiu:
 
 ----
