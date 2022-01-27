@@ -1978,16 +1978,45 @@ stud@cc-lab:~/src$</pre>
               </li>
               <li>
                 <p>&#8658; Iš to vis tiek neaišku, ką tiksliai tas <em>Python</em> skriptas
-                  veikia ir kada panaudoja <code>sudo</code>.</p>
+                  veikia ir ar viduje panaudoja <code>sudo</code>.</p>
               </li>
               <li>
-                <p>&#8658; Gavau dėstytojo patarimą greta <code>become:</code> instrukcijos
-                  panaudoti <code>become_user:</code> nurodant jai`stud`. <br></p>
+                <p>&#8658; Tik ataskaitos kūrimo metu pastebėjau, kad <code>sudo</code>                  naudojama <em>Ansible</em> viduje taip:</p>
+              </li>
+            </ul>
+          </div>
+          <div class="listingblock">
+            <div class="content">
+              <pre>sudo \
+    -H \
+    -S \
+    -n \
+    -u root \
+    /bin/sh \
+           -c ' \
+               echo BECOME-SUCCESS-xucyadvmmhrwwkflwsxapwvnhklmvrvo ; \
+               /usr/bin/python3 \
+                   /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/AnsiballZ_setup.py \
+           '
+&amp;&amp; sleep 0</pre>
+            </div>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>&#8658; Dabar akivaizdu, kad <em>Ansible</em> pagal nutylėjimą tikrai
+                  bando persijungt į <code>root</code> vartotoją: <code>-u root</code>.</p>
               </li>
             </ul>
           </div>
           <div class="paragraph">
-            <p>Papildau antrąjį, veikiantį grojaraštį jo kilmės nuoroda ir šia instrukcija:</p>
+            <p>Gavau dėstytojo patarimą greta <code>become:</code> instrukcijos panaudoti
+              <code>become_user:</code> ir nurodyti jai reikšmę <code>stud</code>.
+              <br></p>
+          </div>
+          <div class="paragraph">
+            <p>Papildau antrąjį, veikiantį grojaraštį komentaru su jo kilmės nuoroda
+              bei šia instrukcija:</p>
           </div>
           <div class="listingblock">
             <div class="content">
@@ -2047,57 +2076,70 @@ stud@cc-lab:~/src$</pre>
               </li>
             </ul>
           </div>
-          <div class="sect4 text-left">
-            <h5 id="_laboratorinio_darbo_pabaiga">Laboratorinio darbo pabaiga</h5>
-            <div class="ulist">
-              <ul>
-                <li>
-                  <p>Susipažinta su <em>Ansible</em> sistema.</p>
-                </li>
-                <li>
-                  <p>Sukurtas inventoriaus failas.</p>
-                </li>
-                <li>
-                  <p>Patikrintas nuotolinis komandų vykdymas.</p>
-                </li>
-                <li>
-                  <p>Patikrintas grojaraščio vykdumas</p>
-                </li>
-              </ul>
-            </div>
-            <div style="page-break-after: always;"></div>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_laboratorinio_darbo_pabaiga">Laboratorinio darbo pabaiga</h3>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>Susipažinta su <em>Ansible</em> sistema iš naudotojo pusės.</p>
+              </li>
+              <li>
+                <p>Sukurtas inventoriaus failas.</p>
+              </li>
+              <li>
+                <p>Patikrintas nuotolinis komandų vykdymas.</p>
+              </li>
+              <li>
+                <p>Patikrintas grojaraščio vykdymas</p>
+              </li>
+              <li>
+                <p>Susipažinta truputį ir su <em>Ansible</em> vidiniu mechanizmu (angl.
+                  <em>Under the hood</em>).</p>
+                <div class="paragraph">
+                  <p>Toks pažinimo būdas klasikinėje elektronikos inžinieriaus mąstysenoje
+                    (angl. <em>From the bottom up</em>, nuo įrangos iki abstraktesnių
+                    lygmenų) yra tiesiausias link užtikrinto sistemos supratimo (bent
+                    jau mano atveju).</p>
+                </div>
+              </li>
+              <li>
+                <p>Laboratorinis darbas man suteikė praktiškai naudingų įgūdžių (užtikrintumą).</p>
+              </li>
+            </ul>
           </div>
-          <div class="sect4">
-            <h5 id="_nuorodos">Nuorodos</h5>
-            <div class="paragraph">
-              <p><code>2020-06-29</code> <strong><a id="1"></a>[1]</strong> <code>msys2.org</code>,
-                (updated) <a href="https://github.com/msys2/msys2.github.io/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3f2ee343853bd21bf82ea9960d0cf06661baa244439dd6R9">MSYS2 | Software Distribution and Building Platform for Windows</a></p>
-            </div>
-            <div class="paragraph">
-              <p><code>2020-04-23</code> <strong><a id="2"></a>[2]</strong> <code>digitalocean.com</code>,
-                Brian Boucheron, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04">How to Set Up SSH Keys</a></p>
-            </div>
-            <div class="paragraph">
-              <p><code>2021-02-13</code> <strong><a id="3"></a>[3]</strong> <code>jumpnowtek.com</code>,
-                Jumpnow Technologies, LLC <a href="https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html">SSH Hostkey Fingerprints</a></p>
-            </div>
-            <div class="paragraph">
-              <p><code>2020-12-01</code> <strong><a id="4"></a>[4]</strong> <code>ansible.com</code>,
-                Red Hat, Inc.
-                <a href="https://docs.ansible.com/ansible/2.3/intro_inventory.html#hosts-and-groups">Documentation: Ansible Core v2.3 &gt; Introduction &gt; Inventory &gt; Hosts and Groups</a></p>
-            </div>
-            <div class="paragraph">
-              <p><code>2020-04-06</code> <strong><a id="5"></a>[5]</strong> <code>redhat.com</code>,
-                Ken Hitchcock, <a href="https://www.redhat.com/en/blog/ansible-101-ansible-beginners">Ansible 101 - Ansible for beginners</a></p>
-            </div>
-            <div class="paragraph">
-              <p><code>2019-10-20</code> <strong><a id="6"></a>[6]</strong> <code>techexpert.tips</code>,
-                facebook.com/fkingit, <a href="https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/#:~:text=To%20run%20this%20Ansible%20playbook,%20use%20the%20following%20command">Ansible - Playbook Examples for Ubuntu Linux</a></p>
-            </div>
-            <div class="paragraph">
-              <p><code>2018-08-15</code> <strong><a id="7"></a>[7]</strong>, <code>stackoverflow.com</code>,
-                nesinor, <a href="https://stackoverflow.com/questions/25582740/missing-sudo-password-in-ansible/51864689#51864689">Missing sudo password in Ansible</a></p>
-            </div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_nuorodos">Nuorodos</h3>
+          <div class="paragraph">
+            <p><code>2020-06-29</code> <strong><a id="1"></a>[1]</strong> <code>msys2.org</code>,
+              (updated) <a href="https://github.com/msys2/msys2.github.io/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3f2ee343853bd21bf82ea9960d0cf06661baa244439dd6R9">MSYS2 | Software Distribution and Building Platform for Windows</a></p>
+          </div>
+          <div class="paragraph">
+            <p><code>2020-04-23</code> <strong><a id="2"></a>[2]</strong> <code>digitalocean.com</code>,
+              Brian Boucheron, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04">How to Set Up SSH Keys</a></p>
+          </div>
+          <div class="paragraph">
+            <p><code>2021-02-13</code> <strong><a id="3"></a>[3]</strong> <code>jumpnowtek.com</code>,
+              Jumpnow Technologies, LLC <a href="https://jumpnowtek.com/security/SSH-Hostkey-Fingerprints.html">SSH Hostkey Fingerprints</a></p>
+          </div>
+          <div class="paragraph">
+            <p><code>2020-12-01</code> <strong><a id="4"></a>[4]</strong> <code>ansible.com</code>,
+              Red Hat, Inc.
+              <a href="https://docs.ansible.com/ansible/2.3/intro_inventory.html#hosts-and-groups">Documentation: Ansible Core v2.3 &gt; Introduction &gt; Inventory &gt; Hosts and Groups</a></p>
+          </div>
+          <div class="paragraph">
+            <p><code>2020-04-06</code> <strong><a id="5"></a>[5]</strong> <code>redhat.com</code>,
+              Ken Hitchcock, <a href="https://www.redhat.com/en/blog/ansible-101-ansible-beginners">Ansible 101 - Ansible for beginners</a></p>
+          </div>
+          <div class="paragraph">
+            <p><code>2019-10-20</code> <strong><a id="6"></a>[6]</strong> <code>techexpert.tips</code>,
+              facebook.com/fkingit, <a href="https://techexpert.tips/ansible/ansible-playbook-examples-ubuntu-linux/#:~:text=To%20run%20this%20Ansible%20playbook,%20use%20the%20following%20command">Ansible - Playbook Examples for Ubuntu Linux</a></p>
+          </div>
+          <div class="paragraph">
+            <p><code>2018-08-15</code> <strong><a id="7"></a>[7]</strong>, <code>stackoverflow.com</code>,
+              nesinor, <a href="https://stackoverflow.com/questions/25582740/missing-sudo-password-in-ansible/51864689#51864689">Missing sudo password in Ansible</a></p>
           </div>
         </div>
       </div>

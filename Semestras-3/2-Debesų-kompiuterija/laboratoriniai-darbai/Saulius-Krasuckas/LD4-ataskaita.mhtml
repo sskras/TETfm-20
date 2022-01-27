@@ -2,16 +2,16 @@ From: <Saved by Blink>
 Snapshot-Content-Location: file:///C:/Users/saukrs/Downloads/LD4-ataskaita.html
 Subject: =?utf-8?Q?=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0Vilniaus=20Gedimino=20techn?=
  =?utf-8?Q?ikos=20universitetas?=
-Date: Thu, 27 Jan 2022 16:59:11 -0000
+Date: Thu, 27 Jan 2022 17:46:47 -0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN----"
+	boundary="----MultipartBoundary--TNj6sPRGF9M5ktthUtxVL3Cs7KnDNajPzvZmXPK63N----"
 
 
-------MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN----
+------MultipartBoundary--TNj6sPRGF9M5ktthUtxVL3Cs7KnDNajPzvZmXPK63N----
 Content-Type: text/html
-Content-ID: <frame-75D821715D435974106CE00AED4E77D4@mhtml.blink>
+Content-ID: <frame-22AE139BAD210877469B8C9F95232766@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/Users/saukrs/Downloads/LD4-ataskaita.html
 
@@ -2432,19 +2432,53 @@ vau anks=C4=8Diau.</p>
               <li>
                 <p>=E2=87=92 I=C5=A1 to vis tiek neai=C5=A1ku, k=C4=85 tiks=
 liai tas <em>Python</em> skriptas
-                  veikia ir kada panaudoja <code>sudo</code>.</p>
+                  veikia ir ar viduje panaudoja <code>sudo</code>.</p>
               </li>
               <li>
-                <p>=E2=87=92 Gavau d=C4=97stytojo patarim=C4=85 greta <code=
->become:</code> instrukcijos
-                  panaudoti <code>become_user:</code> nurodant jai`stud`. <=
-br></p>
+                <p>=E2=87=92 Tik ataskaitos k=C5=ABrimo metu pasteb=C4=97ja=
+u, kad <code>sudo</code>                  naudojama <em>Ansible</em> viduje=
+ taip:</p>
+              </li>
+            </ul>
+          </div>
+          <div class=3D"listingblock">
+            <div class=3D"content">
+              <pre>sudo \
+    -H \
+    -S \
+    -n \
+    -u root \
+    /bin/sh \
+           -c ' \
+               echo BECOME-SUCCESS-xucyadvmmhrwwkflwsxapwvnhklmvrvo ; \
+               /usr/bin/python3 \
+                   /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-2=
+53348797528778/AnsiballZ_setup.py \
+           '
+&amp;&amp; sleep 0</pre>
+            </div>
+          </div>
+          <div class=3D"ulist">
+            <ul>
+              <li>
+                <p>=E2=87=92 Dabar akivaizdu, kad <em>Ansible</em> pagal nu=
+tyl=C4=97jim=C4=85 tikrai
+                  bando persijungt =C4=AF <code>root</code> vartotoj=C4=85:=
+ <code>-u root</code>.</p>
               </li>
             </ul>
           </div>
           <div class=3D"paragraph">
+            <p>Gavau d=C4=97stytojo patarim=C4=85 greta <code>become:</code=
+> instrukcijos panaudoti
+              <code>become_user:</code> ir nurodyti jai reik=C5=A1m=C4=99 <=
+code>stud</code>.
+              <br></p>
+          </div>
+          <div class=3D"paragraph">
             <p>Papildau antr=C4=85j=C4=AF, veikiant=C4=AF grojara=C5=A1t=C4=
-=AF jo kilm=C4=97s nuoroda ir =C5=A1ia instrukcija:</p>
+=AF komentaru su jo kilm=C4=97s nuoroda
+              bei =C5=A1ia instrukcija:</p>
           </div>
           <div class=3D"listingblock">
             <div class=3D"content">
@@ -2522,79 +2556,98 @@ esiog sustot=C5=B3 ir pateikt=C5=B3
               </li>
             </ul>
           </div>
-          <div class=3D"sect4 text-left">
-            <h5 id=3D"_laboratorinio_darbo_pabaiga">Laboratorinio darbo pab=
-aiga</h5>
-            <div class=3D"ulist">
-              <ul>
-                <li>
-                  <p>Susipa=C5=BEinta su <em>Ansible</em> sistema.</p>
-                </li>
-                <li>
-                  <p>Sukurtas inventoriaus failas.</p>
-                </li>
-                <li>
-                  <p>Patikrintas nuotolinis komand=C5=B3 vykdymas.</p>
-                </li>
-                <li>
-                  <p>Patikrintas grojara=C5=A1=C4=8Dio vykdumas</p>
-                </li>
-              </ul>
-            </div>
-            <div style=3D"page-break-after: always;"></div>
+          <div style=3D"page-break-after: always;"></div>
+        </div>
+        <div class=3D"sect2 text-left">
+          <h3 id=3D"_laboratorinio_darbo_pabaiga">Laboratorinio darbo pabai=
+ga</h3>
+          <div class=3D"ulist">
+            <ul>
+              <li>
+                <p>Susipa=C5=BEinta su <em>Ansible</em> sistema i=C5=A1 nau=
+dotojo pus=C4=97s.</p>
+              </li>
+              <li>
+                <p>Sukurtas inventoriaus failas.</p>
+              </li>
+              <li>
+                <p>Patikrintas nuotolinis komand=C5=B3 vykdymas.</p>
+              </li>
+              <li>
+                <p>Patikrintas grojara=C5=A1=C4=8Dio vykdymas</p>
+              </li>
+              <li>
+                <p>Susipa=C5=BEinta truput=C4=AF ir su <em>Ansible</em> vid=
+iniu mechanizmu (angl.
+                  <em>Under the hood</em>).</p>
+                <div class=3D"paragraph">
+                  <p>Toks pa=C5=BEinimo b=C5=ABdas klasikin=C4=97je elektro=
+nikos in=C5=BEinieriaus m=C4=85stysenoje
+                    (angl. <em>From the bottom up</em>, nuo =C4=AFrangos ik=
+i abstraktesni=C5=B3
+                    lygmen=C5=B3) yra tiesiausias link u=C5=BEtikrinto sist=
+emos supratimo (bent
+                    jau mano atveju).</p>
+                </div>
+              </li>
+              <li>
+                <p>Laboratorinis darbas man suteik=C4=97 prakti=C5=A1kai na=
+uding=C5=B3 =C4=AFg=C5=ABd=C5=BEi=C5=B3 (u=C5=BEtikrintum=C4=85).</p>
+              </li>
+            </ul>
           </div>
-          <div class=3D"sect4">
-            <h5 id=3D"_nuorodos">Nuorodos</h5>
-            <div class=3D"paragraph">
-              <p><code>2020-06-29</code> <strong><a id=3D"1"></a>[1]</stron=
-g> <code>msys2.org</code>,
-                (updated) <a href=3D"https://github.com/msys2/msys2.github.=
-io/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3=
-f2ee343853bd21bf82ea9960d0cf06661baa244439dd6R9">MSYS2 | Software Distribut=
-ion and Building Platform for Windows</a></p>
-            </div>
-            <div class=3D"paragraph">
-              <p><code>2020-04-23</code> <strong><a id=3D"2"></a>[2]</stron=
-g> <code>digitalocean.com</code>,
-                Brian Boucheron, <a href=3D"https://www.digitalocean.com/co=
-mmunity/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04">How to Set Up SSH=
- Keys</a></p>
-            </div>
-            <div class=3D"paragraph">
-              <p><code>2021-02-13</code> <strong><a id=3D"3"></a>[3]</stron=
-g> <code>jumpnowtek.com</code>,
-                Jumpnow Technologies, LLC <a href=3D"https://jumpnowtek.com=
-/security/SSH-Hostkey-Fingerprints.html">SSH Hostkey Fingerprints</a></p>
-            </div>
-            <div class=3D"paragraph">
-              <p><code>2020-12-01</code> <strong><a id=3D"4"></a>[4]</stron=
-g> <code>ansible.com</code>,
-                Red Hat, Inc.
-                <a href=3D"https://docs.ansible.com/ansible/2.3/intro_inven=
-tory.html#hosts-and-groups">Documentation: Ansible Core v2.3 &gt; Introduct=
-ion &gt; Inventory &gt; Hosts and Groups</a></p>
-            </div>
-            <div class=3D"paragraph">
-              <p><code>2020-04-06</code> <strong><a id=3D"5"></a>[5]</stron=
-g> <code>redhat.com</code>,
-                Ken Hitchcock, <a href=3D"https://www.redhat.com/en/blog/an=
-sible-101-ansible-beginners">Ansible 101 - Ansible for beginners</a></p>
-            </div>
-            <div class=3D"paragraph">
-              <p><code>2019-10-20</code> <strong><a id=3D"6"></a>[6]</stron=
-g> <code>techexpert.tips</code>,
-                facebook.com/fkingit, <a href=3D"https://techexpert.tips/an=
-sible/ansible-playbook-examples-ubuntu-linux/#:~:text=3DTo%20run%20this%20A=
-nsible%20playbook,%20use%20the%20following%20command">Ansible - Playbook Ex=
-amples for Ubuntu Linux</a></p>
-            </div>
-            <div class=3D"paragraph">
-              <p><code>2018-08-15</code> <strong><a id=3D"7"></a>[7]</stron=
-g>, <code>stackoverflow.com</code>,
-                nesinor, <a href=3D"https://stackoverflow.com/questions/255=
-82740/missing-sudo-password-in-ansible/51864689#51864689">Missing sudo pass=
-word in Ansible</a></p>
-            </div>
+        </div>
+        <div class=3D"sect2 text-left">
+          <h3 id=3D"_nuorodos">Nuorodos</h3>
+          <div class=3D"paragraph">
+            <p><code>2020-06-29</code> <strong><a id=3D"1"></a>[1]</strong>=
+ <code>msys2.org</code>,
+              (updated) <a href=3D"https://github.com/msys2/msys2.github.io=
+/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3f2=
+ee343853bd21bf82ea9960d0cf06661baa244439dd6R9">MSYS2 | Software Distributio=
+n and Building Platform for Windows</a></p>
+          </div>
+          <div class=3D"paragraph">
+            <p><code>2020-04-23</code> <strong><a id=3D"2"></a>[2]</strong>=
+ <code>digitalocean.com</code>,
+              Brian Boucheron, <a href=3D"https://www.digitalocean.com/comm=
+unity/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04">How to Set Up SSH K=
+eys</a></p>
+          </div>
+          <div class=3D"paragraph">
+            <p><code>2021-02-13</code> <strong><a id=3D"3"></a>[3]</strong>=
+ <code>jumpnowtek.com</code>,
+              Jumpnow Technologies, LLC <a href=3D"https://jumpnowtek.com/s=
+ecurity/SSH-Hostkey-Fingerprints.html">SSH Hostkey Fingerprints</a></p>
+          </div>
+          <div class=3D"paragraph">
+            <p><code>2020-12-01</code> <strong><a id=3D"4"></a>[4]</strong>=
+ <code>ansible.com</code>,
+              Red Hat, Inc.
+              <a href=3D"https://docs.ansible.com/ansible/2.3/intro_invento=
+ry.html#hosts-and-groups">Documentation: Ansible Core v2.3 &gt; Introductio=
+n &gt; Inventory &gt; Hosts and Groups</a></p>
+          </div>
+          <div class=3D"paragraph">
+            <p><code>2020-04-06</code> <strong><a id=3D"5"></a>[5]</strong>=
+ <code>redhat.com</code>,
+              Ken Hitchcock, <a href=3D"https://www.redhat.com/en/blog/ansi=
+ble-101-ansible-beginners">Ansible 101 - Ansible for beginners</a></p>
+          </div>
+          <div class=3D"paragraph">
+            <p><code>2019-10-20</code> <strong><a id=3D"6"></a>[6]</strong>=
+ <code>techexpert.tips</code>,
+              facebook.com/fkingit, <a href=3D"https://techexpert.tips/ansi=
+ble/ansible-playbook-examples-ubuntu-linux/#:~:text=3DTo%20run%20this%20Ans=
+ible%20playbook,%20use%20the%20following%20command">Ansible - Playbook Exam=
+ples for Ubuntu Linux</a></p>
+          </div>
+          <div class=3D"paragraph">
+            <p><code>2018-08-15</code> <strong><a id=3D"7"></a>[7]</strong>=
+, <code>stackoverflow.com</code>,
+              nesinor, <a href=3D"https://stackoverflow.com/questions/25582=
+740/missing-sudo-password-in-ansible/51864689#51864689">Missing sudo passwo=
+rd in Ansible</a></p>
           </div>
         </div>
       </div>
@@ -2603,7 +2656,7 @@ word in Ansible</a></p>
 
 
 </body></html>
-------MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN----
+------MultipartBoundary--TNj6sPRGF9M5ktthUtxVL3Cs7KnDNajPzvZmXPK63N----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css
@@ -3610,4 +3663,4 @@ ding: 0px !important; margin: 0px !important; }
   .hide-for-print { display: none !important; }
   .show-for-print { display: inherit !important; }
 }
-------MultipartBoundary--ZTr1pnWjIzrQR1an8zNGzZFrNhMVsQqdCGcEwaMUFN------
+------MultipartBoundary--TNj6sPRGF9M5ktthUtxVL3Cs7KnDNajPzvZmXPK63N------
