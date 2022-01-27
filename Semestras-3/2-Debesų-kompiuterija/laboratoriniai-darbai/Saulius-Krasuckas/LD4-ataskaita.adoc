@@ -65,7 +65,7 @@ VILNIUS, 2022
 {nbsp}
 
 [.text-center]
-==== Laboratorinis darbas nr. 4
+===== Laboratorinis darbas nr. 4
 
 [.text-center]
 == Automatizavimas `Ansible` pagalba
@@ -85,14 +85,14 @@ VILNIUS, 2022
 
 
 [.text-left]
-=== Infrastruktūros pasiruošimas
+=== Infrastruktūros paruošimas
 
 Šiuo metu KDV naudoju _Windows 10_.
 Darbui atlikti pasirinkau terminalo emuliatorių _MinTTY_ ir CLI įrankių sistemą _MSYS2_.  +
 Pastaroji Windows OS emuliuoja *nix aplinką.  <<1>>
 
 
-==== Prisijungimas prie savo **serverio nr. 1**
+===== Prisijungimas prie savo **serverio nr. 1**
 
 Kol laukiau SSH paslaugos pasiekiamumo, tikrinau nurodytą TCP prievadą.
 Prisiminiau ir išmėginau kelis būdus:
@@ -190,7 +190,7 @@ stud@cc-lab:~$
 ----
 
 
-==== Gauto OS atnaujinimas:
+===== Gauto OS atnaujinimas:
 
 ----
 stud@cc-lab:~$ id
@@ -210,7 +210,7 @@ stud@cc-lab:~$
 ----
 
 
-==== _Ansible_ įdiegimas:
+===== _Ansible_ įdiegimas:
 
 ----
 stud@cc-lab:~$ sudo apt install ansible
@@ -334,7 +334,7 @@ stud@cc-lab:~$
 * => _Ansible_ įdiegtas.
 
 
-==== Ryšio tarp serverių tikrinimas ir pradinis aprašymas
+===== Ryšio tarp serverių tikrinimas ir pradinis aprašymas
 
 Patikrinu kai kuriuos serverio nr. 1 IP nustatymus:
 
@@ -592,7 +592,7 @@ stud@cc-lab:~$
 * => Laikinas vardas veikia.
 
 
-==== SSH ryšio ir rakto paruošimas
+===== SSH ryšio ir rakto paruošimas
 
 Darbo SSH raktais prisiminimui pasinaudoju straipsneliu:  <<2>>  +
 Sukuriu `stud` paskyrai naują SSH raktą:
@@ -697,7 +697,7 @@ stud@cc-lab:~$
   Todėl tiesiog įvedžiau `yes`.
 
 
-==== Serverio nr. 1 (testinis) savęs pasiekimas naudojantis SSH raktu
+===== Serverio nr. 1 (testinis) savęs pasiekimas naudojantis SSH raktu
 
 Kopijuoju SSH raktą į savo paties (tą patį) serverį:
 
@@ -826,7 +826,7 @@ stud@cc-lab:~$
 ----
 
 
-==== Pirmas _Inventory_ failo testas
+===== Pirmas _Inventory_ failo testas
 
 Tikrinu _Ansible_ gebėjimą jungtis prie testinio inventorinio (t. y. savo paties) serverio:
 
@@ -845,7 +845,7 @@ stud@cc-lab:~$
 * => _Ansible_ mazgas jau prisijungia prie paties savęs.
 
 
-==== _Inventory_ failo tikslinimas
+===== _Inventory_ failo tikslinimas
 
 LD aprašyme pagaliau atkreipiau dėmesį, kad _Ansible_ `hosts` failas naudoja _kiek kitokį_ formatą aprašyti mazgui.
 
@@ -925,7 +925,7 @@ stud@cc-lab:~$
 * => susipažinta su `/etc/ansible/hosts` formatu, sukurta testinė konfigūracija.
 
 
-==== Aprašau serverį nr. 2
+===== Aprašau serverį nr. 2
 
 Kaip serverį nr. 2 pasirenku LD apraše man priskirtą IP adresą: `10.128.67.20`.
 
@@ -971,7 +971,7 @@ stud@cc-lab:~$
 
 
 [.text-left]
-==== Konfigūracijos klaidų taisymas 
+===== Konfigūracijos klaidų taisymas 
 
 
 * => Pastebiu netiksliai užrašytą serverio nr. 1 vardą.
@@ -1039,7 +1039,7 @@ stud@cc-lab:~$
 * => Dar neparuoštas SSH prisijungimas iš `serveris1` į `serveris2`.
 
 
-==== Tolimesnis SSH prisijungimų tvarkymas
+===== Tolimesnis SSH prisijungimų tvarkymas
 
 Kopijuoju serverio nr. 1 raktą į serverį nr. 2:
 
@@ -1062,7 +1062,7 @@ stud@cc-lab:~$
 ----
 
 
-==== Antras prisijungimų tikrinimas
+===== Antras prisijungimų tikrinimas
 
 ----
 stud@cc-lab:~$ ansible all -m ping
@@ -1092,7 +1092,7 @@ stud@cc-lab:~$
 === Nuotolinis komandų vykdymas
 
 
-==== LD užduoties _Ad-hoc_ komandos
+===== LD užduoties _Ad-hoc_ komandos
 
 ----
 stud@cc-lab:~$ ansible all -a "df -h"
@@ -1153,7 +1153,7 @@ stud@cc-lab:~$
 * => _Ansible_ abi komandas įvykdė abiejuose serveriuose.
 
 
-==== Kitos (paprastos) _Ad-hoc_ komandas
+===== Kitos (paprastos) _Ad-hoc_ komandas
 
 ----
 stud@cc-lab:~$ ansible all -a "ip r"
@@ -1231,7 +1231,7 @@ stud@cc-lab:~$
 * => Visos paprastos (pavienės) _Ad-hoc_ komandos veikia.
 
 
-==== Kompozitinės _Ad-hoc_ komandos
+===== Kompozitinės _Ad-hoc_ komandos
 
 Mėginu komandą `lscpu | awk '/^CPU/'` nustatyti mašinos CPU branduolių skaičiui:
 
@@ -1610,7 +1610,7 @@ stud@cc-lab:~/src$
 
 
 [.text-left]
-==== Laboratorinio darbo pabaiga
+===== Laboratorinio darbo pabaiga
 
 * Susipažinta su _Ansible_ sistema.
 * Sukurtas inventoriaus failas.
@@ -1623,7 +1623,7 @@ stud@cc-lab:~/src$
 
 
 [bibliography]
-==== Nuorodos
+===== Nuorodos
 
 `2020-06-29` **[[[1]]]** `msys2.org`, (updated) https://github.com/msys2/msys2.github.io/commit/67e99dd672505c48c500c73477fbd9b698960b84#diff-b4d68dc855d0f9476d3f2ee343853bd21bf82ea9960d0cf06661baa244439dd6R9[MSYS2 | Software Distribution and Building Platform for Windows]
 
