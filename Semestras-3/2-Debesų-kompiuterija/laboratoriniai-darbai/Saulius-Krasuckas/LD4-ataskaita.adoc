@@ -1562,11 +1562,30 @@ stud@cc-lab:~/src$
 
 * => Į serverį SFTP įrankiu kopijuojamas ir per SSH vykdomas failas `AnsiballZ_setup.py`, kurį jau identifikavau anksčiau.
 
-* => Iš to vis tiek neaišku, ką tiksliai tas _Python_ skriptas veikia ir kada panaudoja `sudo`.
+* => Iš to vis tiek neaišku, ką tiksliai tas _Python_ skriptas veikia ir ar viduje panaudoja `sudo`.
 
-* => Gavau dėstytojo patarimą greta `become:` instrukcijos panaudoti `become_user:` nurodant jai`stud`.  +
+* => Tik ataskaitos kūrimo metu pastebėjau, kad `sudo` naudojama _Ansible_ viduje taip:
 
-Papildau antrąjį, veikiantį grojaraštį jo kilmės nuoroda ir šia instrukcija:
+----
+sudo \
+    -H \
+    -S \
+    -n \
+    -u root \
+    /bin/sh \
+           -c ' \
+               echo BECOME-SUCCESS-xucyadvmmhrwwkflwsxapwvnhklmvrvo ; \
+               /usr/bin/python3 \
+                   /home/stud/.ansible/tmp/ansible-tmp-1638899019.7293622-253348797528778/AnsiballZ_setup.py \
+           '
+&& sleep 0
+----
+
+* => Dabar akivaizdu, kad _Ansible_ pagal nutylėjimą tikrai bando persijungt į `root` vartotoją: `-u root`.
+
+Gavau dėstytojo patarimą greta `become:` instrukcijos panaudoti `become_user:` ir nurodyti jai reikšmę `stud`.  +
+
+Papildau antrąjį, veikiantį grojaraštį komentaru su jo kilmės nuoroda bei šia instrukcija:
 
 ----
 stud@cc-lab:~/src$ fg
@@ -1618,10 +1637,14 @@ stud@cc-lab:~/src$
 [.text-left]
 === Laboratorinio darbo pabaiga
 
-* Susipažinta su _Ansible_ sistema.
+* Susipažinta su _Ansible_ sistema iš naudotojo pusės.
 * Sukurtas inventoriaus failas.
 * Patikrintas nuotolinis komandų vykdymas.
-* Patikrintas grojaraščio vykdumas
+* Patikrintas grojaraščio vykdymas
+* Susipažinta truputį ir su _Ansible_ vidiniu mechanizmu (angl. _Under the hood_).
++
+Toks pažinimo būdas klasikinėje elektronikos inžinieriaus mąstysenoje (angl. _From the bottom up_, nuo įrangos iki abstraktesnių lygmenų) yra tiesiausias link užtikrinto sistemos supratimo (bent jau mano atveju).
+* Laboratorinis darbas man suteikė praktiškai naudingų įgūdžių (užtikrintumą).
 
 
 [bibliography]
