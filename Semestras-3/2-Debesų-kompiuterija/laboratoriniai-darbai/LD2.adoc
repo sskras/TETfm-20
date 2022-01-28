@@ -18,6 +18,16 @@ Debesų kompiuterija
 [.text-left]
 === Įvadas. Kas yra _Docker_?
 
+_Docker_ -- įrankis aplikacijų kūrimo, diegimo ir vykdymo palengvinimui, naudojantis konteinerizavimo principą.
+
+Konteineriai įgalina kūrėjus supakuoti aplikaciją su visomis jai reikiamomis dalimis,
+pvz. bibliotekomis ir kitais priklausomumais (angl. _Dependencies_),
+ir išsiųsti ją diegimams kaip vientisą pakuotę.
+
+Konteinerizavimo technologijos dėka šis būdas kūrėją užtikrina, kad aplikacija veiks bet kurioje kitoje _Linux_ mašinoje,
+ir jos veikimas nepriklausys nuo jokių individualizuotų mašinos nustatymų (nuostatų) TODO
+
+
 TODO
 
 [.text-left]
