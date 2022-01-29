@@ -93,6 +93,9 @@ Pvz. taip naudojama naujoji `run` komanda:
 ----
 $ sudo docker container run hello-world
 ----
++
+Tokiu būdu efektyvėja komandos surėdymas, tačiau šiek tiek išauga CLI daugžodžiavimas.
+O tuo tarpu senoji komandų sintaksė vis dar veikia (visoms _Docker_ komandos).
 
 TODO
 
