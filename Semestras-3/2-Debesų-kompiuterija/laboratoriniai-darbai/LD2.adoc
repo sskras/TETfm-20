@@ -36,23 +36,22 @@ Daugiau: <<1>>
 
 ==== Užduotis nr. 1: **Prisijungimas prie Jūsų virtualaus serverio**
 
+
+. Panaudokite SSH klientinę programą ir prisijunkite prie virtualaus serverio:
++
 |===
-      ^| Hostname   ^| Service    ^| IP                                      ^| TCP port
+      ^| Hostname   ^| Service    ^| IP                          +            ^| TCP port
   
   .2+.^| `cc-lab`    | SSH    .2+.^| {nbsp} `1~y~8.1~z~9.200.236` ^*^ {nbsp}      | `45~x~22` ^*^
                      | HTTP                                                       | `45~x~80` ^*^
 |===
-
++
 $$*$$  -- `~x~`, `~y~` ir `~z~` reikšmes pateiks dėstytojas.
 
-{nbsp}
-
-Jūsų laboratorinės aplinkos diagrama:
-
-{nbsp}
-
+. Jūsų laboratorinės aplinkos sujungimų diagrama:
++
 image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/laboratoriniai-darbai/LD2-pav1-laboratorin%C4%97-aplinka.svg[]
-
++
 {nbsp}
 
 ==== Užduotis nr. 2: **_Docker_ tyrinėjimas**
