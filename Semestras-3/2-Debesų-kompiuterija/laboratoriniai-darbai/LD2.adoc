@@ -24,11 +24,12 @@ Konteineriai įgalina kūrėjus supakuoti aplikaciją su visomis jai reikiamomis
 pvz. bibliotekomis ir kitais priklausomumais (angl. _Dependencies_),
 ir išsiųsti ją diegimams kaip vientisą pakuotę.
 
-Konteinerizavimo technologijos dėka šis būdas kūrėją užtikrina, kad aplikacija veiks bet kurioje kitoje _Linux_ mašinoje,
-ir jos veikimas nepriklausys nuo jokių individualizuotų mašinos nustatymų (nuostatų) TODO
+Konteinerizavimo technologijos dėka šis būdas kūrėjui užtikrina,
+kad aplikacija veiks bet kurioje kitoje _Linux_ mašinoje,
+ir tas veikimas nepriklausys nuo jokių individualizuotų šios mašinos nustatymų (nuostatų), besiskiriančių atžvilgiu tos mašinos, kur aplikacija buvo kuriama ar testuojama.
 
+Daugiau: <<1>>
 
-TODO
 
 [.text-left]
 === Užduotys
@@ -52,3 +53,9 @@ TODO
   * Laikykitės principo: _Less is more_. Svarbu kokybė.
   * Išlaikykite vienodą stilių.
   * Failo dydis < 5 MiB, formatas `PDF`, talpinimo vieta: _Moodle_.
+
+
+[bibliography]
+==== Nuorodos
+
+`2020<04-01` **[[[1]]]** `opensource.com`, (atnaujinta) Red Hat, Inc. https://opensource.com/resources/what-docker[What is Docker?]
