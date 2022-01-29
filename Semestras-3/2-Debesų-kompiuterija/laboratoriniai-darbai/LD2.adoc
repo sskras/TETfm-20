@@ -47,12 +47,13 @@ Daugiau: <<1>>
 |===
 +
 $$*$$  -- `~x~`, `~y~` ir `~z~` reikšmes pateiks dėstytojas.
++
+{nbsp}
 
 . Jūsų laboratorinės aplinkos sujungimų diagrama:
 +
 image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/laboratoriniai-darbai/LD2-pav1-laboratorin%C4%97-aplinka.svg[]
-+
-{nbsp}
+
 
 ==== Užduotis nr. 2: **_Docker_ tyrinėjimas**
 
