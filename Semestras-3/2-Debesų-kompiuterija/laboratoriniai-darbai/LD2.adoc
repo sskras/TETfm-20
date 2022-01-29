@@ -47,8 +47,6 @@ Daugiau: <<1>>
 |===
 +
 $$*$$  -- `~x~`, `~y~` ir `~z~` reikšmes pateiks dėstytojas.
-+
----
 
 . Jūsų laboratorinės aplinkos sujungimų diagrama:
 +
