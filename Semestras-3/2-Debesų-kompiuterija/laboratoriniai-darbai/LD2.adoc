@@ -54,8 +54,32 @@ $$*$$  -- `~x~`, `~y~` ir `~z~` reikšmes pateiks dėstytojas.
 +
 image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/laboratoriniai-darbai/LD2-pav1-laboratorin%C4%97-aplinka.svg[]
 
+. Prisijunkite prie savo virtualios mašinos (VM) panaudojant dėstytojo nurodytus kredencialus.
+
 
 ==== Užduotis nr. 2: **_Docker_ tyrinėjimas**
+
+. Patikrinkite _Docker_ įdiegtumą ir veikimą:
++
+----
+$ sudo docker --version
+----
+
+. Startuokite pavyzdinį atvaizdį (angl. _image_):
++
+----
+$ sudo docker run hello-world
+----
++
+Turėtumėte matyti panašią išvestį:
++
+----
+Hello from Docker!
+
+This message shows that your installation appears to be working correctly.
+
+<...>
+----
 
 TODO
 
