@@ -65,7 +65,7 @@ image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-De
 $ sudo docker --version
 ----
 
-. Startuokite pavyzdinį atvaizdį (angl. _image_):
+. Startuokite pavyzdinį atvaizdį:
 +
 ----
 $ sudo docker run hello-world
@@ -79,6 +79,19 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
 <...>
+----
++
+_Docker_ turi daug komandų ir jų parametrų, ir karts nuo karto jie pasikeičia.
+Paskutinis komandinės eilutės formato (CLI, angl. _Command line interface_) pokytis įvyko 2017 m. sausį.
++
+CLI komandos buvo suskirstytos į funkcines valdymo grupes.
+Pvz. dabar yra atskiros konteinerio valdymo ir atvaizdžio valdymo komandų grupės.
++
+Šis pokytis pakeitė _Docker_ komandų sudarymo stilių.
+Pvz. taip naudojama naujoji `run` komanda:
++
+----
+$ sudo docker container run hello-world
 ----
 
 TODO
