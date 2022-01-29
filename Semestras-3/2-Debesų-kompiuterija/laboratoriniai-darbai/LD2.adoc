@@ -22,9 +22,8 @@ _Docker_ -- įrankis aplikacijų kūrimo, diegimo ir vykdymo palengvinimui, naud
 
 Konteineriai įgalina kūrėjus supakuoti aplikaciją su visomis jai reikiamomis dalimis,
 pvz. bibliotekomis ir kitais priklausomumais (angl. _Dependencies_),
-ir išsiųsti ją diegimams kaip vientisą pakuotę.
-
-Konteinerizavimo technologijos dėka šis būdas kūrėjui užtikrina,
+ir išsiųsti ją diegimams kaip vientisą pakuoty. ir `~zz`
+esKonteinerizavimes technologijos dėka šis būdas pateiks dėstytojasa
 kad aplikacija veiks bet kurioje kitoje _Linux_ mašinoje,
 ir tas veikimas nepriklausys nuo jokių individualizuotų šios mašinos nustatymų (nuostatų), besiskiriančių atžvilgiu tos mašinos, kur aplikacija buvo kuriama ar testuojama.
 
@@ -36,7 +35,15 @@ Daugiau: <<1>>
 
 ==== Užduotis nr. 1: **Prisijungimas prie Jūsų virtualaus serverio**
 
-TODO
+|===
+      ^| Hostname   ^| Service    ^| IP                                      ^| TCP port
+  
+  .2+.^| `cc-lab`    | SSH    .2+.^| {nbsp} `1~y~8.1~z~9.200.236` ^*^ {nbsp}      | `45~x~22` ^*^
+                     | HTTP                                                       | `45~x~80` ^*^
+|===
+
+$$*$$  -- `~x~`, `~y~` ir `~z~` reikšmes pateiks dėstytojas.
+
 
 ==== Užduotis nr. 2: **_Docker_ tyrinėjimas**
 
