@@ -22,8 +22,9 @@ _Docker_ -- įrankis aplikacijų kūrimo, diegimo ir vykdymo palengvinimui, naud
 
 Konteineriai įgalina kūrėjus supakuoti aplikaciją su visomis jai reikiamomis dalimis,
 pvz. bibliotekomis ir kitais priklausomumais (angl. _Dependencies_),
-ir išsiųsti ją diegimams kaip vientisą pakuoty. ir `~zz`
-esKonteinerizavimes technologijos dėka šis būdas pateiks dėstytojasa
+ir išsiųsti ją diegimams kaip vientisą pakuotę.
+
+Konteinerizavimo technologijos dėka šis būdas kūrėjui užtikrina,
 kad aplikacija veiks bet kurioje kitoje _Linux_ mašinoje,
 ir tas veikimas nepriklausys nuo jokių individualizuotų šios mašinos nustatymų (nuostatų), besiskiriančių atžvilgiu tos mašinos, kur aplikacija buvo kuriama ar testuojama.
 
