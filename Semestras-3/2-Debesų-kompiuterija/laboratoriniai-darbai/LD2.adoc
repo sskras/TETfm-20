@@ -40,7 +40,7 @@ Daugiau: <<1>>
 . Panaudokite SSH klientinę programą ir prisijunkite prie virtualaus serverio:
 +
 |===
-      ^| Hostname   ^| Service    ^| IP                          +            ^| TCP port
+      ^| Hostname   ^| Service    ^| IP                                          ^| TCP port
   
   .2+.^| `cc-lab`    | SSH    .2+.^| {nbsp} `1~y~8.1~z~9.200.236` ^*^ {nbsp}      | `45~x~22` ^*^
                      | HTTP                                                       | `45~x~80` ^*^
@@ -100,11 +100,14 @@ Tokiu būdu efektyvėja komandos sąranga, tačiau šiek tiek išauga CLI daugž
 O senoji komandų sintaksė kol kas vis dar veikia (visoms _Docker_ subkomandoms).
 +
 _Docker_ atvaizdžiai iš esmės yra savarankiški paketai, sutalpinantys viską, ko reikia tos aplikacijos vykdymui.
-Vienas iš didžiausių privalumų -- _Docker_ atvaizdžiai veikia beveik bet kurioje^*^ operacijų sistemoje (OS).  +
+Vienas iš didžiausių privalumų -- _Docker_ atvaizdžiai veikia beveik bet kurioje^**^ operacijų sistemoje (OS).  +
 +
 _Docker_ buvo kurtas naudojantis Linux OS ir yra stipriai integruotas su kertiniais Linux konstruktais.
 Tad _Docker_ vykdant Linux sistemose, veiksmai į OS integruojasi sklandžiai ir tiesiogiai.
 _Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja pri**gim**tinai.
+
+$$*$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
+
 
 . Pastarajame pavyzdyje _Docker_ atvaizdis `hello-world` sistemoje jau buvo įdiegtas.
 Bendru atveju, kai komanda `run` vykdoma pirmą sykį, 
@@ -187,9 +190,6 @@ $ sudo docker container run -it -v /home/stud/test_directory:/TEST ubuntu
 Jei dabar konteineryje surinksite komandą `ls`, turėtumėte pamatyti Guest direktoriją `TEST`, kuri tiesiogiai susieta su hosto direktorija.
 +
 Ar pavyko ją pamatyti?
-
-
-$$*$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
 
 
 ==== Užduotis nr. 3: **_Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_**
