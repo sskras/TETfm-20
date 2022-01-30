@@ -207,7 +207,7 @@ Ar pavyko ją pamatyti?
 
 . Parašykime šiek tiek kodo -- `bottle` bibliotekos pagrindu sukurkime paprasčiausią aplikaciją.
 Pagrindinis failas `main_app.py` parodytas žemiau.
-Tai _Web_-servisas su dviem galiniais taškais.
+Tai _Web_-servisas su dviem galiniais taškais.  <<3>>
 +
 Šakniniame galutiniame taške (angl. _root endpoint_) yra paprastas _hello world_ puslapis.
 Jis naudoja `index.tpl` šabloną, laikomą repozitorijos _"views"_ skiltyje
@@ -350,5 +350,7 @@ Paaiškinkite raktus `--rm` ir `-d`.
 
 `2020<04-01` **[[[1]]]** `opensource.com`, (atnaujinta) Red Hat, Inc. https://opensource.com/resources/what-docker[What is Docker?]
 
-`2016-04-19` **[[[2]]]** `dwmkerr.com`, Dave Kerr
-https://dwmkerr.com/learn-docker-by-building-a-microservice/#try-it-out[Learn Docker by building a Microservice | Try It Out]
+`2016-04-19` **[[[2]]]** `dwmkerr.com`, Dave Kerr, https://dwmkerr.com/learn-docker-by-building-a-microservice/#try-it-out[Learn Docker by building a Microservice | Try It Out]
+
+`2014-08-28` **[[[3]]]** `idolstarastronomer.com`, Christopher De Vries, 
+https://idolstarastronomer.com/docker-and-bottle.html#:~:text=A%20Hello%20World%20application[Putting Bottle in a Container: Docker and Bottle | A Hello World application]
