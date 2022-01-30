@@ -81,6 +81,8 @@ This message shows that your installation appears to be working correctly.
 <...>
 ----
 +
+---
++
 _Docker_ turi daug komandų ir jų parametrų, ir karts nuo karto jie pasikeičia.
 Paskutinis komandinės eilutės formato (CLI, angl. _Command line interface_) pokytis įvyko 2017 m. sausį.
 +
@@ -101,8 +103,10 @@ _Docker_ atvaizdžiai iš esmės yra savarankiški paketai, sutalpinantys viską
 Vienas iš didžiausių privalumų -- _Docker_ atvaizdžiai veikia beveik bet kurioje^*^ operacijų sistemoje (OS).  +
 +
 _Docker_ buvo kurtas naudojantis Linux OS ir yra stipriai integruotas su kertiniais Linux konstruktais.
-Tad _Docker_ vykdant Linukse, viskas į OS susiintegruoja sklandžiai ir tiesiogiai.
-_Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja prigimtinai.
+Tad _Docker_ vykdant Linux sistemose, veiksmai į OS integruojasi sklandžiai ir tiesiogiai.
+_Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja pri**gim**tinai.
++
+---
 
 TODO
 
