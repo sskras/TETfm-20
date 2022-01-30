@@ -11,8 +11,8 @@ Debesų kompiuterija
 [.text-left]
 === Darbo tikslas
 
-* Naudotis pagrindinėmis _Docker_ funkcijomis.
-* Iš pirminio failo sukurti ir vykdyti konteinerio atvaizdį (angl. _Image).
+* Pasinaudoti pagrindinėmis _Docker_ funkcijomis.
+* Iš pirminio failo sukurti ir startuoti konteinerio atvaizdį (angl. _Image_).
 
 
 [.text-left]
