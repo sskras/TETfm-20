@@ -427,6 +427,6 @@ image::https://user-images.githubusercontent.com/74717106/151719955-d08c3123-b0c
  ** `build`
  ** `image ls`
 
-* Pramokta `Dockerfile` sintaksė ir pirminio failo sukurtas nuosavas atvaizdis bei iš jo startuoti net keli konteineriai.
+* Pramokta `Dockerfile` sintaksė ir pirminio failo sukurtas nuosavas atvaizdis bei iš jo lygiagrečiai startuoti trys konteineriai, aptarnaujantys skirtingus hosto TCP prievadus.
 
 * Patikrintas konteinerizuotos, _Python_ kalba sukurtos _Web_-aplikacijos veikimas lokaliai ir internetu.
