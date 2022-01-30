@@ -106,7 +106,14 @@ _Docker_ buvo kurtas naudojantis Linux OS ir yra stipriai integruotas su kertini
 Tad _Docker_ vykdant Linux sistemose, veiksmai į OS integruojasi sklandžiai ir tiesiogiai.
 _Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja pri**gim**tinai.
 
-$$**$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
+$$**$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis
+FreeBSD neveikia,
+NetBSD neveikia,
+Solaris OS neveikia,
+HP-UXe neveikia,
+AIXe neveikia,
+OpenVMSe neveikia.
+Omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
 
 
 . Pastarajame pavyzdyje _Docker_ atvaizdis `hello-world` sistemoje jau buvo įdiegtas.
