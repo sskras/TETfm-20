@@ -156,6 +156,25 @@ kad konteineriui būtų priskirtas terminalas (terminalinis vardas).
 Šitaip pasiekiate _Bash_ aplinką Ubuntu konteineryje, veikiančiame jūsų mašinoje.
 Dabar jis Jūsų rūpestyje -- gavote galimybę užsiimti dalykų diegimu, vykdyti programas ir užsiimti čia apskritai kuo tik sugalvojate.
 
+. Atverkite **papildomą** terminalą ir peržiūrėkite veikiančius konteinerius:
++
+----
+$ sudo docker container ls
+----
++
+Ką dabar matote, kas pasikeitė?
++
+Prisiminkite, kad reikia iš konteinerio ir išeiti.
+
+. Įprastai konteineriai viduje neturi nuosavos diskinės vietos.
+Pabandykime prijungti _Docker_ hosto direktoriją prie _Docker_ konteinerio.
+Pirmiausiai savo pradinėje (angl. _Home) direktorijoje sukurkite subdirektoriją, pavadinkite savo nuožiūra:
++
+----
+$ mkdir test_directory
+$ touch test_directory/test.file
+----
+
 TODO
 
 $$*$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
