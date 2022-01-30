@@ -129,6 +129,22 @@ $ sudo docker container ls
 +
 Kol kas turėtumėte gauti tuščią sąrašą.
 
+. Dabar turite dvi galimybes -- arba parsitempti ir startuoti atvaizdį..:
++
+----
+$ sudo docker image pull ubuntu
+$ sudo docker container run ubuntu
+----
+
+. ... arba tiesiog startuoti pasirinktą atvaizdį, ir jis bus partemptas (parsiųstas ir išsaugotas) automatiškai:
++
+----
+$ sudo docker container run busybox
+----
++
+Abiem atvejais kai paskutinė komanda yra nutraukiama, konteineriai yra sustabdomi ir baigia darbą.
+
+
 TODO
 
 $$*$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
