@@ -90,14 +90,121 @@ VILNIUS, 2022
 
 . Prisijungiu panaudodamas MinTTY terminalo emuliatorių ir MSYS2 OpenSSH klientinę programą:
 +
-image::https://user-images.githubusercontent.com/74717106/151710787-65e199aa-f95a-4169-8173-85b108f36b0d.png[width=75%]
+image::https://user-images.githubusercontent.com/74717106/151711886-8d802745-8af7-492d-8bed-4beb09165fa5.png[width=100%]
++
+=> Prisijungti po ilgo klientinės programos ruošimo ir komandinės eilutės prisiminimo pavyko.
 
 
 [.text-left]
 === Užduotis nr. 2: **_Docker_ tyrinėjimas**
 
 . Tikrinu _Docker_ įdiegtumą ir veikimą:
++
+image::https://user-images.githubusercontent.com/74717106/151711802-dcd2b889-8340-4493-a25c-a2f2ee9367ef.png[width=100%]
++
+=> Dokeris įdiegtas ir veikia, jo versija: **20.10.8**
 
+. Startuoju pavyzdinį atvaizdį:
++
+image::https://user-images.githubusercontent.com/74717106/151711746-cb0d9711-cd27-44f8-a3cb-758ed68d0360.png[width=100%]
++
+=> Gauta išvestis atitinka LD aprašą.
++
+Vykdau `run` komandą pagal naujovišką _Docker_ komandinę sąrangą:
++
+image::https://user-images.githubusercontent.com/74717106/151711684-0d4a525c-5810-45fa-9a3e-a6979f68fc3c.png[width=100%]
++
+=> Gaunu tokią pat išvestį.  +
+=> Daugiau CLI raidžių, aiškesnė esmė.
+
+. _Docker_ registre ieškau _Ubuntu_ atvaizdžių:
++
+image::https://user-images.githubusercontent.com/74717106/151711620-77b93648-b27a-42c7-a476-9ccff89a560e.png[width=100%]
+
+
+. Tikrinu mašinoje veikiančius (jau startavusius konteinerius)
++
+image::https://user-images.githubusercontent.com/74717106/151712025-7180f807-0ff0-4f5b-acb4-c4680b1aa042.png[width=100%]
++
+=> Kol kas šioje mašinoje nematyti nei vieno veikiančio konteinerio.
+
+
+. Pirmiausia mėginu `ubuntu` atvaizdžio startavimą dviem žingsniais:
++
+image::https://user-images.githubusercontent.com/74717106/151712236-959a7abf-a792-4ac7-9c57-3bb797ef788d.png[width=100%]
+* parsitempiu jį iš Dokerio registro;
+* startuoju jį tiesiogiai.
+
+
+. Po to mėginu tai pakartoti ir vienu žingsniu:
++
+image::https://user-images.githubusercontent.com/74717106/151712380-28f960be-f556-47f2-855f-db851634c450.png[width=100%]
++
+=> Vykdymas (pagal klaidų nebuvimo) lyg prasidėjo abiem atvejais, nors akivaizdaus pagrindimo ir neturiu.
+
+
+. Kadangi prireiks dviejų SSH sesijų vienu metu,
+klientinėje pusėje įsidiegiu terminalo multiplekserį lengvam persijungimui tarp šių sesijų:
++
+image::https://user-images.githubusercontent.com/74717106/151712613-3c18a1fd-6c82-45c7-bc39-7a8abb01e072.png[width=100%]
++
+{nbsp}
++
+Tuomet startuoju jį ir jungiuosi į serverį iš naujo jau jame:
++
+image::https://user-images.githubusercontent.com/74717106/151712805-b3026d05-4d8f-48a8-872a-c7d612d0104a.png[width=100%]
++
+Pirmoje SSH sesijoje startuoju jau išbandytą `busybox` konteinerį interaktyviu režimu + nurodau alokuoti jam terminalą:
++
+image::https://user-images.githubusercontent.com/74717106/151712933-d8f023e4-15d0-4048-8eb0-b687c7fff278.png[width=100%]
++
+=> Konteineris startavo ir leidžia vykdyti jame interaktyvias programas.
+
+
+. Prisijungiu prie serverio jau antra SSH sesija:
++
+image::https://user-images.githubusercontent.com/74717106/151713032-f0e01e93-a41e-46b1-b5ff-71ae6dbe7171.png[width=100%]
++
+Ir peržiūriu jame veikiančius konteinerius:
++
+image::https://user-images.githubusercontent.com/74717106/151713064-54318bf1-facd-4fef-a287-6069ab8dcd86.png[width=100%]
++
+=> Matyti lygiai vienas veikiantis, iš `busybox` atvaizdžio startavęs konteineris su ID=`22e032ddc36b`.  +
+   Prieš tai nebuvo matyti jokio veikiančio konteinerio.
++
+Išeinu iš interaktyvios Shell sesijos, uždarau konteinerį:
++
+image::https://user-images.githubusercontent.com/74717106/151713375-06457251-23b1-4d46-8cd2-95bc3b546c00.png[width=100%]
+
+
+. Savo pradinėje direktorijoje sukuriu subdirektoriją `test_directory`, o joje bandomąjį failą `test.file`:
++
+image::https://user-images.githubusercontent.com/74717106/151713479-2ba26e5c-1427-458d-a941-59c11814ef77.png[width=100%]
+
+
+. Startuoju konteinerį (guestą) šįkart prijungdamas jam hosto direktoriją:
++
+image::https://user-images.githubusercontent.com/74717106/151713588-c46445a4-2990-4fe9-bb59-903217308887.png[width=100%]
++
+Jame vykdau komandą `ls`:
++
+image::https://user-images.githubusercontent.com/74717106/151713838-90fbc4ef-0d46-46b8-9c7f-8af6ff7f2d08.png[width=100%]
++
+=> ... ir konteinerio viduje matau testinę direktoriją ir failą.
+
+. (Bonus) Tikrinu duomenų perdavimą iš konteinerio į hostą:
+
+* startuoju konteinerį dar sykį;
+* papildau testinį failą gueste;
+* uždarau konteinerį;
+* patikrinu, ar tikrai užsidarė;
+* peržiūriu testinio failo turinį hoste.
+
+. :
++
+image::https://user-images.githubusercontent.com/74717106/151714009-314af166-4cf0-4b56-aa38-3f071ab7505e.png[width=100%]
++
+=> Gueste įrašyti duomenys tikrai išliko ir hoste.
 
 
 [.text-left]
