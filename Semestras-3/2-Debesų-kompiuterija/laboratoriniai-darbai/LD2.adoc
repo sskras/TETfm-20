@@ -208,6 +208,40 @@ Tai _Web_-servisas su dviem galiniais taškais.
 Šakniniame galutiniame taške (angl. _root endpoint_) yra paprastas _hello world_ puslapis.
 Jis naudoja `index.tpl` šabloną, laikomą repozitorijos _"views"_ skiltyje
 ir aptarnauja virtualų _Docker_ konteinerio IP adresą.
++
+[source,python]
+----
+#!/usr/bin/env python
+import bottle
+import subprocess
+import os
+
+ip_addr = '123.45.67.89'
+
+app = bottle.app()
+
+@bottle.route("/")
+
+def root_index():
+    return bottle.template('index', ip_addr = ip_addr)
+
+@bottle.route('/json')
+
+def json_reply():
+    head = bottle.request.headers
+    bottle.response.content_type = 'application/json'
+    
+    response = {
+        'headers'     : dict(heads),
+        'environment' : dict(os.environ),
+        'response'    : dict(bottle.response.headers)
+    }
+    return response
+
+if __name__ == '__main__':
+    bottle.debug(True)
+    bottle.run(app=app, jost='0.0.0.0', port=8080)
+----
 
 TODO
 
