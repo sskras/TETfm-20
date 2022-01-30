@@ -88,9 +88,16 @@ VILNIUS, 2022
 [.text-left]
 === Užduotis nr. 1: **Prisijungimas prie Jūsų virtualaus serverio**
 
+. Prisijungiu panaudodamas MinTTY terminalo emuliatorių ir MSYS2 OpenSSH klientinę programą:
++
+image::https://user-images.githubusercontent.com/74717106/151710787-65e199aa-f95a-4169-8173-85b108f36b0d.png[width=75%]
+
 
 [.text-left]
 === Užduotis nr. 2: **_Docker_ tyrinėjimas**
+
+. Tikrinu _Docker_ įdiegtumą ir veikimą:
+
 
 
 [.text-left]
