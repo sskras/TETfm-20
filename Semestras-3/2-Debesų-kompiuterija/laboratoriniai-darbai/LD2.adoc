@@ -116,9 +116,18 @@ Jei neranda, _Docker_ jungiasi prie _Docker registro_ (https://hub.docker.com, p
 ir bando tokį atvaizdį parsisiųsti ir išsaugoti vietinėje talpykloje.
 +
 Pamėginkite šiame registre paieškoti Ubuntu atvaizdžių:
++
 ----
 $ sudo docker search ubuntu
 ----
+
+. Mašinoje veikiantys (jau startavę) konteineriai parodomi šia komanda:
++
+----
+$ sudo docker container ls
+----
++
+Kol kas turėtumėte gauti tuščią sąrašą.
 
 TODO
 
