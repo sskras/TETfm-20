@@ -168,14 +168,26 @@ Prisiminkite, kad reikia iš konteinerio ir išeiti.
 
 . Įprastai konteineriai viduje neturi nuosavos diskinės vietos.
 Pabandykime prijungti _Docker_ hosto direktoriją prie _Docker_ konteinerio.
-Pirmiausiai savo pradinėje (angl. _Home) direktorijoje sukurkite subdirektoriją, pavadinkite savo nuožiūra:
+Pirmiausiai savo pradinėje (angl. _Home_) direktorijoje sukurkite subdirektoriją, pavadinkite savo nuožiūra:
 +
 ----
 $ mkdir test_directory
 $ touch test_directory/test.file
 ----
 
-TODO
+. Startuokite konteinerį (guestą):
++
+----
+$ sudo docker container run -it -v /home/stud/test_directory:/TEST ubuntu
+----
++
+Čia `/home/stud/test_directory` yra absoliutus Jūsų direktorijos kelias.
+Įstikinimui naudokite komandą `pwd`.
++
+Jei dabar konteineryje surinksite komandą `ls`, turėtumėte pamatyti Guest direktoriją `TEST`, kuri tiesiogiai susieta su hosto direktorija.
++
+Ar pavyko ją pamatyti?
+
 
 $$*$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
 
