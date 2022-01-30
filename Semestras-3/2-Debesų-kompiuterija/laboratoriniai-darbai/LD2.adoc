@@ -96,8 +96,18 @@ $ sudo docker container run hello-world
 +
 Tokiu būdu efektyvėja komandos surėdymas, tačiau šiek tiek išauga CLI daugžodžiavimas.
 O tuo tarpu senoji komandų sintaksė vis dar veikia (visoms _Docker_ komandos).
++
+_Docker_ atvaizdžiai iš esmės yra savarankiški paketai, sutalpinantys viską, ko reikia tos aplikacijos vykdymui.
+Vienas iš didžiausių privalumų -- _Docker_ atvaizdžiai veikia beveik bet kurioje^*^ operacijų sistemoje (OS).  +
++
+_Docker_ buvo kurtas naudojantis Linux OS ir yra stipriai integruotas su kertiniais Linux konstruktais.
+Tad _Docker_ vykdant Linukse, viskas į OS susiintegruoja sklandžiai ir tiesiogiai.
+_Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja prigimtinai.
 
 TODO
+
+$$*$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis FreeBSD neveikia, NetBSD neveikia, Solaris OS neveikia, HP-UXe neveikia, AIXe neveikia, OpenVMSe neveikia; omenyje turiu scenarijus be papildomų VM kūrimo / be hipervizoriaus / be mašinos emuliacijos.
+
 
 ==== Užduotis nr. 3: **_Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_**
 
