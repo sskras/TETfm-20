@@ -107,6 +107,15 @@ Tad _Docker_ vykdant Linux sistemose, veiksmai į OS integruojasi sklandžiai ir
 _Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja pri**gim**tinai.
 +
 ---
++
+Pastarajame pavyzdyje _Docker_ atvaizdis `hello-world` sistemoje jau buvo įdiegtas.
+Bendru atveju, kai komanda `run` vykdoma pirmą sykį, 
+ji peržiūri vietinę atvaizdžių talpyklą (angl. _Local image cache_) ir tikrina,
+ar joje jau yra konteinerinis atvaizdis tokiu vardu.
++
+Jeigu randa, _Docker_ startuoja konteinerį iš talpyklinio atvaizdžio.
+Jei neranda, _Docker_ jungiasi prie _Docker registro_ (https://hub.docker.com, primena GitHub sistemą)
+ir bando tokį atvaizdį parsisiųsti ir išsaugoti vietinėje talpykloje.
 
 TODO
 
