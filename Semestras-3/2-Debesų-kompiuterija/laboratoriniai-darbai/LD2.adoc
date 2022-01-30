@@ -94,8 +94,8 @@ Pvz. taip naudojama naujoji `run` komanda:
 $ sudo docker container run hello-world
 ----
 +
-Tokiu būdu efektyvėja komandos surėdymas, tačiau šiek tiek išauga CLI daugžodžiavimas.
-O tuo tarpu senoji komandų sintaksė vis dar veikia (visoms _Docker_ komandos).
+Tokiu būdu efektyvėja komandos sąranga, tačiau šiek tiek išauga CLI daugžodiškumas.
+O senoji komandų sintaksė kol kas vis dar veikia (visoms _Docker_ subkomandoms).
 +
 _Docker_ atvaizdžiai iš esmės yra savarankiški paketai, sutalpinantys viską, ko reikia tos aplikacijos vykdymui.
 Vienas iš didžiausių privalumų -- _Docker_ atvaizdžiai veikia beveik bet kurioje^*^ operacijų sistemoje (OS).  +
