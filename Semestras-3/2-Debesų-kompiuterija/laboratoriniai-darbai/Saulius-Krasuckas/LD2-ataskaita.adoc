@@ -1,1 +1,98 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+=== Debesų kompiuterija
+Modulis ELKRM17304
+
+[.text-center]
+== Susipažinimas su Docker konteineriais
+
+Laboratorinio darbo nr. 2 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+
+
+{nbsp}
+
+[.text-center]
+==== Laboratorinis darbas nr. 2
+
+[.text-center]
+== Susipažinimas su Docker konteineriais
+
+
+{nbsp}
+
+[.text-center]
+=== Darbo tikslas
+
+[.text-left]
+* Pasinaudoti pagrindinėmis _Docker_ funkcijomis.
+* Iš pirminio (angl. _Source) failo sukurti ir startuoti konteinerio atvaizdį (angl. _Image_).
+
+
+[.text-center]
+=== Darbo eiga
+
+[.text-left]
+
+
+
+[.text-left]
+=== Užduotis nr. 1: **Prisijungimas prie Jūsų virtualaus serverio**
+
+[.text-left]
+=== Užduotis nr. 2: **_Docker_ tyrinėjimas**
+
+[.text-left]
+=== Užduotis nr. 3: **_Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_**
