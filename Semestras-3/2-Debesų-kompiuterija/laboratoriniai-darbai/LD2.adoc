@@ -201,6 +201,14 @@ Ar pavyko ją pamatyti?
 
 ==== Užduotis nr. 3: **_Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_**
 
+. Parašykime šiek tiek kodo -- `bottle` bibliotekos pagrindu sukurkime paprasčiausią aplikaciją.
+Pagrindinis failas `main_app.py` parodytas žemiau.
+Tai _Web_-servisas su dviem galiniais taškais.
++
+Šakniniame galutiniame taške (angl. _root endpoint_) yra paprastas _hello world_ puslapis.
+Jis naudoja `index.tpl` šabloną, laikomą repozitorijos _"views"_ skiltyje
+ir aptarnauja virtualų _Docker_ konteinerio IP adresą.
+
 TODO
 
 ==== Ataskaitos turinys:
