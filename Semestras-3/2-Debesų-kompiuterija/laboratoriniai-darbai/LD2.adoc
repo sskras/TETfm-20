@@ -108,7 +108,7 @@ Tad _Docker_ vykdant Linux sistemose, veiksmai į OS integruojasi sklandžiai ir
 _Docker_ mechanizmas Linux branduolį ir failų sistemą (FS) išnaudoja pri**gim**tinai.
 +
 ---
-$$**$$ -- Šiuo teiginiu patikėti sunku: _Docker_ įrankis
+$$**$$ -- Šis teiginys abejotinas: _Docker_ įrankis
 FreeBSD neveikia,
 NetBSD neveikia,
 Solaris OS neveikia,
