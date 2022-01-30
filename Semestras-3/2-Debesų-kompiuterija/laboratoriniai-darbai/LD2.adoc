@@ -209,6 +209,15 @@ Tai _Web_-servisas su dviem galiniais taškais.
 Jis naudoja `index.tpl` šabloną, laikomą repozitorijos _"views"_ skiltyje
 ir aptarnauja virtualų _Docker_ konteinerio IP adresą.
 +
+Sukurkite naują direktoriją:
++
+----
+$ mkdir ~/src
+$ cd ~/src
+----
++
+\... o joje patalpinkite nurodytą failą:
++
 [source,python]
 ----
 #!/usr/bin/env python
@@ -243,7 +252,7 @@ if __name__ == '__main__':
     bottle.run(app=app, jost='0.0.0.0', port=8080)
 ----
 
-. Faile `views/index.tpl` laikomas šakninio puslapio šablonas.
+. Kitame faile, `views/index.tpl` laikomas šakninio puslapio šablonas.
 Jame panaudota paprasta šabloninė kalba:
 +
 [source,html]
@@ -262,12 +271,12 @@ Jame panaudota paprasta šabloninė kalba:
   </body>
 </html>
 ----
++
+Sukurkite ir jį.
 
-. Sukurkite naują direktoriją, o joje patalpinkite `Dockerfile`, skirtą _Docker_ atvaizdžio sukūrimui, iš kurio startuos aplikacija (_Web_-servisas).
+. Paruoškite pildymui failą `Dockerfile`, skirtą sukurti atvaizdžiui, iš kurio startuos aplikacija (_Web_-servisas).
 +
 ----
-$ mkdir ~/src
-$ cd ~/src
 $ nano Dockerfile
   ...
 ----
@@ -285,7 +294,7 @@ RUN apt-get update && apt-get install -y python-pip python-dev && apt-get clean
 WORKDIR /app
 
 # add the current directory in the container to /app:
-ADD ./app
+ADD . /app
 
 # execute everyone's favorite pip commands:
 RUN pip install bottle
