@@ -263,6 +263,42 @@ Jame panaudota paprasta šabloninė kalba:
 </html>
 ----
 
+. Sukurkite naują direktoriją, o joje patalpinkite `Dockerfile`, skirtą _Docker_ atvaizdžio sukūrimui, iš kurio startuos aplikacija (_Web_-servisas).
++
+----
+$ mkdir ~/src
+$ cd ~/src
+$ nano Dockerfile
+  ...
+----
++
+Štai jo turinys:
++
+[source,dockerfile]
+----
+FROM ubuntu:14:04
+MAINTAINER yourname <youre@stud.vilniustech.lt>
+
+RUN apt-get update && apt-get install -y python-pip python-dev && apt-get clean
+
+# set the working directory in the container to /app:
+WORKDIR /app
+
+# add the current directory in the container to /app:
+ADD ./app
+
+# execute everyone's favorite pip commands:
+RUN pip install bottle
+
+# unblock port 8080 for the bottle app to run on:
+EXPOSE 8080
+
+# execute the app:
+CMD ["python", "main_app.py"]
+----
++
+Šis `Dockerfile` išviešina TCP protą `8080`, patalpina aplikaciją į `/app` direktoriją atvaizdžio viduje ir paruošia `python` procesą, kad pagal nutylėjimą vykdytų mūsų pasirinktą skriptą `main_app.py`.
+
 TODO
 
 ==== Ataskaitos turinys:
