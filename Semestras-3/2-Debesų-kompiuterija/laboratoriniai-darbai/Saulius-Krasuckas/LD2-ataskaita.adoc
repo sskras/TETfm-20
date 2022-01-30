@@ -84,15 +84,14 @@ VILNIUS, 2022
 [.text-center]
 === Darbo eiga
 
-[.text-left]
-
-
 
 [.text-left]
 === Užduotis nr. 1: **Prisijungimas prie Jūsų virtualaus serverio**
 
+
 [.text-left]
 === Užduotis nr. 2: **_Docker_ tyrinėjimas**
+
 
 [.text-left]
 === Užduotis nr. 3: **_Web_-serviso atvaizdžio sukūrimas pagal _Dockerfile_**
