@@ -23,3 +23,18 @@ Debesų kompiuterija
   aprašyti / parodyti poveikį servisams.
 * Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
 * Pateikti naudojamas komandas
+
+
+[.text-left]
+=== Kursinio darbo struktūra
+
+* Titulinis lapas
+* Sąžiningumo deklaracija
+* Turinys
+* Pagrindinė dalis
+* Rezultatų apibendrinimas
+* Literatūros sąrašas
+* Priedai (schemos, kodas)
+
+Darbas formatuojamas laikantis visų rašto darbams skirtų taisyklių.  +
+Kursinis darbas pateikiamas _pdf_ formatu.
