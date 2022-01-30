@@ -310,7 +310,7 @@ EXPOSE 8080
 CMD ["python", "main_app.py"]
 ----
 +
-Šis `Dockerfile` išviešina TCP protą `8080`, patalpina aplikaciją į `/app` direktoriją atvaizdžio viduje ir paruošia `python` procesą, kad pagal nutylėjimą vykdytų mūsų pasirinktą skriptą `main_app.py`.
+Šis `Dockerfile` išviešina TCP protą `8080`, patalpina aplikaciją į `/app` direktoriją atvaizdžio viduje ir paruošia `python` procesą, kad šis pagal nutylėjimą vykdytų mūsų pasirinktą skriptą `main_app.py`.
 
 
 . Pagal jį sukurkite _Docker_ atvaizdį:
