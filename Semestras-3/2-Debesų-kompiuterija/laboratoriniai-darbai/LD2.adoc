@@ -144,6 +144,17 @@ $ sudo docker container run busybox
 +
 Abiem atvejais kai paskutinė komanda yra nutraukiama, konteineriai yra sustabdomi ir baigia darbą.
 
+. Pamėginkite komandoje pridėti papildomą raktą:
++
+----
+$ sudo docker container run -it busybox
+----
++
+Interaktyvių procesų (pvz. įprastinės *nix Shell aplinkos) atveju tenka panaudoti `-i` ir `-t` raktus kartu,
+kad konteineriui būtų priskirtas terminalas (terminalinis vardas).
++
+Šitaip pasiekiate _Bash_ aplinką Ubuntu konteineryje, veikiančiame jūsų mašinoje.
+Dabar jis Jūsų rūpestyje -- gavote galimybę užsiimti dalykų diegimu, vykdyti programas ir užsiimti čia apskritai kuo tik sugalvojate.
 
 TODO
 
