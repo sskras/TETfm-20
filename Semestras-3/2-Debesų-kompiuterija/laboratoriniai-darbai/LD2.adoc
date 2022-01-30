@@ -39,6 +39,7 @@ Daugiau: <<1>>
 
 . Panaudokite SSH klientinę programą ir prisijunkite prie virtualaus serverio:
 +
+.(Lentelė nr. 1) Prisijungimo duomenys
 |===
       ^| Hostname   ^| Service    ^| IP                                          ^| TCP port
   
@@ -252,6 +253,7 @@ if __name__ == '__main__':
     bottle.run(app=app, jost='0.0.0.0', port=8080)
 ----
 
+
 . Kitame faile, `views/index.tpl` laikomas šakninio puslapio šablonas.
 Jame panaudota paprasta šabloninė kalba:
 +
@@ -274,7 +276,9 @@ Jame panaudota paprasta šabloninė kalba:
 +
 Sukurkite ir jį.
 
-. Paruoškite pildymui failą `Dockerfile`, skirtą sukurti atvaizdžiui, iš kurio startuos aplikacija (_Web_-servisas).
+
+. Paruoškite pildymui failą `Dockerfile`, skirtą sukurti atvaizdžiui,
+  iš kurio startuos aplikacija (_Web_-servisas).
 +
 ----
 $ nano Dockerfile
@@ -308,7 +312,26 @@ CMD ["python", "main_app.py"]
 +
 Šis `Dockerfile` išviešina TCP protą `8080`, patalpina aplikaciją į `/app` direktoriją atvaizdžio viduje ir paruošia `python` procesą, kad pagal nutylėjimą vykdytų mūsų pasirinktą skriptą `main_app.py`.
 
-TODO
+
+. Pagal jį sukurkite _Docker_ atvaizdį:
++
+----
+$ sudo docker build -t hellobottle .
+----
+
+
+. Metas jį startuoti.
+  Šiuo atveju konteinerio TCP portas `8080` bus susiejamas su hosto TCP portu `80`:
++
+----
+$ sudo docker container run --rm -p 80:8080 -d hellobottle
+----
++
+Paaiškinkite raktus `--rm` ir `-d`.
+
+
+. Įsijunkite savo naršyklę ir atsiverkite ką tik startuotos paslaugos puslapį. (Žr. lentelę nr. 1)
+
 
 ==== Ataskaitos turinys:
 
