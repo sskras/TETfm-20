@@ -6,12 +6,12 @@ build-host.sh: Startuojama infrastruktūra
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: b0926d56-70ab-4b98-bf85-dd470c4b4430
+UUID: 261285df-7419-487f-a605-bab464e026e1
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {b0926d56-70ab-4b98-bf85-dd470c4b4430}
+"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -44,11 +44,19 @@ VM sukurta, metas pasitikrinti jos būseną
 
 Waiting for VM "VGTU-2022-DeKo-saukrs-LDVM0" to power on...
 VM "VGTU-2022-DeKo-saukrs-LDVM0" has been successfully started.
-Po <Enter> ji bus ištrinta
 
-- Trinu naują VM:
+Po <Enter> ji bus išjungta ir ištrinta
+
+- Naujos VM išjungimas:
 
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
+- Trinu naują VM:
+
+VBoxManage.exe: error: Cannot unregister the machine 'VGTU-2022-DeKo-saukrs-LDVM0' while it is locked
+VBoxManage.exe: error: Details: code VBOX_E_INVALID_OBJECT_STATE (0x80bb0007), component MachineWrap, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "Unregister(CleanupMode_DetachAllReturnHardDisksOnly, ComSafeArrayAsOutParam(aMedia))" at line 154 of file VBoxManageMisc.cpp
+
 - Galutinės VM:
 
+"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
