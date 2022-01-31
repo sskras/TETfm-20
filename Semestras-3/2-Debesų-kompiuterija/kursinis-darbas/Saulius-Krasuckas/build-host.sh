@@ -60,9 +60,9 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Nauja VM:\n"                                ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
     echo -e "\n- Dabartinės VM:\n"                           ; VBoxManage list vms
 
-    echo -e "\n- Naujos VM pagr. konfigūracija:\n"           ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
+    echo -e "\n- Naujos VM pirminė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
     echo -e "\n- Naujos VM resursų plėtimas:\n"              ; VBoxManage modifyvm ${VM0} --cpus ${VM_CPUS} --memory ${VM_RAM}
-    echo -e "\n- Naujos VM nauja konfigūracija:\n"           ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
+    echo -e "\n- Naujos VM išplėsti resursai:\n"             ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
 
     echo -e "\nVM sukurta, metas pasitikrinti jos būseną"
     echo -e "Po <Enter> ji bus ištrinta"                     ; read
