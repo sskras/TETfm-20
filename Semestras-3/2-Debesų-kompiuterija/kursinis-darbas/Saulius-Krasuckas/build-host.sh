@@ -11,6 +11,6 @@ LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Se
 
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
-echo "Startuojama infrastruktūra"
+echo "$(basename $0): Startuojama infrastruktūra"
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
