@@ -1,1 +1,2 @@
 build-host.sh: Startuojama infrastruktūra
+./build-host.sh: line 51: VBox_setup_serial_console: command not found

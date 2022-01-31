@@ -7,6 +7,7 @@
 
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
+UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų Serial/UART konsolei
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 
 
@@ -37,13 +38,13 @@ VBoxManage_setup_serial_console () {
     read
 
     # Išvalau būsimą Serial logą:
-    > screenlog.0
+    > ${UART_SCR}
 
     # Jungiamės prie virtualios Serial konsolės per TCP:
-    screen -L telnet 127.0.0.1 23001
+    script -c "telnet 127.0.0.1 23001" ${UART_SCR}
 
     # Išsaugome Serial konsolės logą Plain-text formatu:
-    cat screenlog.0 | ansifilter > ${UART_LOG}
+    cat ${UART_SCR} | ansifilter > ${UART_LOG}
 }
 
 echo "$(basename $0): Startuojama infrastruktūra"
