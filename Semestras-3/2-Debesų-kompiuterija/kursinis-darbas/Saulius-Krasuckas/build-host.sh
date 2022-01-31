@@ -63,6 +63,10 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo; echo "- Dabartinės VM:"
     echo; VBoxManage list vms
 
+    echo; echo "VM sukurta, metas pasitikrinti jos būseną"
+    echo; echo "Po <Enter> ji bus ištrinta"
+    read
+
     echo; echo "- Trinu naują VM:"
     echo; VBoxManage unregistervm ${VM0} --delete
     echo; echo "- Galutinės VM:"
