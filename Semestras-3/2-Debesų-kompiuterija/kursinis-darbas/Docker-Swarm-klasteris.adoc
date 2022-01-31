@@ -38,3 +38,14 @@ Debesų kompiuterija
 
 Darbas formatuojamas laikantis visų rašto darbams skirtų taisyklių.  +
 Kursinis darbas pateikiamas _pdf_ formatu.
+
+
+[.text-left]
+=== Rekomenduojama literatūra
+
+* Docker dokumentacija: https://docs.docker.com/get-started/swarm-deploy/[Deploy to Swarm | Docker Documentation]
+* https://www.packtpub.com/product/learning-docker-second-edition/9781786462923[Learning Docker (Second Edition) | Packt (packtpub.com)]
+* https://www.packtpub.com/free-ebook/docker-cookbook-second-edition/9781788626866[Docker CookBook (Second Edition, Free eBook) | Packt (packtpub.com)]
+* https://www.freecodecamp.org/news/the-docker-handbook/[The Docker Handbook (2021 Edition) | freeCodeCamp (freecodecamp.org)]
+* https://www.amazon.co.uk/dp/1491917571[Docker: Up & Running | Karl Matthias, Sean P. Kane (amazon.co.uk)]
+* https://www.amazon.co.uk/dp/B00LRROTI4[The Docker Book: Containerization is the new virtualization (Kindle Edition) | James Turnbull (amazon.co.uk)]
