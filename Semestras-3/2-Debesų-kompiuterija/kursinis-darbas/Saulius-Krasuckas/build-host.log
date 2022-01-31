@@ -18,6 +18,7 @@ Iškart persijunkite čia (atgal į CLI)
 
 Prisijungsite prie Serial konsolės:
 Script started, output log file is '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/build-host-serial.script'.
+
 Trying 127.0.0.1...
 telnet: Unable to connect to remote host: Connection refused
 Script done.
