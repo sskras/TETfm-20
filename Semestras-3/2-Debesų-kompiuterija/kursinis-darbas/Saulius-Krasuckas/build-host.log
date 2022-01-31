@@ -2,22 +2,21 @@ build-host.sh: Startuojama infrastruktūra
 
 - Pradinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
 
 - Nauja VM:
 
-VBoxManage.exe: error: Machine settings file 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox' already exists
-VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MachineWrap, interface IMachine, callee IUnknown
-VBoxManage.exe: error: Context: "CreateMachine(bstrSettingsFile.raw(), bstrName.raw(), ComSafeArrayAsInParam(groups), bstrOsTypeId.raw(), createFlags.raw(), machine.asOutParam())" at line 280 of file VBoxManageMisc.cpp
+Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
+UUID: 90134f57-5e64-45ad-899e-7e20bb6a9f2e
+Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
+"VGTU-2022-DeKo-saukrs-LDVM0" {90134f57-5e64-45ad-899e-7e20bb6a9f2e}
 
 - Naujos VM pirminė konfigūracija:
 
-Memory size:                 1024MB
-Number of CPUs:              2
+Memory size:                 128MB
+Number of CPUs:              1
 
 - Naujos VM resursų plėtimas:
 
@@ -29,9 +28,6 @@ Number of CPUs:              2
 
 - Naujai VM prijungiu diskų valdiklį:
 
-VBoxManage.exe: error: Storage controller named 'SATA valdiklis' already exists
-VBoxManage.exe: error: Details: code VBOX_E_OBJECT_IN_USE (0x80bb000c), component SessionMachine, interface IMachine, callee IUnknown
-VBoxManage.exe: error: Context: "AddStorageController(Bstr(pszCtl).raw(), StorageBus_SATA, ctl.asOutParam())" at line 1080 of file VBoxManageStorageController.cpp
 
 - Naujos VM diskų valdiklio konfigūracija:
 
@@ -57,10 +53,7 @@ Po <Enter> ji bus išjungta ir ištrinta
 
 - Trinu naują VM:
 
-VBoxManage.exe: error: Cannot unregister the machine 'VGTU-2022-DeKo-saukrs-LDVM0' while it is locked
-VBoxManage.exe: error: Details: code VBOX_E_INVALID_OBJECT_STATE (0x80bb0007), component MachineWrap, interface IMachine, callee IUnknown
-VBoxManage.exe: error: Context: "Unregister(CleanupMode_DetachAllReturnHardDisksOnly, ComSafeArrayAsOutParam(aMedia))" at line 154 of file VBoxManageMisc.cpp
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
 - Galutinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
