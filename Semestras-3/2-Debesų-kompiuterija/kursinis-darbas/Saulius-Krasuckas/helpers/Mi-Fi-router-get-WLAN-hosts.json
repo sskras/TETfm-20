@@ -154,7 +154,7 @@
 	"verMajor":20,
 	"verMinor":0,
 	"environment":"Target",
-	"currTime":1327666897,
+	"currTime":1327667031,
 	"timeZoneOffset":7200,
 	"deviceName":"AC785S-100",
 	"useMetricSystem":true,
@@ -300,13 +300,13 @@
 		"end":""
 	},
 		
-	"batteryTemperature":39,
-	"batteryVoltage":3989,
-	"battChargeLevel":59,
+	"batteryTemperature":40,
+	"batteryVoltage":3994,
+	"battChargeLevel":61,
 	"battChargeSource":"Charger",
 	"batteryState":"Normal",
 	"batterySupported":true,
-	"charging":true,
+	"charging":false,
 	"buttonHoldTime":5,
 	"deviceTempCritical":false,
 	"resetreason":16,	
@@ -495,11 +495,11 @@
 			"lastSync": "0",
 			
  
-			 "billingCycleRemainder": "34703",
+			 "billingCycleRemainder": "34569",
 
 			
 			"billingCycleLimit": 0,
-			"dataTransferred": 131610174972,
+			"dataTransferred": 131610328129,
 			"dataTransferredRoaming": 47713645,
 			
 			"lastReset":"1325023200",
@@ -513,12 +513,12 @@
 	"netManualNoCvg": false,
 	"connection": 	   	"Connected",
 	"currentPSserviceType":		"LTE",
-	"sessDuration": 	13746,
+	"sessDuration": 	13880,
 	"sessStartTime": 	1327653151,
  
-	"dataTransferred": "194401385",
-	"dataTransferredRx": "172827506",
-	"dataTransferredTx": "21573879",
+	"dataTransferred": "194554542",
+	"dataTransferredRx": "172910782",
+	"dataTransferredTx": "21643760",
 
 	"signalStrength": {
 		"rssi":-55,
@@ -544,7 +544,7 @@
 	"primScode":156,
 	"plmnSrvErrBitMask":0,
 	"chanIdUl":38100,
-	"txLevel":0,
+	"txLevel":6,
 	"rxLevel":-89,
 	"end":""	
 }
