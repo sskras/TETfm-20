@@ -5,10 +5,10 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645  100   645    0     0    639      0  0:00:01  0:00:01 --:--:--   639
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   371  100   371    0     0    168      0  0:00:02  0:00:02 --:--:--   782
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0   154    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
-  0  1027    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   655  100   655    0     0    592      0  0:00:01  0:00:01 --:--:--   593
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   381  100   381    0     0    130      0  0:00:02  0:00:02 --:--:--   266
+  0   138    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0  1027    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Host OS atvaizdžio išspaudimas:
@@ -16,13 +16,27 @@ curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 x 64bit/
 x 64bit/Ubuntu 20.04.3 (64bit).vdi
 
-real	0m0.076s
-user	0m0.015s
-sys	0m0.031s
+real	0m0.048s
+user	0m0.000s
+sys	0m0.015s
 
 - Host OS atvaizdis:
 
 64bit/Ubuntu 20.04.3 (64bit).vdi
+
+- Host OS atvaizdžio informacija:
+
+UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
+Parent UUID:    base
+State:          created
+Type:           normal (base)
+Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
+Storage format: VDI
+Format variant: dynamic default
+Capacity:       512000 MBytes
+Size on disk:   757 MBytes
+Encryption:     disabled
+Property:       AllocationBlockSize=1048576
 
 - Pradinės VM:
 
@@ -30,12 +44,12 @@ sys	0m0.031s
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: e0d88347-9098-408e-879a-93eb0e9efb9a
+UUID: b390be4c-e611-47d8-b4fe-addcd0fd1a90
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {e0d88347-9098-408e-879a-93eb0e9efb9a}
+"VGTU-2022-DeKo-saukrs-LDVM0" {b390be4c-e611-47d8-b4fe-addcd0fd1a90}
 
 - Naujos VM pirminė konfigūracija:
 

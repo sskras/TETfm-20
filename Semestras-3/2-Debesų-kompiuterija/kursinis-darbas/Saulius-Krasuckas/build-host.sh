@@ -66,6 +66,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; time bsdtar -xvkf ${VDI_ZIP}
                                                                bsdtar -tvf ${VDI_ZIP} | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' | read VDI_FILE
     echo -e "\n- Host OS atvaizdis:\n\n${VDI_FILE}"          ; cd - > /dev/null
+    echo -e "\n- Host OS atvaizdžio informacija:\n"          ; VBoxManage showmediuminfo disk "${BASE_DIR}/VMs/${VDI_FILE}"
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
     echo -e "\n- Nauja VM:\n"                                ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
