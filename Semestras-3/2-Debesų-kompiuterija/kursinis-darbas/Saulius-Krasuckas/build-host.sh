@@ -9,4 +9,8 @@ BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktori
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 LOG_UART=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 
+exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
+
 echo "Startuojama infrastruktūra"
+
+exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
