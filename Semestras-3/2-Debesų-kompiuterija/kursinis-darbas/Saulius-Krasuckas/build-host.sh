@@ -16,6 +16,9 @@ VM_CPUS=2                                                   # VM CPU skaičius
 VM_RAM=1024                                                 # VM RAM apimtis
 VM0="VGTU-2022-DeKo-saukrs-LDVM0"                           # Bendros VM vardas
 
+VM_VDI_URL="https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.3/Desktop/64bit.7z/download"
+VM_VDI_ZIP="Ubuntu-20.04.3-Desktop-64bit.7z"
+
 
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
@@ -56,8 +59,7 @@ VBox_setup_serial_console () {
 
 echo "$(basename $0): Startuojama infrastruktūra"
 
-    echo -e "\n- Host OS atvaizdis:\n"                       ; curl -LC - -o ${BASE_DIR}/VMs/Ubuntu-20.04.3-Desktop-64bit.7z \
-                                                                   https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.3/Desktop/64bit.7z/download
+    echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - -o ${BASE_DIR}/VMs/${VM_VDI_ZIP} ${VM_VDI_URL}
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
     echo -e "\n- Nauja VM:\n"                                ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
