@@ -1,5 +1,7 @@
 build-host.sh: Startuojama infrastruktūra
-./build-host.sh: line 23: VBoxManage: command not found
+VBoxManage.exe: error: Could not find a registered machine named 'VGTU-2022-DeKo-saukrs-LDVM0'
+VBoxManage.exe: error: Details: code VBOX_E_OBJECT_NOT_FOUND (0x80bb0001), component VirtualBoxWrap, interface IVirtualBox, callee IUnknown
+VBoxManage.exe: error: Context: "FindMachine(Bstr(a->argv[0]).raw(), machine.asOutParam())" at line 383 of file VBoxManageControlVM.cpp
 
 VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
 Kartokite <Esc> paspaudimus be perstojo.
