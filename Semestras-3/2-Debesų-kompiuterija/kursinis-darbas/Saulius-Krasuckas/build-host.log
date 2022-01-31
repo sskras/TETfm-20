@@ -5,10 +5,10 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645  100   645    0     0    652      0 --:--:-- --:--:-- --:--:--   652
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   371  100   371    0     0    184      0  0:00:02  0:00:02 --:--:--   496
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0   154    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0  1027    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0100   641  100   641    0     0    104      0  0:00:06  0:00:06 --:--:--   131
+  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0100   367  100   367    0     0     41      0  0:00:08  0:00:08 --:--:--   147
+  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0   138    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0
+  0  1027    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Host OS atvaizdžio išspaudimas:
@@ -16,9 +16,9 @@ curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 x 64bit/
 x 64bit/Ubuntu 20.04.3 (64bit).vdi
 
-real	0m0.042s
-user	0m0.030s
-sys	0m0.015s
+real	0m0.066s
+user	0m0.000s
+sys	0m0.030s
 
 - Host OS atvaizdis:
 
@@ -34,7 +34,7 @@ Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 Storage format: VDI
 Format variant: dynamic default
 Capacity:       512000 MBytes
-Size on disk:   757 MBytes
+Size on disk:   1606 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
 
@@ -48,12 +48,12 @@ b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: b50e8e15-125a-460c-a5e8-5f6c778e2d6c
+UUID: ba565b23-0fc6-4005-88df-93b368326074
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {b50e8e15-125a-460c-a5e8-5f6c778e2d6c}
+"VGTU-2022-DeKo-saukrs-LDVM0" {ba565b23-0fc6-4005-88df-93b368326074}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -69,6 +69,18 @@ Memory size:                 1024MB
 Number of CPUs:              2
 
 - Naujai VM prijungiu diskų valdiklį:
+
+
+- Naujos VM diskų valdiklio konfigūracija:
+
+Storage Controller Name (0):            SATA valdiklis
+Storage Controller Type (0):            IntelAhci
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  30
+Storage Controller Port Count (0):      30
+Storage Controller Bootable (0):        on
+
+- Naujai VM prijungiu disko ataizdį:
 
 
 - Naujos VM diskų valdiklio konfigūracija:
