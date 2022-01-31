@@ -10,6 +10,10 @@ LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas p
 UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų Serial/UART konsolei
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 
+VM_CPUS=2                                                   # VM CPU skaičius
+VM_RAM=1024                                                 # VM RAM apimtis
+VM0="VGTU-2022-DeKo-saukrs-LDVM0"                           # Bendros VM vardas
+
 
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
@@ -48,6 +52,6 @@ VBox_setup_serial_console () {
 }
 
 echo "$(basename $0): Startuojama infrastruktūra"
-VBox_setup_serial_console bandomoji-mašina
+VBox_setup_serial_console ${VM0}
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą

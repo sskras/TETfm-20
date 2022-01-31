@@ -1,5 +1,5 @@
 build-host.sh: Startuojama infrastruktūra
-./build-host.sh: line 19: VBoxManage: command not found
+./build-host.sh: line 23: VBoxManage: command not found
 
 VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
 Kartokite <Esc> paspaudimus be perstojo.
