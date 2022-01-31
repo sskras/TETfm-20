@@ -107,7 +107,7 @@
 	"session": {
 	"userRole": "Admin",
 	"lang": "en",
-	"secToken": "dbdNKPzOVdALgI15zV4VFA46QXRwkxh"
+	"secToken": "yTg32I35Tsygf43pjCurMKR8O3P9bbf"
 },
 	"general": {
 	
@@ -150,11 +150,11 @@
 		"keyLockState":"Unlocked",
 	
 
-	"devTemperature":39,
+	"devTemperature":38,
 	"verMajor":20,
 	"verMinor":0,
 	"environment":"Target",
-	"currTime":1327667031,
+	"currTime":1327667622,
 	"timeZoneOffset":7200,
 	"deviceName":"AC785S-100",
 	"useMetricSystem":true,
@@ -300,13 +300,13 @@
 		"end":""
 	},
 		
-	"batteryTemperature":40,
-	"batteryVoltage":3994,
-	"battChargeLevel":61,
+	"batteryTemperature":38,
+	"batteryVoltage":4016,
+	"battChargeLevel":67,
 	"battChargeSource":"Charger",
 	"batteryState":"Normal",
 	"batterySupported":true,
-	"charging":false,
+	"charging":true,
 	"buttonHoldTime":5,
 	"deviceTempCritical":false,
 	"resetreason":16,	
@@ -495,11 +495,11 @@
 			"lastSync": "0",
 			
  
-			 "billingCycleRemainder": "34569",
+			 "billingCycleRemainder": "33978",
 
 			
 			"billingCycleLimit": 0,
-			"dataTransferred": 131610328129,
+			"dataTransferred": 131612475728,
 			"dataTransferredRoaming": 47713645,
 			
 			"lastReset":"1325023200",
@@ -513,12 +513,12 @@
 	"netManualNoCvg": false,
 	"connection": 	   	"Connected",
 	"currentPSserviceType":		"LTE",
-	"sessDuration": 	13880,
+	"sessDuration": 	14471,
 	"sessStartTime": 	1327653151,
  
-	"dataTransferred": "194554542",
-	"dataTransferredRx": "172910782",
-	"dataTransferredTx": "21643760",
+	"dataTransferred": "196702141",
+	"dataTransferredRx": "174668828",
+	"dataTransferredTx": "22033313",
 
 	"signalStrength": {
 		"rssi":-55,
@@ -544,7 +544,7 @@
 	"primScode":156,
 	"plmnSrvErrBitMask":0,
 	"chanIdUl":38100,
-	"txLevel":6,
+	"txLevel":-13,
 	"rxLevel":-89,
 	"end":""	
 }
