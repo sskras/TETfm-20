@@ -2,12 +2,13 @@ build-host.sh: Startuojama infrastruktūra
 
 - Pradinės VM:
 
+"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
 
 - Nauja VM:
 
-Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 261285df-7419-487f-a605-bab464e026e1
-Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
+VBoxManage.exe: error: Machine settings file 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox' already exists
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MachineWrap, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "CreateMachine(bstrSettingsFile.raw(), bstrName.raw(), ComSafeArrayAsInParam(groups), bstrOsTypeId.raw(), createFlags.raw(), machine.asOutParam())" at line 280 of file VBoxManageMisc.cpp
 
 - Dabartinės VM:
 
@@ -15,8 +16,8 @@ Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 
 - Naujos VM pirminė konfigūracija:
 
-Memory size:                 128MB
-Number of CPUs:              1
+Memory size:                 1024MB
+Number of CPUs:              2
 
 - Naujos VM resursų plėtimas:
 
@@ -28,6 +29,9 @@ Number of CPUs:              2
 
 - Naujai VM prijungiu diskų valdiklį:
 
+VBoxManage.exe: error: Storage controller named 'SATA valdiklis' already exists
+VBoxManage.exe: error: Details: code VBOX_E_OBJECT_IN_USE (0x80bb000c), component SessionMachine, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "AddStorageController(Bstr(pszCtl).raw(), StorageBus_SATA, ctl.asOutParam())" at line 1080 of file VBoxManageStorageController.cpp
 
 - Naujos VM diskų valdiklio konfigūracija:
 
