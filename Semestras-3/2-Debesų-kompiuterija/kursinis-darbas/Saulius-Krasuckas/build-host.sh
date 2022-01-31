@@ -14,7 +14,7 @@ UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Se
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
 
-VBoxManage_setup_serial_console () {
+VBox_setup_serial_console () {
     # Pristabdau nurodytą VMą keisti jo Boot Loader nustatymams:
     VBoxManage controlvm ${1} pause
     echo
@@ -48,5 +48,6 @@ VBoxManage_setup_serial_console () {
 }
 
 echo "$(basename $0): Startuojama infrastruktūra"
+VBox_setup_serial_console bandomoji-mašina
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą

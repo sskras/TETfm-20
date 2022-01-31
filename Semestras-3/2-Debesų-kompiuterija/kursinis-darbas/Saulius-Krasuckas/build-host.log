@@ -1,2 +1,23 @@
 build-host.sh: Startuojama infrastruktūra
-./build-host.sh: line 51: VBox_setup_serial_console: command not found
+./build-host.sh: line 19: VBoxManage: command not found
+
+VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
+Kartokite <Esc> paspaudimus be perstojo.
+Kai pasirodys GRUB meniu, spauskite <e>
+Eikite žemyn iki eilutės:
+        linux        /boot/vmlinuz-...
+
+Spauskite <End> ir gale prirašykite:
+
+... console=ttyS0,115200n8
+
+VM paspauskite <Ctrl-X>
+
+Iškart persijunkite čia (atgal į CLI)
+... ir spauskite <Enter>
+
+Prisijungsite prie Serial konsolės:
+Script started, output log file is '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/build-host-serial.script'.
+Trying 127.0.0.1...
+telnet: Unable to connect to remote host: Connection refused
+Script done.
