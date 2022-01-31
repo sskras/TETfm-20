@@ -20,6 +20,8 @@ VDI_URL="https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.
 VDI_ZIP="Ubuntu-20.04.3-Desktop-64bit.7z"
 
 
+shopt -s lastpipe
+
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
 
@@ -62,8 +64,8 @@ echo "$(basename $0): Startuojama infrastruktūra"
                                                                cd ${BASE_DIR}/VMs
     echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - -o ${VDI_ZIP} ${VDI_URL}
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; time bsdtar -xvkf ${VDI_ZIP}
-                                                                    bsdtar -tvf ${VDI_ZIP} | read VDI_UDID
-    echo -e "\n- Host OS atvaizdis: ${VDI_UDID}\n"           ; cd - > /dev/null
+                                                               bsdtar -tvf ${VDI_ZIP} | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' | read VDI_FILE
+    echo -e "\n- Host OS atvaizdis:\n\n${VDI_FILE}"          ; cd - > /dev/null
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
     echo -e "\n- Nauja VM:\n"                                ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
