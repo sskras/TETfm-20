@@ -1,21 +1,21 @@
 build-host.sh: Startuojama infrastruktūra
 
-* Pradinės VM:
+- Pradinės VM:
 
 
-* Nauja VM:
+- Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 1a05dbae-1f98-4088-aff9-c717389ade3b
+UUID: bb6258cf-8344-47fc-8d59-ee4fb836077b
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
-* Dabartinės VM:
+- Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {1a05dbae-1f98-4088-aff9-c717389ade3b}
+"VGTU-2022-DeKo-saukrs-LDVM0" {bb6258cf-8344-47fc-8d59-ee4fb836077b}
 
-* Trinu naują VM:
+- Trinu naują VM:
 
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
-* Galutinės VM:
+- Galutinės VM:
 
