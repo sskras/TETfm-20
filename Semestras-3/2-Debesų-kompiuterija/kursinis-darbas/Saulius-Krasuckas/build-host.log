@@ -54,5 +54,13 @@ Po <Enter> ji bus išjungta ir ištrinta
 - Naujos VM išjungimas:
 
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-./build-host.sh: line 75: syntax error near unexpected token `;'
-./build-host.sh: line 75: `                                                             ; until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done'
+
+- Trinu naują VM:
+
+VBoxManage.exe: error: Cannot unregister the machine 'VGTU-2022-DeKo-saukrs-LDVM0' while it is locked
+VBoxManage.exe: error: Details: code VBOX_E_INVALID_OBJECT_STATE (0x80bb0007), component MachineWrap, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "Unregister(CleanupMode_DetachAllReturnHardDisksOnly, ComSafeArrayAsOutParam(aMedia))" at line 154 of file VBoxManageMisc.cpp
+
+- Galutinės VM:
+
+"VGTU-2022-DeKo-saukrs-LDVM0" {261285df-7419-487f-a605-bab464e026e1}
