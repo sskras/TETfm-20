@@ -63,8 +63,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM pagr. konfigūracija:\n"           ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
 
     echo -e "\nVM sukurta, metas pasitikrinti jos būseną"
-    echo -e "Po <Enter> ji bus ištrinta"
-    read
+    echo -e "Po <Enter> ji bus ištrinta"                     ; read
 
     echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
