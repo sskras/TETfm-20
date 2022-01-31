@@ -4,7 +4,7 @@ curl 'http://192.168.1.1/api/model.json?internalapi=1&x=81601' \
   --insecure \
   | sed 's/\r//' \
   | /mingw64/bin/jq '.router.clientList' \
-  | awk 'BEGIN {FS="[ \":]+"} /IP.:/ {IP=$3} /MAC/ {MAC=$3; print MAC"    "IP}'
+  | awk 'BEGIN {FS="[ \":]+"} /IP.:/ {IP=$3} /MAC/ {MAC=tolower(gensub("-", ":", "G", $3)); printf("%s    %s  (%s)\n", IP, MAC, $3)}'
 
 # jq iškerpta tokį gabalėlį:
 #
@@ -28,5 +28,5 @@ curl 'http://192.168.1.1/api/model.json?internalapi=1&x=81601' \
 
 # awk sugrupuoja MAC ir IP va tokiu pavidalu:
 #
-# 08-11-96-15-77-5C    192.168.1.20
-# D4-25-8B-94-D9-78    192.168.1.60
+# 192.168.1.20    08:11:96:15:77:5c  (08-11-96-15-77-5C)
+# 192.168.1.60    d4:25:8b:94:d9:78  (D4-25-8B-94-D9-78)
