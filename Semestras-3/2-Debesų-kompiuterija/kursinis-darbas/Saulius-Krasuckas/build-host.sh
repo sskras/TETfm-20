@@ -55,7 +55,7 @@ VBox_setup_serial_console () {
 
 echo "$(basename $0): Startuojama infrastruktūra"
 
-VBox_setup_serial_console ${VM0}
+# VBox_setup_serial_console ${VM0}
 
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
