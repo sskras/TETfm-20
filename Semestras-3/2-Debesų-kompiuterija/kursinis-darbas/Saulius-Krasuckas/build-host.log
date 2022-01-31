@@ -5,11 +5,23 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0100   641  100   641    0     0    203      0  0:00:03  0:00:03 --:--:--   204
-  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0100   367  100   367    0     0     88      0  0:00:04  0:00:04 --:--:-- 21588
-  0   138    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
-  0  1027    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645  100   645    0     0    624      0  0:00:01  0:00:01 --:--:--   625
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   371  100   371    0     0    182      0  0:00:02  0:00:02 --:--:--   815
+  0   154    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0  1027    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
+
+- Host OS atvaizdžio išspaudimas:
+
+x 64bit/
+x 64bit/Ubuntu 20.04.3 (64bit).vdi
+
+real	0m0.043s
+user	0m0.000s
+sys	0m0.030s
+
+- Host OS atvaizdis: 
+
 
 - Pradinės VM:
 
@@ -17,12 +29,12 @@ curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: d35ba60d-42f6-416c-9b8a-b6a4a222ddb7
+UUID: 7c51234b-1582-4952-94ce-c8fd877aa98b
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {d35ba60d-42f6-416c-9b8a-b6a4a222ddb7}
+"VGTU-2022-DeKo-saukrs-LDVM0" {7c51234b-1582-4952-94ce-c8fd877aa98b}
 
 - Naujos VM pirminė konfigūracija:
 
