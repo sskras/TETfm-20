@@ -7,8 +7,11 @@
 
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
+
 UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų Serial/UART konsolei
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
+UART_TCP_PORT="23001"                                       # Host TCP prievadas, skirtas ryšiui su konsole
+UART_I_O_PORT="0x3f8"                                       # VM Serial/UART I/O prievadas (aparatinis)
 
 PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
 
@@ -26,8 +29,6 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvest�
 
 
 VBox_setup_serial_console () {
-    # Pristabdau nurodytą VMą keisti jo Boot Loader nustatymams:
-    VBoxManage controlvm ${1} pause
     echo
     echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>"
     echo "Kartokite <Esc> paspaudimus be perstojo."
@@ -83,10 +84,13 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM diskinė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -i storage
 
     echo -e "\n- Naujai VM prijungiu disko ataizdį:\n"       ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
-    echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${BM0} | grep "^SATA valdiklis"
+    echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
+    echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart ${UART_I_O_PORT} --uartmodel tcpserver ${UART_TCP_PORT}
     echo -e "\n! VM sukurta, metas pasitikrinti jos būseną"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
+    echo -e "\n- Naują VM pristabdau:\n"                     ; VBoxManage controlvm ${VM0} pause
+    echo -e "\n- Naujos VM konsolės logas:\n"                ; VBox_setup_serial_console ${VM0}
 
     echo -e "\n! Po <Enter> ji bus išjungta ir ištrinta:"    ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
@@ -94,8 +98,6 @@ echo "$(basename $0): Startuojama infrastruktūra"
 
     echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
-
-# VBox_setup_serial_console ${VM0}
 
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
