@@ -56,9 +56,9 @@ VBox_setup_serial_console () {
 
 echo "$(basename $0): Startuojama infrastruktūra"
 
-   #echo; VBoxManage list vms
-   #echo; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
-   #echo; VBoxManage list vms
+    echo; VBoxManage list vms
+    echo; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
+    echo; VBoxManage list vms
 
     echo; VBoxManage unregistervm ${VM0} --delete
     echo; VBoxManage list vms
