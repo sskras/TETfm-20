@@ -80,10 +80,10 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM išplėsti resursai:\n"             ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
 
     echo -e "\n- Naujai VM prijungiu diskų valdiklį:\n"      ; VBoxManage storagectl ${VM0} --name "SATA valdiklis" --add sata --bootable on
-    echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo ${VM0} | grep -i storage
+    echo -e "\n- Naujos VM diskinė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -i storage
 
     echo -e "\n- Naujai VM prijungiu disko ataizdį:\n"       ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
-    echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo ${VM0} | grep -i storage
+    echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details VGTU-2022-DeKo-saukrs-LDVM0 | grep \(UUID
 
     echo -e "\n! VM sukurta, metas pasitikrinti jos būseną"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
