@@ -56,21 +56,16 @@ VBox_setup_serial_console () {
 
 echo "$(basename $0): Startuojama infrastruktūra"
 
-    echo; echo "- Pradinės VM:"
-    echo; VBoxManage list vms
-    echo; echo "- Nauja VM:"
-    echo; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
-    echo; echo "- Dabartinės VM:"
-    echo; VBoxManage list vms
+    echo; echo "- Pradinės VM:"                             ; echo; VBoxManage list vms
+    echo; echo "- Nauja VM:"                                ; echo; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
+    echo; echo "- Dabartinės VM:"                           ; echo; VBoxManage list vms
 
     echo; echo "VM sukurta, metas pasitikrinti jos būseną"
     echo; echo "Po <Enter> ji bus ištrinta"
     read
 
-    echo; echo "- Trinu naują VM:"
-    echo; VBoxManage unregistervm ${VM0} --delete
-    echo; echo "- Galutinės VM:"
-    echo; VBoxManage list vms
+    echo; echo "- Trinu naują VM:"                          ; echo; VBoxManage unregistervm ${VM0} --delete
+    echo; echo "- Galutinės VM:"                            ; echo; VBoxManage list vms
 
 # VBox_setup_serial_console ${VM0}
 
