@@ -6,12 +6,12 @@ build-host.sh: Startuojama infrastruktūra
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: edff1825-ea15-49f3-9aca-61c39de97311
+UUID: b0926d56-70ab-4b98-bf85-dd470c4b4430
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {edff1825-ea15-49f3-9aca-61c39de97311}
+"VGTU-2022-DeKo-saukrs-LDVM0" {b0926d56-70ab-4b98-bf85-dd470c4b4430}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -39,6 +39,11 @@ Storage Controller Port Count (0):      30
 Storage Controller Bootable (0):        on
 
 VM sukurta, metas pasitikrinti jos būseną
+
+- Naujos VM startas:
+
+Waiting for VM "VGTU-2022-DeKo-saukrs-LDVM0" to power on...
+VM "VGTU-2022-DeKo-saukrs-LDVM0" has been successfully started.
 Po <Enter> ji bus ištrinta
 
 - Trinu naują VM:
