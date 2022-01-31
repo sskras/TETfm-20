@@ -67,10 +67,10 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujai VM prijungiu diskų valdiklį:\n"      ; VBoxManage storagectl ${VM0} --name "SATA valdiklis" --add sata --bootable on
     echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo ${VM0} | grep -i storage
 
-    echo -e "\nVM sukurta, metas pasitikrinti jos būseną"
+    echo -e "\n! VM sukurta, metas pasitikrinti jos būseną"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
 
-    echo -e "\nPo <Enter> ji bus išjungta ir ištrinta"       ; read
+    echo -e "\n! Po <Enter> ji bus išjungta ir ištrinta:"    ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 1
 
