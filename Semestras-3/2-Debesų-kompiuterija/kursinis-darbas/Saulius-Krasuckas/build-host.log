@@ -5,10 +5,10 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645  100   645    0     0    620      0  0:00:01  0:00:01 --:--:--   621
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   371  100   371    0     0    178      0  0:00:02  0:00:02 --:--:--   500
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0   154    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
-  0  1027    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0100   641  100   641    0     0    203      0  0:00:03  0:00:03 --:--:--   204
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0100   367  100   367    0     0     88      0  0:00:04  0:00:04 --:--:-- 21588
+  0   138    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0  1027    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Pradinės VM:
@@ -17,12 +17,12 @@ curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: fc9e0502-5eb7-4f96-8bd4-7a960b227a9d
+UUID: d35ba60d-42f6-416c-9b8a-b6a4a222ddb7
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {fc9e0502-5eb7-4f96-8bd4-7a960b227a9d}
+"VGTU-2022-DeKo-saukrs-LDVM0" {d35ba60d-42f6-416c-9b8a-b6a4a222ddb7}
 
 - Naujos VM pirminė konfigūracija:
 
