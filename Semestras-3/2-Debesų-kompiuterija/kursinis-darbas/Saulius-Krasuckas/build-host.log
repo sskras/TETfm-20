@@ -5,10 +5,10 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   639  100   639    0     0    660      0 --:--:-- --:--:-- --:--:--   660
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   365  100   365    0     0    180      0  0:00:02  0:00:02 --:--:-- 11060
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
-  0  1027    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   639  100   639    0     0    378      0  0:00:01  0:00:01 --:--:--   378
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   365  100   365    0     0    136      0  0:00:02  0:00:02 --:--:--  1471
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0  1027    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Host OS atvaizdžio išspaudimas:
@@ -36,12 +36,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: aa346e12-1b26-447f-ae1c-659b26603631
+UUID: 57a615de-3877-497f-ae99-59e387a39720
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {aa346e12-1b26-447f-ae1c-659b26603631}
+"VGTU-2022-DeKo-saukrs-LDVM0" {57a615de-3877-497f-ae99-59e387a39720}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -77,7 +77,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027F005A2, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027CA4150, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -92,7 +92,7 @@ NIC 8:                       disabled
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027F005A2, Attachment: NAT Network 'NAT-network-App', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027CA4150, Attachment: NAT Network 'NAT-network-App', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 2:                       disabled
 NIC 3:                       disabled
 NIC 4:                       disabled
