@@ -5,10 +5,10 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645  100   645    0     0    467      0  0:00:01  0:00:01 --:--:--   468
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   371  100   371    0     0    141      0  0:00:02  0:00:02 --:--:--   306
-  0   154    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0  1027    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   639  100   639    0     0    451      0  0:00:01  0:00:01 --:--:--   451
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   365  100   365    0     0    117      0  0:00:03  0:00:03 --:--:--   422
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0  1027    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Host OS atvaizdžio išspaudimas:
@@ -36,12 +36,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 07f0e230-55b3-435f-bca5-6848ee609938
+UUID: 03285c95-a94a-49c8-b3f2-cb4062ed003a
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {07f0e230-55b3-435f-bca5-6848ee609938}
+"VGTU-2022-DeKo-saukrs-LDVM0" {03285c95-a94a-49c8-b3f2-cb4062ed003a}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -77,7 +77,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800276366DE, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027F6F455, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -89,171 +89,7 @@ NIC 8:                       disabled
 
 - Naujos VM naujas NAT potinklis:
 
-Oracle VM VirtualBox Command Line Management Interface Version 6.1.30
-(C) 2005-2021 Oracle Corporation
-All rights reserved.
-
-Usage:
-
-VBoxManage modifyvm         <uuid|vmname>
-                            [--name <name>]
-                            [--groups <group>, ...]
-                            [--description <desc>]
-                            [--ostype <ostype>]
-                            [--iconfile <filename>]
-                            [--memory <memorysize in MB>]
-                            [--pagefusion on|off]
-                            [--vram <vramsize in MB>]
-                            [--acpi on|off]
-                            [--ioapic on|off]
-                            [--hpet on|off]
-                            [--triplefaultreset on|off]
-                            [--apic on|off]
-                            [--x2apic on|off]
-                            [--paravirtprovider none|default|legacy|minimal|
-                                                hyperv|kvm]
-                            [--paravirtdebug <key=value> [,<key=value> ...]]
-                            [--hwvirtex on|off]
-                            [--nestedpaging on|off]
-                            [--largepages on|off]
-                            [--vtxvpid on|off]
-                            [--vtxux on|off]
-                            [--pae on|off]
-                            [--longmode on|off]
-                            [--ibpb-on-vm-exit on|off]
-                            [--ibpb-on-vm-entry on|off]
-                            [--spec-ctrl on|off]
-                            [--l1d-flush-on-sched on|off]
-                            [--l1d-flush-on-vm-entry on|off]
-                            [--mds-clear-on-sched on|off]
-                            [--mds-clear-on-vm-entry on|off]
-                            [--nested-hw-virt on|off]
-                            [--cpu-profile "host|Intel 80[86|286|386]"]
-                            [--cpuid-portability-level <0..3>]
-                            [--cpuid-set <leaf[:subleaf]> <eax> <ebx> <ecx> <edx>]
-                            [--cpuid-remove <leaf[:subleaf]>]
-                            [--cpuidremoveall]
-                            [--hardwareuuid <uuid>]
-                            [--cpus <number>]
-                            [--cpuhotplug on|off]
-                            [--plugcpu <id>]
-                            [--unplugcpu <id>]
-                            [--cpuexecutioncap <1-100>]
-                            [--rtcuseutc on|off]
-                            [--graphicscontroller none|vboxvga|vmsvga|vboxsvga]
-                            [--monitorcount <number>]
-                            [--accelerate3d on|off]
-                            [--accelerate2dvideo on|off]
-                            [--firmware bios|efi|efi32|efi64]
-                            [--chipset ich9|piix3]
-                            [--bioslogofadein on|off]
-                            [--bioslogofadeout on|off]
-                            [--bioslogodisplaytime <msec>]
-                            [--bioslogoimagepath <imagepath>]
-                            [--biosbootmenu disabled|menuonly|messageandmenu]
-                            [--biosapic disabled|apic|x2apic]
-                            [--biossystemtimeoffset <msec>]
-                            [--biospxedebug on|off]
-                            [--system-uuid-le on|off]
-                            [--boot<1-4> none|floppy|dvd|disk|net>]
-                            [--nic<1-N> none|null|nat|bridged|intnet|hostonly|
-                                        generic|natnetwork]
-                            [--nictype<1-N> Am79C970A|Am79C973|Am79C960|
-                                            82540EM|82543GC|82545EM|
-                                            virtio]
-                            [--cableconnected<1-N> on|off]
-                            [--nictrace<1-N> on|off]
-                            [--nictracefile<1-N> <filename>]
-                            [--nicproperty<1-N> name=[value]]
-                            [--nicspeed<1-N> <kbps>]
-                            [--nicbootprio<1-N> <priority>]
-                            [--nicpromisc<1-N> deny|allow-vms|allow-all]
-                            [--nicbandwidthgroup<1-N> none|<name>]
-                            [--bridgeadapter<1-N> none|<devicename>]
-                            [--hostonlyadapter<1-N> none|<devicename>]
-                            [--intnet<1-N> <network name>]
-                            [--nat-network<1-N> <network name>]
-                            [--nicgenericdrv<1-N> <driver>]
-                            [--natnet<1-N> <network>|default]
-                            [--natsettings<1-N> [<mtu>],[<socksnd>],
-                                                [<sockrcv>],[<tcpsnd>],
-                                                [<tcprcv>]]
-                            [--natpf<1-N> [<rulename>],tcp|udp,[<hostip>],
-                                          <hostport>,[<guestip>],<guestport>]
-                            [--natpf<1-N> delete <rulename>]
-                            [--nattftpprefix<1-N> <prefix>]
-                            [--nattftpfile<1-N> <file>]
-                            [--nattftpserver<1-N> <ip>]
-                            [--natbindip<1-N> <ip>]
-                            [--natdnspassdomain<1-N> on|off]
-                            [--natdnsproxy<1-N> on|off]
-                            [--natdnshostresolver<1-N> on|off]
-                            [--nataliasmode<1-N> default|[log],[proxyonly],
-                                                         [sameports]]
-                            [--macaddress<1-N> auto|<mac>]
-                            [--mouse ps2|usb|usbtablet|usbmultitouch]
-                            [--keyboard ps2|usb]
-                            [--uart<1-N> off|<I/O base> <IRQ>]
-                            [--uartmode<1-N> disconnected|
-                                             server <pipe>|
-                                             client <pipe>|
-                                             tcpserver <port>|
-                                             tcpclient <hostname:port>|
-                                             file <file>|
-                                             <devicename>]
-                            [--uarttype<1-N> 16450|16550A|16750]
-                            [--lpt<1-N> off|<I/O base> <IRQ>]
-                            [--lptmode<1-N> <devicename>]
-                            [--guestmemoryballoon <balloonsize in MB>]
-                            [--vm-process-priority default|flat|low|normal|high]
-                            [--audio none|null|dsound]
-                            [--audioin on|off]
-                            [--audioout on|off]
-                            [--audiocontroller ac97|hda|sb16]
-                            [--audiocodec stac9700|ad1980|stac9221|sb16]
-                            [--clipboard-mode disabled|hosttoguest|guesttohost|
-                                              bidirectional]
-                            [--draganddrop disabled|hosttoguest|guesttohost|
-                                           bidirectional]
-                            [--vrde on|off]
-                            [--vrdeextpack default|<name>]
-                            [--vrdeproperty <name=[value]>]
-                            [--vrdeport <hostport>]
-                            [--vrdeaddress <hostip>]
-                            [--vrdeauthtype null|external|guest]
-                            [--vrdeauthlibrary default|<name>]
-                            [--vrdemulticon on|off]
-                            [--vrdereusecon on|off]
-                            [--vrdevideochannel on|off]
-                            [--vrdevideochannelquality <percent>]
-                            [--usbohci on|off]
-                            [--usbehci on|off]
-                            [--usbxhci on|off]
-                            [--usbrename <oldname> <newname>]
-                            [--snapshotfolder default|<path>]
-                            [--teleporter on|off]
-                            [--teleporterport <port>]
-                            [--teleporteraddress <address|empty>]
-                            [--teleporterpassword <password>]
-                            [--teleporterpasswordfile <file>|stdin]
-                            [--tracing-enabled on|off]
-                            [--tracing-config <config-string>]
-                            [--tracing-allow-vm-access on|off]
-                            [--usbcardreader on|off]
-                            [--autostart-enabled on|off]
-                            [--autostart-delay <seconds>]
-                            [--recording on|off]
-                            [--recordingscreens all|<screen ID> [<screen ID> ...]]
-                            [--recordingfile <filename>]
-                            [--recordingvideores <width> <height>]
-                            [--recordingvideorate <rate>]
-                            [--recordingvideofps <fps>]
-                            [--recordingmaxtime <s>]
-                            [--recordingmaxsize <MB>]
-                            [--recordingopts <key=value> [,<key=value> ...]]
-                            [--defaultfrontend default|<name>]
-
-VBoxManage.exe: error: --natnetwork: RTGetOpt: Command line option needs an index.
+VBoxManage.exe: error: NATNetwork server already exists
 
 - Naujos VM Serial konsolė:
 
@@ -314,4 +150,7 @@ removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-d
 removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0'
 
 - Galutinės VM:
+
+
+- Trinu naują NAT potinklį:
 
