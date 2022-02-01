@@ -70,7 +70,7 @@ VBox_setup_serial_console () {
 echo "$(basename $0): Startuojama infrastruktūra"
 
                                                                cd ${BASE_DIR}/VMs
-    echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - -o ${VDI_ZIP} ${VDI_URL}
+    echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP}
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
                                                                        | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' \
                                                                        | read VDI_FILE
