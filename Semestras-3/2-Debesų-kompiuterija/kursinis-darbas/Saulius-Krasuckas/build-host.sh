@@ -74,7 +74,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
                                                                        | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' \
                                                                        | read VDI_FILE
-                                                               time bsdtar -xvkf ${VDI_ZIP} #\
+                                                               bsdtar -xvkf ${VDI_ZIP} #\
                                                                	      #| grep --color -e $ -e "${VDI_FILE}"
     echo -e "\n- Host OS atvaizdžio informacija:\n"          ; VBoxManage showmediuminfo disk "${VDI_FILE}" \
                                                                        | awk '/^UUID/ {print $2}' \
