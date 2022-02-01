@@ -5,19 +5,20 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   647  100   647    0     0    641      0  0:00:01  0:00:01 --:--:--   643
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   373  100   373    0     0    188      0  0:00:01  0:00:01 --:--:--   863
-  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0
-curl: (28) Failed to connect to deac-riga.dl.sourceforge.net port 443 after 21099 ms: Connection timed out
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   639  100   639    0     0    446      0  0:00:01  0:00:01 --:--:--   446
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   365  100   365    0     0    126      0  0:00:02  0:00:02 --:--:--  1208
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0  1027    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Host OS atvaizdžio išspaudimas:
 
 x 64bit/
 x 64bit/Ubuntu 20.04.3 (64bit).vdi
 
-real	0m0.078s
-user	0m0.015s
-sys	0m0.046s
+real	0m0.231s
+user	0m0.061s
+sys	0m0.062s
 
 - Host OS atvaizdžio informacija:
 
@@ -39,12 +40,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 3e2aa554-ca4c-47a8-afca-5e2dfa290b63
+UUID: f08297c7-8ade-43d9-9a85-92d052eea8c5
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {3e2aa554-ca4c-47a8-afca-5e2dfa290b63}
+"VGTU-2022-DeKo-saukrs-LDVM0" {f08297c7-8ade-43d9-9a85-92d052eea8c5}
 
 - Naujos VM pirminė konfigūracija:
 
