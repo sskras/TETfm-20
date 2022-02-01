@@ -69,6 +69,13 @@ VBox_setup_serial_console () {
 
 echo "$(basename $0): Startuojama infrastruktūra"
 
+   #TODO: įprastinių GUI įspėjimų (Baloon) išjungimas, http://www.edugeek.net/forums/thin-client-virtual-machines/192994-virtualbox-3.html#33
+   #
+   #      Pvz.: šitai ~/.VirtualBox/VirtualBox.xml eilutei:
+   #
+   # +      <ExtraDataItem name="GUI/SuppressMessages" value="remindAboutAutoCapture"/>
+   #
+   #      "C:\Program Files\Oracle\VirtualBox\vboxmanage.exe" setextradata global GUI/SuppressMessages remindAboutAutoCapture,remindAboutMouseIntegrationOn,showRuntimeError.warning.HostAudioNotResponding,remindAboutGoingSeamless,remindAboutInputCapture,remindAboutGoingFullscreen,remindAboutMouseIntegrationOff,confirmGoingSeamless,confirmInputCapture,remindAboutPausedVMInput,confirmVMReset,confirmGoingFullscreen,remindAboutWrongColorDepth
                                                                cd ${BASE_DIR}/VMs
     echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP}
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
