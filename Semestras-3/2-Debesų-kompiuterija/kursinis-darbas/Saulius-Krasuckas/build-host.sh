@@ -109,6 +109,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM papildyta tinklo konfigūracija:\n"; VBoxManage showvminfo ${VM0} | grep "NIC"
 
     echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
+                                                               VBoxManage showvminfo ${VM0} | grep "UART"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
     echo -e "\n- Naujos VM konsolės logas:\n"                ; VBox_setup_serial_console ${VM0}
@@ -123,6 +124,6 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
     echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "NAT-network-OAM"
-    echo -e "\n- Trinu naują NAT potinklį:\n"                ; VBoxManage natnetwork remove --netname "NAT-network-OAM"
+    echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "NAT-network-OAM"
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
