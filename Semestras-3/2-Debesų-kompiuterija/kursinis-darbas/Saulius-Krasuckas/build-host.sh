@@ -101,7 +101,9 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 1
 
-    echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} #--delete
+    echo -e "\n- Trinu naują VM:\n"                          # VBoxManage unregistervm ${VM0} --delete
+                                                               VBoxManage unregistervm ${VM0}
+                                                               rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
 
