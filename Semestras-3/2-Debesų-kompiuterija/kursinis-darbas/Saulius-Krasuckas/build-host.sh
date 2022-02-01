@@ -71,12 +71,16 @@ echo "$(basename $0): Startuojama infrastruktūra"
 
                                                                cd ${BASE_DIR}/VMs
     echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - -o ${VDI_ZIP} ${VDI_URL}
-    echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' | read VDI_FILE
+    echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
+                                                                       | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' \
+                                                                       | read VDI_FILE
                                                                time bsdtar -xvkf ${VDI_ZIP} #\
                                                                	      #| grep --color -e $ -e "${VDI_FILE}"
-    echo -e "\n- Host OS atvaizdžio informacija:\n"          ; VBoxManage showmediuminfo disk "${VDI_FILE}" | awk '/^UUID/ {print $2}' | read VDI_UUID
+    echo -e "\n- Host OS atvaizdžio informacija:\n"          ; VBoxManage showmediuminfo disk "${VDI_FILE}" \
+                                                                       | awk '/^UUID/ {print $2}' \
+                                                                       | read VDI_UUID
                                                                VBoxManage showmediuminfo disk "${VDI_FILE}" #\
-                                                               	      #| grep --color -e $ -e "${VDI_UUID}"
+                                                               #       | grep --color -e $ -e "${VDI_UUID}"
                                                                cd - > /dev/null
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
