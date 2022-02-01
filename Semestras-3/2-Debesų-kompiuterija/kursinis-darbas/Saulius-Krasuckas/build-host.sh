@@ -41,6 +41,11 @@ VBox_setup_serial_console () {
     echo
     echo "... console=ttyS0,115200n8"
     echo
+    echo "Taip pat ištrinkite tokius parametrus:"
+    echo
+    echo "... quiet ..."
+    echo "... splash ..."
+    echo
     echo "VM paspauskite <Ctrl-X>"
     echo
     echo "Iškart persijunkite čia (atgal į CLI)"
@@ -66,11 +71,9 @@ echo "$(basename $0): Startuojama infrastruktūra"
                                                                cd ${BASE_DIR}/VMs
     echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - -o ${VDI_ZIP} ${VDI_URL}
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; time bsdtar -xvkf ${VDI_ZIP}
-                                                               bsdtar -tvf ${VDI_ZIP} | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' | read VDI_FILE
-    echo -e "\n- Host OS atvaizdis:\n"                       ; echo "${VDI_FILE}"
+                                                               bsdtar -tvf ${VDI_ZIP} | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' | read VDI_FILE; echo "${VDI_FILE}"
     echo -e "\n- Host OS atvaizdžio informacija:\n"          ; VBoxManage showmediuminfo disk "${VDI_FILE}"
-                                                               VBoxManage showmediuminfo disk "${VDI_FILE}" | awk '/^UUID/ {print $2}' | read VDI_UUID
-    echo -e "\n- Host OS atvaizdžio ID:\n"                   ; echo "${VDI_UUID}"
+                                                               VBoxManage showmediuminfo disk "${VDI_FILE}" | awk '/^UUID/ {print $2}' | read VDI_UUID; echo "${VDI_UUID}"
                                                                cd - > /dev/null
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
@@ -83,7 +86,6 @@ echo "$(basename $0): Startuojama infrastruktūra"
 
     echo -e "\n- Naujai VM prijungiu diskų valdiklį:\n"      ; VBoxManage storagectl ${VM0} --name "SATA valdiklis" --add sata --bootable on
     echo -e "\n- Naujos VM diskinė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -i storage
-
     echo -e "\n- Naujai VM prijungiu disko ataizdį:\n"       ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
     echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
@@ -97,7 +99,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 1
 
-    echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
+    echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} #--delete
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
 
