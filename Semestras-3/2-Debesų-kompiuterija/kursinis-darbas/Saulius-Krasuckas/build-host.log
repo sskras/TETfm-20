@@ -5,10 +5,10 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   639  100   639    0     0    451      0  0:00:01  0:00:01 --:--:--   451
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   365  100   365    0     0    117      0  0:00:03  0:00:03 --:--:--   422
-  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
-  0  1027    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   645  100   645    0     0    459      0  0:00:01  0:00:01 --:--:--   459
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   371  100   371    0     0    138      0  0:00:02  0:00:02 --:--:--   694
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0   154    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0  1027    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
 - Host OS atvaizdžio išspaudimas:
@@ -36,12 +36,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 03285c95-a94a-49c8-b3f2-cb4062ed003a
+UUID: 53c8da2e-2f67-409e-87d3-31e22c330218
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {03285c95-a94a-49c8-b3f2-cb4062ed003a}
+"VGTU-2022-DeKo-saukrs-LDVM0" {53c8da2e-2f67-409e-87d3-31e22c330218}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -77,7 +77,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027F6F455, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800271DFE6E, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -89,7 +89,6 @@ NIC 8:                       disabled
 
 - Naujos VM naujas NAT potinklis:
 
-VBoxManage.exe: error: NATNetwork server already exists
 
 - Naujos VM Serial konsolė:
 

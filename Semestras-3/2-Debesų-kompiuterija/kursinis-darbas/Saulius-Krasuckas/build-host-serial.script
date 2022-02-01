@@ -1,6 +1,6 @@
-Script started on 2022-02-01 16:06:55+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
+Script started on 2022-02-01 16:09:57+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
 
 Trying 127.0.0.1...
 telnet: Unable to connect to remote host: Connection refused
 
-Script done on 2022-02-01 16:06:57+02:00 [COMMAND_EXIT_CODE="1"]
+Script done on 2022-02-01 16:10:00+02:00 [COMMAND_EXIT_CODE="1"]
