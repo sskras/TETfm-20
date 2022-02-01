@@ -63,7 +63,7 @@ VBox_setup_serial_console () {
     script -q -c "echo; telnet 127.0.0.1 ${UART_TCP_PORT}" ${UART_SCR}
 
     # Išsaugome Serial konsolės logą Plain-text formatu:
-    cat ${UART_SCR} | ansifilter > ${UART_LOG}
+    cat ${UART_SCR} | ansifilter | sed '1d;$d' > ${UART_LOG}
 }
 
 
