@@ -1,4 +1,415 @@
 
 Trying 127.0.0.1...
-telnet: Unable to connect to remote host: Connection refused
+Connected to 127.0.0.1.
+Escape character is '^]'.
+/dev/sda1: clean, 162755/14458880 files, 2790170/57829632 blocks
+[  OK  ] Started Show Plymouth Boot Screen.
+[  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
+[  OK  ] Reached target Local Encrypted Volumes.
+plymouth-start.service
+[  OK  ] Mounted Mount unit for core18, revision 2128.
+snap-core18-2128.mount
+[  OK  ] Mounted Mount unit for snap-store, revision 558.
+snap-snap\x2dstore-558.mount
+[  OK  ] Mounted Mount unit for gtk-common-themes, revision 1519.
+snap-gtk\x2dcommon\x2dthemes-1519.mount
+[  OK  ] Mounted Mount unit for snapd, revision 12704.
+snap-snapd-12704.mount
+[  OK  ] Mounted Mount unit for gtk-common-themes, revision 1515.
+snap-gtk\x2dcommon\x2dthemes-1515.mount
+[  OK  ] Mounted Mount unit for snapd, revision 14549.
+snap-snapd-14549.mount
+[  OK  ] Mounted Mount unit for gnome-3-34-1804, revision 77.
+snap-gnome\x2d3\x2d34\x2d1804-77.mount
+[  OK  ] Mounted Mount unit for snap-store, revision 547.
+snap-snap\x2dstore-547.mount
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
+[  OK  ] Found device VBOX_HARDDISK 3.
+         Starting File System Check…b2a7-41c1-86cb-9ada240ff9ed...
+systemd-fsckd.service
+[  OK  ] Started File System Check Daemon to report status.
+[  OK  ] Found device VBOX_HARDDISK 2.
+         Activating swap /dev/disk/…b4d0-408a-a959-dbce0dfb0bb9...
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart2.swap
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VBb6ebcaaa\x2d6f3f2eb2\x2dpart2.swap
+dev-disk-by\x2dpartuuid-38d010a9\x2d02.swap
+dev-sda2.swap
+[  OK  ] Activated swap /dev/disk/b…6-b4d0-408a-a959-dbce0dfb0bb9.
+dev-disk-by\x2duuid-64f755b6\x2db4d0\x2d408a\x2da959\x2ddbce0dfb0bb9.swap
+[  OK  ] Finished File System Check…0-b2a7-41c1-86cb-9ada240ff9ed.
+systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
+[  OK  ] Reached target Swap.
+         Mounting /home...
+home.mount
+[  OK  ] Mounted /home.
+[  OK  ] Reached target Local File Systems.
+         Starting Load AppArmor profiles...
+         Starting Set console font and keymap...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Set console font and keymap.
+console-setup.service
+[  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
+[  OK  ] Finished Create Volatile Files and Directories.
+systemd-tmpfiles-setup.service
+         Starting Network Name Resolution...
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
+systemd-update-utmp.service
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+systemd-resolved.service
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Reached target System Time Synchronized.
+systemd-timesyncd.service
+[  OK  ] Finished Load AppArmor profiles.
+apparmor.service
+         Starting Load AppArmor pro…managed internally by snapd...
+snapd.apparmor.service
+[  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started ACPI Events Check.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Trigger anacron every hour.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Periodic ext4 Onli…ata Check for All Filesystems.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Refresh fwupd metadata regularly.
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Started Daily man-db regeneration.
+[  OK  ] Started Message of the Day.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started Ubuntu Advantage update messaging.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on ACPID Listen Socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+         Starting Socket activation for snappy daemon.
+[  OK  ] Listening on UUID daemon activation socket.
+[  OK  ] Listening on Socket activation for snappy daemon.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Accounts Service...
+[  OK  ] Started ACPI event daemon.
+acpid.service
+[  OK  ] Started Run anacron jobs.
+anacron.service
+         Starting LSB: automatic crash report generation...
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started Regular background program processing daemon.
+cron.service
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started D-Bus System Message Bus.
+cups.service
+         Starting Network Manager...
+[  OK  ] Started Save initial kernel messages after boot.
+         Starting Remove Stale Onli…t4 Metadata Check Snapshots...
+         Starting Detect the availa…eal with any system changes...
+         Starting Record successful boot for GRUB...
+[  OK  ] Started irqbalance daemon.
+dbus.service
+dmesg.service
+irqbalance.service
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Authorization Manager...
+         Starting Restore /etc/reso… the ppp link was shut down...
+         Starting System Logging Service...
+         Starting Snap Daemon...
+         Starting Switcheroo Control Proxy service...
+         Starting Login Service...
+         Starting Disk Manager...
+         Starting WPA supplicant...
+[  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
+[  OK  ] Finished Remove Stale Onli…ext4 Metadata Check Snapshots.
+[  OK  ] Finished Detect the availa… deal with any system changes.
+[  OK  ] Started System Logging Service.
+rsyslog.service
+[  OK  ] Finished Record successful boot for GRUB.
+         Starting GRUB failed boot detection...
+[  OK  ] Finished GRUB failed boot detection.
+[  OK  ] Started LSB: automatic crash report generation.
+apport.service
+[  OK  ] Started WPA supplicant.
+wpa_supplicant.service
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+avahi-daemon.service
+[  OK  ] Started Make remote CUPS printers available locally.
+[  OK  ] Started Switcheroo Control Proxy service.
+cups-browsed.service
+switcheroo-control.service
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+         Starting Network Manager Wait Online...
+NetworkManager.service
+         Starting OpenVPN service...
+         Starting Hostname Service...
+         Starting Permit User Sessions...
+alsa-restore.service
+[  OK  ] Finished Save/Restore Sound Card State.
+openvpn.service
+[  OK  ] Finished OpenVPN service.
+[  OK  ] Finished Permit User Sessions.
+[  OK  ] Started Authorization Manager.
+systemd-user-sessions.service
+polkit.service
+
+[  OK  ] Started Snap Daemon.
+snapd.service
+systemd-logind.service
+unattended-upgrades.service
+networkd-dispatcher.service
+systemd-hostnamed.service
+accounts-daemon.service
+NetworkManager-wait-online.service
+NetworkManager-dispatcher.service
+whoopsie.service
+gdm.service
+ModemManager.service
+kerneloops.service
+udisks2.service
+systemd-timedated.service
+snapd.seeded.service
+run-user-125.mount
+user-runtime-dir@125.service
+user@125.service
+rtkit-daemon.service
+run-user-125-gvfs.mount
+upower.service
+systemd-localed.service
+geoclue.service
+packagekit.service
+fprintd.service
+colord.service
+
+Ubuntu 20.04.3 LTS osboxes ttyS0
+
+osboxes login: osboxes
+osboxes
+Password: osboxes.org
+
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+8 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Tue Feb  1 13:03:42 EST 2022 on ttyS0
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ ip a
+ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:12:b3:6e brd ff:ff:ff:ff:ff:ff
+    inet 10.1.1.4/24 brd 10.1.1.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 581sec preferred_lft 581sec
+    inet6 fe80::b070:facb:f02:4df1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ apt 	
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ apt update
+apt update
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ sudo Ą�!!
+sudo !!
+sudo apt update
+[sudo] password for osboxes: 
+Sorry, try again.
+[sudo] password for osboxes: osboxes.org
+
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,178 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [597 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,546 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [363 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [210 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.6 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 48x48 Icons [18.3 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 64x64 Icons [35.5 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9,132 B]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [20.5 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [686 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [299 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [281 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 48x48 Icons [60.8 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 64x64 Icons [98.3 kB]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [97.9 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.7 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [21.8 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [775 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [536 B]
+Get:25 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [677 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [532 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [111 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [532 B]
+Get:29 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [664 kB]
+Get:30 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [115 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [894 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66.4 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 48x48 Icons [33.1 kB]
+Get:34 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 64x64 Icons [71.6 kB]
+Get:35 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [13.0 kB]
+Get:36 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.8 kB]
+Get:37 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,176 B]
+Get:38 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Get:39 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [536 B]
+Get:40 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [196 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [364 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 48x48 Icons [221 kB]
+Get:43 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [396 kB]
+Get:44 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.1 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,432 B]
+Get:46 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.8 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6,928 B]
+Get:48 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:49 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [620 B]
+Get:50 http://us.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [34.5 kB]
+Get:51 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [42.0 kB]
+Get:52 http://us.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10.0 kB]
+Get:53 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [8,000 B]
+Get:54 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 48x48 Icons [6,977 B]
+Get:55 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64 Icons [10.5 kB]
+Get:56 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64@2 Icons [29 B]
+Get:57 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [864 B]
+Get:58 http://us.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [11.4 kB]
+Get:59 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [20.8 kB]
+Get:60 http://us.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [14.3 kB]
+Get:61 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [12.0 kB]
+Get:62 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 48x48 Icons [7,491 B]
+Get:63 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 64x64 Icons [13.2 kB]
+Get:64 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [692 B]
+Fetched 11.3 MB in 25s (448 kB/s)                                              
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+204 packages can be upgraded. Run 'apt list --upgradable' to see them.
+osboxes@osboxes:~$ sudo poweroff
+sudo poweroff
+[  OK  ] Stopped Login Service.
+[  OK  ] Started Show Plymouth Power Off Screen.
+plymouth-poweroff.service
+[  OK  ] Stopped User Manager for UID 1000.
+         Stopping User Runtime Directory /run/user/1000...
+[  OK  ] Stopped User Manager for UID 125.
+         Stopping User Runtime Directory /run/user/125...
+[  OK  ] Unmounted /run/user/1000.
+[  OK  ] Unmounted /run/user/125.
+[  OK  ] Stopped User Runtime Directory /run/user/1000.
+[  OK  ] Stopped User Runtime Directory /run/user/125.
+[  OK  ] Removed slice User Slice of UID 1000.
+[  OK  ] Removed slice User Slice of UID 125.
+         Stopping Permit User Sessions...
+[  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped target Network.
+[  OK  ] Stopped target User and Group Name Lookups.
+[  OK  ] Stopped target Remote File Systems.
+         Stopping Network Manager...
+         Stopping Network Name Resolution...
+         Stopping WPA supplicant...
+[  OK  ] Stopped Network Name Resolution.
+[  OK  ] Stopped WPA supplicant.
+[  OK  ] Stopped Network Manager.
+         Stopping D-Bus System Message Bus...
+[  OK  ] Stopped D-Bus System Message Bus.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped Forward Password R…s to Plymouth Directory Watch.
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped ACPI Events Check.
+[  OK  ] Stopped CUPS Scheduler.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed ACPID Listen Socket.
+[  OK  ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Closed CUPS Scheduler.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Closed Socket activation for snappy daemon.
+[  OK  ] Closed Syslog Socket.
+[  OK  ] Closed UUID daemon activation socket.
+[  OK  ] Stopped target System Initialization.
+[  OK  ] Stopped target Local Encrypted Volumes.
+[  OK  ] Stopped Forward Password R…uests to Wall Directory Watch.
+[  OK  ] Stopped target Swap.
+         Deactivating swap /dev/dis…K_VBb6ebcaaa-6f3f2eb2-part2...
+[  OK  ] Stopped Apply Kernel Variables.
+[  OK  ] Stopped Load Kernel Modules.
+         Stopping Network Time Synchronization...
+         Stopping Update UTMP about System Boot/Shutdown...
+[  OK  ] Stopped Network Time Synchronization.
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+[  OK  ] Deactivated swap /dev/disk…/pci-0000:00:0d.0-ata-1-part2.
+[  OK  ] Deactivated swap /dev/disk…ISK_VBb6ebcaaa-6f3f2eb2-part2.
+[  OK  ] Deactivated swap /dev/disk/by-partuuid/38d010a9-02.
+[  OK  ] Deactivated swap /dev/sda2.
+[  OK  ] Deactivated swap /dev/disk…6-b4d0-408a-a959-dbce0dfb0bb9.
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /home...
+         Unmounting Mount unit for bare, revision 5...
+         Unmounting Mount unit for core18, revision 2128...
+         Unmounting Mount unit for core18, revision 2284...
+         Unmounting Mount unit for core20, revision 1328...
+         Unmounting Mount unit for gnome-3-34-1804, revision 72...
+         Unmounting Mount unit for gnome-3-34-1804, revision 77...
+         Unmounting Mount unit for …ommon-themes, revision 1515...
+         Unmounting Mount unit for …ommon-themes, revision 1519...
+         Unmounting Mount unit for snap-store, revision 547...
+         Unmounting Mount unit for snap-store, revision 558...
+         Unmounting Mount unit for snapd, revision 12704...
+         Unmounting Mount unit for snapd, revision 14549...
+[  OK  ] Unmounted /home.
+[  OK  ] Unmounted Mount unit for bare, revision 5.
+[  OK  ] Unmounted Mount unit for core18, revision 2128.
+[  OK  ] Stopped File System Check …0-b2a7-41c1-86cb-9ada240ff9ed.
+[  OK  ] Removed slice system-systemd\x2dfsck.slice.
+[  OK  ] Unmounted Mount unit for core20, revision 1328.
+[  OK  ] Unmounted Mount unit for gnome-3-34-1804, revision 72.
+[  OK  ] Unmounted Mount unit for core18, revision 2284.
+[  OK  ] Unmounted Mount unit for gnome-3-34-1804, revision 77.
+[  OK  ] Unmounted Mount unit for g…-common-themes, revision 1515.
+[  OK  ] Unmounted Mount unit for g…-common-themes, revision 1519.
+[  OK  ] Unmounted Mount unit for snap-store, revision 547.
+[  OK  ] Unmounted Mount unit for snap-store, revision 558.
+[  OK  ] Unmounted Mount unit for snapd, revision 12704.
+[  OK  ] Unmounted Mount unit for snapd, revision 14549.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Reached target Unmount All Filesystems.
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Stopped Create System Users.
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+[  OK  ] Reached target Shutdown.
+[  OK  ] Reached target Final Step.
+[  OK  ] Finished Power-Off.
+[  OK  ] Reached target Power-Off.
+[  141.682197] reboot: Power down
+Connection closed by foreign host.
 

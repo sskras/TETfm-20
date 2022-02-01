@@ -5,9 +5,9 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987835
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   639  100   639    0     0    652      0 --:--:-- --:--:-- --:--:--   652
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   365  100   365    0     0    183      0  0:00:01  0:00:01 --:--:--   516
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645  100   645    0     0    645      0  0:00:01 --:--:--  0:00:01   646
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   371  100   371    0     0    183      0  0:00:02  0:00:02 --:--:--   835
+  0   154    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
   0  1027    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
 curl: (33) HTTP server doesn't seem to support byte ranges. Cannot resume.
 
@@ -36,12 +36,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: db292a48-5b50-487e-a25b-530190be74fb
+UUID: 2b30821a-3726-4970-b945-67f6bc2ce067
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {db292a48-5b50-487e-a25b-530190be74fb}
+"VGTU-2022-DeKo-saukrs-LDVM0" {2b30821a-3726-4970-b945-67f6bc2ce067}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -77,7 +77,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 08002733DD5A, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002712B36E, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 NIC 2:                       disabled
 NIC 3:                       disabled
@@ -92,7 +92,7 @@ NIC 8:                       disabled
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 08002733DD5A, Attachment: NAT Network 'NAT-network-App', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002712B36E, Attachment: NAT Network 'NAT-network-OAM', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 2:                       disabled
 NIC 3:                       disabled
 NIC 4:                       disabled
@@ -103,8 +103,6 @@ NIC 8:                       disabled
 
 - Naujos VM Serial konsolė:
 
-
-! VM sukurta, metas pasitikrinti jos būseną
 
 - Naujos VM startas:
 
@@ -140,7 +138,418 @@ Iškart persijunkite čia (atgal į CLI)
 Prisijungsite prie Serial konsolės:
 
 Trying 127.0.0.1...
-telnet: Unable to connect to remote host: Connection refused
+Connected to 127.0.0.1.
+Escape character is '^]'.
+/dev/sda1: clean, 162755/14458880 files, 2790170/57829632 blocks
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+plymouth-start.service
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for core18, revision 2128[0m.
+snap-core18-2128.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snap-store, revision 558[0m.
+snap-snap\x2dstore-558.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gtk-common-themes, revision 1519[0m.
+snap-gtk\x2dcommon\x2dthemes-1519.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snapd, revision 12704[0m.
+snap-snapd-12704.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gtk-common-themes, revision 1515[0m.
+snap-gtk\x2dcommon\x2dthemes-1515.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snapd, revision 14549[0m.
+snap-snapd-14549.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m.
+snap-gnome\x2d3\x2d34\x2d1804-77.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snap-store, revision 547[0m.
+snap-snap\x2dstore-547.mount
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
+         Starting [0;1;39mFile System Check…b2a7-41c1-86cb-9ada240ff9ed[0m...
+systemd-fsckd.service
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 2[0m.
+         Activating swap [0;1;39m/dev/disk/…b4d0-408a-a959-dbce0dfb0bb9[0m...
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart2.swap
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VBb6ebcaaa\x2d6f3f2eb2\x2dpart2.swap
+dev-disk-by\x2dpartuuid-38d010a9\x2d02.swap
+dev-sda2.swap
+[[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…6-b4d0-408a-a959-dbce0dfb0bb9[0m.
+dev-disk-by\x2duuid-64f755b6\x2db4d0\x2d408a\x2da959\x2ddbce0dfb0bb9.swap
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…0-b2a7-41c1-86cb-9ada240ff9ed[0m.
+systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+         Mounting [0;1;39m/home[0m...
+home.mount
+[[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mLoad AppArmor profiles[0m...
+         Starting [0;1;39mSet console font and keymap[0m...
+         Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
+console-setup.service
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+systemd-tmpfiles-setup.service
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+systemd-update-utmp.service
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+systemd-resolved.service
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+systemd-timesyncd.service
+[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
+apparmor.service
+         Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
+snapd.apparmor.service
+[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Started [0;1;39mMessage of the Day[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUbuntu Advantage update messaging[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+         Starting [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+         Starting [0;1;39mAccounts Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
+acpid.service
+[[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
+anacron.service
+         Starting [0;1;39mLSB: automatic crash report generation[0m...
+         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+cron.service
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+cups.service
+         Starting [0;1;39mNetwork Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
+         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
+         Starting [0;1;39mDetect the availa…eal with any system changes[0m...
+         Starting [0;1;39mRecord successful boot for GRUB[0m...
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+dbus.service
+dmesg.service
+irqbalance.service
+         Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
+         Starting [0;1;39mAuthorization Manager[0m...
+         Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
+         Starting [0;1;39mSystem Logging Service[0m...
+         Starting [0;1;39mSnap Daemon[0m...
+         Starting [0;1;39mSwitcheroo Control Proxy service[0m...
+         Starting [0;1;39mLogin Service[0m...
+         Starting [0;1;39mDisk Manager[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mRestore /etc/reso…re the ppp link was shut down[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+rsyslog.service
+[[0;32m  OK  [0m] Finished [0;1;39mRecord successful boot for GRUB[0m.
+         Starting [0;1;39mGRUB failed boot detection[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
+apport.service
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+wpa_supplicant.service
+[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+avahi-daemon.service
+[[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
+cups-browsed.service
+switcheroo-control.service
+         Starting [0;1;39mSave/Restore Sound Card State[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39mNetwork Manager Wait Online[0m...
+NetworkManager.service
+         Starting [0;1;39mOpenVPN service[0m...
+         Starting [0;1;39mHostname Service[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+alsa-restore.service
+[[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
+openvpn.service
+[[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
+systemd-user-sessions.service
+polkit.service
+
+[[0;32m  OK  [0m] Started [0;1;39mSnap Daemon[0m.
+snapd.service
+systemd-logind.service
+unattended-upgrades.service
+networkd-dispatcher.service
+systemd-hostnamed.service
+accounts-daemon.service
+NetworkManager-wait-online.service
+NetworkManager-dispatcher.service
+whoopsie.service
+gdm.service
+ModemManager.service
+kerneloops.service
+udisks2.service
+systemd-timedated.service
+snapd.seeded.service
+run-user-125.mount
+user-runtime-dir@125.service
+user@125.service
+rtkit-daemon.service
+run-user-125-gvfs.mount
+upower.service
+systemd-localed.service
+geoclue.service
+packagekit.service
+fprintd.service
+colord.service
+
+Ubuntu 20.04.3 LTS osboxes ttyS0
+
+osboxes login: osboxes
+osboxes
+Password: osboxes.org
+
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+8 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Tue Feb  1 13:03:42 EST 2022 on ttyS0
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ ip a
+ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:12:b3:6e brd ff:ff:ff:ff:ff:ff
+    inet 10.1.1.4/24 brd 10.1.1.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 581sec preferred_lft 581sec
+    inet6 fe80::b070:facb:f02:4df1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ apt 		      
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ apt update
+apt update
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+[1;31mE: [0mCould not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)[0m
+[1;31mE: [0mUnable to lock directory /var/lib/apt/lists/[0m
+[1;33mW: [0mProblem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)[0m
+[1;33mW: [0mProblem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)[0m
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ sudo ĄĄ  !!
+sudo !!
+sudo apt update
+[sudo] password for osboxes: 
+Sorry, try again.
+[sudo] password for osboxes: osboxes.org
+
+[33m0% [Working][0m            Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+[33m0% [Waiting for headers][0m                        Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+[33m0% [Waiting for headers] [2 InRelease 12.7 kB/114 kB 11%][0m                                                         Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+[33m0% [3 InRelease 1,007 B/114 kB 1%] [2 InRelease 14.0 kB/114 kB 12%][0m[33m0% [3 InRelease 42.6 kB/114 kB 37%] [2 InRelease 82.9 kB/114 kB 73%][0m[33m                                                                    0% [3 InRelease 63.4 kB/114 kB 56%][0m[33m                                   0% [Working][0m            Get:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+[33m0% [4 InRelease 4,087 B/108 kB 4%][0m[33m0% [4 InRelease 64.1 kB/108 kB 59%][0m[33m                                   0% [Waiting for headers][0m                        Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,178 kB]
+[33m0% [5 Packages 0 B/1,178 kB 0%][0m[33m0% [5 Packages 77.8 kB/1,178 kB 7%][0m                                   Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [597 kB]
+[33m0% [6 Packages 7,591 B/597 kB 1%] [5 Packages 138 kB/1,178 kB 12%][0m[33m18% [6 Packages 72.0 kB/597 kB 12%] [5 Packages 196 kB/1,178 kB 17%][0m[33m                                                                    21% [6 Packages 317 kB/597 kB 53%] [5 Packages 400 kB/1,178 kB 34%][0m[33m24% [6 Packages 509 kB/597 kB 85%] [5 Packages 591 kB/1,178 kB 50%][0m[33m                                                                   25% [5 Packages 707 kB/1,178 kB 60%][0m[33m25% [6 Packages store 0 B] [5 Packages 707 kB/1,178 kB 60%][0m                                                           Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,546 kB]
+[33m26% [6 Packages store 0 B] [7 Packages 0 B/1,546 kB 0%] [5 Packages 769 kB/1,17[0m[33m                                                                               26% [7 Packages 7,589 B/1,546 kB 0%] [5 Packages 775 kB/1,178 kB 66%][0m[33m29% [7 Packages 206 kB/1,546 kB 13%] [5 Packages 964 kB/1,178 kB 82%][0m[33m32% [7 Packages 406 kB/1,546 kB 26%] [5 Packages 1,144 kB/1,178 kB 97%][0m[33m                                                                       32% [7 Packages 439 kB/1,546 kB 28%][0m[33m32% [5 Packages store 0 B] [7 Packages 439 kB/1,546 kB 28%][0m[33m                                                           33% [7 Packages 504 kB/1,546 kB 33%] [Waiting for headers][0m                                                          Get:8 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [363 kB]
+[33m33% [7 Packages 513 kB/1,546 kB 33%] [8 Packages 0 B/363 kB 0%][0m[33m36% [7 Packages 755 kB/1,546 kB 49%] [8 Packages 173 kB/363 kB 48%][0m[33m38% [7 Packages 956 kB/1,546 kB 62%] [8 Packages 333 kB/363 kB 92%][0m[33m                                                                   38% [7 Packages 981 kB/1,546 kB 63%] [Waiting for headers][0m                                                          Get:9 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [210 kB]
+[33m39% [7 Packages 981 kB/1,546 kB 63%] [9 Translation-en 11.5 kB/210 kB 5%][0m[33m39% [8 Packages store 0 B] [7 Packages 981 kB/1,546 kB 63%] [9 Translation-en 1[0m[33m                                                                               39% [7 Packages 1,019 kB/1,546 kB 66%] [9 Translation-en 60.9 kB/210 kB 29%][0m[33m                                                                            41% [7 Packages 1,163 kB/1,546 kB 75%] [9 Translation-en 200 kB/210 kB 95%][0m                                                                           Get:10 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.6 kB]
+[33m41% [7 Packages 1,175 kB/1,546 kB 76%] [10 Components-amd64 7,575 B/40.6 kB 19%[0m[33m41% [9 Translation-en store 0 B] [7 Packages 1,175 kB/1,546 kB 76%] [10 Compone[0m[33m42% [7 Packages 1,198 kB/1,546 kB 78%] [10 Components-amd64 11.1 kB/40.6 kB 27%[0m[33m42% [7 Packages 1,248 kB/1,546 kB 81%]                             593 kB/s 12s[0m                                                                               Get:11 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 48x48 Icons [18.3 kB]
+[33m                                                                               42% [7 Packages 1,248 kB/1,546 kB 81%] [11 icons-48x48 16.4 kB/18.3 kB 89%][0m[33m42% [10 Components-amd64 store 0 B] [7 Packages 1,248 kB/1,546 kB 81%] [11 icon[0m[33m                                                                               42% [10 Components-amd64 store 0 B] [7 Packages 1,250 kB/1,546 kB 81%][0m                                                                      Get:12 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 64x64 Icons [35.5 kB]
+[33m42% [10 Components-amd64 store 0 B] [7 Packages 1,250 kB/1,546 kB 81%] [12 icon[0m[33m                                                                               43% [7 Packages 1,256 kB/1,546 kB 81%] [12 icons-64x64 1,759 B/35.5 kB 5%][0m[33m43% [11 icons-48x48 store 0 B] [7 Packages 1,256 kB/1,546 kB 81%] [12 icons-64x[0m[33m                                                                               43% [7 Packages 1,256 kB/1,546 kB 81%] [12 icons-64x64 1,759 B/35.5 kB 5%][0m[33m43% [7 Packages 1,292 kB/1,546 kB 84%]                             593 kB/s 12s[0m[33m43% [12 icons-64x64 store 0 B] [7 Packages 1,292 kB/1,546 kB 84%]  593 kB/s 12s[0m[33m43% [7 Packages 1,292 kB/1,546 kB 84%]                             593 kB/s 12s[0m                                                                               Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9,132 B]
+[33m                                                                               43% [7 Packages 1,292 kB/1,546 kB 84%] [13 Commands-amd64 2,448 B/9,132 B 27%][0m                                                                              Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [20.5 kB]
+[33m                                                                              44% [7 Packages 1,315 kB/1,546 kB 85%] [14 Packages 909 B/20.5 kB 4%][0m[33m44% [13 Commands-amd64 store 0 B] [7 Packages 1,315 kB/1,546 kB 85%] [14 Packag[0m[33m                                                                               44% [7 Packages 1,320 kB/1,546 kB 85%] [14 Packages 6,109 B/20.5 kB 30%][0m[33m44% [7 Packages 1,327 kB/1,546 kB 86%] [Waiting for headers]       593 kB/s 12s[0m                                                                               Get:15 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [686 kB]
+[33m                                                                               44% [7 Packages 1,327 kB/1,546 kB 86%] [15 Packages 14.0 kB/686 kB 2%][0m[33m44% [14 Packages store 0 B] [7 Packages 1,327 kB/1,546 kB 86%] [15 Packages 14.[0m[33m                                                                               44% [7 Packages 1,327 kB/1,546 kB 86%] [15 Packages 14.0 kB/686 kB 2%][0m[33m46% [7 Packages 1,453 kB/1,546 kB 94%] [15 Packages 131 kB/686 kB 19%][0m[33m47% [Waiting for headers] [15 Packages 213 kB/686 kB 31%]          593 kB/s 11s[0m                                                                               Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [299 kB]
+[33m                                                                               47% [16 Translation-en 2,984 B/299 kB 1%] [15 Packages 213 kB/686 kB 31%][0m[33m47% [7 Packages store 0 B] [16 Translation-en 2,984 B/299 kB 1%] [15 Packages 2[0m[33m                                                                               49% [16 Translation-en 136 kB/299 kB 45%] [15 Packages 346 kB/686 kB 50%][0m[33m51% [15 Packages 405 kB/686 kB 59%]                                593 kB/s 10s[0m[33m51% [16 Translation-en store 0 B] [15 Packages 405 kB/686 kB 59%]  593 kB/s 10s[0m                                                                               Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [281 kB]
+[33m51% [16 Translation-en store 0 B] [17 Components-amd64 0 B/281 kB 0%] [15 Packa[0m[33m                                                                               51% [17 Components-amd64 75.2 kB/281 kB 27%] [15 Packages 407 kB/686 kB 59%][0m[33m54% [Waiting for headers] [15 Packages 552 kB/686 kB 80%]           593 kB/s 9s[0m                                                                               Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 48x48 Icons [60.8 kB]
+[33m                                                                               54% [18 icons-48x48 4,112 B/60.8 kB 7%] [15 Packages 554 kB/686 kB 81%][0m[33m54% [17 Components-amd64 store 0 B] [18 icons-48x48 4,112 B/60.8 kB 7%] [15 Pac[0m[33m                                                                               55% [17 Components-amd64 store 0 B] [15 Packages 611 kB/686 kB 89%][0m                                                                   Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 64x64 Icons [98.3 kB]
+[33m55% [17 Components-amd64 store 0 B] [19 icons-64x64 0 B/98.3 kB 0%] [15 Package[0m[33m                                                                               55% [19 icons-64x64 21.1 kB/98.3 kB 21%] [15 Packages 633 kB/686 kB 92%][0m[33m55% [18 icons-48x48 store 0 B] [19 icons-64x64 21.1 kB/98.3 kB 21%] [15 Package[0m[33m                                                                               55% [19 icons-64x64 21.1 kB/98.3 kB 21%] [15 Packages 633 kB/686 kB 92%][0m[33m56% [19 icons-64x64 78.3 kB/98.3 kB 80%]                            593 kB/s 9s[0m[33m56% [15 Packages store 0 B] [19 icons-64x64 78.3 kB/98.3 kB 80%]    593 kB/s 9s[0m                                                                               Get:20 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [97.9 kB]
+[33m56% [15 Packages store 0 B] [19 icons-64x64 78.3 kB/98.3 kB 80%] [20 Translatio[0m[33m56% [15 Packages store 0 B] [Waiting for headers] [20 Translation-en 15.2 kB/97[0m                                                                               Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.7 kB]
+[33m56% [15 Packages store 0 B] [21 Commands-amd64 3,164 B/14.7 kB 22%] [20 Transla[0m[33m56% [15 Packages store 0 B] [Waiting for headers] [20 Translation-en 37.3 kB/97[0m                                                                               Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [21.8 kB]
+[33m56% [15 Packages store 0 B] [22 Packages 6,457 B/21.8 kB 30%] [20 Translation-e[0m[33m57% [15 Packages store 0 B] [Waiting for headers] [20 Translation-en 52.9 kB/97[0m                                                                               Get:23 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [775 kB]
+[33m57% [15 Packages store 0 B] [23 Packages 5,272 B/775 kB 1%] [20 Translation-en [0m[33m                                                                               57% [23 Packages 45.6 kB/775 kB 6%] [20 Translation-en 91.9 kB/97.9 kB 94%][0m[33m57% [19 icons-64x64 store 0 B] [23 Packages 45.6 kB/775 kB 6%] [20 Translation-[0m[33m                                                                               57% [23 Packages 45.6 kB/775 kB 6%] [20 Translation-en 91.9 kB/97.9 kB 94%][0m[33m57% [21 Commands-amd64 store 0 B] [23 Packages 45.6 kB/775 kB 6%] [20 Translati[0m[33m                                                                               58% [23 Packages 45.6 kB/775 kB 6%] [20 Translation-en 91.9 kB/97.9 kB 94%][0m[33m58% [22 Packages store 0 B] [23 Packages 45.6 kB/775 kB 6%] [20 Translation-en [0m[33m                                                                               58% [23 Packages 45.6 kB/775 kB 6%] [20 Translation-en 91.9 kB/97.9 kB 94%][0m                                                                           Get:24 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [536 B]
+[33m58% [23 Packages 58.6 kB/775 kB 8%] [Waiting for headers]           593 kB/s 9s[0m                                                                               Get:25 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [677 kB]
+[33m                                                                               58% [23 Packages 58.6 kB/775 kB 8%] [25 Packages 8,691 B/677 kB 1%][0m[33m58% [20 Translation-en store 0 B] [23 Packages 58.6 kB/775 kB 8%] [25 Packages [0m[33m                                                                               58% [23 Packages 80.7 kB/775 kB 10%] [25 Packages 32.1 kB/677 kB 5%][0m[33m58% [24 Commands-amd64 store 3,218 B] [23 Packages 80.7 kB/775 kB 10%] [25 Pack[0m[33m                                                                               58% [23 Packages 80.7 kB/775 kB 10%] [25 Packages 32.1 kB/677 kB 5%][0m[33m                                                                    60% [23 Packages 216 kB/775 kB 28%] [25 Packages 143 kB/677 kB 21%][0m[33m63% [23 Packages 415 kB/775 kB 54%] [25 Packages 339 kB/677 kB 50%][0m[33m65% [23 Packages 603 kB/775 kB 78%] [25 Packages 516 kB/677 kB 76%][0m[33m68% [25 Packages 668 kB/677 kB 99%]                                 593 kB/s 6s[0m                                                                               Get:26 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [532 kB]
+[33m68% [23 Packages store 0 B] [26 Packages 15.6 kB/532 kB 3%]         593 kB/s 6s[0m                                                                               Get:27 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [111 kB]
+[33m68% [23 Packages store 0 B] [27 Translation-en 723 B/111 kB 1%] [26 Packages 15[0m[33m                                                                               69% [27 Translation-en 73.5 kB/111 kB 66%] [26 Packages 85.8 kB/532 kB 16%][0m[33m69% [25 Packages store 0 B] [27 Translation-en 73.5 kB/111 kB 66%] [26 Packages[0m[33m70% [25 Packages store 0 B] [26 Packages 122 kB/532 kB 23%]         593 kB/s 6s[0m                                                                               Get:28 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [532 B]
+[33m70% [25 Packages store 0 B] [28 Commands-amd64 0 B/532 B 0%] [26 Packages 122 k[0m[33m70% [25 Packages store 0 B] [26 Packages 122 kB/532 kB 23%]         593 kB/s 6s[0m                                                                               Get:29 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [664 kB]
+[33m70% [25 Packages store 0 B] [29 Packages 4,714 B/664 kB 1%] [26 Packages 122 kB[0m[33m                                                                               70% [29 Packages 24.9 kB/664 kB 4%] [26 Packages 153 kB/532 kB 29%][0m[33m70% [27 Translation-en store 0 B] [29 Packages 24.9 kB/664 kB 4%] [26 Packages [0m[33m                                                                               70% [29 Packages 24.9 kB/664 kB 4%] [26 Packages 185 kB/532 kB 35%][0m[33m70% [28 Commands-amd64 store 3,217 B] [29 Packages 24.9 kB/664 kB 4%] [26 Packa[0m[33m                                                                               70% [29 Packages 24.9 kB/664 kB 4%] [26 Packages 185 kB/532 kB 35%][0m[33m72% [29 Packages 99.7 kB/664 kB 15%] [26 Packages 326 kB/532 kB 61%][0m[33m                                                                    72% [29 Packages 115 kB/664 kB 17%] [26 Packages 359 kB/532 kB 67%][0m[33m73% [29 Packages 140 kB/664 kB 21%] [26 Packages 378 kB/532 kB 71%][0m[33m73% [29 Packages 148 kB/664 kB 22%] [26 Packages 387 kB/532 kB 73%][0m[33m73% [29 Packages 150 kB/664 kB 23%] [26 Packages 389 kB/532 kB 73%][0m[33m73% [29 Packages 156 kB/664 kB 23%] [26 Packages 395 kB/532 kB 74%][0m[33m73% [29 Packages 159 kB/664 kB 24%] [26 Packages 399 kB/532 kB 75%][0m[33m73% [29 Packages 167 kB/664 kB 25%] [26 Packages 400 kB/532 kB 75%][0m[33m73% [29 Packages 175 kB/664 kB 26%] [26 Packages 400 kB/532 kB 75%][0m[33m74% [29 Packages 244 kB/664 kB 37%] [26 Packages 400 kB/532 kB 75%][0m[33m74% [29 Packages 284 kB/664 kB 43%] [26 Packages 400 kB/532 kB 75%][0m[33m75% [29 Packages 395 kB/664 kB 59%] [26 Packages 410 kB/532 kB 77%][0m[33m76% [29 Packages 533 kB/664 kB 80%] [26 Packages 469 kB/532 kB 88%][0m[33m77% [29 Packages 617 kB/664 kB 93%]                               91.3 kB/s 29s[0m[33m77% [26 Packages store 0 B] [29 Packages 617 kB/664 kB 93%]       91.3 kB/s 29s[0m                                                                               Get:30 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [115 kB]
+[33m77% [26 Packages store 0 B] [29 Packages 617 kB/664 kB 93%] [30 Translation-en [0m[33m                                                                               78% [26 Packages store 0 B] [30 Translation-en 65.5 kB/115 kB 57%][0m                                                                  Get:31 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [894 kB]
+[33m78% [26 Packages store 0 B] [31 Packages 0 B/894 kB 0%] [30 Translation-en 65.5[0m[33m                                                                               78% [31 Packages 10.3 kB/894 kB 1%] [30 Translation-en 87.7 kB/115 kB 76%][0m[33m78% [29 Packages store 0 B] [31 Packages 10.3 kB/894 kB 1%] [30 Translation-en [0m[33m79% [29 Packages store 0 B] [31 Packages 34.8 kB/894 kB 4%]       91.3 kB/s 27s[0m                                                                               Get:32 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66.4 kB]
+[33m79% [29 Packages store 0 B] [31 Packages 34.8 kB/894 kB 4%] [32 Components-amd6[0m[33m                                                                               79% [31 Packages 72.7 kB/894 kB 8%] [32 Components-amd64 60.6 kB/66.4 kB 91%][0m[33m79% [30 Translation-en store 0 B] [31 Packages 72.7 kB/894 kB 8%] [32 Component[0m[33m                                                                               80% [30 Translation-en store 0 B] [31 Packages 81.4 kB/894 kB 9%][0m                                                                 Get:33 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 48x48 Icons [33.1 kB]
+[33m80% [30 Translation-en store 0 B] [31 Packages 81.4 kB/894 kB 9%] [33 icons-48x[0m[33m                                                                               80% [31 Packages 92.0 kB/894 kB 10%] [33 icons-48x48 10.8 kB/33.1 kB 33%][0m[33m80% [32 Components-amd64 store 0 B] [31 Packages 92.0 kB/894 kB 10%] [33 icons-[0m[33m                                                                               80% [31 Packages 101 kB/894 kB 11%] [33 icons-48x48 25.2 kB/33.1 kB 76%][0m[33m80% [31 Packages 115 kB/894 kB 13%]                               91.3 kB/s 25s[0m                                                                               Get:34 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 64x64 Icons [71.6 kB]
+[33m80% [33 icons-48x48 store 0 B] [31 Packages 117 kB/894 kB 13%] [34 icons-64x64 [0m[33m                                                                               80% [31 Packages 117 kB/894 kB 13%] [34 icons-64x64 24.3 kB/71.6 kB 34%][0m[33m81% [31 Packages 167 kB/894 kB 19%]                               91.3 kB/s 24s[0m[33m81% [34 icons-64x64 store 0 B] [31 Packages 167 kB/894 kB 19%] [Waiting for hea[0m                                                                               Get:35 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [13.0 kB]
+[33m81% [34 icons-64x64 store 0 B] [31 Packages 167 kB/894 kB 19%] [35 Commands-amd[0m[33m                                                                               81% [31 Packages 167 kB/894 kB 19%] [35 Commands-amd64 0 B/13.0 kB 0%][0m[33m82% [31 Packages 191 kB/894 kB 21%] [Waiting for headers]         91.3 kB/s 23s[0m                                                                               Get:36 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.8 kB]
+[33m                                                                               82% [31 Packages 191 kB/894 kB 21%] [36 Packages 342 B/21.8 kB 2%][0m[33m82% [35 Commands-amd64 store 0 B] [31 Packages 191 kB/894 kB 21%] [36 Packages [0m[33m                                                                               82% [31 Packages 191 kB/894 kB 21%] [36 Packages 16.4 kB/21.8 kB 75%][0m[33m82% [31 Packages 204 kB/894 kB 23%] [Waiting for headers]         91.3 kB/s 23s[0m                                                                               Get:37 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,176 B]
+                                                                               Get:38 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+                                                                               Get:39 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [536 B]
+[33m                                                                               82% [31 Packages 204 kB/894 kB 23%] [39 Commands-amd64 536 B/536 B 100%][0m[33m82% [31 Packages 213 kB/894 kB 24%]                               91.3 kB/s 23s[0m[33m82% [37 Packages store 0 B] [31 Packages 213 kB/894 kB 24%]       91.3 kB/s 23s[0m[33m82% [31 Packages 213 kB/894 kB 24%]                               91.3 kB/s 23s[0m[33m                                                                               82% [38 Components-amd64 store 0 B] [31 Packages 213 kB/894 kB 24%][0m[33m82% [31 Packages 213 kB/894 kB 24%]                               91.3 kB/s 23s[0m[33m                                                                               82% [39 Commands-amd64 store 0 B] [31 Packages 213 kB/894 kB 24%][0m[33m82% [31 Packages 213 kB/894 kB 24%]                               91.3 kB/s 23s[0m[33m84% [31 Packages 439 kB/894 kB 49%]                               91.3 kB/s 20s[0m[33m86% [31 Packages 664 kB/894 kB 74%]                               91.3 kB/s 18s[0m[33m87% [Waiting for headers]                                         91.3 kB/s 15s[0m                                                                               Get:40 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [196 kB]
+[33m87% [40 Translation-en 2,412 B/196 kB 1%]                         91.3 kB/s 15s[0m[33m                                                                               87% [31 Packages store 0 B] [40 Translation-en 2,412 B/196 kB 1%][0m[33m88% [40 Translation-en 47.8 kB/196 kB 24%]                        91.3 kB/s 15s[0m[33m88% [40 Translation-en 133 kB/196 kB 68%]                         91.3 kB/s 14s[0m[33m89% [Working]                                                     91.3 kB/s 13s[0m[33m89% [40 Translation-en store 0 B]                                 91.3 kB/s 13s[0m                                                                               Get:41 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [364 kB]
+[33m                                                                               89% [40 Translation-en store 0 B] [41 Components-amd64 0 B/364 kB 0%][0m[33m89% [41 Components-amd64 40.8 kB/364 kB 11%]                      91.3 kB/s 13s[0m[33m90% [41 Components-amd64 204 kB/364 kB 56%]                       91.3 kB/s 11s[0m[33m91% [Waiting for headers]                                          91.3 kB/s 9s[0m                                                                               Get:42 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 48x48 Icons [221 kB]
+[33m91% [42 icons-48x48 726 B/221 kB 0%]                               91.3 kB/s 9s[0m[33m                                                                               91% [41 Components-amd64 store 0 B] [42 icons-48x48 726 B/221 kB 0%][0m[33m92% [42 icons-48x48 101 kB/221 kB 45%]                             91.3 kB/s 8s[0m[33m93% [Waiting for headers]                                          91.3 kB/s 7s[0m[33m93% [42 icons-48x48 store 0 B] [Waiting for headers]               91.3 kB/s 7s[0m                                                                               Get:43 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [396 kB]
+[33m93% [42 icons-48x48 store 0 B] [43 icons-64x64 0 B/396 kB 0%]      91.3 kB/s 7s[0m[33m93% [43 icons-64x64 3,887 B/396 kB 1%]                             91.3 kB/s 7s[0m[33m95% [43 icons-64x64 229 kB/396 kB 58%]                             91.3 kB/s 4s[0m[33m96% [Waiting for headers]                                          91.3 kB/s 2s[0m                                                                               Get:44 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.1 kB]
+[33m96% [44 Commands-amd64 733 B/20.1 kB 4%]                           91.3 kB/s 2s[0m[33m                                                                               96% [43 icons-64x64 store 0 B] [44 Commands-amd64 733 B/20.1 kB 4%][0m[33m96% [44 Commands-amd64 13.7 kB/20.1 kB 68%]                        91.3 kB/s 2s[0m[33m96% [Waiting for headers]                                          91.3 kB/s 2s[0m                                                                               Get:45 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,432 B]
+[33m96% [45 Packages 1,263 B/8,432 B 15%]                              91.3 kB/s 2s[0m[33m                                                                               96% [44 Commands-amd64 store 0 B] [45 Packages 1,263 B/8,432 B 15%][0m[33m96% [45 Packages 1,263 B/8,432 B 15%]                              91.3 kB/s 2s[0m[33m96% [Waiting for headers]                                          91.3 kB/s 2s[0m                                                                               Get:46 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.8 kB]
+[33m96% [46 Packages 6,924 B/24.8 kB 28%]                              91.3 kB/s 2s[0m[33m96% [45 Packages store 0 B] [46 Packages 9,684 B/24.8 kB 39%]      91.3 kB/s 2s[0m[33m97% [46 Packages 15.2 kB/24.8 kB 61%]                              91.3 kB/s 2s[0m[33m97% [Waiting for headers]                                          91.3 kB/s 2s[0m                                                                               Get:47 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6,928 B]
+[33m97% [47 Translation-en 1,442 B/6,928 B 21%]                        91.3 kB/s 2s[0m[33m                                                                               97% [46 Packages store 0 B] [47 Translation-en 1,442 B/6,928 B 21%][0m                                                                   Get:48 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+                                                                   Get:49 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [620 B]
+[33m97% [46 Packages store 219 kB] [Waiting for headers]               91.3 kB/s 2s[0m                                                                               Get:50 http://us.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [34.5 kB]
+[33m97% [50 Packages 10.5 kB/34.5 kB 31%]                              91.3 kB/s 1s[0m[33m                                                                               97% [47 Translation-en store 0 B] [50 Packages 10.5 kB/34.5 kB 31%][0m[33m97% [50 Packages 13.5 kB/34.5 kB 39%]                              91.3 kB/s 1s[0m[33m                                                                               97% [48 Components-amd64 store 0 B] [50 Packages 15.1 kB/34.5 kB 44%][0m[33m97% [50 Packages 15.1 kB/34.5 kB 44%]                              91.3 kB/s 1s[0m[33m                                                                               97% [49 Commands-amd64 store 0 B] [50 Packages 20.9 kB/34.5 kB 61%][0m[33m97% [50 Packages 20.9 kB/34.5 kB 61%]                              91.3 kB/s 1s[0m[33m97% [Waiting for headers]                                          91.3 kB/s 1s[0m                                                                               Get:51 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [42.0 kB]
+[33m97% [51 Packages 3,176 B/42.0 kB 8%]                               91.3 kB/s 1s[0m[33m97% [50 Packages store 0 B] [51 Packages 3,176 B/42.0 kB 8%]       91.3 kB/s 1s[0m[33m97% [51 Packages 6,436 B/42.0 kB 15%]                              91.3 kB/s 1s[0m[33m98% [Working]                                                       454 kB/s 0s[0m[33m98% [51 Packages store 0 B]                                         454 kB/s 0s[0m                                                                               Get:52 http://us.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10.0 kB]
+[33m98% [51 Packages store 0 B] [52 Translation-en 0 B/10.0 kB 0%]      454 kB/s 0s[0m[33m98% [52 Translation-en 8,193 B/10.0 kB 82%]                         454 kB/s 0s[0m[33m98% [Working]                                                       454 kB/s 0s[0m[33m98% [52 Translation-en store 0 B]                                   454 kB/s 0s[0m                                                                               Get:53 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [8,000 B]
+[33m                                                                               98% [52 Translation-en store 0 B] [53 Components-amd64 0 B/8,000 B 0%][0m[33m98% [53 Components-amd64 6,667 B/8,000 B 83%]                       454 kB/s 0s[0m[33m98% [Working]                                                       454 kB/s 0s[0m                                                                               Get:54 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 48x48 Icons [6,977 B]
+                                                                               Get:55 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64 Icons [10.5 kB]
+[33m98% [55 icons-64x64 1,177 B/10.5 kB 11%]                            454 kB/s 0s[0m[33m98% [55 icons-64x64 1,677 B/10.5 kB 16%]                            454 kB/s 0s[0m[33m                                                                               98% [54 icons-48x48 store 0 B] [55 icons-64x64 1,677 B/10.5 kB 16%][0m[33m98% [55 icons-64x64 1,677 B/10.5 kB 16%]                            454 kB/s 0s[0m[33m98% [Waiting for headers]                                           454 kB/s 0s[0m[33m98% [55 icons-64x64 store 0 B] [Waiting for headers]                454 kB/s 0s[0m                                                                               Get:56 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64@2 Icons [29 B]
+[33m99% [56 icons-64x64@2 29 B/29 B 100%]                               454 kB/s 0s[0m                                                                               Get:57 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [864 B]
+                                                                               Get:58 http://us.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [11.4 kB]
+[33m99% [58 Packages 2,684 B/11.4 kB 23%]                               454 kB/s 0s[0m[33m99% [58 Packages 2,684 B/11.4 kB 23%]                               454 kB/s 0s[0m[33m99% [58 Packages 2,684 B/11.4 kB 23%]                               454 kB/s 0s[0m[33m99% [Working]                                                       454 kB/s 0s[0m[33m99% [Working]                                                       454 kB/s 0s[0m                                                                               Get:59 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [20.8 kB]
+[33m99% [59 Packages 0 B/20.8 kB 0%]                                    454 kB/s 0s[0m[33m99% [Working]                                                       454 kB/s 0s[0m[33m99% [59 Packages store 0 B] [Waiting for headers]                   454 kB/s 0s[0m                                                                               Get:60 http://us.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [14.3 kB]
+[33m99% [60 Translation-en 0 B/14.3 kB 0%]                              454 kB/s 0s[0m[33m99% [Waiting for headers]                                           454 kB/s 0s[0m                                                                               Get:61 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [12.0 kB]
+[33m99% [61 Components-amd64 12.0 kB/12.0 kB 100%]                      454 kB/s 0s[0m[33m99% [61 Components-amd64 12.0 kB/12.0 kB 100%]                      454 kB/s 0s[0m[33m99% [Waiting for headers]                                           454 kB/s 0s[0m                                                                               Get:62 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 48x48 Icons [7,491 B]
+                                                                               Get:63 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 64x64 Icons [13.2 kB]
+                                                                               Get:64 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [692 B]
+[33m100% [Working]                                                      454 kB/s 0s[0m[33m100% [61 Components-amd64 store 0 B]                                454 kB/s 0s[0m[33m100% [Working]                                                      454 kB/s 0s[0m[33m100% [Working]                                                      454 kB/s 0s[0m[33m100% [63 icons-64x64 store 0 B]                                     454 kB/s 0s[0m[33m100% [Working]                                                      454 kB/s 0s[0m[33m100% [64 Commands-amd64 store 0 B]                                  454 kB/s 0s[0m[33m100% [Working]                                                      454 kB/s 0s[0m                                                                               Fetched 11.3 MB in 25s (448 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 19%Reading package lists... 34%Reading package lists... 34%Reading package lists... 35%Reading package lists... 49%Reading package lists... 49%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 69%Reading package lists... 69%Reading package lists... 70%Reading package lists... 71%Reading package lists... 71%Reading package lists... 73%Reading package lists... 73%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 77%Reading package lists... 77%Reading package lists... 80%Reading package lists... 80%Reading package lists... 82%Reading package lists... 82%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 87%Reading package lists... 87%Reading package lists... 88%Reading package lists... 88%Reading package lists... 90%Reading package lists... 90%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 96%Reading package lists... 96%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+204 packages can be upgraded. Run 'apt list --upgradable' to see them.
+osboxes@osboxes:~$ sudo poweroff
+sudo poweroff
+[[0;32m  OK  [0m] Stopped [0;1;39mLogin Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Power Off Screen[0m.
+plymouth-poweroff.service
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 125[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/125[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/125[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/125[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 125[0m.
+         Stopping [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mACPI Events Check[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mACPID Listen Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSyslog Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mUUID daemon activation socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+         Deactivating swap [0;1;39m/dev/dis…K_VBb6ebcaaa-6f3f2eb2-part2[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…/pci-0000:00:0d.0-ata-1-part2[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ISK_VBb6ebcaaa-6f3f2eb2-part2[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk/by-partuuid/38d010a9-02[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/sda2[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…6-b4d0-408a-a959-dbce0dfb0bb9[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+         Unmounting [0;1;39m/home[0m...
+         Unmounting [0;1;39mMount unit for bare, revision 5[0m...
+         Unmounting [0;1;39mMount unit for core18, revision 2128[0m...
+         Unmounting [0;1;39mMount unit for core18, revision 2284[0m...
+         Unmounting [0;1;39mMount unit for core20, revision 1328[0m...
+         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m...
+         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m...
+         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1515[0m...
+         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1519[0m...
+         Unmounting [0;1;39mMount unit for snap-store, revision 547[0m...
+         Unmounting [0;1;39mMount unit for snap-store, revision 558[0m...
+         Unmounting [0;1;39mMount unit for snapd, revision 12704[0m...
+         Unmounting [0;1;39mMount unit for snapd, revision 14549[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/home[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for bare, revision 5[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2128[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …0-b2a7-41c1-86cb-9ada240ff9ed[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core20, revision 1328[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2284[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1515[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1519[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 547[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 558[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 12704[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 14549[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPower-Off[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPower-Off[0m.
+[  141.682197] reboot: Power down
+Connection closed by foreign host.
 
 ! Po <Enter> ji bus išjungta ir ištrinta:
 
