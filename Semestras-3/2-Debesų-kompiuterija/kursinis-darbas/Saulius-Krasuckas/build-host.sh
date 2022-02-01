@@ -106,6 +106,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM tinklo konfigūracija:\n"          ; VBoxManage showvminfo ${VM0} | grep "NIC"
     echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "NAT-network-App" --network "10.1.1.0/24" --enable
                                                                VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "NAT-network-App"
+    echo -e "\n- Naujos VM papildyta tinklo konfigūracija:\n"; VBoxManage showvminfo ${VM0} | grep "NIC"
 
     echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
     echo -e "\n! VM sukurta, metas pasitikrinti jos būseną"
