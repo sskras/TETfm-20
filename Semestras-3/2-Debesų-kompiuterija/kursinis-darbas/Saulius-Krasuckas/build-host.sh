@@ -123,7 +123,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
-    echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network="NAT-network-App"
+    echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "NAT-network-App"
     echo -e "\n- Trinu naują NAT potinklį:\n"                ; VBoxManage natnetwork remove --netname "NAT-network-App"
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
