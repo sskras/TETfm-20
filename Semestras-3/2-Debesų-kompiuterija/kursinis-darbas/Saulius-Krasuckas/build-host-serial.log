@@ -1,4 +1,536 @@
 
 Trying 127.0.0.1...
-telnet: Unable to connect to remote host: Connection refused
+Connected to 127.0.0.1.
+Escape character is '^]'.
+/dev/sda1: clean, 162609/14458880 files, 2614792/57829632 blocks
+[  OK  ] Mounted Mount unit for snap-store, revision 547.
+[  OK  ] Mounted Mount unit for snapd, revision 12704.
+[  OK  ] Started Show Plymouth Boot Screen.
+[  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
+plymouth-start.service
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
+[  OK  ] Found device VBOX_HARDDISK 3.
+[  OK  ] Found device VBOX_HARDDISK 2.
+         Activating swap /dev/disk/…b4d0-408a-a959-dbce0dfb0bb9...
+         Starting File System Check…b2a7-41c1-86cb-9ada240ff9ed...
+[  OK  ] Started File System Check Daemon to report status.
+systemd-fsckd.service
+dev-disk-by\x2dpartuuid-38d010a9\x2d02.swap
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VBb6ebcaaa\x2d6f3f2eb2\x2dpart2.swap
+dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart2.swap
+dev-sda2.swap
+[  OK  ] Activated swap /dev/disk/b…6-b4d0-408a-a959-dbce0dfb0bb9.
+dev-disk-by\x2duuid-64f755b6\x2db4d0\x2d408a\x2da959\x2ddbce0dfb0bb9.swap
+[  OK  ] Reached target Swap.
+[  OK  ] Finished File System Check…0-b2a7-41c1-86cb-9ada240ff9ed.
+systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
+         Mounting /home...
+[  OK  ] Mounted /home.
+home.mount
+[  OK  ] Reached target Local File Systems.
+         Starting Load AppArmor profiles...
+         Starting Set console font and keymap...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Set console font and keymap.
+console-setup.service
+[  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
+systemd-tmpfiles-setup.service
+[  OK  ] Finished Create Volatile Files and Directories.
+         Starting Network Name Resolution...
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
+systemd-update-utmp.service
+systemd-resolved.service
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Reached target System Time Synchronized.
+systemd-timesyncd.service
+[  OK  ] Finished Load AppArmor profiles.
+apparmor.service
+         Starting Load AppArmor pro…managed internally by snapd...
+[  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
+snapd.apparmor.service
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started ACPI Events Check.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Trigger anacron every hour.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Periodic ext4 Onli…ata Check for All Filesystems.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Refresh fwupd metadata regularly.
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Started Daily man-db regeneration.
+[  OK  ] Started Message of the Day.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started Ubuntu Advantage update messaging.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on ACPID Listen Socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+         Starting Socket activation for snappy daemon.
+[  OK  ] Listening on UUID daemon activation socket.
+[  OK  ] Listening on Socket activation for snappy daemon.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Accounts Service...
+[  OK  ] Started ACPI event daemon.
+acpid.service
+[  OK  ] Started Run anacron jobs.
+anacron.service
+         Starting LSB: automatic crash report generation...
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started Regular background program processing daemon.
+cron.service
+[  OK  ] Started CUPS Scheduler.
+cups.service
+[  OK  ] Started D-Bus System Message Bus.
+dbus.service
+         Starting Network Manager...
+[  OK  ] Started Save initial kernel messages after boot.
+dmesg.service
+         Starting Remove Stale Onli…t4 Metadata Check Snapshots...
+         Starting Discard unused bl…filesystems from /etc/fstab...
+         Starting Detect the availa…eal with any system changes...
+         Starting Record successful boot for GRUB...
+[  OK  ] Started irqbalance daemon.
+irqbalance.service
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Authorization Manager...
+         Starting Restore /etc/reso… the ppp link was shut down...
+         Starting System Logging Service...
+         Starting Snap Daemon...
+         Starting Switcheroo Control Proxy service...
+         Starting Login Service...
+         Starting Disk Manager...
+         Starting WPA supplicant...
+         Starting Rotate log files...
+         Starting Daily man-db regeneration...
+[  OK  ] Finished Remove Stale Onli…ext4 Metadata Check Snapshots.
+[  OK  ] Finished Detect the availa… deal with any system changes.
+[  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
+[  OK  ] Started System Logging Service.
+rsyslog.service
+[  OK  ] Finished Record successful boot for GRUB.
+         Starting GRUB failed boot detection...
+[  OK  ] Started LSB: automatic crash report generation.
+apport.service
+[  OK  ] Finished Discard unused bl…n filesystems from /etc/fstab.
+[  OK  ] Finished Rotate log files.
+[  OK  ] Finished GRUB failed boot detection.
+[  OK  ] Started WPA supplicant.
+wpa_supplicant.service
+[  OK  ] Started Switcheroo Control Proxy service.
+switcheroo-control.service
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+avahi-daemon.service
+[  OK  ] Started Login Service.
+systemd-logind.service
+[  OK  ] Started Network Manager.
+NetworkManager.service
+[  OK  ] Reached target Network.
+         Starting Network Manager Wait Online...
+[  OK  ] Started Make remote CUPS printers available locally.
+cups-browsed.service
+         Starting OpenVPN service...
+         Starting Hostname Service...
+         Starting Permit User Sessions...
+[  OK  ] Started Unattended Upgrades Shutdown.
+unattended-upgrades.service
+[  OK  ] Finished Save/Restore Sound Card State.
+alsa-restore.service
+[  OK  ] Finished OpenVPN service.
+openvpn.service
+[  OK  ] Finished Permit User Sessions.
+systemd-user-sessions.service
+[  OK  ] Started Authorization Manager.
+polkit.service
+[  OK  ] Started Accounts Service.
+accounts-daemon.service
+[  OK  ] Reached target Sound Card.
+         Starting Modem Manager...
+         Starting GNOME Display Manager...
+         Starting Hold until boot process finishes up...
+[  OK  ] Started GNOME Display Manager.
+gdm.service
+udisks2.service
+[  OK  ] Started Disk Manager.
+systemd-hostnamed.service
+networkd-dispatcher.service
+NetworkManager-dispatcher.service
+ModemManager.service
+NetworkManager-wait-online.service
+whoopsie.service
+kerneloops.service
+run-user-125.mount
+user-runtime-dir@125.service
+user@125.service
+rtkit-daemon.service
+run-user-125-gvfs.mount
+tmp-sanity\x2dmountpoint\x2d306433621.mount
+snapd.service
+snapd.seeded.service
+upower.service
+systemd-localed.service
+packagekit.service
+geoclue.service
+fprintd.service
+colord.service
+
+Ubuntu 20.04.3 LTS osboxes ttyS0
+
+osboxes login: osboxes
+osboxes
+Password: osboxes.org
+
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+8 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ ip a
+ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:cb:13:e0 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86377sec preferred_lft 86377sec
+    inet6 fe80::86a9:3d3b:f0b7:6fa1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ 
+
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ ip r
+ip r
+default via 10.0.2.2 dev enp0s3 proto dhcp metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ w
+w
+ 19:07:28 up 0 min,  1 user,  load average: 2.94, 0.99, 0.35
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+osboxes  ttyS0    -                20:45    0.00s  0.14s  0.01s w
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ free -h
+free -h
+              total        used        free      shared  buff/cache   available
+Mem:          978Mi       410Mi        98Mi       7.0Mi       469Mi       421Mi
+Swap:         9.3Gi       1.0Mi       9.3Gi
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ df - Th 
+df -Th 
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs  461M     0  461M   0% /dev
+tmpfs          tmpfs      98M  1.3M   97M   2% /run
+/dev/sda1      ext4      217G  5.7G  200G   3% /
+tmpfs          tmpfs     490M     0  490M   0% /dev/shm
+tmpfs          tmpfs     5.0M  4.0K  5.0M   1% /run/lock
+tmpfs          tmpfs     490M     0  490M   0% /sys/fs/cgroup
+/dev/loop0     squashfs   56M   56M     0 100% /snap/core18/2128
+/dev/loop2     squashfs   66M   66M     0 100% /snap/gtk-common-themes/1515
+/dev/loop1     squashfs  219M  219M     0 100% /snap/gnome-3-34-1804/72
+/dev/loop3     squashfs   51M   51M     0 100% /snap/snap-store/547
+/dev/loop4     squashfs   33M   33M     0 100% /snap/snapd/12704
+/dev/sda3      ext4      265G   67M  252G   1% /home
+tmpfs          tmpfs      98M   36K   98M   1% /run/user/125
+tmpfs          tmpfs      98M  8.0K   98M   1% /run/user/1000
+/dev/loop5     squashfs   56M   56M     0 100% /snap/core18/2284
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ hostname
+hostname
+osboxes
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ w
+w
+ 19:09:29 up 2 min,  1 user,  load average: 1.22, 1.00, 0.43
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+osboxes  ttyS0    -                20:45    0.00s  0.16s  0.01s w
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ w
+w
+ 19:12:55 up 6 min,  1 user,  load average: 0.80, 0.96, 0.53
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+osboxes  ttyS0    -                20:45    0.00s  0.16s  0.01s w
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ w
+w
+ 19:32:41 up 26 min,  1 user,  load average: 0.01, 0.19, 0.36
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+osboxes  ttyS0    -                20:45    0.00s  0.18s  0.02s w
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ tops -ef
+ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 19:06 ?        00:00:08 /sbin/init splash
+root           2       0  0 19:06 ?        00:00:00 [kthreadd]
+root           3       2  0 19:06 ?        00:00:00 [rcu_gp]
+root           4       2  0 19:06 ?        00:00:00 [rcu_par_gp]
+root           6       2  0 19:06 ?        00:00:00 [kworker/0:0H-events_highpri
+root           7       2  0 19:06 ?        00:00:00 [kworker/0:1-mm_percpu_wq]
+root           9       2  0 19:06 ?        00:00:00 [mm_percpu_wq]
+root          10       2  0 19:06 ?        00:00:00 [rcu_tasks_rude_]
+root          11       2  0 19:06 ?        00:00:00 [rcu_tasks_trace]
+root          12       2  0 19:06 ?        00:00:00 [ksoftirqd/0]
+root          13       2  0 19:06 ?        00:00:00 [rcu_sched]
+root          14       2  0 19:06 ?        00:00:00 [migration/0]
+root          15       2  0 19:06 ?        00:00:00 [idle_inject/0]
+root          16       2  0 19:06 ?        00:00:00 [cpuhp/0]
+root          17       2  0 19:06 ?        00:00:00 [cpuhp/1]
+root          18       2  0 19:06 ?        00:00:00 [idle_inject/1]
+root          19       2  0 19:06 ?        00:00:00 [migration/1]
+root          20       2  0 19:06 ?        00:00:02 [ksoftirqd/1]
+root          22       2  0 19:06 ?        00:00:00 [kworker/1:0H-events_highpri
+root          23       2  0 19:06 ?        00:00:00 [kdevtmpfs]
+root          24       2  0 19:06 ?        00:00:00 [netns]
+root          25       2  0 19:06 ?        00:00:00 [inet_frag_wq]
+root          26       2  0 19:06 ?        00:00:00 [kauditd]
+root          27       2  0 19:06 ?        00:00:00 [khungtaskd]
+root          28       2  0 19:06 ?        00:00:00 [oom_reaper]
+root          29       2  0 19:06 ?        00:00:00 [writeback]
+root          30       2  0 19:06 ?        00:00:00 [kcompactd0]
+root          31       2  0 19:06 ?        00:00:00 [ksmd]
+root          32       2  0 19:06 ?        00:00:00 [khugepaged]
+root          37       2  0 19:06 ?        00:00:02 [kworker/1:1-mm_percpu_wq]
+root          79       2  0 19:06 ?        00:00:00 [kintegrityd]
+root          80       2  0 19:06 ?        00:00:00 [kblockd]
+root          81       2  0 19:06 ?        00:00:00 [blkcg_punt_bio]
+root          82       2  0 19:06 ?        00:00:00 [tpm_dev_wq]
+root          83       2  0 19:06 ?        00:00:00 [ata_sff]
+root          84       2  0 19:06 ?        00:00:00 [md]
+root          85       2  0 19:06 ?        00:00:00 [edac-poller]
+root          86       2  0 19:06 ?        00:00:00 [devfreq_wq]
+root          87       2  0 19:06 ?        00:00:00 [watchdogd]
+root          89       2  0 19:06 ?        00:00:00 [kworker/0:1H-kblockd]
+root          91       2  0 19:06 ?        00:00:01 [kswapd0]
+root          92       2  0 19:06 ?        00:00:00 [ecryptfs-kthrea]
+root          94       2  0 19:06 ?        00:00:00 [kthrotld]
+root          95       2  0 19:06 ?        00:00:00 [acpi_thermal_pm]
+root          96       2  0 19:06 ?        00:00:00 [vfio-irqfd-clea]
+root          97       2  0 19:06 ?        00:00:00 [ipv6_addrconf]
+root         106       2  0 19:06 ?        00:00:00 [kstrp]
+root         109       2  0 19:06 ?        00:00:00 [zswap-shrink]
+root         110       2  0 19:06 ?        00:00:00 [kworker/u5:0]
+root         115       2  0 19:06 ?        00:00:00 [charger_manager]
+root         151       2  0 19:06 ?        00:00:00 [scsi_eh_0]
+root         152       2  0 19:06 ?        00:00:00 [scsi_tmf_0]
+root         153       2  0 19:06 ?        00:00:00 [scsi_eh_1]
+root         155       2  0 19:06 ?        00:00:00 [scsi_tmf_1]
+root         156       2  0 19:06 ?        00:00:00 [scsi_eh_2]
+root         157       2  0 19:06 ?        00:00:00 [scsi_tmf_2]
+root         158       2  0 19:06 ?        00:00:00 [scsi_eh_3]
+root         159       2  0 19:06 ?        00:00:00 [scsi_tmf_3]
+root         160       2  0 19:06 ?        00:00:00 [scsi_eh_4]
+root         161       2  0 19:06 ?        00:00:00 [scsi_tmf_4]
+root         162       2  0 19:06 ?        00:00:00 [scsi_eh_5]
+root         163       2  0 19:06 ?        00:00:00 [scsi_tmf_5]
+root         164       2  0 19:06 ?        00:00:00 [scsi_eh_6]
+root         165       2  0 19:06 ?        00:00:00 [scsi_tmf_6]
+root         166       2  0 19:06 ?        00:00:00 [scsi_eh_7]
+root         167       2  0 19:06 ?        00:00:00 [scsi_tmf_7]
+root         168       2  0 19:06 ?        00:00:00 [scsi_eh_8]
+root         169       2  0 19:06 ?        00:00:00 [scsi_tmf_8]
+root         170       2  0 19:06 ?        00:00:00 [scsi_eh_9]
+root         171       2  0 19:06 ?        00:00:00 [scsi_tmf_9]
+root         172       2  0 19:06 ?        00:00:00 [scsi_eh_10]
+root         173       2  0 19:06 ?        00:00:00 [scsi_tmf_10]
+root         174       2  0 19:06 ?        00:00:00 [scsi_eh_11]
+root         175       2  0 19:06 ?        00:00:00 [scsi_tmf_11]
+root         176       2  0 19:06 ?        00:00:00 [scsi_eh_12]
+root         177       2  0 19:06 ?        00:00:00 [scsi_tmf_12]
+root         178       2  0 19:06 ?        00:00:00 [scsi_eh_13]
+root         179       2  0 19:06 ?        00:00:00 [scsi_tmf_13]
+root         180       2  0 19:06 ?        00:00:00 [scsi_eh_14]
+root         181       2  0 19:06 ?        00:00:00 [scsi_tmf_14]
+root         182       2  0 19:06 ?        00:00:00 [scsi_eh_15]
+root         183       2  0 19:06 ?        00:00:00 [scsi_tmf_15]
+root         184       2  0 19:06 ?        00:00:00 [scsi_eh_16]
+root         185       2  0 19:06 ?        00:00:00 [scsi_tmf_16]
+root         186       2  0 19:06 ?        00:00:00 [scsi_eh_17]
+root         187       2  0 19:06 ?        00:00:00 [scsi_tmf_17]
+root         188       2  0 19:06 ?        00:00:00 [scsi_eh_18]
+root         189       2  0 19:06 ?        00:00:00 [scsi_tmf_18]
+root         190       2  0 19:06 ?        00:00:00 [scsi_eh_19]
+root         191       2  0 19:06 ?        00:00:00 [scsi_tmf_19]
+root         192       2  0 19:06 ?        00:00:00 [scsi_eh_20]
+root         193       2  0 19:06 ?        00:00:00 [scsi_tmf_20]
+root         194       2  0 19:06 ?        00:00:00 [scsi_eh_21]
+root         195       2  0 19:06 ?        00:00:00 [scsi_tmf_21]
+root         196       2  0 19:06 ?        00:00:00 [scsi_eh_22]
+root         197       2  0 19:06 ?        00:00:00 [scsi_tmf_22]
+root         198       2  0 19:06 ?        00:00:00 [scsi_eh_23]
+root         199       2  0 19:06 ?        00:00:00 [scsi_tmf_23]
+root         200       2  0 19:06 ?        00:00:00 [scsi_eh_24]
+root         201       2  0 19:06 ?        00:00:00 [scsi_tmf_24]
+root         202       2  0 19:06 ?        00:00:00 [scsi_eh_25]
+root         203       2  0 19:06 ?        00:00:00 [scsi_tmf_25]
+root         204       2  0 19:06 ?        00:00:00 [scsi_eh_26]
+root         205       2  0 19:06 ?        00:00:00 [scsi_tmf_26]
+root         206       2  0 19:06 ?        00:00:00 [scsi_eh_27]
+root         207       2  0 19:06 ?        00:00:00 [scsi_tmf_27]
+root         208       2  0 19:06 ?        00:00:00 [scsi_eh_28]
+root         209       2  0 19:06 ?        00:00:00 [scsi_tmf_28]
+root         210       2  0 19:06 ?        00:00:00 [scsi_eh_29]
+root         211       2  0 19:06 ?        00:00:00 [scsi_tmf_29]
+root         241       2  0 19:06 ?        00:00:01 [kworker/1:1H-kblockd]
+root         261       2  0 19:06 ?        00:00:02 [jbd2/sda1-8]
+root         262       2  0 19:06 ?        00:00:00 [ext4-rsv-conver]
+root         301       1  0 19:06 ?        00:00:00 /lib/systemd/systemd-journal
+root         321       1  0 19:06 ?        00:00:00 /lib/systemd/systemd-udevd
+root         332       2  0 19:06 ?        00:00:00 [loop0]
+root         336       2  0 19:06 ?        00:00:00 [loop1]
+root         338       2  0 19:06 ?        00:00:00 [loop2]
+root         347       2  0 19:06 ?        00:00:00 [loop3]
+root         350       2  0 19:06 ?        00:00:00 [loop4]
+root         354       2  0 19:06 ?        00:00:00 [ttm_swap]
+root         381       2  0 19:06 ?        00:00:00 [cryptd]
+root         488       2  0 19:06 ?        00:00:00 [jbd2/sda3-8]
+root         489       2  0 19:06 ?        00:00:00 [ext4-rsv-conver]
+systemd+     502       1  0 19:06 ?        00:00:00 /lib/systemd/systemd-resolve
+systemd+     503       1  0 19:06 ?        00:00:00 /lib/systemd/systemd-timesyn
+root         536       1  0 19:06 ?        00:00:00 /usr/lib/accountsservice/acc
+root         537       1  0 19:06 ?        00:00:00 /usr/sbin/acpid
+root         538       1  0 19:06 ?        00:00:00 /usr/sbin/anacron -d -q -s
+avahi        540       1  0 19:06 ?        00:00:00 avahi-daemon: running [osbox
+root         544       1  0 19:06 ?        00:00:00 /usr/sbin/cron -f
+root         546       1  0 19:06 ?        00:00:00 /usr/sbin/cupsd -l
+message+     547       1  0 19:06 ?        00:00:03 /usr/bin/dbus-daemon --syste
+root         548       1  0 19:06 ?        00:00:02 /usr/sbin/NetworkManager --n
+root         563       1  0 19:06 ?        00:00:00 /usr/sbin/irqbalance --foreg
+root         565       1  0 19:06 ?        00:00:00 /usr/bin/python3 /usr/bin/ne
+root         568       1  0 19:06 ?        00:00:00 /usr/lib/policykit-1/polkitd
+syslog       573       1  0 19:06 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         580       1  0 19:06 ?        00:00:00 /usr/libexec/switcheroo-cont
+root         583       1  0 19:06 ?        00:00:00 /lib/systemd/systemd-logind
+root         584       1  0 19:06 ?        00:00:00 /usr/lib/udisks2/udisksd
+root         585       1  0 19:06 ?        00:00:00 /sbin/wpa_supplicant -u -s -
+avahi        595     540  0 19:06 ?        00:00:00 avahi-daemon: chroot helper
+root         641       1  0 19:06 ?        00:00:00 /usr/sbin/cups-browsed
+root         652       1  0 19:06 ?        00:00:00 /usr/bin/python3 /usr/share/
+root         658       1  0 19:06 ?        00:00:00 /usr/sbin/ModemManager --fil
+root         666       1  0 19:06 ?        00:00:00 /usr/sbin/gdm3
+root         680     666  0 19:06 ?        00:00:00 gdm-session-worker [pam/gdm-
+whoopsie     695       1  0 19:06 ?        00:00:00 /usr/bin/whoopsie -f
+kernoops     704       1  0 19:06 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops     707       1  0 19:06 ?        00:00:00 /usr/sbin/kerneloops
+gdm          749       1  0 19:06 ?        00:00:00 /lib/systemd/systemd --user
+gdm          750     749  0 19:06 ?        00:00:00 (sd-pam)
+gdm          756     749  0 19:06 ?        00:00:00 /usr/bin/pulseaudio --daemon
+gdm          758     749  0 19:06 ?        00:00:00 /usr/libexec/tracker-miner-f
+gdm          759     680  0 19:06 tty1     00:00:00 /usr/lib/gdm3/gdm-wayland-se
+gdm          761     749  0 19:06 ?        00:00:00 /usr/bin/dbus-daemon --sessi
+rtkit        767       1  0 19:06 ?        00:00:00 /usr/libexec/rtkit-daemon
+gdm          773     759  0 19:06 tty1     00:00:00 dbus-run-session -- gnome-se
+gdm          774     773  0 19:06 tty1     00:00:00 dbus-daemon --nofork --print
+gdm          776     773  0 19:06 tty1     00:00:00 /usr/libexec/gnome-session-b
+gdm          777     749  0 19:06 ?        00:00:00 /usr/libexec/gvfsd
+gdm          784     749  0 19:06 ?        00:00:00 /usr/libexec/gvfsd-fuse /run
+gdm          792     749  0 19:06 ?        00:00:00 /usr/libexec/gvfs-udisks2-vo
+gdm          832     749  0 19:06 ?        00:00:00 /usr/libexec/gvfs-afc-volume
+gdm          840     749  0 19:06 ?        00:00:00 /usr/libexec/gvfs-mtp-volume
+gdm          849     749  0 19:06 ?        00:00:00 /usr/libexec/gvfs-gphoto2-vo
+gdm          858     776  0 19:06 tty1     00:00:12 /usr/bin/gnome-shell
+gdm          859     749  0 19:06 ?        00:00:00 /usr/libexec/gvfs-goa-volume
+gdm          865     749  0 19:06 ?        00:00:00 /usr/libexec/goa-daemon
+gdm          886     749  0 19:06 ?        00:00:00 /usr/libexec/goa-identity-se
+root         890       1  0 19:06 ?        00:00:00 /usr/lib/upower/upowerd
+gdm          942       1  0 19:06 tty1     00:00:00 /usr/libexec/at-spi-bus-laun
+gdm          947     942  0 19:06 tty1     00:00:00 /usr/bin/dbus-daemon --confi
+gdm          950     858  0 19:06 tty1     00:00:00 /usr/bin/Xwayland :1024 -roo
+gdm          971       1  0 19:06 tty1     00:00:00 /usr/libexec/xdg-permission-
+gdm          987       1  0 19:06 tty1     00:00:00 /usr/bin/gjs /usr/share/gnom
+gdm          988       1  0 19:06 tty1     00:00:00 /usr/libexec/at-spi2-registr
+gdm          994     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-sharing
+gdm          995     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-wacom
+gdm          997     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-color
+gdm          998     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-keyboard
+gdm          999     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-print-notif
+gdm         1000     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-rfkill
+gdm         1001     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-smartcard
+gdm         1005     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-datetime
+gdm         1007     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-media-keys
+gdm         1011     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-screensaver
+gdm         1017     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-sound
+gdm         1021     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-a11y-settin
+gdm         1026     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-housekeepin
+gdm         1032     776  0 19:06 tty1     00:00:00 /usr/libexec/gsd-power
+gdm         1047       1  0 19:06 tty1     00:00:00 /usr/libexec/gsd-printer
+gdm         1110     858  0 19:07 tty1     00:00:00 ibus-daemon --panel disable 
+colord      1111       1  0 19:07 ?        00:00:00 /usr/libexec/colord
+gdm         1122    1110  0 19:07 tty1     00:00:00 /usr/libexec/ibus-dconf
+gdm         1125       1  0 19:07 tty1     00:00:00 /usr/libexec/ibus-x11 --kill
+gdm         1132       1  0 19:07 tty1     00:00:00 /usr/libexec/ibus-portal
+gdm         1137    1110  0 19:07 tty1     00:00:00 /usr/libexec/ibus-engine-sim
+root        1144       1  0 19:07 ttyS0    00:00:00 /bin/login -p --
+osboxes     1267       1  0 19:07 ?        00:00:00 /lib/systemd/systemd --user
+osboxes     1268    1267  0 19:07 ?        00:00:00 (sd-pam)
+osboxes     1273    1267  0 19:07 ?        00:00:00 /usr/bin/pulseaudio --daemon
+osboxes     1275    1267  0 19:07 ?        00:00:00 /usr/libexec/tracker-miner-f
+osboxes     1277    1267  0 19:07 ?        00:00:00 /usr/bin/dbus-daemon --sessi
+osboxes     1279    1144  0 19:07 ttyS0    00:00:00 -bash
+osboxes     1281    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfsd
+osboxes     1287    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfsd-fuse /run
+osboxes     1300    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfs-udisks2-vo
+osboxes     1313    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfs-afc-volume
+osboxes     1319    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfs-mtp-volume
+osboxes     1325    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfs-gphoto2-vo
+osboxes     1331    1267  0 19:07 ?        00:00:00 /usr/libexec/gvfs-goa-volume
+osboxes     1335    1267  0 19:07 ?        00:00:00 /usr/libexec/goa-daemon
+osboxes     1343    1267  0 19:07 ?        00:00:00 /usr/libexec/goa-identity-se
+root        1466       2  0 19:07 ?        00:00:00 [loop5]
+root        1564       2  0 19:08 ?        00:00:00 [loop6]
+root        1581       1 19 19:08 ?        00:04:44 /usr/lib/snapd/snapd
+root        1779       2  0 19:08 ?        00:00:00 [loop7]
+root        1878       2  0 19:10 ?        00:00:00 [loop8]
+root        1969       2  0 19:10 ?        00:00:00 [loop9]
+root        2068       2  0 19:11 ?        00:00:00 [loop10]
+root        2260       2  0 19:12 ?        00:00:00 [loop11]
+osboxes     2342    1267  0 19:12 ?        00:00:00 /usr/libexec/gvfsd-metadata
+gdm         2344     749  0 19:12 ?        00:00:00 /usr/libexec/gvfsd-metadata
+root        2369       2  0 19:17 ?        00:00:00 [kworker/u4:1-ext4-rsv-conve
+root        2373       2  0 19:21 ?        00:00:00 [kworker/1:2-events]
+root        2382       2  0 19:22 ?        00:00:00 [kworker/0:2-events]
+root        2383       2  0 19:23 ?        00:00:00 [kworker/u4:0-events_unbound
+osboxes     2417    1279  0 19:32 ttyS0    00:00:00 ps -ef
+osboxes@osboxes:~$ 
+osboxes@osboxes:~$ poweroffsudo 
+powerofsudo powerof
+[sudo] password for osboxes: 
+Sorry, try again.
+[sudo] password for osboxes: 
+
+Connection closed by foreign host.
 

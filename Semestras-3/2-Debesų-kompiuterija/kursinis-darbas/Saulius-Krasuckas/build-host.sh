@@ -12,6 +12,7 @@ UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 UART_TCP_PORT="23001"                                       # Host TCP prievadas, skirtas ryšiui su konsole
 UART_I_O_PORT="0x3f8"                                       # VM Serial/UART I/O prievadas (aparatinis)
+UART_IRQ="4"                                                # VM Serial/UART IRQ numeris
 
 PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
 
@@ -86,7 +87,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujai VM prijungiu disko ataizdį:\n"       ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
     echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
-    echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} --uartmodel tcpserver ${UART_TCP_PORT}
+    echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
     echo -e "\n! VM sukurta, metas pasitikrinti jos būseną"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naują VM pristabdau:\n"                     ; VBoxManage controlvm ${VM0} pause
