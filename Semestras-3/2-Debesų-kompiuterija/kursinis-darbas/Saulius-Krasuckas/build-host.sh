@@ -41,6 +41,7 @@ VBox_setup_serial_console () {
     echo "Kartokite <Esc> paspaudimus be perstojo."
     echo "Kai pasirodys GRUB meniu, spauskite <e>"
     echo "Eikite žemyn iki eilutės:"
+    echo
     echo "        linux        /boot/vmlinuz-..."
     echo
     echo "Spauskite <End> ir gale prirašykite:"
@@ -54,8 +55,8 @@ VBox_setup_serial_console () {
     echo
     echo "VM paspauskite <Ctrl-X>"
     echo
-    echo "Iškart persijunkite čia (atgal į CLI)"
-    echo "... ir spauskite <Enter>"
+    echo "Iškart persijunkite čia (atgal į CLI)."
+    echo "Spauskite <Enter>"
     echo
     echo "Prisijungsite prie Serial konsolės:"
 
@@ -115,8 +116,8 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
     echo -e "\n- Naujos VM tinklo konfigūracija:\n"          ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
-    echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
-                                                               VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
+   #echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
+   #                                                           VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
    #echo -e "\n- Naujos VM Brige su LANu:\n"                 ; VBoxManage modifyvm ${VM0} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
     echo -e "\n- Naujos VM OAM tinklas:\n"                   ; VBoxManage modifyvm ${VM0} --nic2 hostonly --hostonlyadapter2 "${IF_HOSTONLY}"
     echo -e "\n- Naujos VM papildyta tinklo konfigūracija:\n"; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
@@ -136,7 +137,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
-    echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
-    echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
+   #echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
+   #echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą

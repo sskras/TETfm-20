@@ -1,45 +1,48 @@
-Script started on 2022-02-03 16:30:28+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
+Script started on 2022-02-03 17:06:58+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
 
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
-/dev/sda1: recovering journal
-/dev/sda1: Clearing orphaned inode 13502899 (uid=125, gid=130, mode=0100664, size=400)
-/dev/sda1: clean, 162880/14458880 files, 2820424/57829632 blocks
+/dev/sda1: clean, 165755/14458880 files, 2837204/57829632 blocks
 [[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
+plymouth-start.service
 [[0;32m  OK  [0m] Started [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
-plymouth-start.service
-snap-gnome\x2d3\x2d34\x2d1804-72.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m.
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for bare, revision 5[0m.
-snap-bare-5.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snap-store, revision 547[0m.
-snap-snap\x2dstore-547.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for core18, revision 2128[0m.
+snap-core18-2128.mount
 [[0;32m  OK  [0m] Mounted [0;1;39mMount unit for core18, revision 2284[0m.
 snap-core18-2284.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for core20, revision 1328[0m.
-snap-core20-1328.mount
-snap-core18-2128.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for core18, revision 2128[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for core20, revision 1328[0m.
+snap-core20-1328.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snap-store, revision 547[0m.
+snap-snap\x2dstore-547.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for bare, revision 5[0m.
+snap-bare-5.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m.
+snap-gnome\x2d3\x2d34\x2d1804-77.mount
 [[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snap-store, revision 558[0m.
 snap-snap\x2dstore-558.mount
-snap-gtk\x2dcommon\x2dthemes-1515.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gtk-common-themes, revision 1515[0m.
-snap-gtk\x2dcommon\x2dthemes-1519.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m.
+snap-gnome\x2d3\x2d34\x2d1804-72.mount
 [[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gtk-common-themes, revision 1519[0m.
+snap-gtk\x2dcommon\x2dthemes-1519.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snapd, revision 14549[0m.
+snap-snapd-14549.mount
+[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gtk-common-themes, revision 1515[0m.
+snap-gtk\x2dcommon\x2dthemes-1515.mount
 [[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snapd, revision 12704[0m.
 snap-snapd-12704.mount
-snap-gnome\x2d3\x2d34\x2d1804-77.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m.
-snap-snapd-14549.mount
-[[0;32m  OK  [0m] Mounted [0;1;39mMount unit for snapd, revision 14549[0m.
 [[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
+[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
+         Starting [0;1;39mFile System Check…b2a7-41c1-86cb-9ada240ff9ed[0m...
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+systemd-fsckd.service
 [[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 2[0m.
          Activating swap [0;1;39m/dev/disk/…b4d0-408a-a959-dbce0dfb0bb9[0m...
-[[0;32m  OK  [0m] Found device [0;1;39mVBOX_HARDDISK 3[0m.
-         Starting [0;1;39mFile System Check…b2a7-41c1-86cb-9ada240ff9ed[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…0-b2a7-41c1-86cb-9ada240ff9ed[0m.
+systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
+         Mounting [0;1;39m/home[0m...
 dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart2.swap
 dev-disk-by\x2dpartuuid-38d010a9\x2d02.swap
 dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VBb6ebcaaa\x2d6f3f2eb2\x2dpart2.swap
@@ -47,11 +50,6 @@ dev-sda2.swap
 [[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…6-b4d0-408a-a959-dbce0dfb0bb9[0m.
 dev-disk-by\x2duuid-64f755b6\x2db4d0\x2d408a\x2da959\x2ddbce0dfb0bb9.swap
 [[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
-[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
-systemd-fsckd.service
-systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
-[[0;32m  OK  [0m] Finished [0;1;39mFile System Check…0-b2a7-41c1-86cb-9ada240ff9ed[0m.
-         Mounting [0;1;39m/home[0m...
 [[0;32m  OK  [0m] Mounted [0;1;39m/home[0m.
 home.mount
 [[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
@@ -59,13 +57,13 @@ home.mount
          Starting [0;1;39mSet console font and keymap[0m...
          Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
          Starting [0;1;39mCreate Volatile Files and Directories[0m...
-[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
 [[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
 console-setup.service
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
 systemd-tmpfiles-setup.service
 [[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
          Starting [0;1;39mNetwork Name Resolution[0m...
-         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
          Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
 [[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
 systemd-update-utmp.service
@@ -73,15 +71,15 @@ systemd-update-utmp.service
 [[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
 systemd-timesyncd.service
-[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
-[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
-systemd-resolved.service
 [[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.
 apparmor.service
          Starting [0;1;39mLoad AppArmor pro…managed internally by snapd[0m...
-snapd.apparmor.service
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+systemd-resolved.service
 [[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor pro…s managed internally by snapd[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+snapd.apparmor.service
 [[0;32m  OK  [0m] Started [0;1;39mACPI Events Check[0m.
 [[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
 [[0;32m  OK  [0m] Started [0;1;39mTrigger anacron every hour[0m.
@@ -97,28 +95,28 @@ snapd.apparmor.service
 [[0;32m  OK  [0m] Started [0;1;39mUbuntu Advantage update messaging[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mACPID Listen Socket[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
-         Starting [0;1;39mSocket activation for snappy daemon[0m.
-[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+         Starting [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
 [[0;32m  OK  [0m] Listening on [0;1;39mSocket activation for snappy daemon[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
 [[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
          Starting [0;1;39mAccounts Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
 acpid.service
+[[0;32m  OK  [0m] Started [0;1;39mACPI event daemon[0m.
 [[0;32m  OK  [0m] Started [0;1;39mRun anacron jobs[0m.
 anacron.service
          Starting [0;1;39mLSB: automatic crash report generation[0m...
          Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
-cron.service
 [[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
-[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
-[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+cron.service
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
 cups.service
-dbus.service
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+dbus.service
          Starting [0;1;39mNetwork Manager[0m...
 [[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
 dmesg.service
@@ -141,52 +139,56 @@ irqbalance.service
 [[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
 rsyslog.service
 [[0;32m  OK  [0m] Finished [0;1;39mDetect the availa… deal with any system changes[0m.
-apport.service
-[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
 [[0;32m  OK  [0m] Finished [0;1;39mRecord successful boot for GRUB[0m.
          Starting [0;1;39mGRUB failed boot detection[0m...
+[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
+apport.service
 [[0;32m  OK  [0m] Finished [0;1;39mGRUB failed boot detection[0m.
-[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
-systemd-logind.service
-[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
 wpa_supplicant.service
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+avahi-daemon.service
 [[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
-avahi-daemon.service
 [[0;32m  OK  [0m] Started [0;1;39mMake remote CUPS printers available locally[0m.
 cups-browsed.service
 [[0;32m  OK  [0m] Started [0;1;39mSwitcheroo Control Proxy service[0m.
 switcheroo-control.service
 [[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
 NetworkManager.service
+[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
+systemd-logind.service
+[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
+polkit.service
 [[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39mModem Manager[0m...
          Starting [0;1;39mNetwork Manager Wait Online[0m...
          Starting [0;1;39mSave/Restore Sound Card State[0m...
          Starting [0;1;39mOpenVPN service[0m...
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39mHostname Service[0m...
          Starting [0;1;39mPermit User Sessions[0m...
 [[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
 unattended-upgrades.service
+openvpn.service
 [[0;32m  OK  [0m] Finished [0;1;39mOpenVPN service[0m.
-openvpn.service
-[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
 systemd-user-sessions.service
-[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
-polkit.service
 [[0;32m  OK  [0m] Finished [0;1;39mSave/Restore Sound Card State[0m.
-alsa-restore.service
-[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.
-         Starting [0;1;39mModem Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSound Card[0m.alsa-restore.service
+accounts-daemon.service
+
          Starting [0;1;39mGNOME Display Manager[0m...
          Starting [0;1;39mHold until boot process finishes up[0m...
-         Starting [0;1;39mHostname Service[0m...
-[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
-accounts-daemon.service
-gdm.service
+[[0;32m  OK  [0m] Started [0;1;39mOpenBSD Secure Shell server[0m.
+ssh.service
 [[0;32m  OK  [0m] Started [0;1;39mGNOME Display Manager[0m.
-udisks2.service
+gdm.service
+[[0;32m  OK  [0m] Started [0;1;39mModem Manager[0m.
 ModemManager.service
+udisks2.service
 networkd-dispatcher.service
 systemd-hostnamed.service
-NetworkManager-dispatcher.service
+NetworkManager-dispatcher.service
 run-user-125.mount
 user-runtime-dir@125.service
 NetworkManager-wait-online.service
@@ -195,22 +197,22 @@ kerneloops.service
 user@125.service
 rtkit-daemon.service
 run-user-125-gvfs.mount
-tmp-sanity\x2dmountpoint\x2d818046272.mount
+tmp-sanity\x2dmountpoint\x2d515632613.mount
 snapd.service
-upower.service
 systemd-timedated.service
 snapd.seeded.service
+upower.service
 systemd-localed.service
-packagekit.service
+packagekit.service
 geoclue.service
 fprintd.service
 colord.service
 
-Ubuntu 20.04.3 LTS osboxes ttyS0
+Ubuntu 20.04.3 LTS osboxes ttyS0
 
 osboxes login: osboxes
 osboxes
-Password: osboxes.prg   org
+Password: osboxes.org
 
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
 
@@ -218,207 +220,162 @@ Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-214 updates can be applied immediately.
+213 updates can be applied immediately.
 130 of these updates are standard security updates.
 To see these additional updates run: apt list --upgradable
 
 Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Thu Feb  3 09:37:38 EST 2022 on tty2
+Last login: Thu Feb  3 11:55:48 EST 2022 on ttyS0
 osboxes@osboxes:~$ 
-osboxes@osboxes:~$ apt insta
-apt insta
-[1;31mE: [0mInvalid operation insta[0m
+osboxes@osboxes:~$ ip a
+ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:9f:d0:ed brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86379sec preferred_lft 86379sec
+    inet6 fe80::1537:b746:13de:c69e/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:37:74:d7 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.106/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s8
+       valid_lft 580sec preferred_lft 580sec
+    inet6 fe80::b23d:72c4:cb1c:faf8/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
 osboxes@osboxes:~$ 
-osboxes@osboxes:~$ sudo apt install openssh-sr erver
-sudo apt install openssh-server
+osboxes@osboxes:~$ sudo apt updatge
+sudo apt updatge
 [sudo] password for osboxes: 
-Sorry, try again.
-[sudo] password for osboxes: osboxes.org
+osboSorry, try again.
+[sudo] password for osboxes: xes.org
 
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+[1;31mE: [0mInvalid operation updatge[0m
+osboxes@osboxes:~$ sudo apt update
+sudo apt update
+[33m0% [Working][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to banjo.canonical.com] [Connecting to security.ubuntu.com][0m[33m                                                                          0% [Waiting for headers] [Connecting to security.ubuntu.com][0m                                                            Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+[33m                                                            0% [Connecting to security.ubuntu.com][0m                                      Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+[33m0% [2 InRelease 14.0 kB/114 kB 12%] [Connecting to security.ubuntu.com][0m[33m0% [2 InRelease 42.6 kB/114 kB 37%] [Connecting to security.ubuntu.com][0m[33m                                                                       0% [Connecting to security.ubuntu.com][0m                                      Get:3 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+[33m0% [3 InRelease 6,204 B/108 kB 6%] [Connecting to security.ubuntu.com][0m[33m0% [3 InRelease 64.1 kB/108 kB 59%] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                            19.7 kB/s 34s[0m                                                                               Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [282 kB]
+[33m                                                                               0% [4 Components-amd64 7,591 B/282 kB 3%] [Connecting to security.ubuntu.com][0m[33m0% [4 Components-amd64 15.4 kB/282 kB 5%] [Connecting to security.ubuntu.com][0m[33m0% [4 Components-amd64 79.1 kB/282 kB 28%] [Connecting to security.ubuntu.com][0m[33m                                                                              0% [4 Components-amd64 222 kB/282 kB 79%] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                            19.7 kB/s 21s[0m                                                                               Get:5 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.7 kB]
+[33m                                                                               0% [5 Commands-amd64 8,936 B/14.7 kB 61%] [Connecting to security.ubuntu.com][0m[33m0% [4 Components-amd64 store 0 B] [5 Commands-amd64 11.5 kB/14.7 kB 78%] [Conne[0m                                                                               Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [364 kB]
+[33m0% [4 Components-amd64 store 0 B] [6 Components-amd64 14.8 kB/364 kB 4%] [Conne[0m[33m                                                                               0% [6 Components-amd64 79.2 kB/364 kB 22%] [Connecting to security.ubuntu.com][0m[33m0% [5 Commands-amd64 store 0 B] [6 Components-amd64 79.2 kB/364 kB 22%] [Connec[0m[33m                                                                               0% [6 Components-amd64 81.8 kB/364 kB 22%] [Connecting to security.ubuntu.com][0m[33m                                                                              0% [6 Components-amd64 311 kB/364 kB 86%] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 2s[0m[33m                                                                               0% [6 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m                                                                     Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.0 kB]
+[33m0% [6 Components-amd64 store 0 B] [7 Commands-amd64 1,700 B/20.0 kB 8%] [Connec[0m[33m                                                                               0% [6 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m                                                                     Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+[33m0% [6 Components-amd64 store 0 B] [8 Components-amd64 940 B/940 B 100%] [Connec[0m[33m                                                                               0% [6 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m                                                                     Get:9 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,984 B]
+[33m0% [6 Components-amd64 store 0 B] [9 Components-amd64 0 B/7,984 B 0%] [Connecti[0m[33m0% [6 Components-amd64 store 0 B] [Waiting for headers] [Connecting to security[0m                                                                               Get:10 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [12.0 kB]
+[33m0% [6 Components-amd64 store 0 B] [10 Components-amd64 751 B/12.0 kB 6%] [Conne[0m[33m                                                                               0% [6 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m                                                                               0% [7 Commands-amd64 store 0 B] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m                                                                               0% [8 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m                                                                               0% [9 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m                                                                               0% [10 Components-amd64 store 0 B] [Connecting to security.ubuntu.com][0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                             19.7 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                              127 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                              127 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                              127 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                              127 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                              127 kB/s 0s[0m[33m0% [Connecting to security.ubuntu.com]                              127 kB/s 0s[0m                                                                               Err:11 http://security.ubuntu.com/ubuntu focal-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+[33m100% [Working]                                                      127 kB/s 0s[0m                                                                               Fetched 924 kB in 15s (60.3 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 23%Reading package lists... 34%Reading package lists... 34%Reading package lists... 49%Reading package lists... 49%Reading package lists... 50%Reading package lists... 63%Reading package lists... 63%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 64%Reading package lists... 69%Reading package lists... 69%Reading package lists... 70%Reading package lists... 70%Reading package lists... 73%Reading package lists... 73%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 77%Reading package lists... 77%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 82%Reading package lists... 82%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 87%Reading package lists... 87%Reading package lists... 88%Reading package lists... 88%Reading package lists... 90%Reading package lists... 90%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 96%Reading package lists... 96%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
 Reading state information... 0%Reading state information... 0%Reading state information... Done
-The following additional packages will be installed:
-  ncurses-term openssh-client openssh-sftp-server ssh-import-id
-Suggested packages:
-  keychain libpam-ssh monkeysphere ssh-askpass molly-guard
-The following NEW packages will be installed:
-  ncurses-term openssh-server openssh-sftp-server ssh-import-id
-The following packages will be upgraded:
-  openssh-client
-1 upgraded, 4 newly installed, 0 to remove and 207 not upgraded.
-Need to get 1,359 kB of archives.
-After this operation, 6,010 kB of additional disk space will be used.
-Do you want to continue? [Y/n] 
-
-
-[33m0% [Working][0m            Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-client amd64 1:8.2p1-4ubuntu0.4 [671 kB]
-[33m1% [1 openssh-client 12.7 kB/671 kB 2%][0m[33m9% [1 openssh-client 152 kB/671 kB 23%][0m[33m24% [1 openssh-client 400 kB/671 kB 60%][0m[33m37% [1 openssh-client 624 kB/671 kB 93%][0m[33m                                        44% [Working][0m             Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
-[33m44% [2 ncurses-term 4,096 B/249 kB 2%][0m[33m                                      62% [Working][0m             Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.4 [51.5 kB]
-[33m62% [3 openssh-sftp-server 0 B/51.5 kB 0%][0m[33m                                          69% [Waiting for headers][0m                         Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.4 [377 kB]
-[33m70% [4 openssh-server 6,509 B/377 kB 2%][0m[33m83% [4 openssh-server 228 kB/377 kB 61%][0m[33m                                        95% [Working][0m             Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]
-[33m95% [5 ssh-import-id 0 B/10.0 kB 0%][0m[33m                                    100% [Working][0m              Fetched 1,359 kB in 4s (379 kB/s)
-Preconfiguring packages ...
-
-7[0;23r8[1A(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 145751 files and directories currently installed.)
-Preparing to unpack .../openssh-client_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [  5%][49m[39m [##........................................................] 8Unpacking openssh-client (1:8.2p1-4ubuntu0.4) over (1:8.2p1-4ubuntu0.3) ...
-7[24;0f[42m[30mProgress: [ 10%][49m[39m [#####.....................................................] 8Selecting previously unselected package ncurses-term.
-Preparing to unpack .../ncurses-term_6.2-0ubuntu2_all.deb ...
-7[24;0f[42m[30mProgress: [ 14%][49m[39m [########..................................................] 8Unpacking ncurses-term (6.2-0ubuntu2) ...
-7[24;0f[42m[30mProgress: [ 19%][49m[39m [###########...............................................] 8Selecting previously unselected package openssh-sftp-server.
-Preparing to unpack .../openssh-sftp-server_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-7[24;0f[42m[30mProgress: [ 24%][49m[39m [#############.............................................] 8Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
-7[24;0f[42m[30mProgress: [ 29%][49m[39m [################..........................................] 8Selecting previously unselected package openssh-server.
-Preparing to unpack .../openssh-server_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-7[24;0f[42m[30mProgress: [ 33%][49m[39m [###################.......................................] 8Unpacking openssh-server (1:8.2p1-4ubuntu0.4) ...
-7[24;0f[42m[30mProgress: [ 38%][49m[39m [######################....................................] 8Selecting previously unselected package ssh-import-id.
-Preparing to unpack .../ssh-import-id_5.10-0ubuntu1_all.deb ...
-7[24;0f[42m[30mProgress: [ 43%][49m[39m [########################..................................] 8Unpacking ssh-import-id (5.10-0ubuntu1) ...
-7[24;0f[42m[30mProgress: [ 48%][49m[39m [###########################...............................] 8Setting up openssh-client (1:8.2p1-4ubuntu0.4) ...
-7[24;0f[42m[30mProgress: [ 52%][49m[39m [##############################............................] 87[24;0f[42m[30mProgress: [ 57%][49m[39m [#################################.........................] 8Setting up ssh-import-id (5.10-0ubuntu1) ...
-7[24;0f[42m[30mProgress: [ 62%][49m[39m [###################################.......................] 8Attempting to convert /etc/ssh/ssh_import_id
-7[24;0f[42m[30mProgress: [ 67%][49m[39m [######################################....................] 8Setting up ncurses-term (6.2-0ubuntu2) ...
-7[24;0f[42m[30mProgress: [ 71%][49m[39m [#########################################.................] 87[24;0f[42m[30mProgress: [ 76%][49m[39m [############################################..............] 8Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
-7[24;0f[42m[30mProgress: [ 81%][49m[39m [##############################################............] 87[24;0f[42m[30mProgress: [ 86%][49m[39m [#################################################.........] 8Setting up openssh-server (1:8.2p1-4ubuntu0.4) ...
-7[24;0f[42m[30mProgress: [ 90%][49m[39m [####################################################......] 8
-Creating config file /etc/ssh/sshd_config with new version
-Creating SSH2 RSA key; this may take some time ...
-3072 SHA256:X8DRHRLi784gX0H4nnXZs7OlPcVphs2HplawJW+XiZI root@osboxes (RSA)
-Creating SSH2 ECDSA key; this may take some time ...
-256 SHA256:9Vj1sY7UaK6aLiR+v4ukLdMw6NLERkMLpF9Qklt8mNI root@osboxes (ECDSA)
-Creating SSH2 ED25519 key; this may take some time ...
-256 SHA256:+0EUOYVs2bCjFuy5UIRekNOe04IeiUKtWXQ9WBisgM4 root@osboxes (ED25519)
-Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
-Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
-rescue-ssh.target is a disabled or a static unit, not starting it.
-7[24;0f[42m[30mProgress: [ 95%][49m[39m [#######################################################...] 8Processing triggers for systemd (245.4-4ubuntu3.11) ...
-Processing triggers for man-db (2.9.1-1) ...
-Processing triggers for ufw (0.36-6) ...
-
-7[0;24r8[1A[Josboxes@osboxes:~$ ip r
-ip r
-default via 10.1.1.1 dev enp0s3 proto dhcp metric 100 
-10.1.1.0/24 dev enp0s3 proto kernel scope link src 10.1.1.8 metric 100 
-169.254.0.0/16 dev enp0s8 scope link metric 1000 
-192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.103 metric 101 
+207 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[1;33mW: [0mFailed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'[0m
+[1;33mW: [0mSome index files failed to download. They have been ignored, or old ones used instead.[0m
 osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
+osboxes@osboxes:~$ sudo poweroff
+sudo poweroff
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Power Off Screen[0m.
+plymouth-poweroff.service
+[[0;32m  OK  [0m] Stopped [0;1;39mLogin Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 125[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
+         Stopping [0;1;39mUser Runtime Directory /run/user/125[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/125[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/125[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 125[0m.
+         Stopping [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…s to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mACPI Events Check[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mACPID Listen Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSocket activation for snappy daemon[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSyslog Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mUUID daemon activation socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+         Deactivating swap [0;1;39m/dev/dis…K_VBb6ebcaaa-6f3f2eb2-part2[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…/pci-0000:00:0d.0-ata-1-part2[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk/by-partuuid/38d010a9-02[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…ISK_VBb6ebcaaa-6f3f2eb2-part2[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/sda2[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/dev/disk…6-b4d0-408a-a959-dbce0dfb0bb9[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+         Unmounting [0;1;39m/home[0m...
+         Unmounting [0;1;39mMount unit for bare, revision 5[0m...
+         Unmounting [0;1;39mMount unit for core18, revision 2128[0m...
+         Unmounting [0;1;39mMount unit for core18, revision 2284[0m...
+         Unmounting [0;1;39mMount unit for core20, revision 1328[0m...
+         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m...
+         Unmounting [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m...
+         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1515[0m...
+         Unmounting [0;1;39mMount unit for …ommon-themes, revision 1519[0m...
+         Unmounting [0;1;39mMount unit for snap-store, revision 547[0m...
+         Unmounting [0;1;39mMount unit for snap-store, revision 558[0m...
+         Unmounting [0;1;39mMount unit for snapd, revision 12704[0m...
+         Unmounting [0;1;39mMount unit for snapd, revision 14549[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/home[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2284[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …0-b2a7-41c1-86cb-9ada240ff9ed[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core20, revision 1328[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for bare, revision 5[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for core18, revision 2128[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 72[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for gnome-3-34-1804, revision 77[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1519[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for g…-common-themes, revision 1515[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 547[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snap-store, revision 558[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 12704[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39mMount unit for snapd, revision 14549[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPower-Off[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPower-Off[0m.
+[   87.131495] reboot: Power down
+Connection closed by foreign host.
 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ reset
-reset
-[?3l[?7h[>[?1l F[?4l
-[3g
-H        H        H        H        H        H        H        H        H        H        H        H        H        H        H        H
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ce lear
-clear
-[H[Josboxes@osboxes:~$ 
-osboxes@osboxes:~$ ip r
-ip r
-default via 10.1.1.1 dev enp0s3 proto dhcp metric 100 
-10.1.1.0/24 dev enp0s3 proto kernel scope link src 10.1.1.8 metric 100 
-169.254.0.0/16 dev enp0s8 scope link metric 1000 
-192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.103 metric 101 
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ netstat --inet -enp
-netstat --inet -enp
-
-Command 'netstat' not found, but can be installed with:
-
-sudo apt install net-tools
-
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ ss -h
-ss -h
-Usage: ss [ OPTIONS ]
-       ss [ OPTIONS ] [ FILTER ]
-   -h, --help          this message
-   -V, --version       output version information
-   -n, --numeric       don't resolve service names
-   -r, --resolve       resolve host names
-   -a, --all           display all sockets
-   -l, --listening     display listening sockets
-   -o, --options       show timer information
-   -e, --extended      show detailed socket information
-   -m, --memory        show socket memory usage
-   -p, --processes     show process using socket
-   -i, --info          show internal TCP information
-       --tipcinfo      show internal tipc socket information
-   -s, --summary       show socket usage summary
-       --tos           show tos and priority information
-   -b, --bpf           show bpf filter socket information
-   -E, --events        continually display sockets as they are destroyed
-   -Z, --context       display process SELinux security contexts
-   -z, --contexts      display process and socket SELinux security contexts
-   -N, --net           switch to the specified network namespace name
-
-   -4, --ipv4          display only IP version 4 sockets
-   -6, --ipv6          display only IP version 6 sockets
-   -0, --packet        display PACKET sockets
-   -t, --tcp           display only TCP sockets
-   -S, --sctp          display only SCTP sockets
-   -u, --udp           display only UDP sockets
-   -d, --dccp          display only DCCP sockets
-   -w, --raw           display only RAW sockets
-   -x, --unix          display only Unix domain sockets
-       --tipc          display only TIPC sockets
-       --vsock         display only vsock sockets
-   -f, --family=FAMILY display sockets of type FAMILY
-       FAMILY := {inet|inet6|link|unix|netlink|vsock|tipc|xdp|help}
-
-   -K, --kill          forcibly close sockets, display what was closed
-   -H, --no-header     Suppress header line
-   -O, --oneline       socket's data printed on a single line
-
-   -A, --query=QUERY, --socket=QUERY
-       QUERY := {all|inet|tcp|udp|raw|unix|unix_dgram|unix_stream|unix_seqpacket|packet|netlink|vsock_stream|vsock_dgram|tipc}[,QUERY]
-
-   -D, --diag=FILE     Dump raw information about TCP sockets to FILE
-   -F, --filter=FILE   read filter information from FILE
-       FILTER := [ state STATE-FILTER ] [ EXPRESSION ]
-       STATE-FILTER := {all|connected|synchronized|bucket|big|TCP-STATES}
-         TCP-STATES := {established|syn-sent|syn-recv|fin-wait-{1,2}|time-wait|closed|close-wait|last-ack|listening|closing}
-          connected := {established|syn-sent|syn-recv|fin-wait-{1,2}|time-wait|close-wait|last-ack|closing}
-       synchronized := {established|syn-recv|fin-wait-{1,2}|time-wait|close-wait|last-ack|closing}
-             bucket := {syn-recv|time-wait}
-                big := {established|syn-sent|fin-wait-{1,2}|closed|close-wait|last-ack|listening|closing}
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ tty -a
-tty -a
-tty: invalid option -- 'a'
-Try 'tty --help' for more information.
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ stty -a
-stty -a
-speed 115200 baud; rows 24; columns 80; line = 0;
-intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>;
-eol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;
-werase = ^W; lnext = ^V; discard = ^O; min = 1; time = 0;
--parenb -parodd -cmspar cs8 hupcl -cstopb cread -clocal -crtscts
--ignbrk brkint ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff
--iuclc -ixany imaxbel iutf8
-opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
-isig icanon -iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
-echoctl echoke -flusho -extproc
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ sudo poweroff             ss -l4
-ss -l4
-Netid State   Recv-Q  Send-Q   Local Address:Port     Peer Address:Port Process 
-udp   UNCONN  0       0              0.0.0.0:38945         0.0.0.0:*            
-udp   UNCONN  0       0        127.0.0.53%lo:domain        0.0.0.0:*            
-udp   UNCONN  0       0              0.0.0.0:631           0.0.0.0:*            
-udp   UNCONN  0       0              0.0.0.0:mdns          0.0.0.0:*            
-tcp   LISTEN  0       4096     127.0.0.53%lo:domain        0.0.0.0:*            
-tcp   LISTEN  0       128            0.0.0.0:ssh           0.0.0.0:*            
-tcp   LISTEN  0       5            127.0.0.1:ipp           0.0.0.0:*            
-osboxes@osboxes:~$ 
-osboxes@osboxes:~$ 
-telnet> 
-Connection closed.
-
-Script done on 2022-02-03 16:33:38+02:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2022-02-03 17:08:26+02:00 [COMMAND_EXIT_CODE="0"]
