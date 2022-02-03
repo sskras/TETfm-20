@@ -10,6 +10,8 @@ PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 
+IF_HOST_UPLINK="Intel(R) Dual Band Wireless-AC 8260"        # Interfeisas neribotam ryšiui
+IF_HOSTONLY="VirtualBox Host-Only Ethernet Adapter"         # Interfeisas, kuriuo vyks VMų OAM (Operation, Administration, Maintenance)
 NAT_NET_ADDR="10.1.1.0/24"                                  # Potinklis, kuriame veiks aplikacija
 NAT_NET_NAME="NAT-network-APP"                              # Potinklio vardas
 
@@ -23,7 +25,7 @@ VM_CPUS=2                                                   # VM CPU skaičius
 VM_RAM=1024                                                 # VM RAM apimtis
 VM0="VGTU-2022-DeKo-saukrs-LDVM0"                           # Bendros VM vardas
 
-VDI_URL="https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.3/Desktop/64bit.7z/download"
+VDI_URL="https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.3/Desktop/64bit.7z/download?use_mirror=netix"
 VDI_ZIP="Ubuntu-20.04.3-Desktop-64bit.7z"
 
 
@@ -115,6 +117,8 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM tinklo konfigūracija:\n"          ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
     echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
                                                                VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
+   #echo -e "\n- Naujos VM Brige su LANu:\n"                 ; VBoxManage modifyvm ${VM0} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
+    echo -e "\n- Naujos VM OAM tinklas:\n"                   ; VBoxManage modifyvm ${VM0} --nic2 hostonly --hostonlyadapter2 "${IF_HOSTONLY}"
     echo -e "\n- Naujos VM papildyta tinklo konfigūracija:\n"; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
 
     echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}

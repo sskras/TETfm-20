@@ -25,12 +25,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 5849d9c4-0c8c-4225-a564-03f4e9c8e4df
+UUID: 36b64247-5490-4aec-8e1c-f68047c223d0
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {5849d9c4-0c8c-4225-a564-03f4e9c8e4df}
+"VGTU-2022-DeKo-saukrs-LDVM0" {36b64247-5490-4aec-8e1c-f68047c223d0}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -66,15 +66,19 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027460DB6, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800277FA9BA, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 
 - Naujos VM naujas NAT potinklis:
 
 
+- Naujos VM OAM tinklas:
+
+
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027460DB6, Attachment: NAT Network 'NAT-network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800277FA9BA, Attachment: NAT Network 'NAT-network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 08002714DA3B, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM Serial konsolė:
 
