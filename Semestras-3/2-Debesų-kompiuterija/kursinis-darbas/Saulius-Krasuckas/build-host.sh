@@ -5,8 +5,6 @@
 # Kopijuosiu skripto dalis iš praėjusio semestro IiSA laboratorinių darbų:
 # https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh
 
-PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
-
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
 
@@ -83,6 +81,21 @@ function VBox_get_OAM_IP () {
 
 
 echo "$(basename $0): Startuojama infrastruktūra"
+
+   # Jei Windows, papildau PATH į VBoxManage.exe dirą.
+   # Taip pat primapinu Windows jūzerio VirtualBox subdirą prie MSYS2 jūzerio home-diros:
+
+    if [[ $(uname -o) == "Msys" ]]; then
+
+        if [ ! -x "(shell command -v VBoxManage)" ]; then
+            PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
+        fi
+
+    if [ ! -d ~/.VirtualBox ]; then
+            env MSYS=winsymlinks:nativestrict sudo ln -s /C/Users/saukrs/.VirtualBox ~/
+        fi
+    fi
+
 
    #TODO: įprastinių GUI įspėjimų (Baloon) išjungimas, http://www.edugeek.net/forums/thin-client-virtual-machines/192994-virtualbox-3.html#33
    #
