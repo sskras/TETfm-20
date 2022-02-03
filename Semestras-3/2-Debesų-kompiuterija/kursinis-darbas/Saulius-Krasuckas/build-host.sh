@@ -34,7 +34,7 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvest�
 
 
 VBox_setup_serial_console () {
-    echo
+
     echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>"
     echo "Kartokite <Esc> paspaudimus be perstojo."
     echo "Kai pasirodys GRUB meniu, spauskite <e>"
@@ -61,7 +61,9 @@ VBox_setup_serial_console () {
     echo
     echo " $ sudo apt install openssh-server"
     echo
-    echo "... ir su Ctrl-] atsijunkite su Serial konsolės."
+    echo "... ir su ^] + ^D atsijunkite su Serial konsolės."
+    echo
+    echo -n "<Enter> ?"
 
     read
 
@@ -154,11 +156,11 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
                                                                VBoxManage showvminfo ${VM0} | grep "UART"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
-    echo -e "\n- Naujos VM konsolės logas:\n"                ; VBox_setup_serial_console ${VM0}
+    echo -e "\n- Naujos VM tvarkymas konsolėje:\n"           ; VBox_setup_serial_console ${VM0}
 
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo $OAM_IP
-    echo -e "\n- Naujos VM setupas per SSH:\n"               ; ssh osboxes@${OAM_IP}
-
+    echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${OAM_IP}
+                                                               ssh osboxes@${OAM_IP}
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
