@@ -15,7 +15,7 @@ Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 Storage format: VDI
 Format variant: dynamic default
 Capacity:       512000 MBytes
-Size on disk:   9302 MBytes
+Size on disk:   8006 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
 
@@ -25,12 +25,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 75b6ea51-4250-4ee4-bd48-baf5b30e73e5
+UUID: de6244d6-3053-4675-b141-b7402322e9a6
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {75b6ea51-4250-4ee4-bd48-baf5b30e73e5}
+"VGTU-2022-DeKo-saukrs-LDVM0" {de6244d6-3053-4675-b141-b7402322e9a6}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -59,6 +59,9 @@ Storage Controller Bootable (0):        on
 
 - Naujai VM prijungiu disko ataizdį:
 
+UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
+State:          created
+In use by VMs:  VGTU-2022-DeKo-saukrs-LDVM0 (UUID: de6244d6-3053-4675-b141-b7402322e9a6)
 
 - Naujos VM diskų valdiklio konfigūracija:
 
@@ -66,7 +69,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800275F6B33, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002778A883, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 
 - Naujos VM OAM tinklas:
@@ -74,9 +77,9 @@ NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, re
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800275F6B33, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 08002778A883, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 080027465E73, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 08002715CA9C, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM Serial konsolė:
 
@@ -133,55 +136,41 @@ Connection closed.
 
 - Naujos VM OAM IP:
 
-192.168.56.130
+
 
 - Naujos VM tvarkymas per SSH:
 
 /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/saukrs/.ssh/id_rsa.pub"
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
-/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
 
-Number of key(s) added: 1
+/usr/bin/ssh-copy-id: ERROR: ssh: connect to host  port 22: Connection refused
 
-Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'osboxes@192.168.56.130'"
-and check to make sure that only the key(s) you wanted were added.
-
-Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-213 updates can be applied immediately.
-130 of these updates are standard security updates.
-To see these additional updates run: apt list --upgradable
-
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Thu Feb  3 15:44:53 2022 from 192.168.56.1
-]0;osboxes@osboxes: ~osboxes@osboxes:~$ w
- 15:47:23 up 1 min,  1 user,  load average: 0.48, 0.22, 0.08
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-osboxes  pts/0    192.168.56.1     15:46    1.00s  0.11s  0.02s w
-]0;osboxes@osboxes: ~osboxes@osboxes:~$ sudo poweroff
-[sudo] password for osboxes: 
-Connection to 192.168.56.130 closed by remote host.
-Connection to 192.168.56.130 closed.
+ssh: connect to host  port 22: Connection refused
 
 ! VM po <Enter> bus išjungta ir ištrinta:
+- Naujos VM sisteminis diskas:
+
+UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
+State:          locked write
+Type:           normal (base)
+Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
+In use by VMs:  VGTU-2022-DeKo-saukrs-LDVM0 (UUID: de6244d6-3053-4675-b141-b7402322e9a6)
+
 - Naujos VM išjungimas:
 
-VBoxManage.exe: error: Invalid machine state: PoweredOff (must be Running, Paused or Stuck)
-VBoxManage.exe: error: Details: code VBOX_E_INVALID_VM_STATE (0x80bb0002), component ConsoleWrap, interface IConsole, callee IUnknown
-VBoxManage.exe: error: Context: "PowerDown(progress.asOutParam())" at line 619 of file VBoxManageControlVM.cpp
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+
+- Nuo VM atjungiamas sisteminis diskas:
+
+UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
+State:          created
+Type:           normal (base)
+Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
 
 - Trinu naują VM:
 
-removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBox.log'
-removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBoxHardening.log'
-removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs'
-removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/VGTU-2022-DeKo-saukrs-LDVM0.vbox'
-removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/VGTU-2022-DeKo-saukrs-LDVM0.vbox-prev'
-removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0'
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+rm: cannot remove '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0': No such file or directory
 
 - Galutinės VM:
 

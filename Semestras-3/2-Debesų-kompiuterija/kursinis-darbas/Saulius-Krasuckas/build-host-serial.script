@@ -1,4 +1,4 @@
-Script started on 2022-02-03 22:46:13+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
+Script started on 2022-02-04 00:02:21+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="189" LINES="52"]
 
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
@@ -7,4 +7,4 @@ Escape character is '^]'.
 telnet> 
 Connection closed.
 
-Script done on 2022-02-03 22:46:29+02:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2022-02-04 00:02:22+02:00 [COMMAND_EXIT_CODE="0"]
