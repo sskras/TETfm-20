@@ -15,7 +15,7 @@ Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 Storage format: VDI
 Format variant: dynamic default
 Capacity:       512000 MBytes
-Size on disk:   9244 MBytes
+Size on disk:   9302 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
 
@@ -25,12 +25,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 0cd66e3c-98de-4dd1-b221-e91915e80cea
+UUID: 75b6ea51-4250-4ee4-bd48-baf5b30e73e5
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {0cd66e3c-98de-4dd1-b221-e91915e80cea}
+"VGTU-2022-DeKo-saukrs-LDVM0" {75b6ea51-4250-4ee4-bd48-baf5b30e73e5}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -66,7 +66,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027D47242, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800275F6B33, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 
 - Naujos VM OAM tinklas:
@@ -74,9 +74,9 @@ NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, re
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027D47242, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800275F6B33, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 0800276523E5, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 080027465E73, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM Serial konsolė:
 
@@ -133,7 +133,7 @@ Connection closed.
 
 - Naujos VM OAM IP:
 
-192.168.56.123
+192.168.56.130
 
 - Naujos VM tvarkymas per SSH:
 
@@ -143,7 +143,7 @@ Connection closed.
 
 Number of key(s) added: 1
 
-Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'osboxes@192.168.56.123'"
+Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'osboxes@192.168.56.130'"
 and check to make sure that only the key(s) you wanted were added.
 
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
@@ -157,22 +157,22 @@ Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-27-generic x86_64)
 To see these additional updates run: apt list --upgradable
 
 Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Thu Feb  3 15:03:51 2022 from 192.168.56.1
-]0;osboxes@osboxes: ~osboxes@osboxes:~$ s[Kid
-uid=1000(osboxes) gid=1000(osboxes) groups=1000(osboxes),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+Last login: Thu Feb  3 15:44:53 2022 from 192.168.56.1
 ]0;osboxes@osboxes: ~osboxes@osboxes:~$ w
- 17:05:02 up 0 min,  1 user,  load average: 1.14, 0.31, 0.10
+ 15:47:23 up 1 min,  1 user,  load average: 0.48, 0.22, 0.08
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-osboxes  pts/0    192.168.56.1     17:04    6.00s  0.10s  0.00s w
+osboxes  pts/0    192.168.56.1     15:46    1.00s  0.11s  0.02s w
 ]0;osboxes@osboxes: ~osboxes@osboxes:~$ sudo poweroff
 [sudo] password for osboxes: 
-Connection to 192.168.56.123 closed by remote host.
-Connection to 192.168.56.123 closed.
+Connection to 192.168.56.130 closed by remote host.
+Connection to 192.168.56.130 closed.
 
 ! VM po <Enter> bus išjungta ir ištrinta:
 - Naujos VM išjungimas:
 
-VBoxManage.exe: error: Machine 'VGTU-2022-DeKo-saukrs-LDVM0' is not currently running
+VBoxManage.exe: error: Invalid machine state: PoweredOff (must be Running, Paused or Stuck)
+VBoxManage.exe: error: Details: code VBOX_E_INVALID_VM_STATE (0x80bb0002), component ConsoleWrap, interface IConsole, callee IUnknown
+VBoxManage.exe: error: Context: "PowerDown(progress.asOutParam())" at line 619 of file VBoxManageControlVM.cpp
 
 - Trinu naują VM:
 
