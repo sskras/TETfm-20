@@ -73,6 +73,15 @@ VBox_setup_serial_console () {
 }
 
 
+function VBox_get_OAM_IP () {
+    VBoxManage showvminfo $1 \
+        | awk 'BEGIN {FS="[ ,]+"} /NIC 2:/ {print tolower($4)}' \
+	| read MAC
+    cat /C/Users/saukrs/.VirtualBox/*.leases \
+        | awk 'BEGIN {FS="\""} /'$MAC'/ {GO=1; MAC_AT=NR} GO && NR == MAC_AT+1 {print $2}'
+}
+
+
 echo "$(basename $0): Startuojama infrastruktūra"
 
    #TODO: įprastinių GUI įspėjimų (Baloon) išjungimas, http://www.edugeek.net/forums/thin-client-virtual-machines/192994-virtualbox-3.html#33
@@ -127,6 +136,8 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
     echo -e "\n- Naujos VM konsolės logas:\n"                ; VBox_setup_serial_console ${VM0}
+
+    echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo $OAM_IP
 
     echo -e "\n! Po <Enter> ji bus išjungta ir ištrinta:"    ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
