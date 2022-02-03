@@ -56,7 +56,12 @@ VBox_setup_serial_console () {
     echo "Iškart persijunkite čia (atgal į CLI)."
     echo "Spauskite <Enter>"
     echo
-    echo "Prisijungsite prie Serial konsolės:"
+    echo "Būsite prijungti prie Serial konsolės."
+    echo "Tuomet įsijunkite į OS, paleiskite:"
+    echo
+    echo " $ sudo apt install openssh-server"
+    echo
+    echo "... ir su Ctrl-] atsijunkite su Serial konsolės."
 
     read
 
@@ -79,8 +84,9 @@ function VBox_get_OAM_IP () {
         | awk 'BEGIN {FS="\""} /'$MAC'/ {GO=1; MAC_AT=NR} GO && NR == MAC_AT+1 {print $2}'
 }
 
+# Pradžia:
 
-echo "$(basename $0): Startuojama infrastruktūra"
+echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
 
    # Jei Windows, papildau PATH į VBoxManage.exe dirą.
    # Taip pat primapinu Windows jūzerio VirtualBox subdirą prie MSYS2 jūzerio home-diros:
@@ -151,8 +157,9 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM konsolės logas:\n"                ; VBox_setup_serial_console ${VM0}
 
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo $OAM_IP
+    echo -e "\n- Naujos VM setupas per SSH:\n"               ; ssh osboxes@${OAM_IP}
 
-    echo -e "\n! Po <Enter> ji bus išjungta ir ištrinta:"    ; read
+    echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
 
