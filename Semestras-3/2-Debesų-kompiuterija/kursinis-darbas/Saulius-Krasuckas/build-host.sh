@@ -159,7 +159,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
     echo -e "\n- Naujos VM tvarkymas konsolėje:\n"           ; VBox_setup_serial_console ${VM0}
 
-    echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo $OAM_IP
+    echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
 
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
@@ -171,8 +171,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
                                                                VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
                                                                VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
 
-    echo -e "\n- Trinu naują VM:\n"                          # VBoxManage unregistervm ${VM0} --delete
-                                                               VBoxManage unregistervm ${VM0} --delete
+    echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
