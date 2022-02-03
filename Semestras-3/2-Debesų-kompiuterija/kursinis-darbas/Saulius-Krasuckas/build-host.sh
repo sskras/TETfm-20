@@ -35,6 +35,9 @@ exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvest�
 
 VBox_setup_serial_console () {
 
+    export LINES COLUMNS
+    stty size | read LINES COLUMNS
+
     echo "VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>"
     echo "Kartokite <Esc> paspaudimus be perstojo."
     echo "Kai pasirodys GRUB meniu, spauskite <e>"
@@ -59,6 +62,8 @@ VBox_setup_serial_console () {
     echo "Būsite prijungti prie Serial konsolės."
     echo "Tuomet įsijunkite į OS, paleiskite:"
     echo
+    echo " $ stty rows $LINES columns $COLUMNS"
+    echo " $ sudo apt update"
     echo " $ sudo apt install openssh-server"
     echo
     echo "... ir su ^] + ^D atsijunkite su Serial konsolės."
@@ -158,12 +163,12 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
     echo -e "\n- Naujos VM tvarkymas konsolėje:\n"           ; VBox_setup_serial_console ${VM0}
-
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
 
-    echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
+
+    echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
 
