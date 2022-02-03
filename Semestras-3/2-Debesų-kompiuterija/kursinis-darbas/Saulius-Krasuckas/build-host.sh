@@ -80,7 +80,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
    #
    #      "C:\Program Files\Oracle\VirtualBox\vboxmanage.exe" setextradata global GUI/SuppressMessages remindAboutAutoCapture,remindAboutMouseIntegrationOn,showRuntimeError.warning.HostAudioNotResponding,remindAboutGoingSeamless,remindAboutInputCapture,remindAboutGoingFullscreen,remindAboutMouseIntegrationOff,confirmGoingSeamless,confirmInputCapture,remindAboutPausedVMInput,confirmVMReset,confirmGoingFullscreen,remindAboutWrongColorDepth
                                                                cd ${BASE_DIR}/VMs
-    echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP} || (echo "${VDI_ZIP} Parsisiuntimas nepavyko, pabaiga"; exit)
+   #echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP} || { echo "Parsisiųsti \"${VDI_ZIP}\" nepavyko, pabaiga"; exit; }
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
                                                                        | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' \
                                                                        | read VDI_FILE
@@ -94,6 +94,12 @@ echo "$(basename $0): Startuojama infrastruktūra"
                                                                cd - > /dev/null
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
+                                                               VBoxManage showvminfo ${VM0} > /dev/null 2>&1 && \
+                                                               {
+                                                                       echo
+                                                                       echo "VM \"${VM0}\" jau egzistuoja, darbas stabdomas"
+                                                                       exit
+                                                               }
     echo -e "\n- Nauja VM:\n"                                ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
     echo -e "\n- Dabartinės VM:\n"                           ; VBoxManage list vms
 
@@ -119,7 +125,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
 
     echo -e "\n! Po <Enter> ji bus išjungta ir ištrinta:"    ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
-                                                               until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 1
+                                                               until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
 
     echo -e "\n- Trinu naują VM:\n"                          # VBoxManage unregistervm ${VM0} --delete
                                                                VBoxManage unregistervm ${VM0}

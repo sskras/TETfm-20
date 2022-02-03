@@ -1,14 +1,5 @@
 build-host.sh: Startuojama infrastruktūra
 
-- Host OS atvaizdžio parsiuntimas:
-
-** Resuming transfer from byte position 2114987000
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   639    0   639    0     0   1032      0 --:--:-- --:--:-- --:--:--  1032
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   365  100   365    0     0    225      0  0:00:01  0:00:01 --:--:--  1546
-100   835  100   835    0     0    392      0  0:00:02  0:00:02 --:--:--   392
-
 - Host OS atvaizdžio išspaudimas:
 
 x 64bit/
@@ -24,7 +15,7 @@ Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 Storage format: VDI
 Format variant: dynamic default
 Capacity:       512000 MBytes
-Size on disk:   8957 MBytes
+Size on disk:   8966 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
 
@@ -34,12 +25,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 4a1213be-0c07-44e9-b8b6-71f25d085cc6
+UUID: 5849d9c4-0c8c-4225-a564-03f4e9c8e4df
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {4a1213be-0c07-44e9-b8b6-71f25d085cc6}
+"VGTU-2022-DeKo-saukrs-LDVM0" {5849d9c4-0c8c-4225-a564-03f4e9c8e4df}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -75,7 +66,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027EC1844, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027460DB6, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 
 - Naujos VM naujas NAT potinklis:
@@ -83,7 +74,7 @@ NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, re
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027EC1844, Attachment: NAT Network 'NAT-network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027460DB6, Attachment: NAT Network 'NAT-network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM Serial konsolė:
 
@@ -126,29 +117,29 @@ Iškart persijunkite čia (atgal į CLI)
 Prisijungsite prie Serial konsolės:
 
 Trying 127.0.0.1...
-telnet: Unable to connect to remote host: Connection refused
+Connected to 127.0.0.1.
+Escape character is '^]'.
+
+telnet> 
+Connection closed.
 
 ! Po <Enter> ji bus išjungta ir ištrinta:
 
 - Naujos VM išjungimas:
 
-VBoxManage.exe: error: An unexpected process (PID=0x00000104) has tried to lock the machine 'VGTU-2022-DeKo-saukrs-LDVM0', while only the process started by LaunchVMProcess (PID=0x00000740) is allowed
-VBoxManage.exe: error: Details: code E_ACCESSDENIED (0x80070005), component MachineWrap, interface IMachine, callee IUnknown
-VBoxManage.exe: error: Context: "LockMachine(a->session, LockType_Shared)" at line 388 of file VBoxManageControlVM.cpp
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
 - Trinu naują VM:
 
-VBoxManage.exe: error: Cannot unregister the machine 'VGTU-2022-DeKo-saukrs-LDVM0' while it is locked
-VBoxManage.exe: error: Details: code VBOX_E_INVALID_OBJECT_STATE (0x80bb0007), component MachineWrap, interface IMachine, callee IUnknown
-VBoxManage.exe: error: Context: "Unregister(CleanupMode_DetachAllReturnHardDisksOnly, ComSafeArrayAsOutParam(aMedia))" at line 154 of file VBoxManageMisc.cpp
 removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBox.log'
-rm: cannot remove '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBoxHardening.log': Device or resource busy
+removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBoxHardening.log'
+removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs'
 removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/VGTU-2022-DeKo-saukrs-LDVM0.vbox-prev'
+removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0'
 
 - Galutinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {4a1213be-0c07-44e9-b8b6-71f25d085cc6}
 
 - Trinu naują NAT potinklį iš DHCP:
 
