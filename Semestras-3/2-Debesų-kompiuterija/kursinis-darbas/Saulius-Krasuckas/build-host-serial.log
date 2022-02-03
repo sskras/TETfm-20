@@ -1,8 +1,4 @@
 
 Trying 127.0.0.1...
-Connected to 127.0.0.1.
-Escape character is '^]'.
-
-telnet> 
-Connection closed.
+telnet: Unable to connect to remote host: Connection refused
 

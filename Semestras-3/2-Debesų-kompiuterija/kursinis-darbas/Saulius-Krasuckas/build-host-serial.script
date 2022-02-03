@@ -1,10 +1,6 @@
-Script started on 2022-02-03 09:14:32+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
+Script started on 2022-02-03 14:38:43+02:00 [TERM="xterm" TTY="/dev/pty0" COLUMNS="-1" LINES="-1"]
 
 Trying 127.0.0.1...
-Connected to 127.0.0.1.
-Escape character is '^]'.
-
-telnet> 
-Connection closed.
+telnet: Unable to connect to remote host: Connection refused
 
-Script done on 2022-02-03 09:15:06+02:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2022-02-03 14:38:45+02:00 [COMMAND_EXIT_CODE="1"]

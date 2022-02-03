@@ -5,9 +5,9 @@ build-host.sh: Startuojama infrastruktūra
 ** Resuming transfer from byte position 2114987000
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   645    0   645    0     0    458      0 --:--:--  0:00:01 --:--:--   458
-  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   371  100   371    0     0    152      0  0:00:02  0:00:02 --:--:--   420
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   835  100   835    0     0    290      0  0:00:02  0:00:02 --:--:--  2455
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   639    0   639    0     0   1032      0 --:--:-- --:--:-- --:--:--  1032
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   365  100   365    0     0    225      0  0:00:01  0:00:01 --:--:--  1546
+100   835  100   835    0     0    392      0  0:00:02  0:00:02 --:--:--   392
 
 - Host OS atvaizdžio išspaudimas:
 
@@ -24,7 +24,7 @@ Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 Storage format: VDI
 Format variant: dynamic default
 Capacity:       512000 MBytes
-Size on disk:   8745 MBytes
+Size on disk:   8957 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
 
@@ -34,12 +34,12 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 10c5d993-d263-45ba-b98b-3ed33df15058
+UUID: 4a1213be-0c07-44e9-b8b6-71f25d085cc6
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 
 - Dabartinės VM:
 
-"VGTU-2022-DeKo-saukrs-LDVM0" {10c5d993-d263-45ba-b98b-3ed33df15058}
+"VGTU-2022-DeKo-saukrs-LDVM0" {4a1213be-0c07-44e9-b8b6-71f25d085cc6}
 
 - Naujos VM pirminė konfigūracija:
 
@@ -75,7 +75,7 @@ SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800273F50F3, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027EC1844, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
 
 - Naujos VM naujas NAT potinklis:
@@ -83,7 +83,7 @@ NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, re
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800273F50F3, Attachment: NAT Network 'NAT-network-OAM', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027EC1844, Attachment: NAT Network 'NAT-network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM Serial konsolė:
 
@@ -126,29 +126,29 @@ Iškart persijunkite čia (atgal į CLI)
 Prisijungsite prie Serial konsolės:
 
 Trying 127.0.0.1...
-Connected to 127.0.0.1.
-Escape character is '^]'.
-
-telnet> 
-Connection closed.
+telnet: Unable to connect to remote host: Connection refused
 
 ! Po <Enter> ji bus išjungta ir ištrinta:
 
 - Naujos VM išjungimas:
 
-VBoxManage.exe: error: Machine 'VGTU-2022-DeKo-saukrs-LDVM0' is not currently running
+VBoxManage.exe: error: An unexpected process (PID=0x00000104) has tried to lock the machine 'VGTU-2022-DeKo-saukrs-LDVM0', while only the process started by LaunchVMProcess (PID=0x00000740) is allowed
+VBoxManage.exe: error: Details: code E_ACCESSDENIED (0x80070005), component MachineWrap, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "LockMachine(a->session, LockType_Shared)" at line 388 of file VBoxManageControlVM.cpp
 
 - Trinu naują VM:
 
+VBoxManage.exe: error: Cannot unregister the machine 'VGTU-2022-DeKo-saukrs-LDVM0' while it is locked
+VBoxManage.exe: error: Details: code VBOX_E_INVALID_OBJECT_STATE (0x80bb0007), component MachineWrap, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "Unregister(CleanupMode_DetachAllReturnHardDisksOnly, ComSafeArrayAsOutParam(aMedia))" at line 154 of file VBoxManageMisc.cpp
 removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBox.log'
-removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBoxHardening.log'
-removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs'
+rm: cannot remove '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/Logs/VBoxHardening.log': Device or resource busy
 removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/VGTU-2022-DeKo-saukrs-LDVM0.vbox'
 removed '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0/VGTU-2022-DeKo-saukrs-LDVM0.vbox-prev'
-removed directory '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0'
 
 - Galutinės VM:
 
+"VGTU-2022-DeKo-saukrs-LDVM0" {4a1213be-0c07-44e9-b8b6-71f25d085cc6}
 
 - Trinu naują NAT potinklį iš DHCP:
 

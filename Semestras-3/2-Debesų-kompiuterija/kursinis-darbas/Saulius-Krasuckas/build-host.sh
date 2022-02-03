@@ -5,16 +5,19 @@
 # Kopijuosiu skripto dalis iš praėjusio semestro IiSA laboratorinių darbų:
 # https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-2/1-Informacijos-ir-sistem%C5%B3-apsauga/laboratoriniai-darbai/Saulius-Krasuckas/0LD-infra.sh
 
+PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
+
 BASE_DIR=$(builtin cd $(dirname $0); pwd)                   # Darbinė direktorija ten, kur skriptas
 LOG_FILE=${BASE_DIR}/$(basename ${0%.sh}).log               # Log failo vardas pagal skripto vardą (tik pakeičiu plėtinį)
+
+NAT_NET_ADDR="10.1.1.0/24"                                  # Potinklis, kuriame veiks aplikacija
+NAT_NET_NAME="NAT-network-APP"                              # Potinklio vardas
 
 UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų Serial/UART konsolei
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 UART_TCP_PORT="23001"                                       # Host TCP prievadas, skirtas ryšiui su konsole
 UART_I_O_PORT="0x3f8"                                       # VM Serial/UART I/O prievadas (aparatinis)
 UART_IRQ="4"                                                # VM Serial/UART IRQ numeris
-
-PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
 
 VM_CPUS=2                                                   # VM CPU skaičius
 VM_RAM=1024                                                 # VM RAM apimtis
@@ -77,7 +80,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
    #
    #      "C:\Program Files\Oracle\VirtualBox\vboxmanage.exe" setextradata global GUI/SuppressMessages remindAboutAutoCapture,remindAboutMouseIntegrationOn,showRuntimeError.warning.HostAudioNotResponding,remindAboutGoingSeamless,remindAboutInputCapture,remindAboutGoingFullscreen,remindAboutMouseIntegrationOff,confirmGoingSeamless,confirmInputCapture,remindAboutPausedVMInput,confirmVMReset,confirmGoingFullscreen,remindAboutWrongColorDepth
                                                                cd ${BASE_DIR}/VMs
-    echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP}
+    echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP} || (echo "${VDI_ZIP} Parsisiuntimas nepavyko, pabaiga"; exit)
     echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
                                                                        | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' \
                                                                        | read VDI_FILE
@@ -104,8 +107,8 @@ echo "$(basename $0): Startuojama infrastruktūra"
     echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
     echo -e "\n- Naujos VM tinklo konfigūracija:\n"          ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
-    echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "NAT-network-OAM" --network "10.1.1.0/24" --enable
-                                                               VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "NAT-network-OAM"
+    echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
+                                                               VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
     echo -e "\n- Naujos VM papildyta tinklo konfigūracija:\n"; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
 
     echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
@@ -123,7 +126,7 @@ echo "$(basename $0): Startuojama infrastruktūra"
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
 
-    echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "NAT-network-OAM"
-    echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "NAT-network-OAM"
+    echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
+    echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
