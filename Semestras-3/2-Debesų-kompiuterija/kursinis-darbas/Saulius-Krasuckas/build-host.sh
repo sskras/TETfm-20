@@ -166,6 +166,15 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujos VM snapšotas su įjungtu SSH:\n"      ; VBoxManage snapshot ${VM0} take "${VM0}-01-SSH-OK" --live
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
+
+    echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
+                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne>"
+                                                                   read ANS
+                                                                   [ "$ANS" = "jau" ] && break
+                                                                   echo
+                                                                   ssh osboxes@${OAM_IP}
+                                                               done
+
     echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
 
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
