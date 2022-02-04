@@ -184,7 +184,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
-    echo -e "\n- Naujos VM snapšotai:\n"                     ; VBoxManage VBoxManage snapshot ${VM0} list
+    echo -e "\n- Naujos VM snapšotai:\n"                     ; VBoxManage snapshot ${VM0} list
 
     echo -e "\n- Trinu VM snapšotus:\n"                      ; VBoxManage snapshot ${VM0} delete "${VM0_02_SSH_OK}"
                                                                VBoxManage snapshot ${VM0} delete "${VM0_01_CLEAN}"
