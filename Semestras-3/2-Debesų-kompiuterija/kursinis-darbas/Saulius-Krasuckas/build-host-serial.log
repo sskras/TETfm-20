@@ -2,17 +2,11 @@
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
-[  OK  ] Mounted Mount unit for gtk-common-themes, revision 1515.
+/dev/sda1: clean, 162609/14458880 files, 2614792/57829632 blocks
 [  OK  ] Started Show Plymouth Boot Screen.
-plymouth-start.service
 [  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
 [  OK  ] Reached target Local Encrypted Volumes.
-[  OK  ] Mounted Mount unit for gnome-3-34-1804, revision 72.
-snap-gnome\x2d3\x2d34\x2d1804-72.mount
-[  OK  ] Mounted Mount unit for snap-store, revision 547.
-snap-snap\x2dstore-547.mount
-[  OK  ] Mounted Mount unit for snapd, revision 12704.
-snap-snapd-12704.mount
+plymouth-start.service
 [  OK  ] Found device /dev/ttyS0.
 [  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
 [  OK  ] Found device VBOX_HARDDISK 3.
@@ -21,16 +15,16 @@ snap-snapd-12704.mount
 systemd-fsckd.service
 [  OK  ] Found device VBOX_HARDDISK 2.
          Activating swap /dev/disk/…b4d0-408a-a959-dbce0dfb0bb9...
-[  OK  ] Finished File System Check…0-b2a7-41c1-86cb-9ada240ff9ed.
-systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
-         Mounting /home...
+dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VBb6ebcaaa\x2d6f3f2eb2\x2dpart2.swap
 dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart2.swap
 dev-disk-by\x2dpartuuid-38d010a9\x2d02.swap
-dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VBb6ebcaaa\x2d6f3f2eb2\x2dpart2.swap
 dev-sda2.swap
 dev-disk-by\x2duuid-64f755b6\x2db4d0\x2d408a\x2da959\x2ddbce0dfb0bb9.swap
 [  OK  ] Activated swap /dev/disk/b…6-b4d0-408a-a959-dbce0dfb0bb9.
+systemd-fsck@dev-disk-by\x2duuid-38279fa0\x2db2a7\x2d41c1\x2d86cb\x2d9ada240ff9ed.service
+[  OK  ] Finished File System Check…0-b2a7-41c1-86cb-9ada240ff9ed.
 [  OK  ] Reached target Swap.
+         Mounting /home...
 [  OK  ] Mounted /home.
 home.mount
 [  OK  ] Reached target Local File Systems.
@@ -38,8 +32,8 @@ home.mount
          Starting Set console font and keymap...
          Starting Tell Plymouth To Write Out Runtime Data...
          Starting Create Volatile Files and Directories...
-[  OK  ] Finished Set console font and keymap.
 console-setup.service
+[  OK  ] Finished Set console font and keymap.
 [  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
 [  OK  ] Finished Create Volatile Files and Directories.
 systemd-tmpfiles-setup.service
@@ -52,15 +46,15 @@ systemd-update-utmp.service
 [  OK  ] Reached target System Time Set.
 [  OK  ] Reached target System Time Synchronized.
 systemd-timesyncd.service
-apparmor.service
 [  OK  ] Finished Load AppArmor profiles.
+apparmor.service
          Starting Load AppArmor pro…managed internally by snapd...
+systemd-resolved.service
 [  OK  ] Started Network Name Resolution.
 [  OK  ] Reached target Host and Network Name Lookups.
-systemd-resolved.service
 [  OK  ] Finished Load AppArmor pro…s managed internally by snapd.
-[  OK  ] Reached target System Initialization.
 snapd.apparmor.service
+[  OK  ] Reached target System Initialization.
 [  OK  ] Started ACPI Events Check.
 [  OK  ] Started CUPS Scheduler.
 [  OK  ] Started Trigger anacron every hour.
@@ -88,17 +82,19 @@ snapd.apparmor.service
          Starting Accounts Service...
 [  OK  ] Started ACPI event daemon.
 acpid.service
+[  OK  ] Started Run anacron jobs.
+anacron.service
          Starting LSB: automatic crash report generation...
          Starting Avahi mDNS/DNS-SD Stack...
 [  OK  ] Started Regular background program processing daemon.
 cron.service
 [  OK  ] Started CUPS Scheduler.
-[  OK  ] Started D-Bus System Message Bus.
 cups.service
+[  OK  ] Started D-Bus System Message Bus.
 dbus.service
          Starting Network Manager...
-dmesg.service
 [  OK  ] Started Save initial kernel messages after boot.
+dmesg.service
          Starting Remove Stale Onli…t4 Metadata Check Snapshots...
          Starting Discard unused bl…filesystems from /etc/fstab...
          Starting Detect the availa…eal with any system changes...
@@ -114,68 +110,71 @@ irqbalance.service
          Starting Login Service...
          Starting Disk Manager...
          Starting WPA supplicant...
+         Starting Rotate log files...
+         Starting Daily man-db regeneration...
 [  OK  ] Finished Remove Stale Onli…ext4 Metadata Check Snapshots.
 [  OK  ] Finished Detect the availa… deal with any system changes.
 [  OK  ] Finished Restore /etc/reso…re the ppp link was shut down.
-[  OK  ] Finished Record successful boot for GRUB.
 [  OK  ] Started System Logging Service.
-         Starting GRUB failed boot detection...
 rsyslog.service
-[  OK  ] Finished GRUB failed boot detection.
+[  OK  ] Finished Record successful boot for GRUB.
+[  OK  ] Finished Rotate log files.
 [  OK  ] Started LSB: automatic crash report generation.
 apport.service
+         Starting GRUB failed boot detection...
 [  OK  ] Finished Discard unused bl…n filesystems from /etc/fstab.
-systemd-logind.service
+[  OK  ] Finished GRUB failed boot detection.
 [  OK  ] Started Login Service.
-avahi-daemon.service
+systemd-logind.service
+wpa_supplicant.service
+[  OK  ] Started WPA supplicant.
 [  OK  ] Started Avahi mDNS/DNS-SD Stack.
+avahi-daemon.service
 [  OK  ] Started Make remote CUPS printers available locally.
 cups-browsed.service
-[  OK  ] Started WPA supplicant.
-wpa_supplicant.service
+[  OK  ] Started Switcheroo Control Proxy service.
+         Starting Save/Restore Sound Card State...
+switcheroo-control.service
 [  OK  ] Started Network Manager.
 NetworkManager.service
-[  OK  ] Started Switcheroo Control Proxy service.
-switcheroo-control.service
 [  OK  ] Reached target Network.
          Starting Network Manager Wait Online...
-         Starting Save/Restore Sound Card State...
          Starting OpenVPN service...
          Starting Permit User Sessions...
 [  OK  ] Started Unattended Upgrades Shutdown.
 unattended-upgrades.service
+[  OK  ] Finished Save/Restore Sound Card State.
+alsa-restore.service
 [  OK  ] Finished OpenVPN service.
-[  OK  ] Finished Permit User Sessions.
 openvpn.service
+[  OK  ] Finished Permit User Sessions.
 systemd-user-sessions.service
 [  OK  ] Started Authorization Manager.
 polkit.service
+[  OK  ] Reached target Sound Card.
          Starting Modem Manager...
          Starting GNOME Display Manager...
          Starting Hold until boot process finishes up...
          Starting Hostname Service...
-[  OK  ] Finished Save/Restore Sound Card State.
-alsa-restore.service
 [  OK  ] Started Accounts Service.
-[  OK  ] Reached target Sound Card.accounts-daemon.service
-
+accounts-daemon.service
 [  OK  ] Started GNOME Display Manager.
 gdm.service
-networkd-dispatcher.service
-ModemManager.service
-udisks2.service
 systemd-hostnamed.service
+ModemManager.service
 NetworkManager-dispatcher.service
-run-user-125.mount
-user-runtime-dir@125.service
+networkd-dispatcher.service
+udisks2.service
 NetworkManager-wait-online.service
 whoopsie.service
 kerneloops.service
-tmp-sanity\x2dmountpoint\x2d622643545.mount
+run-user-125.mount
+user-runtime-dir@125.service
 user@125.service
 rtkit-daemon.service
-snapd.service
+tmp-sanity\x2dmountpoint\x2d797809062.mount
 run-user-125-gvfs.mount
+snapd.service
 snapd.seeded.service
 upower.service
 systemd-localed.service
@@ -187,9 +186,6 @@ colord.service
 Ubuntu 20.04.3 LTS osboxes ttyS0
 
 osboxes login: 
-
-osboxes login: 
-osboxes login: osboxes
 osboxes
 Password: osboxes.org
 
@@ -216,8 +212,8 @@ Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
 osboxes@osboxes:~$ 
-osboxes@osboxes:~$ stty rows 56 columns 189
-stty rows 56 columns 189
+osboxes@osboxes:~$ stty rows 63 columns 210
+stty rows 63 columns 210
 osboxes@osboxes:~$ 
 osboxes@osboxes:~$ sudo apt update
 sudo apt update
@@ -225,78 +221,75 @@ sudo apt update
 Sorry, try again.
 [sudo] password for osboxes: osboxes.org
 
-Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]   
-Get:2 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,210 kB]                                                                                                       
-Hit:3 http://us.archive.ubuntu.com/ubuntu focal InRelease                                                                                                                                   
-Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                                                                                                                  
-Get:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]                                                                                                                
-Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,550 kB]                                                                                                      
-Get:7 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [367 kB]                                                                                                          
-Get:8 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [213 kB]                                                                                                         
-Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [598 kB]                                                                                                         
-Get:10 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.7 kB]                                                                                                
-Get:11 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 48x48 Icons [18.3 kB]                                                                                                   
-Get:12 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 64x64 Icons [35.5 kB]                                                                                                   
-Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9,136 B]                                                                                                 
-Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [718 kB]                                                                                                  
-Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [300 kB]                                                                                                       
-Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [282 kB]                                                                                                
-Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 48x48 Icons [60.8 kB]                                                                                                  
-Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 64x64 Icons [98.3 kB]                                                                                                  
-Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.7 kB]                                                                                                
-Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [21.8 kB]                                                                                                 
-Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [775 kB]                                                                                                 
-Get:22 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [20.5 kB]                                                                                                  
-Get:23 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [103 kB]                                                                                                  
-Get:24 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [536 B]                                                                                             
-Get:25 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [676 kB]                                                                                                    
-Get:26 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [111 kB]                                                                                                 
-Get:27 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [532 B]                                                                                            
-Get:28 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [896 kB]                                                                                                   
-Get:29 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [532 kB]                                                                                                     
-Get:30 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [115 kB]                                                                                                    
-Get:31 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [665 kB]                                                                                                    
-Get:32 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66.5 kB]                                                                                            
-Get:33 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 48x48 Icons [33.1 kB]                                                                                               
-Get:34 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 64x64 Icons [71.6 kB]                                                                                               
-Get:35 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [13.0 kB]                                                                                             
-Get:36 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,176 B]                                                                                                  
-Get:37 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.8 kB]                                                                                                 
-Get:38 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]                                                                                          
-Get:39 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [197 kB]                                                                                                   
-Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [536 B]                                                                                             
-Get:41 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [364 kB]                                                                                            
-Get:42 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 48x48 Icons [221 kB]                                                                                               
-Get:43 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [395 kB]                                                                                               
-Get:44 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.0 kB]                                                                                            
-Get:45 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.8 kB]                                                                                                
-Get:46 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,432 B]                                                                                                 
-Get:47 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6,928 B]                                                                                                
-Get:48 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]                                                                                           
-Get:49 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [620 B]                                                                                            
-Get:50 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [42.0 kB]                                                                                                    
-Get:51 http://us.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [34.5 kB]                                                                                                     
-Get:52 http://us.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10.0 kB]                                                                                                    
-Get:53 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [8,008 B]                                                                                             
-Get:54 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 48x48 Icons [6,977 B]                                                                                                
-Get:55 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64 Icons [10.5 kB]                                                                                                
-Get:56 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64@2 Icons [29 B]                                                                                                 
-Get:57 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [864 B]                                                                                                
-Get:58 http://us.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [11.4 kB]                                                                                                 
-Get:59 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [20.8 kB]                                                                                                
-Get:60 http://us.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [14.3 kB]                                                                                                
-Get:61 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [12.0 kB]                                                                                         
-Get:62 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 48x48 Icons [7,491 B]                                                                                            
-Get:63 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 64x64 Icons [13.2 kB]                                                                                            
-Get:64 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [692 B]                                                                                            
-Fetched 11.4 MB in 44s (259 kB/s)                                                                                                                                                           
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,210 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [598 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,550 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [300 kB]                                                                                                                             
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [282 kB]                                                                                                                      
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 48x48 Icons [60.8 kB]                                                                                                                       
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 64x64 Icons [98.3 kB]                                                                                                                       
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.7 kB]                                                                                                                     
+Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [775 kB]                                                                                                                      
+Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [21.8 kB]                                                                                                                      
+Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [111 kB]                                                                                                                      
+Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [532 B]                                                                                                                 
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [896 kB]                                                                                                                        
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [665 kB]                                                                                                                         
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [197 kB]                                                                                                                        
+Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [364 kB]                                                                                                                 
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 48x48 Icons [221 kB]                                                                                                                    
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [395 kB]                                                                                                                    
+Get:23 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.0 kB]                                                                                                                 
+Get:24 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,432 B]                                                                                                                      
+Get:25 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.8 kB]                                                                                                                     
+Get:26 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6,928 B]                                                                                                                     
+Get:27 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]                                                                                                                
+Get:28 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [620 B]                                                                                                                 
+Get:29 http://us.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [34.5 kB]                                                                                                                          
+Get:30 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [42.0 kB]                                                                                                                         
+Get:31 http://us.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10.0 kB]                                                                                                                         
+Get:32 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,976 B]                                                                                                                  
+Get:33 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 48x48 Icons [6,977 B]                                                                                                                     
+Get:34 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64 Icons [10.5 kB]                                                                                                                     
+Get:35 http://us.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64@2 Icons [29 B]                                                                                                                      
+Get:36 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [864 B]                                                                                                                     
+Get:37 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [20.8 kB]                                                                                                                     
+Get:38 http://us.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [11.4 kB]                                                                                                                      
+Get:39 http://us.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [14.3 kB]                                                                                                                     
+Get:40 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [12.0 kB]                                                                                                              
+Get:41 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 48x48 Icons [7,491 B]                                                                                                                 
+Get:42 http://us.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 64x64 Icons [13.2 kB]                                                                                                                 
+Get:43 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [692 B]                                                                                                                 
+Get:44 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [367 kB]                                                                                                                              
+Get:45 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [213 kB]                                                                                                                             
+Get:46 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.6 kB]                                                                                                                     
+Get:47 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 48x48 Icons [18.3 kB]                                                                                                                        
+Get:48 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 64x64 Icons [35.5 kB]                                                                                                                        
+Get:49 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9,136 B]                                                                                                                      
+Get:50 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [718 kB]                                                                                                                       
+Get:51 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [20.5 kB]                                                                                                                       
+Get:52 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [103 kB]                                                                                                                       
+Get:53 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [536 B]                                                                                                                  
+Get:54 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [676 kB]                                                                                                                         
+Get:55 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [532 kB]                                                                                                                          
+Get:56 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [115 kB]                                                                                                                         
+Get:57 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66.5 kB]                                                                                                                 
+Get:58 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 48x48 Icons [33.1 kB]                                                                                                                    
+Get:59 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 64x64 Icons [71.6 kB]                                                                                                                    
+Get:60 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [13.0 kB]                                                                                                                  
+Get:61 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.8 kB]                                                                                                                      
+Get:62 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages [7,176 B]                                                                                                                       
+Get:63 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,464 B]                                                                                                               
+Get:64 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [536 B]                                                                                                                  
+Fetched 11.4 MB in 38s (298 kB/s)                                                                                                                                                                                
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 208 packages can be upgraded. Run 'apt list --upgradable' to see them.
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
 osboxes@osboxes:~$ sudo apt install openssh-server
 sudo apt install openssh-server
 Reading package lists... Done
@@ -315,51 +308,48 @@ Need to get 1,359 kB of archives.
 After this operation, 6,010 kB of additional disk space will be used.
 Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-client amd64 1:8.2p1-4ubuntu0.4 [671 kB]
 Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
-Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.4 [51.5 kB]
-Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.4 [377 kB]
-Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]                                                                                        
-Fetched 1,359 kB in 6s (223 kB/s)                                                                                                                                                           
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.4 [51.5 kB]                                                                                        
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.4 [377 kB]                                                                                              
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]                                                                                                             
+Fetched 1,359 kB in 10s (132 kB/s)                                                                                                                                                                               
 Preconfiguring packages ...
 
 (Reading database ... 145751 files and directories currently installed.)
 Preparing to unpack .../openssh-client_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-Progress: [  0%] [.......................................................................................................................................................................] 87Progress: [  5%] [#######................................................................................................................................................................] 8Unpacking openssh-client (1:8.2p1-4ubuntu0.4) over (1:8.2p1-4ubuntu0.3) ...
-Progress: [ 10%] [###############........................................................................................................................................................] 8Selecting previously unselected package ncurses-term.
+Progress: [  0%] [............................................................................................................................................................................................] 87Progress: [  5%] [########....................................................................................................................................................................................] 8Unpacking openssh-client (1:8.2p1-4ubuntu0.4) over (1:8.2p1-4ubuntu0.3) ...
+Progress: [ 10%] [#################...........................................................................................................................................................................] 8Selecting previously unselected package ncurses-term.
 Preparing to unpack .../ncurses-term_6.2-0ubuntu2_all.deb ...
-Progress: [ 14%] [#######################................................................................................................................................................] 8Unpacking ncurses-term (6.2-0ubuntu2) ...
-Progress: [ 19%] [###############################........................................................................................................................................] 8Selecting previously unselected package openssh-sftp-server.
+Progress: [ 14%] [##########################..................................................................................................................................................................] 8Unpacking ncurses-term (6.2-0ubuntu2) ...
+Progress: [ 19%] [###################################.........................................................................................................................................................] 8Selecting previously unselected package openssh-sftp-server.
 Preparing to unpack .../openssh-sftp-server_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-Progress: [ 24%] [#######################################................................................................................................................................] 8Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
-Progress: [ 29%] [###############################################........................................................................................................................] 8Selecting previously unselected package openssh-server.
+Progress: [ 24%] [############################################................................................................................................................................................] 8Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
+Progress: [ 29%] [#####################################################.......................................................................................................................................] 8Selecting previously unselected package openssh-server.
 Preparing to unpack .../openssh-server_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-Progress: [ 33%] [#######################################################................................................................................................................] 8Unpacking openssh-server (1:8.2p1-4ubuntu0.4) ...
-Progress: [ 38%] [###############################################################........................................................................................................] 8Selecting previously unselected package ssh-import-id.
+Progress: [ 33%] [##############################################################..............................................................................................................................] 8Unpacking openssh-server (1:8.2p1-4ubuntu0.4) ...
+Progress: [ 38%] [#######################################################################.....................................................................................................................] 8Selecting previously unselected package ssh-import-id.
 Preparing to unpack .../ssh-import-id_5.10-0ubuntu1_all.deb ...
-Progress: [ 43%] [#######################################################################................................................................................................] 8Unpacking ssh-import-id (5.10-0ubuntu1) ...
-Progress: [ 48%] [###############################################################################........................................................................................] 8Setting up openssh-client (1:8.2p1-4ubuntu0.4) ...
-Progress: [ 52%] [#######################################################################################................................................................................] 87Progress: [ 57%] [###############################################################################################........................................................................] 8Setting up ssh-import-id (5.10-0ubuntu1) ...
-Progress: [ 62%] [#######################################################################################################................................................................] 8Attempting to convert /etc/ssh/ssh_import_id
-Progress: [ 67%] [###############################################################################################################........................................................] 8Setting up ncurses-term (6.2-0ubuntu2) ...
-Progress: [ 71%] [#######################################################################################################################................................................] 87Progress: [ 76%] [###############################################################################################################################........................................] 8Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
-Progress: [ 81%] [#######################################################################################################################################................................] 87Progress: [ 86%] [###############################################################################################################################################........................] 8Setting up openssh-server (1:8.2p1-4ubuntu0.4) ...
-Progress: [ 90%] [#######################################################################################################################################################................] 8
+Progress: [ 43%] [################################################################################............................................................................................................] 8Unpacking ssh-import-id (5.10-0ubuntu1) ...
+Progress: [ 48%] [#########################################################################################...................................................................................................] 8Setting up openssh-client (1:8.2p1-4ubuntu0.4) ...
+Progress: [ 52%] [##################################################################################################..........................................................................................] 87Progress: [ 57%] [###########################################################################################################.................................................................................] 8Setting up ssh-import-id (5.10-0ubuntu1) ...
+Progress: [ 62%] [####################################################################################################################........................................................................] 8Attempting to convert /etc/ssh/ssh_import_id
+Progress: [ 67%] [#############################################################################################################################...............................................................] 8Setting up ncurses-term (6.2-0ubuntu2) ...
+Progress: [ 71%] [######################################################################################################################################......................................................] 87Progress: [ 76%] [###############################################################################################################################################.............................................] 8Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
+Progress: [ 81%] [########################################################################################################################################################....................................] 87Progress: [ 86%] [#################################################################################################################################################################...........................] 8Setting up openssh-server (1:8.2p1-4ubuntu0.4) ...
+Progress: [ 90%] [##########################################################################################################################################################################..................] 8
 Creating config file /etc/ssh/sshd_config with new version
 Creating SSH2 RSA key; this may take some time ...
-3072 SHA256:IiXdYHvD239vV/SFQnLdjGyvLly5wwkvra9vcOIVSho root@osboxes (RSA)
+3072 SHA256:AW5/grHEle3j96JiT4uSLQKSlZxzmZYM+9DzKegUG5M root@osboxes (RSA)
 Creating SSH2 ECDSA key; this may take some time ...
-256 SHA256:bE3oURJf7OanrjZ3T95qHygZVJ0id/tqb2L1RJuHu4Y root@osboxes (ECDSA)
+256 SHA256:AaSBexe13JBDtCI5wQ2ldLhyxROTLNBMIvvS4sRib3o root@osboxes (ECDSA)
 Creating SSH2 ED25519 key; this may take some time ...
-256 SHA256:RHx5ePrNBew9zn2u7CxEhaN+pMHbTTLduN8X0ds77/U root@osboxes (ED25519)
+256 SHA256:3FbHPEpsXxxW9BI0p92uabR9om67lirZzayjIjUJ3UY root@osboxes (ED25519)
 Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
 Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
 rescue-ssh.target is a disabled or a static unit, not starting it.
-Progress: [ 95%] [###############################################################################################################################################################........] 8Processing triggers for systemd (245.4-4ubuntu3.11) ...
+Progress: [ 95%] [###################################################################################################################################################################################.........] 8Processing triggers for systemd (245.4-4ubuntu3.11) ...
 Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for ufw (0.36-6) ...
 
-osboxes@osboxes:~$ 
-
-osboxes@osboxes:~$ 
 osboxes@osboxes:~$ ip a
 ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -369,16 +359,16 @@ ip a
     inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
 2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:a0:c4:aa brd ff:ff:ff:ff:ff:ff
+    link/ether 08:00:27:6b:42:69 brd ff:ff:ff:ff:ff:ff
     inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
-       valid_lft 86195sec preferred_lft 86195sec
-    inet6 fe80::74ef:3b99:3444:98ca/64 scope link noprefixroute 
+       valid_lft 86199sec preferred_lft 86199sec
+    inet6 fe80::cfc6:546f:cc21:f0de/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:ee:9e:dd brd ff:ff:ff:ff:ff:ff
-    inet 192.168.56.149/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s8
-       valid_lft 396sec preferred_lft 396sec
-    inet6 fe80::777a:b243:3b29:e57/64 scope link noprefixroute 
+    link/ether 08:00:27:98:0d:ae brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.150/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s8
+       valid_lft 399sec preferred_lft 399sec
+    inet6 fe80::2a75:33a:1235:f394/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 osboxes@osboxes:~$ 
 osboxes@osboxes:~$ 
