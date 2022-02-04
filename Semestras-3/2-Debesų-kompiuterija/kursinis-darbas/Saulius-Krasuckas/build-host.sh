@@ -13,9 +13,6 @@ IF_HOSTONLY="VirtualBox Host-Only Ethernet Adapter"         # Interfeisas, kuriu
 NAT_NET_ADDR="10.1.1.0/24"                                  # Potinklis, kuriame veiks aplikacija
 NAT_NET_NAME="NAT-network-APP"                              # Potinklio vardas
 
-VM0_01_CLEAN="${VM0}-01-CLEAN"
-VM0_02_SSH_OK="${VM0}-02-SSH-OK"
-
 UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų Serial/UART konsolei
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
 UART_TCP_PORT="23001"                                       # Host TCP prievadas, skirtas ryšiui su konsole
@@ -24,7 +21,10 @@ UART_IRQ="4"                                                # VM Serial/UART IRQ
 
 VM_CPUS=2                                                   # VM CPU skaičius
 VM_RAM=1024                                                 # VM RAM apimtis
+
 VM0="VGTU-2022-DeKo-saukrs-LDVM0"                           # Bendros VM vardas
+VM0_01_CLEAN="${VM0}-01-CLEAN"
+VM0_02_SSH_OK="${VM0}-02-SSH-OK"
 
 VDI_URL="https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.3/Desktop/64bit.7z/download?use_mirror=netix"
 VDI_ZIP="Ubuntu-20.04.3-Desktop-64bit.7z"
@@ -165,14 +165,14 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
                                                                VBoxManage showvminfo ${VM0} | grep "UART"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
-    echo -e "\n- Naujos VM snapšotas su įjungtu SSH:\n"      ; VBoxManage snapshot ${VM0} take ${VM0_01_CLEAN} --live
+    echo -e "\n- Naujos VM švarus pradinis snapšotas:\n"     ; VBoxManage snapshot ${VM0} take ${VM0_01_CLEAN} --live
     echo -e "\n- Naujos VM tvarkymas konsolėje:\n"           ; VBox_setup_serial_console ${VM0}
     echo -e "\n- Naujos VM snapšotas su įjungtu SSH:\n"      ; VBoxManage snapshot ${VM0} take ${VM0_02_SSH_OK} --live
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
 
     echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
-                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne>"
+                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
                                                                    read ANS
                                                                    [ "$ANS" = "jau" ] && break
                                                                    echo
@@ -184,8 +184,10 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
+    echo -e "\n- Naujos VM snapšotai:\n"                     ; VBoxManage VBoxManage snapshot ${VM0} list
 
-    echo -e "\n- Trinu VM snapšotą:\n"                       ; VBoxManage snapshot ${VM0} delete "${VM0_02_SSH_OK}"
+    echo -e "\n- Trinu VM snapšotus:\n"                      ; VBoxManage snapshot ${VM0} delete "${VM0_02_SSH_OK}"
+                                                               VBoxManage snapshot ${VM0} delete "${VM0_01_CLEAN}"
    #echo -e "\n- Uždarau VM snapšoto failą:\n"               ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
 
     echo -e "\n- Nuo VM atjungiamas sisteminis diskas:\n"    ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
