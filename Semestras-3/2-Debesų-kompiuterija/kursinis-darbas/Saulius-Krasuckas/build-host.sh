@@ -163,14 +163,17 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
     echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
     echo -e "\n- Naujos VM tvarkymas konsolėje:\n"           ; VBox_setup_serial_console ${VM0}
+    echo -e "\n- Naujos VM snapšotas su įjungtu SSH:\n"      ; VBoxManage snapshot ${VM0} take "${VM0}-01-SSH-OK" --live
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
-
     echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
 
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
+
+    echo -e "\n- Trinu VM snapšotą:\n"                       ; VBoxManage snapshot ${VM0} delete "${VM0}-01-SSH-OK"
+   #echo -e "\n- Uždarau VM snapšoto failą:\n"               ; VBoxManage closemedium disk "${VM0}-01-SSH-OK"
 
     echo -e "\n- Nuo VM atjungiamas sisteminis diskas:\n"    ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
                                                                VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
