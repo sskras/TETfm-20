@@ -51,9 +51,8 @@ while read -u 8 REMOTE_CMD; do
     break
 done
 exec 8<>-
-exit
 
-# TODO ping-wait for ${IP}
+ping ${IP} | sed "/ ms$/ q"
 echo
 echo -n "Jau VM gyva? "; read
 
