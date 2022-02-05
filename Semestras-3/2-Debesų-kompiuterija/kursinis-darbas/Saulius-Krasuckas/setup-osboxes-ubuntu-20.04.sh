@@ -45,6 +45,7 @@ echo
 
 while read -u 8 REMOTE_CMD; do
     [ "$REMOTE_CMD" = "" ] && continue
+    [ "${REMOTE_CMD::1}" = "#" ] && continue
     echo
    #echo "Remote CMD is: $REMOTE_CMD"
     ssh osboxes@${IP} "$REMOTE_CMD"
@@ -64,5 +65,6 @@ echo "Laukiam IP įjungimo:"
 ping ${IP} | sed "/ ms$/ q"
 
 echo
-ssh osboxes@${IP} "echo install Docker here or in another script \?"
+echo install Docker here or in another script \?
 #ssh osboxes@${IP}
+ssh osboxes@${IP} "uptime"
