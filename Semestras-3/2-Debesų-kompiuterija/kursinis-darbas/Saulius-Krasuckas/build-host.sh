@@ -107,9 +107,12 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
             PATH=$PATH:/C/Program\ Files/Oracle/VirtualBox
         fi
 
-    if [ ! -d ~/.VirtualBox ]; then
+        if [ ! -d ~/.VirtualBox ]; then
             env MSYS=winsymlinks:nativestrict sudo ln -s /C/Users/saukrs/.VirtualBox ~/
         fi
+
+	# Panaudosiu Cygwin ping portą vietoj nebesveikai nesiintegruojančio NT porto:
+	. ~/bin/ping-NT-fixes.sh
     fi
 
 
