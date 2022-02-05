@@ -52,9 +52,9 @@ while read -u 8 REMOTE_CMD; do
 done
 exec 8<>-
 
-ping ${IP} | sed "/ ms$/ q"
+ping ${IP} | sed "/ ms$/ q; /ms TTL/ q"
 echo
 echo -n "Jau VM gyva? "; read
 
-ssh osboxes@${IP} "echo install Docker here or in another script ?"
+ssh osboxes@${IP} "echo install Docker here or in another script \?"
 ssh osboxes@${IP}
