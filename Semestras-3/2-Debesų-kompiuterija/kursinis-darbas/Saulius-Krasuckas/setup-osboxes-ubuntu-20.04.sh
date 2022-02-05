@@ -4,6 +4,24 @@ IP=$1
 TEMPLATE_HOSTNAME="cckd-saukrs-TODO"
 
 sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
+
+exec 8<>1; cat << \
+---------------------------------------------------------------- |
+----------------------------------------------------------------
+tee /dev/fd/8
+
+while read -u 8 REMOTE_CMD; do
+    echo
+    echo "Remote CMD is: $REMOTE_CMD"
+    ssh osboxes@${IP} "$REMOTE_CMD"
+    [ $? -eq 0 ] && continue
+    echo
+    echo "Command failed, skipping the remainder."
+    break
+done
+exec 8<>-
+exit
+
 ssh osboxes@${IP} "sudo -p '' -S bash -c 'echo osboxes ALL=\(ALL:ALL\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes'" <<< osboxes.org
 
 ssh osboxes@${IP} "echo -e '127.0.2.1\t${TEMPLATE_HOSTNAME}' | sudo tee /etc/hosts"
