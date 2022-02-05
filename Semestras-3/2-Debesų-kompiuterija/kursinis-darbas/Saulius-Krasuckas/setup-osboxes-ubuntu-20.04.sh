@@ -14,8 +14,9 @@ echo -e '127.0.2.1\\\t${TEMPLATE_HOSTNAME}' | sudo tee -a /etc/hosts
 tee /dev/fd/8
 
 while read -u 8 REMOTE_CMD; do
+    [ "$REMOTE_CMD" = "" ] && continue
     echo
-    echo "Remote CMD is: $REMOTE_CMD"
+   #echo "Remote CMD is: $REMOTE_CMD"
     ssh osboxes@${IP} "$REMOTE_CMD"
     [ $? -eq 0 ] && continue
     echo
