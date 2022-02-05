@@ -52,7 +52,7 @@ while read -u 8 REMOTE_CMD; do
     [ $? -eq 0 ] && continue
     echo
     echo "Command failed, skipping the remainder."
-    break
+    exit
 done
 exec 8<>-
 
