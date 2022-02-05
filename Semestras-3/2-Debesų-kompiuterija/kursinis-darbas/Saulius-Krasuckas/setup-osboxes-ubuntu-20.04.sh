@@ -5,13 +5,20 @@ TEMPLATE_HOSTNAME="cckd-saukrs-TODO"
 
 sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 
+echo "Komandų receptas:"
+echo
+echo "................................................................"
 exec 8<>1; cat << \
 ---------------------------------------------------------------- |
 sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes' <<< osboxes.org
 
 echo -e '127.0.2.1\\\t${TEMPLATE_HOSTNAME}' | sudo tee -a /etc/hosts
+sudo hostnamectl set-hostname ${TEMPLATE_HOSTNAME}
+hostnamectl
 ----------------------------------------------------------------
 tee /dev/fd/8
+echo "................................................................"
+echo
 
 while read -u 8 REMOTE_CMD; do
     [ "$REMOTE_CMD" = "" ] && continue
@@ -26,8 +33,6 @@ done
 exec 8<>-
 exit
 
-ssh osboxes@${IP} "sudo hostnamectl set-hostname ${TEMPLATE_HOSTNAME}"
-ssh osboxes@${IP} "hostnamectl"
 ssh osboxes@${IP} "sudo timedatectl set-timezone Europe/Vilnius"
 ssh osboxes@${IP} "timedatectl"
 ssh osboxes@${IP} "sudo localectl set-locale LC_TIME=C.UTF-8"
