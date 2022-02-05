@@ -3,6 +3,9 @@
 IP=$1
 TEMPLATE_HOSTNAME="cckd-saukrs-TODO"
 
+# Panaudosiu Cygwin ping portą vietoj nebesveikai nesiintegruojančio NT porto:
+. ~/bin/ping-NT-fixes.sh
+
 sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 
 echo "Komandų receptas:"
@@ -52,7 +55,12 @@ while read -u 8 REMOTE_CMD; do
 done
 exec 8<>-
 
-ping ${IP} | sed "/ ms$/ q; /ms TTL/ q"
+echo "Laukiam IP išjungimo:"
+ping -c 4 -W 1 ${IP} | sed "1d; / ms$/! q"
+
+echo "Laukiam IP įjungimo:"
+ping ${IP} | sed "/ ms$/ q"
+
 echo
 echo -n "Jau VM gyva? "; read
 
