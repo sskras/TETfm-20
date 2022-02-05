@@ -20,6 +20,8 @@ timedatectl
 sudo localectl set-locale LC_TIME=C.UTF-8
 localectl
 
+echo -n "Upgreidinam? "; read
+sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 --------------------------------------------------------------------------------------------------------------------------------
 tee /dev/fd/8
 echo "................................................................"
@@ -38,8 +40,6 @@ done
 exec 8<>-
 exit
 
-echo -n "Upgreidinam? "; read
-ssh osboxes@${IP} "sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y"
 echo
 echo -n "Rebūtinam? "; read
 ssh osboxes@${IP} "sudo reboot"
