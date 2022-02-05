@@ -23,7 +23,9 @@ sudo localectl set-locale LC_TIME=C.UTF-8
 localectl
 
 echo -n "Upgreidinam? "; read
+sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
+sudo apt install vim colordiff
 
 echo -n "Rebūtinam? "; read
 nohup sudo -b bash -c 'sleep 2; reboot'
