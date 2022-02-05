@@ -7,7 +7,7 @@ sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 
 echo "Komandų receptas:"
 echo
-echo "..............................................................................................................."
+echo ".................................................................................................................."
 exec 8<>1; cat << \
 -------------------------------------------------------------------------------------------------------------------------------- |
 sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes' <<< osboxes.org
@@ -15,8 +15,10 @@ sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc
 echo -e '127.0.2.1\\\t${TEMPLATE_HOSTNAME}' | sudo tee -a /etc/hosts
 sudo hostnamectl set-hostname ${TEMPLATE_HOSTNAME}
 hostnamectl
+
 sudo timedatectl set-timezone Europe/Vilnius
 timedatectl
+
 sudo localectl set-locale LC_TIME=C.UTF-8
 localectl
 
@@ -27,7 +29,7 @@ echo -n "Rebūtinam? "; read
 sudo reboot
 --------------------------------------------------------------------------------------------------------------------------------
 tee /dev/fd/8
-echo "..............................................................................................................."
+echo ".................................................................................................................."
 echo
 
 while read -u 8 REMOTE_CMD; do
