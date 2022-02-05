@@ -7,7 +7,7 @@ sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 
 echo "Komandų receptas:"
 echo
-echo "................................................................"
+echo "..............................................................................................................."
 exec 8<>1; cat << \
 -------------------------------------------------------------------------------------------------------------------------------- |
 sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes' <<< osboxes.org
@@ -22,9 +22,12 @@ localectl
 
 echo -n "Upgreidinam? "; read
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
+
+echo -n "Rebūtinam? "; read
+sudo reboot
 --------------------------------------------------------------------------------------------------------------------------------
 tee /dev/fd/8
-echo "................................................................"
+echo "..............................................................................................................."
 echo
 
 while read -u 8 REMOTE_CMD; do
@@ -40,9 +43,6 @@ done
 exec 8<>-
 exit
 
-echo
-echo -n "Rebūtinam? "; read
-ssh osboxes@${IP} "sudo reboot"
 # TODO ping-wait for ${IP}
 echo
 echo -n "Jau VM gyva? "; read
