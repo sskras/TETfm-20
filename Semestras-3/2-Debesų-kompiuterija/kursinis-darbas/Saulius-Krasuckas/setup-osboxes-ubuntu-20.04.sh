@@ -26,7 +26,7 @@ echo -n "Upgreidinam? "; read
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
 echo -n "Rebūtinam? "; read
-sudo reboot
+nohup sudo -b bash -c 'sleep 2; reboot'
 --------------------------------------------------------------------------------------------------------------------------------
 tee /dev/fd/8
 echo ".................................................................................................................."
