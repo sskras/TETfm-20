@@ -31,12 +31,12 @@ date
 # sudo sed -i.BACKUP-1 's|us.archive.ubuntu.com|ubuntu.mirror.vu.lt|' /etc/apt/sources.list
 # sudo sed -i.BACKUP-2 's|security.ubuntu.com|ubuntu.mirror.vu.lt|' /etc/apt/sources.list
 
-echo -n "Upgreidinam? "; read
+echo -n "Upgreidinam:"
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv
 
-echo -n "Rebūtinam? "; read
+echo -n "Rebūtinam:"
 nohup sudo -b bash -c 'sleep 2; reboot'
 ------------------------------------------------------------------------------------------------------------------------
 tee /dev/fd/8
@@ -55,14 +55,14 @@ while read -u 8 REMOTE_CMD; do
 done
 exec 8<>-
 
+echo
 echo "Laukiam IP išjungimo:"
 ping -c 4 -W 1 ${IP} | sed "1d; / ms$/! q"
 
+echo
 echo "Laukiam IP įjungimo:"
 ping ${IP} | sed "/ ms$/ q"
 
 echo
-echo -n "Jau VM gyva? "; read
-
 ssh osboxes@${IP} "echo install Docker here or in another script \?"
-ssh osboxes@${IP}
+#ssh osboxes@${IP}
