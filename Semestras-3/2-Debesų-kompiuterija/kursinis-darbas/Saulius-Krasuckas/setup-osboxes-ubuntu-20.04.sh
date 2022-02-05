@@ -15,6 +15,11 @@ sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc
 echo -e '127.0.2.1\\\t${TEMPLATE_HOSTNAME}' | sudo tee -a /etc/hosts
 sudo hostnamectl set-hostname ${TEMPLATE_HOSTNAME}
 hostnamectl
+sudo timedatectl set-timezone Europe/Vilnius
+timedatectl
+sudo localectl set-locale LC_TIME=C.UTF-8
+localectl
+
 --------------------------------------------------------------------------------------------------------------------------------
 tee /dev/fd/8
 echo "................................................................"
@@ -33,11 +38,6 @@ done
 exec 8<>-
 exit
 
-ssh osboxes@${IP} "sudo timedatectl set-timezone Europe/Vilnius"
-ssh osboxes@${IP} "timedatectl"
-ssh osboxes@${IP} "sudo localectl set-locale LC_TIME=C.UTF-8"
-ssh osboxes@${IP} "localectl"
-echo
 echo -n "Upgreidinam? "; read
 ssh osboxes@${IP} "sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y"
 echo
