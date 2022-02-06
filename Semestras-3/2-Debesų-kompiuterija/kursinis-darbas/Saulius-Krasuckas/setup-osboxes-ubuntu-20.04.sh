@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 IP=$1
-TEMPLATE_HOSTNAME="cckd-saukrs-TODO"
+TEMPLATE_HOSTNAME="sksw-TODO"
 
 # Panaudosiu Cygwin ping portą vietoj nebesveikai nesiintegruojančio NT porto:
 . ~/bin/ping-NT-fixes.sh
@@ -34,7 +34,7 @@ exec 8<>1; cat << \
     echo -n "Upgreidinam:"
     sudo apt update
     sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv
+    sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv curl iotop htop sysstat
 
     echo -n "Rebūtinam:"
     nohup sudo -b bash -c 'sleep 2; reboot'
