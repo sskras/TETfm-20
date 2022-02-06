@@ -7,6 +7,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install -y docker-ce-cli docker-scan-plugin docker-ce
 sudo DEBIAN_FRONTEND=noninteractive apt install -y docker-ce-rootless-extras
+sudo docker version
 
 exit
 
@@ -14,4 +15,3 @@ exit
 + version_gte 20.10
 + [ -z  ]
 + return 0
-+ sudo -E sh -c docker version
