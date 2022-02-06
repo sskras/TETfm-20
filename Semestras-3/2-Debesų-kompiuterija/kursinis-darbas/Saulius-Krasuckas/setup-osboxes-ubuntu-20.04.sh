@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 IP=$1
-TEMPLATE_HOSTNAME="sksw-TODO"
 
 # Panaudosiu Cygwin ping portą vietoj nebesveikai nesiintegruojančio NT porto:
 . ~/bin/ping-NT-fixes.sh
@@ -11,35 +10,7 @@ sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 echo "Komandų receptas:"
 echo
 echo "......................................................................................................................"
-exec 8<>1; cat << \
------------------------------------------------------------------------------------------------------------------------- |
-    sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes' <<< osboxes.org
-
-    echo -e '127.0.2.1\\\t${TEMPLATE_HOSTNAME}' | sudo tee -a /etc/hosts
-    sudo hostnamectl set-hostname ${TEMPLATE_HOSTNAME}
-    hostnamectl
-
-    sudo timedatectl set-timezone Europe/Vilnius
-    timedatectl
-
-    sudo localectl set-locale LC_TIME=C.UTF-8
-    localectl
-    date
-
-    # Add nearer APT mirror?
-
-    # sudo sed -i.BACKUP-1 's|us.archive.ubuntu.com|ubuntu.mirror.vu.lt|' /etc/apt/sources.list
-    # sudo sed -i.BACKUP-2 's|security.ubuntu.com|ubuntu.mirror.vu.lt|' /etc/apt/sources.list
-
-    echo -n "Upgreidinam:"
-    sudo apt update
-    sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv curl iotop htop sysstat
-
-    echo -n "Rebūtinam:"
-    nohup sudo -b bash -c 'sleep 2; reboot'
-------------------------------------------------------------------------------------------------------------------------
-tee /dev/fd/8
+cat osboxes-ubuntu-20.04-changes.sh
 echo "......................................................................................................................"
 echo
 
@@ -53,8 +24,7 @@ while read -u 8 REMOTE_CMD; do
     echo
     echo "Command failed, skipping the remainder."
     exit
-done
-exec 8<>-
+done 8< osboxes-ubuntu-20.04-changes.sh
 
 echo
 echo - Laukiam IP išjungimo:
@@ -66,7 +36,6 @@ ping ${IP} | sed "/ ms$/ q"
 
 echo
 echo - Docker diegimas ...
-#ssh osboxes@${IP}
 cat setup-ubuntu-docker.sh | ssh osboxes@${IP}
 
 echo
