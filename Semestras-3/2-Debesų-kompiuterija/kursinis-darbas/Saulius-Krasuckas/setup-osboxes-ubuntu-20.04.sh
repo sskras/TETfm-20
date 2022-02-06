@@ -5,8 +5,14 @@ IP=$1
 # Panaudosiu Cygwin ping portą vietoj nebesveikai nesiintegruojančio NT porto:
 . ~/bin/ping-NT-fixes.sh
 
+echo
+echo - SSH rakto kopijavimas:
+echo
 sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 
+echo
+echo - Pagrindinis OS setupas ...
+echo
 cat osboxes-ubuntu-20.04-changes.sh | ssh osboxes@${IP}
 
 echo
