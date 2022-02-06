@@ -7,13 +7,6 @@ IP=$1
 
 sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no osboxes@${IP}
 
-echo "Komandų receptas:"
-echo
-echo "......................................................................................................................"
-cat osboxes-ubuntu-20.04-changes.sh
-echo "......................................................................................................................"
-echo
-
 cat osboxes-ubuntu-20.04-changes.sh | ssh osboxes@${IP}
 
 echo
