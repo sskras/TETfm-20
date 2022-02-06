@@ -39,7 +39,14 @@ echo
 echo - Upgreidinam:
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv curl iotop htop sysstat
+sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv curl iotop htop sysstat sshpass
+
+echo
+echo - SSH raktas į save:
+echo
+ssh-keygen -f ~/.ssh/id_rsa -N ""
+sshpass -p osboxes.org ssh-copy-id -o StrictHostKeyChecking=no localhost
+ssh localhost ss -4en | grep 22
 
 echo
 echo - Rebūtinam:
