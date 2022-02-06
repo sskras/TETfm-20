@@ -65,7 +65,7 @@ VBox_setup_serial_console () {
     echo "Prisijunkite prie OS (osboxes:osboxes.org),"
     echo "paleiskite komandą:"
     echo
-    echo " $ stty rows $LINES columns $COLUMNS ; sudo apt update ; sudo apt install openssh-server -y"
+    echo " $ stty rows $LINES columns $COLUMNS ; sudo apt update ; sudo apt install -y openssh-server"
     echo
     echo "... ir palaukite įvykdymo"
     echo "Sėkmės atveju atsijunkite su Serial konsolės su ^] + ^D"
