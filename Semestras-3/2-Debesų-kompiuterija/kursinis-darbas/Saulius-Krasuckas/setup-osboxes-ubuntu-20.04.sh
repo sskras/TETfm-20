@@ -57,14 +57,18 @@ done
 exec 8<>-
 
 echo
-echo "Laukiam IP išjungimo:"
+echo - Laukiam IP išjungimo:
 ping -c 4 -W 1 ${IP} | sed "1d; / ms$/! q"
 
 echo
-echo "Laukiam IP įjungimo:"
+echo - Laukiam IP įjungimo:
 ping ${IP} | sed "/ ms$/ q"
 
 echo
-echo install Docker here or in another script \?
+echo - Docker diegimas ...
 #ssh osboxes@${IP}
+cat setup-ubuntu-docker.sh | ssh osboxes@${IP}
+
+echo
+echo - Paskutinis patikrinimas, uptime:
 ssh osboxes@${IP} "uptime"

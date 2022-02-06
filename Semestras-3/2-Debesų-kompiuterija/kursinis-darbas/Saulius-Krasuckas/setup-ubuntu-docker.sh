@@ -2,6 +2,7 @@
 
 # 2022-02-06 saukrs: From the run of docker-install script, commit: 93d2499759296ac1f9c510605fef85052a2c32be
 
+echo
 echo - Paketų indekso naujinimas:
 sudo apt update
 
