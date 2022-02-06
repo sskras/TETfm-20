@@ -57,18 +57,18 @@ VBox_setup_serial_console () {
     echo "... quiet ..."
     echo "... splash ..."
     echo
-    echo "VM paspauskite <Ctrl-X>"
+    echo "VM paspauskite <Ctrl-X>, startuos OS."
     echo
-    echo "Persijunkite čia (atgal į CLI)."
-    echo "Pateksite į VMSerial konsolę."
+    echo "Sugrįžkite atgal į terminalą."
+    echo "Patekote į VM Serial konsolę."
     echo
-    echo "Tuomet prisijunkite prie OS (osboxes:osboxes.org),"
+    echo "Prisijunkite prie OS (osboxes:osboxes.org),"
     echo "paleiskite komandą:"
     echo
-    echo " $ stty rows $LINES columns $COLUMNS ; sudo apt update ; sudo DEBIAN_FRONTEND=noninteractive apt install openssh-server -y"
+    echo " $ stty rows $LINES columns $COLUMNS ; sudo apt update ; sudo apt install openssh-server -y"
     echo
-    echo "... ir su ^] + ^D atsijunkite su Serial konsolės."
-    echo
+    echo "... ir palaukite įvykdymo"
+    echo "Sėkmės atveju atsijunkite su Serial konsolės su ^] + ^D"
 
     # Išvalau būsimą Serial logą:
     > ${UART_SCR}
@@ -168,15 +168,17 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujos VM snapšotas su įjungtu SSH:\n"      ; VBoxManage snapshot ${VM0} take ${VM0_02_SSH_OK} --live
     echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
+                                                               [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
-    echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
-                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
-                                                                   read ANS
-                                                                   [ "$ANS" = "jau" ] && break
-                                                                   echo
-                                                                   ssh osboxes@${OAM_IP}
-                                                               done
+   #echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
+   #                                                               echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
+   #                                                               read ANS
+   #                                                               [ "$ANS" = "jau" ] && break
+   #                                                               echo
+   #                                                               ssh osboxes@${OAM_IP}
+   #                                                           done
 
+    echo -e "\n- Naujos VM OS išjungimas:\n"                 ; ssh osboxes@${OAM_IP} sudo poweroff
     echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
 
     echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
@@ -195,7 +197,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
-
+    echo -e "\n- Galutinis, paruoštas VDI atvaizdis:\n"      ; ls -l "VMs/${VDI_FILE}"
    #echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
    #echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 
