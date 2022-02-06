@@ -12,7 +12,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y apt-transport-https ca-certif
 echo
 echo - Docker Ubuntu GPG raktai:
 echo
-curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | sudo gpg --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | sudo gpg --verbose --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 echo
 echo - Docker APT repo:
