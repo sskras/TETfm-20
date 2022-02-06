@@ -1,8 +1,8 @@
 TEMPLATE_HOSTNAME="sksw-TODO"
 
-    sudo -p '' -S bash -c 'echo osboxes ALL=\\\(ALL:ALL\\\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes' <<< osboxes.org
+    sudo -p '' -S bash -c "echo osboxes ALL=\(ALL:ALL\) NOPASSWD: ALL | tee /etc/sudoers.d/osboxes" <<< osboxes.org
 
-    echo -e '127.0.2.1\\\t${TEMPLATE_HOSTNAME}' | sudo tee -a /etc/hosts
+    echo -e "127.0.2.1\t${TEMPLATE_HOSTNAME}" | sudo tee -a /etc/hosts
    #sudo hostnamectl set-hostname ${TEMPLATE_HOSTNAME}
     hostnamectl
 
@@ -24,4 +24,4 @@ TEMPLATE_HOSTNAME="sksw-TODO"
     sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv curl iotop htop sysstat
 
     echo -n "Rebūtinam:"
-    nohup sudo -b bash -c 'sleep 2; reboot'
+    nohup sudo -b bash -c "sleep 2; reboot"

@@ -14,17 +14,7 @@ cat osboxes-ubuntu-20.04-changes.sh
 echo "......................................................................................................................"
 echo
 
-while read -u 8 REMOTE_CMD; do
-    [ "$REMOTE_CMD" = "" ] && continue
-    [ "${REMOTE_CMD::1}" = "#" ] && continue
-    echo
-   #echo "Remote CMD is: $REMOTE_CMD"
-    ssh osboxes@${IP} "$REMOTE_CMD"
-    [ $? -eq 0 ] && continue
-    echo
-    echo "Command failed, skipping the remainder."
-    exit
-done 8< osboxes-ubuntu-20.04-changes.sh
+cat osboxes-ubuntu-20.04-changes.sh | ssh osboxes@${IP}
 
 echo
 echo - Laukiam IP išjungimo:
