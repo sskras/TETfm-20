@@ -130,6 +130,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
                                                                        | read VDI_UUID
                                                                VBoxManage showmediuminfo disk "${VDI_FILE}" #\
                                                                       #| grep --color -e $ -e "${VDI_UUID}"
+                                                               VBoxManage modifyhd ${VDI_UUID} --type normal
                                                                cd - > /dev/null
 
     echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
@@ -149,7 +150,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujai VM prijungiu diskų valdiklį:\n"      ; VBoxManage storagectl ${VM0} --name "SATA valdiklis" --add sata --portcount 3 --bootable on
     echo -e "\n- Naujos VM diskinė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -i storage
     echo -e "\n- Naujai VM prijungiu disko ataizdį:\n"       ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
-                                                               VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|In use)/'
+                                                               VBoxManage showmediuminfo disk ${VDI_UUID}
     echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
     echo -e "\n- Naujos VM tinklo konfigūracija:\n"          ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
@@ -180,7 +181,7 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
 
     echo -e "\n- Naujos VM OS išjungimas:\n"                 ; ssh osboxes@${OAM_IP} sudo poweroff
     echo -e "\n- Naujos VM tinklas išsijungia:\n"            ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
-    echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
+    echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk ${VDI_UUID}
 
    #echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
@@ -191,13 +192,16 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
                                                                VBoxManage snapshot ${VM0} delete "${VM0_01_CLEAN}"
    #echo -e "\n- Uždarau VM snapšoto failą:\n"               ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
 
-    echo -e "\n- Nuo VM atjungiamas sisteminis diskas:\n"    ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium "none"
+    echo -e "\n- Nuo VM atjungiamas sisteminis diskas:\n"    ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium none
                                                                VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
                                                                VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
 
     echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
     echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
+
+    echo -e "\n- Disko atvaizdį darau Multi-attach:\n"       ; VBoxManage modifyhd ${VDI_UUID} --type multiattach
+                                                               VBoxManage showmediuminfo disk ${VDI_UUID}
     echo -e "\n- Galutinis, paruoštas VDI atvaizdis:\n"      ; ls -l "VMs/${VDI_FILE}"
    #echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
    #echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
