@@ -59,21 +59,16 @@ VBox_setup_serial_console () {
     echo
     echo "VM paspauskite <Ctrl-X>"
     echo
-    echo "Iškart persijunkite čia (atgal į CLI)."
-    echo "Spauskite <Enter>"
+    echo "Persijunkite čia (atgal į CLI)."
+    echo "Pateksite į VMSerial konsolę."
     echo
-    echo "Būsite prijungti prie Serial konsolės."
-    echo "Tuomet įsijunkite į OS, paleiskite:"
+    echo "Tuomet prisijunkite prie OS (osboxes:osboxes.org),"
+    echo "paleiskite komandą:"
     echo
-    echo " $ stty rows $LINES columns $COLUMNS"
-    echo " $ sudo apt update"
-    echo " $ sudo apt install openssh-server"
+    echo " $ stty rows $LINES columns $COLUMNS ; sudo apt update ; sudo DEBIAN_FRONTEND=noninteractive apt install openssh-server -y"
     echo
     echo "... ir su ^] + ^D atsijunkite su Serial konsolės."
     echo
-    echo -n "<Enter> ?"
-
-    read
 
     # Išvalau būsimą Serial logą:
     > ${UART_SCR}
