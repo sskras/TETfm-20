@@ -91,7 +91,10 @@ function VBox_get_OAM_IP () {
 
 # Pradžia:
 
-echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
+
+function build_gold () {
+
+    echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
 
    # Jei Windows, papildau PATH į VBoxManage.exe dirą.
    # Taip pat primapinu Windows jūzerio VirtualBox subdirą prie MSYS2 jūzerio home-diros:
@@ -171,13 +174,13 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
                                                                [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
-    echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
-                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
-                                                                   read ANS
-                                                                   [ "$ANS" = "jau" ] && break
-                                                                   echo
-                                                                   ssh osboxes@${OAM_IP}
-                                                               done
+   #echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
+   #                                                               echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
+   #                                                               read ANS
+   #                                                               [ "$ANS" = "jau" ] && break
+   #                                                               echo
+   #                                                               ssh osboxes@${OAM_IP}
+   #                                                           done
 
     echo -e "\n- Naujos VM OS išjungimas:\n"                 ; ssh osboxes@${OAM_IP} sudo poweroff
     echo -e "\n- Naujos VM tinklas išsijungia:\n"            ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
@@ -205,5 +208,8 @@ echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
     echo -e "\n- Galutinis, paruoštas VDI atvaizdis:\n"      ; ls -l "VMs/${VDI_FILE}"
    #echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
    #echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
+}
+
+build_gold
 
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
