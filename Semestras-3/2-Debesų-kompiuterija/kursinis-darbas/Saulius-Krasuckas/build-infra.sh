@@ -28,6 +28,7 @@ VM0_02_SSH_OK="${VM0}-02-SSH-OK"
 
 VDI_URL="https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/20.04/20.04.3/Desktop/64bit.7z/download?use_mirror=netix"
 VDI_ZIP="Ubuntu-20.04.3-Desktop-64bit.7z"
+VDI_FILE="64bit/Ubuntu 20.04.3 (64bit).vdi"                 # Pagrindinio (Golden) VDI failo vardas
 
 
 shopt -s lastpipe
@@ -87,7 +88,7 @@ VBox_setup_serial_console () {
 
 function VBox_get_OAM_IP () {
     VBoxManage showvminfo $1 \
-        | awk 'BEGIN {FS="[ ,]+"} /NIC 2:/ {print tolower($4)}' \
+        | awk 'BEGIN {FS="[ ,]+"} /NIC [23]:/ {print tolower($4)}' \
 	| read MAC
     cat /C/Users/saukrs/.VirtualBox/*.leases \
         | awk 'BEGIN {FS="\""} /'$MAC'/ {GO=1; MAC_AT=NR} GO && NR == MAC_AT+1 {print $2}'
@@ -206,11 +207,24 @@ function build_gold () {
     out "- Galutinis, paruoštas VDI atvaizdis:"              ; ls -l "VMs/${VDI_FILE}"
 }
 
-build_gold
+# build_gold
+
+set -e
 
     VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
     NODE1="ubuntu1"
 
+    out "- Pradinės VM:"                                     ; VBoxManage list vms
+                                                               VBoxManage showvminfo ${VM1} > /dev/null 2>&1 && \
+                                                               {
+                                                                       echo
+                                                                       echo "VM \"${VM1}\" jau egzistuoja, darbas stabdomas"
+                                                                       exit
+                                                               }
+    out "- Host OS atvaizdis:"                               ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" \
+                                                                       | awk '/^UUID/ {print $2}' \
+                                                                       | read VDI_UUID
+                                                               VBoxManage showmediuminfo disk "VMs/${VDI_FILE}"
     out "- Nauja VM:"                                        ; VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
     out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VM1} --cpus ${VM_CPUS} --memory ${VM_RAM}
     out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VM1} --name "${VM1}-SATA" --add sata --portcount 3 --bootable on
@@ -226,7 +240,8 @@ build_gold
     out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM1} | grep "^${VM1}-SATA"
     out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM1} | awk '/^NIC/ && !/^NIC .* disabled/'
 
-    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM OAM tinklas kyla (>20 s):"              ; for((i=0; i<22; i++)); do sleep 1; echo -n .; done; echo " Jau!"
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM1} | read OAM_IP; echo ${OAM_IP}
    #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
    #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
@@ -239,9 +254,11 @@ build_gold
                                                                done
 
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} sudo poweroff
+    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM1} poweroff
+                                                               until $(VBoxManage showvminfo ${VM1} | grep -q powered.off); do sleep 1; done; sleep 2
 
    #out "- Trinu naują NAT potinklį iš DHCP:"                ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
    #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 
    #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
-exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
+exec > /dev/tty 2>&1                                         # Stabdau išvesties dubliavimą
