@@ -22,7 +22,7 @@ UART_IRQ="4"                                                # VM Serial/UART IRQ
 VM_CPUS=2                                                   # VM CPU skaičius
 VM_RAM=1024                                                 # VM RAM apimtis
 
-VM0="VGTU-2022-DeKo-saukrs-LDVM0"                           # Bendros VM vardas
+VM0="VGTU-2022-DeKo-saukrs-CPVM0"                           # Bendros VM vardas
 VM0_01_CLEAN="${VM0}-01-CLEAN"
 VM0_02_SSH_OK="${VM0}-02-SSH-OK"
 
@@ -161,9 +161,6 @@ function build_gold () {
     out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
     out "- Naujos VM tinklo konfigūracija:"                  ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
-   #out "- Naujos VM naujas NAT potinklis:"                  ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
-   #                                                           VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
-   #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VM0} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
     out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VM0} --nic2 hostonly --hostonlyadapter2 "${IF_HOSTONLY}"
     out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
 
@@ -190,14 +187,11 @@ function build_gold () {
     out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
     out "- Naujos VM sisteminis diskas:"                     ; VBoxManage showmediuminfo disk ${VDI_UUID}
 
-   #echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
     out "- Naujos VM snapšotai:"                             ; VBoxManage snapshot ${VM0} list
-
     out "- Trinu VM snapšotus:"                              ; VBoxManage snapshot ${VM0} delete "${VM0_02_SSH_OK}"
                                                                VBoxManage snapshot ${VM0} delete "${VM0_01_CLEAN}"
-   #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
 
     out "- Nuo VM atjungiamas sisteminis diskas:"            ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium none
                                                                VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
@@ -210,10 +204,44 @@ function build_gold () {
     out "- Disko atvaizdį darau Multi-attach:"               ; VBoxManage modifyhd ${VDI_UUID} --type multiattach
                                                                VBoxManage showmediuminfo disk ${VDI_UUID}
     out "- Galutinis, paruoštas VDI atvaizdis:"              ; ls -l "VMs/${VDI_FILE}"
-   #out "- Trinu naują NAT potinklį iš DHCP:"                ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
-   #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 }
 
 build_gold
 
+    VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
+    NODE1="ubuntu1"
+
+    out "- Nauja VM:"                                        ; VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
+    out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VM1} --cpus ${VM_CPUS} --memory ${VM_RAM}
+    out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VM1} --name "${VM1}-SATA" --add sata --portcount 3 --bootable on
+    out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VM1} --storagectl "${VM1}-SATA" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
+   #out "- Naujos VM naujas NAT potinklis:"                  ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
+   #                                                           VBoxManage modifyvm ${VM1} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
+   #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VM1} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
+    out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VM1} --nic3 hostonly --hostonlyadapter3 "${IF_HOSTONLY}"
+    out "- Naujos VM startas:"                               ; VBoxManage startvm ${VM1}
+
+    out "- Naujos VM išplėsti resursai:"                     ; VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
+    out "- Naujos VM diskinė konfigūracija:"                 ; VBoxManage showvminfo ${VM1} | grep -i storage
+    out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM1} | grep "^${VM1}-SATA"
+    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM1} | awk '/^NIC/ && !/^NIC .* disabled/'
+
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
+   #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
+   #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
+
+    out "- Naujos VM tvarkymo kartojimas:"                   ; for ((;;)); do
+                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
+                                                                   read ANS
+                                                                   [ "$ANS" = "jau" ] && break
+                                                                   echo
+                                                                   ssh osboxes@${OAM_IP}
+                                                               done
+
+    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} sudo poweroff
+
+   #out "- Trinu naują NAT potinklį iš DHCP:"                ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
+   #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
+
+   #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
 exec > /dev/tty 2>&1                                        # Stabdau išvesties dubliavimą
