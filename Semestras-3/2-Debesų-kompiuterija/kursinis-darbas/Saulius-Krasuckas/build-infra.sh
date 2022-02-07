@@ -31,7 +31,16 @@ VDI_ZIP="Ubuntu-20.04.3-Desktop-64bit.7z"
 VDI_FILE="64bit/Ubuntu 20.04.3 (64bit).vdi"                 # Pagrindinio (Golden) VDI failo vardas
 
 
+set -e
+set -o pipefail
 shopt -s lastpipe
+
+# From: https://stackoverflow.com/a/69151087/1025073
+#   keep track of the last executed command
+trap 'LAST_COMMAND=$CURRENT_COMMAND; CURRENT_COMMAND=$BASH_COMMAND' DEBUG
+#   on error: print the failed command
+trap 'ERROR_CODE=$?; FAILED_COMMAND=$LAST_COMMAND; tput setaf 1; echo "ERROR: command \"$FAILED_COMMAND\" failed with exit code $ERROR_CODE"; tput sgr0;' ERR INT TERM
+
 
 # TODO: Jei vietoje `tee` panaudotume GNU `script`, išliktų terminalinės spalvos.
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
@@ -86,10 +95,15 @@ VBox_setup_serial_console () {
 }
 
 
+function VBox_get_OAM_MAC () {
+    VM="$1"
+    VBoxManage showvminfo "$VM" \
+        | awk 'BEGIN {FS="[ ,]+"} /NIC [23]:/ && !/disabled$/ {print tolower($4)}'
+}
+
+
 function VBox_get_OAM_IP () {
-    VBoxManage showvminfo $1 \
-        | awk 'BEGIN {FS="[ ,]+"} /NIC [23]:/ {print tolower($4)}' \
-	| read MAC
+    MAC="$1"
     cat /C/Users/saukrs/.VirtualBox/*.leases \
         | awk 'BEGIN {FS="\""} /'$MAC'/ {GO=1; MAC_AT=NR} GO && NR == MAC_AT+1 {print $2}'
 }
@@ -172,7 +186,9 @@ function build_gold () {
     out "- Naujos VM švarus pradinis snapšotas:"             ; VBoxManage snapshot ${VM0} take ${VM0_01_CLEAN} --live
     out "- Naujos VM tvarkymas konsolėje:"                   ; VBox_setup_serial_console ${VM0}
     out "- Naujos VM snapšotas su įjungtu SSH:"              ; VBoxManage snapshot ${VM0} take ${VM0_02_SSH_OK} --live
-    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_MAC ${VM0} | read OAM_MAC; echo "MAC: ${OAM_MAC}"
+                                                               VBox_get_OAM_IP ${OAM_MAC} | read OAM_IP; echo ${OAM_IP}
+
     out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
                                                                [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
@@ -209,8 +225,6 @@ function build_gold () {
 
 # build_gold
 
-set -e
-
     VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
     NODE1="ubuntu1"
 
@@ -240,8 +254,9 @@ set -e
     out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM1} | grep "^${VM1}-SATA"
     out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM1} | awk '/^NIC/ && !/^NIC .* disabled/'
 
-    out "- Naujos VM OAM tinklas kyla (>20 s):"              ; for((i=0; i<22; i++)); do sleep 1; echo -n .; done; echo " Jau!"
-    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM1} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM OAM MAC:"                               ; VBox_get_OAM_MAC ${VM1} | read OAM_MAC; echo ${OAM_MAC}
+    out "- Naujos VM OAM tinklas kyla (>20 s):"              ; for((i=0; i<32; i++)); do sleep 1; echo -n .; done; echo " Jau!"
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${OAM_MAC} | read OAM_IP; echo ${OAM_IP}
    #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
    #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
@@ -261,4 +276,5 @@ set -e
    #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 
    #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
+
 exec > /dev/tty 2>&1                                         # Stabdau išvesties dubliavimą
