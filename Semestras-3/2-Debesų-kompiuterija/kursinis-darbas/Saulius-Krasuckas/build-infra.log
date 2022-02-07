@@ -1,166 +1,80 @@
-build-host.sh: Pradinio VM atvaizdžio konfigūravimas
-
-- Host OS atvaizdžio išspaudimas:
-
-x 64bit/
-x 64bit/Ubuntu 20.04.3 (64bit).vdi
-
-- Host OS atvaizdžio informacija:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-Parent UUID:    base
-State:          created
-Type:           multiattach
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-Storage format: VDI
-Format variant: dynamic default
-Capacity:       512000 MBytes
-Size on disk:   12651 MBytes
-Encryption:     disabled
-Property:       AllocationBlockSize=1048576
 
 - Pradinės VM:
 
 
+- Host OS atvaizdžio informacija:
+
+
 - Nauja VM:
 
-Virtual machine 'VGTU-2022-DeKo-saukrs-LDVM0' is created and registered.
-UUID: 866cdb82-2ed9-44c5-86fb-30e4c3b95020
-Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-LDVM0\VGTU-2022-DeKo-saukrs-LDVM0.vbox'
-
-- Dabartinės VM:
-
-"VGTU-2022-DeKo-saukrs-LDVM0" {866cdb82-2ed9-44c5-86fb-30e4c3b95020}
-
-- Naujos VM pirminė konfigūracija:
-
-Memory size:                 128MB
-Number of CPUs:              1
+Virtual machine 'VGTU-2022-DeKo-saukrs-CPVM1' is created and registered.
+UUID: fec4f61c-becc-4023-bafd-3f65a5725072
+Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-CPVM1\VGTU-2022-DeKo-saukrs-CPVM1.vbox'
 
 - Naujos VM resursų plėtimas:
 
+
+- Naujai VM prijungiu diskų valdiklį:
+
+
+- Naujai VM prijungiu disko ataizdį:
+
+
+- Naujos VM OAM tinklas:
+
+
+- Naujos VM startas:
+
+Waiting for VM "VGTU-2022-DeKo-saukrs-CPVM1" to power on...
+VM "VGTU-2022-DeKo-saukrs-CPVM1" has been successfully started.
 
 - Naujos VM išplėsti resursai:
 
 Memory size:                 1024MB
 Number of CPUs:              2
 
-- Naujai VM prijungiu diskų valdiklį:
-
-
 - Naujos VM diskinė konfigūracija:
 
-Storage Controller Name (0):            SATA valdiklis
+Storage Controller Name (0):            VGTU-2022-DeKo-saukrs-CPVM1-SATA
 Storage Controller Type (0):            IntelAhci
 Storage Controller Instance Number (0): 0
 Storage Controller Max Port Count (0):  30
 Storage Controller Port Count (0):      3
 Storage Controller Bootable (0):        on
 
-- Naujai VM prijungiu disko ataizdį:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-Parent UUID:    base
-State:          created
-Type:           normal (base)
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-Storage format: VDI
-Format variant: dynamic default
-Capacity:       512000 MBytes
-Size on disk:   12651 MBytes
-Encryption:     disabled
-Property:       AllocationBlockSize=1048576
-In use by VMs:  VGTU-2022-DeKo-saukrs-LDVM0 (UUID: 866cdb82-2ed9-44c5-86fb-30e4c3b95020)
-
 - Naujos VM diskų valdiklio konfigūracija:
 
-SATA valdiklis (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi (UUID: b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f)
-
-- Naujos VM tinklo konfigūracija:
-
-NIC 1:                       MAC: 0800279CB626, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
-NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-
-- Naujos VM OAM tinklas:
-
+VGTU-2022-DeKo-saukrs-CPVM1-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-CPVM1\Snapshots\{f928301f-96de-4ff4-9be1-d99c986aff07}.vdi (UUID: f928301f-96de-4ff4-9be1-d99c986aff07)
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800279CB626, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800278DF2A3, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 08002714FE8D, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:                       MAC: 08002792AAE2, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
-- Naujos VM Serial konsolė:
+- Naujos VM OAM tinklas kyla:
 
-UART 1:                      I/O base: 0x03f8, IRQ: 4, attached to tcp (server) '23001', 16550A
-UART 2:                      disabled
-UART 3:                      disabled
-UART 4:                      disabled
-
-- Naujos VM startas:
-
-Waiting for VM "VGTU-2022-DeKo-saukrs-LDVM0" to power on...
-VM "VGTU-2022-DeKo-saukrs-LDVM0" has been successfully started.
-
-- Naujos VM pristabdymas:
-
-
-- Naujos VM švarus pradinis snapšotas:
-
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-Snapshot taken. UUID: 093d3759-e498-46cf-bad4-66361ed4e156
-
-- Naujos VM tvarkymas konsolėje:
-
-VM lange Spauskite kombinaciją <Host-P>, tuomet <Esc>
-Kartokite <Esc> paspaudimus be perstojo.
-Kai pasirodys GRUB meniu, spauskite <e>
-Eikite žemyn iki eilutės:
-
-        linux        /boot/vmlinuz-...
-
-Spauskite <End> ir gale prirašykite:
-
-... console=ttyS0,115200n8
-
-Taip pat ištrinkite tokius parametrus:
-
-... quiet ...
-... splash ...
-
-VM paspauskite <Ctrl-X>, startuos OS.
-
-Sugrįžkite atgal į terminalą.
-Patekote į VM Serial konsolę.
-
-Prisijunkite prie OS (osboxes:osboxes.org),
-paleiskite komandą:
-
- $ stty rows 58 columns 210 ; sudo apt update ; sudo apt install -y openssh-server
-
-... ir palaukite įvykdymo
-Sėkmės atveju atsijunkite su Serial konsolės su ^] + ^D
-
-Trying 127.0.0.1...
-Connected to 127.0.0.1.
-Escape character is '^]'.
-
-telnet> 
-Connection closed.
-
-- Naujos VM snapšotas su įjungtu SSH:
-
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-Snapshot taken. UUID: fbd1e5fc-b89a-485c-b6cd-e3c97eb8b4bf
+...................... Jau!
++ out '- Naujos VM OAM IP:'
++ echo -e '\n- Naujos VM OAM IP:\n'
 
 - Naujos VM OAM IP:
 
-192.168.56.164
++ read OAM_IP
++ VBox_get_OAM_IP VGTU-2022-DeKo-saukrs-CPVM1
++ VBoxManage showvminfo VGTU-2022-DeKo-saukrs-CPVM1
++ read MAC
++ awk 'BEGIN {FS="[ ,]+"} /NIC 3:/ {print tolower($4)}'
++ awk 'BEGIN {FS="\""} /08002792aae2/ {GO=1; MAC_AT=NR} GO && NR == MAC_AT+1 {print $2}'
++ cat '/C/Users/saukrs/.VirtualBox/HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter-Dhcpd.leases' /C/Users/saukrs/.VirtualBox/NAT-network-APP-Dhcpd.leases /C/Users/saukrs/.VirtualBox/NAT-network-OAM-Dhcpd.leases /C/Users/saukrs/.VirtualBox/NATNetwork101-Dhcpd.leases
++ echo 192.168.56.172
+192.168.56.172
++ set +x
 
 - Naujos VM tvarkymo kartojimas:
 
 Ar Guest konfigūracija _jau_ tinkama? <Ne> 
-Warning: Permanently added '192.168.56.164' (ED25519) to the list of known hosts.
+Warning: Permanently added '192.168.56.172' (ED25519) to the list of known hosts.
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-28-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -170,100 +84,63 @@ Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-28-generic x86_64)
 0 updates can be applied immediately.
 
 Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Sun Feb  6 17:32:14 2022
-]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ stty rows 58 columns 210 ; sudo apt update ; sudo apt install openssh-server -y[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kudo s[Kapt install sshpass
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-The following NEW packages will be installed:
-  sshpass
-0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-Need to get 10.5 kB of archives.
-After this operation, 30.7 kB of additional disk space will be used.
-[33m0% [Working][0m            Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 sshpass amd64 1.06-1 [10.5 kB]
-[33m80% [1 sshpass 10.5 kB/10.5 kB 100%][0m[33m                                    100% [Working][0m              Fetched 10.5 kB in 0s (24.1 kB/s)
+Last login: Sun Feb  6 23:33:10 2022 from 192.168.56.1
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ sudo apt install sshpasstty rows 58 columns 210 ; sudo apt update ; sudo apt install openssh-server -y[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cudo apt install sshpass[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo [Kssh localhost
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-28-generic x86_64)
 
-7[0;57r8[1ASelecting previously unselected package sshpass.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 186927 files and directories currently installed.)
-Preparing to unpack .../sshpass_1.06-1_amd64.deb ...
-7[58;0f[42m[30mProgress: [  0%][49m[39m [............................................................................................................................................................................................] 87[58;0f[42m[30mProgress: [ 20%][49m[39m [#####################################.......................................................................................................................................................] 8Unpacking sshpass (1.06-1) ...
-7[58;0f[42m[30mProgress: [ 40%][49m[39m [###########################################################################.................................................................................................................] 8Setting up sshpass (1.06-1) ...
-7[58;0f[42m[30mProgress: [ 60%][49m[39m [################################################################################################################............................................................................] 87[58;0f[42m[30mProgress: [ 80%][49m[39m [######################################################################################################################################################......................................] 8Processing triggers for man-db (2.9.1-1) ...
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
 
-7[0;58r8[1A[J]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ logout
-Connection to 192.168.56.164 closed.
-Ar Guest konfigūracija _jau_ tinkama? <Ne> 
-- Naujos VM OS išjungimas:
+0 updates can be applied immediately.
 
-Connection to 192.168.56.164 closed by remote host.
-
-- Naujos VM tinklas išsijungia:
-
-64 bytes from 192.168.56.164: icmp_seq=0 ttl=64 time=0.683 ms
-64 bytes from 192.168.56.164: icmp_seq=1 ttl=64 time=0.449 ms
---- 192.168.56.164 ping statistics ---
-
-- Naujos VM sisteminis diskas:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-Parent UUID:    base
-State:          created
-Type:           normal (base)
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-Storage format: VDI
-Format variant: dynamic default
-Capacity:       512000 MBytes
-Size on disk:   12651 MBytes
-Encryption:     disabled
-Property:       AllocationBlockSize=1048576
-In use by VMs:  VGTU-2022-DeKo-saukrs-LDVM0 (UUID: 866cdb82-2ed9-44c5-86fb-30e4c3b95020) [VGTU-2022-DeKo-saukrs-LDVM0-01-CLEAN (UUID: 093d3759-e498-46cf-bad4-66361ed4e156)]
-Child UUIDs:    c3bcf564-a3aa-4055-81e2-48a4b96b1a0d
-
-- Naujos VM išjungimas:
-
-VBoxManage.exe: error: Machine 'VGTU-2022-DeKo-saukrs-LDVM0' is not currently running
-
-- Naujos VM snapšotai:
-
-   Name: VGTU-2022-DeKo-saukrs-LDVM0-01-CLEAN (UUID: 093d3759-e498-46cf-bad4-66361ed4e156)
-      Name: VGTU-2022-DeKo-saukrs-LDVM0-02-SSH-OK (UUID: fbd1e5fc-b89a-485c-b6cd-e3c97eb8b4bf) *
-
-- Trinu VM snapšotus:
-
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-Deleting snapshot 'VGTU-2022-DeKo-saukrs-LDVM0-02-SSH-OK' (fbd1e5fc-b89a-485c-b6cd-e3c97eb8b4bf)
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-Deleting snapshot 'VGTU-2022-DeKo-saukrs-LDVM0-01-CLEAN' (093d3759-e498-46cf-bad4-66361ed4e156)
-
-- Nuo VM atjungiamas sisteminis diskas:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-State:          created
-Type:           normal (base)
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-
-- Trinu naują VM:
-
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-rm: cannot remove '/home/saukrs/src/TETfm-20/Semestras-3/2-Debesų-kompiuterija/kursinis-darbas/Saulius-Krasuckas/VMs/VGTU-2022-DeKo-saukrs-LDVM0': No such file or directory
-
-- Galutinės VM:
-
-
-- Disko atvaizdį darau Multi-attach:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-Parent UUID:    base
-State:          created
-Type:           multiattach
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-Storage format: VDI
-Format variant: dynamic default
-Capacity:       512000 MBytes
-Size on disk:   12707 MBytes
-Encryption:     disabled
-Property:       AllocationBlockSize=1048576
-
-- Galutinis, paruoštas VDI atvaizdis:
-
--rw-r--r-- 1 saukrs None 13324255232 Feb  6 23:34 VMs/64bit/Ubuntu 20.04.3 (64bit).vdi
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Feb  7 23:43:40 2022 from 192.168.56.1
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ logout
+Connection to localhost closed.
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ ip a[Kr
+default via 10.0.2.2 dev enp0s3 proto dhcp metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+192.168.56.0/24 dev enp0s9 proto kernel scope link src 192.168.56.172 metric 101 
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:8d:f2:a3 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86339sec preferred_lft 86339sec
+    inet6 fe80::78f2:3495:628e:df87/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enp0s9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:92:aa:e2 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.172/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s9
+       valid_lft 539sec preferred_lft 539sec
+    inet6 fe80::ac3c:8164:f63e:da26/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:58:c6:52:94 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ fg[K^C
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ w
+ 21:44:41 up 1 min,  1 user,  load average: 1.04, 0.57, 0.22
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+osboxes  pts/0    192.168.56.1     23:43    0.00s  0.13s  0.01s w
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ fg
+-bash: fg: current: no such job
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ fg
+-bash: fg: current: no such job
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ ss -4nl[K[Ken
+Netid              State              Recv-Q              Send-Q                                   Local Address:Port                             Peer Address:Port              Process                          
+udp                ESTAB              0                   0                                192.168.56.172%enp0s9:68                             192.168.56.100:67                 ino:25121 sk:1 <->              
+udp                ESTAB              0                   0                                     10.0.2.15%enp0s3:68                                   10.0.2.2:67                 ino:25120 sk:2 <->              
+tcp                ESTAB              0                   0                                       192.168.56.172:22                               192.168.56.1:54743              timer:(keepalive,118min,0) ino:30449 sk:3 <->
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ ^C
+]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ logout
+Connection to 192.168.56.172 closed.
