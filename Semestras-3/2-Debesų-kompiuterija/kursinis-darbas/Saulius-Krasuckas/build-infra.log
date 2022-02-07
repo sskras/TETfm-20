@@ -19,7 +19,7 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'VGTU-2022-DeKo-saukrs-CPVM1' is created and registered.
-UUID: 15f7dbe1-e82b-49a3-9d8f-9335a929c988
+UUID: 8e9d097e-a260-4b00-8e25-f5a3ac24dee5
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-CPVM1\VGTU-2022-DeKo-saukrs-CPVM1.vbox'
 
 - Naujos VM resursų plėtimas:
@@ -55,81 +55,29 @@ Storage Controller Bootable (0):        on
 
 - Naujos VM diskų valdiklio konfigūracija:
 
-VGTU-2022-DeKo-saukrs-CPVM1-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-CPVM1\Snapshots\{52fa43f5-7519-457a-a83a-b6cd9d0f4237}.vdi (UUID: 52fa43f5-7519-457a-a83a-b6cd9d0f4237)
+VGTU-2022-DeKo-saukrs-CPVM1-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\VGTU-2022-DeKo-saukrs-CPVM1\Snapshots\{1ee6fc9d-a8da-4d7a-bf5e-dc87afa5dcd8}.vdi (UUID: 1ee6fc9d-a8da-4d7a-bf5e-dc87afa5dcd8)
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 0800271ED556, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 080027E68E85, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 3:                       MAC: 080027D8A7A9, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:                       MAC: 0800270C2BD5, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM OAM MAC:
 
-080027d8a7a9
+0800270c2bd5
 
-- Naujos VM OAM tinklas kyla (>20 s):
+- Naujos VM OS kyla (>20 s):
 
-................................ Jau!
+............ Jau!
 
 - Naujos VM OAM IP:
 
-192.168.56.185
+192.168.56.190
 
 - Naujos VM tvarkymo kartojimas:
 
 Ar Guest konfigūracija _jau_ tinkama? <Ne> 
-Warning: Permanently added '192.168.56.185' (ED25519) to the list of known hosts.
-Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-28-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-0 updates can be applied immediately.
-
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Sun Feb  6 23:33:10 2022 from 192.168.56.1
-]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ ip 
-Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
-       ip [ -force ] -batch filename
-where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
-                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
-                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
-                   vrf | sr | nexthop }
-       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
-                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
-                    -f[amily] { inet | inet6 | mpls | bridge | link } |
-                    -4 | -6 | -I | -D | -M | -B | -0 |
-                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
-                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
-                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
-                    -c[olor]}
-]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ ipa[K a
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
-       valid_lft forever preferred_lft forever
-2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:1e:d5:56 brd ff:ff:ff:ff:ff:ff
-    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
-       valid_lft 86363sec preferred_lft 86363sec
-    inet6 fe80::a3f0:a88d:3fc8:e776/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
-3: enp0s9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:d8:a7:a9 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.56.185/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s9
-       valid_lft 564sec preferred_lft 564sec
-    inet6 fe80::ccac:1aba:5319:cfca/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
-4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
-    link/ether 02:42:b3:aa:b9:55 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ fg
--bash: fg: current: no such job
-]0;osboxes@sksw-TODO: ~osboxes@sksw-TODO:~$ logout
-Connection to 192.168.56.185 closed.
-[31mERROR: command "ssh osboxes@${OAM_IP}" failed with exit code 1
+Host key verification failed.
+[31mERROR: command "ssh osboxes@${OAM_IP}" failed with exit code 255
 (B[m

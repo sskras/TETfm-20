@@ -255,7 +255,14 @@ function build_gold () {
     out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM1} | awk '/^NIC/ && !/^NIC .* disabled/'
 
     out "- Naujos VM OAM MAC:"                               ; VBox_get_OAM_MAC ${VM1} | read OAM_MAC; echo ${OAM_MAC}
-    out "- Naujos VM OAM tinklas kyla (>20 s):"              ; for((i=0; i<32; i++)); do sleep 1; echo -n .; done; echo " Jau!"
+    out "- Naujos VM OS kyla (>10 s):"                       ; for ((i=0; i<32; i++)); do
+                                                                   VBox_get_OAM_IP ${OAM_MAC} | wc -c | read CHARS
+                                                                   [ ! $CHARS = 0 ] &&
+                                                                       { echo " Jau!"; break; }
+                                                                   sleep 1
+                                                                   echo -n .
+                                                               done
+
     out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${OAM_MAC} | read OAM_IP; echo ${OAM_IP}
    #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
    #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
