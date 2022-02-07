@@ -36,6 +36,10 @@ shopt -s lastpipe
 exec > >(tee -i "${LOG_FILE}") 2>&1                         # Dubliuoju išvestį į logą
 
 
+out () {
+    echo -e "\n$*\n"
+}
+
 VBox_setup_serial_console () {
 
     export LINES COLUMNS
@@ -122,13 +126,13 @@ function build_gold () {
    #
    #      "C:\Program Files\Oracle\VirtualBox\vboxmanage.exe" setextradata global GUI/SuppressMessages remindAboutAutoCapture,remindAboutMouseIntegrationOn,showRuntimeError.warning.HostAudioNotResponding,remindAboutGoingSeamless,remindAboutInputCapture,remindAboutGoingFullscreen,remindAboutMouseIntegrationOff,confirmGoingSeamless,confirmInputCapture,remindAboutPausedVMInput,confirmVMReset,confirmGoingFullscreen,remindAboutWrongColorDepth
                                                                cd ${BASE_DIR}/VMs
-   #echo -e "\n- Host OS atvaizdžio parsiuntimas:\n"         ; curl -LC - ${VDI_URL} -o ${VDI_ZIP} || { echo "Parsisiųsti \"${VDI_ZIP}\" nepavyko, pabaiga"; exit; }
-    echo -e "\n- Host OS atvaizdžio išspaudimas:\n"          ; bsdtar -tvf ${VDI_ZIP} \
+   #out "- Host OS atvaizdžio parsiuntimas:"                 ; curl -LC - ${VDI_URL} -o ${VDI_ZIP} || { echo "Parsisiųsti \"${VDI_ZIP}\" nepavyko, pabaiga"; exit; }
+    out "- Host OS atvaizdžio išspaudimas:"                  ; bsdtar -tvf ${VDI_ZIP} \
                                                                        | awk '/vdi$/ {$1=$2=$3=$4=$5=$6=$7=$8=""; print}' \
                                                                        | read VDI_FILE
                                                                bsdtar -xvkf ${VDI_ZIP} #\
                                                                       #| grep --color -e $ -e "${VDI_FILE}"
-    echo -e "\n- Host OS atvaizdžio informacija:\n"          ; VBoxManage showmediuminfo disk "${VDI_FILE}" \
+    out "- Host OS atvaizdžio informacija:"                  ; VBoxManage showmediuminfo disk "${VDI_FILE}" \
                                                                        | awk '/^UUID/ {print $2}' \
                                                                        | read VDI_UUID
                                                                VBoxManage showmediuminfo disk "${VDI_FILE}" #\
@@ -136,45 +140,45 @@ function build_gold () {
                                                                VBoxManage modifyhd ${VDI_UUID} --type normal
                                                                cd - > /dev/null
 
-    echo -e "\n- Pradinės VM:\n"                             ; VBoxManage list vms
+    out "- Pradinės VM:"                                     ; VBoxManage list vms
                                                                VBoxManage showvminfo ${VM0} > /dev/null 2>&1 && \
                                                                {
                                                                        echo
                                                                        echo "VM \"${VM0}\" jau egzistuoja, darbas stabdomas"
                                                                        exit
                                                                }
-    echo -e "\n- Nauja VM:\n"                                ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
-    echo -e "\n- Dabartinės VM:\n"                           ; VBoxManage list vms
+    out "- Nauja VM:"                                        ; VBoxManage createvm --name ${VM0} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
+    out "- Dabartinės VM:"                                   ; VBoxManage list vms
 
-    echo -e "\n- Naujos VM pirminė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
-    echo -e "\n- Naujos VM resursų plėtimas:\n"              ; VBoxManage modifyvm ${VM0} --cpus ${VM_CPUS} --memory ${VM_RAM}
-    echo -e "\n- Naujos VM išplėsti resursai:\n"             ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
+    out "- Naujos VM pirminė konfigūracija:"                 ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
+    out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VM0} --cpus ${VM_CPUS} --memory ${VM_RAM}
+    out "- Naujos VM išplėsti resursai:"                     ; VBoxManage showvminfo ${VM0} | grep -e CPUs -e Memory
 
-    echo -e "\n- Naujai VM prijungiu diskų valdiklį:\n"      ; VBoxManage storagectl ${VM0} --name "SATA valdiklis" --add sata --portcount 3 --bootable on
-    echo -e "\n- Naujos VM diskinė konfigūracija:\n"         ; VBoxManage showvminfo ${VM0} | grep -i storage
-    echo -e "\n- Naujai VM prijungiu disko ataizdį:\n"       ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
+    out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VM0} --name "SATA valdiklis" --add sata --portcount 3 --bootable on
+    out "- Naujos VM diskinė konfigūracija:"                 ; VBoxManage showvminfo ${VM0} | grep -i storage
+    out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
                                                                VBoxManage showmediuminfo disk ${VDI_UUID}
-    echo -e "\n- Naujos VM diskų valdiklio konfigūracija:\n" ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
+    out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
-    echo -e "\n- Naujos VM tinklo konfigūracija:\n"          ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
-   #echo -e "\n- Naujos VM naujas NAT potinklis:\n"          ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
+    out "- Naujos VM tinklo konfigūracija:"                  ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
+   #out "- Naujos VM naujas NAT potinklis:"                  ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
    #                                                           VBoxManage modifyvm ${VM0} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
-   #echo -e "\n- Naujos VM Brige su LANu:\n"                 ; VBoxManage modifyvm ${VM0} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
-    echo -e "\n- Naujos VM OAM tinklas:\n"                   ; VBoxManage modifyvm ${VM0} --nic2 hostonly --hostonlyadapter2 "${IF_HOSTONLY}"
-    echo -e "\n- Naujos VM papildyta tinklo konfigūracija:\n"; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
+   #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VM0} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
+    out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VM0} --nic2 hostonly --hostonlyadapter2 "${IF_HOSTONLY}"
+    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
 
-    echo -e "\n- Naujos VM Serial konsolė:\n"                ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
+    out "- Naujos VM Serial konsolė:"                        ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
                                                                VBoxManage showvminfo ${VM0} | grep "UART"
-    echo -e "\n- Naujos VM startas:\n"                       ; VBoxManage startvm ${VM0}
-    echo -e "\n- Naujos VM pristabdymas:\n"                  ; VBoxManage controlvm ${VM0} pause
-    echo -e "\n- Naujos VM švarus pradinis snapšotas:\n"     ; VBoxManage snapshot ${VM0} take ${VM0_01_CLEAN} --live
-    echo -e "\n- Naujos VM tvarkymas konsolėje:\n"           ; VBox_setup_serial_console ${VM0}
-    echo -e "\n- Naujos VM snapšotas su įjungtu SSH:\n"      ; VBoxManage snapshot ${VM0} take ${VM0_02_SSH_OK} --live
-    echo -e "\n- Naujos VM OAM IP:\n"                        ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
-    echo -e "\n- Naujos VM tvarkymas per SSH:\n"             ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
+    out "- Naujos VM startas:"                               ; VBoxManage startvm ${VM0}
+    out "- Naujos VM pristabdymas:"                          ; VBoxManage controlvm ${VM0} pause
+    out "- Naujos VM švarus pradinis snapšotas:"             ; VBoxManage snapshot ${VM0} take ${VM0_01_CLEAN} --live
+    out "- Naujos VM tvarkymas konsolėje:"                   ; VBox_setup_serial_console ${VM0}
+    out "- Naujos VM snapšotas su įjungtu SSH:"              ; VBoxManage snapshot ${VM0} take ${VM0_02_SSH_OK} --live
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM0} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
                                                                [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
-   #echo -e "\n- Naujos VM tvarkymo kartojimas:\n"           ; for ((;;)); do
+   #out "- Naujos VM tvarkymo kartojimas:"                   ; for ((;;)); do
    #                                                               echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
    #                                                               read ANS
    #                                                               [ "$ANS" = "jau" ] && break
@@ -182,32 +186,32 @@ function build_gold () {
    #                                                               ssh osboxes@${OAM_IP}
    #                                                           done
 
-    echo -e "\n- Naujos VM OS išjungimas:\n"                 ; ssh osboxes@${OAM_IP} sudo poweroff
-    echo -e "\n- Naujos VM tinklas išsijungia:\n"            ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
-    echo -e "\n- Naujos VM sisteminis diskas:\n"             ; VBoxManage showmediuminfo disk ${VDI_UUID}
+    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} sudo poweroff
+    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
+    out "- Naujos VM sisteminis diskas:"                     ; VBoxManage showmediuminfo disk ${VDI_UUID}
 
    #echo -en "\n! VM po <Enter> bus išjungta ir ištrinta:"   ; read
-    echo -e "\n- Naujos VM išjungimas:\n"                    ; VBoxManage controlvm ${VM0} poweroff
+    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM0} poweroff
                                                                until $(VBoxManage showvminfo ${VM0} | grep -q powered.off); do sleep 1; done; sleep 2
-    echo -e "\n- Naujos VM snapšotai:\n"                     ; VBoxManage snapshot ${VM0} list
+    out "- Naujos VM snapšotai:"                             ; VBoxManage snapshot ${VM0} list
 
-    echo -e "\n- Trinu VM snapšotus:\n"                      ; VBoxManage snapshot ${VM0} delete "${VM0_02_SSH_OK}"
+    out "- Trinu VM snapšotus:"                              ; VBoxManage snapshot ${VM0} delete "${VM0_02_SSH_OK}"
                                                                VBoxManage snapshot ${VM0} delete "${VM0_01_CLEAN}"
-   #echo -e "\n- Uždarau VM snapšoto failą:\n"               ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
+   #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
 
-    echo -e "\n- Nuo VM atjungiamas sisteminis diskas:\n"    ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium none
+    out "- Nuo VM atjungiamas sisteminis diskas:"            ; VBoxManage storageattach ${VM0} --storagectl "SATA valdiklis" --port 0 --device 0 --medium none
                                                                VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
                                                                VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" | awk '/^(UUID|State|Type|Location|In use)/'
 
-    echo -e "\n- Trinu naują VM:\n"                          ; VBoxManage unregistervm ${VM0} --delete
+    out "- Trinu naują VM:"                                  ; VBoxManage unregistervm ${VM0} --delete
                                                                rm -rv ${BASE_DIR}/VMs/${VM0}
-    echo -e "\n- Galutinės VM:\n"                            ; VBoxManage list vms
+    out "- Galutinės VM:"                                    ; VBoxManage list vms
 
-    echo -e "\n- Disko atvaizdį darau Multi-attach:\n"       ; VBoxManage modifyhd ${VDI_UUID} --type multiattach
+    out "- Disko atvaizdį darau Multi-attach:"               ; VBoxManage modifyhd ${VDI_UUID} --type multiattach
                                                                VBoxManage showmediuminfo disk ${VDI_UUID}
-    echo -e "\n- Galutinis, paruoštas VDI atvaizdis:\n"      ; ls -l "VMs/${VDI_FILE}"
-   #echo -e "\n- Trinu naują NAT potinklį iš DHCP:\n"        ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
-   #echo -e "\n- Trinu naują NAT potinklį iš viso:\n"        ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
+    out "- Galutinis, paruoštas VDI atvaizdis:"              ; ls -l "VMs/${VDI_FILE}"
+   #out "- Trinu naują NAT potinklį iš DHCP:"                ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
+   #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 }
 
 build_gold
