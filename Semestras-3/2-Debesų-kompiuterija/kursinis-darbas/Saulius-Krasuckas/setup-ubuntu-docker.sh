@@ -4,10 +4,12 @@
 
 echo
 echo - Paketų indekso naujinimas:
+echo
 sudo apt update
 
 echo
 echo - curl diegimas + https palaikymas:
+echo
 sudo DEBIAN_FRONTEND=noninteractive apt install -y apt-transport-https ca-certificates curl
 
 echo
@@ -22,14 +24,17 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 
 echo
 echo - Paketų indekso naujinimas:
+echo
 sudo apt update
 
 echo
 echo - Docker CE diegimas:
+echo
 sudo DEBIAN_FRONTEND=noninteractive apt install -y docker-ce-cli docker-scan-plugin docker-ce
 
 echo
 echo - Docker Rootless įrankiai:
+echo
 sudo DEBIAN_FRONTEND=noninteractive apt install -y docker-ce-rootless-extras
 
 echo

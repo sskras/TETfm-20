@@ -37,6 +37,7 @@ echo
 
 echo
 echo - Upgreidinam:
+echo
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 sudo DEBIAN_FRONTEND=noninteractive apt install -y vim colordiff pv curl iotop htop sysstat sshpass
