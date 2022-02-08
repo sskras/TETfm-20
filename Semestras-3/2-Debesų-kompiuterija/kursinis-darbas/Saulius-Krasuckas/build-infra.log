@@ -1,92 +1,27 @@
-
-- Pradinės VM:
-
-"swarm-n01" {c2526b48-c2ce-4707-ae6e-098153d9bc5b}
-"swarm-n02" {6dc33e82-2608-4f11-b434-f74dc836ced5}
-
-- Host OS atvaizdis:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-Parent UUID:    base
-State:          locked read
-Type:           multiattach
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-Storage format: VDI
-Format variant: dynamic default
-Capacity:       512000 MBytes
-Size on disk:   12707 MBytes
-Encryption:     disabled
-Property:       AllocationBlockSize=1048576
-Child UUIDs:    635e3c85-e362-436e-9e81-b787a6cf1c40
-                99f74e7d-7873-4fe8-a546-1604b064c7b6
-
-- Nauja VM:
-
-Virtual machine 'swarm-n03' is created and registered.
-UUID: 52925bf7-4ce7-4351-a0a6-d80a0c109737
-Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n03\swarm-n03.vbox'
-
-- Naujos VM resursų plėtimas:
-
-
-- Naujai VM prijungiu diskų valdiklį:
-
-
-- Naujai VM prijungiu disko ataizdį:
-
-
-- Naujos VM App tinklas:
-
-
-- Naujos VM OAM tinklas:
-
-
-- Naujos VM startas:
-
-Waiting for VM "swarm-n03" to power on...
-VM "swarm-n03" has been successfully started.
-
-- Naujos VM išplėsti resursai:
-
-Memory size:                 1024MB
-Number of CPUs:              2
-
-- Naujos VM diskinė konfigūracija:
-
-Storage Controller Name (0):            swarm-n03-SATA
-Storage Controller Type (0):            IntelAhci
-Storage Controller Instance Number (0): 0
-Storage Controller Max Port Count (0):  30
-Storage Controller Port Count (0):      3
-Storage Controller Bootable (0):        on
-
-- Naujos VM diskų valdiklio konfigūracija:
-
-swarm-n03-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n03\Snapshots\{0cc9bd29-0dba-484b-b3a9-3d949683dba5}.vdi (UUID: 0cc9bd29-0dba-484b-b3a9-3d949683dba5)
-
-- Naujos VM papildyta tinklo konfigūracija:
-
-NIC 1:                       MAC: 08002716B566, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
-NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 08002741117B, Attachment: Internal Network 'network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
-NIC 3:                       MAC: 08002744769A, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
-
-- Naujos VM OS kyla (>10 s):
-
-............... Jau!
-
-- Naujos VM OAM IP:
-
-192.168.56.253
-
-- Naujos VM OAM hostname lauke:
-
+10.1.1.9	swarm-n01
+192.168.56.254	swarm-n01-oam
+10.1.1.10	swarm-n02
+192.168.56.251	swarm-n02-oam
+10.1.1.11	swarm-n03
 192.168.56.253	swarm-n03-oam
+10.1.1.9	swarm-n01
+192.168.56.254	swarm-n01-oam
+10.1.1.10	swarm-n02
+192.168.56.251	swarm-n02-oam
+10.1.1.11	swarm-n03
 192.168.56.253	swarm-n03-oam
+10.1.1.9	swarm-n01
+192.168.56.254	swarm-n01-oam
+10.1.1.10	swarm-n02
+192.168.56.251	swarm-n02-oam
+10.1.1.11	swarm-n03
+192.168.56.253	swarm-n03-oam
+10.1.1.9	swarm-n01
+192.168.56.254	swarm-n01-oam
+10.1.1.10	swarm-n02
+192.168.56.251	swarm-n02-oam
+10.1.1.11	swarm-n03
+192.168.56.253	swarm-n03-oam
+removed 'hosts-bendri'
 
-- Naujos VM SSH serviso laukimas:
-
-
-- Naujos VM pirmas SSH prisijungimas:
-
-ssh: connect to host swarm-n03-oam port 22: Connection timed out
+Infrastruktūra sustatyta.
