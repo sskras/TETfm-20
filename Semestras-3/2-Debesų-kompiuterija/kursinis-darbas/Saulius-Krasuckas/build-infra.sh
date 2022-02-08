@@ -103,7 +103,8 @@ function VBox_get_OAM_MAC () {
 
 
 function VBox_get_OAM_IP () {
-    MAC="$1"
+    VM="$1"
+    VBox_get_OAM_MAC ${VM} | read MAC
     cat /C/Users/saukrs/.VirtualBox/*.leases \
         | awk 'BEGIN {FS="\""} /'$MAC'/ {GO=1; MAC_AT=NR} GO && NR == MAC_AT+1 {print $2}'
 }
@@ -186,8 +187,7 @@ function build_gold () {
     out "- Naujos VM švarus pradinis snapšotas:"             ; VBoxManage snapshot ${VM0} take ${VM0_01_CLEAN} --live
     out "- Naujos VM tvarkymas konsolėje:"                   ; VBox_setup_serial_console ${VM0}
     out "- Naujos VM snapšotas su įjungtu SSH:"              ; VBoxManage snapshot ${VM0} take ${VM0_02_SSH_OK} --live
-    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_MAC ${VM0} | read OAM_MAC; echo "MAC: ${OAM_MAC}"
-                                                               VBox_get_OAM_IP ${OAM_MAC} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_MAC ${VM0} | read OAM_IP; echo ${OAM_IP}
 
     out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
                                                                [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
@@ -254,16 +254,14 @@ function build_gold () {
     out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM1} | grep "^${VM1}-SATA"
     out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM1} | awk '/^NIC/ && !/^NIC .* disabled/'
 
-    out "- Naujos VM OAM MAC:"                               ; VBox_get_OAM_MAC ${VM1} | read OAM_MAC; echo ${OAM_MAC}
     out "- Naujos VM OS kyla (>10 s):"                       ; for ((i=0; i<32; i++)); do
-                                                                   VBox_get_OAM_IP ${OAM_MAC} | wc -c | read CHARS
+                                                                   VBox_get_OAM_IP ${VM1} | wc -c | read CHARS
                                                                    [ ! $CHARS = 0 ] &&
                                                                        { echo " Jau!"; break; }
                                                                    sleep 1
                                                                    echo -n .
                                                                done
-
-    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${OAM_MAC} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM1} | read OAM_IP; echo ${OAM_IP}
    #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
    #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
@@ -276,6 +274,7 @@ function build_gold () {
                                                                done
 
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} sudo poweroff
+    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM1} poweroff
                                                                until $(VBoxManage showvminfo ${VM1} | grep -q powered.off); do sleep 1; done; sleep 2
 
