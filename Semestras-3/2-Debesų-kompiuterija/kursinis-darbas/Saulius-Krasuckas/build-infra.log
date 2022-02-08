@@ -4,20 +4,20 @@
 
 - swarm-n01:
 
- 23:08:06 up  1:38,  0 users,  load average: 0.20, 0.21, 0.14
- 23:08:07 up  1:47,  0 users,  load average: 0.10, 0.15, 0.12
- 23:08:09 up 34 min,  0 users,  load average: 0.14, 0.12, 0.10
+swarm-n01
+swarm-n02
+swarm-n03
 
 - swarm-n02:
 
- 23:08:10 up  1:38,  0 users,  load average: 0.58, 0.29, 0.16
- 23:08:11 up  1:47,  0 users,  load average: 0.09, 0.14, 0.12
- 23:08:12 up 34 min,  0 users,  load average: 0.13, 0.12, 0.10
+swarm-n01
+swarm-n02
+swarm-n03
 
 - swarm-n03:
 
- 23:08:13 up  1:38,  0 users,  load average: 0.77, 0.34, 0.18
- 23:08:14 up  1:47,  0 users,  load average: 0.32, 0.19, 0.14
- 23:08:15 up 34 min,  0 users,  load average: 0.13, 0.12, 0.10
+swarm-n01
+swarm-n02
+swarm-n03
 
 Infrastruktūra sustatyta.

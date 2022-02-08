@@ -321,19 +321,19 @@ MSYS2_fixes
 
     out "- ECDSA raktų patvirtinimas"
     out "- ${VM1}:"
-    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM1} uptime
-    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM2} uptime
-    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM3} uptime
+    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM1} hostname
+    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM2} hostname
+    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM3} hostname
 
     out "- ${VM2}:"
-    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM1} uptime
-    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM2} uptime
-    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM3} uptime
+    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM1} hostname
+    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM2} hostname
+    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM3} hostname
 
     out "- ${VM3}:"
-    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM1} uptime
-    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM2} uptime
-    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM3} uptime
+    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM1} hostname
+    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM2} hostname
+    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM3} hostname
 
 echo
 echo Infrastruktūra sustatyta.
