@@ -280,7 +280,7 @@ build_vm () {
                                                                sh -c "${OAM_HOSTNAME} | tee -a /etc/hosts"
                                                              # Work around w10 hardlinking issue:
                                                                tail -1 /C/Windows/System32/drivers/etc/hosts
-                                                               sleep 2
+    out "- Naujos VM SSH serviso laukimas:"                  ; sleep 4
     out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${VMn}-oam uptime
     out "- Naujos VM OAM hostname viduj:"                    ; scp setup-ubuntu-hostnames.sh osboxes@${VMn}-oam:
                                                                ssh osboxes@${VMn}-oam bash setup-ubuntu-hostnames.sh ${VMn}
