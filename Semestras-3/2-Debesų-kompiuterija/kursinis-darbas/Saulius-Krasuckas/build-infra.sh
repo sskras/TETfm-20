@@ -185,9 +185,9 @@ function build_gold () {
                                                                VBoxManage showmediuminfo disk ${VDI_UUID}
     out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM0} | grep "^SATA valdiklis"
 
-    out "- Naujos VM tinklo konfigūracija:"                  ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
+    out "- Naujos VM tinklo konfigūracija:"                  ; VBoxManage showvminfo ${VM0} | awk '/^NIC:/ && !/^NIC .* disabled/'
     out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VM0} --nic2 hostonly --hostonlyadapter2 "${IF_HOSTONLY}"
-    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM0} | awk '/^NIC/ && !/^NIC .* disabled/'
+    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM0} | awk '/^NIC:/ && !/^NIC .* disabled/'
 
     out "- Naujos VM Serial konsolė:"                        ; VBoxManage modifyvm ${VM0} --uart1 ${UART_I_O_PORT} ${UART_IRQ} --uartmode1 tcpserver ${UART_TCP_PORT}
                                                                VBoxManage showvminfo ${VM0} | grep "UART"
@@ -265,7 +265,7 @@ build_vm () {
     out "- Naujos VM išplėsti resursai:"                     ; VBoxManage showvminfo ${VMn} | grep -e CPUs -e Memory
     out "- Naujos VM diskinė konfigūracija:"                 ; VBoxManage showvminfo ${VMn} | grep -i storage
     out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VMn} | grep "^${VMn}-SATA"
-    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VMn} | awk '/^NIC/ && !/^NIC .* disabled/'
+    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VMn} | awk '/^NIC:/ && !/^NIC .* disabled/'
 
     out "- Naujos VM OS kyla (>10 s):"                       ; for ((i=0; i<32; i++)); do
                                                                    VBox_get_OAM_IP ${VMn} | wc -c | read CHARS
@@ -280,16 +280,16 @@ build_vm () {
                                                                sh -c "${OAM_HOSTNAME} | tee -a /etc/hosts"
                                                              # Work around w10 hardlinking issue:
                                                                tail -1 /C/Windows/System32/drivers/etc/hosts
-    out "- Naujos VM SSH serviso laukimas:"                  ; sleep 4
+    out "- Naujos VM SSH serviso laukimas:"                  ; sleep 6
     out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${VMn}-oam uptime
     out "- Naujos VM OAM hostname viduj:"                    ; scp setup-ubuntu-hostnames.sh osboxes@${VMn}-oam:
                                                                ssh osboxes@${VMn}-oam bash setup-ubuntu-hostnames.sh ${VMn}
 
   # TODO: vietoj OS išjungimo praverstų sukonfigint po App IP adresą, tada paeiliui iš visų VMų parsipūst /etc/hosts ir sukonkatenavus į vieną, išdalinti atga į visus VMus:
-    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${VMn}-oam 'nohup sudo -b bash -c "sleep 2; poweroff"'
-    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 60 -W 1 ${VMn}-oam
-    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
-                                                               until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
+   #out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${VMn}-oam 'nohup sudo -b bash -c "sleep 2; poweroff"'
+   #out "- Naujos VM tinklas išsijungia:"                    ; ping -c 60 -W 1 ${VMn}-oam
+   #out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
+   #                                                           until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
 }
 
 MSYS2_fixes
