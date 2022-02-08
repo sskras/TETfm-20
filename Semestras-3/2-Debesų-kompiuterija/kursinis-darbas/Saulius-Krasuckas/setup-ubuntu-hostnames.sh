@@ -1,6 +1,6 @@
 shopt -s lastpipe
 
-APP_IF_NUM=2
+APP_IF_NUMB=2
 OAM_IF_NUMB=3
 HOSTNAME=$1
 
@@ -12,8 +12,8 @@ get_IP_by_name () {
     ip a show dev $1 | awk 'BEGIN {FS="[ /]+"} /inet / {print $3}'
 }
 
-get_IF_by_numb 2 | read APP_IF
-get_IP_by_name ${APP_IF} | read APP_IP
+get_IF_by_numb ${APP_IF_NUMB} | read APP_IF_NAME
+get_IP_by_name ${APP_IF_NAME} | read APP_IP
 
 echo -e "${APP_IP}\t${HOSTNAME}" | sudo tee -a /etc/hosts
 
