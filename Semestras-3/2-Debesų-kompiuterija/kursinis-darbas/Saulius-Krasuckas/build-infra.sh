@@ -305,19 +305,20 @@ MSYS2_fixes
    #NODE1="ubuntu1"
 
    #for NODE in swarm-n0{1..6}; do echo; done
-   #build_network
-   #build_vm ${VM1}
-   #build_vm ${VM2}
-   #build_vm ${VM3}
 
-   #> hosts-bendri
-   #ssh ${VM1}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-   #ssh ${VM2}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-   #ssh ${VM3}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-   #cat hosts-bendri | ssh ${VM1}-oam sudo tee -a /etc/hosts
-   #cat hosts-bendri | ssh ${VM2}-oam sudo tee -a /etc/hosts
-   #cat hosts-bendri | ssh ${VM3}-oam sudo tee -a /etc/hosts
-   #rm -v hosts-bendri
+    build_network
+    build_vm ${VM1}
+    build_vm ${VM2}
+    build_vm ${VM3}
+
+    > hosts-bendri
+    ssh ${VM1}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+    ssh ${VM2}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+    ssh ${VM3}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+    cat hosts-bendri | ssh ${VM1}-oam sudo tee -a /etc/hosts
+    cat hosts-bendri | ssh ${VM2}-oam sudo tee -a /etc/hosts
+    cat hosts-bendri | ssh ${VM3}-oam sudo tee -a /etc/hosts
+    rm -v hosts-bendri
 
     out "- ECDSA raktų patvirtinimas"
     out "- ${VM1}:"
