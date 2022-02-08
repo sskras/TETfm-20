@@ -262,6 +262,7 @@ function build_gold () {
                                                                    echo -n .
                                                                done
     out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM1} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${OAM_IP} uptime
    #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
    #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
