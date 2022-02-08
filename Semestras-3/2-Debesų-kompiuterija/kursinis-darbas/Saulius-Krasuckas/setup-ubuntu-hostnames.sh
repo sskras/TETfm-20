@@ -21,3 +21,10 @@ get_IF_by_numb ${OAM_IF_NUMB} | read OAM_IF_NAME
 get_IP_by_name ${OAM_IF_NAME} | read OAM_IP
 
 echo -e "${OAM_IP}\t${NEW_HOSTNAME}-oam" | sudo tee -a /etc/hosts
+
+echo
+hostnamectl
+sudo hostnamectl set-hostname ${NEW_HOSTNAME}
+
+echo
+hostnamectl
