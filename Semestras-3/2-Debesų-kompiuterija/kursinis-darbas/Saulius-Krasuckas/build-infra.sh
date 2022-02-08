@@ -226,12 +226,6 @@ function build_gold () {
     out "- Galutinis, paruoštas VDI atvaizdis:"              ; ls -l "VMs/${VDI_FILE}"
 }
 
-MSYS2_fixes
-# build_gold
-
-    VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
-    NODE1="ubuntu1"
-
 build_vm () {
     VMn="$1"
 
@@ -276,6 +270,13 @@ build_vm () {
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
 						       until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
 }
+
+MSYS2_fixes
+# build_gold
+
+    VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
+   #NODE1="ubuntu1"
+    build_vm ${VM1}
 
 echo
 echo Infrastruktūra sustatyta.
