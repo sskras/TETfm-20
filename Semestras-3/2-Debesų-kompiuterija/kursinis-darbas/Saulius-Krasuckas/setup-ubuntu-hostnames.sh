@@ -1,7 +1,7 @@
 shopt -s lastpipe
 
-APP_IF_NUMB=2
-OAM_IF_NUMB=3
+APP_IF_NUMB=3
+OAM_IF_NUMB=4
 NEW_HOSTNAME=$1
 
 get_IF_by_numb () {

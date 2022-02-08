@@ -257,7 +257,7 @@ build_vm () {
     out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VMn} --cpus ${VM_CPUS} --memory ${VM_RAM}
     out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VMn} --name "${VMn}-SATA" --add sata --portcount 3 --bootable on
     out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VMn} --storagectl "${VMn}-SATA" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
-    out "- Naujos VM App tinklas:"                           ; VBoxManage modifyvm swarm-n01 --nic2 intnet --intnet2 "${INT_NET_NAME}"
+    out "- Naujos VM App tinklas:"                           ; VBoxManage modifyvm ${VMn} --nic2 intnet --intnet2 "${INT_NET_NAME}"
    #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VMn} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
     out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VMn} --nic3 hostonly --hostonlyadapter3 "${IF_HOSTONLY}"
     out "- Naujos VM startas:"                               ; VBoxManage startvm ${VMn}
