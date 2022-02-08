@@ -39,7 +39,7 @@ shopt -s lastpipe
 #   keep track of the last executed command
 trap 'LAST_COMMAND=$CURRENT_COMMAND; CURRENT_COMMAND=$BASH_COMMAND' DEBUG
 #   on error: print the failed command
-trap 'ERROR_CODE=$?; FAILED_COMMAND=$LAST_COMMAND; tput setaf 1; echo "ERROR: command \"$FAILED_COMMAND\" failed with exit code $ERROR_CODE"; tput sgr0;' ERR INT TERM
+trap 'PIPES="${PIPESTATUS[@]}"; ERROR_CODE=$?; FAILED_COMMAND=$LAST_COMMAND; tput setaf 1; echo "ERROR: command \"$FAILED_COMMAND\" failed with exit code $ERROR_CODE"; tput sgr0; echo "PIPES: ${PIPES}"' ERR INT TERM
 
 
 # TODO: Jei vietoje `tee` panaudotume GNU `script`, išliktų terminalinės spalvos.
@@ -112,9 +112,7 @@ function VBox_get_OAM_IP () {
 # Pradžia:
 
 
-function build_gold () {
-
-    echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
+function MSYS2_fixes () {
 
    # Jei Windows, papildau PATH į VBoxManage.exe dirą.
    # Taip pat primapinu Windows jūzerio VirtualBox subdirą prie MSYS2 jūzerio home-diros:
@@ -132,7 +130,12 @@ function build_gold () {
 	# Panaudosiu Cygwin ping portą vietoj nebesveikai nesiintegruojančio NT porto:
 	. ~/bin/ping-NT-fixes.sh
     fi
+}
 
+
+function build_gold () {
+
+    echo "$(basename $0): Pradinio VM atvaizdžio konfigūravimas"
 
    #TODO: įprastinių GUI įspėjimų (Baloon) išjungimas, http://www.edugeek.net/forums/thin-client-virtual-machines/192994-virtualbox-3.html#33
    #
@@ -223,6 +226,7 @@ function build_gold () {
     out "- Galutinis, paruoštas VDI atvaizdis:"              ; ls -l "VMs/${VDI_FILE}"
 }
 
+MSYS2_fixes
 # build_gold
 
     VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
@@ -266,22 +270,25 @@ function build_gold () {
    #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
    #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
 
-    out "- Naujos VM tvarkymo kartojimas:"                   ; for ((;;)); do
-                                                                   echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
-                                                                   read ANS
-                                                                   [ "$ANS" = "jau" ] && break
-                                                                   echo
-                                                                   ssh osboxes@${OAM_IP}
-                                                               done
+   #out "- Naujos VM tvarkymo kartojimas:"                   ; for ((;;)); do
+   #                                                               echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
+   #                                                               read ANS
+   #                                                               [ "$ANS" = "jau" ] && break
+   #                                                               echo
+   #                                                               ssh osboxes@${OAM_IP}
+   #                                                               echo
+   #                                                           done
 
-    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} sudo poweroff
+    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} 'nohup sudo -b bash -c "sleep 2; poweroff"'
     out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
-    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM1} poweroff
-                                                               until $(VBoxManage showvminfo ${VM1} | grep -q powered.off); do sleep 1; done; sleep 2
+    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM1} poweroff && \
+                                                               until $(VBoxManage showvminfo ${VM1} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
 
    #out "- Trinu naują NAT potinklį iš DHCP:"                ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
    #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
 
    #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
 
+echo
+echo Infrastruktūra sustatyta.
 exec > /dev/tty 2>&1                                         # Stabdau išvesties dubliavimą
