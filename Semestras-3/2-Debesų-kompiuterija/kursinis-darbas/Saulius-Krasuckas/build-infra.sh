@@ -12,6 +12,12 @@ IF_HOST_UPLINK="Intel(R) Dual Band Wireless-AC 8260"        # Interfeisas neribo
 IF_HOSTONLY="VirtualBox Host-Only Ethernet Adapter"         # Interfeisas, kuriuo vyks VMų OAM (Operation, Administration, Maintenance)
 NAT_NET_ADDR="10.1.1.0/24"                                  # Potinklis, kuriame veiks aplikacija
 NAT_NET_NAME="NAT-network-APP"                              # Potinklio vardas
+#INT_NET_ADDR="10.1.1.0/24"                                  # Potinklis, kuriame veiks aplikacija (deja, toks formatas IntNet tinklui netinkamas).
+INT_NET_NAME="network-APP"                                  # Vardas potinklio, kuriame veiks aplikacija
+INT_NET_DHCP="10.1.1.3"                                     # Potinklio DHCP serveris
+INT_NET_MASK="255.255.255.0"                                # Potinklio kaukė
+INT_NET_IP_L="10.1.1.4"
+INT_NET_IP_H="10.1.1.254"
 
 UART_SCR=${LOG_FILE%.log}-serial.script                     # Script failas VMų Serial/UART konsolei
 UART_LOG=${LOG_FILE%.log}-serial.log                        # Log failas VMų Serial/UART konsolei
@@ -98,7 +104,7 @@ VBox_setup_serial_console () {
 function VBox_get_OAM_MAC () {
     VM="$1"
     VBoxManage showvminfo "$VM" \
-        | awk 'BEGIN {FS="[ ,]+"} /NIC [23]:/ && !/disabled$/ {print tolower($4)}'
+        | awk 'BEGIN {FS="[ ,]+"} /NIC 3:/ && !/disabled$/ {print tolower($4)}'
 }
 
 
@@ -244,8 +250,10 @@ build_vm () {
     out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VMn} --cpus ${VM_CPUS} --memory ${VM_RAM}
     out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VMn} --name "${VMn}-SATA" --add sata --portcount 3 --bootable on
     out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VMn} --storagectl "${VMn}-SATA" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
-   #out "- Naujos VM naujas NAT potinklis:"                  ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
-   #                                                           VBoxManage modifyvm ${VMn} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
+    out "- Naujos VM naujas App potinklis:"                  ; VBoxManage dhcpserver add --netname "${INT_NET_NAME}" \
+                                                                --server-ip ${INT_NET_DHCP} --netmask ${INT_NET_MASK} \
+                                                                --lowerip ${INT_NET_IP_L} --upperip ${INT_NET_IP_H} --enable
+                                                               VBoxManage modifyvm swarm-n01 --nic2 intnet --intnet2 "${INT_NET_NAME}"
    #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VMn} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
     out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VMn} --nic3 hostonly --hostonlyadapter3 "${IF_HOSTONLY}"
     out "- Naujos VM startas:"                               ; VBoxManage startvm ${VMn}
