@@ -233,46 +233,48 @@ MSYS2_fixes
     NODE1="ubuntu1"
 
 build_vm () {
+    VMn="$1"
+
     out "- Pradinės VM:"                                     ; VBoxManage list vms
-                                                               VBoxManage showvminfo ${VM1} > /dev/null 2>&1 && \
+                                                               VBoxManage showvminfo ${VMn} > /dev/null 2>&1 && \
                                                                {
                                                                        echo
-                                                                       echo "VM \"${VM1}\" jau egzistuoja, darbas stabdomas"
+                                                                       echo "VM \"${VMn}\" jau egzistuoja, darbas stabdomas"
                                                                        exit
                                                                }
     out "- Host OS atvaizdis:"                               ; VBoxManage showmediuminfo disk "VMs/${VDI_FILE}" \
                                                                        | awk '/^UUID/ {print $2}' \
                                                                        | read VDI_UUID
                                                                VBoxManage showmediuminfo disk "VMs/${VDI_FILE}"
-    out "- Nauja VM:"                                        ; VBoxManage createvm --name ${VM1} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
-    out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VM1} --cpus ${VM_CPUS} --memory ${VM_RAM}
-    out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VM1} --name "${VM1}-SATA" --add sata --portcount 3 --bootable on
-    out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VM1} --storagectl "${VM1}-SATA" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
+    out "- Nauja VM:"                                        ; VBoxManage createvm --name ${VMn} --ostype Ubuntu_64 --basefolder ${BASE_DIR}/VMs --register
+    out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VMn} --cpus ${VM_CPUS} --memory ${VM_RAM}
+    out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VMn} --name "${VMn}-SATA" --add sata --portcount 3 --bootable on
+    out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VMn} --storagectl "${VMn}-SATA" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
    #out "- Naujos VM naujas NAT potinklis:"                  ; VBoxManage natnetwork add --netname "${NAT_NET_NAME}" --network "${NAT_NET_ADDR}" --enable
-   #                                                           VBoxManage modifyvm ${VM1} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
-   #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VM1} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
-    out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VM1} --nic3 hostonly --hostonlyadapter3 "${IF_HOSTONLY}"
-    out "- Naujos VM startas:"                               ; VBoxManage startvm ${VM1}
+   #                                                           VBoxManage modifyvm ${VMn} --nic1 natnetwork --natnetwork1 "${NAT_NET_NAME}"
+   #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VMn} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
+    out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VMn} --nic3 hostonly --hostonlyadapter3 "${IF_HOSTONLY}"
+    out "- Naujos VM startas:"                               ; VBoxManage startvm ${VMn}
 
-    out "- Naujos VM išplėsti resursai:"                     ; VBoxManage showvminfo ${VM1} | grep -e CPUs -e Memory
-    out "- Naujos VM diskinė konfigūracija:"                 ; VBoxManage showvminfo ${VM1} | grep -i storage
-    out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VM1} | grep "^${VM1}-SATA"
-    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VM1} | awk '/^NIC/ && !/^NIC .* disabled/'
+    out "- Naujos VM išplėsti resursai:"                     ; VBoxManage showvminfo ${VMn} | grep -e CPUs -e Memory
+    out "- Naujos VM diskinė konfigūracija:"                 ; VBoxManage showvminfo ${VMn} | grep -i storage
+    out "- Naujos VM diskų valdiklio konfigūracija:"         ; VBoxManage showvminfo --details ${VMn} | grep "^${VMn}-SATA"
+    out "- Naujos VM papildyta tinklo konfigūracija:"        ; VBoxManage showvminfo ${VMn} | awk '/^NIC/ && !/^NIC .* disabled/'
 
     out "- Naujos VM OS kyla (>10 s):"                       ; for ((i=0; i<32; i++)); do
-                                                                   VBox_get_OAM_IP ${VM1} | wc -c | read CHARS
+                                                                   VBox_get_OAM_IP ${VMn} | wc -c | read CHARS
                                                                    [ ! $CHARS = 0 ] &&
                                                                        { echo " Jau!"; break; }
                                                                    sleep 1
                                                                    echo -n .
                                                                done
-    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM1} | read OAM_IP; echo ${OAM_IP}
+    out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VMn} | read OAM_IP; echo ${OAM_IP}
     out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${OAM_IP} uptime
 
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} 'nohup sudo -b bash -c "sleep 2; poweroff"'
     out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
-    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM1} poweroff && \
-                                                               until $(VBoxManage showvminfo ${VM1} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
+    out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
+						       until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
 }
 
 echo
