@@ -264,7 +264,6 @@ build_vm () {
                                                                done
     out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VMn} | read OAM_IP; echo ${OAM_IP}
     out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${OAM_IP} uptime
-
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} 'nohup sudo -b bash -c "sleep 2; poweroff"'
     out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
@@ -274,9 +273,17 @@ build_vm () {
 MSYS2_fixes
 # build_gold
 
-    VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
+    VM1="swarm-n01"
+    VM2="swarm-n02"
+    VM3="swarm-n03"
+    VM4="swarm-n04"
+    VM5="swarm-n05"
+    VM6="swarm-n06"
+
    #NODE1="ubuntu1"
+
     build_vm ${VM1}
+    build_vm ${VM2}
 
 echo
 echo Infrastruktūra sustatyta.
