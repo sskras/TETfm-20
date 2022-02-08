@@ -263,11 +263,19 @@ build_vm () {
                                                                    echo -n .
                                                                done
     out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VMn} | read OAM_IP; echo ${OAM_IP}
-    out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${OAM_IP} uptime
-    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} 'nohup sudo -b bash -c "sleep 2; poweroff"'
-    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
+
+    out "- Naujos VM OAM hostname lauke:"                    ; OAM_HOSTNAME="echo -e '${OAM_IP}\t${VMn}-oam'"
+                                                               sh -c "${OAM_HOSTNAME} | tee -a /etc/hosts"
+                                                             # Work around w10 hardlinking issue:
+                                                               tail -1 /C/Windows/System32/drivers/etc/hosts
+    out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${VMn}-oam uptime
+    out "- Naujos VM OAM hostname viduj:"                    ; ssh osboxes@${VMn}-oam "${OAM_HOSTNAME} | sudo tee -a /etc/hosts"
+
+  # TODO: vietoj OS išjungimo praverstų sukonfigint po App IP adresą, tada paeiliui iš visų VMų parsipūst /etc/hosts ir sukonkatenavus į vieną, išdalinti atga į visus VMus:
+    out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${VMn}-oam 'nohup sudo -b bash -c "sleep 2; poweroff"'
+    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${VMn}-oam
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
-						       until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
+                                                               until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
 }
 
 MSYS2_fixes
