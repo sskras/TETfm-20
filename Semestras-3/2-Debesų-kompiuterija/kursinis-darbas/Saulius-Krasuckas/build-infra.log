@@ -1,4 +1,7 @@
 
+- Naujos VM naujas App potinklis:
+
+
 - Pradinės VM:
 
 
@@ -19,7 +22,7 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'swarm-n01' is created and registered.
-UUID: 6ff72843-a020-4a76-a0e9-99f0c342a8fe
+UUID: ad10dcac-6cef-4c7f-b67f-f68e6b517f71
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n01\swarm-n01.vbox'
 
 - Naujos VM resursų plėtimas:
@@ -31,7 +34,7 @@ Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiute
 - Naujai VM prijungiu disko ataizdį:
 
 
-- Naujos VM naujas App potinklis:
+- Naujos VM App tinklas:
 
 
 - Naujos VM OAM tinklas:
@@ -58,14 +61,14 @@ Storage Controller Bootable (0):        on
 
 - Naujos VM diskų valdiklio konfigūracija:
 
-swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n01\Snapshots\{bc651f21-f35f-4557-9c82-8ea116483c34}.vdi (UUID: bc651f21-f35f-4557-9c82-8ea116483c34)
+swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n01\Snapshots\{5773fda0-5fff-4059-b3e8-ad0c07b123dd}.vdi (UUID: 5773fda0-5fff-4059-b3e8-ad0c07b123dd)
 
 - Naujos VM papildyta tinklo konfigūracija:
 
-NIC 1:                       MAC: 080027A0B1B8, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1:                       MAC: 0800279F5D97, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
-NIC 2:                       MAC: 0800273F725A, Attachment: Internal Network 'network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
-NIC 3:                       MAC: 080027603E92, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 2:                       MAC: 080027337B79, Attachment: Internal Network 'network-APP', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:                       MAC: 0800274E1BEB, Attachment: Host-only Interface 'VirtualBox Host-Only Ethernet Adapter', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
 
 - Naujos VM OS kyla (>10 s):
 
@@ -73,93 +76,13 @@ NIC 3:                       MAC: 080027603E92, Attachment: Host-only Interface 
 
 - Naujos VM OAM IP:
 
-192.168.56.251
+192.168.56.254
 
 - Naujos VM OAM hostname lauke:
 
-192.168.56.251	swarm-n01-oam
-192.168.56.251	swarm-n01-oam
+192.168.56.254	swarm-n01-oam
+192.168.56.254	swarm-n01-oam
 
 - Naujos VM pirmas SSH prisijungimas:
 
- 22:58:29 up 0 min,  0 users,  load average: 1.78, 0.43, 0.14
-
-- Naujos VM OAM hostname viduj:
-
-10.0.2.15	swarm-n01
-10.1.1.6	swarm-n01-oam
-
-   Static hostname: sksw-TODO
-         Icon name: computer-vm
-           Chassis: vm
-        Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: 29de0a2277d948ee820b10ea79eb17a5
-    Virtualization: oracle
-  Operating System: Ubuntu 20.04.3 LTS
-            Kernel: Linux 5.13.0-28-generic
-      Architecture: x86-64
-
-   Static hostname: swarm-n01
-         Icon name: computer-vm
-           Chassis: vm
-        Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: 29de0a2277d948ee820b10ea79eb17a5
-    Virtualization: oracle
-  Operating System: Ubuntu 20.04.3 LTS
-            Kernel: Linux 5.13.0-28-generic
-      Architecture: x86-64
-
-- Naujos VM OS išjungimas:
-
-
-- Naujos VM tinklas išsijungia:
-
-PING swarm-n01-oam (192.168.56.251): 56 data bytes
-64 bytes from 192.168.56.251: icmp_seq=0 ttl=64 time=5.544 ms
-64 bytes from 192.168.56.251: icmp_seq=1 ttl=64 time=0.415 ms
-92 bytes from DESKTOP-O7JE7JE (192.168.56.1): Destination Host Unreachable
---- swarm-n01-oam ping statistics ---
-60 packets transmitted, 2 packets received, 96% packet loss
-round-trip min/avg/max/stddev = 0.415/2.979/5.544/2.565 ms
-
-- Naujos VM išjungimas:
-
-VBoxManage.exe: error: Machine 'swarm-n01' is not currently running
-
-- Pradinės VM:
-
-"swarm-n01" {6ff72843-a020-4a76-a0e9-99f0c342a8fe}
-
-- Host OS atvaizdis:
-
-UUID:           b6ebcaaa-7e70-466e-88c6-9fa5b22e3f6f
-Parent UUID:    base
-State:          created
-Type:           multiattach
-Location:       C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\64bit\Ubuntu 20.04.3 (64bit).vdi
-Storage format: VDI
-Format variant: dynamic default
-Capacity:       512000 MBytes
-Size on disk:   12707 MBytes
-Encryption:     disabled
-Property:       AllocationBlockSize=1048576
-Child UUIDs:    bc651f21-f35f-4557-9c82-8ea116483c34
-
-- Nauja VM:
-
-Virtual machine 'swarm-n02' is created and registered.
-UUID: a190991f-c449-4653-b196-df9e6cd6901d
-Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n02\swarm-n02.vbox'
-
-- Naujos VM resursų plėtimas:
-
-
-- Naujai VM prijungiu diskų valdiklį:
-
-
-- Naujai VM prijungiu disko ataizdį:
-
-
-- Naujos VM naujas App potinklis:
-
-VBoxManage.exe: error: DHCP server already exists
+ssh: connect to host swarm-n01-oam port 22: Connection timed out

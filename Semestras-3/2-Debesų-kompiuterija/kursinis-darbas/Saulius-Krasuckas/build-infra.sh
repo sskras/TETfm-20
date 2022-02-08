@@ -232,6 +232,13 @@ function build_gold () {
     out "- Galutinis, paruoštas VDI atvaizdis:"              ; ls -l "VMs/${VDI_FILE}"
 }
 
+build_network () {
+
+    out "- Naujos VM naujas App potinklis:"                  ; VBoxManage dhcpserver add --netname "${INT_NET_NAME}" \
+                                                                 --server-ip ${INT_NET_DHCP} --netmask ${INT_NET_MASK} \
+                                                                 --lowerip ${INT_NET_IP_L} --upperip ${INT_NET_IP_H} --enable
+}
+
 build_vm () {
     VMn="$1"
 
@@ -250,10 +257,7 @@ build_vm () {
     out "- Naujos VM resursų plėtimas:"                      ; VBoxManage modifyvm ${VMn} --cpus ${VM_CPUS} --memory ${VM_RAM}
     out "- Naujai VM prijungiu diskų valdiklį:"              ; VBoxManage storagectl ${VMn} --name "${VMn}-SATA" --add sata --portcount 3 --bootable on
     out "- Naujai VM prijungiu disko ataizdį:"               ; VBoxManage storageattach ${VMn} --storagectl "${VMn}-SATA" --port 0 --device 0 --type hdd --medium ${VDI_UUID}
-    out "- Naujos VM naujas App potinklis:"                  ; VBoxManage dhcpserver add --netname "${INT_NET_NAME}" \
-                                                                --server-ip ${INT_NET_DHCP} --netmask ${INT_NET_MASK} \
-                                                                --lowerip ${INT_NET_IP_L} --upperip ${INT_NET_IP_H} --enable
-                                                               VBoxManage modifyvm swarm-n01 --nic2 intnet --intnet2 "${INT_NET_NAME}"
+    out "- Naujos VM App tinklas:"                           ; VBoxManage modifyvm swarm-n01 --nic2 intnet --intnet2 "${INT_NET_NAME}"
    #out "- Naujos VM Brige su LANu:"                         ; VBoxManage modifyvm ${VMn} --nic2 bridged --bridgeadapter2 "${IF_HOST_UPLINK}"
     out "- Naujos VM OAM tinklas:"                           ; VBoxManage modifyvm ${VMn} --nic3 hostonly --hostonlyadapter3 "${IF_HOSTONLY}"
     out "- Naujos VM startas:"                               ; VBoxManage startvm ${VMn}
@@ -300,6 +304,7 @@ MSYS2_fixes
 
    #NODE1="ubuntu1"
 
+    build_network
     build_vm ${VM1}
     build_vm ${VM2}
 
