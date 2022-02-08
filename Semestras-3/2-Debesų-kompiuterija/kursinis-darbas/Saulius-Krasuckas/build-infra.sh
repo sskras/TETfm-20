@@ -275,7 +275,7 @@ build_vm () {
 
   # TODO: vietoj OS išjungimo praverstų sukonfigint po App IP adresą, tada paeiliui iš visų VMų parsipūst /etc/hosts ir sukonkatenavus į vieną, išdalinti atga į visus VMus:
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${VMn}-oam 'nohup sudo -b bash -c "sleep 2; poweroff"'
-    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 16 -W 1 ${VMn}-oam
+    out "- Naujos VM tinklas išsijungia:"                    ; ping -c 60 -W 1 ${VMn}-oam
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VMn} poweroff && \
                                                                until $(VBoxManage showvminfo ${VMn} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
 }
