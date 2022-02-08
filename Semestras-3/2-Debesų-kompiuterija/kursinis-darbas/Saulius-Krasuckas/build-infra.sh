@@ -310,14 +310,30 @@ MSYS2_fixes
    #build_vm ${VM2}
    #build_vm ${VM3}
 
-    > hosts-bendri
-    ssh ${VM1}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-    ssh ${VM2}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-    ssh ${VM3}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-    cat hosts-bendri | ssh ${VM1}-oam sudo tee -a /etc/hosts
-    cat hosts-bendri | ssh ${VM2}-oam sudo tee -a /etc/hosts
-    cat hosts-bendri | ssh ${VM3}-oam sudo tee -a /etc/hosts
-    rm -v hosts-bendri
+   #> hosts-bendri
+   #ssh ${VM1}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+   #ssh ${VM2}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+   #ssh ${VM3}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+   #cat hosts-bendri | ssh ${VM1}-oam sudo tee -a /etc/hosts
+   #cat hosts-bendri | ssh ${VM2}-oam sudo tee -a /etc/hosts
+   #cat hosts-bendri | ssh ${VM3}-oam sudo tee -a /etc/hosts
+   #rm -v hosts-bendri
+
+    out "- ECDSA raktų patvirtinimas"
+    out "- ${VM1}:"
+    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM1} uptime
+    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM2} uptime
+    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM3} uptime
+
+    out "- ${VM2}:"
+    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM1} uptime
+    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM2} uptime
+    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM3} uptime
+
+    out "- ${VM3}:"
+    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM1} uptime
+    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM2} uptime
+    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM3} uptime
 
 echo
 echo Infrastruktūra sustatyta.
