@@ -232,6 +232,7 @@ MSYS2_fixes
     VM1="VGTU-2022-DeKo-saukrs-CPVM1"                        # Bendros VM vardas
     NODE1="ubuntu1"
 
+build_vm () {
     out "- Pradinės VM:"                                     ; VBoxManage list vms
                                                                VBoxManage showvminfo ${VM1} > /dev/null 2>&1 && \
                                                                {
@@ -267,27 +268,12 @@ MSYS2_fixes
                                                                done
     out "- Naujos VM OAM IP:"                                ; VBox_get_OAM_IP ${VM1} | read OAM_IP; echo ${OAM_IP}
     out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${OAM_IP} uptime
-   #out "- Naujos VM tvarkymas per SSH:"                     ; ${BASE_DIR}/setup-osboxes-ubuntu-20.04.sh ${OAM_IP}
-   #                                                           [ ! $? = "0" ] && { echo "OS tvarkymo klaida, darbas baigiamas."; exit; }
-
-   #out "- Naujos VM tvarkymo kartojimas:"                   ; for ((;;)); do
-   #                                                               echo -n "Ar Guest konfigūracija _jau_ tinkama? <Ne> "
-   #                                                               read ANS
-   #                                                               [ "$ANS" = "jau" ] && break
-   #                                                               echo
-   #                                                               ssh osboxes@${OAM_IP}
-   #                                                               echo
-   #                                                           done
 
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${OAM_IP} 'nohup sudo -b bash -c "sleep 2; poweroff"'
     out "- Naujos VM tinklas išsijungia:"                    ; ping -c 6 -W 1 ${OAM_IP} | sed "1d; / ms$/! q"
     out "- Naujos VM išjungimas:"                            ; VBoxManage controlvm ${VM1} poweroff && \
                                                                until $(VBoxManage showvminfo ${VM1} | grep -q powered.off); do echo -n .; sleep 1; done; sleep 2 || true
-
-   #out "- Trinu naują NAT potinklį iš DHCP:"                ; VBoxManage dhcpserver remove --network "${NAT_NET_NAME}"
-   #out "- Trinu naują NAT potinklį iš viso:"                ; VBoxManage natnetwork remove --netname "${NAT_NET_NAME}"
-
-   #out "- Uždarau VM snapšoto failą:"                       ; VBoxManage closemedium disk "${VM0_02_SSH_OK}"
+}
 
 echo
 echo Infrastruktūra sustatyta.
