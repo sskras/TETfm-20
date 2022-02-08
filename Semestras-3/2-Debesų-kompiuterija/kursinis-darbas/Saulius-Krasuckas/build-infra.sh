@@ -304,9 +304,11 @@ MSYS2_fixes
 
    #NODE1="ubuntu1"
 
-    build_network
-    build_vm ${VM1}
-    build_vm ${VM2}
+   #for NODE in swarm-n0{1..6}; do echo; done
+   #build_network
+   #build_vm ${VM1}
+   #build_vm ${VM2}
+    build_vm ${VM3}
 
 echo
 echo Infrastruktūra sustatyta.
