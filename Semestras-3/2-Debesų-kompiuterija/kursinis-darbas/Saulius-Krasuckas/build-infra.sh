@@ -268,8 +268,10 @@ build_vm () {
                                                                sh -c "${OAM_HOSTNAME} | tee -a /etc/hosts"
                                                              # Work around w10 hardlinking issue:
                                                                tail -1 /C/Windows/System32/drivers/etc/hosts
+                                                               sleep 2
     out "- Naujos VM pirmas SSH prisijungimas:"              ; ssh -o StrictHostKeyChecking=no osboxes@${VMn}-oam uptime
-    out "- Naujos VM OAM hostname viduj:"                    ; ssh osboxes@${VMn}-oam "${OAM_HOSTNAME} | sudo tee -a /etc/hosts"
+    out "- Naujos VM OAM hostname viduj:"                    ; scp setup-ubuntu-hostnames.sh osboxes@${VMn}-oam:
+                                                               ssh osboxes@${VMn}-oam bash setup-ubuntu-hostnames.sh ${VMn}
 
   # TODO: vietoj OS išjungimo praverstų sukonfigint po App IP adresą, tada paeiliui iš visų VMų parsipūst /etc/hosts ir sukonkatenavus į vieną, išdalinti atga į visus VMus:
     out "- Naujos VM OS išjungimas:"                         ; ssh osboxes@${VMn}-oam 'nohup sudo -b bash -c "sleep 2; poweroff"'
