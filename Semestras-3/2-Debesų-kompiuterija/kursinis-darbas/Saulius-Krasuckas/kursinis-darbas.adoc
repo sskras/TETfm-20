@@ -73,7 +73,7 @@ VILNIUS, 2022
 
 {nbsp}
 
-=== Kursinio darbo užduotis
+=== 1. Kursinio darbo užduotis
 
 [.text-left]
 * Savarankiškai išstudijuoti _Docker Swarm_ veikimo principus, juos aprašyti
@@ -89,9 +89,10 @@ VILNIUS, 2022
 * Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
 * Pateikti naudojamas komandas
 
+
 {nbsp}
 
-=== Pagrindinė dalis
+=== 2. Pagrindinė dalis
 
 {nbsp}
 
@@ -155,9 +156,9 @@ VILNIUS, 2022
 
 {nbsp}
 
-=== Rezultatų apibendrinimas
+=== 3. Rezultatų apibendrinimas
 [.text-left]
-=== {nbsp}
+==== {nbsp}
 
 Susikonstravau VM infrastruktūrą VirtuaBox hipervizoriaus (Type II) pagrindu.
 Kiekvienai VM skyriau po tris tinklo interfeisus:
@@ -184,7 +185,7 @@ Tuo tarpu mazgai `swarm-n02` ir `swarm-n03` iškart nustojo atsiliepti į užkla
 
 Po ~20 s. jų atsakymai į užklausas atsistatė -- jie jas balansavo tarpusavyje ir grąžindavo du skirtingus Host-id.
 
-Iš esmės gavosi klasterinis _Split-brain_ scenarijus, kai abi klasterio dalys nusprendžia, kad kita pusė nebeveikia, ir bando veikti abi nepriklausomai.
+Iš esmės, situacija mano vertinimu atitinka klasterinį _Split-brain_ scenarijų, kai abi klasterio dalys nusprendžia, kad kita pusė nebeveikia, ir bando veikti abi nepriklausomai.
 
 => Darau išvadą, kad turint tiek nedaug mazgų vertėtų padidinti (replikuoti) ne tik _Worker_ skaičių, bet ir _Manager_ skaičių.
 
@@ -202,9 +203,9 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 
 {nbsp}
 
-=== Naudota literatūra
+=== 4. Naudota literatūra
 [.text-left]
-=== {nbsp}
+==== {nbsp}
 
 
 https://docs.docker.com/engine/swarm/swarm-tutorial/[Docker docs {nbsp} > {nbsp} Run your app in production {nbsp} > {nbsp} Getting started with swarm mode (tutorial)]
@@ -230,7 +231,9 @@ https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx
 
 {nbsp}
 
-=== Priedai
+<<<
+
+=== 5. Priedai
 [.text-left]
 
 (Schemos, kodas)
