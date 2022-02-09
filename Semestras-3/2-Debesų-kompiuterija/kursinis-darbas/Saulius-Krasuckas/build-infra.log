@@ -22,7 +22,7 @@ Property:       AllocationBlockSize=1048576
 - Nauja VM:
 
 Virtual machine 'swarm-n01' is created and registered.
-UUID: 1df80b70-9be5-431c-bfb3-49cf692368e7
+UUID: ae06ba44-a60d-44a3-91ac-abae7edfa962
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n01\swarm-n01.vbox'
 
 - Naujos VM resursų plėtimas:
@@ -61,7 +61,7 @@ Storage Controller Bootable (0):        on
 
 - Naujos VM diskų valdiklio konfigūracija:
 
-swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n01\Snapshots\{95925e80-7fd3-4ae7-a76a-df7fb131d93f}.vdi (UUID: 95925e80-7fd3-4ae7-a76a-df7fb131d93f)
+swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n01\Snapshots\{6ef2364f-a3a6-4fe1-a774-0806483eed01}.vdi (UUID: 6ef2364f-a3a6-4fe1-a774-0806483eed01)
 
 - Naujos VM papildyta tinklo konfigūracija:
 
@@ -72,30 +72,30 @@ swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM OAM IP:
 
-192.168.56.249
+192.168.56.101
 
 - Naujos VM OAM hostname lauke:
 
-192.168.56.249	swarm-n01-oam
-192.168.56.249	swarm-n01-oam
+192.168.56.101	swarm-n01-oam
+192.168.56.101	swarm-n01-oam
 
 - Naujos VM SSH serviso laukimas:
 
 
 - Naujos VM pirmas SSH prisijungimas:
 
- 01:49:51 up 0 min,  0 users,  load average: 1.30, 0.36, 0.12
+ 12:52:59 up 0 min,  0 users,  load average: 1.73, 0.39, 0.13
 
 - Naujos VM OAM hostname viduj:
 
-10.1.1.21	swarm-n01
-192.168.56.249	swarm-n01-oam
+10.1.1.24	swarm-n01
+192.168.56.101	swarm-n01-oam
 
    Static hostname: sksw-TODO
          Icon name: computer-vm
            Chassis: vm
         Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: c9a6f017152144deb2c9c45caca3fa22
+           Boot ID: 25a575ed8d1d4e67854d703757964963
     Virtualization: oracle
   Operating System: Ubuntu 20.04.3 LTS
             Kernel: Linux 5.13.0-28-generic
@@ -105,7 +105,7 @@ swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
          Icon name: computer-vm
            Chassis: vm
         Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: c9a6f017152144deb2c9c45caca3fa22
+           Boot ID: 25a575ed8d1d4e67854d703757964963
     Virtualization: oracle
   Operating System: Ubuntu 20.04.3 LTS
             Kernel: Linux 5.13.0-28-generic
@@ -113,7 +113,7 @@ swarm-n01-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Pradinės VM:
 
-"swarm-n01" {1df80b70-9be5-431c-bfb3-49cf692368e7}
+"swarm-n01" {ae06ba44-a60d-44a3-91ac-abae7edfa962}
 
 - Host OS atvaizdis:
 
@@ -128,12 +128,12 @@ Capacity:       512000 MBytes
 Size on disk:   12707 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
-Child UUIDs:    95925e80-7fd3-4ae7-a76a-df7fb131d93f
+Child UUIDs:    6ef2364f-a3a6-4fe1-a774-0806483eed01
 
 - Nauja VM:
 
 Virtual machine 'swarm-n02' is created and registered.
-UUID: 541c7d41-751f-49c9-9d16-71092cf5b3f2
+UUID: ab715077-c6b7-4f6a-bb9a-aeed78bd658e
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n02\swarm-n02.vbox'
 
 - Naujos VM resursų plėtimas:
@@ -172,7 +172,7 @@ Storage Controller Bootable (0):        on
 
 - Naujos VM diskų valdiklio konfigūracija:
 
-swarm-n02-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n02\Snapshots\{f0ef1b07-0992-4c22-ae6d-6dd3b1a733ed}.vdi (UUID: f0ef1b07-0992-4c22-ae6d-6dd3b1a733ed)
+swarm-n02-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n02\Snapshots\{325b83a2-0f6a-42f5-a033-d8e6dd0b9d76}.vdi (UUID: 325b83a2-0f6a-42f5-a033-d8e6dd0b9d76)
 
 - Naujos VM papildyta tinklo konfigūracija:
 
@@ -183,30 +183,30 @@ swarm-n02-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM OAM IP:
 
-192.168.56.253
+192.168.56.102
 
 - Naujos VM OAM hostname lauke:
 
-192.168.56.253	swarm-n02-oam
-192.168.56.253	swarm-n02-oam
+192.168.56.102	swarm-n02-oam
+192.168.56.102	swarm-n02-oam
 
 - Naujos VM SSH serviso laukimas:
 
 
 - Naujos VM pirmas SSH prisijungimas:
 
- 01:50:45 up 0 min,  0 users,  load average: 1.45, 0.39, 0.13
+ 12:53:39 up 0 min,  0 users,  load average: 2.53, 0.57, 0.19
 
 - Naujos VM OAM hostname viduj:
 
-10.1.1.22	swarm-n02
-192.168.56.253	swarm-n02-oam
+10.1.1.25	swarm-n02
+192.168.56.102	swarm-n02-oam
 
    Static hostname: sksw-TODO
          Icon name: computer-vm
            Chassis: vm
         Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: 02914b35f5e749798810b6979285f787
+           Boot ID: 90ca0e873193401ea684b48538d50486
     Virtualization: oracle
   Operating System: Ubuntu 20.04.3 LTS
             Kernel: Linux 5.13.0-28-generic
@@ -216,7 +216,7 @@ swarm-n02-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
          Icon name: computer-vm
            Chassis: vm
         Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: 02914b35f5e749798810b6979285f787
+           Boot ID: 90ca0e873193401ea684b48538d50486
     Virtualization: oracle
   Operating System: Ubuntu 20.04.3 LTS
             Kernel: Linux 5.13.0-28-generic
@@ -224,8 +224,8 @@ swarm-n02-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Pradinės VM:
 
-"swarm-n01" {1df80b70-9be5-431c-bfb3-49cf692368e7}
-"swarm-n02" {541c7d41-751f-49c9-9d16-71092cf5b3f2}
+"swarm-n01" {ae06ba44-a60d-44a3-91ac-abae7edfa962}
+"swarm-n02" {ab715077-c6b7-4f6a-bb9a-aeed78bd658e}
 
 - Host OS atvaizdis:
 
@@ -240,13 +240,13 @@ Capacity:       512000 MBytes
 Size on disk:   12707 MBytes
 Encryption:     disabled
 Property:       AllocationBlockSize=1048576
-Child UUIDs:    95925e80-7fd3-4ae7-a76a-df7fb131d93f
-                f0ef1b07-0992-4c22-ae6d-6dd3b1a733ed
+Child UUIDs:    6ef2364f-a3a6-4fe1-a774-0806483eed01
+                325b83a2-0f6a-42f5-a033-d8e6dd0b9d76
 
 - Nauja VM:
 
 Virtual machine 'swarm-n03' is created and registered.
-UUID: db9e545d-a624-421c-8826-57ed596c2e06
+UUID: 9c308870-6fa6-4288-bfb3-5446d37652a1
 Settings file: 'C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n03\swarm-n03.vbox'
 
 - Naujos VM resursų plėtimas:
@@ -285,7 +285,7 @@ Storage Controller Bootable (0):        on
 
 - Naujos VM diskų valdiklio konfigūracija:
 
-swarm-n03-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n03\Snapshots\{b1a553fd-2bee-4da3-a5bb-2220e92f8217}.vdi (UUID: b1a553fd-2bee-4da3-a5bb-2220e92f8217)
+swarm-n03-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-kompiuterija\kursinis-darbas\Saulius-Krasuckas\VMs\swarm-n03\Snapshots\{623ac882-303a-4bfc-834c-61164a17494d}.vdi (UUID: 623ac882-303a-4bfc-834c-61164a17494d)
 
 - Naujos VM papildyta tinklo konfigūracija:
 
@@ -296,30 +296,30 @@ swarm-n03-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
 
 - Naujos VM OAM IP:
 
-192.168.56.248
+192.168.56.103
 
 - Naujos VM OAM hostname lauke:
 
-192.168.56.248	swarm-n03-oam
-192.168.56.248	swarm-n03-oam
+192.168.56.103	swarm-n03-oam
+192.168.56.103	swarm-n03-oam
 
 - Naujos VM SSH serviso laukimas:
 
 
 - Naujos VM pirmas SSH prisijungimas:
 
- 01:51:39 up 0 min,  0 users,  load average: 2.11, 0.56, 0.19
+ 12:54:20 up 0 min,  0 users,  load average: 2.01, 0.48, 0.16
 
 - Naujos VM OAM hostname viduj:
 
-10.1.1.23	swarm-n03
-192.168.56.248	swarm-n03-oam
+10.1.1.26	swarm-n03
+192.168.56.103	swarm-n03-oam
 
    Static hostname: sksw-TODO
          Icon name: computer-vm
            Chassis: vm
         Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: 921e0f588a304339a8cd86fb3d93ca0d
+           Boot ID: b4d615a521bd43e7ab19c6e45ca09111
     Virtualization: oracle
   Operating System: Ubuntu 20.04.3 LTS
             Kernel: Linux 5.13.0-28-generic
@@ -329,35 +329,35 @@ swarm-n03-SATA (0, 0): C:\msys64\home\saukrs\src\TETfm-20\Semestras-3\2-Debesu-k
          Icon name: computer-vm
            Chassis: vm
         Machine ID: 26647d0d95bf4266b81c4849d3982e59
-           Boot ID: 921e0f588a304339a8cd86fb3d93ca0d
+           Boot ID: b4d615a521bd43e7ab19c6e45ca09111
     Virtualization: oracle
   Operating System: Ubuntu 20.04.3 LTS
             Kernel: Linux 5.13.0-28-generic
       Architecture: x86-64
-10.1.1.21	swarm-n01
-192.168.56.249	swarm-n01-oam
-10.1.1.22	swarm-n02
-192.168.56.253	swarm-n02-oam
-10.1.1.23	swarm-n03
-192.168.56.248	swarm-n03-oam
-10.1.1.21	swarm-n01
-192.168.56.249	swarm-n01-oam
-10.1.1.22	swarm-n02
-192.168.56.253	swarm-n02-oam
-10.1.1.23	swarm-n03
-192.168.56.248	swarm-n03-oam
-10.1.1.21	swarm-n01
-192.168.56.249	swarm-n01-oam
-10.1.1.22	swarm-n02
-192.168.56.253	swarm-n02-oam
-10.1.1.23	swarm-n03
-192.168.56.248	swarm-n03-oam
-10.1.1.21	swarm-n01
-192.168.56.249	swarm-n01-oam
-10.1.1.22	swarm-n02
-192.168.56.253	swarm-n02-oam
-10.1.1.23	swarm-n03
-192.168.56.248	swarm-n03-oam
+10.1.1.24	swarm-n01
+192.168.56.101	swarm-n01-oam
+10.1.1.25	swarm-n02
+192.168.56.102	swarm-n02-oam
+10.1.1.26	swarm-n03
+192.168.56.103	swarm-n03-oam
+10.1.1.24	swarm-n01
+192.168.56.101	swarm-n01-oam
+10.1.1.25	swarm-n02
+192.168.56.102	swarm-n02-oam
+10.1.1.26	swarm-n03
+192.168.56.103	swarm-n03-oam
+10.1.1.24	swarm-n01
+192.168.56.101	swarm-n01-oam
+10.1.1.25	swarm-n02
+192.168.56.102	swarm-n02-oam
+10.1.1.26	swarm-n03
+192.168.56.103	swarm-n03-oam
+10.1.1.24	swarm-n01
+192.168.56.101	swarm-n01-oam
+10.1.1.25	swarm-n02
+192.168.56.102	swarm-n02-oam
+10.1.1.26	swarm-n03
+192.168.56.103	swarm-n03-oam
 removed 'hosts-bendri'
 
 - ECDSA raktų patvirtinimas
@@ -365,29 +365,29 @@ removed 'hosts-bendri'
 
 - swarm-n01:
 
-Warning: Permanently added 'swarm-n01,10.1.1.21' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n01,10.1.1.24' (ECDSA) to the list of known hosts.
 swarm-n01
-Warning: Permanently added 'swarm-n02,10.1.1.22' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n02,10.1.1.25' (ECDSA) to the list of known hosts.
 swarm-n02
-Warning: Permanently added 'swarm-n03,10.1.1.23' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n03,10.1.1.26' (ECDSA) to the list of known hosts.
 swarm-n03
 
 - swarm-n02:
 
-Warning: Permanently added 'swarm-n01,10.1.1.21' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n01,10.1.1.24' (ECDSA) to the list of known hosts.
 swarm-n01
-Warning: Permanently added 'swarm-n02,10.1.1.22' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n02,10.1.1.25' (ECDSA) to the list of known hosts.
 swarm-n02
-Warning: Permanently added 'swarm-n03,10.1.1.23' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n03,10.1.1.26' (ECDSA) to the list of known hosts.
 swarm-n03
 
 - swarm-n03:
 
-Warning: Permanently added 'swarm-n01,10.1.1.21' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n01,10.1.1.24' (ECDSA) to the list of known hosts.
 swarm-n01
-Warning: Permanently added 'swarm-n02,10.1.1.22' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n02,10.1.1.25' (ECDSA) to the list of known hosts.
 swarm-n02
-Warning: Permanently added 'swarm-n03,10.1.1.23' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'swarm-n03,10.1.1.26' (ECDSA) to the list of known hosts.
 swarm-n03
 
 Infrastruktūra sustatyta.
