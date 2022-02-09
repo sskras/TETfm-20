@@ -207,7 +207,7 @@ Ir kai tuo tarpu pilnai išjungiau antrą mazgą, `swarm-n02`, jo replika buvo p
 
 Mazgą `swarm-n02` vėl įjungus, jis pats sugrįžo į klasterį, tačiau veikiančios replikos pasiliko savo dabartiniuose mazguose (dvi `swarm-n01` ir viena `swarm-n03`).
 
-O štai užklausos į servisą pradėjo veikti jau ir per antrąjį mazgą -- jis grįžo į klasterį ir įsitraukė į _Load-balancing_ mechanizmą.
+O štai užklausos į servisą pradėjo veikti jau ir per antrąjį mazgą -- sugrįžęs į klasterį jis įsitraukė į _Routing mesh_ ir _Load-balancing_ mechanizmą.
 
 * => Jei gedimas įvyksta _Worker_ mazge, o ne _Manager_, įtaka paslaugai beveik nejuntama.
 +
