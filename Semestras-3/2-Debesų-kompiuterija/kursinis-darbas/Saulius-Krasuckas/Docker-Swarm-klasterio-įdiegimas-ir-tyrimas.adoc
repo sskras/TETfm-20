@@ -107,8 +107,36 @@ VILNIUS, 2022
 [.text-left]
 ==== _Docker Swarm_ klasterio konfigūravimas
 
-* Sukonfigūruoti _Docker Swarm_ klasterį,
-  kurį sudaro ne mažiau trijų kompiuterių / virtualių mašinų (VM)
+. Infrastruktūrai kuri pasirinkau namie turimą nešiojamąjį kompiuterį su Windows OS.
+. Jame įsidiegiau VirtualBox VMM (arba hipervizorių).
+. Kaip _Guest OS_ pasirinkau 64-bit **Ubuntu 20.04.3 LTS** Linux distribuciją.
+. Pasinaudojau `OSboxes.org` projekto teikiamu įdiegtos OS atvaizdžiu.  <<1>>
+. VM kūrimui ir valdymui pasirinkau VirtualBox CLI `VBoxManage` ir MSYS2 įrankį, kuris Windows OS suteikia _*nix_ tipo aplinką.
+. Čia susikūriau kelis _Bash_ skriptus:
+ - https://github.com/VGTU-ELF/TETfm-20/tree/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas#:~:text=build%2Dinfra.sh,ubuntu%2Dhostnames.sh[`build-infra.sh`] (_Golden image_ ir atskirų VM formavimui)
+ - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-osboxes-ubuntu-20.04.sh[`setup-osboxes-ubuntu-20.04.sh`] (VM tvarkymo eiga)
+ - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/osboxes-ubuntu-20.04-changes.sh[`osboxes-ubuntu-20.04-changes.sh`] (pagrindiniai Guest OS tvarkymo veiksmai)
+ - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-ubuntu-docker.sh[`setup-ubuntu-docker.sh`] (_Docker_ įdiegimas)
+ - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-ubuntu-hostnames.sh[`setup-ubuntu-hostnames.sh`] (individualizuotų mazgo vardų tvarkymas)
+. Startavus `build-infra.sh`:
+ - Parsisiunčiamas `Ubuntu 20.04.3 (64bit).vdi` atvaizdis.
+ - Jo pagrindu sukuriama etaloninė VM.
+ - Ji startuojama, ir atliekami pagrindiniai OS tvarkymo veiksmai (SSH raktų tvarkymas, `sudo` perkonfigūravimas, naujinimai, paketų diegimas, perkrovimas, Docker diegimas).
+ - VM išjungiama, o disko atvaizdis paruošiamas jungimui prie keleto mašinų (angl. _Multi-attach_).
+ - Sukuriamos trys VM pagal bendrą šabloną:
+  * 1 GiB RAM, 2 CPU.
+  * 1 NIC išėjimui į internetą (angl. _Default route_);
+  * 1 NIC Docker klasterio ryšiui (_App_);
+  * 1 NIC OAM ryšiui (angl. _Operation, Administration, Maintenance_).
+  * Visi NIC gauna adresus iš VBox integruoto DHCP serviso.
+  * Kiekvienai VM nustatomas OAM IP adresas.
+  * Prie jo prisijungiama automatiškai.
+  * `/etc/hosts` faile užregistruojami suteikti IP adresai ir mazgo vardai.
+  * Tuomet šie duomenys surenkami į bendrą failą ir padalinimi į visus Guest OS iš eilės.
+  * Taip pat patvirtinami SSH ECDSA raktai tarp skirtingų mazgų.
+ - Išskyrus atvaizdžio siuntimo laiką, paruošimas trunka apie 65 min.
+ - Trys VM paruoštos darbui.
+. Rankiniu būdu konfigūruojamas _Docker Swarm mode_ klasteris:
 
 
 {nbsp}
@@ -116,9 +144,8 @@ VILNIUS, 2022
 [.text-left]
 ==== Klasterio konfigūracija
 
-* Atvaizduoti klasterio konfigūraciją grafiškai (pateikti schemas)
-
-image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/img/Docker-Swarm-klasterio-konfig%C5%ABracija.svg[]
+.(1 pav.) Klasterio mazgų konfigūracija Host OS atžvilgiu.
+image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/img/Docker-Swarm-klasterio-konfig%C5%ABracija.svg[width=100%]
 
 {nbsp}
 
@@ -166,7 +193,7 @@ Kiekvienai VM skyriau po tris tinklo interfeisus:
 
 . prisijungimui prie interneto (atnaujinimų siuntimams ir kt.)
 . aplikacijai / klasterio mazgų ryšiui;
-. OS valdymui (OAM, angl. _Operation, Administration, Maintenance_).
+. OS valdymui (OAM).
 
 Sukūriau tris VM, jose pasinaudojau _Docker Swarm Mode_ technologija ir startavau trijų mazgų klasterį:
 
@@ -219,6 +246,8 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 === 4. Naudota literatūra
 [.text-left]
 ==== {nbsp}
+
+**[[[1]]]** https://www.osboxes.org/ubuntu/#ubuntu-20-04-3-info[OSboxes > VirtualBox Images > Ubuntu > Ubuntu 20.04.3 Focal Fossa]
 
 
 https://docs.docker.com/engine/swarm/swarm-tutorial/[Docker docs {nbsp} > {nbsp} Run your app in production {nbsp} > {nbsp} Getting started with swarm mode (tutorial)]
