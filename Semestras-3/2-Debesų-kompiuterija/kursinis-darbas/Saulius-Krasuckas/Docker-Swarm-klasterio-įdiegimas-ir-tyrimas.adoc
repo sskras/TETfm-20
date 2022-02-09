@@ -118,6 +118,9 @@ VILNIUS, 2022
  - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/osboxes-ubuntu-20.04-changes.sh[`osboxes-ubuntu-20.04-changes.sh`] (pagrindiniai Guest OS tvarkymo veiksmai)
  - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-ubuntu-docker.sh[`setup-ubuntu-docker.sh`] (_Docker_ įdiegimas)
  - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-ubuntu-hostnames.sh[`setup-ubuntu-hostnames.sh`] (individualizuotų mazgo vardų tvarkymas)
+ - Skriptų naudojimo privalumas -- lengva turėti kad ir 20 identiškų virtualių mašinų.
+   +
+  O padarius konfigūravimo klaidą, lengva ją pataisyti ir visą infrastruktūrą susikurti iš naujo.
 . Startavus `build-infra.sh`:
  - Parsisiunčiamas `Ubuntu 20.04.3 (64bit).vdi` atvaizdis.
  - Jo pagrindu sukuriama etaloninė VM.
@@ -134,8 +137,8 @@ VILNIUS, 2022
   * `/etc/hosts` faile užregistruojami suteikti IP adresai ir mazgo vardai.
   * Tuomet šie duomenys surenkami į bendrą failą ir padalinimi į visus Guest OS iš eilės.
   * Taip pat patvirtinami SSH ECDSA raktai tarp skirtingų mazgų.
- - Išskyrus atvaizdžio siuntimo laiką, paruošimas trunka apie 65 min.
  - Trys VM paruoštos darbui.
+ - Išskyrus atvaizdžio siuntimo laiką, paruošimas trunka apie 65 min.
 . Rankiniu būdu konfigūruojamas _Docker Swarm mode_ klasteris:
 
 
