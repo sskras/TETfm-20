@@ -200,7 +200,7 @@ Konteineriai _Worker_ mazguose išsijungė tinklui atsistačius.
 
 Po šito paskirsčiau replikas vėl po lygiai -- po vieną kiekvienam mazgui: `... scale kursinis-web-service=1` ir  `... scale kursinis-web-service=3`.
 
-Ir kai tuo tarpu pilnai išjungiau antrą mazgą (`swarm-n02`), jo replika buvo pakeista nauja replika pirmajame mazge, `swarm-n01`.
+Ir kai tuo tarpu pilnai išjungiau antrą mazgą, `swarm-n02`, jo replika buvo pakeista nauja replika pirmajame mazge, `swarm-n01`.
 
 Į užklausas abu tebeveikiantys mazgai atsakydavo sėkmingai (`swarm-n01` ir `swarm-n03`).
 
