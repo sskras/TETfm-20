@@ -101,6 +101,8 @@ VILNIUS, 2022
 * Savarankiškai išstudijuoti _Docker Swarm_ veikimo principus, juos aprašyti
 
 
+{nbsp}
+
 [.text-left]
 ==== _Docker Swarm_ klasterio konfigūravimas
 
@@ -108,11 +110,15 @@ VILNIUS, 2022
   kurį sudaro ne mažiau trijų kompiuterių / virtualių mašinų (VM)
 
 
+{nbsp}
+
 [.text-left]
 ==== Klasterio konfigūracija
 
 * Atvaizduoti klasterio konfigūraciją grafiškai (pateikti schemas)
 
+
+{nbsp}
 
 [.text-left]
 ==== _Web_-serviso startavimas ir tikrinimas
@@ -121,6 +127,8 @@ VILNIUS, 2022
   Servisas turi būti pasiekiamas.
 
 
+{nbsp}
+
 [.text-left]
 ==== Serviso didinimas (plėtimas)
 
@@ -128,12 +136,16 @@ VILNIUS, 2022
   Parodyti, kaip servisai pasiskirsto klasteryje.
 
 
+{nbsp}
+
 [.text-left]
 ==== Klasterio elemento gedimas ir įtaka
 
 * Imituoti vieno iš klasterio elementų gedimą;
   aprašyti / parodyti poveikį servisams.
 
+
+{nbsp}
 
 [.text-left]
 ==== _Web_-serviso pasiekiamumas įvairiuose etapuose
