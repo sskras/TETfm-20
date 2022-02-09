@@ -59,3 +59,34 @@ Kursinis darbas
 VILNIUS, 2022
 
 <<<
+
+
+{nbsp}
+
+[.text-center]
+==== Kursinis darbas
+
+[.text-center]
+== _Docker Swarm_ klasterio įdiegimas ir tyrimas
+
+
+{nbsp}
+
+=== Kursinio darbo užduotis
+
+
+{nbsp}
+
+[.text-left]
+* Savarankiškai išstudijuoti _Docker Swarm_ veikimo principus, juos aprašyti
+* Sukonfigūruoti _Docker Swarm_ klasterį,
+  kurį sudaro ne mažiau trijų kompiuterių / virtualių mašinų (VM)
+* Atvaizduoti klasterio konfigūraciją grafiškai (pateikti schemas)
+* Klasteryje paleisti _Web_-servisą, veikiantį konteinerių pagrindu.
+  Servisas turi būti pasiekiamas.
+* Sukurti ne mažiau kaip 3 serviso kopijas (replikas).
+  Parodyti, kaip servisai pasiskirsto klasteryje.
+* Imituoti vieno iš klasterio elementų gedimą;
+  aprašyti / parodyti poveikį servisams.
+* Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
+* Pateikti naudojamas komandas
