@@ -90,3 +90,52 @@ VILNIUS, 2022
   aprašyti / parodyti poveikį servisams.
 * Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
 * Pateikti naudojamas komandas
+
+
+=== Pagrindinė dalis
+
+
+[.text-left]
+==== _Docker Swarm_ veikimo principai
+
+* Savarankiškai išstudijuoti _Docker Swarm_ veikimo principus, juos aprašyti
+
+
+[.text-left]
+==== _Docker Swarm_ klasterio konfigūravimas
+
+* Sukonfigūruoti _Docker Swarm_ klasterį,
+  kurį sudaro ne mažiau trijų kompiuterių / virtualių mašinų (VM)
+
+
+[.text-left]
+==== Klasterio konfigūracija
+
+* Atvaizduoti klasterio konfigūraciją grafiškai (pateikti schemas)
+
+
+[.text-left]
+==== _Web_-serviso startavimas ir tikrinimas
+
+* Klasteryje paleisti _Web_-servisą, veikiantį konteinerių pagrindu.
+  Servisas turi būti pasiekiamas.
+
+
+[.text-left]
+==== Serviso didinimas (plėtimas)
+
+* Sukurti ne mažiau kaip 3 serviso kopijas (replikas).
+  Parodyti, kaip servisai pasiskirsto klasteryje.
+
+
+[.text-left]
+==== Klasterio elemento gedimas ir įtaka
+
+* Imituoti vieno iš klasterio elementų gedimą;
+  aprašyti / parodyti poveikį servisams.
+
+
+[.text-left]
+==== _Web_-serviso pasiekiamumas įvairiuose etapuose
+
+* Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
