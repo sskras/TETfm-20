@@ -61,6 +61,7 @@ VILNIUS, 2022
 <<<
 
 
+
 {nbsp}
 
 [.text-center]
@@ -73,9 +74,6 @@ VILNIUS, 2022
 {nbsp}
 
 === Kursinio darbo užduotis
-
-
-{nbsp}
 
 [.text-left]
 * Savarankiškai išstudijuoti _Docker Swarm_ veikimo principus, juos aprašyti
@@ -139,3 +137,4 @@ VILNIUS, 2022
 ==== _Web_-serviso pasiekiamumas įvairiuose etapuose
 
 * Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
+
