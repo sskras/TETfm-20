@@ -183,13 +183,24 @@ _Manager_ nustojo matyti likusius du mazgus ir perkūrė du jų konteinerius pas
 
 Tuo tarpu mazgai `swarm-n02` ir `swarm-n03` iškart nustojo atsiliepti į užklausas `80/TCP` portu iš viso, nors jų klasteriniai interfeisai ir tebeveikė.
 
-Po ~20 s. jų atsakymai į užklausas atsistatė -- jie jas balansavo tarpusavyje ir grąžindavo du skirtingus Host-id.
+Po <20 s. jų atsakymai į užklausas atsistatė -- jie jas pradėjo balansuoti tarpusavyje ir grąžindavo jau du skirtingus _Host-id_.
 
 Iš esmės, situacija mano vertinimu atitinka klasterinį _Split-brain_ scenarijų, kai abi klasterio dalys nusprendžia, kad kita pusė nebeveikia, ir bando veikti abi nepriklausomai.
 
-=> Darau išvadą, kad turint tiek nedaug mazgų vertėtų padidinti (replikuoti) ne tik _Worker_ skaičių, bet ir _Manager_ skaičių.
+* => Darau išvadą, kad klasteriui paskyrus tiek nedaug mazgų, vertėtų padidinti ne tik _Worker_ skaičių, bet ir _Manager_ skaičių.
++
+Priešingu atveju įmanomas pavojus duomenų vientisumui, kai dvi grupės vienu metu keis tuos pačius duomenis, bet abi laikys, kad keičia tik ji pati, tik viena grupė.
 
-Toliau atstačiau tinklo veikimą ir paskirsčiau replikas vėl po lygiai (po vieną kiekvienam mazgui).  Kai tuo tarpu pilnai išjungiau antrą mazgą (`swarm-n02`), jo replika buvo pakeista nauja replika pirmajame mazge, `swarm-n01`.
+Toliau atstačiau tinklo veikimą, ir stebėjau konteinerių būsenas tiek _Worker_ mazguose, tiek _Manager_ mazge.
+Netrukus jie pradėjo atsakymuose grąžinti naujus _Host-id_.
+
+Patikrinus pasirodė, kad visi šie _Host-id_ priklauso `swarm-n01` mazge veikiantiems dviems naujiems konteineriams, sukurtiems splito metu.
+Ir dabar paslaugos visos trys replikos veikė būtent šiame mazge.
+Konteineriai _Worker_ mazguose išsijungė tinklui atsistačius.
+
+Po šito paskirsčiau replikas vėl po lygiai -- po vieną kiekvienam mazgui: `... scale kursinis-web-service=1` ir  `... scale kursinis-web-service=3`.
+
+Ir kai tuo tarpu pilnai išjungiau antrą mazgą (`swarm-n02`), jo replika buvo pakeista nauja replika pirmajame mazge, `swarm-n01`.
 
 Į užklausas abu tebeveikiantys mazgai atsakydavo sėkmingai (`swarm-n01` ir `swarm-n03`).
 
@@ -197,7 +208,8 @@ Mazgą `swarm-n02` vėl įjungus, jis pats sugrįžo į klasterį, tačiau veiki
 
 O štai užklausos į servisą pradėjo veikti jau ir per antrąjį mazgą -- jis grįžo į klasterį ir įsitraukė į _Load-balancing_ mechanizmą.
 
-=> Jei gedimas įvyksta _Worker_ mazge, o ne _Manager_, įtaka paslaugai beveik nejuntama.
+* => Jei gedimas įvyksta _Worker_ mazge, o ne _Manager_, įtaka paslaugai beveik nejuntama.
++
 Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai po ~ 5 s.
 
 
