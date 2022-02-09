@@ -89,9 +89,11 @@ VILNIUS, 2022
 * Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
 * Pateikti naudojamas komandas
 
+{nbsp}
 
 === Pagrindinė dalis
 
+{nbsp}
 
 [.text-left]
 ==== _Docker Swarm_ veikimo principai
