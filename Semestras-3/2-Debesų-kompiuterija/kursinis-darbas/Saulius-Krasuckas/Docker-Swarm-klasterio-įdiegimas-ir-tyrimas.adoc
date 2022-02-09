@@ -118,7 +118,7 @@ VILNIUS, 2022
 
 * Atvaizduoti klasterio konfigūraciją grafiškai (pateikti schemas)
 
-image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/e5dfcbcc674e1f47e3791d870dd78ced17295ad4/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/img/Docker-Swarm-klasterio-konfig%C5%ABracija.svg[]
+image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/0f9fb5a485a23133adb38457b3fc71d7dc2cbf17/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/img/Docker-Swarm-klasterio-konfig%C5%ABracija.svg[]
 
 {nbsp}
 
