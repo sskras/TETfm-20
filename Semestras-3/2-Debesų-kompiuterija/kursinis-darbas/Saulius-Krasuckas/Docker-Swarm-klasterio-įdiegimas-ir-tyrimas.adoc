@@ -190,14 +190,14 @@ Iš esmės, situacija mano vertinimu atitinka klasterinį _Split-brain_ scenarij
 
 * => Darau išvadą, kad klasteriui paskyrus tiek nedaug mazgų, vertėtų padidinti ne tik _Worker_ skaičių, bet ir _Manager_ skaičių.
 +
-Priešingu atveju įmanomas pavojus duomenų vientisumui, kai dvi grupės vienu metu keis tuos pačius duomenis, bet abi laikys, kad keičia tik ji pati, tik viena grupė.
+Priešingu atveju įmanomas pavojus duomenų vientisumui, kai dvi grupės vienu metu keis tuos pačius duomenis, bet kiekviena laikys, kad keičia tik ji pati, tik viena grupė.
 
 Toliau atstačiau tinklo veikimą, ir stebėjau konteinerių būsenas tiek _Worker_ mazguose, tiek _Manager_ mazge.
 Netrukus jie pradėjo atsakymuose grąžinti naujus _Host-id_.
 
 Patikrinus pasirodė, kad visi šie _Host-id_ priklauso `swarm-n01` mazge veikiantiems dviems naujiems konteineriams, sukurtiems splito metu.
-Ir dabar paslaugos visos trys replikos veikė būtent šiame mazge.
-Konteineriai _Worker_ mazguose išsijungė tinklui atsistačius.
+Ir dabar šiaip paslaugai visos trys replikos veikė būtent šiame mazge.
+Konteineriai _Worker_ mazguose išsijungė netrukus po _Manager_ tinklo atstatymo.
 
 Po šito paskirsčiau replikas vėl po lygiai -- po vieną kiekvienam mazgui: `... scale kursinis-web-service=1` ir  `... scale kursinis-web-service=3`.
 
