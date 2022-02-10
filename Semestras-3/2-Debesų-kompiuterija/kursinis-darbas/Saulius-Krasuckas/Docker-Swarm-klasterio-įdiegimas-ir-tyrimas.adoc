@@ -127,7 +127,7 @@ VILNIUS, 2022
 
 . Čia susikūriau kelis _Bash_ skriptus:
 
- - https://github.com/VGTU-ELF/TETfm-20/tree/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas#:~:text=build%2Dinfra.sh,ubuntu%2Dhostnames.sh[`build-infra.sh`] (_Golden image_ ir atskirų VM formavimui)
+ - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/build-infra.sh[`build-infra.sh`] (_Golden image_ ir atskirų VM formavimui)
  - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-osboxes-ubuntu-20.04.sh[`setup-osboxes-ubuntu-20.04.sh`] (VM tvarkymo eiga)
  - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/osboxes-ubuntu-20.04-changes.sh[`osboxes-ubuntu-20.04-changes.sh`] (pagrindiniai Guest OS tvarkymo veiksmai)
  - https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/setup-ubuntu-docker.sh[`setup-ubuntu-docker.sh`] (_Docker_ įdiegimas)
