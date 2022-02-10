@@ -99,7 +99,23 @@ VILNIUS, 2022
 [.text-left]
 ==== _Docker Swarm_ veikimo principai
 
-* Savarankiškai išstudijuoti _Docker Swarm_ veikimo principus, juos aprašyti
+
+. Nuo versijos 1.12 _Swarm mode_ mechanizmas buvo integruotas į Docker CLI tiesiogiai.  <<4>> +
+  Anksčiau jis reikalaudavo papildomų konteinerių kūrimo ir vadinosi _Classic Swarm_.
+. Mechanizmas įgalina skirstyti konteinerius tarp daugelio Docker hostų.
+. Tam naudojamas _Overlay_ tipo tinklas su _Mesh routing_ technlogija.
+. Jis leidžia apjungti hostus į vieną tinklą ir įgalina jame atlikti servisų _Discovery_ ir _Load_-balansavimą.
+. Konteinerių idėją papildo trys nauji konceptai:
+ .. **Mazgas** (angl. _Node_) -- tai atskiras Docker variklio egzempliorius (hostas), prijungtas prie _Swarm_ klasterio.  +
+    Mazgai būna arba _Worker_ tipo, arba _Manager_ tipo:
+  * _Manager_ dėlioja, kur koks konteineris veiks.
+  * _Worker_ tiesiog tuos konteinerius vykdo.
+  * Taipogi _Manager_ tipo mazgas gali būti ir _Worker_ mazgu.
+ .. **Servisas** (angl. _Service_) -- abstraktesnis konceptas, siejantis grupę užduočių, kurias turėtų vykdyti _Workers_ tam, kad pasiektų integralų rezultatą.
+ .. **Apkrovos balansavimas** (angl. _Load Balancing_) -- tai užklausų, ateinančių į bet kurį _Swarm_ mazgą paskirstymas į konteinerius, vykdančius atitinkamą paslaugą.
+. _Overlay_ tinklas.  +
+  Tai `VxLAN` technologija grįsta tinklo architektūra, leidžianti apimti skirtinguose debesyse ir duomenų centruose veikiančius Docker hostus.  +
+  Veikimui naudojamas _Routing Mesh_, _Virtual IP_ ir _Linux IPVS_ -- multiprotokolinis (Layer-4) apkrovos balansavimo mechanizmas.
 
 
 {nbsp}
