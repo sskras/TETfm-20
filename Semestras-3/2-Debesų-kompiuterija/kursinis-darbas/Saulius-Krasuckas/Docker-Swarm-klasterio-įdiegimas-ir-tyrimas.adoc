@@ -150,7 +150,7 @@ VILNIUS, 2022
  - Trys VM paruoštos darbui.
  - Išskyrus atvaizdžio siuntimo laiką, paruošimas trunka apie 65 min.
 
-. Rankiniu būdu konfigūruoju _Docker Swarm mode_ klasterį:
+. Rankiniu būdu konfigūruoju _Docker Swarm mode_ klasterį pagal Docker dokumentacijos pamoką:  <<2>>
 +
 Patikrinimas:
 +
@@ -322,7 +322,7 @@ image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-De
 [.text-left]
 ==== _Web_-serviso startavimas ir tikrinimas
 
-. Iš visos galybės pasirenku _Web_-servisą, matytą _KataCoda_ puslapio treniruotėse: `katacoda/docker-http-server`.  +
+. Iš visos galybės pasirenku _Web_-servisą, matytą _KataCoda_ puslapio treniruotėse: `katacoda/docker-http-server`.  <<3>> +
 Ir startuoju pavienį konteinerį su juo:
 +
 ----
@@ -965,8 +965,647 @@ Atsako vėl tie patys trys konteineriai.
 [.text-left]
 ==== Klasterio elemento gedimas ir įtaka
 
-* Imituoti vieno iš klasterio elementų gedimą;
-  aprašyti / parodyti poveikį servisams.
+
+. Tikrinu paslaugos pasiskirstymą:
++
+----
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                    ERROR                         PORTS
+j7pgc2beau6m   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running about a minute ago
+thiskoiwddq2   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n02   Running         Running less than a second ago
+dkz7wktnswg0   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n03   Running         Running 41 minutes ago
+----
+
+. Pasirenku pagrindinio mazgo (kuriame veikia _Manager) klasterinę tinklo „koją“ ir ją atjungiu:
++
+----
+$ VBoxManage list vms
+"swarm-n01" {ae06ba44-a60d-44a3-91ac-abae7edfa962}
+"swarm-n02" {ab715077-c6b7-4f6a-bb9a-aeed78bd658e}
+"swarm-n03" {9c308870-6fa6-4288-bfb3-5446d37652a1}
+
+$ VBoxManage controlvm "swarm-n01" setlinkstate2 off
+----
+
+. Iškart tikrinu tiesiogines užklausas per antrą mazgą:
++
+----
+$ curl --connect-timeout 1 swarm-n02-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl --connect-timeout 1 swarm-n02-oam
+curl: (28) Connection timeout after 1001 ms
+
+$ curl --connect-timeout 1 swarm-n02-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl --connect-timeout 1 swarm-n02-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl --connect-timeout 1 swarm-n02-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl --connect-timeout 1 swarm-n02-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl --connect-timeout 1 swarm-n02-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+----
++
+=> Netrukus po pirmo mazgo klasterinės „kojos“ atjungimo antrame mazge įvyko trūktelėjimas.
+=> Antro mazgo atsakymuose teliko tik du skirtingi konteinerių / virtualių hostų ID.
+
+. Tas pats ir su užklausomis į trečią mazgą:
++
+----
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+----
+
+. Tačiau pirmas mazgas gražina jau **tris** skirtingus, bet jau truputį kitokius ID:
++
+----
+$ curl --connect-timeout 1 swarm-n01-oam
+<h1>This request was processed by host: 070aa3e17d4a</h1>
+
+$ curl --connect-timeout 1 swarm-n01-oam
+<h1>This request was processed by host: fce23fdeab52</h1>
+
+$ curl --connect-timeout 1 swarm-n01-oam
+<h1>This request was processed by host: fda749b30050</h1>
+
+$ curl --connect-timeout 1 swarm-n01-oam
+<h1>This request was processed by host: 070aa3e17d4a</h1>
+----
+
+. Tikrinu serviso replikas pagal menedžerį:
++
+----
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                     ERROR                         PORTS
+j7pgc2beau6m   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running 5 minutes ago
+ypinuj5i68bo   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n01   Running         Running 2 minutes ago
+1ygslm1t3iwn   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n01   Running         Running 2 minutes ago
+----
++
+=> Panašu, kad  _Manager_ trūko dviejų serviso replikų, ir jis jas susikūrė savo mazge.  +
++
+Tik liūdna, kad jei nodas teturėtų vienintelį tinklo interfeisą, jis nebebūtų niekaip pasiekiamas.  +
+Ir produkcijoje jis tiesiog neveiktų, nors jam „atrodytų“, kad jis veikia.
+
+. Tikrinu atskirus konteinerius pirmame mazge:
++
+----
+$ ssh swarm-n01-oam sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED                  STATUS          PORTS     NAMES
+fda749b30050   katacoda/docker-http-server:latest   "/app"    Less than a second ago   Up 3 minutes    80/tcp    kursinis-web-service.1.j7pgc2beau6m7m59wc49parbu
+070aa3e17d4a   katacoda/docker-http-server:latest   "/app"    30 seconds ago           Up 23 seconds   80/tcp    kursinis-web-service.2.ypinuj5i68bo9u9tvyrm08l5l
+fce23fdeab52   katacoda/docker-http-server:latest   "/app"    30 seconds ago           Up 26 seconds   80/tcp    kursinis-web-service.4.1ygslm1t3iwnmykv0rl8au9ww
+----
+
+. Tikrinu atskirus konteinerius antrame mazge:
++
+----
+$ ssh swarm-n02-oam sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS          PORTS     NAMES
+84fe7b5b47b1   katacoda/docker-http-server:latest   "/app"    42 minutes ago   Up 42 minutes   80/tcp    kursinis-web-service.2.thiskoiwddq2w5h561v789pzd
+----
+
+. Tikrinu atskirus konteinerius trečiame mazge:
++
+----
+$ ssh swarm-n03-oam sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED             STATUS             PORTS     NAMES
+1bc7dedde9b6   katacoda/docker-http-server:latest   "/app"    About an hour ago   Up About an hour   80/tcp    kursinis-web-service.4.dkz7wktnswg0ajzc5v58xwytc
+----
++
+=> Panašu, kad klasteris pateko į _Split-brain_ būseną:
++
+ * Antrame ir trečiame mazguose veikia po vieną konteinerį (kaip ir buvo iki splito).  +
+   Kadangi juose neveikia menedžeris, jie stengiasi išlaikyti būseną.  +
+   Jie tiesiog aptarnauja užklausas jas tarpusavyje balansuodami.
+ * Gi pirmame mazge susikūrė po dvi kopijas trūkstamų serviso replikų  +
+   (likusių antrame ir trečiame mazguose, ir dabar pirmam nebematomų).  +
+   Ir jis **irgi** atsako į užklausas, bet nebepriklausomai nuo veiklos antrame ir trečiame mazguose.
+ * T. y. iš esmės gavome du klasterius:
+  . `swarm-n01` su trimis replikomis viename mazge.
+  . `swarm-n02`+`swarm-n03` su dviem replikomis (po vieną kiekviename mazge).
+  
+
+. Grąžinu virtualų tinklo kabelį į vietą:
++
+----
+$ VBoxManage controlvm "swarm-n01" setlinkstate2 on
+----
+
+. Tikrinu konteinerius trečiame mazge:
++
+----
+$ ssh swarm-n03-oam sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED             STATUS             PORTS     NAMES
+1bc7dedde9b6   katacoda/docker-http-server:latest   "/app"    About an hour ago   Up About an hour   80/tcp    kursinis-web-service.4.dkz7wktnswg0ajzc5v58xwytc
+----
++
+=> Vis dar veikia.
+
+. Tikrinu 
++
+----
+osboxes@swarm-n01:~$ dmesg -T | tail
+[Wed Feb  9 12:16:15 2022] br0: port 4(veth2) entered forwarding state
+[Wed Feb  9 12:16:15 2022] eth1: renamed from veth5b1e10c
+[Wed Feb  9 12:16:15 2022] IPv6: ADDRCONF(NETDEV_CHANGE): vethffa8387: link becomes ready
+[Wed Feb  9 12:16:15 2022] docker_gwbridge: port 4(vethffa8387) entered blocking state
+[Wed Feb  9 12:16:15 2022] docker_gwbridge: port 4(vethffa8387) entered forwarding state
+[Wed Feb  9 12:16:15 2022] eth1: renamed from vetha1c4f83
+[Wed Feb  9 12:16:15 2022] IPv6: ADDRCONF(NETDEV_CHANGE): veth36d686a: link becomes ready
+[Wed Feb  9 12:16:15 2022] docker_gwbridge: port 3(veth36d686a) entered blocking state
+[Wed Feb  9 12:16:15 2022] docker_gwbridge: port 3(veth36d686a) entered forwarding state
+[Wed Feb  9 12:17:40 2022] e1000: enp0s8 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+
+osboxes@swarm-n01:~$ ethtool enp0s8
+Settings for enp0s8:
+        Supported ports: [ TP ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Full
+        Supported pause frame use: No
+        Supports auto-negotiation: Yes
+        Supported FEC modes: Not reported
+        Advertised link modes:  10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Full
+        Advertised pause frame use: No
+        Advertised auto-negotiation: Yes
+        Advertised FEC modes: Not reported
+        Speed: 1000Mb/s
+        Duplex: Full
+        Port: Twisted Pair
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: on
+        MDI-X: off (auto)
+Cannot get wake-on-lan settings: Operation not permitted
+        Current message level: 0x00000007 (7)
+                               drv probe link
+        Link detected: yes
+----
++
+=> Virtualus tinklo kabelis tikrai vėl prijungtas.
+
+. Tikrinu mazgų būsenas ir serviso replikas:
++
+----
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Ready     Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                     ERROR                         PORTS
+j7pgc2beau6m   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running 5 minutes ago
+ypinuj5i68bo   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n01   Running         Running 2 minutes ago
+1ygslm1t3iwn   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n01   Running         Running 2 minutes ago
+----
++
+=> Klasteryje vėl trys mazgai.  Visos trys replikos veikia tik pirmame mazge.
+
+. Tikrinu konteinerius kituose individualiai. Pirmame mazge:
++
+----
+$ ssh swarm-n01-oam sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED                  STATUS          PORTS     NAMES
+fda749b30050   katacoda/docker-http-server:latest   "/app"    Less than a second ago   Up 3 minutes    80/tcp    kursinis-web-service.1.j7pgc2beau6m7m59wc49parbu
+070aa3e17d4a   katacoda/docker-http-server:latest   "/app"    30 seconds ago           Up 23 seconds   80/tcp    kursinis-web-service.2.ypinuj5i68bo9u9tvyrm08l5l
+fce23fdeab52   katacoda/docker-http-server:latest   "/app"    30 seconds ago           Up 26 seconds   80/tcp    kursinis-web-service.4.1ygslm1t3iwnmykv0rl8au9ww
+----
+
+. Antrame mazge:
++
+----
+$ ssh swarm-n02-oam sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+----
+
+. Trečiame mazge:
++
+----
+$ ssh swarm-n03-oam sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+----
++
+=> Kai tik pirmas mazgas „pamatė“ antrąjį ir trečiąjį, iškart išjungė perteklines replikas juose.  +
+   _Split-brain_ būsena išnyko.
+
+. Dėl visa ko tikrinu ID, gražinamus užklausose į trečią mazgą:
++
+----
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 070aa3e17d4a</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: fce23fdeab52</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: fda749b30050</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 070aa3e17d4a</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: fce23fdeab52</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: fda749b30050</h1>
+
+$ curl --connect-timeout 1 swarm-n03-oam
+<h1>This request was processed by host: 070aa3e17d4a</h1>
+----
++
+=> ID matyti trys skirtingi, ir jie atitinka `swarm-n01` konteinerius.
+
+
+. Taip keičiasi mazgų būsenos atjungus interfeisą:
++
+----
+$ VBoxManage controlvm "swarm-n01" setlinkstate2 off
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Ready     Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Down      Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Down      Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Down      Active                          20.10.12
+----
+
+. O taip keičiasi interfeisą vėl prijungus:
++
+----
+$ VBoxManage controlvm "swarm-n01" setlinkstate2 on
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Down      Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Down      Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Down      Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Down      Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Down      Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Down      Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Ready     Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Down      Active                          20.10.12
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Ready     Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
+----
+
+
+{nbsp}
+
+[.text-left]
+==== Tolygus replikų paskirstymo atstatymas klasteryje
+
+
+. Atstatau tinklo ryšį:
++
+----
+$ VBoxManage controlvm "swarm-n01" setlinkstate2 on
+----
+
+. ... ir sumažinu servisą iki dviejų replikų:
++
+----
+$ ssh swarm-n01-oam sudo docker service scale kursinis-web-service=2
+kursinis-web-service scaled to 2
+overall progress: 0 out of 2 tasks
+1/2:
+2/2:
+overall progress: 3 out of 2 tasks
+overall progress: 2 out of 2 tasks
+verify: Waiting 5 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 5 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 5 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 5 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 4 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 4 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 4 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 4 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 4 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 3 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 3 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 3 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 3 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 2 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 2 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 2 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 2 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 2 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 1 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 1 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 1 seconds to verify that tasks are stable...
+overall progress: 2 out of 2 tasks
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Service converged
+----
+
+. Patikrinu konteinerius atskiruose mazguose:
++
+----
+$ for NODE in swarm-n0{1..3}-oam; do echo On $NODE:; ssh $NODE sudo docker ps; echo; done
+On swarm-n01-oam:
+CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS          PORTS     NAMES
+9c2d26cbff9e   katacoda/docker-http-server:latest   "/app"    42 minutes ago   Up 42 minutes   80/tcp    kursinis-web-service.1.vekfptu7x3egid5me161x4gbj
+
+On swarm-n02-oam:
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+On swarm-n03-oam:
+CONTAINER ID   IMAGE                                COMMAND   CREATED              STATUS              PORTS     NAMES
+742f620f02d8   katacoda/docker-http-server:latest   "/app"    About a minute ago   Up About a minute   80/tcp    kursinis-web-service.6.h6ofhnw567zm36xdrgk0wbae6
+----
+
+. Padidinu servisą iki trijų replikų:
++
+----
+$ ssh swarm-n01-oam sudo docker service scale kursinis-web-service=3
+kursinis-web-service scaled to 3
+overall progress: 0 out of 3 tasks
+1/3:
+2/3:
+3/3:
+overall progress: 2 out of 3 tasks
+overall progress: 2 out of 3 tasks
+overall progress: 2 out of 3 tasks
+overall progress: 2 out of 3 tasks
+overall progress: 2 out of 3 tasks
+overall progress: 2 out of 3 tasks
+overall progress: 2 out of 3 tasks
+overall progress: 3 out of 3 tasks
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Service converged
+----
+
+. Tikrinu, servisui skirtos trys replikos:
++
+----
+$ ssh swarm-n01-oam sudo docker service ls
+ID             NAME                   MODE         REPLICAS   IMAGE                                PORTS
+p7imsxwi9mid   kursinis-web-service   replicated   3/3        katacoda/docker-http-server:latest   *:80->80/tcp
+----
+
+. Vėl veikia po vieną konteinerį (repliką) kiekviename mazge:
++
+----
+$ for NODE in swarm-n0{1..3}-oam; do echo On $NODE:; ssh $NODE sudo docker ps; echo; done
+On swarm-n01-oam:
+CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS          PORTS     NAMES
+9c2d26cbff9e   katacoda/docker-http-server:latest   "/app"    42 minutes ago   Up 42 minutes   80/tcp    kursinis-web-service.1.vekfptu7x3egid5me161x4gbj
+
+On swarm-n02-oam:
+CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS         PORTS     NAMES
+75e5c7ff94cc   katacoda/docker-http-server:latest   "/app"    10 seconds ago   Up 8 seconds   80/tcp    kursinis-web-service.2.gmq2jit794eofojcuwlfwda3z
+
+On swarm-n03-oam:
+CONTAINER ID   IMAGE                                COMMAND   CREATED         STATUS              PORTS     NAMES
+742f620f02d8   katacoda/docker-http-server:latest   "/app"    2 minutes ago   Up About a minute   80/tcp    kursinis-web-service.6.h6ofhnw567zm36xdrgk0wbae6
+----
+
+
+{nbsp}
+
+[.text-left]
+==== Kito klasterio elemento gedimas ir jo įtaka
+
+
+. Dėl visa ko pasitikrinu Docker pasistemės vidinių tinklų konfigūraciją:
++
+----
+$ ssh swarm-n01-oam sudo docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+55432975850d   bridge            bridge    local
+d5c8e496a396   docker_gwbridge   bridge    local
+0cde9da9f77d   host              host      local
+vpyp1hp7w63i   ingress           overlay   swarm
+7613a3238dce   none              null      local
+----
+
+. Vėl turime servisą, tolygiai pasiskirsčiusį klasteryje:
++
+----
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                    ERROR                         PORTS
+vekfptu7x3eg   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running 4 hours ago
+xrbcof1qu7n8   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n02   Running         Running less than a second ago
+dkz7wktnswg0   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n03   Running         Running 10 minutes ago
+----
+
+. Šį sykį pilnai išjungiu antrąjį mazgą:
++
+----
+$ VBoxManage controlvm "swarm-n02" poweroff
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+----
+
+. Po sekundės klasteris gedimo dar nėra aptikęs:
++
+----
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                    ERROR                         PORTS
+vekfptu7x3eg   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running 4 hours ago
+xrbcof1qu7n8   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n02   Running         Running less than a second ago
+dkz7wktnswg0   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n03   Running         Running 14 minutes ago
+----
+
+. Tačiau po maždaug dviejų sekundžių jau aptinka, kad mazgas `swarm-n02` nebeatsiliepia:
++
+----
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Down      Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
+----
+
+. ... ir perkuria trūkstamą repliką mazge `swarm-n01`:
++
+----
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                    ERROR                         PORTS
+vekfptu7x3eg   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running 4 hours ago
+oweiigoueoww   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n01   Running         Running 3 seconds ago
+dkz7wktnswg0   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n03   Running         Running 14 minutes ago
+
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                    ERROR                         PORTS
+vekfptu7x3eg   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running 4 hours ago
+oweiigoueoww   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n01   Running         Running about a minute ago
+xrbcof1qu7n8    \_ kursinis-web-service.2   katacoda/docker-http-server:latest   swarm-n02   Shutdown        Running less than a second ago
+gmq2jit794eo    \_ kursinis-web-service.2   katacoda/docker-http-server:latest   swarm-n02   Shutdown        Shutdown about an hour ago
+4ekln6k23p0b   kursinis-web-service.3       katacoda/docker-http-server:latest   swarm-n03   Shutdown        Shutdown 25 minutes ago
+dkz7wktnswg0   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n03   Running         Running 16 minutes ago
+q6xeb0896glj    \_ kursinis-web-service.4   katacoda/docker-http-server:latest   swarm-n02   Shutdown        Failed less than a second ago    "task: non-zero exit (255)"
+----
+
+. Tuo tarpu trečias mazgas nukreipia užklausas į visas 3 replikas:
++
+----
+$ curl swarm-n03-oam
+<h1>This request was processed by host: f88eb8f1a09d</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: f88eb8f1a09d</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+----
+
+. Taip pat nukreipia ir pirmas mazgas:
++
+----
+$ curl swarm-n01-oam
+<h1>This request was processed by host: f88eb8f1a09d</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: f88eb8f1a09d</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+----
+
+. Antras mazgas neatsiliepia, žinoma (nes išjungtas):
++
+----
+$ curl swarm-n02-oam
+curl: (28) Failed to connect to swarm-n02-oam port 80 after 21011 ms: Connection timed out
+----
+
+. Įjungiu antrą mazgą ir sulaukiu, kol jis grįš į klasterį:
++
+----
+$ VBoxManage startvm "swarm-n02"
+Waiting for VM "swarm-n02" to power on...
+VM "swarm-n02" has been successfully started.
+
+$ ssh swarm-n01-oam sudo docker node ls
+ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader           20.10.12
+a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Ready     Active                          20.10.12
+6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
+----
+
+. Deja, nepatikrinau, kaip pasiskirstė serviso replikos.  +
++
+Bet pagal šiuos du konteinerių sąrašus panašu, kad dvi veikė `swarm-n01`, o viena liko `swarm-03`:
++
+----
+$ ssh swarm-n02-oam sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+$ ssh swarm-n03-oam sudo docker ps
+CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS          PORTS     NAMES
+1bc7dedde9b6   katacoda/docker-http-server:latest   "/app"    38 minutes ago   Up 38 minutes   80/tcp    kursinis-web-service.4.dkz7wktnswg0ajzc5v58xwytc
+----
 
 
 {nbsp}
@@ -1042,28 +1681,27 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 [.text-left]
 ==== {nbsp}
 
-**[[[1]]]** https://www.osboxes.org/ubuntu/#ubuntu-20-04-3-info[OSboxes > VirtualBox Images > Ubuntu > Ubuntu 20.04.3 Focal Fossa]
+**[[[1]]]** https://www.osboxes.org/ubuntu/#ubuntu-20-04-3-info[OSboxes {nbsp} > {nbsp} VirtualBox Images {nbsp} > {nbsp} Ubuntu {nbsp} > {nbsp} Ubuntu 20.04.3 Focal Fossa]
 
+**[[[2]]]** https://docs.docker.com/engine/swarm/swarm-tutorial/[Docker docs {nbsp} > {nbsp} Run your app in production {nbsp} > {nbsp} Getting started with swarm mode (tutorial)]
 
-https://docs.docker.com/engine/swarm/swarm-tutorial/[Docker docs {nbsp} > {nbsp} Run your app in production {nbsp} > {nbsp} Getting started with swarm mode (tutorial)]
+**[[[3]]]** https://www.katacoda.com/courses/docker-orchestration[Learn Docker Orchestration / Swarm Mode using Interactive Browser-Based Scenarios]
 
-https://www.katacoda.com/courses/docker-orchestration[Learn Docker Orchestration / Swarm Mode using Interactive Browser-Based Scenarios]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/getting-started-with-swarm-mode[Getting Started With Swarm Mode]
 
-https://www.katacoda.com/courses/docker-orchestration/getting-started-with-swarm-mode[Getting Started With Swarm Mode]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/create-overlay-networks[Create Overlay Network]
 
-https://www.katacoda.com/courses/docker-orchestration/create-overlay-networks[Create Overlay Network]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode[Load Balance and Service Discover in Swarm Mode]
 
-https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode[Load Balance and Service Discover in Swarm Mode]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/rolling-updates-services-swarm-cluster[Apply Rolling Updates Across Swarm Cluster]
 
-https://www.katacoda.com/courses/docker-orchestration/rolling-updates-services-swarm-cluster[Apply Rolling Updates Across Swarm Cluster]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/healthcheck[Add Healthcheck for Containers]
 
-https://www.katacoda.com/courses/docker-orchestration/healthcheck[Add Healthcheck for Containers]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/deploy-swarm-services-with-compose[Deploy Swarm Services with Compose v3]
 
-https://www.katacoda.com/courses/docker-orchestration/deploy-swarm-services-with-compose[Deploy Swarm Services with Compose v3]
+**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/maintenance-mode-for-swarm[Enable Maintenance Mode for a Swarm Node]
 
-https://www.katacoda.com/courses/docker-orchestration/maintenance-mode-for-swarm[Enable Maintenance Mode for a Swarm Node]
-
-https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx/[Simple Clustering with Docker Swarm and Nginx]
+**[[[x]]]** https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx/[Simple Clustering with Docker Swarm and Nginx]
 
 
 {nbsp}
@@ -1075,3 +1713,76 @@ https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx
 
 (Schemos, kodas)
 
+
+
+
+. Vėl turime servisą, tolygiai pasiskirsčiusį klasteryje:
++
+----
+$ ssh swarm-n01-oam sudo docker service ps kursinis-web-service | grep -v Shut
+ID             NAME                         IMAGE                                NODE        DESIRED STATE   CURRENT STATE                    ERROR                         PORTS
+jua86ohpwls9   kursinis-web-service.1       katacoda/docker-http-server:latest   swarm-n01   Running         Running less than a second ago
+thiskoiwddq2   kursinis-web-service.2       katacoda/docker-http-server:latest   swarm-n02   Running         Running less than a second ago
+dkz7wktnswg0   kursinis-web-service.4       katacoda/docker-http-server:latest   swarm-n03   Running         Running about a minute ago
+----
+
+
+. Matomi trys skirtingi konteinerių id tiek atsakymuose iš pirmo konteinerio:
++
+----
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 170feb6f8a25</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+----
+
+. ... tiek iš antro konteinerio:
++
+----
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 170feb6f8a25</h1>
+
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 170feb6f8a25</h1>
+
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n02-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl swarm-n01-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+----
+
+. ... tiek ir iš trečio konteinerio
++
+----
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 170feb6f8a25</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 1bc7dedde9b6</h1>
+
+$ curl swarm-n03-oam
+<h1>This request was processed by host: 84fe7b5b47b1</h1>
+----
+
+. Šį sykį pilnai išjungiu pirmąjį mazgą:
++
