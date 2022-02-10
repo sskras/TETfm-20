@@ -306,8 +306,23 @@ l6wnnbsgv2th6nq05e9j02srj *   swarm-n01   Ready     Active         Leader       
 a50ddvlva40nzzvtxu1hpsus7     swarm-n02   Ready     Active                          20.10.12
 6qeivl6aatpwxb50vi8hpr4bh     swarm-n03   Ready     Active                          20.10.12
 ----
-+
-Pasirenku _Web_-servisą, matyta _KataCoda_ puslapio treniruotėse: `katacoda/docker-http-server`.  +
+
+
+{nbsp}
+
+[.text-left]
+==== Klasterio konfigūracija
+
+.(1 pav.) Klasterio mazgų konfigūracija tarpusavyje ir Host OS atžvilgiu.
+image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/img/Docker-Swarm-klasterio-konfig%C5%ABracija.svg[width=100%]
+
+
+{nbsp}
+
+[.text-left]
+==== _Web_-serviso startavimas ir tikrinimas
+
+. Iš visos galybės pasirenku _Web_-servisą, matytą _KataCoda_ puslapio treniruotėse: `katacoda/docker-http-server`.  +
 Ir startuoju pavienį konteinerį su juo:
 +
 ----
@@ -322,23 +337,23 @@ Digest: sha256:76dc8a47fd019f80f2a3163aba789faf55b41b2fb06397653610c754cb12d3ee
 Status: Downloaded newer image for katacoda/docker-http-server:latest
 84f32317148cac3ea8dfffb6587258f905d8563064302b7fc457d35156dd4240
 ----
-+
-Tikrinu, konteineris veikia:
+
+. Tikrinu, konteineris veikia:
 +
 ----
 $ ssh swarm-n01-oam sudo docker ps
 CONTAINER ID   IMAGE                         COMMAND   CREATED          STATUS          PORTS                               NAMES
 84f32317148c   katacoda/docker-http-server   "/app"    20 seconds ago   Up 19 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   http-band
 ----
-+
-Tikrinu ir su lokaliu http-klientu, veikia:
+
+. Tikrinu su lokaliu http-klientu, veikia:
 +
 ----
 $ ssh swarm-n01-oam curl -s localhost
 <h1>This request was processed by host: 84f32317148c</h1>
 ----
-+
-Ištrinu bandomąjį konteinerį:
+
+. Ištrinu bandomąjį konteinerį:
 +
 ----
 $ ssh swarm-n01-oam sudo docker stop http-band
@@ -347,8 +362,8 @@ http-band
 $ ssh swarm-n01-oam sudo docker rm http-band
 http-band
 ----
-+
-Pagal jo atvaizdį kuriu klasterinį _Web_-servisą `kursinis-web-service`:
+
+. Pagal jo atvaizdį kuriu jau ne pavienį, o klasterinį _Web_-servisą `kursinis-web-service`:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service create --name kursinis-web-service -p 80:80 katacoda/docker-http-server
@@ -388,8 +403,8 @@ verify: Waiting 1 seconds to verify that tasks are stable...
 verify: Waiting 1 seconds to verify that tasks are stable...
 verify: Service converged
 ----
-+
-Klasterinių servisų sąrašas:
+
+. Klasterinių servisų sąrašas:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service ls
@@ -397,23 +412,24 @@ ID             NAME                   MODE         REPLICAS   IMAGE             
 p7imsxwi9mid   kursinis-web-service   replicated   1/1        katacoda/docker-http-server:latest   *:80->80/tcp
 ----
 +
-Veikia, naudoja tik 1 repliką ()pagal nutylėjimą).  +
-Tikrinu servisą lokaliai:
+Veikia, naudoja tik 1 repliką (pagal nutylėjimą).
+
+. Tikrinu servisą lokaliai:
 +
 ----
 $ ssh swarm-n01-oam curl -s localhost
 <h1>This request was processed by host: 9c2d26cbff9e</h1>
 ----
-+
-Patikrinu lokalių konteinerių būseną, veikia lygiai vienas:
+
+. Patikrinu lokalių konteinerių būseną pirmame mazge, veikia lygiai vienas:
 +
 ----
 $ ssh swarm-n01-oam sudo docker ps
 CONTAINER ID   IMAGE                                COMMAND   CREATED          STATUS          PORTS     NAMES
 9c2d26cbff9e   katacoda/docker-http-server:latest   "/app"    34 seconds ago   Up 32 seconds   80/tcp    kursinis-web-service.1.vekfptu7x3egid5me161x4gbj
 ----
-+
-Serviso pasiekiamumas mazguose:
+
+. Serviso pasiekiamumas mazguose:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service ps kursinis-web-service
@@ -421,8 +437,9 @@ ID             NAME                     IMAGE                                NOD
 vekfptu7x3eg   kursinis-web-service.1   katacoda/docker-http-server:latest   swarm-n01   Running         Running about a minute ago
 ----
 +
-Kol kas veikia tik viename mazge.  +
-Detalus serviso inspektavimas:
+Kol kas veikia tik viename mazge.
+
+. Detalus serviso inspektavimas:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service inspect kursinis-web-service
@@ -526,8 +543,8 @@ $ ssh swarm-n01-oam sudo docker service inspect kursinis-web-service
     }
 ]
 ----
-+
-Malonesnis skaitymui serviso būsenos pavidalas:
+
+. Malonesnis skaitymui serviso būsenos pavidalas:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service inspect --pretty kursinis-web-service
@@ -560,8 +577,8 @@ Ports:
   TargetPort = 80
   PublishMode = ingress
 ----
-+
-Servisas lyg veikia.  Tačiau tarp įprastų _Listening_ TCP soketų `80/TCP` nesimato:
+
+. Servisas lyg veikia.  Tačiau tarp įprastų _Listening_ TCP soketų `80/TCP` nesimato:
 +
 ----
 $ ssh swarm-n01-oam ss -4nl
@@ -575,8 +592,17 @@ tcp    LISTEN  0       4096     127.0.0.53%lo:53           0.0.0.0:*
 tcp    LISTEN  0       128            0.0.0.0:22           0.0.0.0:*
 tcp    LISTEN  0       5            127.0.0.1:631          0.0.0.0:*
 ----
+
+. Nuimu _tik_ IPv4 rodymą ir tikrinu iš naujo:
 +
-Peržiūriu tinklo interfeisų sąrašą:
+----
+$ ssh swarm-n02-oam sudo ss -nlp | grep :80
+tcp    LISTEN  0        4096                                                  *:80                                                     *:*                       users:(("dockerd",pid=693,fd=25))                
+----
++
+=> Matyti, jog mano serviso TCP soketą aptarnauja procesas `docker`.
+
+. Peržiūriu tinklo interfeisų sąrašą:
 +
 ----
 $ ssh swarm-n01-oam ip a
@@ -627,7 +653,8 @@ $ ssh swarm-n01-oam ip a
 ----
 +
 Dabar jis pasipildė dar vienu: `veth*@if23`  +
-Patikrinu serviso pasiekiamumą lokaliai kreipiantis ne į Docker skirtą sisteminį tinklo interfeisą `enp0s8`, bet į OAM dedikuotą interfeisą `enp0s9` su visai kitu IP adresu:
+
+. Patikrinu serviso pasiekiamumą lokaliai kreipiantis ne į Docker skirtą sisteminį tinklo interfeisą `enp0s8`, bet į OAM dedikuotą interfeisą `enp0s9` su visai kitu IP adresu:
 +
 ----
 $ ssh swarm-n01-oam ping 192.168.56.101
@@ -639,8 +666,9 @@ $ ssh swarm-n01-oam curl -s 192.168.56.101
 <h1>This request was processed by host: 9c2d26cbff9e</h1>
 ----
 +
-Atsakymą iš serviso vis tiek gaunu.  Kiek netikėta ir malonu.  +
-Taip pat tikrinu serviso pasiekiamumą OAM interfeisu ir išorėje, ne tik lokaliai:
+Atsakymą iš serviso vis tiek gaunu.  Kiek netikėta ir malonu.
+
+. Taip pat tikrinu serviso pasiekiamumą OAM interfeisu ir išorėje, ne tik lokaliai:
 +
 ----
 $ curl -s 192.168.56.101
@@ -653,9 +681,15 @@ $ curl -s 192.168.56.101
 <h1>This request was processed by host: 9c2d26cbff9e</h1>
 ----
 +
-Servisas atsiliepia ir Host OSe veikiančiam http-klientui.  Puiku.
-+
-Didinu (plečiu) servisą iki trijų replikų:
+=> Servisas atsiliepia ir Host OSe veikiančiam http-klientui.  Puiku.
+
+
+{nbsp}
+
+[.text-left]
+==== Serviso didinimas (plėtimas)
+
+. Padidinu (išplečiu) servisą iki trijų replikų:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service scale kursinis-web-service=3
@@ -738,8 +772,8 @@ verify: Waiting 1 seconds to verify that tasks are stable...
 verify: Waiting 1 seconds to verify that tasks are stable...
 verify: Service converged
 ----
-+
-Tikrinu serviso pasiekiamumą:
+
+. Ir tikrinu serviso pasiekiamumą iš naujo:
 +
 ----
 $ curl -s 192.168.56.101
@@ -770,8 +804,9 @@ $ curl -s 192.168.56.101
 <h1>This request was processed by host: 9c2d26cbff9e</h1>
 ----
 +
-Atsakymuose matyti trys skirtingi Host-id.  +
-Tikrinu serviso būsenos detales:
+=> Atsakymuose matyti trys skirtingi Host-id.
+
+. Tikrinu serviso būsenos detales:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service inspect --pretty kursinis-web-service
@@ -810,8 +845,8 @@ p7imsxwi9mid   kursinis-web-service   replicated   3/3        katacoda/docker-ht
 ----
 +
 Rodo tris replikas, kaip ir nurodžiau plėsdamas.
-+
-Tikrinu pavienius konteinerius:
+
+. Tikrinu pavienius konteinerius:
 +
 ----
 $ ssh swarm-n01-oam sudo docker ps
@@ -827,10 +862,9 @@ CONTAINER ID   IMAGE                                COMMAND   CREATED           
 3d80ed3126b6   katacoda/docker-http-server:latest   "/app"    About a minute ago   Up About a minute   80/tcp    kursinis-web-service.3.f7aekzcbukx3c8bjojsl2v4i1
 ----
 +
-Konteinerio ID atitinka http-atsakymuose matomus Host-id.
-+
-Dabartinis paslaugos pasiekiamumas klasteryje:
-:
+=> Konteinerių ID atitinka http-atsakymuose matomus Hostų id.
+
+. Dabartinis paslaugos pasiekiamumas klasteryje pagal _Manager_:
 +
 ----
 $ ssh swarm-n01-oam sudo docker service ps kursinis-web-service
@@ -840,33 +874,90 @@ y8zkkc2pgpj6   kursinis-web-service.2   katacoda/docker-http-server:latest   swa
 f7aekzcbukx3   kursinis-web-service.3   katacoda/docker-http-server:latest   swarm-n03   Running         Running 14 minutes ago
 ----
 +
-* => Paslauga veikia trijuose mazguose, visame klasteryje.
+=> Kiekvienam klasterio mazge veikia po vieną serviso egzempliorių (kopiją, repliką).
 
+. Išorės užklausų siuntimas į pirmą mazgą:
++
+----
+$ curl -s swarm-n01-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
 
-{nbsp}
+$ curl -s swarm-n01-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
 
-[.text-left]
-==== Klasterio konfigūracija
+$ curl -s swarm-n01-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
 
-.(1 pav.) Klasterio mazgų konfigūracija Host OS atžvilgiu.
-image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/2-Debes%C5%B3-kompiuterija/kursinis-darbas/Saulius-Krasuckas/img/Docker-Swarm-klasterio-konfig%C5%ABracija.svg[width=100%]
+$ curl -s swarm-n01-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
+----
++
+Atsako trys skirtingi konteineriai.
 
-{nbsp}
+. Išorės užklausų siuntimas į antrą mazgą:
++
+----
+$ curl -s swarm-n02-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
 
-[.text-left]
-==== _Web_-serviso startavimas ir tikrinimas
+$ curl -s swarm-n02-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
 
-* Klasteryje paleisti _Web_-servisą, veikiantį konteinerių pagrindu.
-  Servisas turi būti pasiekiamas.
+$ curl -s swarm-n02-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
 
+$ curl -s swarm-n02-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
 
-{nbsp}
+$ curl -s swarm-n02-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
+----
++
+Atsako trys tie patys skirtingi konteineriai.
 
-[.text-left]
-==== Serviso didinimas (plėtimas)
+. Išorės užklausų siuntimas į trečią mazgą:
++
+----
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
 
-* Sukurti ne mažiau kaip 3 serviso kopijas (replikas).
-  Parodyti, kaip servisai pasiskirsto klasteryje.
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 04bce300bcc1</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 3d80ed3126b6</h1>
+
+$ curl -s swarm-n03-oam
+<h1>This request was processed by host: 9c2d26cbff9e</h1>
+----
++
+Atsako vėl tie patys trys konteineriai.
++
+=> Paslauga veikia trijuose mazguose, visame klasteryje.
 
 
 {nbsp}
