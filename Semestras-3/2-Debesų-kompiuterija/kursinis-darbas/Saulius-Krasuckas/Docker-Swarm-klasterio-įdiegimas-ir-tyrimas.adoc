@@ -1613,7 +1613,14 @@ CONTAINER ID   IMAGE                                COMMAND   CREATED          S
 [.text-left]
 ==== _Web_-serviso pasiekiamumas įvairiuose etapuose
 
-* Parodyti / atvaizduoti _Web_-serviso pasiekiamumą visuose etapuose.
+
+Serviso pasiekiamumą įvairiuose etapuose jau atvaizdavau CLI būdu.
+Kai kada, kai _Manager_ neveikia, tai padaryti nėra elegantiška.
+
+Dėl visa ko įtraukiu trijų užklausų rezultatus naršyklėje:
+
+image::https://user-images.githubusercontent.com/74717106/153412031-026e354a-1fbc-4284-8c69-a4ade87d7b0f.png[width=100%]
+
 
 
 {nbsp}
@@ -1681,27 +1688,27 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 [.text-left]
 ==== {nbsp}
 
-**[[[1]]]** https://www.osboxes.org/ubuntu/#ubuntu-20-04-3-info[OSboxes {nbsp} > {nbsp} VirtualBox Images {nbsp} > {nbsp} Ubuntu {nbsp} > {nbsp} Ubuntu 20.04.3 Focal Fossa]
+**[[[1]]]** `osboxes.org`, https://www.osboxes.org/ubuntu/#ubuntu-20-04-3-info[OSboxes {nbsp} > {nbsp} VirtualBox Images {nbsp} > {nbsp} Ubuntu {nbsp} > {nbsp} Ubuntu 20.04.3 Focal Fossa]
 
-**[[[2]]]** https://docs.docker.com/engine/swarm/swarm-tutorial/[Docker docs {nbsp} > {nbsp} Run your app in production {nbsp} > {nbsp} Getting started with swarm mode (tutorial)]
+**[[[2]]]** `docker.com`, https://docs.docker.com/engine/swarm/swarm-tutorial/[Docker docs {nbsp} > {nbsp} Run your app in production {nbsp} > {nbsp} Getting started with swarm mode (tutorial)]
 
-**[[[3]]]** https://www.katacoda.com/courses/docker-orchestration[Learn Docker Orchestration / Swarm Mode using Interactive Browser-Based Scenarios]
+**[[[3]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration[O'Reilly | Katacoda | Learn Docker Orchestration / Swarm Mode using Interactive Browser-Based Scenarios]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/getting-started-with-swarm-mode[Getting Started With Swarm Mode]
+**[[[4]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/getting-started-with-swarm-mode[O'Reilly | Katacoda | Getting Started With Swarm Mode]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/create-overlay-networks[Create Overlay Network]
+**[[[5]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/create-overlay-networks[O'Reilly | Katacoda | Create Overlay Network]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode[Load Balance and Service Discover in Swarm Mode]
+**[[[6]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/load-balance-service-discovery-swarm-mode[O'Reilly | Katacoda | Load Balance and Service Discover in Swarm Mode]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/rolling-updates-services-swarm-cluster[Apply Rolling Updates Across Swarm Cluster]
+**[[[7]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/rolling-updates-services-swarm-cluster[O'Reilly | Katacoda | Apply Rolling Updates Across Swarm Cluster]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/healthcheck[Add Healthcheck for Containers]
+**[[[8]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/healthcheck[O'Reilly | Katacoda | Add Healthcheck for Containers]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/deploy-swarm-services-with-compose[Deploy Swarm Services with Compose v3]
+**[[[9]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/deploy-swarm-services-with-compose[O'Reilly | Katacoda | Deploy Swarm Services with Compose v3]
 
-**[[[x]]]** https://www.katacoda.com/courses/docker-orchestration/maintenance-mode-for-swarm[Enable Maintenance Mode for a Swarm Node]
+**[[[10]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/maintenance-mode-for-swarm[O'Reilly | Katacoda | Enable Maintenance Mode for a Swarm Node]
 
-**[[[x]]]** https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx/[Simple Clustering with Docker Swarm and Nginx]
+**[[[11]]]** `jayway.com`, https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx/[Simple Clustering with Docker Swarm and Nginx]
 
 
 {nbsp}
@@ -1712,3 +1719,5 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 [.text-left]
 
 (Schemos, kodas)
+
+
