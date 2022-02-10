@@ -1,11 +1,9 @@
-= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
 [.text-center]
 == Elektronikos fakultetas
 
 === Kompiuterijos ir ryšių technologijų katedra
-
-{nbsp}
 
 {nbsp}
 
@@ -33,16 +31,10 @@ Kursinis darbas
 
 {nbsp}
 
-{nbsp}
-
-{nbsp}
-
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
 **Tikrino:** lekt. dr. Liudas Duoba
-
-{nbsp}
 
 {nbsp}
 
@@ -1700,9 +1692,12 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 
 {nbsp}
 
+<<<
+
 === 4. Naudota literatūra
 [.text-left]
 ==== {nbsp}
+
 
 **[[[1]]]** `osboxes.org`, https://www.osboxes.org/ubuntu/#ubuntu-20-04-3-info[OSboxes {nbsp} > {nbsp} VirtualBox Images {nbsp} > {nbsp} Ubuntu {nbsp} > {nbsp} Ubuntu 20.04.3 Focal Fossa]
 
@@ -1725,15 +1720,3 @@ Paslaugos replikų skaičius atstatomas (sukuriamos trūkstamosios) ilgiausiai p
 **[[[10]]]** `katacoda.com`, https://www.katacoda.com/courses/docker-orchestration/maintenance-mode-for-swarm[O'Reilly | Katacoda | Enable Maintenance Mode for a Swarm Node]
 
 **[[[11]]]** `jayway.com`, https://blog.jayway.com/2015/11/25/simple-clustering-with-docker-swarm-and-nginx/[Simple Clustering with Docker Swarm and Nginx]
-
-
-{nbsp}
-
-<<<
-
-=== 5. Priedai
-[.text-left]
-
-(Schemos, kodas)
-
-
