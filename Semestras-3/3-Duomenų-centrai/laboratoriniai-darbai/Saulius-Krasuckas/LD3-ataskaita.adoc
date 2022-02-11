@@ -167,3 +167,6 @@ Pakomentuokite savo pasirinkimą ir kokią įtaką jis daro skaičiavimams.
 3+| Viso                                                                                     >| `245.974 W`
 |====
 
+. Sukuriamos šilumos diagrama
+
+image::https://user-images.githubusercontent.com/74717106/153626186-3bd483d3-4517-4c43-820f-27275552ba37.png[]
