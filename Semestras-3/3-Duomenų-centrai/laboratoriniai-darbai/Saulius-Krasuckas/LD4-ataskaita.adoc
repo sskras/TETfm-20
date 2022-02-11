@@ -34,8 +34,6 @@ Modulis ELKRM17303
 
 {nbsp}
 
-{nbsp}
-
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
@@ -93,6 +91,7 @@ Suprojektuoti IT įrangos įšdėstymą duomenų centre:
 * Laikysitės principo: _Less is more_. Svarbu kokybė;
 * Išlaikykite vienodą stilių.
 
+<<<
 
 [.text-left]
 == Darbo eiga
