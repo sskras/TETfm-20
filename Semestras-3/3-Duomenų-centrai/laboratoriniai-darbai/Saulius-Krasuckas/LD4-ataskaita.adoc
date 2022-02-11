@@ -22,7 +22,7 @@
 
 Modulis ELKRM17303
 
-==== Laboratorinio darbo nr. 6 ataskaita
+==== Laboratorinio darbo nr. 4 ataskaita
 
 {nbsp}
 
@@ -58,7 +58,7 @@ VILNIUS, 2022
 <<<
 
 [.text-center]
-=== Laboratorinis darbas nr. 6
+=== Laboratorinis darbas nr. 4
 [.text-center]
 == IT įrangos išdėstymas DC
 
