@@ -97,3 +97,18 @@ Suprojektuoti IT įrangos įšdėstymą duomenų centre:
 [.text-left]
 == Darbo eiga
 
+. Serverių patalpos išdėstymo planas su pažymėtomis karštomis zonomis:
++
+image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/3-Duomen%C5%B3-centrai/laboratoriniai-darbai/Saulius-Krasuckas/LD4-DC-i%C5%A1d%C4%97stymas.svg[width=100%]
++
+{nbsp}
+
+. Parenku **APC / Schneider Electric* gamybos spintą:
+  https://eref.se.com/si/en/telem/product-pdf/AR2580[AR2580 - NetShelter SV 42U 800mm Wide x 1200mm deep enclosure]  +
+  (Specifikaciją prisegu greta ataskaitos kaip atskirą .pdf failą)
+
+. Taip pat plane numatyta vieta augimui.
+
+. Spintų eiles sugrupavau poromis.
+  Kadangi spintų skaičius nelyginis (25, 35), tai plane pažymėjau, jog priešais paskutinę spintą reikėtų pastatyti laikiną, tuščią spintą arba tiesiog papildomą oro užsklandą (žalia spalva), kad karšto oro srautai nepatektų į šalto oro perimetrą.
+
