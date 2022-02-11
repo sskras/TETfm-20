@@ -1,4 +1,4 @@
-= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
 [.text-center]
 == Elektronikos fakultetas
@@ -13,10 +13,19 @@
 
 {nbsp}
 
-=== Virtualizacija duomenų centruose
+{nbsp}
+
+{nbsp}
+
+[.text-center]
+== Virtualizacija duomenų centruose
 Modulis ELKRM17303
 
 ==== Laboratorinio darbo nr. 7 (+8) ataskaita
+
+{nbsp}
+
+{nbsp}
 
 {nbsp}
 
@@ -30,6 +39,10 @@ Modulis ELKRM17303
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
 **Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
 
 {nbsp}
 
