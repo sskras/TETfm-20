@@ -71,18 +71,19 @@ Išmokti suskaičiuoti DC išskiriamą šilumos kiekį.
 [.text-left]
 === Užduotis
 
-- Suskaičiuoti išskiriamą šilumos kiekį duomenų centre, kuris:
+. Suskaičiuoti išskiriamą šilumos kiekį duomenų centre, kuris:
 
   * yra 70 m^2^ dydžio;
   * jam aptarnauti nereikia daugiau nei 2 darbuotojų;
   * yra 30 spintų, kurių dydis 42U, o projektinė spintos galia 9 kW;
   * kiekvienos spintos duomenų centre užpildymas siekia 33%.
 
-- Apkrovimui skaičiavimui pasinaudokite internete rasta ir jūsų pasirinkto serverio specifikacija bei joje nurodytais maitinimo šaltinio duomenimis.
 +
+Apkrovimo skaičiavimui pasinaudokite internete rasta ir jūsų pasirinkto serverio specifikacija bei joje nurodytais maitinimo šaltinio duomenimis. +
+  +
 Pakomentuokite savo pasirinkimą ir kokią įtaką jis daro skaičiavimams.
 
-- Parenkite trumpą ataskaitą, kurioje:
+. Parenkite trumpą ataskaitą, kurioje:
 
   * Bus pateiktas skaičiavimo rezultatas;
   * Bus pateiktas informatyvus sukuriamos informacijos (informacinis šilumos?) grafikas;
@@ -90,4 +91,12 @@ Pakomentuokite savo pasirinkimą ir kokią įtaką jis daro skaičiavimams.
   * Laikysitės principo: _Less is more_.  Svarbu kokybė;
   * Išlaikykite vienodą stilių.
 
-- Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+. Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+
+
+<<<
+
+[.text-left]
+=== Eiga
+
+* TODO
