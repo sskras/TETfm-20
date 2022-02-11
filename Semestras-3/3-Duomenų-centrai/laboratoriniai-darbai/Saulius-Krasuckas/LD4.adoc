@@ -92,7 +92,7 @@ Tarp eilių galų ir kitų kliūčių turi būti užtikrinta galimybė patekti �
 
 * Didesniuose DC dažnai pasirenkamos 3 "plytelės", kad būtų užtikrintas geresnis prieinamumas.
 * Kai kuriuose išplanavimuose gali būti pageidaujama, kad eilė baigtųsi prie sienos.
-Tačiau tapi sukuriama aklina "alėja".
+Tačiau taip sukuriama aklina "alėja".
 * Jei eilės ilgesnės nei 10 spintų, gali būti daromas tarpas, kad darbuotojai galėtų praeiti.
 Tai taip pat gali būti praktiškai svarbu technikams, kuriems reikia pasiekti abi spintos puses, kad nereikėtų eiti ilgo atstumo.
 
