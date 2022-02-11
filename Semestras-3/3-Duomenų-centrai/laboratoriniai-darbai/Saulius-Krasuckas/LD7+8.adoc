@@ -113,7 +113,7 @@ Dėl aiškumo juos abu priskiriu hibridinei _Type 1.5_ (dar vadinamai _Type 3_) 
    - ir jų deduplikacija (jei reikia)
  ** palaiko _labai_ įvairius Storage backend-us
  ** _PCI pass-through_ galimybė;  <<13>> psl. 10
- ** integruotas `net antispoofing` mechanizmas;  <<9>> psl. 11
+ ** integruotas _Net-antispoofing_ mechanizmas;  <<9>> psl. 11
  ** su _illumOS_ išeities kodu ("CDDL") tiesiogiai suderinama licencija ("Simplified BSD License") leidžia integruoti `bhyve` kodą tiesiogiai į branduolį;  +
  ** Dabar SmartOS sistemoje _bhyve_ naudojamas pagal nutylėjimą.
 
@@ -124,18 +124,49 @@ Kadangi apie populiarų KVM tikėtinai rašys kiti grupiokai (o be to, SmartOS n
 
 Pats SmartOS hostas yra specializuota OS -- skirta tik Guest OS startavimui / valdymui, ir niekam kitam.
 
-==== TODO komponentai
+==== _SmartOS_ komponentai  <<13>>
 
-- Komponentų sąrašas;  <<13>>
+(Bent jau FreeBSD atveju pavadinimai tikslūs, SmartOS atveju galimi smulkūs pakitimai)
 
-==== TODO diagramos
+- `vmm.ko` -- branduolio draiveris (tvarkyklė);
+- `bhyve` -- VMų / Guest OS apdorojimo programa, pats VMM (_Userland_);
+- `bhyveload` ir `grub2-bhyve` -- Guest OS įkrovikliai;
+- `bhyvectl` -- VM egzempliorių (angl. _instances_) valdiklis, pvz. jų išjungimui.
 
-- Architektūra:  https://marclop.svbtle.com/smartos#SmartOS-Network#:~:text=42:41:58:2d:fa:8c
 
-Ankstesnės FreeBSD prezentacijos (apie komponentus):
+==== Architektūros diagramos
 
-- Diagramos;  <<12>>
-- Diagramos:  https://wiki.smartos.org/smartos-virtualization/
+* Virtualaus ūkio iš šešių Guestų pavyzdys -- 2 Linux VM + 4 SmartOS konteineriai:  <<38>>
+
+- (Linux) Elk
+- (Linux) OCS Inventory NG
+- DHCP
+- Samba
+- powerDNS
+- MySQL PerconaDB
+
+.Hipervizoriaus pjūvis per _Storage_
+image::https://4ilunw.by3301.livefilestore.com/y2pYgQQ0RqDAgLu6h0gbDTou54F71dBfkleZwkp9RbdMWAgmRWo3QmZxEh2TurZzWSRFab7by5ujl7Wpa6IyJcE_aUkP1Bo2BK6QoXzL5A7Pss/smartos-storage.PNG?psid=1[width=100%]
+
+{nbsp}
+
+.Hipervizoriaus pjūvis per _Network_
+image::https://4ilunw.by3301.livefilestore.com/y2p29-G17Kg0azNEf-mM-T07bgoIH6bSZhdf5t1HZWMSfveDUNI2ZhfhjqKtiXan-adYR6jkm4OrAgTd8XI5GZ-zZVwNju6voy4jy0N6w9t5Kk/smartos-network.PNG?psid=1[width=100%]
+
+{nbsp}
+
+* Ankstesnės FreeBSD prezentacijos (komponentų diagramos).  <<12>>
+
+* Diagramos iš dokumentacijos:  <<39>>
+
+.OS lygio virtualizacija (specializuoti SmartOS konteineriai)
+image::https://wiki.smartos.org/assets/images/smartos-virtualization-os-virt.png[]
+
+.HVM (Type-II) virtualizacija (KVM + bhyve)
+image::https://wiki.smartos.org/assets/images/smartos-virtualization-hvm%2Bos.png[]
+
+{nbsp}
+
 
 ==== Savybės:
 
@@ -273,57 +304,80 @@ Scenarijus aktualus aptarnaujant pvz. mobiliųjų žaidimų ar socialinio tinklo
 
 - ar VM migruojami tarp hostų klasteryje?
 +
-Taip: ...
+Taip: tam reikalingas CLI komandų vykdymas ir tinklo (LAN) pralaidumas.
 
 - migracija be Downtime ar su?
 +
-Su trumpu Downtime: ...
+Su trumpa prastova: dar vadinama _Warm migration_.  Tai visai dera su konteinerizacija ir _Microservices_ architektūra.
 
 - ar yra VMų snapšotai?
 +
-Tik VM diskinės atminties: ...
+Egzistuoja tik VM diskinės talpos snapšotai.
 
 - ar yra globalus resursų ribojimas (pvz. užtikrinant DR rezervą)
++
+Mano rastais duomenimis, globalaus resursų ribojimo _SmartOS_ neturi.
+
 - ar veikia Oversubscription?
++
+Dėl puikaus OS architektūros lygiagretinamumo _Oversubscription_ veikia puikiai ir leidžia atlaikyti itin aukštus apkrovų šuolius (tinklo, CPU, I/O).
+
 - kaip skeilinasi?
 
-..?
+Vertikalia ir horizontalia ašimi skeilinasi puikiai ir tinka _Microservices_ strategijai: lengva kurti atskirus Guestus atskiriems servisams (ypač kadangi palaikomas Docker), taip pat itin paprasta klonuoti esamus Guestus.
 
-- kaip atliekamas DRas? 
+- kaip atliekamas DR? 
++
+DR atliekamas rankiniu būdu:  <<40>>
 
-..?
+* identifikuojame GRUB (angl. _Bootloader_) sritį ir _ZFS Boot pool_ diskinę erdvę;
+* padarome atsarginę jų kopiją;
+* fizinės nelaimės atveju atstatome šiuos duomenis + aplikacijos duomenis iš atsarginių kopijų naujame serveryje.
+* startuojame naują serverį (Host OS).
 
 
 ==== Ar SmartOS valdomas tiesiogiai, ar klasteriniu būdu ?
 
 Kaip pavienis įrankis, SmartOS valdomas tiesiogiai.
 
-REST ?
-
-Tačiau daugianodžių SmartOS debesų valdymui siūlomas atskiras, irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** / **Triton Compute Service**, į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
+Tačiau daugianodžių SmartOS debesų valdymui siūlomas atskiras, irgi atvirojo kodo įrankis (angl. _Cloud management platform_) **Triton DataCenter** (TDC) / **Triton Compute Service** (TCS), į kurio funkcijas irgi trumpai atsižvelgsiu. <<7>>
 
 Jei norime kelti OSus tinklu, šiame įrankyje verta PXE mechanizmui dedikuoti atskirą hostą, vad. Head Node (HN).
 Kiti pakeltieji hostai jau vadinsis Compute Node (CN).
 
-https://docs.joyent.com/content/10-public-cloud/050-network/030-firewall/TCP_firewall_status.jpg
-https://docs.joyent.com/content/20-private-cloud/060-networks/networks01.png
+.TDC Guest OS valdymo GUI
+image::https://docs.joyent.com/content/10-public-cloud/050-network/030-firewall/TCP_firewall_status.jpg[width=100%]
 
-https://docs.joyent.com/content/20-private-cloud/triton01.png
-https://docs.joyent.com/content/20-private-cloud/triton02.png
+{nbsp}
 
-Jis įgalina centralizuotai:
+.Vieno TDC duomenų centro hostų apžvalga
+image::https://docs.joyent.com/content/20-private-cloud/060-networks/networks01.png[width=100%]
+
+{nbsp}
+
+.TDC HN (_headnode_) ir CN (_compute node_) tinklai duomenų centre ir sujungimai su išore
+image::https://docs.joyent.com/content/20-private-cloud/triton01.png[width=100%]
+
+{nbsp}
+
+.Virtualios TDC infrastruktūros valdymas REST API pagalba
+image::https://docs.joyent.com/content/20-private-cloud/triton02.png[width=100%]
+
+{nbsp}
+
+TDC įgalina centralizuotai:
 
 * atlikti _Firewalling_ (OS vidinio mechanizmo IPFilter dėka): https://docs.joyent.com/public-cloud/network/firewall
 * valdyti tinklus L2 (Fabric, VLAN, VNIC, per-container TCP/IP stack) ir L3 (IP subnets, VXLAN, antispoofing, routing, NAT) lygmenyse programiškai (SDN): https://docs.joyent.com/public-cloud/network/sdn
 
-Apie Triton DataCenter:
+Daugiau apie Triton DataCenter:
 
 - Konteinerių ir VMų Combo diagramos: <<14>>
 - Detalesnė Triton DC sudėtis: <<15>>
 
 ---
 
-Pranašumai:
+==== SmartOS pranašumai:
 
 * _Solaris_ / _illumOS_ projektuotas didesniam saugumui (apskritai TODO patikimumui) nei Linux, ir naudojantis tai juntama tiesiogiai
 
@@ -373,18 +427,16 @@ Ar tai hipervizorių daro labiau nišiniu, ar mažinau nišiniu -- požiūrio ir
 
 === Taikymo pavyzdžiai:
 
-- Docker konteinerių startavimas be _Triton_ pagalbos; <<16>>
+- Docker konteinerių startavimas be _Triton_ pagalbos.  <<16>>
   (t. p. ir `fwadm` aprašymas)
-- Asmeninio Docker registro naudojimas. <<17>>
-- Orientavimasis į _Node.js_ servisus: <<18>>
-- Deploying Kubernetes on SmartOS | Virtualization: How SmartOS Does it Differently ¶:
-  https://www.youtube.com/watch?v=rA0pcmqpRx4
-- Cloud-on-a-Laptop:  +
-  https://github.com/joyent/triton/blob/master/docs/developer-guide/coal-setup.md
-- Thoughts on Kubernetes on SmartOS:  +
-  https://hanskruse.eu/post/2020-06-07-thoughts_on_kubernetes_on_smartos/
+- Asmeninio Docker registro naudojimas.  <<17>>
+- Orientavimasis į _Node.js_ servisus.  <<18>>
+- "Deploying Kubernetes on SmartOS | Virtualization: How SmartOS Does it Differently".  <<41>>
+- "Cloud-on-a-Laptop"  <<42>>
+- "Thoughts on Kubernetes on SmartOS"  <<43>>
 
 <<<
+
 
 [bibliography]
 === Nuorodos
@@ -447,7 +499,7 @@ https://bhyvecon.org/bhyveconOttawa2019-Patrick.pdf[Porting bhyve to SmartOS]
 `2019-05-14` **[[[26]]]** `bhyvecon.org`, Rod Grimes, 
 https://bhyvecon.org/bhyveconOttawa2019-Rodney.pdf#page=3[bhyve VM_MAXCPU cleanup | VM_MAXCPU]
 
-`2015-12-08` **[[[27]]]** `lists.smartos.org`, Bryan Horstmann-Allen, https://www.mail-archive.com/smartos-discuss@lists.smartos.org.email.enqueue.archive.listbox.com/msg01707.html[Re: [smartos-discuss] High availability solutions with SmartOS]
+`2015-12-08` **[[[27]]]** `lists.smartos.org`, Bryan Horstmann-Allen, https://www.mail-archive.com/smartos-discuss@lists.smartos.org.email.enqueue.archive.listbox.com/msg01707.html[Re: [smartos-discuss\] High availability solutions with SmartOS]
 
 `2018-12-26` **[[[28]]]** `gist.github.com`, Mike Gerdts, https://gist.github.com/mgerdts/10376cdbd8f015f422d61664408db2aa#file-1-guest-images-md[Bhyve Machine Images | UEFI and BIOS Emulation]
 
@@ -470,3 +522,17 @@ https://www.joyent.com/blog/nodestack-is-nodejs-mongodb-and-smartos#:~:text=burs
 `2021-11-16` **[[[36]]]** `hetzner.com`, Stefan Eestermans, https://community.hetzner.com/tutorials/how-to-install-SmartOS[How to install SmartOS without the need for a USB flash drive]
 
 `2015-05-26` **[[[37]]]** `brianewell.com`, Brian Ewell, https://blog.brianewell.com/branded-lx-zones-on-smartos/[Branded (LX) Zones on SmartOS]
+
+`2014-07-27` **[[[38]]]** `svbtle.com`, Marc Lopez, 
+https://marclop.svbtle.com/smartos#SmartOS-Network#:~:text=42:41:58:2d:fa:8c[SmartOS overview]
+
+`2022-02-11` **[[[39]]]** `wiki.smartos.org`, (peržiūrėta) https://wiki.smartos.org/smartos-virtualization/[SmartOS Virtualization | Virtualization: How SmartOS Does it Differently]
+
+`2019-09-24` **[[[40]]]** `blog.jcea.es`, Jesús Cea Avión 
+https://blog.jcea.es/posts/20190924-dumping_boot_SmartOS.html#disaster-recovery[Dumping SmartOS boot zpool when booting from harddisk]
+
+`2019-02-12` **[[[41]]]** `youtube.com`, ShanerLife https://www.youtube.com/watch?v=rA0pcmqpRx4[Deploying Kubernetes on SmartOS | Virtualization: How SmartOS Does it Differently]
+
+`2021-03-19` **[[[42]]]** `github.com`, Dan McDonald https://github.com/joyent/triton/blob/master/docs/developer-guide/coal-setup.md[Cloud on a Laptop (CoaL)]
+
+`2020-06-07` **[[[43]]]** `hanskruse.eu`, Hans Kruse https://hanskruse.eu/post/2020-06-07-thoughts_on_kubernetes_on_smartos/[Thoughts on Kubernetes on SmartOS]
