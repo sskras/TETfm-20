@@ -1,1 +1,99 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-center]
+== IT įrangos išdėstymas DC
+
+Modulis ELKRM17303
+
+==== Laboratorinio darbo nr. 6 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+[.text-center]
+=== Laboratorinis darbas nr. 6
+[.text-center]
+== IT įrangos išdėstymas DC
+
+
+[.text-left]
+=== Darbo tikslas
+
+Suprojektuoti IT įrangos įšdėstymą duomenų centre:
+
+|=====
+  | Studentas             | Spintų kiekis | Spintos plotis, mm | Spintų ilgis, mm | Žingsnis
+ 
+  | Saulius Krasuckas     | 25            | 800                | 1200             | 7
+|=====
+
+* Suformuokite karšto/šalto oro zonas.
+* Internete suraskite kompiuterių spintą, kuri atitinka keliamus reikalavimus, 
+  bei pridėkite jos specifikaciją prie ataskaitos.
+* Numatykite vietą 10 spintų augimui ateityje.
+
+
+[.text-left]
+=== Darbo užduotis
+
+- Parenkite trumpą ataskaitą, kurioje:
+
+* Schemomis braižyti naudokite savo pasirinktą įrankį (pvz. naudokite `draw.io`);
+* Bus serverių patalpos išdėstymo planas, pažymėtos karštos zonos (o idealiu atveju ir atskyrimo užsklandos);
+* Plane matysis reikalingi žymėjimai, matmenys;
+* Laikysitės principo: _Less is more_. Svarbu kokybė;
+* Išlaikykite vienodą stilių.
+
+
+[.text-left]
+== Darbo eiga
 
