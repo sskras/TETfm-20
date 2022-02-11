@@ -79,7 +79,7 @@ Išmokti suskaičiuoti DC išskiriamą šilumos kiekį.
   * kiekvienos spintos duomenų centre užpildymas siekia 33%.
 
 +
-Apkrovimo skaičiavimui pasinaudokite internete rasta ir jūsų pasirinkto serverio specifikacija bei joje nurodytais maitinimo šaltinio duomenimis. +
+Apkrovimo skaičiavimui pasinaudokite internete rasta ir jūsų pasirinkta serverio specifikacija bei joje nurodytais maitinimo šaltinio duomenimis. +
   +
 Pakomentuokite savo pasirinkimą ir kokią įtaką jis daro skaičiavimams.
 
@@ -97,6 +97,73 @@ Pakomentuokite savo pasirinkimą ir kokią įtaką jis daro skaičiavimams.
 <<<
 
 [.text-left]
-=== Eiga
+=== Darbo eiga
 
-* TODO
+. Internete susirandu savo mėgiamos SPARC architektūros serverius.  +
+
+  * Vienas modelis tebūnie SPARC T8-4:
+
+   ** https://docs.oracle.com/cd/E79179_01/html/E80509/gortx.html[Oracle SPARC T8 Servers Documentation Library  »   SPARC T8-4 Server Installation Guide  »  Confirming Specifications  »  **Electrical Specifications**]: **5040 W** galia.
+
+   ** https://docs.oracle.com/cd/E79179_01/html/E80509/gorvy.html[Oracle SPARC T8 Servers Documentation Library  »   SPARC T8-4 Server Installation Guide  »  Confirming Specifications  »  **Physical Specifications**]: **6U** aukštis spintoje.
+
+  * Kitas modelis tebūnie mažesnis, SPARC T8-1:
+
+   ** https://docs.oracle.com/cd/E79179_01/html/E80507/z40002831391617.html[Oracle SPARC T8 Servers Documentation Library  »   SPARC T8-1 Server Installation Guide  »  Specifications  »  **Electrical Specifications**]: **1300 W** galia.
+
+   ** https://docs.oracle.com/cd/E79179_01/html/E80507/z40000061391608.html[Oracle SPARC T8 Servers Documentation Library  »   SPARC T8-1 Server Installation Guide  »  Specifications  »  **Physical Specifications**]: **2U** aukštis spintoje.
+
+. Tolimesni pasirinkimo kriterijai:
+
+  * jei imčiau T8-4 serverius, jie sudarytų 12U, o dviejų U dar trūktų iki pilno 33% užpildymo;
+  * jei pridėčiau dar T8-1 (2U), didžiausia vartojama galia išaugtų iki 11.380 W (gerokai daugiau projektinės);
+  * jei imčiau tik T8-1 modelį, spintoje iš viso prireiktų 7 vnt.;
+  * tuomet didžiausia galia būtų: 7 * 1300 W = 9100 W;
+  * beveik tinka, tik reikės naudoti T8-1 konfigūraciją, mažesnę už maksimalią;
+  * optimalu, kai IT įrangos galia yra 80% nuo projektinės (max.) galios: 0,8 * 9000 = 7200 W;
+  * tuomet vienam serveriui reikėtų neviršyti 7200 W / 7 = 1028 W;
+
+. T8-1 konfigūracijos parinkimas:
+
+  * Pasinaudoju gamintojo kalkuliatoriumi:  +
+  https://www.oracle.com/power-calculators/sparc-t8-1-power-calc.html
+  
+  * Parenku tinkamos galios komplektaciją:
++
+|===
+    | Modulis / parametras           | Parinkta vertė         | Pasirinkimo argumentavimas
+
+    | Processor:                     | 32-core, 5.0 GHz       | Sparčiausias šios šeimos CPU
+    | Memory (64GB DIMM):            | 8 DIMMs                | Pusės terabaito pradžiai pakaks, pasilikime vietos RAM plėtimui
+    | Solid-State Drives (2.5-inch): | 3 SSDs                 | 2x SSD skirti RAID-1,  +
+                                                                1x SSD atsarginis
+    | Oracle Flash Accelerator:      | 2 F640 PCIe Cards      | DB srautui per SAN akseleruoti
+    | PCIe Cards:                    | 3 PCIe Cards           | 2x SAN kontroleriai (Redundancy) +  +
+                                                                1x LAN (Quad-head) kontroleris (Redundancy integruotajam)
+    | Indicate Workload (%):         | 100                    | Tariame, kad serveriai bus apkrauti maksimaliai
+    |                                |                        |
+    | **Galia:**                    2+| **1027 W**
+    | **Aukštis:**                  2+| **2U**
+|===
+
+. Tolimesni skaičiavimai:
+
+  * Serverių skaičius spintoje: 14U / 2U = **7 vnt.**
+  * Didžiausia serverių galia spintoje: 7 * 1027 W = **7189 W**.
+  * Duomenų centro IT įrangos galia: 7189 W * 30 = **215.670 W**.
+  * Sistemos galia (projektinė):  9000 W * 30 = **270.000 W**.
+
+. Pildau šilumos apskaičiavimo lentelę:
++
+|====
+  | Elementas    | Reikalingi duomenys                 | Šilumos apskaičiavimas               | Viso sukurtas šilumos kiekis
+  
+  | IT įranga    | Įrangos galia vatais    = `215.670` | Lygu įrangos galiai                 >| `215.670,00 W`
+  | UPS          | Sistemos galia vatais   = `270.000` | (0,04 x 270.000) + (0,05 x 215.670) >| `21.583,50 W`
+  | Elektros 
+  infrastruktūra | Sistemos galia vatais   = `270.000` | (0,01 x 270.000) + (0,02 x 215.670) >| `7013,40 W`
+  | Apšvietimas  | Apšviečiamos patalpos plotas = `70` | 21,53 x 70 (m^2^)                   >| `1507,10 W`
+  | Žmonės       | Max. žmonių kiekis           =  `2` | 100 x 2                             >| `200,00 W`
+3+| Viso                                                                                     >| `245.974 W`
+|====
+
