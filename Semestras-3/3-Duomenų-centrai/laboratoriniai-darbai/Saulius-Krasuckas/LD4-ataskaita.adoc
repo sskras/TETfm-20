@@ -103,7 +103,7 @@ image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/3-Du
 +
 {nbsp}
 
-. Parenku **APC / Schneider Electric* gamybos spintą:
+. Parenku **APC / Schneider Electric** gamybos spintą:  +
   https://eref.se.com/si/en/telem/product-pdf/AR2580[AR2580 - NetShelter SV 42U 800mm Wide x 1200mm deep enclosure]  +
   (Specifikaciją prisegu greta ataskaitos kaip atskirą .pdf failą)
 
