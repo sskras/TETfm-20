@@ -1,0 +1,93 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-center]
+== DC išskiriamos šilumos skaičiavimas
+
+Modulis ELKRM17303
+
+==== Laboratorinio darbo nr. 3 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+[.text-center]
+=== Laboratorinis darbas nr. 3
+[.text-center]
+== DC išskiriamos šilumos skaičiavimas
+
+
+[.text-left]
+=== Darbo tikslas
+
+Išmokti suskaičiuoti DC išskiriamą šilumos kiekį.
+
+[.text-left]
+=== Užduotis
+
+- Suskaičiuoti išskiriamą šilumos kiekį duomenų centre, kuris:
+
+  * yra 70 m^2^ dydžio;
+  * jam aptarnauti nereikia daugiau nei 2 darbuotojų;
+  * yra 30 spintų, kurių dydis 42U, o projektinė spintos galia 9 kW;
+  * kiekvienos spintos duomenų centre užpildymas siekia 33%.
+
+- Apkrovimui skaičiavimui pasinaudokite internete rasta ir jūsų pasirinkto serverio specifikacija bei joje nurodytais maitinimo šaltinio duomenimis.
++
+Pakomentuokite savo pasirinkimą ir kokią įtaką jis daro skaičiavimams.
+
+- Parenkite trumpą ataskaitą, kurioje:
+
+  * Bus pateiktas skaičiavimo rezultatas;
+  * Bus pateiktas informatyvus sukuriamos informacijos (informacinis šilumos?) grafikas;
+  * Bus pateikta informacija apie pasirinktą serverį;
+  * Laikysitės principo: _Less is more_.  Svarbu kokybė;
+  * Išlaikykite vienodą stilių.
+
+- Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
