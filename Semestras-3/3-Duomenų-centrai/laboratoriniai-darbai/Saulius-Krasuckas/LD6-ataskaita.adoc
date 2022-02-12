@@ -101,10 +101,13 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
 
 . Pasirenku ugniasienes.
 
-  * Pirmoji ugniasienė.
-    Renkuosi šio gamintojo virtualią NGFW implementaciją, t.y. _Virtual Appliance_:
+  * Pirmoji ugniasienė: **Juniper  https://www.juniper.net/content/dam/www/assets/datasheets/us/en/security/vsrx-virtual-firewall-datasheet.pdf[vSRX Virtual Firewall]**
 +
-.**Juniper  https://www.juniper.net/content/dam/www/assets/datasheets/us/en/security/vsrx-virtual-firewall-datasheet.pdf[vSRX Virtual Firewall]**
+Pasirinkau virtualią šio gamintojo NGFW implementaciją, t.y. _Virtual Appliance_:
++
+image::https://www.juniper.net/content/dam/www/assets/images/us/en/products/security/srx-series/datasheets/1000671-fig1.png/_jcr_content/renditions/cq5dam.web.1280.1280.png[width=100%]
++
+.vSRX Virtual Firewall sparta
 |===
     | Spartos / pajėgumo rodiklis  ^| VMware hipervizorius ^| KVM hipervizorius
 
@@ -127,11 +130,13 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
 +
 ^$$**$$^ Matuota naudojant HTTP srautą ir 44 kiB dydžio tranzakcijas.
 
-  * Antroji ugniasienė:
+  * Antroji ugniasienė:  **Palo Alto https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/datasheets/pa-5200-series-specsheet[PA-5250]**
 +
-.**Palo Alto https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/datasheets/pa-5200-series-specsheet[PA-5250]**
+image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/network-security/prevention-that-fuels-growth.png?imwidth=1920[width=100%]
++
+.PA-5250 sparta
 |====
-    | Spartos / pajėgumo rodiklis  ^| PA-5250
+    | Rodiklis                     ^| PA-5250
 
     | **Ugniasienės pralaidumas**
       (HTTP srautui)               >| **35.7 Gbps**
