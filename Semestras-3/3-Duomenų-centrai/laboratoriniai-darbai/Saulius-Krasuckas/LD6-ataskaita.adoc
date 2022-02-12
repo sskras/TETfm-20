@@ -121,7 +121,8 @@ image::https://www.juniper.net/content/dam/www/assets/images/us/en/products/secu
       **ir valdymas**^**^          >| **21 Gbps**          >| **20.7 Gbps**
     | **IPS sparta** su rekomenduotinomis
       signatūromis                 >| **18 Gbps**          >| **20.8 Gbps**
-    | **Naujų TCP sesijų sk. / s** >| **351.250**          >| **360.000**
+    | **Naujų TCP sesijų**
+      **augimo sparta (vnt. / s)** >| **351.250**          >| **360.000**
     | Didžiausias vienu metu 
       palaikomų sesijų sk.         >| 4M                   >| 4M
 |===
@@ -146,17 +147,21 @@ image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/network-sec
       (HTTP srautui)               >| **18.3 Gbps**
     | _Threat Prevention_ sparta
       (_appmix_ srautui)           >| 23.0 Gbps
-    | **Naujų TCP sesijų sk. / s** >| **392.000**
+    | **Naujų TCP sesijų**
+      **augimo sparta (vnt. / s)** >| **392.000**
     | Didžiausias vienu metu 
       palaikomų sesijų sk.         >| 8M
 |====
 
 . Mikrosegmentavimo apžvalga
-
++
+Remiuosi šia apžvalga:  +
+https://www.paloaltonetworks.com/cyberpedia/what-is-microsegmentation
++
 Mikrosegmentacija -- būdas atskirti darbinius duomenų srautus vieną nuo kito ir kiekvieną iš jų apsaugoti atskirai.
-
++
 Šis būdas padeda įgyvendinti taip vadinamą (angl.) _Zero Trust_ strategiją.
-
++
 Būdas įgalina:
 
  * sumažinti tinklinių atakų perimetrą,
@@ -164,20 +169,21 @@ Būdas įgalina:
  * sustiprinti reglamentinės politikos atitiktį
  * ir lengvesnį filtravimo politikų valdymą.
 
++
 Žiūrint techniškiau, veikia trys pagrindiniai principai:
 
-. Matomumas
+.. Matomumas
 +
 Mikrosegmentuojant stebimas ne tik srautas Šiaurės-Pietų kryptimi, bet ir srautas Rytų-Vakarų kryptimis.
 Efektyviam mikrosegmentavimui reikalingas viso tinklo srauto stebėjimas:
 +
 image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/cyberpedia/what-is-microsegmentation.png?imwidth=1920[width=100%]
 
-. Kvantuotas saugumas
+.. Kvantuotas saugumas
 +
 Kvantuotas saugumas atsiranda, kai tinklo administratoriai įgalinami identifikuoti itin jautrius duomenų srautus (laike ir tarp sistemų) ir sukurti jiems specifines saugos politikas.  Būtent taip, naudojant preciziškumą yra sustabdomas netiesioginiai, slapti kenkėjiški srautai.
 
-. Dinaminė adaptacija
+.. Dinaminė adaptacija
 +
 Gi dinaminė adaptacija užtikrina, kad minimi principai veikia net itin sparčiai besikeičiančiose šiuolaikinėse skaitmenininėse aplinkose.
 Mikrosegmentavimo atveju saugumo politikos aprašomos gana abstrakčiomis sąvokomis (pvz. aplikacijų pakopomis, angl. _Tiers_) vietoj žemo lygmens konstruktų (pvz. IP adresų ar transportinių porto numerių).
