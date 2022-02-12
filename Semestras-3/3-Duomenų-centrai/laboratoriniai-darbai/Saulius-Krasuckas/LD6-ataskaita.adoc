@@ -153,4 +153,32 @@ image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/network-sec
 
 . Mikrosegmentavimo apžvalga
 
- * TODO
+Mikrosegmentacija -- būdas atskirti darbinius duomenų srautus vieną nuo kito ir kiekvieną iš jų apsaugoti atskirai.
+
+Šis būdas padeda įgyvendinti taip vadinamą (angl.) _Zero Trust_ strategiją.
+
+Būdas įgalina:
+
+ * sumažinti tinklinių atakų perimetrą,
+ * padidinti įsilaužimų suvaldymą,
+ * sustiprinti reglamentinės politikos atitiktį
+ * ir lengvesnį filtravimo politikų valdymą.
+
+Žiūrint techniškiau, veikia trys pagrindiniai principai:
+
+. Matomumas
++
+Mikrosegmentuojant stebimas ne tik srautas Šiaurės-Pietų kryptimi, bet ir srautas Rytų-Vakarų kryptimis.
+Efektyviam mikrosegmentavimui reikalingas viso tinklo srauto stebėjimas:
++
+image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/cyberpedia/what-is-microsegmentation.png?imwidth=1920[width=100%]
+
+. Kvantuotas saugumas
++
+Kvantuotas saugumas atsiranda, kai tinklo administratoriai įgalinami identifikuoti itin jautrius duomenų srautus (laike ir tarp sistemų) ir sukurti jiems specifines saugos politikas.  Būtent taip, naudojant preciziškumą yra sustabdomas netiesioginiai, slapti kenkėjiški srautai.
+
+. Dinaminė adaptacija
++
+Gi dinaminė adaptacija užtikrina, kad minimi principai veikia net itin sparčiai besikeičiančiose šiuolaikinėse skaitmenininėse aplinkose.
+Mikrosegmentavimo atveju saugumo politikos aprašomos gana abstrakčiomis sąvokomis (pvz. aplikacijų pakopomis, angl. _Tiers_) vietoj žemo lygmens konstruktų (pvz. IP adresų ar transportinių porto numerių).
+Aplikacijos ar infrastruktūros pokyčiai taikant mikrosegmentavimą įjungia automatinį saugumo politikų revizavimą realiu laiku, ir (tariamai) nebereikalauja žmogiško įsikišimo.
