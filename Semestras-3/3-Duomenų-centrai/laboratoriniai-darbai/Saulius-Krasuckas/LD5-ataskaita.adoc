@@ -91,7 +91,7 @@ Susipažinti su duomenų centrų (DC) tinklų topologijomis.
   * Laikysitės principo: _Less is more_.  Svarbu kokybė
   * Išlaikykite vienodą stilių.
 +
-******* -- nebūtina atvaizduoti kiekvieno serverio, galite „agreguoti“
+^*^ -- nebūtina atvaizduoti kiekvieno serverio, galite „agreguoti“
 
 . Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
 
