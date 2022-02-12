@@ -1,1 +1,114 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-center]
+== Netbox DCIM
+
+Modulis ELKRM17303
+
+==== Laboratorinio darbo nr. 2 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+[.text-center]
+=== Laboratorinis darbas nr. 2
+[.text-center]
+== Netbox DCIM
+
+
+[.text-left]
+=== Darbo tikslas
+
+Susipažinti su duomenų centrų (DC) infrastruktūros modeliavimo įrankiu _Netbox_.
+
+[.text-left]
+=== Užduotis
+
+. Prisijunkite prie _Netbox_ sistemos: http://dc-lab-netbox.northeurope.cloudapp.azure.com:8000/  +
+   +
+  Kiekvienam elementui naudokite *tag-us su savo vardu*.
+
+. *Bazinės infrastruktūros modeliavimas (_Organization_ skiltis)*, 6 balai
+
+  * Sukurti ir aprašyti du DC: vieno rolė aktyvus, kito -- pasyvus.  +
+    Abu DC apjungti į grupę (_Site Groups_).
+  * DC gali būti skirtinguose miestuose, tad atitinkamai sukurkite reikalingus miestus.
+  * Sukurti ir aprašyti serverių patalpas (_Locations_).
+  * Sukurti ir aprašyti kiekvienoje patalpoje po vieną kompiuterinę spintą, kurios talpa 52U.
+
+. *N+1 elektros infrastruktūros modeliavimas (_Power_ ir _Devices_ skiltis)*, 2 balai
+
+  * Aprašykite reikiamą kiekį _Power Panel_ ir _Power Feeds_,  +
+    sukurkite reikalingus ryšius (parinkite europietiškus parametrus:)
+  * Kiekvienoje spintoje įdiekite atitinkamą kiekį PDU įrenginių (_Devices_),  +
+    sukurkite ryšį su _Power_ infrastruktūra.
+
+. *Įrenginių talpinimas spintoje (_Devices_ dalis)*, 2 balai
+
+  * Kiekvienoje spintoje sumodeliuokite ir patalpinkite po du skirtingus įrenginius  +
+    (galite importuoti papildomų: https://github.com/netbox-community/devicetype-library)
+  * Sumodeliuokite kiekvieno įrenginio pajungimą prie el. energijos infrastruktūros.
+  * Kaip keičiasi _Power Feed_ apkrova?
+
+. Parenkite trumpą ataskaitą, kurioje:
+
+  * bus pateiktas modeliavimo rezultatas;
+  * laikysitės principo: _Less is more_.  Svarbu kokybė;
+  * Išlaikykite vienodą stilių.
+
+. Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+
+
+<<<
+
+[.text-left]
+=== Darbo eiga
+
+. TODO
