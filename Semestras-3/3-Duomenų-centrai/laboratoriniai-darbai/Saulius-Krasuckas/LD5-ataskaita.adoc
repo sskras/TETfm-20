@@ -1,1 +1,111 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-center]
+== Duomenų centrų tinklų topologijos
+
+Modulis ELKRM17303
+
+==== Laboratorinio darbo nr. 5 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+[.text-center]
+=== Laboratorinis darbas nr. 5
+[.text-center]
+== Duomenų centrų tinklų topologijos
+
+
+[.text-left]
+=== Darbo tikslas
+
+Susipažinti su duomenų centrų (DC) tinklų topologijomis.
+
+[.text-left]
+=== Užduotis
+
+. Suprojektuoti serverių prijungimą prie duomenų tinklo panaudojant dvi skirtingas topologijas:
+
+ * serverių kiekis: 45
+
+. Darykite prielaidą, kad:
+
+ * serveris turi jungtis mažiausiai dviem sujungimais;
+ * kiekvienas serveris turi gebėti pasiekti kitą serverį ir tam negali sutrukdyti vieno įrenginio gedimas;
+ * naudojami komutatoriai yra 24 prievadų;
+ * prie vieno komutatoriaus negalima jungti daugiau nei 20 serverių.
+
+. Internete suraskite komutatorių, kuris atitinka keliamus reikalavimus, bei pridėkite jo specifikaciją prie ataskaitos.
+
+. Parenkite trumpą ataskaitą, kurioje:
+
+  * Schemoms braižyti naudosite savo pasirinktą įrankį (pvz. `draw.io`)
+  * Bus pateikta nemažiau dviejų topologijų su komutatoriais ir serveriais ^*^
+  * Laikysitės principo: _Less is more_.  Svarbu kokybė
+  * Išlaikykite vienodą stilių.
++
+******* -- nebūtina atvaizduoti kiekvieno serverio, galite „agreguoti“
+
+. Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+
+
+<<<
+
+[.text-left]
+=== Darbo eiga
+
+. Ieškau savo mėgiamo gamintojo _Juniper_ komutatorių:
+
+ * pasirenku ne PoE modelį: **EX3400-24T**
+ * prisegu https://www.juniper.net/content/dam/www/assets/datasheets/us/en/switches/ex3400-ethernet-switch-datasheet.pdf#page=6[bendrinę specifikaciją], kuri aprašo kelis giminingus modelius, įskaitant ir pasirinktąjį.
+ 
+. Pasirenku ir nubraižau 3-jų lygių _Fat-Tree_ tipo duomenų tinklo topologiją:
+
+image::https://raw.githubusercontent.com/VGTU-ELF/TETfm-20/main/Semestras-3/3-Duomen%C5%B3-centrai/laboratoriniai-darbai/Saulius-Krasuckas/LD5-topologija.svg[width=100%]
