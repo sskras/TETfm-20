@@ -1,1 +1,151 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
 
+[.text-center]
+== Elektronikos fakultetas
+
+=== Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-center]
+== Duomenų centrų ugniasienės
+
+Modulis ELKRM17303
+
+==== Laboratorinio darbo nr. 6 ataskaita
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** lekt. dr. Liudas Duoba
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+<<<
+
+[.text-center]
+=== Laboratorinis darbas nr. 6
+[.text-center]
+== Duomenų centrų ugniasienės
+
+
+[.text-left]
+=== Darbo tikslas
+
+Susipažinti su duomenų centrų (DC) ugniasienėmis.
+
+
+[.text-left]
+=== Užduotis
+
+. Parinkti ir apžvelgti ugniasienes.
+
+ * Internete raskite bent dviejų skirtingų gamintojų naujos kartos DC ugniasienes (NGFW, angl. _Next-Generation Firewall_)
+ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
++
+|===
+  | Studentas              | Threat Protections, Gbps  | SSL/TLS Inspections, Gbps  | New Session rate (per second)
+  
+  | Saulius Krasuckas     >|                      ≥ 3 >|                       ≥ 4 >|                     ≥ 250.000
+|===
+
+ * Atlikite tyrimą ir atsakykite, kas yra mikrosegmentavimas.
+
+. Parenkite trumpą ataskaitą, kurioje:
+
+ * Bus pateikta medžiaga (ir specifikacijos) ne mažiau nei apie dvi ugniasienes.
+ * Laikysitės principo: _Less is more_; svarbu kokybė.
+ * Išlaikykite vienodą stilių.
+
+. Parengtą ataskaitą .pdf formatu įkelkite į _Moodle_ sistemą.
+
+
+<<<
+
+[.text-left]
+=== Darbo eiga
+
+. Pasirenku ugniasienes.
+
+  * Pirmoji ugniasienė.
+    Renkuosi šio gamintojo virtualią NGFW implementaciją, t.y. _Virtual Appliance_:
++
+.**Juniper  https://www.juniper.net/content/dam/www/assets/datasheets/us/en/security/vsrx-virtual-firewall-datasheet.pdf[vSRX Virtual Firewall]**
+|===
+    | Spartos / pajėgumo rodiklis  ^| VMware hipervizorius ^| KVM hipervizorius
+
+    | vCPU skaičius                >| 9                    >| 9
+    | Atminties kiekis             >| 16 GiB               >| 16 GiB
+    | Ugniasienės pralaidumas
+      (dideliems paketams, 1514 B) >| 73 Gbps              >| 79 Gbps
+    | **Ugniasienės pralaidumas**
+      (IMIX^*^ srautui)            >| **17 Gbps**          >| **22 Gbps**
+    | **Aplikacijų matomumas**
+      **ir valdymas**^**^          >| **21 Gbps**          >| **20.7 Gbps**
+    | **IPS sparta** su rekomenduotinomis
+      signatūromis                 >| **18 Gbps**          >| **20.8 Gbps**
+    | **Naujų TCP sesijų sk. / s** >| **351.250**          >| **360.000**
+    | Didžiausias vienu metu 
+      palaikomų sesijų sk.         >| 4M                   >| 4M
+|===
++
+^*^ IMIX -- "Internet MIX traffic": tai įprastinis internetinis srautas, keliaujantis per tinklo įrenginius.
++
+^$$**$$^ Matuota naudojant HTTP srautą ir 44 kiB dydžio tranzakcijas.
+
+  * Antroji ugniasienė:
++
+.**Palo Alto https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/datasheets/pa-5200-series-specsheet[PA-5250]**
+|====
+    | Spartos / pajėgumo rodiklis  ^| PA-5250
+
+    | **Ugniasienės pralaidumas**
+      (HTTP srautui)               >| **35.7 Gbps**
+    | Ugniasienės pralaidumas
+      (_appmix_ srautui)           >| 37.3 Gbps
+    | **_Threat Prevention_ sparta**
+      (HTTP srautui)               >| **18.3 Gbps**
+    | _Threat Prevention_ sparta
+      (_appmix_ srautui)           >| 23.0 Gbps
+    | **Naujų TCP sesijų sk. / s** >| **392.000**
+    | Didžiausias vienu metu 
+      palaikomų sesijų sk.         >| 8M
+|====
+
+. Mikrosegmentavimo apžvalga
+
+ * TODO
