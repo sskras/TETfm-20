@@ -99,13 +99,14 @@ ir jų specifikaciją (angl. _Data sheet_) pagal savo reikalavimus:
 [.text-left]
 === Darbo eiga
 
-. Pasirenku ugniasienes.
+==== Pasirenku ugniasienes.
 
   * Pirmoji ugniasienė, atitinkanti duotus LD reikalavimus: **Juniper  https://www.juniper.net/content/dam/www/assets/datasheets/us/en/security/vsrx-virtual-firewall-datasheet.pdf[vSRX Virtual Firewall]**
 +
 Pasirinkau virtualią šio gamintojo NGFW implementaciją, t.y. _Virtual Appliance_:
 +
-image::https://www.juniper.net/content/dam/www/assets/images/us/en/products/security/srx-series/datasheets/1000671-fig1.png/_jcr_content/renditions/cq5dam.web.1280.1280.png[width=100%]
+[.text-center]
+image::https://www.juniper.net/content/dam/www/assets/images/us/en/products/security/srx-series/datasheets/1000671-fig1.png/_jcr_content/renditions/cq5dam.web.1280.1280.png[width=75%]
 +
 .vSRX Virtual Firewall sparta
 |===
@@ -133,7 +134,8 @@ image::https://www.juniper.net/content/dam/www/assets/images/us/en/products/secu
 
   * Antroji ugniasienė, atitinkanti duotus LD reikalavimus:  **Palo Alto https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/datasheets/pa-5200-series-specsheet[PA-5250]**
 +
-image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/network-security/prevention-that-fuels-growth.png?imwidth=1920[width=100%]
+[.text-center]
+image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/network-security/prevention-that-fuels-growth.png?imwidth=1920[width=75%]
 +
 .PA-5250 sparta
 |====
@@ -153,15 +155,18 @@ image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/network-sec
       palaikomų sesijų sk.         >| 8M
 |====
 
-. Mikrosegmentavimo apžvalga
-+
+
+<<<
+
+==== Mikrosegmentavimo apžvalga
+
 Remiuosi šia apžvalga:  +
 https://www.paloaltonetworks.com/cyberpedia/what-is-microsegmentation
-+
+
 Mikrosegmentacija -- būdas atskirti darbinius duomenų srautus vieną nuo kito ir kiekvieną iš jų apsaugoti atskirai.
-+
+
 Šis būdas padeda įgyvendinti taip vadinamą (angl.) _Zero Trust_ strategiją.
-+
+
 Būdas įgalina:
 
  * sumažinti tinklinių atakų perimetrą,
@@ -169,21 +174,21 @@ Būdas įgalina:
  * sustiprinti reglamentinės politikos atitiktį
  * ir lengvesnį filtravimo politikų valdymą.
 
-+
 Žiūrint techniškiau, veikia trys pagrindiniai principai:
 
-.. Matomumas
+. Matomumas
 +
 Mikrosegmentuojant stebimas ne tik srautas Šiaurės-Pietų kryptimi, bet ir srautas Rytų-Vakarų kryptimis.
 Efektyviam mikrosegmentavimui reikalingas viso tinklo srauto stebėjimas:
 +
-image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/cyberpedia/what-is-microsegmentation.png?imwidth=1920[width=100%]
+[.text-center]
+image::https://www.paloaltonetworks.com/content/dam/pan/en_US/images/cyberpedia/what-is-microsegmentation.png?imwidth=1920[width=75%]
 
-.. Kvantuotas saugumas
+. Kvantuotas saugumas
 +
 Kvantuotas saugumas atsiranda, kai tinklo administratoriai įgalinami identifikuoti itin jautrius duomenų srautus (laike ir tarp sistemų) ir sukurti jiems specifines saugos politikas.  Būtent taip, naudojant preciziškumą yra sustabdomas netiesioginiai, slapti kenkėjiški srautai.
 
-.. Dinaminė adaptacija
+. Dinaminė adaptacija
 +
 Gi dinaminė adaptacija užtikrina, kad minimi principai veikia net itin sparčiai besikeičiančiose šiuolaikinėse skaitmenininėse aplinkose.
 Mikrosegmentavimo atveju saugumo politikos aprašomos gana abstrakčiomis sąvokomis (pvz. aplikacijų pakopomis, angl. _Tiers_) vietoj žemo lygmens konstruktų (pvz. IP adresų ar transportinių porto numerių).
