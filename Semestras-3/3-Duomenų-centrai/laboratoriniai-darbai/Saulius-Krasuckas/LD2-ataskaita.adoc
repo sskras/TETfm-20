@@ -137,10 +137,10 @@ image::https://user-images.githubusercontent.com/74717106/153713856-f10922b4-914
  * Taip pat sukūriau ir po elektros energijos infrastruktūrą (vienfazę, ~5 kW galios) kiekviename DC:
   ** _Power Panels_
   ** _Power Feeds_
- bei prijungiau jas prie abiejų spintų (atskirai):
+  * ... bei prijungiau abi šias infrastruktūras prie abiejų spintų (atskirai):
 +
 image::https://user-images.githubusercontent.com/74717106/153713899-619126fc-062c-4f8b-b1db-b2828959cdd2.png[width=100%]
-  ** Jėgos kabelių sąrašas (spėjau išsieksportuoti iki aplinkos išjungimo), su galios prijungimo taškais (rozetėmis ir įvadais):
+  * Jėgos kabelių sąrašas (spėjau išsieksportuoti iki aplinkos išjungimo), su galios prijungimo taškais (rozetėmis ir įvadais):
 +
 ----
 70,,SK-NM-A1-PDU1,Power Port 1,SK-NM-Power-panel-1,SK-NM-Power-feed-1,Connected,Power,20.00 Meters,#111111,Saulius
