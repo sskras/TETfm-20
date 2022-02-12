@@ -160,4 +160,4 @@ image::https://user-images.githubusercontent.com/74717106/153713899-619126fc-062
    Regis, tai buvo HP Blade Enclosure C7000 modelis ir galingas Cisco komutatorius.  +
    Deja, rezultatų nespėjau užfiksuoti, tad pateikti nebeturiu kaip.
 
- * Antrajame, pasyviame DC buvau suplanavęs įdiegti kiek kitokią (mažiau galingą įrangą, kurios prireiktų tik _Disaster Recovery_ atveju), tačiau mano duomenimis nespėjau to padaryti.
+ * Antrajame, pasyviame DC buvau suplanavęs įdiegti kiek kitokią (mažiau galingą įrangą, kurios prireiktų tik _Disaster Recovery_ atveju), tačiau mano duomenimis nebespėjau to atlikti.
