@@ -111,4 +111,53 @@ Susipažinti su duomenų centrų (DC) infrastruktūros modeliavimo įrankiu _Net
 [.text-left]
 === Darbo eiga
 
-. TODO
+. Prisijungiau prie NetBox DCIM aplinkos Azure debesyje kaip `stud`.
+
+. Susikūriau du savo DC:
+
+ * vieną _Site group_:
++
+image::https://user-images.githubusercontent.com/74717106/153713038-0421a908-4b5c-45e0-93d7-44fdde464a82.png[width=100%]
++
+image::https://user-images.githubusercontent.com/74717106/153713100-feaca45c-15c6-48e7-8f1d-1b14277caf18.png[width=100%]
+
+ * joje -- du savo _Sites_, abu Vilniuje.  +
+   Vieną Šiaurės Miestelyje , antrą Senamiestyje:
++
+image::https://user-images.githubusercontent.com/74717106/153712855-3c9edaab-e98b-49e9-a16e-2c8952f223e9.png[width=100%]
+
+ * o prie _Sites_ prijungiau po atskirą DC -- aktyvų ir pasyvų:
++
+image::https://user-images.githubusercontent.com/74717106/153713558-64e7f301-7a0f-4912-9049-1c057d32958b.png[width=100%]
+
+ * Tuomet sukūriau dvi spintas -- po  vieną kiekviename DC:
++
+image::https://user-images.githubusercontent.com/74717106/153713856-f10922b4-9145-4110-9b7f-216246d319cb.png[width=100%]
+
+ * Taip pat sukūriau ir po elektros energijos infrastruktūrą (vienfazę, ~5 kW galios) kiekviename DC:
+  ** _Power Panels_
+  ** _Power Feeds_
+ bei prijungiau jas prie abiejų spintų (atskirai):
++
+image::https://user-images.githubusercontent.com/74717106/153713899-619126fc-062c-4f8b-b1db-b2828959cdd2.png[width=100%]
+  ** Jėgos kabelių sąrašas (spėjau išsieksportuoti iki aplinkos išjungimo), su galios prijungimo taškais (rozetėmis ir įvadais):
++
+----
+70,,SK-NM-A1-PDU1,Power Port 1,SK-NM-Power-panel-1,SK-NM-Power-feed-1,Connected,Power,20.00 Meters,#111111,Saulius
+76,,SK-NM-A1-PDU2,Power Port 1,SK-NM-Power-panel-2,SK-NM-Power-feed-2,Connected,Power,20.00 Meters,#ffffff,Saulius
+79,,SK-ŠM-A1-PDU1,Power Port 1,SK-ŠM-Power-panel-1,SK-ŠM-Power-feed-1,Connected,Power,20.00 Meters,#111111,Saulius
+80,,SK-ŠM-A1-PDU2,Power Port 1,SK-ŠM-Power-panel-2,SK-ŠM-Power-feed-2,Connected,Power,20.00 Meters,#ffffff,Saulius
+94,,SK-ŠM-A1-Integrity-C7000-1,PS1,SK-ŠM-A1-PDU1,Power Outlet 1,Connected,Power,1.00 Meters,,Saulius
+96,,SK-ŠM-A1-Integrity-C7000-1,PS2,SK-ŠM-A1-PDU1,Power Outlet 2,Connected,Power,1.00 Meters,#9e9e9e,Saulius
+98,,SK-ŠM-A1-Integrity-C7000-1,PS3,SK-ŠM-A1-PDU1,Power Outlet 3,Connected,Power,1.00 Meters,#9e9e9e,Saulius
+99,,SK-ŠM-A1-Integrity-C7000-1,PS4,SK-ŠM-A1-PDU2,Power Outlet 1,Connected,Power,1.00 Meters,#9e9e9e,Saulius
+100,,SK-ŠM-A1-Integrity-C7000-1,PS5,SK-ŠM-A1-PDU2,Power Outlet 2,Connected,Power,1.00 Meters,#9e9e9e,Saulius
+101,,SK-ŠM-A1-Integrity-C7000-1,PS6,SK-ŠM-A1-PDU2,Power Outlet 3,Connected,Power,1.00 Meters,#9e9e9e,Saulius
+108,,SK-ŠM-A1-Core-router-1,PSU0,SK-ŠM-A1-PDU2,Power Outlet 4,Connected,Power,2.00 Meters,#f44336,Saulius
+----
+
+ * Po to papildžiau pirmojo DC spintą įranga.  Modelius ėmiau iš _Netbox_ GitHub repozitorijos.
+   Regis, tai buvo HP Blade Enclosure C7000 modelis ir galingas Cisco komutatorius.  +
+   Deja, rezultatų nespėjau užfiksuoti, tad pateikti nebeturiu kaip.
+
+ * Antrajame, pasyviame DC buvau suplanavęs įdiegti kiek kitokią (mažiau galingą įrangą, kurios prireiktų tik _Disaster Recovery_ atveju), tačiau mano duomenimis nespėjau to padaryti.
