@@ -112,6 +112,8 @@ serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų c
   ^.^a| image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=100%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
 |====
 
+O tiksliau, tik jo priekinę, plokščiąją dalį su atlenkta „kepurėle“.
+
 
 [.text-left]
 === AutoCAD
@@ -131,10 +133,12 @@ image::https://user-images.githubusercontent.com/74717106/154016068-04064c26-fca
 
 {nbsp}... ir dinaminė komandinė / parametrinė eilutė:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154016931-720e0a55-1147-4ee6-abdf-3eb36f1a801f.png[width=40%]
 
 {nbsp} ... ir objektinės / savybių panelės (angl. _Properties panels_):
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154016622-b3867470-0bb9-43da-985c-9e22190b46b3.png[width=40%]
 
 {nbsp}... ir galybė įprastinių _Windows_ langų aplinkos ir brėžinio nustatymams keisti.
@@ -149,6 +153,7 @@ Stebėtina, tačiau man trimačiai veiksmai pasirodė esą labai intuityvūs (Ex
 
 Taip pat intuityvi pasirodė ir 3D objekto (projekcijos) vartymo erdvėje sąsaja:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154015530-78a4f3ff-6ddc-4a87-874a-f9be45fe33ab.png[]
 
 Kiek neintuityvu buvo suprasti/pastebėti (sužinojau tik antrosios užduoties pabaigoje), kad verta pažymėti taisomą objektą / elementą prieš persukant vaizdo ašis tada mastelis keičiamas ne taip, kad į ekraną talpinamas ne visas brėžinys, o taip, kad tilptų tik pažymėti objektai.
@@ -157,6 +162,7 @@ Tai labai palengvino trimatę navigaciją po brėžinį.
 Taip pat kiek nepatiko panoramavimo ir orbitavimo funkcijos.
 Gal todėl, kad dirbau su nešiojamuoju kompiuteriu (be pelės), dažnai operacijos viduryje tekdavo šokti į ekrano pakraštį ir ten naudotis `NAVSWHEELMODE` funkcijomis.
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154017678-0e709055-5726-480f-95df-6c803f44f9d4.png[width=40%]
 
 Šios funkcijos veikia gal ir korektiškai, tačiau kai kurių veiksmų viduryje jos tampa neprieinamomis.  Taip pat, kartais Orbit sukimas nustoja veikti, arba veikia tik vienoje plokštumoje.
@@ -164,6 +170,7 @@ Man nepavyko atrasti, su kuo tai susiję ir ar tai labiau principinis AutoCAD ap
 
 Daugiausiai dirbau su režimais _2D Wireframe_ (mažiausiai navigacijos strigimų), kiek rečiau su _Conceptual_ ir galiausiai su _Realistic_:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154018400-6a9f731e-2f33-4b07-bcc2-fd6abb43e6a4.png[width=80%]
 
 Ganėtinai nelengvai įpratau prie koordinačių sistemos perjungimų (žymėjimosi erdvėje ir pavadinimų galvojimo).
@@ -172,6 +179,7 @@ linijos nušokdavo į visai kitas plokštumas ir tą vėliau netgi neišsyk past
 
 Prisikūrus po koordinatinę sistemą kone kiekvienam redaguojamam paviršiui, braižyti tapo daug patogiau ir greičiau:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154019351-7b6b62c0-72d4-4d55-a32f-26b03c299c32.png[width=50%]
 
 ---
@@ -187,20 +195,235 @@ Kaip matyti, galutinis failas `LD1.dwg` užima 696 kiB.
 
 Tekstūrų šiame brėžinyje nenaudojau, tik kelias skirtingas spalvas:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154020501-ac5a73fa-929a-4614-8653-2a5f68bf9f72.png[width=50%]
 
 Panaudojus _Full HD_ raišką ir surenderinus keletą kadrų _PNG_ formatu, failų dydis gavosi apie 200 kiB:
 
-image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=100%]
+|====
+    | 181 kiB:   | 204 kiB:
 
-image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=100%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=100%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=100%]
+|====
 
----
+==== Reziume apie AutoCAD
 
-Visumoje dirbti su AutoCAD patiko.
+Visumoje dirbti su AutoCAD 3D patiko.
 
 Deja, jo UI (angl. _User Interface_) pasirodė kiek perkrautas ir kartais klaidinantis.
 Daugelis funkcijų dubliuojasi ir yra prieinamos keliais skirtingais būdais.
 
 Tačiau precizinės kontrolės galimybė ir jau seniai įgyti 2D braižymo įgūdžiai suteikė malonumą braižant 3D brėžinius / modelius.
 
+
+[.text-left]
+=== Fusion360
+
+
+Šio įrankio anksčiau nebuvau matęs, tačiau išgirst apie jį vis tekdavo.
+Grupiokas jį apibūdino vieno lazerių fiziko citata: „Tai AutoCAD namų šeimininkėms“.
+
+Pritariu, kad įrankio UI gerokai paprastesnis už AutoCAD.
+Tačiau jo galimybės įspūdingos ir panašu, kad mažai nusileidžia tam pačiam AutoCAD.
+
+Visų pirma išmėginau naršyklinę Fusion 360 versiją, kadangi esu įpratęs naudotis _Web_-kompiuteriukais (vadinamais _Chromebook_) ir _Web_-aplikacijomis -- kitaip tariant debesimis.
+
+Deja, panašu, kad čia Autodesk panaudojo nuotolinį Windows serverį, kuriame renderino UI ir jį _HTTP_ protokolu transliavo į mano kompiuterį.
+
+Gal kad mano _Web_-kompiuteriuko CPU buvo per silpnas, gal dėl to, kad mano interneto ryšio pralaidumas yra tik 6 Mbps parsiuntimas + 1,5 Mbps išsiuntimas (ir tai Half-duplex režimu), patirtis buvo labai prasta.
+
+Visų pirma tekdavo ilgai laukti, kol pasirodys programos UI.
+Tuomet jis labai suvėlintai reagavo į mano įvestį (kursoriaus judinimą).
+Galų gale bendras vaizdas buvo labai grūdėtas ir dar be to vėlavo.
+
+Žodžiu, tai pasirodė psichologiškai gana įtempta, ir galų gale įsidiegiau lokalią Fusion 360 versiją.
+
+Peržiūrėjau pora supažindinamųjų video:
+
+* https://www.youtube.com/watch?v=qvrHuaHhqHI[Fusion 360 Tutorial for Absolute Beginners (2020)]
+* https://www.youtube.com/watch?v=6wMzp8fZj18[Fusion 360 Modeling - Modeling from a Print. Modeling Introduction.]
+
+Ir po keturių valandų jau buvau nubraižęs tą pačią LD1 detalę.
+
+Išoriškai Fusion 360 ganėtinai primena AutoCAD.
+Jis turi ir įrankių _Ribbon_ juostą:
+
+image::https://user-images.githubusercontent.com/74717106/154026782-0c2be0a9-d119-4d6a-8550-12430bcb8036.png[width=100%]
+
+{nbsp}... ir panašų navigacijos „kubą“:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154027124-8d36486a-5a2a-4e49-8796-7eb77d4c8396.png[width=30%]
+
+{nbsp}... ir panašią navigacinių įrankių juostą:
+
+image::https://user-images.githubusercontent.com/74717106/154027600-50e64104-136d-4484-9e90-307061411dbf.png[width=100%]
+
+Tačiau abu jie man buvo žymiai (sakyčiau, kokia viena eile) patogesni naudoti nei AutoCAD atitikmenys.
+Tiesiog spaudi ir dirbi.
+
+Fusion 360 turi ir savo veiksmų meniu, tačiau jis išlenda spaudžiant atskirų _Ribbon_ panelių pavadinimus (panašiai kaip AutoCADe, tik ten tėra ne pilnavertiški, o mikro-meniu):
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154026968-e94c1596-5aa9-4af9-90db-262f5ded07f0.png[width=40%]
+
+Tiesa, šiame brėžinyje nebeimportavau specifinio šrifto "Futura SB" kaip kad dariau AutoCAD atveju (taupydamas laiką).
+
+Taip pat braižydamas detalę su Fusion 360 pasinaudojau "_hp_" logotipo paviršiumi, jau nubraižytu AutoCAD LD1 brėžinyje (iš tų pačių sumetimų).
+
+Tiesiog nusikopijavau logotipo _Faces_, išsikėliau į atskirą AutoCAD dokumentą ir jį išsaugojau kaip `.dxf` failą.
+
+Tuomet Fusion 360 atlikau Insert DXF veiksmą:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154028432-9f7af539-2cdd-478d-8eee-2b5fba32dd05.png[width=80%]
+
+{nbsp}... ir tiesiog pasirinkau sukurtą tarpinį failą:
+
+image::https://user-images.githubusercontent.com/74717106/154028644-aa08c0a6-b8dd-43cc-b119-50f3d99f4037.png[width=100%]
+
+Teko paspėlioti, kodėl importuojamas toks didelis logotipas, kol atkreipiau dėmesį, jog `.dxf` failas neturi dimensinių vienetų ir naudoja colius:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154029071-9c37f559-ba6c-444c-b28e-329aff7be607.png[width=100%]
+
+Kai pakeičiau į milimetrus, logotipas tapo normalus.
+
+Taip pat teko paspėlioti, kaip teisingai pasukti plokščią objektą ir pastatyti į numatytą vietą.
+Tai padariau su iššokančiuoju meniu ir jo punktu "Move/Copy":
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154029673-ba1645f6-c465-4645-adbe-c8427d98f2ad.png[width=100%]
+
+Tuomet gavau dvi vadinamuolius paletinius langus, su kuriais buvo įmanoma perkelti logotipą į detalės centrą:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154030402-3738ca18-c0d4-4bfc-8ac9-b856848d8a36.png[width=100%]
+
+Apskritai braižymo veiksmų eiga Fusion 360 yra kiek kitokia nei AutoCAD:
+
+* pirmiausia pasirenkame įrankių puslapį _Solid_;
+* tada jame spaudžiame _Create Sketch_;
+* tuomet atsiranda naujas (laikinas) įrankių puslapis _Sketch_;
+* ir jau jame renkamės dvimačius primityvus bei įrankius:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154030209-2a30d397-3f62-4b78-bc37-73441c04f08b.png[width=100%]
+
+Kitaip sakant, Fusion 360 yra tam tikros braižymo fazės.
+
+Dar vienas skirtumas lyginant su AutoCAD -- naudojami tarpiniai konstruktiniai, referensiniai elementai, kurių nesimatys galutiniame modelyje.
+Pvz.:
+
+* tarpinės plokštumos tarp dviejų solidų, 
+* ašys tarp dviejų taškų,
+* atraminiai taškai daugiakampių viršūnėse ir kt.:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154031078-64582244-aac7-42ae-8cf1-e2a4616833b9.png[width=60%]
+
+Dar išskirtinė Fusion 360 savybė -- puikiai vizualizuota veiksmų atlikimo seka, leidžianti matyti vykdytas operacijas ir jas grąžinti / pakartoti / indikuoti susijusį brėžinio elementą:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154031779-b8b33ee6-4293-4fc7-828d-febc1152f522.png[width=100%]
+
+Ji yra nepalyginamai aiškesnė ir sklandesnė nei AutoCAD veiksmų _History_, kur net po keletos operacijų:
+
+----
+Command: _.erase 1 found
+Command:
+Command: _.erase 1 found
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]:
+Command:
+Command: _.erase 1 found
+Command:
+Command: '_.-LAYER
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+Enter name list of layer(s) to freeze or <select objects>: =3-Lipdukas
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]:
+Command:
+Command: '_.-LAYER
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+Enter name list of layer(s) to freeze or <select objects>: =2-Užrašai
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]:
+Command:
+Command: '_.-LAYER
+Current layer:  "0"
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _FREEZE
+Enter name list of layer(s) to freeze or <select objects>: =1-Plokštelė
+Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]:
+Command: Specify opposite corner or [Fence/WPolygon/CPolygon]: *Cancel*
+----
+
+{nbsp}... ir paskui einančių keleto _Undo_ veiksmų kartais tepavyksta sėkmingai atlikti du _Redo_, ir gauni klaidą:
+
+----
+Command: _u '.-LAYER '.-LAYER '.-LAYER
+Command: _u ERASE
+Command: _u ERASE
+Command: _u ERASE
+Everything has been undone
+Command: _u Nothing to undo
+Command: _u Nothing to undo
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+Command:
+Command:
+Command: _mredo
+Enter number of actions or [All/Last]: 1 Nothing to redo
+----
+
+---
+
+Kalbant apie failus.
+Panašu, kad Fusion 360 brėžinius pagal nutylėjimą išsaugo debesyje:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154033888-59a01fe2-18a1-476f-bd39-90c8d7badd6f.png[width=100%]
+
+Tam, kad išsisaugočiau lokalią kopiją, turėjau daryti _File_ > _Export..._, ir tik tuomet gavau galimybę pasirinkti lokalią failų direktoriją:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154034603-d719b585-b1b1-4789-a77d-bf78b116e437.png[width=100%]
+
+Pats failas užima 657 kiB ir dydžiu primena AutoCAD dokumentą.
+
+Palaikomų trimačių failų formatų sąrašas gana įspūdingas:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154034751-48bfcf2d-ddbd-41a9-a264-65b65374ea4a.png[width=80%]
+
+O išeksportavus modelį į `.3mf` ir `.stl` failus, jie gavosi mažesni:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154035191-75aec22d-d2fb-46fc-a5bd-9be397bacf80.png[width=100%]
+
+Abu šiuos formatus puikiai atidarė Windows 10 programa "3D Viewer":
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154035716-0a32f685-e01d-4622-a260-5c34568a2175.png[width=100%]
+
+==== Reziume apie Fusion 360
+
+Dirbti su Fusion 360 patiko ypatingai!
+
+Kai kas šioje eigoje buvo kitaip nei AutoCAD.
+Tačiau tas lengvumas, UI aiškumas ir programinės logikos bei UI pritaikymas prie pačių populiariausių, praktiškiausių trimačio modeliavimo operacijų nustebino ypatingai teigiamai.
+
+Tiesiog pradedi braižyti, ir viskas „limpa prie rankos“ ir prie modelio. :)
+
+=== Galutinis reziume
+
+[.text-left]
+Esu labai dėkingas už įspūdingą susipažinimą su dviem ryškiais 3D modeliavimo / prototipavimo „žaidėjais“ -- Autodesk įrankiais AutoCAD ir Fusion 360 -- ir su tokio modeliavimo eiga / procesu apskritai.
+
+Man tai buvo pats įspūdingiausias dalykas per visus tris magistrantūros semestrus.
