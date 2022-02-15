@@ -14,8 +14,8 @@ serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų c
 |====
     | Surinkta serverio tvirtinimo „ausis“   | Jos atsilenkiantis „liežuvėlis“
 
-  ^.^a| image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=80%,link="https://www.ebay.com/itm/352395452329"]
-  ^.^a| image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=80%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
+  ^.^a| image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=60%,link="https://www.ebay.com/itm/352395452329"]
+  ^.^a| image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=60%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
 |====
 
 Tiksliau, tik „liežuvėlio“ priekinę, plokščiąją dalį su atlenkta „kepurėle“.
@@ -40,8 +40,8 @@ Renderinimui panaudojau apšvietimą pagal nutylėjimą ir _Full HD_ raišką. I
 |====
     | 181 kiB:   | 204 kiB:
 
-  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=100%]
-  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=100%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=80%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=80%]
 |====
 
 
@@ -51,12 +51,12 @@ Renderinimui panaudojau apšvietimą pagal nutylėjimą ir _Full HD_ raišką. I
 === Užsiėmimų užduotis nr. 2: scena iš kelių elementų
 
 Šiai užduočiau labai buvo sunku pasirinkti sceną (turbūt dėl fantazijos trūkumo).
-
 Galiausiai pasirinkau sumodeliuoti garažą ar bent jo dalį.
 
 Suformavau dvi sienų dalis: betoninę ir mūrinę.
 Taip pat padariau 20 cm nuolydį nuo tolimojo betoninio kampo iki artimojo mūrinio kampo.
 
+[.text-center]
 image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD2-gara%C5%BEas.png[width=100%]
 
 Dėl atsilikimo nuo grafiko ir laiko stokos jame sukūriau tik:
@@ -88,6 +88,7 @@ Lempų šviesumas -- 6000 cd.
 
 Peržiūrėjau pora supažindinamųjų video, ir po keturių valandų jau buvau nubraižęs tą pačią pirmos užduoties detalę:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154050935-c8ce9717-bc27-4daf-85f7-08c7997ed939.png[width=100%]
 
 Tiesa, šiame brėžinyje nebeimportavau specifinio šrifto "Futura SB" kaip kad dariau AutoCAD atveju (taupydamas laiką).
@@ -97,15 +98,11 @@ Tenai nusikopijavau logotipo _Faces_, išsikėliau į atskirą AutoCAD dokument�
 Tuomet Fusion 360 atlikau Insert DXF veiksmą ir perkėliau logotipą į reikiamą vietą.
 Tuomet uždariems jo kontrūrams atlikau Extrude, suteikiau juodų dažų spalvą ir prijungiau prie pagrindinio _Body_.
 
-Išsisaugočiau lokalią kopiją per _File_ > _Export..._ į `.3mf` ir `.stl` failus:
-
-[.text-center]
-image::https://user-images.githubusercontent.com/74717106/154035191-75aec22d-d2fb-46fc-a5bd-9be397bacf80.png[width=100%]
-
+Išsisaugočiau lokalią kopiją per _File_ > _Export..._ į `.3mf` ir `.stl` failus.
 Abu šiuos formatus puikiai atidarė Windows 10 programa "3D Viewer":
 
 [.text-center]
-image::https://user-images.githubusercontent.com/74717106/154035716-0a32f685-e01d-4622-a260-5c34568a2175.png[width=100%]
+image::https://user-images.githubusercontent.com/74717106/154035716-0a32f685-e01d-4622-a260-5c34568a2175.png[width=60%]
 
 Deja, nepavyko juoda spalva nuspalvinti modelio užrašo.
 Turbūt kaip ir AutoCAD reikėjo palikti kaip atskirą solidą.
@@ -118,6 +115,7 @@ Turbūt kaip ir AutoCAD reikėjo palikti kaip atskirą solidą.
 
 Čia tiesiog pabaigiau braižyti pirmos užduoties „liežuvėlį“:
 
+[.text-center]
 image::https://user-images.githubusercontent.com/74717106/154053013-cedd9d03-7bbc-466d-a3b6-436e60393bf6.png[width=100%]
 
 Realios detalės matavimui pasinaudojau slankmačiu.
@@ -133,7 +131,7 @@ Deja, ar pagrindinis solidas tapo per sudėtingas, ar palikau kažkokių pertekl
 * tuomet einant šiuo sąrašu ekrane pradėdavo pieštis siluetai prieš tai vykdytų Solid operacijų ir objektų, kurie jau seniai pašalinti:
 
 [.text-center]
-image::https://user-images.githubusercontent.com/74717106/154055719-89e29cc5-9543-4da6-bbb2-5aeeadda1e1a.png[width=100%]
+image::https://user-images.githubusercontent.com/74717106/154055719-89e29cc5-9543-4da6-bbb2-5aeeadda1e1a.png[width=80%]
 
 * o paskui išvis nustodavo persipiešti didelė dalis mano detalės.
 
@@ -160,13 +158,18 @@ Palyginau ir failų dydžius, kuriuos jos sukuria.
 
 Deja, neradau, kad Fusion 360 pati renderintų galutinį paveikslą, tad išsieksportavau modelį į pora formatų (`.3mf` ir `.stl`).
 
+Nustebino, kad abu eksportuoti failai buvo gerokai mažesni nei gimtasis Fusion 360 failas `.f3d`:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154035191-75aec22d-d2fb-46fc-a5bd-9be397bacf80.png[width=100%]
+
 Ir tam tikrą renderingą atlikau jau paminėtoje Windows 10 programoje "3D Viewer".
 
 ---
 
-Kalbant programinių sistemų žargonu, AutoCAD palyginčiau su _Assembler_ programavimo kalba (kurįgalina daryti visus įmanomas ir kartais net neįtikimus veiksmus).
+Kalbant programinių sistemų žargonu, AutoCAD palyginčiau su **_Assembler_** programavimo kalba (kurįgalina daryti visus įmanomas ir kartais net neįtikimus veiksmus).
 
-O įrankį Fusion 360 palyginčiau su modernia _C#_ (C-sharp) kalba, kurioje prototipavimas lengvas, greitas, patogus ir iškalbingas.
+O įrankį Fusion 360 palyginčiau su modernia _**C#** (See-sharp)_ kalba, kurioje prototipavimas lengvas, greitas, patogus ir iškalbingas.
 
 
 <<<
@@ -174,10 +177,10 @@ O įrankį Fusion 360 palyginčiau su modernia _C#_ (C-sharp) kalba, kurioje pro
 === Galutinis reziume
 
 [.text-left]
-Esu labai dėkingas už įspūdingą susipažinimą su dviem ryškiais 3D modeliavimo / prototipavimo „žaidėjais“ -- Autodesk įrankiais AutoCAD ir Fusion 360 -- ir su tokio modeliavimo eiga / procesu apskritai.
+Esu labai dėkingas už įspūdingą susipažinimą su dviem ryškiais 3D modeliavimo / prototipavimo „žaidėjais“ -- Autodesk įrankiais **AutoCAD** ir **Fusion 360** -- ir su tokio modeliavimo eiga / procesu apskritai.
 
 [.text-left]
-Man tai buvo pats įspūdingiausias dalykas per visus tris magistrantūros semestrus.
+Tai man vertinimu buvo pats įspūdingiausias dalykas per visus tris magistrantūros semestrus.
 
 [.text-left]
 Labai dėkoju už kursą ir žinias. :)
