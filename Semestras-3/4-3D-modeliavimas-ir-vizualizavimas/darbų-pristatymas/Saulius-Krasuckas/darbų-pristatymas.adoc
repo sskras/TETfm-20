@@ -1,1 +1,49 @@
-  
+[.text-center]
+== 3D modeliavimas ir vizualizavimas
+
+[.text-center]
+==== Atliktų užduočių pristatymas
+
+
+[.text-left]
+=== Užsiėmimų užduotis nr. 1
+
+Sumodeliavimui pasirinkau realų objektą --
+serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų centro (DC) spintoje, „liežuvėlį“:
+
+|====
+    | Surinkta serverio tvirtinimo „ausis“   | Jos atsilenkiantis „liežuvėlis“
+
+  ^.^a| image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=80%,link="https://www.ebay.com/itm/352395452329"]
+  ^.^a| image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=80%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
+|====
+
+Tiksliau, tik „liežuvėlio“ priekinę, plokščiąją dalį su atlenkta „kepurėle“.
+
+Užtrukau ilgokai, mat stengiausi itin tiksliai nukopijuoti šią detalės dalį:
+
+* tiek visus, vos matomus briaunų suapvalinimus,
+* tiek "_hp_" logotipą,
+* tiek serverio modelio užrašo dydį ir šriftą.
+
+Pastarąjį buvo nelengva atrasti, bet pagal „L“, „n“ ir „t“ raides Google pavyko aptikti pakankamai artimą šriftą "Futura SB".
+
+Galiausiai buvo sunku apsispręsti, kaip modeliuoti logotipo ir užrašo dažus:
+
+* logotipą iškėliau 0.01 mm virš solido, pakeičiau spalvą į juodą ir apjungiau su pastaruoju (spalva išliko);
+* o užrašą formavau kaip atskirus solidus ant vadinamojo užrašinio lipduko/įdėtuko (atskiro solido, įpjauto į pagrindinį detalės solidą).
+
+Kadangi detalė pasirodė pernelyg paprasta, dar padariau joje tris cilindrines įpjovas, kurių nėra tikroje detalėje, o jų briaunas nulyginau su _Chamfer_.
+
+Renderinimui panaudojau apšvietimą pagal nutylėjimą ir _Full HD_ raišką. Išsaugojus keletą kadrų _PNG_ formatu, failų dydis gavosi apie 200 kiB:
+
+|====
+    | 181 kiB:   | 204 kiB:
+
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=100%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=100%]
+|====
+
+
+<<<
+
