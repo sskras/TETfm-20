@@ -6,7 +6,7 @@
 
 
 [.text-left]
-=== Užsiėmimų užduotis nr. 1
+=== Užsiėmimų užduotis nr. 1, paprasta detalė + AutoCAD
 
 Sumodeliavimui pasirinkau realų objektą --
 serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų centro (DC) spintoje, „liežuvėlį“:
@@ -43,6 +43,42 @@ Renderinimui panaudojau apšvietimą pagal nutylėjimą ir _Full HD_ raišką. I
   ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=100%]
   ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=100%]
 |====
+
+
+<<<
+
+[.text-left]
+=== Užsiėmimų užduotis nr. 2, scena
+
+Šiai užduočiau labai buvo sunku pasirinkti sceną (turbūt dėl fantazijos trūkumo).
+
+Galiausiai pasirinkau sumodeliuoti garažą ar bent jo dalį.
+
+Suformavau dvi sienų dalis: betoninę ir mūrinę.
+Taip pat padariau 20 cm nuolydį nuo tolimojo betoninio kampo iki artimojo mūrinio kampo.
+
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD2-gara%C5%BEas.png[width=100%]
+
+Dėl atsilikimo nuo grafiko ir laiko stokos jame sukūriau tik:
+
+* medines lentynas,
+* elektros skydelio dėžę,
+* du kabelius:
+ ** storesnį, nusileidžiantį nuo lubų,
+ ** ir plonesnį, einantį siena išilgai garažo,
+* taip pat kėdę.
+
+Tam, kad lentynų kairė pusė nekabotų ore, nubrėžiau truputį betoninės sienos.
+
+Tačiau vėliau dėl vaizdumo jos solidą kairėje tam tikru kampu nupjoviau, kad atsidengtų daugiau lentynų:
+
+image::https://user-images.githubusercontent.com/74717106/154049276-9da4955d-6626-4ba3-9901-4b815db26e92.png[width=100%]
+
+Deja, renderinant AutoCAD kažkodėl nupaišo pilną, nenupjautą šią sieną.
+
+Apšvietimą įrengiai pačiame paluby (~ 2400 mm. ir 2300 mm.), išilginėje patalpos ašyje.
+Tai dvi lempos (taškiniai šaltiniai), kurias paskirsčiau kas trečdalį patalpos ilgio.
+Lempų šviesumas -- 6000 cd.
 
 
 <<<
