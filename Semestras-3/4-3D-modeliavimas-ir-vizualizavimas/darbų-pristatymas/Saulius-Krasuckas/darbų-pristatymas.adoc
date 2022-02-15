@@ -83,3 +83,30 @@ Lempų šviesumas -- 6000 cd.
 
 <<<
 
+[.text-left]
+=== Užsiėmimų užduotis nr. 3, ta pati + Fusion 360
+
+Peržiūrėjau pora supažindinamųjų video, ir po keturių valandų jau buvau nubraižęs tą pačią pirmos užduoties detalę:
+
+image::https://user-images.githubusercontent.com/74717106/154050935-c8ce9717-bc27-4daf-85f7-08c7997ed939.png[width=100%]
+
+Tiesa, šiame brėžinyje nebeimportavau specifinio šrifto "Futura SB" kaip kad dariau AutoCAD atveju (taupydamas laiką).
+
+Taip pat braižydamas detalę su Fusion 360 pasinaudojau "_hp_" logotipo paviršiumi, jau nubraižytu AutoCAD brėžinyje.
+Tenai nusikopijavau logotipo _Faces_, išsikėliau į atskirą AutoCAD dokumentą ir jį išsaugojau kaip `.dxf` failą.
+Tuomet Fusion 360 atlikau Insert DXF veiksmą ir perkėliau logotipą į reikiamą vietą.
+Tuomet uždariems jo kontrūrams atlikau Extrude, suteikiau juodų dažų spalvą ir prijungiau prie pagrindinio _Body_.
+
+Išsisaugočiau lokalią kopiją per _File_ > _Export..._ į `.3mf` ir `.stl` failus:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154035191-75aec22d-d2fb-46fc-a5bd-9be397bacf80.png[width=100%]
+
+Abu šiuos formatus puikiai atidarė Windows 10 programa "3D Viewer":
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154035716-0a32f685-e01d-4622-a260-5c34568a2175.png[width=100%]
+
+
+<<<
+
