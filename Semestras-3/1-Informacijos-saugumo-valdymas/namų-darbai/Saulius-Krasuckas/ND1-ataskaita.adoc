@@ -122,3 +122,34 @@ VILNIUS, 2022
   paaiškinantys rekomenduojamų apsaugos priemoni panaudojimą rizikos neutralizavimo procese._
 
 <<<
+
+
+{nbsp}
+
+[.text-center]
+=== Eiga
+
+
+[.text-left]
+=== Planas
+
+Renkuosi nagrinėti vienos IRT/Telco kompanijos _„Bastioninę“_ IS,
+priklausančią _Mobility_ infrastruktūrai ir aptarnaujančiai visas kitas,
+daugiausiai duomenų centrų (DC) IS, bet taip pat ir kelias Telco IS.
+
+„Bastionų“ (dar kartais vadinama _Jumphost_, angl.) IS skirta jungtis prie kitų IS.
+
+Pagalvojimui:
+
+* įsileidžia ir su _passwd_, bet tik iš KDV arba VPN
+* SSH raktai, jų auditas
+* papildomos (automatinės) funkcijos/perimetras: `cron`
+* somewhat HA (VM ir ne VM)
+* VMware infra flapping IFaces
+* senas Debian, sąlyginai naujas CentOS
+  - iššūkis migruojant, pvz. Perl skriptus
+* kai kam dar naudojamas `RSH`, kai kam ir `telnet` (ypač Mgmt)
+* TCIN turi 4 lygius: L0, L1, L2, L3
+* Bastionai veikia L2 (gal ir L1)
+* Turi SSH (kartais RSH ir Telnet) praleidimus į beveik visas infrastruktūros *nix ir OpenVMS mašinas,
+  veikiančias visuose TCIN lygiuose (ar tik gretimuose?)
