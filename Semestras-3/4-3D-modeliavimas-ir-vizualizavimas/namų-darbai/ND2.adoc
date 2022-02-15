@@ -1,1 +1,86 @@
+= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+
+[.text-center]
+== Elektronikos fakultetas
+
+=== Inžinerinės grafikos katedra
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+
+==== 3D modeliavimas ir vizualizavimas (FMIGM93002)
+
+[.text-center]
+== Trimačio modeliavimo įrankių AutoCAD 3D ir Fusion 360 palyginimas
+
+==== Namų darbas nr. 2
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+[.text-right]
+**Atliko:** TETfm-20 grupės magistrantas +
+                       Saulius Krasuckas +
+**Tikrino:** doc. dr. Daiva Makutėnienė
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+VILNIUS, 2022
+
+
+<<<
+
+[.text-center]
+=== Namų darbas nr. 2
+[.text-center]
+== Trimačio modeliavimo įrankių AutoCAD 3D ir Fusion 360 palyginimas
+
+
+[.text-left]
+=== Darbo tikslas
+
+Susipažinti su dviem trimačio modeliavimo įrankiais -- AutoCAD (3D) ir Fusion 360, juos palyginti.
+
+
+[.text-left]
+=== Užduotis
+
+Pirmos ir trečios užduočių („laboratorinių darbų“) analizė.
+
+. Palyginkite gautus failus, įvertinkite darbo aplinką, kokias patirtis įgijote.
+. Aprašykite referato formate iki 10 psl.
+
+
+[.text-left]
+=== Ataskaita
+
 
