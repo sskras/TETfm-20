@@ -28,7 +28,10 @@ Užtrukau ilgokai, mat stengiausi itin tiksliai nukopijuoti šią detalės dalį
 
 Pastarąjį buvo nelengva atrasti, bet pagal „L“, „n“ ir „t“ raides Google pavyko aptikti pakankamai artimą šriftą "Futura SB".
 
-Galiausiai buvo sunku apsispręsti, kaip modeliuoti logotipo ir užrašo dažus:
+
+<<<
+
+Taip pat buvo sunku apsispręsti, kaip modeliuoti logotipo ir užrašo dažus:
 
 * logotipą iškėliau 0.01 mm virš solido, pakeičiau spalvą į juodą ir apjungiau su pastaruoju (spalva išliko);
 * o užrašą formavau kaip atskirus solidus ant vadinamojo užrašinio lipduko/įdėtuko (atskiro solido, įpjauto į pagrindinį detalės solidą).
@@ -57,7 +60,7 @@ Suformavau dvi sienų dalis: betoninę ir mūrinę.
 Taip pat padariau 20 cm nuolydį nuo tolimojo betoninio kampo iki artimojo mūrinio kampo.
 
 [.text-center]
-image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD2-gara%C5%BEas.png[width=100%]
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD2-gara%C5%BEas.png[width=90%]
 
 Dėl atsilikimo nuo grafiko ir laiko stokos jame sukūriau tik:
 
@@ -131,7 +134,7 @@ Deja, ar pagrindinis solidas tapo per sudėtingas, ar palikau kažkokių pertekl
 * tuomet einant šiuo sąrašu ekrane pradėdavo pieštis siluetai prieš tai vykdytų Solid operacijų ir objektų, kurie jau seniai pašalinti:
 
 [.text-center]
-image::https://user-images.githubusercontent.com/74717106/154055719-89e29cc5-9543-4da6-bbb2-5aeeadda1e1a.png[width=80%]
+image::https://user-images.githubusercontent.com/74717106/154055719-89e29cc5-9543-4da6-bbb2-5aeeadda1e1a.png[width=70%]
 
 * o paskui išvis nustodavo persipiešti didelė dalis mano detalės.
 
