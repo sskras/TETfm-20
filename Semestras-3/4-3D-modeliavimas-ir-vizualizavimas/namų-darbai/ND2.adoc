@@ -33,8 +33,6 @@
 
 {nbsp}
 
-{nbsp}
-
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
@@ -426,4 +424,8 @@ Tiesiog pradedi braižyti, ir viskas „limpa prie rankos“ ir prie modelio. :)
 [.text-left]
 Esu labai dėkingas už įspūdingą susipažinimą su dviem ryškiais 3D modeliavimo / prototipavimo „žaidėjais“ -- Autodesk įrankiais AutoCAD ir Fusion 360 -- ir su tokio modeliavimo eiga / procesu apskritai.
 
+[.text-left]
 Man tai buvo pats įspūdingiausias dalykas per visus tris magistrantūros semestrus.
+
+[.text-left]
+Labai dėkoju. :)
