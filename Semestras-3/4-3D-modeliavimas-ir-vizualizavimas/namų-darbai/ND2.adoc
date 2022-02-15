@@ -102,15 +102,15 @@ O dabar gavau galimybę pramokti jo trimačių galimybių.
 === Braižomasis objektas
 
 Kadangi trūko fantazijos, sumodeliavimui pasirinkau realų objektą --
-serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų centro (DC) spintoje, „liežuvėlį“.
+serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų centro (DC) spintoje, „liežuvėlį“:
 
-Surinkta „ausis“:
 
-image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=30%,link="https://www.ebay.com/itm/352395452329"]
+|====
+    | Surinkta „ausis“   | Jos „liežuvėlis“
 
-Jos „liežuvėlis“:
-
-image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=33%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
+   a| image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=100%,link="https://www.ebay.com/itm/352395452329"]
+  ^.^a| image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=100%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
+|====
 
 
 [.text-left]
