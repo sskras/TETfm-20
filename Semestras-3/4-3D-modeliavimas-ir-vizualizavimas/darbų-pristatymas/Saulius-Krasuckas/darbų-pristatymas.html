@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Asciidoctor 1.5.4">
+  <title>3D modeliavimas ir vizualizavimas</title>
+  <link rel="stylesheet" href="https://asciidoclive.com/assets/asciidoctor.js/css/asciidoctor.css">
+</head>
+
+<body class="article">
+  <div id="header">
+  </div>
+  <div id="content">
+    <div class="sect1 text-center">
+      <h2 id="_3d_modeliavimas_ir_vizualizavimas">3D modeliavimas ir vizualizavimas</h2>
+      <div class="sectionbody">
+        <div class="sect3 text-center">
+          <h4 id="_atlikt_u_duo_i_pristatymas">Atliktų užduočių pristatymas</h4>
+
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_u_si_mim_u_duotis_nr_1_paprasta_detal_autocad">Užsiėmimų užduotis nr. 1: paprasta detalė + AutoCAD</h3>
+          <div class="paragraph">
+            <p>Sumodeliavimui pasirinkau realų objektą&#8201;&#8212;&#8201;serverio
+              <em>HPE ProLiant Gen8 DL360p</em> „ausies“, skirtos tvirtinimui duomenų
+              centro (DC) spintoje, „liežuvėlį“:</p>
+          </div>
+          <table class="tableblock frame-all grid-all spread">
+            <colgroup>
+              <col style="width: 50%;">
+              <col style="width: 50%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="tableblock halign-left valign-top">Surinkta serverio tvirtinimo „ausis“</th>
+                <th class="tableblock halign-left valign-top">Jos atsilenkiantis „liežuvėlis“</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <a class="image" href="https://www.ebay.com/itm/352395452329"><img src="https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png"
+                            alt="146909612 f11d2c99 7201 4e1a 996f 8a60ee2d2d0a" width="60%"></a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <a class="image" href="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"><img src="https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png"
+                            alt="146911576 b7af85d7 1da0 4ea1 bf4a d6672688ff93" width="60%"></a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paragraph">
+            <p>Tiksliau, tik „liežuvėlio“ priekinę, plokščiąją dalį su atlenkta „kepurėle“.</p>
+          </div>
+          <div class="paragraph">
+            <p>Užtrukau ilgokai, mat stengiausi itin tiksliai nukopijuoti šią detalės
+              dalį:</p>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>tiek visus, vos matomus briaunų suapvalinimus,</p>
+              </li>
+              <li>
+                <p>tiek "<em>hp</em>" logotipą,</p>
+              </li>
+              <li>
+                <p>tiek serverio modelio užrašo dydį ir šriftą.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="paragraph">
+            <p>Pastarąjį buvo nelengva atrasti, bet pagal „L“, „n“ ir „t“ raides Google
+              pavyko aptikti pakankamai artimą šriftą "Futura SB".</p>
+          </div>
+          <div style="page-break-after: always;"></div>
+          <div class="paragraph">
+            <p>Taip pat buvo sunku apsispręsti, kaip modeliuoti logotipo ir užrašo dažus:</p>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>logotipą iškėliau 0.01 mm virš solido, pakeičiau spalvą į juodą ir
+                  apjungiau su pastaruoju (spalva išliko);</p>
+              </li>
+              <li>
+                <p>o užrašą formavau kaip atskirus solidus ant vadinamojo užrašinio
+                  lipduko/įdėtuko (atskiro solido, įpjauto į pagrindinį detalės solidą).</p>
+              </li>
+            </ul>
+          </div>
+          <div class="paragraph">
+            <p>Kadangi detalė pasirodė pernelyg paprasta, dar padariau joje tris cilindrines
+              įpjovas, kurių nėra tikroje detalėje, o jų briaunas nulyginau su <em>Chamfer</em>.</p>
+          </div>
+          <div class="paragraph">
+            <p>Renderinimui panaudojau apšvietimą pagal nutylėjimą ir <em>Full HD</em>              raišką. Išsaugojus keletą kadrų <em>PNG</em> formatu, failų dydis gavosi
+              apie 200 kiB:</p>
+          </div>
+          <table class="tableblock frame-all grid-all spread">
+            <colgroup>
+              <col style="width: 50%;">
+              <col style="width: 50%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="tableblock halign-left valign-top">181 kiB:</th>
+                <th class="tableblock halign-left valign-top">204 kiB:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <img src="https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png"
+                          alt="LD1 Temp0034" width="80%">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <img src="https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png"
+                          alt="LD1 Temp0033" width="80%">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_u_si_mim_u_duotis_nr_2_scena_i_keli_element">Užsiėmimų užduotis nr. 2: scena iš kelių elementų</h3>
+          <div class="paragraph">
+            <p>Šiai užduočiau labai buvo sunku pasirinkti sceną (turbūt dėl fantazijos
+              trūkumo). Galiausiai pasirinkau sumodeliuoti garažą ar bent jo dalį.</p>
+          </div>
+          <div class="paragraph">
+            <p>Suformavau dvi sienų dalis: betoninę ir mūrinę. Taip pat padariau 20
+              cm nuolydį nuo tolimojo betoninio kampo iki artimojo mūrinio kampo.</p>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD2-gara%C5%BEas.png"
+                alt="LD2 gara%C5%BEas" width="90%">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Dėl atsilikimo nuo grafiko ir laiko stokos jame sukūriau tik:</p>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>medines lentynas,</p>
+              </li>
+              <li>
+                <p>elektros skydelio dėžę,</p>
+              </li>
+              <li>
+                <p>du kabelius:</p>
+                <div class="ulist">
+                  <ul>
+                    <li>
+                      <p>storesnį, nusileidžiantį nuo lubų,</p>
+                    </li>
+                    <li>
+                      <p>ir plonesnį, einantį siena išilgai garažo,</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p>taip pat kėdę.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="paragraph">
+            <p>Tam, kad lentynų kairė pusė nekabotų ore, nubrėžiau truputį betoninės
+              sienos.</p>
+          </div>
+          <div class="paragraph">
+            <p>Tačiau vėliau dėl vaizdumo jos solidą kairėje tam tikru kampu nupjoviau,
+              kad atsidengtų daugiau lentynų:</p>
+          </div>
+          <div class="imageblock">
+            <div class="content">
+              <img src="https://user-images.githubusercontent.com/74717106/154049276-9da4955d-6626-4ba3-9901-4b815db26e92.png"
+                alt="154049276 9da4955d 6626 4ba3 9901 4b815db26e92" width="100%">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Deja, renderinant AutoCAD kažkodėl nupaišo pilną, nenupjautą šią sieną.</p>
+          </div>
+          <div class="paragraph">
+            <p>Apšvietimą įrengiai pačiame paluby (~ 2400 mm. ir 2300 mm.), išilginėje
+              patalpos ašyje. Tai dvi lempos (taškiniai šaltiniai), kurias paskirsčiau
+              kas trečdalį patalpos ilgio. Lempų šviesumas&#8201;&#8212;&#8201;6000
+              cd.</p>
+          </div>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_u_si_mim_u_duotis_nr_3_ta_pati_detal_fusion_360">Užsiėmimų užduotis nr. 3: ta pati detalė + Fusion 360</h3>
+          <div class="paragraph">
+            <p>Peržiūrėjau pora supažindinamųjų video, ir po keturių valandų jau buvau
+              nubraižęs tą pačią pirmos užduoties detalę:</p>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="https://user-images.githubusercontent.com/74717106/154050935-c8ce9717-bc27-4daf-85f7-08c7997ed939.png"
+                alt="154050935 c8ce9717 bc27 4daf 85f7 08c7997ed939" width="100%">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Tiesa, šiame brėžinyje nebeimportavau specifinio šrifto "Futura SB" kaip
+              kad dariau AutoCAD atveju (taupydamas laiką).</p>
+          </div>
+          <div class="paragraph">
+            <p>Taip pat braižydamas detalę su Fusion 360 pasinaudojau "<em>hp</em>"
+              logotipo paviršiumi, jau nubraižytu AutoCAD brėžinyje. Tenai nusikopijavau
+              logotipo <em>Faces</em>, išsikėliau į atskirą AutoCAD dokumentą ir
+              jį išsaugojau kaip <code>.dxf</code> failą. Tuomet Fusion 360 atlikau
+              Insert DXF veiksmą ir perkėliau logotipą į reikiamą vietą. Tuomet uždariems
+              jo kontrūrams atlikau Extrude, suteikiau juodų dažų spalvą ir prijungiau
+              prie pagrindinio <em>Body</em>.</p>
+          </div>
+          <div class="paragraph">
+            <p>Išsisaugočiau lokalią kopiją per <em>File</em> &gt; <em>Export&#8230;&#8203;</em>              į <code>.3mf</code> ir <code>.stl</code> failus. Abu šiuos formatus
+              puikiai atidarė Windows 10 programa "3D Viewer":</p>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="https://user-images.githubusercontent.com/74717106/154035716-0a32f685-e01d-4622-a260-5c34568a2175.png"
+                alt="154035716 0a32f685 e01d 4622 a260 5c34568a2175" width="60%">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Deja, nepavyko juoda spalva nuspalvinti modelio užrašo. Turbūt kaip ir
+              AutoCAD reikėjo palikti kaip atskirą solidą.</p>
+          </div>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_nam_darbas_nr_1_sud_tingesnis_objektas">Namų darbas nr. 1: sudėtingesnis objektas</h3>
+          <div class="paragraph">
+            <p>Čia tiesiog pabaigiau braižyti pirmos užduoties „liežuvėlį“:</p>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="https://user-images.githubusercontent.com/74717106/154053013-cedd9d03-7bbc-466d-a3b6-436e60393bf6.png"
+                alt="154053013 cedd9d03 7bbc 466d a3b6 436e60393bf6" width="100%">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Realios detalės matavimui pasinaudojau slankmačiu.</p>
+          </div>
+          <div class="paragraph">
+            <p>Planavau nubraižyti detalės pagrindinius elementus, o briaunas suapvalinti
+              pačioje pabaigoje.</p>
+          </div>
+          <div class="paragraph">
+            <p>Deja, ar pagrindinis solidas tapo per sudėtingas, ar palikau kažkokių
+              perteklinių objektų brėžinyje, bet pradėjus vykdyti veiksmą "Fillet
+              Edge", man AutoCAD ėmė strigti:</p>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>pirmiausia minutei užstrigdavo kursorius jį nuvedus prie pat briaunos,</p>
+              </li>
+              <li>
+                <p>po to pasirinkus briauną, programa strigdavo jau kokioms dviems minutėms,
+                  kol galiausiai parodydavo <em>itin</em> didelį solidų briaunų ir
+                  kitų objektų sąrašą, kuriame turėjau ieškoti reikiamos briaunos,</p>
+              </li>
+              <li>
+                <p>tuomet einant šiuo sąrašu ekrane pradėdavo pieštis siluetai prieš
+                  tai vykdytų Solid operacijų ir objektų, kurie jau seniai pašalinti:</p>
+              </li>
+            </ul>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="https://user-images.githubusercontent.com/74717106/154055719-89e29cc5-9543-4da6-bbb2-5aeeadda1e1a.png"
+                alt="154055719 89e29cc5 9543 4da6 bbb2 5aeeadda1e1a" width="70%">
+            </div>
+          </div>
+          <div class="ulist">
+            <ul>
+              <li>
+                <p>o paskui išvis nustodavo persipiešti didelė dalis mano detalės.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="paragraph">
+            <p>Galiausiai nutariau briaunų nebeapvalinti, ir pateikiu tokį, kampuotą
+              rezultatą:</p>
+          </div>
+          <table class="tableblock frame-all grid-all spread">
+            <colgroup>
+              <col style="width: 50%;">
+              <col style="width: 50%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="tableblock halign-left valign-top"></th>
+                <th class="tableblock halign-left valign-top"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <img src="https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND1-a.png"
+                          alt="ND1 a" width="80%">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <img src="https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND1-b.png"
+                          alt="ND1 b" width="100%">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="imageblock">
+                      <div class="content">
+                        <img src="https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND1-c.png"
+                          alt="ND1 c" width="80%">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-left valign-top"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2 text-left">
+          <h3 id="_nam_darbas_nr_2_autocad_ir_fusion_360_ranki_palyginimas">Namų darbas nr. 2: AutoCAD ir Fusion 360 įrankių palyginimas</h3>
+          <div class="paragraph">
+            <p>Čia palyginau abiejų programų sąsajas (UI, angl. <em>User Interfaces</em>).
+              Taip pat palyginau abiejų programų braižymo eigos skirtumus. Palyginau
+              ir failų dydžius, kuriuos jos sukuria.</p>
+          </div>
+          <div class="paragraph">
+            <p>Deja, neradau, kad Fusion 360 pati renderintų galutinį paveikslą, tad
+              išsieksportavau modelį į pora formatų (<code>.3mf</code> ir <code>.stl</code>).</p>
+          </div>
+          <div class="paragraph">
+            <p>Nustebino, kad abu eksportuoti failai buvo gerokai mažesni nei gimtasis
+              Fusion 360 failas <code>.f3d</code>:</p>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="https://user-images.githubusercontent.com/74717106/154060198-69d4cff2-e012-4e96-b430-7fa12d4ba193.png"
+                alt="154060198 69d4cff2 e012 4e96 b430 7fa12d4ba193" width="80%">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Ir tam tikrą renderingą atlikau jau paminėtoje Windows 10 programoje
+              "3D Viewer".</p>
+          </div>
+          <hr>
+          <div class="paragraph">
+            <p>Kalbant programinių sistemų žargonu, AutoCAD palyginčiau su <strong><em>Assembler</em></strong>              programavimo kalba (kurįgalina daryti visus įmanomas ir kartais net
+              neįtikimus veiksmus).</p>
+          </div>
+          <div class="paragraph">
+            <p>O įrankį Fusion 360 palyginčiau su modernia <em><strong>C#</strong> (See-sharp)</em>              kalba, kurioje prototipavimas lengvas, greitas, patogus ir iškalbingas.</p>
+          </div>
+          <div style="page-break-after: always;"></div>
+        </div>
+        <div class="sect2">
+          <h3 id="_galutinis_reziume">Galutinis reziume</h3>
+          <div class="paragraph text-left">
+            <p>Esu labai dėkingas už įspūdingą susipažinimą su dviem ryškiais 3D modeliavimo
+              / prototipavimo „žaidėjais“&#8201;&#8212;&#8201;Autodesk įrankiais
+              <strong>AutoCAD</strong> ir <strong>Fusion 360</strong>&#8201;&#8212;&#8201;ir
+              su tokio modeliavimo eiga / procesu apskritai.</p>
+          </div>
+          <div class="paragraph text-left">
+            <p>Tai man vertinimu buvo pats įspūdingiausias dalykas per visus tris magistrantūros
+              semestrus.</p>
+          </div>
+          <div class="paragraph text-left">
+            <p>Labai <strong>dėkoju už kursą ir žinias</strong>. :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
