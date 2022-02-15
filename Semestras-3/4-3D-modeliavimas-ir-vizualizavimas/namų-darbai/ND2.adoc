@@ -80,7 +80,46 @@ Pirmos ir trečios užduočių („laboratorinių darbų“) analizė.
 . Aprašykite referato formate iki 10 psl.
 
 
-[.text-left]
 === Ataskaita
 
+[.text-left]
+=== Istorinis įvadas
 
+Su AutoCAD paskutinį sykį buvau dirbęs prieš daugiau nei 25 metus (1996 m.)
+Tai buvo AutoCAD versija 10.0 / 11.0, veikusi MS-DOS aplinkoje.
+
+Braižiau pvz. trimačius puslaidininkės struktūros pjūvius tuometinėse bakalauro darbų ataskaitose.
+
+Nors tuo metu AutoCAD jau buvo beprasidedą rastis trimačio modeliavimo galimybės, nei turėjau po ranka prieinamą tokią versiją, nei gebėjau suprasti reikiamą eigą / tam skirtas komandas.
+Todėl viską (izometriją) braižiau 2D komandų pagalba, kaip ir ranka ant popieriaus.
+Nežiūrint to, dėstytojas iškart pasiteiravo, kaip aš čia tas struktūras nubraižiau.
+
+AutoCAD jau tada man patiko savo preciziškumu.
+O dabar gavau galimybę pramokti jo trimačių galimybių.
+
+
+[.text-left]
+=== Braižomasis objektas
+
+Kadangi trūko fantazijos, sumodeliavimui pasirinkau realų objektą --
+serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų centro (DC) spintoje, „liežuvėlį“.
+
+Surinkta „ausis“:
+
+image::https://user-images.githubusercontent.com/74717106/146909612-f11d2c99-7201-4e1a-996f-8a60ee2d2d0a.png[width=30%,link="https://www.ebay.com/itm/352395452329"]
+
+Jos „liežuvėlis“:
+
+image::https://user-images.githubusercontent.com/74717106/146911576-b7af85d7-1da0-4ea1-bf4a-d6672688ff93.png[width=33%,link="https://server-shop.ua/assets/images/resources/871/quick-deploy-rail-system.pdf#page=2"]
+
+
+[.text-left]
+=== AutoCAD
+
+Šiame puikiame kurse atradau, kad AutoCAD išliko toks pat preciziškas ir smulkmeniškas, kaip ir seniau.
+Jį palyginčiau su _Assembler_ programavimo kalba.
+Jis suteikia galimybes atlikti visus fiziškai įmanomus braižymo / peržiūrų veiksmus:
+tiek esminius, labai svarbius, tiek ir iš pažiūros kartais beprasmiškus.
+
+AutoCAD išlaikė savo komandinės eilutės sąsają (CLI, angl. _Command Line interface_).
+Tačiau per tiek laiko jame atsirado ir meniu
