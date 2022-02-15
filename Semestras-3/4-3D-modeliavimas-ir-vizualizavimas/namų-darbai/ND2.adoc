@@ -119,7 +119,88 @@ serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų c
 Šiame puikiame kurse atradau, kad AutoCAD išliko toks pat preciziškas ir smulkmeniškas, kaip ir seniau.
 Jį palyginčiau su _Assembler_ programavimo kalba.
 Jis suteikia galimybes atlikti visus fiziškai įmanomus braižymo / peržiūrų veiksmus:
-tiek esminius, labai svarbius, tiek ir iš pažiūros kartais beprasmiškus.
+tiek esminius, labai svarbius, tiek ir iš pažiūros kartais net atrodytų beprasmiškus.
 
-AutoCAD išlaikė savo komandinės eilutės sąsają (CLI, angl. _Command Line interface_).
-Tačiau per tiek laiko jame atsirado ir meniu
+AutoCAD išlaikė savo komandinės eilutės sąsają (CLI, angl. _Command Line interface_):
+
+image::https://user-images.githubusercontent.com/74717106/154016186-14d1c204-181f-46a7-a6a5-3390d4ea9509.png[width=100%]
+
+Tačiau per tiek laiko jame atsirado ir modernus juostinis meniu (angl. _Ribbon bar_):
+
+image::https://user-images.githubusercontent.com/74717106/154016068-04064c26-fca3-405a-b7a5-f1571a588c69.png[width=100%]
+
+{nbsp}... ir dinaminė komandinė / parametrinė eilutė:
+
+image::https://user-images.githubusercontent.com/74717106/154016931-720e0a55-1147-4ee6-abdf-3eb36f1a801f.png[width=40%]
+
+{nbsp} ... ir objektinės / savybių panelės (angl. _Properties panels_):
+
+image::https://user-images.githubusercontent.com/74717106/154016622-b3867470-0bb9-43da-985c-9e22190b46b3.png[width=40%]
+
+{nbsp}... ir galybė įprastinių _Windows_ langų aplinkos ir brėžinio nustatymams keisti.
+
+Taip pat nemažai pagrindinių (dinaminių) nustatymų įtraukti į apatinę greitąją valdymo juostą:
+
+image::https://user-images.githubusercontent.com/74717106/154017074-c4e13d86-6652-4e00-94a8-9b5f8824e6ed.png[width=100%]
+
+Darbui naudojausi naujausia versija, _2022_ su _Education license_.
+
+Stebėtina, tačiau man trimačiai veiksmai pasirodė esą labai intuityvūs (Extrude, Subtract, Union).
+
+Taip pat intuityvi pasirodė ir 3D objekto (projekcijos) vartymo erdvėje sąsaja:
+
+image::https://user-images.githubusercontent.com/74717106/154015530-78a4f3ff-6ddc-4a87-874a-f9be45fe33ab.png[]
+
+Kiek neintuityvu buvo suprasti/pastebėti (sužinojau tik antrosios užduoties pabaigoje), kad verta pažymėti taisomą objektą / elementą prieš persukant vaizdo ašis tada mastelis keičiamas ne taip, kad į ekraną talpinamas ne visas brėžinys, o taip, kad tilptų tik pažymėti objektai.
+Tai labai palengvino trimatę navigaciją po brėžinį.
+
+Taip pat kiek nepatiko panoramavimo ir orbitavimo funkcijos.
+Gal todėl, kad dirbau su nešiojamuoju kompiuteriu (be pelės), dažnai operacijos viduryje tekdavo šokti į ekrano pakraštį ir ten naudotis `NAVSWHEELMODE` funkcijomis.
+
+image::https://user-images.githubusercontent.com/74717106/154017678-0e709055-5726-480f-95df-6c803f44f9d4.png[width=40%]
+
+Šios funkcijos veikia gal ir korektiškai, tačiau kai kurių veiksmų viduryje jos tampa neprieinamomis.  Taip pat, kartais Orbit sukimas nustoja veikti, arba veikia tik vienoje plokštumoje.
+Man nepavyko atrasti, su kuo tai susiję ir ar tai labiau principinis AutoCAD apribojimas, ar tiesiog kokia nors programavimo klaida.
+
+Daugiausiai dirbau su režimais _2D Wireframe_ (mažiausiai navigacijos strigimų), kiek rečiau su _Conceptual_ ir galiausiai su _Realistic_:
+
+image::https://user-images.githubusercontent.com/74717106/154018400-6a9f731e-2f33-4b07-bcc2-fd6abb43e6a4.png[width=80%]
+
+Ganėtinai nelengvai įpratau prie koordinačių sistemos perjungimų (žymėjimosi erdvėje ir pavadinimų galvojimo).
+Kol buvau įpratęs dirbti su 2-3 savomis koordinačių sistemomis, braižyti linijas tiek plokštuminėse (dvimatėse) projekcijose, tiek 2,5-matėse projekcijose (izometrinėse) gaudavosi sunkiai:
+linijos nušokdavo į visai kitas plokštumas ir tą vėliau netgi neišsyk pastebėdavau.
+
+Prisikūrus po koordinatinę sistemą kone kiekvienam redaguojamam paviršiui, braižyti tapo daug patogiau ir greičiau:
+
+image::https://user-images.githubusercontent.com/74717106/154019351-7b6b62c0-72d4-4d55-a32f-26b03c299c32.png[width=50%]
+
+---
+
+Kalbant apie failų saugojimą, naudojausi tik lokalia kompiuterio talpykla.
+Nors AutoCAD lyg ir geba saugoti failus debesyje.
+
+Brėžinius saugojau "_AutoCAD 2018 Drawing (*.dwg)_" formatu:
+
+image::https://user-images.githubusercontent.com/74717106/154021238-040af4e7-5b06-435b-89b8-862aba914fbb.png[width=100%]
+
+Kaip matyti, galutinis failas `LD1.dwg` užima 696 kiB.
+
+Tekstūrų šiame brėžinyje nenaudojau, tik kelias skirtingas spalvas:
+
+image::https://user-images.githubusercontent.com/74717106/154020501-ac5a73fa-929a-4614-8653-2a5f68bf9f72.png[width=50%]
+
+Panaudojus _Full HD_ raišką ir surenderinus keletą kadrų _PNG_ formatu, failų dydis gavosi apie 200 kiB:
+
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0034.png[width=100%]
+
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/laboratoriai-darbai/Saulius-Krasuckas/LD1-Temp0033.png[width=100%]
+
+---
+
+Visumoje dirbti su AutoCAD patiko.
+
+Deja, jo UI (angl. _User Interface_) pasirodė kiek perkrautas ir kartais klaidinantis.
+Daugelis funkcijų dubliuojasi ir yra prieinamos keliais skirtingais būdais.
+
+Tačiau precizinės kontrolės galimybė ir jau seniai įgyti 2D braižymo įgūdžiai suteikė malonumą braižant 3D brėžinius / modelius.
+
