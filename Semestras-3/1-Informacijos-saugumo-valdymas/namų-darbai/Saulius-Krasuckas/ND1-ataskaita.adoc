@@ -60,3 +60,65 @@ VILNIUS, 2022
 
 <<<
 
+
+{nbsp}
+
+[.text-center]
+==== Namų darbas nr. 1
+
+[.text-center]
+== Informacinės sistemos rizikos vertinimas
+
+
+{nbsp}
+
+[.text-center]
+=== Darbo struktūra
+[.text-left]
+
+* Turinys
+
+* Įvadas:
+
+ ** Tikslas
+ ** Rizikos vertinimo ribos.  +
+    _Aprašomos IS komponentai, jos vartotojai, nutolusių padalinių išsidėstymas (jeigu tokie yra) ir t.t._
+ ** Rizikos vertinimo būdas.  +
+    _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
+
+  *** riziką vertinančios grupės sudėtis;
+  *** informacijos surinkimo metodai;
+      _(klausimynai, programinės priemonės ir pan.);
+  *** pasirinktos rizikos vertinimo skalės aprašymas.
+
+* Sistemos charakteristikos.  +
+  _Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
+  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
+
+* Pažeidžiamumų sąrašas.  +
+  _Sudaromas galimai egzistuojančių potencialių IS pažeidžiamumų sąrašas._
+
+* Grėsmių šaltinių sąrašas.  +
+  _Sudaromas potencialių, aktualių vertinamai sistemai grėsmių sąrašas._
+
+* Rizikos vertinimo rezultatai.  +
+  _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)._  +
+  Į kiekvieną šio sąrašo elementą turi įeiti:
+
+ ** numeris ir trumpas aprašymas  +
+    _(pvz. „1. Vartotojų slaptažodžiai gali būti atspėti arba parinkti“);_
+ ** poros „Pažeidžiamumas/Grėsmė“ aptarimas;
+ ** riziką mažinančių esamų apsaugos priemonių rinkinys;
+ ** grėsmės realizavimo tikimybės analizė ir jos įvertinimas  +
+    _(pvz. „didelė [1,0]“, „vidutinė [0,5]“, „maža [0,1]“);_
+ ** poveikio analizė ir jo įvertinimas  +
+    _(pvz. „didelis [10]“, „vidutinis [50]“, „mažas [100]“);_
+ ** rizikos įvertinimas (reitingas)  +
+    _(pvz. didelė, vidutinė, maža);_
+ ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
+
+* Išvados.  +
+  _Pateikiama rizikų ir jų lygių suvestinė, rekomendacijos ir komentarai,
+  paaiškinantys rekomenduojamų apsaugos priemoni panaudojimą rizikos neutralizavimo procese._
+
+<<<
