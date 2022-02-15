@@ -6,7 +6,7 @@
 
 
 [.text-left]
-=== Užsiėmimų užduotis nr. 1, paprasta detalė + AutoCAD
+=== Užsiėmimų užduotis nr. 1: paprasta detalė + AutoCAD
 
 Sumodeliavimui pasirinkau realų objektą --
 serverio _HPE ProLiant Gen8 DL360p_ „ausies“, skirtos tvirtinimui duomenų centro (DC) spintoje, „liežuvėlį“:
@@ -48,7 +48,7 @@ Renderinimui panaudojau apšvietimą pagal nutylėjimą ir _Full HD_ raišką. I
 <<<
 
 [.text-left]
-=== Užsiėmimų užduotis nr. 2, scena
+=== Užsiėmimų užduotis nr. 2: scena iš kelių elementų
 
 Šiai užduočiau labai buvo sunku pasirinkti sceną (turbūt dėl fantazijos trūkumo).
 
@@ -84,7 +84,7 @@ Lempų šviesumas -- 6000 cd.
 <<<
 
 [.text-left]
-=== Užsiėmimų užduotis nr. 3, ta pati + Fusion 360
+=== Užsiėmimų užduotis nr. 3: ta pati detalė + Fusion 360
 
 Peržiūrėjau pora supažindinamųjų video, ir po keturių valandų jau buvau nubraižęs tą pačią pirmos užduoties detalę:
 
@@ -107,6 +107,77 @@ Abu šiuos formatus puikiai atidarė Windows 10 programa "3D Viewer":
 [.text-center]
 image::https://user-images.githubusercontent.com/74717106/154035716-0a32f685-e01d-4622-a260-5c34568a2175.png[width=100%]
 
+Deja, nepavyko juoda spalva nuspalvinti modelio užrašo.
+Turbūt kaip ir AutoCAD reikėjo palikti kaip atskirą solidą.
+
 
 <<<
 
+[.text-left]
+=== Namų darbas nr. 1: sudėtingesnis objektas
+
+Čia tiesiog pabaigiau braižyti pirmos užduoties „liežuvėlį“:
+
+image::https://user-images.githubusercontent.com/74717106/154053013-cedd9d03-7bbc-466d-a3b6-436e60393bf6.png[width=100%]
+
+Realios detalės matavimui pasinaudojau slankmačiu.
+
+Planavau nubraižyti detalės pagrindinius elementus, o briaunas suapvalinti pačioje pabaigoje.
+
+Deja, ar pagrindinis solidas tapo per sudėtingas, ar palikau kažkokių perteklinių objektų brėžinyje, bet pradėjus vykdyti veiksmą "Fillet Edge", man AutoCAD ėmė strigti:
+
+* pirmiausia minutei užstrigdavo kursorius jį nuvedus prie pat briaunos,
+
+* po to pasirinkus briauną, programa strigdavo jau kokioms dviems minutėms, kol galiausiai parodydavo _itin_ didelį solidų briaunų ir kitų objektų sąrašą, kuriame turėjau ieškoti reikiamos briaunos,
+
+* tuomet einant šiuo sąrašu ekrane pradėdavo pieštis siluetai prieš tai vykdytų Solid operacijų ir objektų, kurie jau seniai pašalinti:
+
+[.text-center]
+image::https://user-images.githubusercontent.com/74717106/154055719-89e29cc5-9543-4da6-bbb2-5aeeadda1e1a.png[width=100%]
+
+* o paskui išvis nustodavo persipiešti didelė dalis mano detalės.
+
+Galiausiai nutariau briaunų nebeapvalinti, ir pateikiu tokį, kampuotą rezultatą:
+
+|====
+    | 141 kiB:   | 89 kiB: | 138 kiB:
+
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND1-a.png[width=90%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND1-b.png[width=100%]
+  ^.^a| image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND1-c.png[width=90%]
+
+|====
+
+
+<<<
+
+[.text-left]
+=== Namų darbas nr. 2: AutoCAD ir Fusion 360 įrankių palyginimas
+
+Čia palyginau abiejų programų sąsajas (UI, angl. _User Interfaces_).
+Taip pat palyginau abiejų programų braižymo eigos skirtumus.
+Palyginau ir failų dydžius, kuriuos jos sukuria.
+
+Deja, neradau, kad Fusion 360 pati renderintų galutinį paveikslą, tad išsieksportavau modelį į pora formatų (`.3mf` ir `.stl`).
+
+Ir tam tikrą renderingą atlikau jau paminėtoje Windows 10 programoje "3D Viewer".
+
+---
+
+Kalbant programinių sistemų žargonu, AutoCAD palyginčiau su _Assembler_ programavimo kalba (kurįgalina daryti visus įmanomas ir kartais net neįtikimus veiksmus).
+
+O įrankį Fusion 360 palyginčiau su modernia _C#_ (C-sharp) kalba, kurioje prototipavimas lengvas, greitas, patogus ir iškalbingas.
+
+
+<<<
+
+=== Galutinis reziume
+
+[.text-left]
+Esu labai dėkingas už įspūdingą susipažinimą su dviem ryškiais 3D modeliavimo / prototipavimo „žaidėjais“ -- Autodesk įrankiais AutoCAD ir Fusion 360 -- ir su tokio modeliavimo eiga / procesu apskritai.
+
+[.text-left]
+Man tai buvo pats įspūdingiausias dalykas per visus tris magistrantūros semestrus.
+
+[.text-left]
+Labai dėkoju už kursą ir žinias. :)
