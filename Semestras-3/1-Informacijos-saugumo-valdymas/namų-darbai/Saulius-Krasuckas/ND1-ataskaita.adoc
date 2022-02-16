@@ -2,6 +2,7 @@
 :doctype: book
 :toc:
 :toc-title: Turinys
+:pdf-page-size: A4
 :pdf-page-margin: [5mm, 5mm, 10mm, 20mm]
 :pdf-theme: ND.yml
 
