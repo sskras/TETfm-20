@@ -4,6 +4,7 @@
 [.text-center]
 == Elektronikos fakultetas
 
+[.text-center]
 === Kompiuterijos ir ryšių technologijų katedra
 
 {nbsp}
@@ -16,17 +17,17 @@
 
 {nbsp}
 
-{nbsp}
-
+[.text-center]
 === Informacijos saugumo valdymas
+
+[.text-center]
 Modulis ELKRM17315
 
 [.text-center]
-== Informacinės sistemos rizikos vertinimas
+== Informacinės sistemos rizika ir jos saugumo politika
 
+[.text-center]
 Namų darbai
-
-{nbsp}
 
 {nbsp}
 
@@ -39,8 +40,9 @@ Namų darbai
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
-**Tikrino:** doc. dr. Nerijus Paulauskas
+**Tikrino:** doc. dr. Nerijus Paulauskas {nbsp}{nbsp}{nbsp}
 
+[.text-center]
 {nbsp}
 
 {nbsp}
@@ -53,10 +55,7 @@ Namų darbai
 
 {nbsp}
 
-{nbsp}
-
+[.text-center]
 VILNIUS, 2022
 
 <<<
-
-
