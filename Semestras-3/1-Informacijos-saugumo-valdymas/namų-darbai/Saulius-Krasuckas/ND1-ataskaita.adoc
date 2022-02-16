@@ -94,7 +94,7 @@ o dar trys mazgai (VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 Tris jų vienetus pavaizdavau 1 pav.:
 
 .**1 pav.**: Supaprastinta tiriamos infrastruktūros tinklo srautų diagrama
-image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.svg[width=100%]
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.png[width=100%]
 
 Čia matyti, jog visi _Mobility_ infrastruktūros tinklo mazgai (angl. _Hosts_) ir mašinos yra 
 suskirstyti į tris saugumo lygmenis (pagal kitų IS svarbumus ir įtakas įmonės veiklai):
@@ -102,6 +102,10 @@ suskirstyti į tris saugumo lygmenis (pagal kitų IS svarbumus ir įtakas įmon�
 * L3 -- kritiškiausios IS;
 * L2 -- vidutinės įtakos IS;
 * L1 -- nekritinius išorinius servisus aptarnaujančios ir mažiausiai kritinės IS.
+
+Dėl bendros tvarkos ir aiškumo infrastruktūros išorę irgi pažymiu (sąlyginai):
+
+* L0 -- internetas ir netiesiogiai susijusios, kitos įmonės IT infrastruktūros.
 
 Į šiuos bastionų mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
 KDV -- nešiojamieji kompiuteriai su Windows OS,
