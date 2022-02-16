@@ -64,6 +64,7 @@
 Įvertinti pasirinktos informacinės sistemos (IS) rizikas, rasti būdus jas sumažinti bei galiausiai sudaryti šios IS saugumo politiką.
 
 
+[.text-left]
 === Rizikos vertinimo ribos
 
 Renkuosi nagrinėti vienos IRT/Telco kompanijos **_Bastionų_ IS**,
@@ -106,36 +107,75 @@ Dėl bendros tvarkos ir aiškumo infrastruktūros išorę irgi pažymiu (sąlygi
 image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.png[width=100%]
 
 Į šiuos bastionų mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
+Jungimosi protokolas vienintelis -- `SSH`, o šiuos srautus diagramoje pažymėjau geltona spalva.
+
 KDV -- nešiojamieji kompiuteriai su Windows OS,
-įmonės biure kasdien jungiami prie įmonės LAN tinklo ir _Docking_ periferijos.
+įmonės biure kasdien jungiami prie įmonės LAN tinklo ir prie _Docking_ periferijos.
 
 Jie yra pririšti prie AD (angl. Active Directory) ir vadinamojo Domain kontrolerio (DK).
 KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas į Windows integruotas sertifikatas.
-
-Juo remiantis autentifikuojamas ir KDV mašina/vartotojo prisijungimas VPN kanalu (naudojamas Juniper PulseVPN sprendimas).
+Juo remiantis autentifikuojamas ir KDV mašinos/vartotojo prisijungimas VPN kanalu (naudojamas Juniper PulseVPN sprendimas).
 Tačiau tai jau atskiros, kitos IS.
 
-Fizinis prisijungimas prie Bastionų IS per VGA konsolę ir klaviatūrą naudojamas tik rimtų gedimų atveju, kai jau nuvykstama į DC.
+Fizinis prisijungimas prie vienintelės Bastionų IS fizinės mašinos
+per VGA konsolę ir klaviatūrą būtų naudojamas tik rimtų gedimų atveju,
+kai jau nuvykstama į DC.
+
+Taigi, įprastai prie Bastionų IS jungiamasi `SSH` protokolu, o vartotojas autentifikuojamas SSH raktu.
+Veikia autentifikacija ir pagal vartotojo slaptažodį, tačiau tai mažiau saugus ir laikui imlesnis būdas.
+
+`SSH` prisijungimai galimi tik iš biure prijungto kompiuterio arba iš namuose prijungto komputerio, bet su sąlyga, kad naudojamas biuro VPN tunelis.
+
+Prisijungus prie bet kurios Bastiono mašinos į savo personalinę paskyrą,
+toliau vartotojas per CLI jungiasi į kitas savo ūkio infrastruktūros mašinas.
+
+Įprastai tai skirtingos Unix (HP-UX, Solaris, OpenBSD) ir Linux OS (Debian, RHEL, CentOS)versijos.
+O viena aptarnaujama IS naudoja ir iš principo kitokią, artimesnę Windows OS -- OpenVMS.
+Tačiau dėl savo CLI valdymo sąsajos ji irgi priskirta valdyti *nix sysadminams.
+
+Į didžiąją dalį tolimesnių IS yra jungiamasi irgi `SSH` protokolu (įskaitant ir OpenVMS mašinas).
+Vartotojas autentifikuojamas tik `SSH` rakto pagalba.
+
+Prisijungimui tik į pora mašinų su HP-UX (vienoje _Legacy_ sistemoje) dar naudojamas ir `RSH` protokolas.
+O itin mažai daliai mašinų (keletui vienetų iš kelių šimtų) sykis nuo sykio prireikia `Telnet` prisijungimų (kai nustoja veikti `SSH`).
+
+Iš bastionų jungiamasi ne tik į kitų IS OS / OAM tinklo interfeisus,
+bet ir į tų IS mašinų fizinio valdymo (angl. _Management_) interfeisus: HP iLO, Dell DRAC, IBM IMM, HP MP, Sun/Oracle ALOM/ILOM/XSPF.
+
+Čia `Telnet` jau naudojamas žymesniam mašinų skaičiui aptarnauti (~30%).
+
+Šiuos, tolimesnius jungimosi srautus diagramoje pažymėjau žalia spalva.
+
+Beje, diagramoje tokie srautai į mažą dalį serverių šioje nepažymėti,
+pvz. į AD (Active Directory) / DC (Domain Controller), nes ten veikia Windows OS,
+ir *nix sysadminai su jais neturi nieko bendro.
+Diagramoje šios IS pavaizduotos tik siekiant pavaizduoti pilnesnį saugumo lygmenų paveikslą.
+
+Tai reiškia, kad tiek tarp skirtingų saugumo lygmenų, tiek mikrosegmentuojant sistemas tame pačiame saugumo lygmenyje,
+ugniasienėse yra sukurtos prieigos iš Bastionų ISį beveik visas *nix ir OpenVMS mašinas
+per transportinius `22/TCP` (o kai kur per `512-514/TCP` ar net `23/TCP`) portus.
+
+Dalis šių mašinų yra virtualios ir valdomos VMware vSphere sistemos pagalba,
+taigi, srautai keliauja ir per VMware infrastruktūrą.
 
 
+[.text-left]
 === Tolimesnis planas
 
 Pagalvojimui:
 
-* įsileidžia ir su _passwd_, bet tik iš KDV arba VPN
 * SSH raktai, jų auditas
 * papildomos (automatinės) funkcijos/perimetras: `cron`
 * Somewhat HA (VM ir ne VM)
 * VMware infra flapping IFaces
 * senas Debian, sąlyginai naujas CentOS
   - iššūkis migruojant, pvz. Perl skriptus
-* kai kam dar naudojamas `RSH`, kai kam ir `telnet` (ypač Mgmt)
-* TCIN turi 4 lygius: L0, L1, L2, L3
-* Bastionai veikia L2 (gal ir L1)
-* Turi SSH (kartais RSH ir Telnet) praleidimus į beveik visas infrastruktūros *nix ir OpenVMS mašinas,
-  veikiančias visuose TCIN lygiuose.
-  
+* `sudo` ir `uid` elevacija
+* Prasta SSH implementacija pas OpenVMS (dėl to daug patogesnis / spartesnis darbas su Telnet)
+* VMware infros saugumas, ar ne per daug?
 
+
+[.text-left]
 === Rizikos vertinimo būdas
 
 _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
