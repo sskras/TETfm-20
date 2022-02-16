@@ -118,7 +118,7 @@ _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)
     _(pvz. didelė, vidutinė, maža);_
  ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
 
-[cols="5%,25%,12%,9%,9%,30%,11%"]
+[cols="5%,25%,12%,9%,9%,29%,11%"]
 .**Lentelė nr. 1**: Rizikos vertinimo rezultatai
 |===
    | Nr.    | Grėsmė                      | Galima grėsmės tikimybė | Žala                             | Rizikos lygis                  | Rekomenduojamos apsaugos priemonės     | Likutinis rizikos lygis
