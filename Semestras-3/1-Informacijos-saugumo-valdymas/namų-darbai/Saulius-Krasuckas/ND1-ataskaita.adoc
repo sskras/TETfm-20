@@ -65,9 +65,8 @@
 
 Įvertinti pasirinktos informacinės sistemos (IS) rizikas, rasti būdus jas sumažinti bei galiausiai sudaryti šios IS saugumo politiką.
 
-=== Rizikos vertinimo ribos
 
-_Aprašomos IS komponentai, jos vartotojai, nutolusių padalinių išsidėstymas (jeigu tokie yra) ir t.t._
+=== Rizikos vertinimo ribos
 
 Renkuosi nagrinėti vienos IRT/Telco kompanijos **_Bastionų_ IS**,
 priklausančią kompanijos _Mobility_ infrastruktūrai ir
@@ -80,6 +79,30 @@ Ji skirta **atlikti OAM funkcijas** (angl. _Operation, administration, maintenan
 **komandinės eilutės** (CLI, angl. _Command-line interface_) **prisijungimus prie kitų IS**,
 veikiančių daugiausiai ***nix OS**,
 bei vienos IS, veikiančios OpenVMS (labiau Windows nei *nix) OS pagrindu.
+
+Bastionų IS iš esmės sudaro keli atskiri mazgai (angl. _Host_) su Linux OS.
+
+Jos vartotojų (ar naudotojų?) paskyros yra lokalios, statinės ir yra kuriamos rankiniu būdu.
+Jos daugiausiai skirtos vadinamiesiems sysadminams (serverių sistemų administratoriams).
+
+Vienas mazgas yra fizinis, ir veikia duomenų centre.
+Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS.
+
+Du mazgai (fizinis ir VM) yra skirti sysadminams,
+o dar trys mazgai skirti DC tinklų ir TelCo tinklų administratoriams.
+
+Į šiuos mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
+KDV yra nešiojamieji kompiuteriai su Windows OS, 
+įmonės biure kasdien jungiami prie įmonės LAN tinklo ir _Docking_ periferijos.
+
+Jie yra pririšti prie AD (angl. Active Directory) ir vadinamojo Domain kontrolerio (DK).
+
+KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas integruotas sertifikatas.
+Juo remiantis autentifikuojamas ir KDV mašina/vartotojo prisijungimas VPN kanalu (naudojamas Juniper PulseVPN sprendimas).
+Tačiau tai jau atskiros, kitos IS.
+
+Fizinis prisijungimas prie Bastionų IS per VGA konsolę ir klaviatūrą naudojamas tik rimtų gedimų atveju, kai jau nuvykstama į DC.
+
 
 === Rizikos vertinimo būdas
 
