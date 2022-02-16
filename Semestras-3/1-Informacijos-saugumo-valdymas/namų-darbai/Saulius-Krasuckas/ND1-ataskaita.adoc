@@ -57,8 +57,6 @@
 
 
 [.text-center]
-== Eiga
-
 == Įvadas
 
 === Tikslas
@@ -119,6 +117,24 @@ Tačiau tai jau atskiros, kitos IS.
 
 Fizinis prisijungimas prie Bastionų IS per VGA konsolę ir klaviatūrą naudojamas tik rimtų gedimų atveju, kai jau nuvykstama į DC.
 
+
+=== Tolimesnis planas
+
+Pagalvojimui:
+
+* įsileidžia ir su _passwd_, bet tik iš KDV arba VPN
+* SSH raktai, jų auditas
+* papildomos (automatinės) funkcijos/perimetras: `cron`
+* Somewhat HA (VM ir ne VM)
+* VMware infra flapping IFaces
+* senas Debian, sąlyginai naujas CentOS
+  - iššūkis migruojant, pvz. Perl skriptus
+* kai kam dar naudojamas `RSH`, kai kam ir `telnet` (ypač Mgmt)
+* TCIN turi 4 lygius: L0, L1, L2, L3
+* Bastionai veikia L2 (gal ir L1)
+* Turi SSH (kartais RSH ir Telnet) praleidimus į beveik visas infrastruktūros *nix ir OpenVMS mašinas,
+  veikiančias visuose TCIN lygiuose.
+  
 
 === Rizikos vertinimo būdas
 
@@ -208,22 +224,3 @@ _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)
 |===
 
 == Išvados
-
-
-=== Planas
-
-Pagalvojimui:
-
-* įsileidžia ir su _passwd_, bet tik iš KDV arba VPN
-* SSH raktai, jų auditas
-* papildomos (automatinės) funkcijos/perimetras: `cron`
-* somewhat HA (VM ir ne VM)
-* VMware infra flapping IFaces
-* senas Debian, sąlyginai naujas CentOS
-  - iššūkis migruojant, pvz. Perl skriptus
-* kai kam dar naudojamas `RSH`, kai kam ir `telnet` (ypač Mgmt)
-* TCIN turi 4 lygius: L0, L1, L2, L3
-* Bastionai veikia L2 (gal ir L1)
-* Turi SSH (kartais RSH ir Telnet) praleidimus į beveik visas infrastruktūros *nix ir OpenVMS mašinas,
-  veikiančias visuose TCIN lygiuose (ar tik gretimuose?)
-  
