@@ -36,8 +36,6 @@ Namų darbas nr. 1
 
 {nbsp}
 
-{nbsp}
-
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
                        Saulius Krasuckas +
