@@ -26,27 +26,19 @@
 
  ** Tikslas
  ** Rizikos vertinimo ribos.  +
-    _Aprašomos IS komponentai, jos vartotojai, nutolusių padalinių išsidėstymas (jeigu tokie yra) ir t.t._
  ** Rizikos vertinimo būdas.  +
-    _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
 
   *** riziką vertinančios grupės sudėtis;
   *** informacijos surinkimo metodai;
-      _(klausimynai, programinės priemonės ir pan.);
   *** pasirinktos rizikos vertinimo skalės aprašymas.
 
 * Sistemos charakteristikos.  +
-  _Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
-  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
 
 * Pažeidžiamumų sąrašas.  +
-  _Sudaromas galimai egzistuojančių potencialių IS pažeidžiamumų sąrašas._
 
 * Grėsmių šaltinių sąrašas.  +
-  _Sudaromas potencialių, aktualių vertinamai sistemai grėsmių sąrašas._
 
 * Rizikos vertinimo rezultatai.  +
-  _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)._  +
   Į kiekvieną šio sąrašo elementą turi įeiti:
 
  ** numeris ir trumpas aprašymas  +
@@ -62,8 +54,6 @@
  ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
 
 * Išvados.  +
-  _Pateikiama rizikų ir jų lygių suvestinė, rekomendacijos ir komentarai,
-  paaiškinantys rekomenduojamų apsaugos priemonių panaudojimą rizikos neutralizavimo procese._
 
 
 [.text-center]
