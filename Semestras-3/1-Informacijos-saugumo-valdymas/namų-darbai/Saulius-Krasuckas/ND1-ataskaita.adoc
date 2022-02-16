@@ -1,7 +1,8 @@
-= {nbsp}
+= Informacinės sistemos rizikos vertinimas
+:doctype: book
 :toc:
 :toc-title: Turinys
-
+:pdf-page-margin: [5mm, 5mm, 10mm, 20mm]
 
 <<<
 {nbsp}
@@ -62,10 +63,6 @@
   _Pateikiama rizikų ir jų lygių suvestinė, rekomendacijos ir komentarai,
   paaiškinantys rekomenduojamų apsaugos priemoni panaudojimą rizikos neutralizavimo procese._
 
-<<<
-
-
-{nbsp}
 
 [.text-center]
 == Eiga
