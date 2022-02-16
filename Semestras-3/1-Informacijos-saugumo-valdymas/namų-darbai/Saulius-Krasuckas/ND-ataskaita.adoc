@@ -1,4 +1,5 @@
-= {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}Vilniaus Gedimino technikos universitetas
+[.text-center]
+= Vilniaus Gedimino technikos universitetas
 
 [.text-center]
 == Elektronikos fakultetas
