@@ -115,6 +115,7 @@ KDV -- nešiojamieji kompiuteriai su Windows OS,
 Jie yra pririšti prie AD (angl. Active Directory) ir vadinamojo Domain kontrolerio (DK).
 KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas į Windows integruotas sertifikatas.
 Juo remiantis autentifikuojamas ir KDV mašinos/vartotojo prisijungimas VPN kanalu (naudojamas Juniper PulseVPN sprendimas).
+Srautus iki VPN serverių pažymėjau raudona spalva, o srautą už VPN IS pažymėjau vėlgi geltona spalva.
 Tačiau tai jau atskiros, kitos IS.
 
 Fizinis prisijungimas prie vienintelės Bastionų IS fizinės mašinos
