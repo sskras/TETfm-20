@@ -3,6 +3,7 @@
 :toc:
 :toc-title: Turinys
 :pdf-page-margin: [5mm, 5mm, 10mm, 20mm]
+:pdf-theme: ND.yml
 
 <<<
 {nbsp}
