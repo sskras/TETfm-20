@@ -88,16 +88,28 @@ Jos daugiausiai skirtos vadinamiesiems sysadminams (serverių sistemų administr
 Vienas mazgas yra fizinis, ir veikia duomenų centre.
 Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS.
 
-Du mazgai (fizinis ir VM) yra skirti sysadminams,
-o dar trys mazgai skirti DC tinklų ir TelCo tinklų administratoriams.
+Du mazgai (fizinis ir VM) yra skirti labiausiai sysadminams,
+o dar trys mazgai (VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 
-Į šiuos mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
-KDV yra nešiojamieji kompiuteriai su Windows OS, 
+Tris jų vienetus pavaizdavau 1 pav.:
+
+.**1 pav.**: Supaprastinta tiriamos infrastruktūros tinklo srautų diagrama
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.svg[width=100%]
+
+Čia matyti, jog visi _Mobility_ infrastruktūros tinklo mazgai (angl. _Hosts_) ir mašinos yra 
+suskirstyti į tris saugumo lygmenis (pagal kitų IS svarbumus ir įtakas įmonės veiklai):
+
+* L3 -- kritiškiausios IS;
+* L2 -- vidutinės įtakos IS;
+* L1 -- nekritinius išorinius servisus aptarnaujančios ir mažiausiai kritinės IS.
+
+Į šiuos bastionų mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
+KDV -- nešiojamieji kompiuteriai su Windows OS,
 įmonės biure kasdien jungiami prie įmonės LAN tinklo ir _Docking_ periferijos.
 
 Jie yra pririšti prie AD (angl. Active Directory) ir vadinamojo Domain kontrolerio (DK).
+KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas į Windows integruotas sertifikatas.
 
-KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas integruotas sertifikatas.
 Juo remiantis autentifikuojamas ir KDV mašina/vartotojo prisijungimas VPN kanalu (naudojamas Juniper PulseVPN sprendimas).
 Tačiau tai jau atskiros, kitos IS.
 
