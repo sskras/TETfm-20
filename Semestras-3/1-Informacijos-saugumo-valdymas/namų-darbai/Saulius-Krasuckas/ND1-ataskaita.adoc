@@ -119,10 +119,21 @@ _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)
  ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
 
 [cols="5%,25%,10%,10%,10%,30%,10%"]
+.**Lentelė nr. 1**: Rizikos vertinimo rezultatai
 |===
-   | Nr.    | Grėsmė                      | Galima Grėsmės tikimybė | Žala                             | Rizikos lygis                  | Rekomenduojamos apsaugos priemonės     | Likutinis rizikos lygis
+   | Nr.    | Grėsmė                      | Galima grėsmės tikimybė | Žala                             | Rizikos lygis                  | Rekomenduojamos apsaugos priemonės     | Likutinis rizikos lygis
 
-   |        |                             | Taip / Ne               | Maža=0,1 Vidutinė=0,5 Didelė=1,0 | Maža=10 Vidutinė=50 Didelė=100 |                                        |
+   |        |                             | Taip / Ne               | Maža      +
+                                                                      =0,1      +
+                                                                      Vidutinė  +
+                                                                      =0,5      +
+                                                                      Didelė    +
+                                                                      =1,0      | Maža      +
+                                                                                  =10       +
+                                                                                  Vidutinė  +
+                                                                                  =50       +
+                                                                                  Didelė    +
+                                                                                  =100      |                                        |
    |        |                             |                         |                                  |                                |                                        |
    |   1    | Kenkėjiškos PĮ paleidimas   |                         |                                  |                                |                                        |
    |   2    | Neleistinas taikomųjų programų naudojimas |           |                                  |                                |                                        |
