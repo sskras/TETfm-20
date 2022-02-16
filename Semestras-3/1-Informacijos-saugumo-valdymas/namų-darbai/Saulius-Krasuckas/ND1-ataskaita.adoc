@@ -68,7 +68,7 @@
 {nbsp}
 
 [.text-center]
-= Eiga
+== Eiga
 
 == Turinys
 
