@@ -111,19 +111,19 @@ _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)
 [cols="5%,23%,12%,10%,10%,29%,11%"]
 .**Lentelė nr. 1**: Rizikos vertinimo rezultatai
 |===
-   | Nr.    | Grėsmė                      | Galima grėsmės tikimybė | Žala                             | Rizikos lygis                  | Rekomenduojamos apsaugos priemonės     | Likutinis rizikos lygis
+  ^| Nr.   ^| Grėsmė                     ^| Galima grėsmės tikimybė ^| Žala                           ^| Rizikos lygis                 ^| Rekomenduojamos apsaugos priemonės    ^| Likutinis rizikos lygis
 
-   |        |                             | Taip / Ne               | Maža      +
+   |        |                          ^.^| Taip / Ne              ^| Maža      +
                                                                       =0,1      +
                                                                       Vidutinė  +
                                                                       =0,5      +
                                                                       Didelė    +
-                                                                      =1,0      | Maža      +
-                                                                                  =10       +
-                                                                                  Vidutinė  +
-                                                                                  =50       +
-                                                                                  Didelė    +
-                                                                                  =100      |                                        |
+                                                                      =1,0                            ^| Maža      +
+                                                                                                         =10       +
+                                                                                                         Vidutinė  +
+                                                                                                         =50       +
+                                                                                                         Didelė    +
+                                                                                                         =100                           |                                        |
    |        |                             |                         |                                  |                                |                                        |
    |   1    | Kenkėjiškos PĮ paleidimas   |                         |                                  |                                |                                        |
    |   2    | Neleistinas taikomųjų programų naudojimas |           |                                  |                                |                                        |
