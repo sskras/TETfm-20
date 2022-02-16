@@ -59,15 +59,27 @@
 [.text-center]
 == Eiga
 
-== Turinys
-
-== Įvadas:
+== Įvadas
 
 === Tikslas
+
+Įvertinti pasirinktos informacinės sistemos (IS) rizikas, rasti būdus jas sumažinti bei galiausiai sudaryti šios IS saugumo politiką.
 
 === Rizikos vertinimo ribos
 
 _Aprašomos IS komponentai, jos vartotojai, nutolusių padalinių išsidėstymas (jeigu tokie yra) ir t.t._
+
+Renkuosi nagrinėti vienos IRT/Telco kompanijos **_Bastionų_ IS**,
+priklausančią kompanijos _Mobility_ infrastruktūrai ir
+aptarnaujančią visas kitas, daugiausiai duomenų centrų (DC) IS,
+bet taip pat ir kelias Telco (ne DC) IS.
+
+Bastionų IS kai kur pasaulyje dar vadinama _Jumphost_ (angl., išvertus būtų maždaug „Peršokimo mazgo“) IS.
+
+Ji skirta **atlikti OAM funkcijas** (angl. _Operation, administration, maintenance_) --
+**komandinės eilutės** (CLI, angl. _Command-line interface_) **prisijungimus prie kitų IS**,
+veikiančių daugiausiai ***nix OS**,
+bei vienos IS, veikiančios OpenVMS (labiau Windows nei *nix) OS pagrindu.
 
 === Rizikos vertinimo būdas
 
@@ -161,12 +173,6 @@ _Pateikiamas nustatytų rizikų sąrašas (pora „Pažeidžiamumas/Grėsmė“)
 
 === Planas
 
-Renkuosi nagrinėti vienos IRT/Telco kompanijos _„Bastioninę“_ IS,
-priklausančią _Mobility_ infrastruktūrai ir aptarnaujančiai visas kitas,
-daugiausiai duomenų centrų (DC) IS, bet taip pat ir kelias Telco IS.
-
-„Bastionų“ (dar kartais vadinama _Jumphost_, angl.) IS skirta jungtis prie kitų IS.
-
 Pagalvojimui:
 
 * įsileidžia ir su _passwd_, bet tik iš KDV arba VPN
@@ -181,3 +187,4 @@ Pagalvojimui:
 * Bastionai veikia L2 (gal ir L1)
 * Turi SSH (kartais RSH ir Telnet) praleidimus į beveik visas infrastruktūros *nix ir OpenVMS mašinas,
   veikiančias visuose TCIN lygiuose (ar tik gretimuose?)
+  
