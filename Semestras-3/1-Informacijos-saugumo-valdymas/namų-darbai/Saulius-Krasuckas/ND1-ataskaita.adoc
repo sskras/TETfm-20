@@ -129,9 +129,9 @@ Veikia autentifikacija ir pagal vartotojo slaptažodį, tačiau tai mažiau saug
 Prisijungus prie bet kurios Bastiono mašinos į savo personalinę paskyrą,
 toliau vartotojas per CLI jungiasi į kitas savo ūkio infrastruktūros mašinas.
 
-Įprastai tai skirtingos Unix (HP-UX, Solaris, OpenBSD) ir Linux OS (Debian, RHEL, CentOS)versijos.
-O viena aptarnaujama IS naudoja ir iš principo kitokią, artimesnę Windows OS -- OpenVMS.
-Tačiau dėl savo CLI valdymo sąsajos ji irgi priskirta valdyti *nix sysadminams.
+Įprastai tai skirtingos **Unix** (HP-UX, Solaris, OpenBSD) ir **Linux OS** (Debian, RHEL, CentOS) versijos.
+O viena aptarnaujama IS naudoja ir iš principo kitokią, artimesnę Windows OS -- **OpenVMS**.
+Tačiau dėl savo CLI valdymo sąsajos ją valdyti priskirta irgi *nix sysadminams.
 
 Į didžiąją dalį tolimesnių IS yra jungiamasi irgi `SSH` protokolu (įskaitant ir OpenVMS mašinas).
 Vartotojas autentifikuojamas tik `SSH` rakto pagalba.
@@ -140,7 +140,7 @@ Prisijungimui tik į pora mašinų su HP-UX (vienoje _Legacy_ sistemoje) dar nau
 O itin mažai daliai mašinų (keletui vienetų iš kelių šimtų) sykis nuo sykio prireikia `Telnet` prisijungimų (kai nustoja veikti `SSH`).
 
 Iš bastionų jungiamasi ne tik į kitų IS OS / OAM tinklo interfeisus,
-bet ir į tų IS mašinų fizinio valdymo (angl. _Management_) interfeisus: HP iLO, Dell DRAC, IBM IMM, HP MP, Sun/Oracle ALOM/ILOM/XSPF.
+bet ir į tų IS mašinų fizinio valdymo (angl. _Management_) interfeisus: HP iLO, Dell DRAC, IBM IMM, HP MP, Sun/Oracle ALOM/ILOM/XSCF.
 
 Čia `Telnet` jau naudojamas žymesniam mašinų skaičiui aptarnauti (~30%).
 
@@ -152,7 +152,7 @@ ir *nix sysadminai su jais neturi nieko bendro.
 Diagramoje šios IS pavaizduotos tik siekiant pavaizduoti pilnesnį saugumo lygmenų paveikslą.
 
 Tai reiškia, kad tiek tarp skirtingų saugumo lygmenų, tiek mikrosegmentuojant sistemas tame pačiame saugumo lygmenyje,
-ugniasienėse yra sukurtos prieigos iš Bastionų ISį beveik visas *nix ir OpenVMS mašinas
+ugniasienėse yra sukurtos prieigos iš Bastionų IS į beveik visas *nix ir OpenVMS mašinas
 per transportinius `22/TCP` (o kai kur per `512-514/TCP` ar net `23/TCP`) portus.
 
 Dalis šių mašinų yra virtualios ir valdomos VMware vSphere sistemos pagalba,
