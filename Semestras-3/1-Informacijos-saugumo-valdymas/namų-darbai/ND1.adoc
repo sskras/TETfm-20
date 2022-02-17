@@ -48,8 +48,8 @@ Ataskaita gali turėti tokį formatą:
     _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
 
   *** riziką vertinančios grupės sudėtis;
-  *** informacijos surinkimo metodai;
-      _(klausimynai, programinės priemonės ir pan.);
+  *** informacijos surinkimo metodai;  +
+      _(klausimynai, programinės priemonės ir pan.);_
   *** pasirinktos rizikos vertinimo skalės aprašymas.
 
 * Sistemos charakteristikos.  +
