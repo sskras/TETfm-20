@@ -36,19 +36,14 @@
 
 * Grėsmių šaltinių sąrašas.  +
 
-* Rizikos vertinimo rezultatai.  +
-  Į kiekvieną šio sąrašo elementą turi įeiti:
+* Rizikos vertinimo rezultatai:
 
  ** numeris ir trumpas aprašymas  +
-    _(pvz. „1. Vartotojų slaptažodžiai gali būti atspėti arba parinkti“);_
  ** poros „Pažeidžiamumas/Grėsmė“ aptarimas;
  ** riziką mažinančių esamų apsaugos priemonių rinkinys;
  ** grėsmės realizavimo tikimybės analizė ir jos įvertinimas  +
-    _(pvz. „didelė [1,0]“, „vidutinė [0,5]“, „maža [0,1]“);_
  ** poveikio analizė ir jo įvertinimas  +
-    _(pvz. „didelis [10]“, „vidutinis [50]“, „mažas [100]“);_
  ** rizikos įvertinimas (reitingas)  +
-    _(pvz. didelė, vidutinė, maža);_
  ** rekomenduojamos apsaugos priemonės arba kiti rizikos sumažinimo būdai.
 
 * Išvados.  +
