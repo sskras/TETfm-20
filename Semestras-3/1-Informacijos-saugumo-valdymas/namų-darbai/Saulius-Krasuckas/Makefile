@@ -11,7 +11,6 @@ ND-titulinis.pdf: ND-titulinis.adoc
 	explorer ND-titulinis.pdf || true
 
 ND-titulinis.adoc:
-	git pull
 	scp ND.yml ND*.adoc swarm-n01-oam:
 
 ND1:
