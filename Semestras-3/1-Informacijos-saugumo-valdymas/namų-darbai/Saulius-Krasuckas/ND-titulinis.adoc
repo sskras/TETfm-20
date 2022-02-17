@@ -31,7 +31,7 @@
 Modulis ELKRM17315
 
 [.text-center]
-== Informacinės sistemos rizika ir jos saugumo politika
+== Informacinės sistemos rizika ir saugumo politika
 
 [.text-center]
 Namų darbai
@@ -48,7 +48,7 @@ Namų darbai
 
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
-                       Saulius Krasuckas {nbsp}{nbsp}{nbsp} +
+                       Saulius Krasuckas {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
 **Tikrino:** doc. dr. Nerijus Paulauskas {nbsp}{nbsp}{nbsp}
 
 {nbsp}
