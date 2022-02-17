@@ -1,5 +1,5 @@
 = Informacinės sistemos rizikos vertinimas
-:doctype: article
+:doctype: book
 :toc:
 :toc-title: Turinys
 :pdf-page-size: A4
