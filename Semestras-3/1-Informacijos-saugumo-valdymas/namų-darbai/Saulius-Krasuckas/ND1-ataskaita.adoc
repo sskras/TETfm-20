@@ -59,6 +59,7 @@
 [.text-center]
 == Įvadas
 
+[.text-left]
 === Tikslas
 
 Įvertinti pasirinktos informacinės sistemos (IS) rizikas, rasti būdus jas sumažinti bei galiausiai sudaryti šios IS saugumo politiką.
@@ -118,8 +119,8 @@ Juo remiantis autentifikuojamas ir KDV mašinos/vartotojo prisijungimas VPN kana
 Srautus iki VPN serverių pažymėjau mėlyna spalva, o srautą už VPN IS pažymėjau vėlgi geltona spalva.
 Tačiau tai jau atskiros, kitos IS, ir jų nenagrinėju.
 
-Fizinis prisijungimas prie vienintelės Bastionų IS fizinės mašinos
-per VGA konsolę ir klaviatūrą būtų naudojamas tik rimtų gedimų atveju,
+Fizinis prisijungimas prie vienintelės fizinės Bastionų IS mašinos
+per VGA konsolę ir klaviatūrą būtų naudojamas tik rimto gedimų atveju,
 kai jau nuvykstama į DC.
 
 Taigi, įprastai prie Bastionų IS jungiamasi `SSH` protokolu, o vartotojas autentifikuojamas SSH raktu.
@@ -183,7 +184,7 @@ _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
 
   *** riziką vertinančios grupės sudėtis;
   *** informacijos surinkimo metodai;
-      _(klausimynai, programinės priemonės ir pan.);
+      _(klausimynai, programinės priemonės ir pan.);_
   *** pasirinktos rizikos vertinimo skalės aprašymas.
 
 == Sistemos charakteristikos
