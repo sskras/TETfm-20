@@ -3,7 +3,7 @@
 
 all: ND1
 
-ND: tit ND1
+ND: ND.pdf rodom-ND
 
 tit: ND-titulinis.pdf rodom-titulini
 
@@ -25,3 +25,9 @@ ND1-ataskaita.pdf: ND1-ataskaita.adoc
 
 rodom-ND1:
 	explorer ND1-ataskaita.pdf || true
+
+ND.pdf: ND-titulinis.pdf ND1-ataskaita.pdf
+	/mingw64/bin/qpdf --empty --pages ND-titulinis.pdf ND1-ataskaita.pdf 2-z -- ND.pdf
+
+rodom-ND:
+	explorer ND.pdf || true
