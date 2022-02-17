@@ -115,7 +115,7 @@ Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS
 Du mazgai (vienas fizinis ir vienas VM) yra labiausiai skirti sysadminams,
 o dar trys mazgai (tik VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 
-Tris jų vienetus pavaizdavau 1 pav.
+Tris jų vienetus pavaizdavau 1 pav.:
 
 .**1 pav.** Supaprastinta IT infrastruktūra ir Bastionų IS tinklo srautai joje
 image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.png[width=100%]
