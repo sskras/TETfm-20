@@ -3,11 +3,13 @@
 
 all: titulinis ND1
 
-titulinis: ND-titulinis.pdf
+titulinis: ND-titulinis.pdf titulini-rodom
 
 ND-titulinis.pdf: ND-titulinis.adoc
 	ssh -t swarm-n01-oam sudo 'docker run -it -u "$$(id -u)" -v $${PWD}:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf ND-titulinis.adoc'
 	scp swarm-n01-oam:ND-titulinis.pdf .
+
+titulini-rodom:
 	explorer ND-titulinis.pdf || true
 
 ND-titulinis.adoc:
