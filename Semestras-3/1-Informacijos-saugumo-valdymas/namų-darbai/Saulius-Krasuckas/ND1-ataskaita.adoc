@@ -105,11 +105,8 @@ _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
       _(klausimynai, programinės priemonės ir pan.);_
   *** pasirinktos rizikos vertinimo skalės aprašymas.
 
+
 == Sistemos charakteristikos
-
-_Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
-  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
-
 
 Vienas bastionų mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, fiziškai.
 Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS
@@ -119,6 +116,13 @@ Du mazgai (vienas fizinis ir vienas VM) yra labiausiai skirti sysadminams,
 o dar trys mazgai (tik VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 
 Tris jų vienetus pavaizdavau 1 pav.
+
+.**1 pav.** Supaprastinta IT infrastruktūra ir Bastionų IS tinklo srautai joje
+image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.png[width=100%]
+
+_Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
+  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
+
 
 Čia matyti, jog visi _Mobility_ infrastruktūros tinklo mazgai (angl. _Hosts_) ir mašinos yra 
 suskirstyti į tris saugumo lygmenis (pagal kitų IS svarbumus ir įtakas įmonės veiklai):
@@ -130,9 +134,6 @@ suskirstyti į tris saugumo lygmenis (pagal kitų IS svarbumus ir įtakas įmon�
 Dėl bendros tvarkos ir aiškumo infrastruktūros išorę irgi pažymiu (sąlyginai):
 
 * L0 -- internetas ir tolimai susijusios, visiškai kitos įmonės IT infrastruktūros.
-
-.**1 pav.** Supaprastinta IT infrastruktūra ir Bastionų IS tinklo srautai joje
-image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.png[width=100%]
 
 Į šiuos bastionų mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
 Jungimosi protokolas vienintelis -- `SSH`, o šiuos srautus diagramoje pažymėjau geltona spalva.
