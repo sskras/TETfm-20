@@ -65,28 +65,58 @@
 [.text-left]
 === Rizikos vertinimo ribos
 
-Renkuosi nagrinėti vienos IRT/Telco kompanijos **_Bastionų_ IS**,
+Renkuosi nagrinėti vienos IRT / Telco kompanijos **_Bastionų_ IS**,
 priklausančią kompanijos _Mobility_ infrastruktūrai ir
 aptarnaujančią visas kitas, daugiausiai duomenų centrų (DC) IS,
 bet taip pat ir kelias Telco (ne DC) IS.
 
-Bastionų IS kai kur pasaulyje dar vadinama _Jumphost_ (angl., išvertus būtų maždaug „Peršokimo mazgo“) IS.
+Bastionai kai kur pasaulyje dar vadinama _Jumphosts_ (angl., išvertus būtų maždaug „Peršokimo mazgais“).
 
-Ji skirta **atlikti OAM funkcijas** (angl. _Operation, administration, maintenance_) --
+Ši IS skirta **atlikti OAM funkcijas** (angl. _Operation, administration, maintenance_) --
 **komandinės eilutės** (CLI, angl. _Command-line interface_) **prisijungimus prie kitų IS**,
-veikiančių daugiausiai ***nix OS**.
+veikiančių daugiausiai ***nix OS** pagrindu.
 
-Bastionų IS iš esmės sudaro keli atskiri mazgai (angl. _Host_) su Linux OS.
+Bastionų IS sudaro keli atskiri mazgai (angl. _Host_) -- serverinės mašinos su Linux OS.
 
-Šioje IS vartotojų (ar naudotojų?) paskyros yra lokalios, statinės ir yra kuriamos rankiniu būdu.
-Jos daugiausiai skirtos vadinamiesiems sysadminams (serverių sistemų administratoriams).
+Šioje IS vartotojų paskyros priklauso OS ir yra lokalios, kuriamos rankiniu būdu.
+Jos skirtos serverių ir tinklo sistemų administratoriams.
+Sutrumpintai juos vadinu _sysadminais_
+(reikėtų nesumaišyti su _aplikacijų sistemų_ ar tiesiog _aplikacijų_ administratoriais).
 
-Vienas mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, fiziškai.
+Bastionų mazgai priima prisijungimus saugiu `SSH` protokolu.
+Prisijungę sysadminai gauna galimybę jungtis jau į tolimesnius infrastruktūros mazgus, į kitas IS.
+
+Taip pat bastionų mazguose veikia `cron`, automatinis užduočių vykdymas pagal laiką (angl. _Scheduled jobs_).
+Užduotys atlieka panašius veiksmus, kaip ir darbuotojai, tik veikia ne personalinėse, o techninėse OS paskyrose.
+
+Į Bastionų IS jungiamasi iš KDV (kompiuterinių darbo vietų), įprastai esančių nebe DC, o biuro patalpose.
+Kadangi KDV pagrindas yra nešiojamieji kompiuteriai, įmanoma iš KDV prisijungti ir atvykus į duomenų centrą.
+
+Tačiau tai jau kitų IS sritis, čia brėžiu ribą ir rizikų jose nevertinsiu.
+
+
+[.text-left]
+=== Rizikos vertinimo būdas
+
+_Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
+
+  *** riziką vertinančios grupės sudėtis;
+  *** informacijos surinkimo metodai;  +
+      _(klausimynai, programinės priemonės ir pan.);_
+  *** pasirinktos rizikos vertinimo skalės aprašymas.
+
+== Sistemos charakteristikos
+
+_Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
+  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
+
+
+Vienas bastionų mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, fiziškai.
 Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS
 (taip pat duomenų centre, tik kitame, su kuriuo yra pilnavertis tinklo ryšys).
 
-Du mazgai (fizinis ir VM) yra labiausiai skirti sysadminams,
-o dar trys mazgai (VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
+Du mazgai (vienas fizinis ir vienas VM) yra labiausiai skirti sysadminams,
+o dar trys mazgai (tik VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 
 Tris jų vienetus pavaizdavau 1 pav.
 
@@ -99,9 +129,9 @@ suskirstyti į tris saugumo lygmenis (pagal kitų IS svarbumus ir įtakas įmon�
 
 Dėl bendros tvarkos ir aiškumo infrastruktūros išorę irgi pažymiu (sąlyginai):
 
-* L0 -- internetas ir netiesiogiai susijusios, kitos įmonės IT infrastruktūros.
+* L0 -- internetas ir tolimai susijusios, visiškai kitos įmonės IT infrastruktūros.
 
-.**1 pav.** Supaprastinta tiriamos infrastruktūros tinklo srautų diagrama
+.**1 pav.** Supaprastinta IT infrastruktūra ir Bastionų IS tinklo srautai joje
 image::https://github.com/VGTU-ELF/TETfm-20/raw/main/Semestras-3/1-Informacijos-saugumo-valdymas/nam%C5%B3-darbai/Saulius-Krasuckas/ND1-IS-diagrama.png[width=100%]
 
 Į šiuos bastionų mazgus administratoriai įprastai jungiasi iš savo KDV (kompiuterinių darbo vietų).
@@ -126,7 +156,8 @@ Veikia autentifikacija ir pagal vartotojo slaptažodį, tačiau tai mažiau saug
 `SSH` prisijungimai galimi tik iš biure prijungto kompiuterio arba iš namuose prijungto komputerio, bet su sąlyga, kad naudojamas biuro VPN tunelis.
 
 Prisijungus prie bet kurios Bastiono mašinos į savo personalinę paskyrą,
-toliau vartotojas per CLI jungiasi į kitas savo ūkio infrastruktūros mašinas.
+toliau vartotojas per CLI jungiasi į kitas savo ūkio infrastruktūros mašinas
+(įprastai tuo pačiu `SSH` protokolu).
 
 Įprastai tai skirtingos **Unix OS** (HP-UX, Solaris, OpenBSD) ir **Linux distribucijų** (Debian, RHEL, CentOS) versijos.
 O viena aptarnaujama IS naudoja ir iš principo kitokią, artimesnę Windows OS -- **OpenVMS**.
@@ -158,6 +189,21 @@ per transportinius `22/TCP` (o kai kur per `512-514/TCP` ar net `23/TCP`) portus
 Dalis šių mašinų yra virtualios ir valdomos VMware vSphere sprendimo pagalba,
 taigi, srautai keliauja ir per VMware infrastruktūrą.
 
+Taip pat bastionų mazguose veikia automatinis užduočių vykdymas pagal laiką: `cron`.
+Šios užduotys -- tai skriptai ar atskiros binarinės programos,
+kurie jungiasi į jau paminėtas kitas IS
+ir yra skirti nuimti pasikartojančius veiksmus nuo sysadminų pečių
+bei juos vykdyti kitose IS pagal tvarkaraštį.
+
+Pvz.: 
+
+* archyvuoti naujus logus,
+* senus patalpinti į logų IS,
+* bei ištrinti originalus,
+* atlaisvinti failų sistemas (FS) ištrinant kitus susikaupusius ir nebeaktualius failus,
+* vykdyti _Storage_ sistemos SAN „diskų“ (LUNų) snapšotus.
+* stebėti diskinių kaupiklių (HDD, angl. _Hard disk drive_) būsenas.
+
 
 [.text-left]
 === Tolimesnis planas
@@ -166,6 +212,7 @@ Pagalvojimui:
 
 * SSH raktai, jų auditas
 * papildomos (automatinės) funkcijos/perimetras: `cron`
+ ** suarchyvuoti logus, ypač aplikacijų, kurie kuriami ne `Syslog` mechanizmu.
 * Somewhat HA (VM ir ne VM)
 * VMware infra flapping IFaces
 * senas Debian, sąlyginai naujas CentOS
@@ -174,21 +221,6 @@ Pagalvojimui:
 * Prasta SSH implementacija pas OpenVMS (dėl to daug patogesnis / spartesnis darbas su Telnet)
 * VMware infros saugumas, ar ne per daug?
 
-
-[.text-left]
-=== Rizikos vertinimo būdas
-
-_Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
-
-  *** riziką vertinančios grupės sudėtis;
-  *** informacijos surinkimo metodai;
-      _(klausimynai, programinės priemonės ir pan.);_
-  *** pasirinktos rizikos vertinimo skalės aprašymas.
-
-== Sistemos charakteristikos
-
-_Aprašoma sistema, įskaitant aparatūrą (serverius, tinklo įrangą ir t.t.), programinį aprūpinimą (taikomąsias programas, bazinę PĮ, protokolus), duomenis, vartotojus.
-  Pateikiama sąryšių diagrama, duomenų įėjimo ir išėjimo srautai._
 
 == Pažeidžiamumų sąrašas
 
