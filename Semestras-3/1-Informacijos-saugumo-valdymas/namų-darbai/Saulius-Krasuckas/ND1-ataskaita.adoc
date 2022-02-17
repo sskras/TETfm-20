@@ -6,9 +6,6 @@
 :pdf-page-margin: [5mm, 5mm, 10mm, 20mm]
 :pdf-theme: ND.yml
 
-<<<
-{nbsp}
-
 
 [.text-center]
 == Informacinės sistemos rizikos vertinimas
@@ -77,18 +74,18 @@ Bastionų IS kai kur pasaulyje dar vadinama _Jumphost_ (angl., išvertus būtų 
 
 Ji skirta **atlikti OAM funkcijas** (angl. _Operation, administration, maintenance_) --
 **komandinės eilutės** (CLI, angl. _Command-line interface_) **prisijungimus prie kitų IS**,
-veikiančių daugiausiai ***nix OS**,
-bei vienos IS, veikiančios OpenVMS (labiau Windows nei *nix) OS pagrindu.
+veikiančių daugiausiai ***nix OS**.
 
 Bastionų IS iš esmės sudaro keli atskiri mazgai (angl. _Host_) su Linux OS.
 
-Jos vartotojų (ar naudotojų?) paskyros yra lokalios, statinės ir yra kuriamos rankiniu būdu.
+Šioje IS vartotojų (ar naudotojų?) paskyros yra lokalios, statinės ir yra kuriamos rankiniu būdu.
 Jos daugiausiai skirtos vadinamiesiems sysadminams (serverių sistemų administratoriams).
 
-Vienas mazgas yra fizinis, ir veikia duomenų centre.
-Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS.
+Vienas mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, fiziškai.
+Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS
+(taip pat duomenų centre, tik kitame, su kuriuo yra pilnavertis tinklo ryšys).
 
-Du mazgai (fizinis ir VM) yra skirti labiausiai sysadminams,
+Du mazgai (fizinis ir VM) yra labiausiai skirti sysadminams,
 o dar trys mazgai (VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 
 Tris jų vienetus pavaizdavau 1 pav.
@@ -120,7 +117,7 @@ Srautus iki VPN serverių pažymėjau mėlyna spalva, o srautą už VPN IS pažy
 Tačiau tai jau atskiros, kitos IS, ir jų nenagrinėju.
 
 Fizinis prisijungimas prie vienintelės fizinės Bastionų IS mašinos
-per VGA konsolę ir klaviatūrą būtų naudojamas tik rimto gedimų atveju,
+per VGA konsolę ir klaviatūrą būtų naudojamas tik rimto gedimo atveju,
 kai jau nuvykstama į DC.
 
 Taigi, įprastai prie Bastionų IS jungiamasi `SSH` protokolu, o vartotojas autentifikuojamas SSH raktu.
@@ -131,7 +128,7 @@ Veikia autentifikacija ir pagal vartotojo slaptažodį, tačiau tai mažiau saug
 Prisijungus prie bet kurios Bastiono mašinos į savo personalinę paskyrą,
 toliau vartotojas per CLI jungiasi į kitas savo ūkio infrastruktūros mašinas.
 
-Įprastai tai skirtingos **Unix** (HP-UX, Solaris, OpenBSD) ir **Linux OS** (Debian, RHEL, CentOS) versijos.
+Įprastai tai skirtingos **Unix OS** (HP-UX, Solaris, OpenBSD) ir **Linux distribucijų** (Debian, RHEL, CentOS) versijos.
 O viena aptarnaujama IS naudoja ir iš principo kitokią, artimesnę Windows OS -- **OpenVMS**.
 Tačiau dėl savo CLI valdymo sąsajos ją valdyti priskirta irgi *nix sysadminams.
 
@@ -141,8 +138,9 @@ Vartotojas autentifikuojamas tik `SSH` rakto pagalba.
 Prisijungimui tik į pora mašinų su HP-UX (vienoje _Legacy_ sistemoje) dar naudojamas ir `RSH` protokolas.
 O itin mažai daliai mašinų (keletui vienetų iš kelių šimtų) sykis nuo sykio prireikia `Telnet` prisijungimų (kai nustoja veikti `SSH`).
 
-Iš bastionų jungiamasi ne tik į kitų IS OS / OAM tinklo interfeisus,
-bet ir į tų IS mašinų fizinio valdymo (angl. _Management_) interfeisus: HP iLO, Dell DRAC, IBM IMM, HP MP, Sun/Oracle ALOM/ILOM/XSCF.
+Iš bastionų jungiamasi į kitų IS ne tik OS tinklo interfeisus / OAM IP adresus,
+bet ir į tų IS mašinų fizinio valdymo (angl. _Management_) modulių interfeisus:
+HP iLO, Dell DRAC, IBM IMM, HP MP, Sun/Oracle ALOM/ILOM/XSCF.
 
 Čia `Telnet` jau naudojamas žymesniam mašinų skaičiui aptarnauti (~30%).
 
@@ -157,7 +155,7 @@ Tai reiškia, kad tiek tarp skirtingų saugumo lygmenų, tiek mikrosegmentuojant
 ugniasienėse yra sukurtos prieigos iš Bastionų IS į beveik visas *nix ir OpenVMS mašinas
 per transportinius `22/TCP` (o kai kur per `512-514/TCP` ar net `23/TCP`) portus.
 
-Dalis šių mašinų yra virtualios ir valdomos VMware vSphere sistemos pagalba,
+Dalis šių mašinų yra virtualios ir valdomos VMware vSphere sprendimo pagalba,
 taigi, srautai keliauja ir per VMware infrastruktūrą.
 
 
