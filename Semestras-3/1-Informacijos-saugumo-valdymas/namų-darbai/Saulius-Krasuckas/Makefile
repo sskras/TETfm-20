@@ -3,6 +3,8 @@
 
 all: tit ND1
 
+ND: tit ND1
+
 tit: ND-titulinis.pdf rodom-titulini
 
 ND-titulinis.pdf: ND-titulinis.adoc
