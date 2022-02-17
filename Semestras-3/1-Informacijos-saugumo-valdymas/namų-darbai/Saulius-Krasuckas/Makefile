@@ -12,7 +12,7 @@ ND-titulinis.pdf: ND-titulinis.adoc
 	scp swarm-n01-oam:ND-titulinis.pdf .
 
 ND-titulinis.adoc:
-	scp ND.yml ND*.adoc swarm-n01-oam:
+	scp ND.yml ND-titulinis.adoc swarm-n01-oam:
 
 rodom-titulini:
 	explorer ND-titulinis.pdf || true
@@ -22,6 +22,9 @@ ND1: ND1-ataskaita.pdf rodom-ND1
 ND1-ataskaita.pdf: ND1-ataskaita.adoc
 	ssh -t swarm-n01-oam sudo 'docker run -it -u "$$(id -u)" -v $${PWD}:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a allow-uri-read ND1-ataskaita.adoc'
 	scp swarm-n01-oam:ND1-ataskaita.pdf .
+
+ND1-ataskaita.adoc:
+	scp ND.yml ND1-ataskaita.adoc swarm-n01-oam:
 
 rodom-ND1:
 	explorer ND1-ataskaita.pdf || true
