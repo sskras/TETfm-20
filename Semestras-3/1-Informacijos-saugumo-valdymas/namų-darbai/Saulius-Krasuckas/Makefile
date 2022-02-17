@@ -26,7 +26,7 @@ rodom-ND1:
 	explorer ND1-ataskaita.pdf || true
 
 ND.pdf: ND-titulinis.pdf ND1-ataskaita.pdf
-	/mingw64/bin/qpdf --empty --pages ND-titulinis.pdf ND1-ataskaita.pdf 2-z -- ND.pdf
+	/mingw64/bin/qpdf --empty --pages ND-titulinis.pdf ND1-ataskaita.pdf 1-z -- ND.pdf
 
 rodom-ND:
 	explorer ND.pdf || true
