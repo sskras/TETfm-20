@@ -1,11 +1,18 @@
+:pdf-page-size: A4
+:pdf-page-margin: [5mm, 5mm, 10mm, 20mm]
+:pdf-theme: ND.yml
+
 [.text-center]
 = Vilniaus Gedimino technikos universitetas
+:nofooter:
 
 [.text-center]
 == Elektronikos fakultetas
 
 [.text-center]
 === Kompiuterijos ir ryšių technologijų katedra
+
+{nbsp}
 
 {nbsp}
 
@@ -37,12 +44,13 @@ Namų darbai
 
 {nbsp}
 
+{nbsp}
+
 [.text-right]
 **Atliko:** TETfm-20 grupės magistrantas +
-                       Saulius Krasuckas +
+                       Saulius Krasuckas {nbsp}{nbsp}{nbsp} +
 **Tikrino:** doc. dr. Nerijus Paulauskas {nbsp}{nbsp}{nbsp}
 
-[.text-center]
 {nbsp}
 
 {nbsp}
@@ -57,5 +65,3 @@ Namų darbai
 
 [.text-center]
 VILNIUS, 2022
-
-<<<

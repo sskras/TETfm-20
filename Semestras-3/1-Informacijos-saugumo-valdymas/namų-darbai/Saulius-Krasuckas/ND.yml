@@ -1,11 +1,18 @@
 ### 2022-02-16 saukrs: imu iš čia https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc#basic-theme
 
 extends: default
-base:
-  font-size: 12
-  line-height-length: 16
-  line-height: $base-line-height-length / $base-font-size
-vertical-spacing: $base-line-height-length
+# base:
+#   font-size: 12
+#   line-height-length: 16
+#   line-height: $base-line-height-length / $base-font-size
+# vertical-spacing: $base-line-height-length
+heading:
+  align: center
+  h1-font-size: 20
+  h2-font-size: 17
+  h3-font-size: 14
+  h4-font-size: 13
+  h5-font-size: 12
 footer:
   verso:
     left:
