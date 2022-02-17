@@ -104,11 +104,11 @@ _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
 
 == Sistemos charakteristikos
 
-Vienas bastionų mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, fiziškai.
-Kiti mazgai buvo virtualizuoti ir veikia kaip VMware klasterio Guest OS
+Vienas bastionų mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, kaip atskiras įrenginys.
+Kiti mazgai buvo virtualizuoti ir veikia kaip virtualios mašinos (VM) VMware klasteryje
 (taip pat duomenų centre, tik kitame, su kuriuo yra pilnavertis tinklo ryšys).
 
-Du mazgai (vienas fizinis ir vienas VM) yra labiausiai skirti sysadminams,
+Du mazgai (vienas fizinis ir vienas VM) yra labiausiai skirti OS administratoriams,
 o dar trys mazgai (tik VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
 
 Tris jų vienetus pavaizdavau 1 pav.:
