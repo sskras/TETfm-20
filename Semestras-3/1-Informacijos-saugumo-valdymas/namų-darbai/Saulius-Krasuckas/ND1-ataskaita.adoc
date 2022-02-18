@@ -55,7 +55,8 @@
 [.text-left]
 === Tikslas
 
-Įvertinti pasirinktos informacinės sistemos (IS) rizikas, rasti būdus jas sumažinti bei galiausiai sudaryti šios IS saugumo politiką.
+Įvertinti pasirinktos informacinės sistemos (IS) rizikas, rasti būdus joms sumažinti
+bei galiausiai sudaryti šios IS saugumo politiką.
 
 
 [.text-left]
@@ -105,8 +106,10 @@ _Trumpai aprašomas pasirinktas grėsmių įvertinimo būdas, tame tarpe:_
 == Sistemos charakteristikos
 
 Vienas bastionų mazgas yra fizinis, ir įrengtas duomenų centre tiesiogiai, kaip atskiras įrenginys.
-Kiti mazgai buvo virtualizuoti ir veikia kaip virtualios mašinos (VM) VMware klasteryje
-(taip pat duomenų centre, tik kitame, su kuriuo yra pilnavertis tinklo ryšys).
+
+
+Kiti mazgai buvo virtualizuoti ir veikia kaip virtualios mašinos (VM) VMware klasteryje --
+taip pat duomenų centre, tik kitame, su kuriuo yra pilnavertis tinklo ryšys.
 
 Du mazgai (vienas fizinis ir vienas VM) yra labiausiai skirti OS administratoriams,
 o dar trys mazgai (tik VM) skirti tik DC tinklų ir TelCo tinklų administratoriams.
@@ -139,9 +142,9 @@ KDV -- nešiojamieji kompiuteriai su Windows OS,
 įmonės biure kasdien jungiami prie įmonės LAN tinklo ir prie _Docking_ periferijos.
 
 Jie yra pririšti prie AD (angl. Active Directory) ir vadinamojo Domain kontrolerio (DK).
-KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas į Windows integruotas sertifikatas.
-Juo remiantis autentifikuojamas ir KDV prisijungimas VPN kanalu (naudojamas Juniper PulseVPN).
-Srautus iki VPN serverių pažymėjau mėlyna spalva, o srautą už VPN IS pažymėjau vėlgi geltonai.
+KDV mašinos (o gal ir vartotojo) autentifikavimui naudojamas `.1x` protokolas ir į Windows integruotas sertifikatas.
+Pastaruoju remiantis autentifikuojamas ir KDV prisijungimas VPN kanalu (naudojamas Juniper PulseVPN).
+Srautus iki VPN serverių pažymėjau mėlyna spalva, o srautą už VPN IS pažymėjau vėlgi geltonai, kaip ir srautą iš KDV.
 Tačiau tai jau atskiros, kitos IS, ir jų nenagrinėju.
 
 Fizinis prisijungimas prie vienintelės fizinės Bastionų IS mašinos
@@ -157,9 +160,10 @@ Prisijungus prie bet kurios Bastiono mašinos į savo personalinę paskyrą,
 toliau vartotojas per CLI jungiasi į kitas savo ūkio infrastruktūros mašinas
 (įprastai tuo pačiu `SSH` protokolu).
 
-Įprastai tai skirtingos **Unix OS** (HP-UX, Solaris, OpenBSD) ir **Linux distribucijų** (Debian, RHEL, CentOS) versijos.
-O viena aptarnaujama IS naudoja ir iš principo kitokią, artimesnę Windows OS -- **OpenVMS**.
-Tačiau dėl savo CLI valdymo sąsajos ją valdyti priskirta irgi *nix sysadminams.
+Įprastai tai skirtingos **Unix šeimos OS** (HP-UX, Solaris, OpenBSD) ir **Linux distribucijų** (Debian, RHEL, Oracle Linux, CentOS) versijos.
+O viena aptarnaujama, kritinė IS naudoja ir iš principo kitokią, artimesnę Windows OS -- **OpenVMS**.
+Tačiau dėl savo CLI valdymo sąsajos ją valdyti priskirta irgi *nix sysadminams
+ir irgi yra valdoma iš bastionų.
 
 Į didžiąją dalį tolimesnių IS yra jungiamasi irgi `SSH` protokolu (įskaitant ir OpenVMS mašinas).
 Vartotojas autentifikuojamas tik `SSH` rakto pagalba.
