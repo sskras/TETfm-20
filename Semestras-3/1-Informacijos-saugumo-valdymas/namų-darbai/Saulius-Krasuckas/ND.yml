@@ -26,3 +26,7 @@ footer:
       content: ''
     right:
       content: '{page-number}'
+image:
+  align: center
+caption:
+  align: center
