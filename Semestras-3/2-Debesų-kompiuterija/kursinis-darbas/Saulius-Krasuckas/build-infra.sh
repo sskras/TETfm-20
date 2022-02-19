@@ -307,34 +307,34 @@ MSYS2_fixes
    #for NODE in swarm-n0{1..6}; do echo; done
 
     build_network
-    build_vm ${VM1}
-    build_vm ${VM2}
-    build_vm ${VM3}
+    build_vm ${VM4}
+    build_vm ${VM5}
+    build_vm ${VM6}
 
     > hosts-bendri
-    ssh ${VM1}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-    ssh ${VM2}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-    ssh ${VM3}-oam tail -2 /etc/hosts | tee -a hosts-bendri
-    cat hosts-bendri | ssh ${VM1}-oam sudo tee -a /etc/hosts
-    cat hosts-bendri | ssh ${VM2}-oam sudo tee -a /etc/hosts
-    cat hosts-bendri | ssh ${VM3}-oam sudo tee -a /etc/hosts
+    ssh ${VM4}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+    ssh ${VM5}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+    ssh ${VM6}-oam tail -2 /etc/hosts | tee -a hosts-bendri
+    cat hosts-bendri | ssh ${VM4}-oam sudo tee -a /etc/hosts
+    cat hosts-bendri | ssh ${VM5}-oam sudo tee -a /etc/hosts
+    cat hosts-bendri | ssh ${VM6}-oam sudo tee -a /etc/hosts
     rm -v hosts-bendri
 
     out "- ECDSA raktų patvirtinimas"
-    out "- ${VM1}:"
-    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM1} hostname
-    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM2} hostname
-    ssh ${VM1}-oam ssh -o StrictHostKeyChecking=no ${VM3} hostname
+    out "- ${VM4}:"
+    ssh ${VM4}-oam ssh -o StrictHostKeyChecking=no ${VM4} hostname
+    ssh ${VM4}-oam ssh -o StrictHostKeyChecking=no ${VM5} hostname
+    ssh ${VM4}-oam ssh -o StrictHostKeyChecking=no ${VM6} hostname
 
-    out "- ${VM2}:"
-    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM1} hostname
-    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM2} hostname
-    ssh ${VM2}-oam ssh -o StrictHostKeyChecking=no ${VM3} hostname
+    out "- ${VM5}:"
+    ssh ${VM5}-oam ssh -o StrictHostKeyChecking=no ${VM4} hostname
+    ssh ${VM5}-oam ssh -o StrictHostKeyChecking=no ${VM5} hostname
+    ssh ${VM5}-oam ssh -o StrictHostKeyChecking=no ${VM6} hostname
 
-    out "- ${VM3}:"
-    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM1} hostname
-    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM2} hostname
-    ssh ${VM3}-oam ssh -o StrictHostKeyChecking=no ${VM3} hostname
+    out "- ${VM6}:"
+    ssh ${VM6}-oam ssh -o StrictHostKeyChecking=no ${VM4} hostname
+    ssh ${VM6}-oam ssh -o StrictHostKeyChecking=no ${VM5} hostname
+    ssh ${VM6}-oam ssh -o StrictHostKeyChecking=no ${VM6} hostname
 
 echo
 echo Infrastruktūra sustatyta.
