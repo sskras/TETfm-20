@@ -157,7 +157,8 @@ Galiausiai nutariau briaunų nebeapvalinti, ir pateikiu tokį, kampuotą rezulta
 [.text-left]
 === Namų darbas nr. 2: AutoCAD ir Fusion 360 įrankių palyginimas
 
-Čia palyginau abiejų programų sąsajas (UI, angl. _User Interfaces_).
+https://github.com/VGTU-ELF/TETfm-20/blob/main/Semestras-3/4-3D-modeliavimas-ir-vizualizavimas/nam%C5%B3-darbai/ND2.adoc[Čia palyginau]
+abiejų programų sąsajas (UI, angl. _User Interfaces_).
 Taip pat palyginau abiejų programų braižymo eigos skirtumus.
 Palyginau ir failų dydžius, kuriuos jos sukuria.
 
